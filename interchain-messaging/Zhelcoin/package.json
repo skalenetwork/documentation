@@ -1,0 +1,17 @@
+{
+  "name": "zhelcoin",
+  "version": "1.0.0",
+  "description": "Cryptocoin for Math & Computer Science Days 2019",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artem Payvin payvinartem@gmail.com @payvint",
+  "license": "ISC",
+  "dependencies": {
+    "truffle-hdwallet-provider": "^1.0.5"
+  }
+}
