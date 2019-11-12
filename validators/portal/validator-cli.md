@@ -159,11 +159,11 @@ skale wallet info
 
 **Output:**
 
---------------------------------------------------
+```
 Address: <your-skale-private-net-wallet-address>
 ETH balance: 0 ETH
 SKALE balance: 0 SKALE
---------------------------------------------------
+```
 
 Note: In this pre-release software, your wallet address and private key for  **_test tokens are stored in plaintext json_**  file at the following location: /skale_node_data/local_wallet.json.  
 ‍  
@@ -225,11 +225,11 @@ skale node info
 
 **Output:**
 
---------------------------------------------------
-Node info
+```
+# Node info
 Name: $NODE_NAME
 IP: $NODE_IP
 Public IP: <Public IP of Machine>
 Port: $NODE_PORT
 Status: Active
---------------------------------------------------
+```
