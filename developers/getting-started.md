@@ -5,7 +5,7 @@ Follow the steps below to start using SKALE. If you have your SKALE Chains alrea
 
 If you do not have a SKALE Chain yet, request one by using the link below.  
 
-[Request a SKALE Chain](https://skale.network/innovators-signup)
+<button>[Request a SKALE Chain](https://skale.network/innovators-signup)</button>
 
 ### 1. Prepare your SKALE Chain
 
@@ -13,7 +13,7 @@ SKALE Chains on the devnet will already be configured for you, and will not requ
 
 In order to use your SKALE Chain, you will need to fund your wallet account with the SKALE devnet ETH tokens. This can be accomplished by using the SKALE Faucet to receive 0.5 test ETH.  
 
-[Get Test ETH](http://faucet.skale.network/)
+<button>[Get Test ETH](http://faucet.skale.network/)</button>
 
 ### 2. Migrate Smart Contracts
 
