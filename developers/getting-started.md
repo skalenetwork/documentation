@@ -57,7 +57,7 @@ module.exports = {
 
 You can point your deployment scripts for your existing smart contracts to your SKALE Chain’s address and deploy using existing tooling (e.g.: Truffle). An example truffle deployment command is:  
 
-```javascript
+```
 truffle deploy --reset --network skale --compile-all
 ```
 
