@@ -21,7 +21,7 @@ SKALE is able to process smart contracts written in Solidity. This makes migrati
 
 <note>NOTE: In order to deploy your smart contracts onto SKALE, the transaction needs to be signed. This code below shows how to use the truffle-hdwallet-provider package to sign the transaction with the private key of your wallet:</note>  
 
-```
+```javascript
 /*
  * This truffle script will deploy your smart contracts to your SKALE Chain.
  *
@@ -57,9 +57,8 @@ module.exports = {
 
 You can point your deployment scripts for your existing smart contracts to your SKALE Chain’s address and deploy using existing tooling (e.g.: Truffle). An example truffle deployment command is:  
 
-```
+```javascript
 truffle deploy --reset --network skale --compile-all
-
 ```
 
 See  [Code Samples](https://developers.skale.network/code-samples)  for more deployment script examples.  
@@ -68,7 +67,7 @@ See  [Code Samples](https://developers.skale.network/code-samples)  for more dep
 
 Once your smart contracts have been moved over to your SKALE Chain, you can test sending out a new transaction, using Web3.js or Web3.py. Remember to point your Web3 instance to your SKALE Chain.  
 
-```
+```javascript
 import Web3 from 'web3'
 
 const web3 = new Web3("[YOUR_SKALE_CHAIN_ENDPOINT]");
