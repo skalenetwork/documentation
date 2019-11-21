@@ -7,34 +7,51 @@ See the file storage demo on [Github](https://github.com/skalenetwork/skale-demo
 
 Please note: the code samples below are for version  [**0.2.5**](https://www.npmjs.com/package/@skalenetwork/filestorage.js)  
 
+<TCSectionLayout>
+<TCColumnOne>
+
 ### Usage
 
 You have full control over maintaining your files on the SKALE Network, and you can maintain your files by uploading, downloading, or deleting files within your account. Additional documentation on the methods available within File Storage can be found  [here](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
-```
+</TCColumnOne>
+<TCColumnTwo>
 
+```
 npm i @skalenetwork/filestorage.js
-
 ```
+
+</TCColumnTwo>
+</TCSectionLayout>
+<TCSectionLayout>
+<TCColumnOne>
 
 ### Instantiate the Client
 
 To instantiate the client you only need to pass the SKALE endpoint into the constructor.  
 
-```
+</TCColumnOne>
+<TCColumnTwo>
 
+```javascript
 const Filestorage = require('@skalenetwork/filestorage.js/src/index');
 
 let filestorage = new Filestorage("[YOUR_SKALE_CHAIN_ENDPOINT]");
-
 ```
+
+</TCColumnTwo>
+</TCSectionLayout>
+<TCSectionLayout>
+<TCColumnOne>
 
 ### Upload Files
 
 Uploading files can be accomplished by using the  **uploadFile**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
-```
+</TCColumnOne>
+<TCColumnTwo>
 
+```javascript
 //Input field to add to your HTML
 <input onChange={(e) => upload(e)} 
 type="file" id="files" / >
@@ -73,15 +90,21 @@ async function upload(event){
   };
   reader.readAsArrayBuffer(file);
 }
-
 ```
+
+</TCColumnTwo>
+</TCSectionLayout>
+<TCSectionLayout>
+<TCColumnOne>
 
 ### Show Files
 
 Displaying files can be accomplished by using the  **listDirectory**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
-```
+</TCColumnOne>
+<TCColumnTwo>
 
+```javascript
 async function getFiles(){
   //create web3 connection
   const web3Provider = new Web3.providers.HttpProvider(
@@ -99,15 +122,21 @@ async function getFiles(){
     web3.utils.stripHexPrefix(account)
   );
 }
-
 ```
+
+</TCColumnTwo>
+</TCSectionLayout>
+<TCSectionLayout>
+<TCColumnOne>
 
 ### Download Files
 
 Downloading files can be accomplished by using the FilestorageClient.downloadToFile or the  **downloadToBuffer**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
-```
+</TCColumnOne>
+<TCColumnTwo>
 
+```javascript
 async function downloadFileToDesktop(link) {
   //create web3 connection
   const web3Provider = new Web3.providers.HttpProvider(
@@ -134,15 +163,21 @@ async function downloadFileToVariable(link) {
   let file = await filestorage.downloadToBuffer(link);
   file = 'data:image/png;base64,' + file.toString('base64');
 }
-
 ```
+
+</TCColumnTwo>
+</TCSectionLayout>
+<TCSectionLayout>
+<TCColumnOne>
 
 ### Delete Files
 
 Deleting files can be accomplished by using the  **deleteFile**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
-```
+</TCColumnOne>
+<TCColumnTwo>
 
+```javascript
 async function deleteFile(fileName) {
   //create web3 connection
   const web3Provider = new Web3.providers.HttpProvider(
@@ -159,5 +194,7 @@ async function deleteFile(fileName) {
   let account = "[YOUR_ACCOUNT_ADDRESS]";
 
   await filestorage.deleteFile(account, fileName, privateKey);
-
 ```
+
+</TCColumnTwo>
+</TCSectionLayout>
