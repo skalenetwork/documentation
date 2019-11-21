@@ -7,6 +7,16 @@ If you do not have a SKALE Chain yet, request one by using the link below.
 
 <button>[Request a SKALE Chain](https://skale.network/innovators-signup)</button>
 
+<StepsLayout>
+<StepsController>
+    <StepNav stepId='one' label='Prepare\nyour SKALE Chain' iconName='Triangle' />
+    <StepNav stepId='two' label='Migrate\nSmart Contracts' iconName='Triangle' />
+    <StepNav stepId='three' label='Send\na Transaction' iconName='Triangle' />
+</StepsController>
+
+<StepsContainer>
+<Step id='one'>
+
 ### 1. Prepare your SKALE Chain
 
 SKALE Chains on the devnet will already be configured for you, and will not require any updates to get started with deploying your Smart Contracts onto SKALE.  
@@ -14,6 +24,9 @@ SKALE Chains on the devnet will already be configured for you, and will not requ
 In order to use your SKALE Chain, you will need to fund your wallet account with the SKALE devnet ETH tokens. This can be accomplished by using the SKALE Faucet to receive 0.5 test ETH.  
 
 <button>[Get Test ETH](http://faucet.skale.network/)</button>
+
+</Step>
+<Step id='two'>
 
 ### 2. Migrate Smart Contracts
 
@@ -63,6 +76,9 @@ truffle deploy --reset --network skale --compile-all
 
 See  [Code Samples](https://developers.skale.network/code-samples)  for more deployment script examples.  
 
+</Step>
+<Step id='three'>
+
 ### 3. Send a Transaction
 
 Once your smart contracts have been moved over to your SKALE Chain, you can test sending out a new transaction, using Web3.js or Web3.py. Remember to point your Web3 instance to your SKALE Chain.  
@@ -72,3 +88,7 @@ import Web3 from 'web3'
 
 const web3 = new Web3("[YOUR_SKALE_CHAIN_ENDPOINT]");
 ```
+
+</Step>
+</StepsContainer>
+</StepsLayout>
