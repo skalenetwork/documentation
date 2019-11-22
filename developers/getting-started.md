@@ -3,21 +3,27 @@
 
 Follow the steps below to start using SKALE. If you have your SKALE Chains already set up and you are looking for examples, please see  [Code Samples](https://developers.skale.network/code-samples).  
 
-If you do not have a SKALE Chain yet, request one by using the link below.  
-
-<button>[Request a SKALE Chain](https://skale.network/innovators-signup)</button>
-
 <StepsLayout>
 <StepsController>
-    <StepNav stepId='one' label='Prepare\nyour SKALE Chain' iconName='Triangle' />
-    <StepNav stepId='two' label='Migrate\nSmart Contracts' iconName='Triangle' />
-    <StepNav stepId='three' label='Send\na Transaction' iconName='Triangle' />
+    <StepNav stepId='one' label='Request\na SKALE Chain'><ByzantineFaultTolerant/></StepNav>
+    <StepNav stepId='two' label='Prepare\nyour SKALE Chain'><AsynchronousProtocol/></StepNav>
+    <StepNav stepId='three' label='Migrate\nSmart Contracts'><LeaderlessConsensus/></StepNav>
+    <StepNav stepId='four' label='Send\na Transaction'><SendTransaction/></StepNav>
 </StepsController>
 
 <StepsContainer>
 <Step id='one'>
 
-### 1. Prepare your SKALE Chain
+### 1. Request a SKALE Chain
+
+If you do not have a SKALE Chain yet, request one by using the link below.  
+
+<button>[Request a SKALE Chain](https://skale.network/innovators-signup)</button>
+
+</Step>
+<Step id='two'>
+
+### 2. Prepare your SKALE Chain
 
 SKALE Chains on the devnet will already be configured for you, and will not require any updates to get started with deploying your Smart Contracts onto SKALE.  
 
@@ -26,9 +32,9 @@ In order to use your SKALE Chain, you will need to fund your wallet account with
 <button>[Get Test ETH](http://faucet.skale.network/)</button>
 
 </Step>
-<Step id='two'>
+<Step id='three'>
 
-### 2. Migrate Smart Contracts
+### 3. Migrate Smart Contracts
 
 SKALE is able to process smart contracts written in Solidity. This makes migrating your smart contracts from Ethereum fast and easy. Some smart contract updates or changes may be needed to enable certain features in SKALE such as transferring money and saving state. Please reference the respective sections within  [Code Samples](https://developers.skale.network/code-samples).  
 
@@ -77,9 +83,9 @@ truffle deploy --reset --network skale --compile-all
 See  [Code Samples](https://developers.skale.network/code-samples)  for more deployment script examples.  
 
 </Step>
-<Step id='three'>
+<Step id='four'>
 
-### 3. Send a Transaction
+### 4. Send a Transaction
 
 Once your smart contracts have been moved over to your SKALE Chain, you can test sending out a new transaction, using Web3.js or Web3.py. Remember to point your Web3 instance to your SKALE Chain.  
 
