@@ -1,9 +1,9 @@
+<StepsLayout>
 
 ## Getting Started with SKALE
 
 Follow the steps below to start using SKALE. If you have your SKALE Chains already set up and you are looking for examples, please see  [Code Samples](https://developers.skale.network/code-samples).  
 
-<StepsLayout>
 <StepsController>
     <StepNav stepId='one' label='Request\na SKALE Chain'><ByzantineFaultTolerant/></StepNav>
     <StepNav stepId='two' label='Prepare\nyour SKALE Chain'><AsynchronousProtocol/></StepNav>
