@@ -1,4 +1,6 @@
 <StepsLayout>
+<StepsHeader>
+
 
 ## Getting Started with SKALE
 
@@ -10,7 +12,7 @@ Follow the steps below to start using SKALE. If you have your SKALE Chains alrea
     <StepNav stepId='three' label='Migrate\nSmart Contracts'><LeaderlessConsensus/></StepNav>
     <StepNav stepId='four' label='Send\na Transaction'><SendTransaction/></StepNav>
 </StepsController>
-
+</StepsHeader>
 <StepsContainer>
 <Step id='one'>
 
