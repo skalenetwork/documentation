@@ -21,7 +21,8 @@
     {
       "name":"technology",
       "links":[
-        "/documentation/technology/skale-consensus"
+        "/documentation/technology/skale-consensus",
+        "/documentation/technology/skale-dkg"
       ]
     }
   ]
