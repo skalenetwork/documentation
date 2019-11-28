@@ -17,6 +17,12 @@
       "links":[
         "/documentation/validators/getting-started"
       ]
+    },
+    {
+      "name":"technology",
+      "links":[
+        "/documentation/technology/skale-consensus"
+      ]
     }
   ]
 }
