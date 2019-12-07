@@ -191,11 +191,11 @@ ID.
 It is assumed that out of $N$ total nodes, $t$ nodes are Byzantine,
 where less the following condition is satisfied.
 
-$$3  t  + 1 &lt;= N$$
+$$3  t  + 1 <= N$$
 
 or
 
-$$t &lt;= floor((N - 1)/3)$$
+$$t <= floor((N - 1)/3)$$
 
 The above condition is well known in the consensus theory. There is a
 proof that shows that secure asynchronous consensus is impossible for
