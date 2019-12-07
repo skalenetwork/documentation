@@ -62,7 +62,7 @@ We assume that the total number of nodes in the network is fixed and
 equal to $N$. We also assume that out of $N$ nodes, $t$ nodes are
 Byzantine (malicious), where
 
-$$3  t  + 1 &lt;= N$$
+$$3  t  + 1 <= N$$
 
 ## Consensus state
 
