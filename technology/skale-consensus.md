@@ -832,7 +832,7 @@ for transactions. We are currently using the same PoW algorithm as
 Ethereum.
 
 $$
-POW = k \* GAS
+POW = k * GAS
 $$
 
 This PoW is calculated in the browser or other client that submits a
