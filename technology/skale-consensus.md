@@ -62,7 +62,9 @@ We assume that the total number of nodes in the network is fixed and
 equal to $N$. We also assume that out of $N$ nodes, $t$ nodes are
 Byzantine (malicious), where
 
-$$3  t  + 1 <= N$$
+$$
+3  t  + 1 <= N
+$$
 
 ## Consensus state
 
@@ -191,11 +193,15 @@ ID.
 It is assumed that out of $N$ total nodes, $t$ nodes are Byzantine,
 where less the following condition is satisfied.
 
-$$3  t  + 1 <= N$$
+$$
+3  t  + 1 <= N
+$$
 
 or
 
-$$t <= floor((N - 1)/3)$$
+$$
+t <= floor((N - 1)/3)
+$$
 
 The above condition is well known in the consensus theory. There is a
 proof that shows that secure asynchronous consensus is impossible for
@@ -207,11 +213,15 @@ honest node can always be viewed as a Byzantine node that decided to
 behave honestly. Therefore, in proofs, we always assume that the system
 has the maximum allowed number of Byzantine nodes
 
-$$t =  floor((N - 1)/3)$$
+$$
+t =  floor((N - 1)/3)
+$$
 
 In this case the number of honest nodes is
 
-$$h = N-t = N - floor((N - 1) / 3) = floor((2 N + 1) / 3$$
+$$
+h = N-t = N - floor((N - 1) / 3) = floor((2 N + 1) / 3
+$$
 
 Note, that it is beneficial to select $N$ in such a way that $(N-1)/3$
 is divisible by $3$. Otherwise an increase in $N$ does not lead to an
@@ -225,9 +235,13 @@ a way that $N - 1$ is divisible by 3.
 
 In this case, expressions simplify as follows
 
-$$t = (N - 1) / 3$$
+$$
+t = (N - 1) / 3
+$$
 
-$$h = (2 N + 1) / 3 = 2 t + 1$$
+$$
+h = (2 N + 1) / 3 = 2 t + 1
+$$
 
 ## Mathematical properties of node voting
 
@@ -244,7 +258,9 @@ nodes.
 This directly follows from the fact that $h = 2t + 1$, and, therefore, a
 simple majority of honest nodes is
 
-$$s = t + 1$$
+$$
+s = t + 1
+$$
 
 We define _supermajority_ as a vote of at least $(2 N + 1) / 3$ nodes.
 
@@ -258,7 +274,9 @@ simple majority of honest nodes signed this message
 Even if all Byzantine nodes participate in a supermajority vote, the
 number of honest votes it needs to receive is
 
-$$(2 N + 1) / 3 - t = 2 t + 1 - t =  t + 1$$
+$$
+(2 N + 1) / 3 - t = 2 t + 1 - t =  t + 1
+$$
 
 which is exactly the simple majority of honest nodes $s$.
 
@@ -813,7 +831,9 @@ amount of gas that the transaction would have used if we would charge
 for transactions. We are currently using the same PoW algorithm as
 Ethereum.
 
-$$POW = k \* GAS$$
+$$
+POW = k \* GAS
+$$
 
 This PoW is calculated in the browser or other client that submits a
 transaction and is passed together with the transaction. If the
