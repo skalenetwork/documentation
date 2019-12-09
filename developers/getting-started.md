@@ -1,4 +1,6 @@
-<StepsLayout id='Fast-track>
+# Getting Started
+
+<StepsLayout id='Fast-track'>
 
 ## Fast Track
 
