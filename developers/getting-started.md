@@ -1,5 +1,3 @@
-# Getting Started with SKALE
-
 <StepsLayout id='Fast-track>
 
 ## Fast Track
@@ -97,7 +95,7 @@ const web3 = new Web3("[YOUR_SKALE_CHAIN_ENDPOINT]");
 
 </Step>
 </StepsLayout>
-<StepsLayout id='Fast-track>
+<StepsLayout id='Beginner>
 
 ## Beginner
 
