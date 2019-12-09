@@ -97,7 +97,7 @@ const web3 = new Web3("[YOUR_SKALE_CHAIN_ENDPOINT]");
 
 </Step>
 </StepsLayout>
-<StepsLayout id='Beginner>
+<StepsLayout id='Beginner'>
 
 ## Beginner
 
