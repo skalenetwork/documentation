@@ -1,5 +1,5 @@
 
-## Code Samples
+# Code Samples
 
 Deploying to SKALE is similar to deploying to the Ethereum blockchain. There are a few changes you will need to make within your deployment scripts. When using these code samples, please be sure to modify the code appropriately before running anything in production!  
   
@@ -7,7 +7,7 @@ You can share your own code sample by reaching out to us on discord[.](mailto:de
 
 [Access Discord](http://skale.chat/)
 
-### Deployment
+## All Samples
 
 Use these deployment script examples to deploy your smart contracts onto your SKALE Chain.  
 
@@ -153,3 +153,5 @@ For more information on using remix, please see  [Remix Documentation](https://r
 To connect SKALE in MetaMask, create a new Custom RPC with your SKALE chain endpoint.  
 
 ![](https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif)
+
+## Example dApps
