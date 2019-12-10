@@ -97,6 +97,11 @@ const web3 = new Web3("[YOUR_SKALE_CHAIN_ENDPOINT]");
 
 </Step>
 </StepsLayout>
+
+&nbsp;
+&nbsp;
+&nbsp;
+
 <StepsLayout id='Fast-track'>
 
 ## Expert Fast-track
