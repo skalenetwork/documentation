@@ -1,10 +1,10 @@
-# Getting Started
-
-<StepsLayout id='Fast-track'>
-
-## Fast Track
+# Get Started & Guides
 
 Follow the steps below to start using SKALE. If you have your SKALE Chains already set up and you are looking for examples, please see  [Code Samples](https://developers.skale.network/code-samples).  
+
+<StepsLayout id='Beginner'>
+
+## Total Newbie
 
 <StepsController>
     <StepNav stepId='one' label='Request\na SKALE Chain'><ByzantineFaultTolerant/></StepNav>
@@ -97,9 +97,9 @@ const web3 = new Web3("[YOUR_SKALE_CHAIN_ENDPOINT]");
 
 </Step>
 </StepsLayout>
-<StepsLayout id='Beginner'>
+<StepsLayout id='Fast-track'>
 
-## Beginner
+## Expert Fast-track
 
 Follow the steps below to start using SKALE. If you have your SKALE Chains already set up and you are looking for examples, please see  [Code Samples](https://developers.skale.network/code-samples).  
 
