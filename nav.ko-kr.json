@@ -3,26 +3,56 @@
     {
       "name": "developers",
       "links": [
-        "/documentation/developers/getting-started",
-        "/documentation/developers/code-samples",
-        "/documentation/developers/file-storage/",
-        "/documentation/developers/integrations/",
-        "/documentation/developers/interchain-messaging-agent/",
-        "/documentation/developers/interchain-messaging-agent/code-samples",
-        "/documentation/developers/interchain-messaging-agent/api"
+        {
+          "link": "/documentation/developers/getting-started",
+          "depth": 1
+        },
+        {
+          "link" : "/documentation/developers/code-samples",
+          "depth": 1
+        },
+        {
+          "link": "/documentation/developers/file-storage/",
+          "depth": 1
+        },
+        {
+          "link": "/documentation/developers/integrations/",
+          "depth": 2
+        },
+        {
+          "link": "/documentation/developers/interchain-messaging-agent/",
+          "depth": 1
+        },
+        {
+          "link": "/documentation/developers/interchain-messaging-agent/code-samples",
+          "depth": 1
+        },
+        {
+          "link": "/documentation/developers/interchain-messaging-agent/api",
+          "depth": 1
+        }
       ]
     },
     {
       "name":"validators",
       "links":[
-        "/documentation/validators/getting-started"
+        {
+          "link": "/documentation/validators/getting-started",
+          "depth": 0
+        }
       ]
     },
     {
       "name":"technology",
       "links":[
-        "/documentation/technology/skale-consensus",
-        "/documentation/technology/skale-dkg"
+        {
+          "link": "/documentation/technology/skale-consensus",
+          "depth": 0
+        },
+        {
+          "link": "/documentation/technology/skale-dkg",
+          "depth": 0
+        }
       ]
     }
   ]
