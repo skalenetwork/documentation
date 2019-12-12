@@ -13,7 +13,17 @@
         },
         {
           "link": "/documentation/developers/getting-started",
-          "depth": 1
+          "depth": 0,
+          "links": [
+            {
+              "link": "/documentation/developers/overview",
+              "depth": 1
+            },
+            {
+              "link": "/documentation/developers/overview",
+              "depth": 1
+            }
+          ]
         }
       ]
     },
