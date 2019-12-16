@@ -7,9 +7,9 @@ author:
 title: SKALE Blockchain Low Level Specification
 ---
 
-# Definitions and assumptions
+## Definitions and assumptions
 
-## Schain
+### Schain
 
 Schain is a fixed set of network nodes that accept user transactions,
 run SKALE consensus and store identical copies of SKALE blockchain. A
@@ -17,7 +17,7 @@ typical implementation will run a network node in a virtualization
 container such as a Docker container, so a single physical server can
 provide support to multiple schains.
 
-## Network security assumptions
+### Network security assumptions
 
 SKALE consensus protocol assumes that the network is
 asynchronous with eventual delivery guarantee, meaning that each nodes
@@ -56,7 +56,7 @@ In the remainder of this document, anywhere where it is specified that a
 message is sent from node $A$ to $B$, we mean reliable independent
 delivery as described above.
 
-## Node security assumptions
+### Node security assumptions
 
 We assume that the total number of nodes in the network is fixed and
 equal to $N$. We also assume that out of $N$ nodes, $t$ nodes are
@@ -66,7 +66,7 @@ $$
 3  t  + 1 <= N
 $$
 
-## Consensus state
+### Consensus state
 
 Each node stores _consensus state_. For each round of consensus,
 consensus state includes the set of proposed blocks, as well as the
@@ -74,7 +74,7 @@ state variables of the protocols used by the consensus round.
 
 The state is stored in non-volatile memory and preserved across reboots.
 
-## Reboots and crashes
+### Reboots and crashes
 
 During a , a node will temporarily become unavailable. After a reboot,
 messages destined to the node will be delivered to the node. Therefore,
@@ -94,14 +94,14 @@ case, the outgoing message queues of nodes sending messages to this node
 will overflow, and the nodes will start dropping older messages. This
 will lead to a loss of a protocol state.
 
-## Default queue lifetime
+### Default queue lifetime
 
 This specification specifies one hour as a default lifetime of a message
 which has been placed into an outgoing queue. Messages older than one
 hour may be dropped from the message queues. A reboot, which took less
 than an hour is, therefore, guaranteed to be a a normal reboot.
 
-## Limited hard crashes
+### Limited hard crashes
 
 Hard crashes are permitted by the consensus protocol, as long as not too
 many nodes crash at the same time. Since a crashed node does not conform
@@ -117,7 +117,7 @@ online, it will sync its blockchain with other nodes using a catchup
 procedure described in this document, and start participating in
 consensus.
 
-## Widespread crashes
+### Widespread crashes
 
 A widespread crash is a crash where the sum of crashed nodes and
 Byzantine nodes is more than $t$.
@@ -138,7 +138,7 @@ In real life, a widespread crash can happen due to to a software bug
 affecting a large proportion of nodes. As an example, after a software
 update all nodes in an schain may experience the same bug.
 
-## Failure resolution protocol
+### Failure resolution protocol
 
 In a case of a catastrophic failure a separate failure resolution
 protocol is used to restart consensus.
@@ -154,7 +154,7 @@ agree on time to restart consensus.
 Finally, after a period of mandatory silence, nodes will start consensus
 at an agreed time point in the future.
 
-## Blockchain architecture
+### Blockchain architecture
 
 Each node stores a sequence of blocks. Blocks are constructed from
 transactions submitted by users.
@@ -178,7 +178,7 @@ The following properties are guaranteed:
     given block id, if both node $A$ and node $B$ possess a copy of a
     block, the two copies are guaranteed to be identical.
 
-## Honest and Byzantine Nodes
+### Honest and Byzantine Nodes
 
 An honest node is a node that behaves according to the rules described
 in this document. A Byzantine node can behave in arbitrary way,
@@ -243,7 +243,7 @@ $$
 h = (2 N + 1) / 3 = 2 t + 1
 $$
 
-## Mathematical properties of node voting
+### Mathematical properties of node voting
 
 Consensus uses voting rounds. It is, therefore, important to proof some
 basic mathematical properties of voting.
@@ -295,7 +295,7 @@ guaranteed that no conflicting messages exist. As an example, if a block
 is signed by a supermajority vote, it is guaranteed that no other block
 with the same block ID exists.
 
-## Threshold signatures
+### Threshold signatures
 
 Our protocol uses threshold signatures for supermajority voting.
 
@@ -320,16 +320,16 @@ computed during the initial DKG algorithm execution. The key is stored
 in SKALE manager contract on the main ETH net, and is available to
 anyone.
 
-## Transactions
+### Transactions
 
 Each user transaction $T$ is assumed to be an Ethereum-compatible
 transaction, represented as a sequence of bytes.
 
-## Block format: header and body
+### Block format: header and body
 
 Each block is a byte string, which includes a header followed by a body.
 
-## Block format: header
+### Block format: header
 
 Block header is a JSON object that includes the following:
 
@@ -356,12 +356,12 @@ Block header is a JSON object that includes the following:
 Note: All integers in this spec are unsigned 64-bit integers unless
 specified otherwise.
 
-## Block format: body
+### Block format: body
 
 $BLOCK_BODY$ is a concatenated transactions array of all transactions
 in the block.
 
-## Block format: hash
+### Block format: hash
 
 Block hash is calculated by taking 256-bit Keccack hash of block header
 concatenated with block body, while omitting $CURRENT_BLOCK_HASH$,
@@ -371,7 +371,7 @@ time block is hashed and signed.
 
 Note: Throughout this spec we use SHA-3 as a secure hash algorithm.
 
-## Block verification
+### Block verification
 
 A node or a third party can verify the block by verifying a threshold
 signature on it and also verifying the previous block hash stored in the
@@ -380,7 +380,7 @@ signature and since any honest node will only sign a single block at a
 particular block ID, no two blocks with the same block ID can get a
 threshold signature. This provides security against forks.
 
-## Block proposal format
+### Block proposal format
 
 A block starts as a block proposal. A block proposal has the same
 structure as a block, but has the threshold signature element unset.
@@ -392,7 +392,7 @@ Once a block proposal is selected to become a block by consensus, it is
 signed by a supermajority of nodes. A signed proposal is then committed
 to the end of the chain on each node.
 
-## Pending transactions queue
+### Pending transactions queue
 
 Each node will keep a pending transactions queue. The first node that
 receives a transaction will attempt to propagate it to all other nodes
@@ -402,7 +402,7 @@ transaction to all nodes.
 When a node commits a block to its blockchain, if will remove the
 matching transactions from the transaction queue.
 
-## Gas fees
+### Gas fees
 
 Each transaction requires payment of a gas fee, compatible with ETH gas
 fee. The gas fee can be paid in native currency of the schain or in
@@ -412,7 +412,7 @@ of transactions in the block is less than 70 percent of the maximum
 number of transactions per block, and is decreased if the block has been
 underloaded.
 
-## Compressed block proposal communication
+### Compressed block proposal communication
 
 Typically pending queues of all nodes will have similar sets of
 messages, with small differences due to network propagation times.
@@ -429,16 +429,16 @@ receiving node will send a request to the sending node. The sending node
 will then send the bodies of these transactions to the receiving node.
 After that the receiving node will then reconstruct the block proposal.
 
-# Consensus data structures and operation
+## Consensus data structures and operation
 
-## Blockchain
+### Blockchain
 
 For a particular node, the blockchain consists of a range of committed
 blocks $B[i]$ starting from $B[0]$ end ending with $B[TIP\_ID]$, where
 $TIP_ID$ is the ID of the largest known committed block. Block ids are
 sequential positive integers. Blocks are stored in non-volatile storage.
 
-## Consensus rounds
+### Consensus rounds
 
 New blocks a created by running consensus rounds. Each round corresponds
 to a particular $BLOCK_ID$.
@@ -454,7 +454,7 @@ consensus will agree on an empty block instead of agreeing on any of the
 proposed blocks. In this case, an empty block is pre-committed to a
 blockchain.
 
-## Catchup agent
+### Catchup agent
 
 There are two ways, in which blockchain on a particular node grows and
 $TIP_ID$ is incremented:
@@ -499,16 +499,16 @@ the system back, it will immediately start participating in the new
 consensus rounds. For the consensus rounds that it missed, it will use
 the catchup procedure to download blocks from other nodes.
 
-# Normal consensus operation
+## Normal consensus operation
 
-## Block proposal creation trigger
+### Block proposal creation trigger
 
 A node is required to create a block proposal directly after its
 $TIP_ID$ moves to a new value. $TIP_ID$ will be incremented by $1$
 once a previous consensus round completes. $TIP_ID$ will also move, if
 the catchup agent appends blocks to the blockchain.
 
-## Block proposal creation algorithm
+### Block proposal creation algorithm
 
 To create a block a node will:
 
@@ -542,7 +542,7 @@ submitting transactions to the blockchain, empty beacon blocks will be
 created. Beacon blocks are used to detect normal operation of the
 blockchain. The current value of $BEACON_TIME$ is $3s$.
 
-## Block proposal reliable communication algorithm
+### Block proposal reliable communication algorithm
 
 Once a node creates a block proposal it will communicate it to other
 nodes using the data data availability protocol described below.
@@ -623,7 +623,7 @@ The protocol discussed above is important because it guarantees that if
 a proposal wins consensus, all honest nodes can get this proposal from
 other honest nodes and add it to the blockchain.
 
-## Pluggable Binary Byzantine Agreement
+### Pluggable Binary Byzantine Agreement
 
 The consensus described above uses an Asynchronous Binary Byzantine
 Agreement (ABBA) protocol (ABBA). We currently use ABBA from Moustefaoi
@@ -647,7 +647,7 @@ Note that, an ABBA protocol typically outputs a random number
 $COMMON_COIN$ as a byproduct of its operation. We use this
 $COMMON_COIN$ as a random number source.
 
-## Consensus round
+### Consensus round
 
 A consensus round $R$ is executed for each $BLOCK_ID$ and has the
 following properties:
@@ -780,7 +780,7 @@ The purpose of the algorithm is to minimize network traffic.
 FUTURE: we may implement more advanced algorithms based on erasure
 codes.
 
-## Purging old transactions
+### Purging old transactions
 
 For each node, 33 percent of the storage is assigned to blockchain, 33
 percent to EVM and 33 to the rest of the system, such as consensus
@@ -796,15 +796,15 @@ If consensus storage is exhausted, the consensus agent will start
 erasing items such as messages in the message outgoing queues, in the
 order of item age, from oldest to newest.
 
-# EVM/Solidity
+## EVM/Solidity
 
-## EVM compatibility
+### EVM compatibility
 
 The goal is to provide EVM/Solidity compatibility, except the cases
 documented in this specification. The compatibility is for client
 software, in particular Metamask, Truffle, Web3js and Web3py.
 
-## EVM execution
+### EVM execution
 
 Once a block is finalized on the chain, it is passed to EVM, and each
 transaction is sequentially executed by the EVM one after another. We
@@ -812,7 +812,7 @@ currently use unmodified Ethereum EVM, therefore there should not be
 compatibility issues. Once Ethereum finalizes EWASM version of EVM, we
 will be able to plug in in.
 
-## EVM storage
+### EVM storage
 
 EVM has pluggable storage backend database to store EVM/Solidity
 variables we simplified and sped up the storage by using LevelDB from
@@ -820,7 +820,7 @@ Google. Each variable in EVM is stored as a key value in LevelDB where
 the key is the sha3 hash of the virtual memory address and the value is
 the 256 bit value of the variable. In EVM all variables have 256 bits.
 
-## EVM gas calculations and DOS protection
+### EVM gas calculations and DOS protection
 
 We do not charge users gas for transactions.
 
@@ -843,14 +843,14 @@ We are still researching the formula for $k$. Ideally $k$ should go down
 if the chain is underloaded and increase if the chains starts to be
 overloaded.
 
-# Ethereum clients
+## Ethereum clients
 
-## Compatibility
+### Compatibility
 
 The goal is to provide compatible JSON client API for client software
 such as Web3js, Web3py, Metamask and Truffle.
 
-## FUTURE: Multi-node reqeuests
+### FUTURE: Multi-node reqeuests
 
 Existing clients such Web3js connect to a single node, which creates
 security problem for Solidity read requests that read variables.
