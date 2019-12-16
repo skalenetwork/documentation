@@ -41,7 +41,7 @@
       "links":[
         {
           "link": "/documentation/technology/skale-consensus",
-          "depth": 0
+          "depth": 3
         },
         {
           "link": "/documentation/technology/skale-dkg",
