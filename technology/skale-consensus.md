@@ -7,6 +7,8 @@ author:
 title: SKALE Blockchain Low Level Specification
 ---
 
+# Skale Consensus
+
 ## Definitions and assumptions
 
 ### Schain
