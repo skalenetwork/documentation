@@ -6,12 +6,12 @@ Follow the steps below to start using SKALE. If you have your SKALE Chains alrea
 <SplitSectionLayout>
 <SplitSectionColumn>
 
-<button>[Total Newbie](beginner)</button>
+<button target="_self" rel="">[Total Newbie](getting-started/beginner)</button>
 
 </SplitSectionColumn>
 <SplitSectionColumn>
 
-<button>[Expert Fast-track](expert)</button>
+<button target="_self" rel="" boxPosition="BOTTOM_RIGHT">[Expert Fast-track](getting-started/expert)</button>
 
 </SplitSectionColumn>
 </SplitSectionLayout>
