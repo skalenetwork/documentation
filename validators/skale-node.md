@@ -77,7 +77,11 @@ SKALE Chains will be randomly assigned and shuffled/rotated in the SKALE Network
 
 > _The following image shows that all same colors communicate with each other and belongs to the same dApp. When a dApp owner requests a SKALE Chain and receives an endpoint to the nodes within their SKALE Chain, communication within the SKALE Chain is be coordinated by the SKALE Daemon._  
 
-![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa022515dd48e400ac_Screen%20Shot%202019-10-07%20at%206.08.17%20PM.png){width=250px}![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa02251508dde400ad_Screen%20Shot%202019-10-07%20at%206.08.26%20PM.png)![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fae59dca31e9150b37_Screen%20Shot%202019-10-07%20at%206.08.09%20PM.png)![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be4eb0225153950e41255_Screen%20Shot%202019-10-07%20at%206.22.27%20PM.png)
+<Flex>
+
+![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa022515dd48e400ac_Screen%20Shot%202019-10-07%20at%206.08.17%20PM.png)![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa02251508dde400ad_Screen%20Shot%202019-10-07%20at%206.08.26%20PM.png)![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fae59dca31e9150b37_Screen%20Shot%202019-10-07%20at%206.08.09%20PM.png)![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be4eb0225153950e41255_Screen%20Shot%202019-10-07%20at%206.22.27%20PM.png)
+
+</Flex>
 
 A - (Small Chain) Assign these chains to Node 2, 3, 8, 9  **,  _1/128 of a node_**  
 
