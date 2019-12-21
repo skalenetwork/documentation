@@ -4,19 +4,19 @@
       "name": "developers",
       "links": [
         {
-          "link": "/documentation/developers/overview",
+          "link": "/documentation/developers/overview"
         },
         {
-          "link" : "/documentation/developers/code-samples",
+          "link" : "/documentation/developers/code-samples"
         },
         {
           "link": "/documentation/developers/getting-started",
           "links": [
             {
-              "link": "/documentation/developers/getting-started/beginner",
+              "link": "/documentation/developers/getting-started/beginner"
             },
             {
-              "link": "/documentation/developers/getting-started/expert",
+              "link": "/documentation/developers/getting-started/expert"
             }
           ]
         }
@@ -26,19 +26,19 @@
       "name":"validators",
       "links":[
         {
-          "link": "/documentation/validators/",
+          "link": "/documentation/validators/"
         },
         {
           "link": "/documentation/validators/getting-started",
           "links": [
             {
-              "link": "/documentation/validators/expectations",
+              "link": "/documentation/validators/expectations"
             },
             {
-              "link": "/documentation/validators/requirements",
+              "link": "/documentation/validators/requirements"
             },
             {
-              "link": "/documentation/validators/skale-node",
+              "link": "/documentation/validators/skale-node"
             }
           ]
         }
@@ -48,10 +48,10 @@
       "name":"technology",
       "links":[
         {
-          "link": "/documentation/technology/skale-consensus",
+          "link": "/documentation/technology/skale-consensus"
         },
         {
-          "link": "/documentation/technology/skale-dkg",
+          "link": "/documentation/technology/skale-dkg"
         }
       ]
     }
