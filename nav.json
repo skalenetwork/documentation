@@ -31,6 +31,10 @@
       "name":"validators",
       "links":[
         {
+          "link": "/documentation/validators/",
+          "depth": 2
+        },
+        {
           "link": "/documentation/validators/getting-started",
           "depth": 0
         }
