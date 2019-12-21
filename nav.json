@@ -13,7 +13,8 @@
           "link": "/documentation/developers/getting-started",
           "links": [
             {
-              "link": "/documentation/developers/getting-started/beginner"
+              "link": "/documentation/developers/getting-started/beginner",
+              "depth": 0
             },
             {
               "link": "/documentation/developers/getting-started/expert"
