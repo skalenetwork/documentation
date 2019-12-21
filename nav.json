@@ -36,7 +36,21 @@
         },
         {
           "link": "/documentation/validators/getting-started",
-          "depth": 0
+          "depth": 0,
+          "links": [
+            {
+              "link": "/documentation/validators/expectations",
+              "depth": 3
+            },
+            {
+              "link": "/documentation/validators/requirements",
+              "depth": 3
+            },
+            {
+              "link": "/documentation/validators/skale-node",
+              "depth": 3
+            }
+          ]
         }
       ]
     },
