@@ -5,23 +5,18 @@
       "links": [
         {
           "link": "/documentation/developers/overview",
-          "depth": 1
         },
         {
           "link" : "/documentation/developers/code-samples",
-          "depth": 1
         },
         {
           "link": "/documentation/developers/getting-started",
-          "depth": 0,
           "links": [
             {
               "link": "/documentation/developers/getting-started/beginner",
-              "depth": 0
             },
             {
               "link": "/documentation/developers/getting-started/expert",
-              "depth": 0
             }
           ]
         }
@@ -32,23 +27,18 @@
       "links":[
         {
           "link": "/documentation/validators/",
-          "depth": 2
         },
         {
           "link": "/documentation/validators/getting-started",
-          "depth": 0,
           "links": [
             {
               "link": "/documentation/validators/expectations",
-              "depth": 3
             },
             {
               "link": "/documentation/validators/requirements",
-              "depth": 3
             },
             {
               "link": "/documentation/validators/skale-node",
-              "depth": 3
             }
           ]
         }
@@ -59,11 +49,9 @@
       "links":[
         {
           "link": "/documentation/technology/skale-consensus",
-          "depth": 3
         },
         {
           "link": "/documentation/technology/skale-dkg",
-          "depth": 0
         }
       ]
     }
