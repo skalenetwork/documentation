@@ -41,7 +41,7 @@ Phase 1 has already been completed. As a recap, during phase 1, Alpine members t
 
 During phase 2, we will be updating the Validator Node software based on Phase 1 feedback and learnings. The CLI process has changed, and contains new steps. We will be contacting you for alpine version 2.1 to set up a new node at the end of October.  
   
-[**Proceed to SKALE Validator CLI >>**](https://developers.skale.network/validators/alpine/skale-validator-cli)
+[**Proceed to SKALE Validator CLI >>**](/documentation/validators/alpine/skale-validator-cli)
 
 
 ## Phase 3
