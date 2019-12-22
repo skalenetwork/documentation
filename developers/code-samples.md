@@ -11,7 +11,7 @@ You can share your own code sample by reaching out to us on discord[.](mailto:de
 
 Use these deployment script examples to deploy your smart contracts onto your SKALE Chain.  
 
-#### Truffle Script
+### Truffle Script
 
 Truffle is a popular way to deploy your smart contracts onto Ethereum, and can also be used to deploy your smart contracts onto SKALE. You can update your truffle configuration file (truffle.js) with a configuration to deploy your smart contracts onto SKALE.  
   
@@ -60,7 +60,7 @@ truffle deploy --reset --network skale --compile-all
 
 ```
 
-#### NodeJS Script
+### NodeJS Script
 
 Smart contracts can be deployed with just the use of web3.js as well. Below you will find a simple script for using NodeJS and web3.  
   
@@ -142,7 +142,7 @@ web3.eth.accounts.signTransaction(tx, privateKey).then(signed => {
 
 ```
 
-#### Remix
+### Remix
 
 Smart contracts can be deployed using Remix and MetaMask. Follow the steps below to deploy your smart coontracts.  
   
