@@ -17,7 +17,8 @@
               "depth": 0
             },
             {
-              "link": "/documentation/developers/getting-started/expert"
+              "link": "/documentation/developers/getting-started/expert",
+              "depth": 0
             }
           ]
         }
