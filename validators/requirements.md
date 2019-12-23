@@ -28,13 +28,13 @@ When a validator sets up a node through the CLI, SKALE Admin calls the Docker Co
 
 Note: If you want to learn more about how our engineering team architected this solution for SKALE please check out our engineers blog  [here](https://medium.com/@dmitrytk/limit-docker-volume-size-9859682f4147).
 
-![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9ce199ca4f18fa76e29ca0_Screen%20Shot%202019-10-08%20at%2012.19.30%20PM.png)![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9ce198d4f7a4dcff8cd609_Screen%20Shot%202019-10-08%20at%2012.19.46%20PM.png)
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9ce199ca4f18fa76e29ca0_Screen%20Shot%202019-10-08%20at%2012.19.30%20PM.png" width="360" height="220" /> 
+
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9ce198d4f7a4dcff8cd609_Screen%20Shot%202019-10-08%20at%2012.19.46%20PM.png" width="360" height="220" /> 
 
 SKALE Admin calls Docker Convoy to limit disk space per container (for example 20GB). The Docker Convoy requests LVM to split the volume in 1/128 size partitions. Once LVM splits the container and allocates the new space to the SKALE Chain, LVM and Docker Convoy informs SKALE Admin that the disk is limited based on the configured SKALE Chain size.  
 
 #### SGX (HSM)
-
-**Rollout**:  End of November  
   
 SKALE will not enforce the use of SGX, until the requirements and specifications for integrating SGX have been finalized. This can be expected to be rolled out during  [Phase 3](https://developers.skale.network/validators/alpine).
 

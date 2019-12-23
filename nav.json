@@ -28,9 +28,6 @@
       "name":"validators",
       "links":[
         {
-          "link": "/documentation/validators/"
-        },
-        {
           "link": "/documentation/validators/getting-started",
           "links": [
             {

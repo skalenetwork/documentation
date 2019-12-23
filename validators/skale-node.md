@@ -6,8 +6,7 @@ SKALE NODEs are the servers run by validators.
 Every node has its own Orchestration, Auditing (Each node monitors at least 24 other nodes in the SKALE Network), and Administration (SKALE Admin).  
 ‍  
 Each "node" hosts several SKALE Chains, for example 128 small SKALE Chains as Docker containers:
-
-![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9bdb82e33988edd815c5ff_Screen%20Shot%202019-10-07%20at%205.33.54%20PM.png)
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9bdb82e33988edd815c5ff_Screen%20Shot%202019-10-07%20at%205.33.54%20PM.png" width="500" height="380" /> 
 
 For more detailed information please review the  [WhitePaper](https://skale.network/whitepaper)  or  [SKALE Tech-Stack](https://medium.com/skale/the-skale-tech-stack-5beb025acb6a)
 
@@ -79,19 +78,27 @@ SKALE Chains will be randomly assigned and shuffled/rotated in the SKALE Network
 
 <Flex>
 
-![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa022515dd48e400ac_Screen%20Shot%202019-10-07%20at%206.08.17%20PM.png)![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa02251508dde400ad_Screen%20Shot%202019-10-07%20at%206.08.26%20PM.png)![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fae59dca31e9150b37_Screen%20Shot%202019-10-07%20at%206.08.09%20PM.png)![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be4eb0225153950e41255_Screen%20Shot%202019-10-07%20at%206.22.27%20PM.png)
 
 </Flex>
 
-A - (Small Chain) Assign these chains to Node 2, 3, 8, 9  **,  _1/128 of a node_**  
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa022515dd48e400ac_Screen%20Shot%202019-10-07%20at%206.08.17%20PM.png" width="35" height="35" /> 
 
-B - (Small Chain) Assign these chains to Node 2, 5, 7, 8  **,  _1/128 of a node_**  
+A - (Small Chain) Assign these chains to Node 2, 3, 8, 9 **,  _1/128 of a node_**  
 
-C - (Large Chain) Assign these chains to Node 1, 4, 6, 10  **, Use the entire node resources**  
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa02251508dde400ad_Screen%20Shot%202019-10-07%20at%206.08.26%20PM.png" width="35" height="35" />
+
+B - (Small Chain) Assign these chains to Node 2, 5, 7, 8 **,  _1/128 of a node_**  
+
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fae59dca31e9150b37_Screen%20Shot%202019-10-07%20at%206.08.09%20PM.png" width="35" height="35" />
+
+C - (Large Chain) Assign these chains to Node 1, 4, 6, 10 **, Use the entire node resources**
+
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be4eb0225153950e41255_Screen%20Shot%202019-10-07%20at%206.22.27%20PM.png" width="35" height="35" /> 
 
 D - (Medium Chain) Assign these chains to Node 3, 5, 7, 8  **, 1/8 of a node**  
 
-![](https://assets.website-files.com/5be05ae542686c4ebf192462/5db0ca39f782f955e55303eb_Screen%20Shot%202019-10-23%20at%202.45.41%20PM.png)
+
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5db0ca39f782f955e55303eb_Screen%20Shot%202019-10-23%20at%202.45.41%20PM.png" width="730" height="260" /> 
 
 After the SKALE Chain assignment, Docker container names show up in particular nodes:  
 **skale_ima_A**,  **skale_schain_A**,  **skale_ima_B**,  **skale_schain_B**, **skale_ima_C**,  **skale_schain_C**,  **skale_ima_D**,  **skale_schain_D**  
@@ -154,7 +161,7 @@ Executions in EVM can be very expensive. For these executions SKALE uses precomp
 
 Storage in aleth, geth or any other Ethereum client is a Merkle Tree, which is the data structure that is mostly commonly used in cryptography.
 
-![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9bea14e59dca36f11540ea_Screen%20Shot%202019-10-07%20at%206.44.17%20PM.png)
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9bea14e59dca36f11540ea_Screen%20Shot%202019-10-07%20at%206.44.17%20PM.png" width="600" height="470" /> 
 
 -   dApp sends a transaction to the SKALE Daemon RPC interface through a wallet ( Web3 or Metamask)  
     
@@ -162,8 +169,8 @@ Storage in aleth, geth or any other Ethereum client is a Merkle Tree, which is t
     
 -   Transaction Queue sends the transaction into the Consensus
 -   Consensus, broadcasts the new transaction and gets received transactions from other node SKALE Chains. And sends the existing transactions to other SKALE Chains. After this trade, the Consensus orders all the transactions received for this SKALE Chain:  
-    
-    ![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9bedec787cd068ca3d2c23_Screen%20Shot%202019-10-07%20at%205.34.43%20PM.png)
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9bedec787cd068ca3d2c23_Screen%20Shot%202019-10-07%20at%205.34.43%20PM.png" width="500" height="480" /> 
+
 -   Consensus does not accept any new transactions until the block is created. The block will be acceptable and will be valid if 2/3 of nodes agree. (DKG algorithm runs here). After the block creation, it will be sealed with the (BLS) signature.  
     ‍**SGX is a secure storage for BLS private key shares. It would be used inside consensus to sign new blocks. But SGX is not only used for private key shares; it can also be used for storing any secured data. Such as ECDSA (Elliptic Curve Digital Signature Algorithm). For more information, please check** [**here.**](https://developers.skale.network/validators/alpine/requirements)  
     
@@ -209,8 +216,8 @@ node2 S-chain Y ports will be between 10012-10023
 To encourage good behavior and ensure high performance within each SKALE Chain, SKALE has incorporated an SLA Manager in its system.  
   
 Nodes in the network are rewarded based upon an algorithmic peer review system. Nodes that fall offline or have poor performance in the network will receive little or no reward for their mining efforts.  
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9cccef4ad854a71d5e51d9_Screen%20Shot%202019-10-08%20at%2010.50.38%20AM.png" width="600" height="430" /> 
 
-![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9cccef4ad854a71d5e51d9_Screen%20Shot%202019-10-08%20at%2010.50.38%20AM.png)
 
 T0 = A New node is registered  
 T30 -1 = 1 hour before the epoch time. Reset monitoring and Until T30 there is no monitoring  
@@ -233,7 +240,7 @@ To do that, we ignore the highest and lowest values from the equation. (Median)
 
 > At the end of each network epoch, the number of SKALE tokens minted for that period is divided equally amongst all nodes. These nodes participate in the network before the epoch beginning. The number of these issued tokens which each node can claim is based upon the average of the metrics submitted its 24 peers where the top and bottom values are dropped to mitigate any collusion or malicious intent by peer nodes. Any tokens which are not issued to nodes as a result of poor uptime/latency will be issued to the N.O.D.E. Foundation
 
-![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9cd94cccdd26412442bb1d_Screen%20Shot%202019-10-08%20at%2011.44.41%20AM.png)
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9cd94cccdd26412442bb1d_Screen%20Shot%202019-10-08%20at%2011.44.41%20AM.png" width="600" height="340" /> 
 
 This report can be costly if it is sent to the mainnet too often. Every time a SKALE Node sends the monitoring information to SKALE Manager, the SLA Agent uses gas. If a validator is out of ETH, the monitoring may fail. To reduce cost to the validator, the SKALE Node will only send the report to SKALE Manager once a month per node.  
 ‍  
