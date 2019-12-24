@@ -1,5 +1,5 @@
 
-## **SKALE NODE**
+# **SKALE NODE**
 
 SKALE NODEs are the servers run by validators.  
 
@@ -10,7 +10,7 @@ Each "node" hosts several SKALE Chains, for example 128 small SKALE Chains as Do
 
 For more detailed information please review the  [WhitePaper](https://skale.network/whitepaper)  or  [SKALE Tech-Stack](https://medium.com/skale/the-skale-tech-stack-5beb025acb6a)
 
-### List Of SKALE Containers  
+## List Of SKALE Containers  
 
 The following base containers will be created during installation for each node:  
 
@@ -40,7 +40,7 @@ SKALE Interchain Messaging Agent (IMA) will be optional in the network for dApp 
 
 SKALE Chain container with SKALE Daemon which includes SKALE Consensus
 
-### Setting Up a New Node  
+## Setting Up a New Node  
 
 There are two main CLI scripts that validators will run to set up a new node  
 
@@ -55,7 +55,7 @@ Registers a validator node to SKALE Manager smart contract which lives in the Ma
   
 To register a new node in the SKALE network please follow the steps in the  [CLI Documentation](https://developers.skale.network/validators/alpine/skale-validator-cli)  
 
-### SKALE Chain  
+## SKALE Chain  
 
 SKALE Chain is a container running the SKALE Daemon service including the SKALE consensus. SKALE Chains are created and managed through the SKALE Manager located on the Ethereum blockchain. SKALE Manager is a series of smart contracts responsible for:  
 
@@ -68,7 +68,7 @@ SKALE Chain is a container running the SKALE Daemon service including the SKALE 
 
 We will have more documentation regarding SKALE Manager responsibilities and architecture available in the upcoming Alpine Team Phases.  
 
-#### Distribution of SKALE Chains  
+### Distribution of SKALE Chains  
 
 SKALE Chains will be randomly assigned and shuffled/rotated in the SKALE Network. When a SKALE chain is created in the SKALE Network, SKALE Manager distributes the SKALE Chain across 16 nodes with a randomized algorithm.  
  
@@ -107,7 +107,7 @@ SKALE Daemon (SKALE-D) runs inside the SKALE Chain container. SKALE Daemon store
 _When you take a snapshot of a SKALE Daemon it is “per SKALE Chain container." A global database does not yet exist._  
 
 
-##### SKALE DAEMON Deep Dive
+#### SKALE DAEMON Deep Dive
 
 **RPC**: RPC stands for Remote Procedure Call, and is an interface that provides developers access to data on Ethereum or the SKALE Network. For more info:
 
@@ -181,7 +181,7 @@ Storage in aleth, geth or any other Ethereum client is a Merkle Tree, which is t
 -   If the transaction successfully sent to address from A to B. EVM updates the info in Key-Value storage(Level DB)  
     
 
-### Ports  
+## Ports  
 
 **Required validator open ports during node registration: 22 , 8080 , 9100 , 10000 - 12000, and ICMP IPv4**  
 
@@ -212,7 +212,7 @@ node2 S-chain Y ports will be between 10012-10023
 > Default Base port: 10000  
 > Max Port: 128 SKALE Chain → 12 port each → 11536 Max port can be assigned for all SKALE Chain in the node
 
-### SLA Agent  
+## SLA Agent  
 
 To encourage good behavior and ensure high performance within each SKALE Chain, SKALE has incorporated an SLA Manager in its system.  
   
@@ -249,6 +249,6 @@ Bounties are calculated based on the performance of each SKALE NODE. This means 
 
 > _"SLA Manager Communicates to SKALE Manager and tracks performance of other nodes that are not on the SKALE Chains run by your node(s). The SLA Manager assigns scores between 0 and 1 to its peers which will determine the payout at the end of an epoch."_
 
-### Node Provisioning  
+## Node Provisioning  
 
 We open-sourced our [SKALE Node provisioning](https://github.com/skalenetwork/node-provisioning) code with Terraform. Currently, it supports AWS and Digital Ocean cloud server providers. Feel free to include the SKALE Node provisioning code in your node set up.
