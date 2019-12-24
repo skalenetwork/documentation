@@ -107,13 +107,17 @@ _When you take a snapshot of a SKALE Daemon it is “per SKALE Chain container."
 
 **RPC**: RPC stands for Remote Procedure Call, and is an interface that provides developers access to data on Ethereum or the SKALE Network. For more info:
 
--   [GETH](https://github.com/ethereum/wiki/wiki/JSON-RPC)
--   ‍[ALETH](https://github.com/ethereum/aleth)
+- [GETH](https://github.com/ethereum/wiki/wiki/JSON-RPC)
+- [ALETH](https://github.com/ethereum/aleth)
 
-> Note: Currently, the following functions are not supported on SKALE  
- **ssh_** </br>
- **eth_sign** </br>
- **eth_compile** </br>
+<note>
+  
+Note: Currently, the following functions are not supported on SKALE  
+**ssh_** <br/>
+**eth_sign** <br/>
+**eth_compile**<br/>
+
+</note>
 
 There are two types of calls that a dApp can make via RPC:
 
