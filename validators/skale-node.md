@@ -100,11 +100,12 @@ After the SKALE Chain assignment, Docker container names show up in particular n
   
 **_skale_schain_machine_learning_** _containers will be in later versions._
 
-#### SKALE Daemon ([SKALE-D](https://github.com/skalenetwork/skaled)) :  
+### SKALE Daemon ([SKALE-D](https://github.com/skalenetwork/skaled)) :  
 
 SKALE Daemon (SKALE-D) runs inside the SKALE Chain container. SKALE Daemon stores ETH blocks, state, and file storage database. A snapshot will need to be made of the SKALE Daemon.  
 
 _When you take a snapshot of a SKALE Daemon it is “per SKALE Chain container." A global database does not yet exist._  
+
 
 
 #### SKALE DAEMON Deep Dive
