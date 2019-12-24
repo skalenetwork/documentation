@@ -2,9 +2,9 @@
 ## **SKALE NODE**
 
 SKALE NODEs are the servers run by validators.  
-‍  
+
 Every node has its own Orchestration, Auditing (Each node monitors at least 24 other nodes in the SKALE Network), and Administration (SKALE Admin).  
-‍  
+
 Each "node" hosts several SKALE Chains, for example 128 small SKALE Chains as Docker containers:
 <img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9bdb82e33988edd815c5ff_Screen%20Shot%202019-10-07%20at%205.33.54%20PM.png" width="500"/> 
 
@@ -59,11 +59,11 @@ To register a new node in the SKALE network please follow the steps in the  [CLI
 
 SKALE Chain is a container running the SKALE Daemon service including the SKALE consensus. SKALE Chains are created and managed through the SKALE Manager located on the Ethereum blockchain. SKALE Manager is a series of smart contracts responsible for:  
 
--   The orchestration and creation of SKALE Chains  
+- The orchestration and creation of SKALE Chains  
     
--   The registration of validators with the SKALE Network  
+- The registration of validators with the SKALE Network  
     
--   The performance measuring of nodes in the network  
+- The performance measuring of nodes in the network  
     
 
 We will have more documentation regarding SKALE Manager responsibilities and architecture available in the upcoming Alpine Team Phases.  
@@ -71,8 +71,8 @@ We will have more documentation regarding SKALE Manager responsibilities and arc
 #### Distribution of SKALE Chains  
 
 SKALE Chains will be randomly assigned and shuffled/rotated in the SKALE Network. When a SKALE chain is created in the SKALE Network, SKALE Manager distributes the SKALE Chain across 16 nodes with a randomized algorithm.  
-‍  
-‍**_(In this following example, the assumption is that SKALE Manager is distributing SKALE Chains to 4 nodes instead of 16 to simplify)_**  
+ 
+**_(In this following example, the assumption is that SKALE Manager is distributing SKALE Chains to 4 nodes instead of 16 to simplify)_**  
 
 > _The following image shows that all same colors communicate with each other and belongs to the same dApp. When a dApp owner requests a SKALE Chain and receives an endpoint to the nodes within their SKALE Chain, communication within the SKALE Chain is be coordinated by the SKALE Daemon._  
 
@@ -103,7 +103,7 @@ After the SKALE Chain assignment, Docker container names show up in particular n
 #### SKALE Daemon ([SKALE-D](https://github.com/skalenetwork/skaled)) :  
 
 SKALE Daemon (SKALE-D) runs inside the SKALE Chain container. SKALE Daemon stores ETH blocks, state, and file storage database. A snapshot will need to be made of the SKALE Daemon.  
-‍  
+
 _When you take a snapshot of a SKALE Daemon it is “per SKALE Chain container." A global database does not yet exist._  
 
 ##### SKALE DAEMON Deep Dive  
@@ -200,7 +200,7 @@ in node2 (in sequence) Z,Y,B,C chains are created
 node1 S-chain A ports will be between 10000-10011
 **node1 S-chain B ports will be between 10012-10024**
 **node1 S-chain C ports will be between 10025-10037**  
-‍  
+
 node2 S-chain Z ports will be between 10000-10011  
 node2 S-chain Y ports will be between 10012-10023  
 **node2 S-chain B ports will be between 10024-10035**  
@@ -230,9 +230,9 @@ When the validator registers a node, SKALE Admin deploys the node information su
 
 Nodes store latency and downtime of each monitored node in SKALE MySQL.  
 SLA Agent has its Container. SKALE spins up one SLA Agent per validator Node (SERVER)  
-‍  
+
 Every 30 days, validator gets bounties and collects data 1 hour before the epoch time:  
-‍  
+
 At the time [T30 - 1] the SLA agent receives the aggregated data(metrics) from MySQL Database in MySQL Container  
 At the time, T30 SLA sends the metrics to SKALE Manager.  
   
