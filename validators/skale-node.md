@@ -115,10 +115,12 @@ _When you take a snapshot of a SKALE Daemon it is “per SKALE Chain container."
 - [ALETH](https://github.com/ethereum/aleth)
 
 <note>
+
 <strong>Note:</strong> Currently, the following functions are not supported on SKALE<br/>
 <strong>sh_</strong> <br/>
 <strong>eth_sign</strong> <br/>
 <strong>eth_compile</strong><br/>
+
 </note>
 
 There are two types of calls that a dApp can make via RPC:
