@@ -76,18 +76,21 @@ SKALE Chains will be randomly assigned and shuffled/rotated in the SKALE Network
 
 > _The following image shows that all same colors communicate with each other and belongs to the same dApp. When a dApp owner requests a SKALE Chain and receives an endpoint to the nodes within their SKALE Chain, communication within the SKALE Chain is be coordinated by the SKALE Daemon._  
 
-<Flex>
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa022515dd48e400ac_Screen%20Shot%202019-10-07%20at%206.08.17%20PM.png" width="35"/>
 
+A - (Small Chain) Assign these chains to Node 2, 3, 8, 9 **,  _1/128 of a node_**  
 
-</Flex>
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa02251508dde400ad_Screen%20Shot%202019-10-07%20at%206.08.26%20PM.png" width="35"/>
 
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa022515dd48e400ac_Screen%20Shot%202019-10-07%20at%206.08.17%20PM.png" width="35"/> A - (Small Chain) Assign these chains to Node 2, 3, 8, 9 **,  _1/128 of a node_**  
+B - (Small Chain) Assign these chains to Node 2, 5, 7, 8 **,  _1/128 of a node_**  
 
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fa02251508dde400ad_Screen%20Shot%202019-10-07%20at%206.08.26%20PM.png" width="35"/> B - (Small Chain) Assign these chains to Node 2, 5, 7, 8 **,  _1/128 of a node_**  
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fae59dca31e9150b37_Screen%20Shot%202019-10-07%20at%206.08.09%20PM.png" width="35"/>
 
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be1fae59dca31e9150b37_Screen%20Shot%202019-10-07%20at%206.08.09%20PM.png" width="35"/> C - (Large Chain) Assign these chains to Node 1, 4, 6, 10 **, Use the entire node resources**
+C - (Large Chain) Assign these chains to Node 1, 4, 6, 10 **, Use the entire node resources**
 
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be4eb0225153950e41255_Screen%20Shot%202019-10-07%20at%206.22.27%20PM.png" width="35"/> D - (Medium Chain) Assign these chains to Node 3, 5, 7, 8  **, 1/8 of a node**  
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be4eb0225153950e41255_Screen%20Shot%202019-10-07%20at%206.22.27%20PM.png" width="35"/>
+
+D - (Medium Chain) Assign these chains to Node 3, 5, 7, 8  **, 1/8 of a node**  
 
 
 <img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5db0ca39f782f955e55303eb_Screen%20Shot%202019-10-23%20at%202.45.41%20PM.png" width="730"/> 
