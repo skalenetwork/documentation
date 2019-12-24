@@ -26,7 +26,11 @@ To assist with configuring volume, SKALE Labs introduced [Docker Convoy](https:/
 When a validator sets up a node through the CLI, SKALE Admin calls the Docker Convoy to format the external volume. Each validator in the SKALE Network will be expected to provide non-boot external disk space, which will be used to partition the volume by the SKALE Admin.  
 ‍  
 
+<note>
+
 Note: If you want to learn more about how our engineering team architected this solution for SKALE please check out our engineers blog  [here](https://medium.com/@dmitrytk/limit-docker-volume-size-9859682f4147).
+
+</note>
 
 <img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9ce199ca4f18fa76e29ca0_Screen%20Shot%202019-10-08%20at%2012.19.30%20PM.png" width="360" /> <img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9ce198d4f7a4dcff8cd609_Screen%20Shot%202019-10-08%20at%2012.19.46%20PM.png" width="360" /> 
 
