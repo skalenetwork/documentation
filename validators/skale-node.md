@@ -167,7 +167,7 @@ Storage in aleth, geth or any other Ethereum client is a Merkle Tree, which is t
 -   Transaction Queue sends the transaction into the Consensus
 -   Consensus, broadcasts the new transaction and gets received transactions from other node SKALE Chains. And sends the existing transactions to other SKALE Chains. After this trade, the Consensus orders all the transactions received for this SKALE Chain:  
 
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9bedec787cd068ca3d2c23_Screen%20Shot%202019-10-07%20at%205.34.43%20PM.png" width="500"/> 
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9bedec787cd068ca3d2c23_Screen%20Shot%202019-10-07%20at%205.34.43%20PM.png" width="500" /> 
 
 -   Consensus does not accept any new transactions until the block is created. The block will be acceptable and will be valid if 2/3 of nodes agree. (DKG algorithm runs here). After the block creation, it will be sealed with the (BLS) signature.  
     ‍**SGX is a secure storage for BLS private key shares. It would be used inside consensus to sign new blocks. But SGX is not only used for private key shares; it can also be used for storing any secured data. Such as ECDSA (Elliptic Curve Digital Signature Algorithm). For more information, please check** [**here.**](https://developers.skale.network/validators/alpine/requirements)  
@@ -213,7 +213,7 @@ node2 S-chain Y ports will be between 10012-10023
 To encourage good behavior and ensure high performance within each SKALE Chain, SKALE has incorporated an SLA Manager in its system.  
   
 Nodes in the network are rewarded based upon an algorithmic peer review system. Nodes that fall offline or have poor performance in the network will receive little or no reward for their mining efforts.  
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9cccef4ad854a71d5e51d9_Screen%20Shot%202019-10-08%20at%2010.50.38%20AM.png" width="600" > 
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9cccef4ad854a71d5e51d9_Screen%20Shot%202019-10-08%20at%2010.50.38%20AM.png" width="600" /> 
 
 
 T0 = A New node is registered  
@@ -237,7 +237,7 @@ To do that, we ignore the highest and lowest values from the equation. (Median)
 
 > At the end of each network epoch, the number of SKALE tokens minted for that period is divided equally amongst all nodes. These nodes participate in the network before the epoch beginning. The number of these issued tokens which each node can claim is based upon the average of the metrics submitted its 24 peers where the top and bottom values are dropped to mitigate any collusion or malicious intent by peer nodes. Any tokens which are not issued to nodes as a result of poor uptime/latency will be issued to the N.O.D.E. Foundation
 
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9cd94cccdd26412442bb1d_Screen%20Shot%202019-10-08%20at%2011.44.41%20AM.png" width="600"> 
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9cd94cccdd26412442bb1d_Screen%20Shot%202019-10-08%20at%2011.44.41%20AM.png" width="600" /> 
 
 This report can be costly if it is sent to the mainnet too often. Every time a SKALE Node sends the monitoring information to SKALE Manager, the SLA Agent uses gas. If a validator is out of ETH, the monitoring may fail. To reduce cost to the validator, the SKALE Node will only send the report to SKALE Manager once a month per node.  
 ‍  
@@ -247,4 +247,4 @@ Bounties are calculated based on the performance of each SKALE NODE. This means 
 
 ### Node Provisioning  
 
-We open-sourced our  [SKALE Node provisioning](https://github.com/skalenetwork/node-provisioning) code with Terraform. Currently, it supports AWS and Digital Ocean cloud server providers. Feel free to include the SKALE Node provisioning code in your node set up.
+We open-sourced our [SKALE Node provisioning](https://github.com/skalenetwork/node-provisioning) code with Terraform. Currently, it supports AWS and Digital Ocean cloud server providers. Feel free to include the SKALE Node provisioning code in your node set up.
