@@ -106,6 +106,7 @@ SKALE Daemon (SKALE-D) runs inside the SKALE Chain container. SKALE Daemon store
 
 _When you take a snapshot of a SKALE Daemon it is “per SKALE Chain container." A global database does not yet exist._  
 
+
 ##### SKALE DAEMON Deep Dive  
 
 **RPC**: RPC stands for Remote Procedure Call, and is an interface that provides developers access to data on Ethereum or the SKALE Network. For more info:
@@ -114,12 +115,10 @@ _When you take a snapshot of a SKALE Daemon it is “per SKALE Chain container."
 - [ALETH](https://github.com/ethereum/aleth)
 
 <note>
-  
-Note: Currently, the following functions are not supported on SKALE  
-**ssh_** <br/>
-**eth_sign** <br/>
-**eth_compile**<br/>
-
+<strong>Note:</strong> Currently, the following functions are not supported on SKALE<br/>
+<strong>sh_</strong> <br/>
+<strong>eth_sign</strong> <br/>
+<strong>eth_compile</strong><br/>
 </note>
 
 There are two types of calls that a dApp can make via RPC:
