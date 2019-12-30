@@ -10,6 +10,7 @@
           "link" : "/documentation/developers/code-samples"
         },
         {
+          "title": null,
           "link": "/documentation/developers/getting-started",
           "links": [
             {
