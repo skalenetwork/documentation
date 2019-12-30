@@ -10,8 +10,8 @@
           "link" : "/documentation/developers/code-samples"
         },
         {
-          "title": null,
-          "link": "/documentation/developers/getting-started",
+          "title": "Getting Started",
+          "link": "/documentation/developers/getting-started/beginner",
           "links": [
             {
               "link": "/documentation/developers/getting-started/beginner",
