@@ -23,7 +23,7 @@
           ]
         },
         {
-          "link": "/documentation/developers/products",
+          "link": "/documentation/developers/products/",
           "links": [
             {
               "link": "/documentation/developers/products/interchain-messaging-agent",
