@@ -21,6 +21,29 @@
               "depth": 0
             }
           ]
+        },
+        {
+          "link": "/documentation/developers/products",
+          "links": [
+            {
+              "link": "/documentation/developers/products/interchain-messaging-agent",
+              "depth": 0,
+              "links": [
+                { 
+                  "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth",
+                  "depth": 1
+                }
+              ]
+            },
+            {
+              "link": "/documentation/developers/products/file-storage",
+              "depth": 0
+            },
+            {
+              "link": "/documentation/developers/products/integrations",
+              "depth": 0
+            }
+          ]
         }
       ]
     },
