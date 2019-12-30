@@ -313,3 +313,4 @@ web3.eth.getTransactionCount(account).then(nonce => {
 ```
 
 </Step>
+</StepsLayout>

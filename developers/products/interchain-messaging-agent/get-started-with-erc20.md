@@ -513,3 +513,5 @@ web3ForSchain.eth.getTransactionCount(account).then(nonce => {
 If your ERC20 contract contains custom functions outside of the standard required functions for ERC20 contracts, please refer to the following code example:  
 
 [Live Demo](https://codesandbox.io/s/raw-erc20-skale-interchain-messaging-agent-u4tdt)
+
+</StepsLayout>

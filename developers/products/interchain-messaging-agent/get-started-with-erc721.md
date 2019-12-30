@@ -515,3 +515,5 @@ web3ForSchain.eth.getTransactionCount(account).then(nonce => {
 If your ERC721 contract contains custom functions outside of the standard required functions for ERC721 contracts, please refer to the following code example:  
 
 [Live Demo](https://codesandbox.io/s/raw-erc721-skale-interchain-messaging-agent-6l4m5)
+
+</StepsLayout>
