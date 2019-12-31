@@ -26,7 +26,6 @@
           "link": "/documentation/developers/products/",
           "links": [
             {
-              "title": "Interchain Messaging Agent",
               "link": "/documentation/developers/products/interchain-messaging-agent",
               "links": [
                 { 
@@ -42,6 +41,10 @@
             },
             {
               "link": "/documentation/developers/products/file-storage",
+              "depth": 0
+            },
+            {
+              "link": "/documentation/developers/products/skale-ml",
               "depth": 0
             },
             {
