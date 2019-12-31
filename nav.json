@@ -23,10 +23,12 @@
           ]
         },
         {
-          "link": "/documentation/developers/products/",
+          "title": "Products",
+          "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth",
           "links": [
             {
-              "link": "/documentation/developers/products/interchain-messaging-agent",
+              "title": "Interchain Messaging Agent",
+              "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth",
               "links": [
                 { 
                   "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth"
