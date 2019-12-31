@@ -7,7 +7,7 @@ author:
 title: SKALE Blockchain Low Level Specification
 ---
 
-# Skale Consensus
+# SKALE Consensus
 
 ## Definitions and assumptions
 
@@ -335,24 +335,24 @@ Each block is a byte string, which includes a header followed by a body.
 
 Block header is a JSON object that includes the following:
 
-1.  $BLOCK_ID$ - integer id of the current block, starting from 0 and
+1.  $BLOCK\ ID$ - integer id of the current block, starting from 0 and
     incremented by 1
 
-2.  $BLOCK_PROPOSER$ - integer id of the node that proposed the block.
+2.  $BLOCK\ PROPOSER$ - integer id of the node that proposed the block.
 
-3.  $PREVIOUS_BLOCK_HASH$ - sha-3 hash of the previous block
+3.  $PREVIOUS\ BLOCK\ HASH$ - sha-3 hash of the previous block
 
-4.  $CURRENT_BLOCK_HASH$ - the hash of the current block
+4.  $CURRENT\ BLOCK\ HASH$ - the hash of the current block
 
-5.  $TRANSACTION_COUNT$ - count of transactions in the current block
+5.  $TRANSACTION\ COUNT$ - count of transactions in the current block
 
-6.  $TRANSACTION_SIZES$ - an array of ftransaction sizes in the current
+6.  $TRANSACTION\ SIZES$ - an array of ftransaction sizes in the current
     block
 
-7.  $CURRENT_BLOCK_PROPOSER_SIG$ - ECDSA signature of the proposer of
+7.  $CURRENT\ BLOCK\ PROPOSER\ SIG$ - ECDSA signature of the proposer of
     the current block
 
-8.  $CURRENT_BLOCK_TSIG$ - BLS supermajority threshold signature of
+8.  $CURRENT\ BLOCK\ TSIG$ - BLS supermajority threshold signature of
     the current block
 
 Note: All integers in this spec are unsigned 64-bit integers unless
@@ -360,14 +360,14 @@ specified otherwise.
 
 ### Block format: body
 
-$BLOCK_BODY$ is a concatenated transactions array of all transactions
+$BLOCK\ BODY$ is a concatenated transactions array of all transactions
 in the block.
 
 ### Block format: hash
 
 Block hash is calculated by taking 256-bit Keccack hash of block header
-concatenated with block body, while omitting $CURRENT_BLOCK_HASH$,
-$CURRENT_BLOCK_SIG$, and $CURRENT_BLOCK_TSIG$ from the header. The
+concatenated with block body, while omitting $CURRENT\ BLOCK\ HASH$,
+$CURRENT\ BLOCK\ SIG$, and $CURRENT\ BLOCK\ TSIG$ from the header. The
 reason why these fields are omitted is because they are not known at the
 time block is hashed and signed.
 
@@ -437,13 +437,13 @@ After that the receiving node will then reconstruct the block proposal.
 
 For a particular node, the blockchain consists of a range of committed
 blocks $B[i]$ starting from $B[0]$ end ending with $B[TIP\_ID]$, where
-$TIP_ID$ is the ID of the largest known committed block. Block ids are
+$TIP\ ID$ is the ID of the largest known committed block. Block ids are
 sequential positive integers. Blocks are stored in non-volatile storage.
 
 ### Consensus rounds
 
 New blocks a created by running consensus rounds. Each round corresponds
-to a particular $BLOCK_ID$.
+to a particular $BLOCK\ ID$.
 
 At the beginning of a consensus round, each node makes a block proposal.
 
@@ -459,7 +459,7 @@ blockchain.
 ### Catchup agent
 
 There are two ways, in which blockchain on a particular node grows and
-$TIP_ID$ is incremented:
+$TIP\ ID$ is incremented:
 
 Normal consensus operation: during normal consensus, a node constantly
 participates in consensus rounds, making block proposals and then
@@ -471,7 +471,7 @@ nodes. During a sync both nodes sync their blockchains and block
 proposal databases.
 
 If during catchup, node $A$ discovers that node $B$ has a larger value
-of $TIP_ID$, $A$ will download the missing blocks range from $B$, and
+of $TIP\ ID$, $A$ will download the missing blocks range from $B$, and
 commit it to its chain after verifying supermajority threshold
 signatures on the received blocks.
 
@@ -484,7 +484,7 @@ participating in the consensus for new blocks by accepting block
 proposals and voting according to consensus mechanism, but without
 issuing its own block proposals. Since a block proposal requires hash of
 the previous block, a node will only issue its own block proposal for a
-particular block id once it a catch up procedure moves the $TIP_ID$ to
+particular block id once it a catch up procedure moves the $TIP\ ID$ to
 a given block id.
 
 Liveliness property is guaranteed under hard crashes if the following is
@@ -506,8 +506,8 @@ the catchup procedure to download blocks from other nodes.
 ### Block proposal creation trigger
 
 A node is required to create a block proposal directly after its
-$TIP_ID$ moves to a new value. $TIP_ID$ will be incremented by $1$
-once a previous consensus round completes. $TIP_ID$ will also move, if
+$TIP\ ID$ moves to a new value. $TIP\ ID$ will be incremented by $1$
+once a previous consensus round completes. $TIP\ ID$ will also move, if
 the catchup agent appends blocks to the blockchain.
 
 ### Block proposal creation algorithm
@@ -517,32 +517,32 @@ To create a block a node will:
 1.  examine its pending queue,
 
 2.  if the total size of of transactions in the pending queue
-    $TOTAL_SIZE$ is less or equal than $MAX_BLOCK_SIZE$, fill in a
+    $TOTAL\ SIZE$ is less or equal than $MAX\ BLOCK\ SIZE$, fill in a
     block proposal by taking all transactions from the queue,
 
-3.  otherwise, fill in a block proposal by of $MAX_BLOCK_SIZE$ by
+3.  otherwise, fill in a block proposal by of $MAX\ BLOCK\ SIZE$ by
     taking transactions from oldest received to newest received,
 
 4.  assemble transactions into a block proposal, ordering transactions
     by sha-3 hash from smallest value to largest value,
 
 5.  in case the pending queue is empty, the node will wait for
-    $BEACON_TIME$ and then, if the queue is still empty, make an empty
+    $BEACON\ TIME$ and then, if the queue is still empty, make an empty
     block proposal containing no transactions.
 
 Note that the node does not remove transactions from the pending queue
 at the time of proposal. The reason for this is that at the proposal
 time there is no guarantee that the proposal will be accepted.
 
-$MAX_BLOCK_SIZE$ is the maximum size of the block body in bytes.
-Currently we use $MAX_BLOCK_SIZE = 8 MB$. FUTURE: We may consider
+$MAX\ BLOCK\ SIZE$ is the maximum size of the block body in bytes.
+Currently we use $MAX\ BLOCK\ SIZE = 8 MB$. FUTURE: We may consider
 self-adjusting block size to target a particular average block commit
 time, such as $1s$.
 
-$BEACON_TIME$ is time between empty block creation. If no-one is
+$BEACON\ TIME$ is time between empty block creation. If no-one is
 submitting transactions to the blockchain, empty beacon blocks will be
 created. Beacon blocks are used to detect normal operation of the
-blockchain. The current value of $BEACON_TIME$ is $3s$.
+blockchain. The current value of $BEACON\ TIME$ is $3s$.
 
 ### Block proposal reliable communication algorithm
 
@@ -646,12 +646,12 @@ following properties
     that at least one honest node voted yes.
 
 Note that, an ABBA protocol typically outputs a random number
-$COMMON_COIN$ as a byproduct of its operation. We use this
-$COMMON_COIN$ as a random number source.
+$COMMON\ COIN$ as a byproduct of its operation. We use this
+$COMMON\ COIN$ as a random number source.
 
 ### Consensus round
 
-A consensus round $R$ is executed for each $BLOCK_ID$ and has the
+A consensus round $R$ is executed for each $BLOCK\ ID$ and has the
 following properties:
 
 1.  For each $R$ nodes will execute $N$ instances of ABBA.
@@ -672,7 +672,7 @@ following properties:
     winning proposal index the remainder of division of $R$ by
     $n_{win}$, where $n_{win}$ is the total number of $yes$ proposals.
 
-7.  The random number $R$ is the sum of all ABBA $COMMON_COIN$s.
+7.  The random number $R$ is the sum of all ABBA $COMMON\ COIN$s.
 
 8.  In the rare case when all votes are $no$, an empty block is
     committed to the blockchain. The probability of an all-no vote is
