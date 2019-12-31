@@ -33,7 +33,10 @@
                   "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth"
                 },
                 {
-                  "link": "/documentation/developers/products/interchain-messaging-agent/get-started-wtih-erc20"
+                  "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-erc20"
+                },
+                {
+                  "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-erc721"
                 }
               ]
             },
@@ -46,6 +49,12 @@
               "depth": 0
             }
           ]
+        },
+        {
+          "link": "/documentation/developers/example-dapps"
+        },
+        {
+          "link": "/documentation/developers/tools-and-troubleshooting"
         }
       ]
     },
