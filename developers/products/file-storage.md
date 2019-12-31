@@ -1,5 +1,5 @@
 
-## File Storage API
+## File Storage
 
 Storing files on the blockchain is possible within the SKALE Network. You can use SKALE to host your text, image, HTML, and other file formats through the  [file-storage npm package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 

@@ -1,6 +1,6 @@
 <StepsLayout id='ETH'>
 
-### ETH
+### Get Started with ETH
 
 The Interchain Messaging Agent can be used for managing ETH tokens between Ethereum and SKALE.  
 

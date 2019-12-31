@@ -1,6 +1,6 @@
 <StepsLayout id='ERC721'>
 
-### ERC721
+### Get Started with ERC721
 
 The Interchain Messaging Agent can be used for managing ERC721 tokens between Ethereum and SKALE.  
 

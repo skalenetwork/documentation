@@ -26,11 +26,14 @@
           "link": "/documentation/developers/products/",
           "links": [
             {
-              "title": "Title Goes Here",
+              "title": "Interchain Messaging Agent",
               "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth",
               "links": [
                 { 
                   "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth"
+                },
+                {
+                  "link": "/documentation/developers/products/interchain-messaging-agent/get-started-wtih-erc20"
                 }
               ]
             },

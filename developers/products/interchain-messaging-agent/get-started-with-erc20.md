@@ -1,6 +1,6 @@
 <StepsLayout id='ERC20'>
 
-### ERC20
+### Get Started with ERC20
 
 The Interchain Messaging Agent can be used for managing ERC20 tokens between Ethereum and SKALE.  
 
