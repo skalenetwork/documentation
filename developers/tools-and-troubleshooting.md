@@ -1,8 +1,17 @@
 # Tools and Troubleshooting
 
-## [Block Explorer](http://explorer.skale.network/)
+<SplitSectionLayout>
+<SplitSectionColumn>
 
-## [SKALE Faucet](http://faucet.skale.network/)
+<button>[Block Explorer](http://explorer.skale.network/)</button>
+
+</SplitSectionColumn>
+<SplitSectionColumn>
+
+<button boxPosition="BOTTOM_LEFT">[SKALE Faucet](http://faucet.skale.network/)</button>
+
+</SplitSectionColumn>
+</SplitSectionLayout>
 
 ## Troubleshooting
 
