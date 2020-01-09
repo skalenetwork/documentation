@@ -14,7 +14,7 @@
 
 If you do not have a SKALE Chain yet, request one by using the link below.  
 
-<Button>[Request a SKALE Chain](https://skale.network/innovators-signup)</Button>
+<button>[Request a SKALE Chain](https://skale.network/innovators-signup)</button>
 
 </Step>
 <Step id='two'>
@@ -25,7 +25,7 @@ SKALE Chains on the devnet will already be configured for you, and will not requ
 
 In order to use your SKALE Chain, you will need to fund your wallet account with the SKALE devnet ETH tokens. This can be accomplished by using the SKALE Faucet to receive 0.5 test ETH.  
 
-<Button>[Get Test ETH](http://faucet.skale.network/)</Button>
+<button>[Get Test ETH](http://faucet.skale.network/)</button>
 
 </Step>
 <Step id='three'>

@@ -4,7 +4,7 @@
 
 The Interchain Messaging Agent can be used for managing ETH tokens between Ethereum and SKALE.  
 
-<Button>[Live Demo](https://codesandbox.io/s/skale-interchain-messaging-agent-eth-zm6hz)</Button>
+<button>[Live Demo](https://codesandbox.io/s/skale-interchain-messaging-agent-eth-zm6hz)</button>
 
 <StepsController>
     <StepNav stepId='one' label='Deposit\nETH on Ethereum'><ByzantineFaultTolerant/></StepNav>

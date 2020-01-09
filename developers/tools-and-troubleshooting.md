@@ -3,12 +3,12 @@
 <SplitSectionLayout>
 <SplitSectionColumn>
 
-<Button>[Block Explorer](http://explorer.skale.network/)</Button>
+<button>[Block Explorer](http://explorer.skale.network/)</button>
 
 </SplitSectionColumn>
 <SplitSectionColumn>
 
-<Button boxPosition="BOTTOM_LEFT">[SKALE Faucet](http://faucet.skale.network/)</Button>
+<button boxPosition="BOTTOM_LEFT">[SKALE Faucet](http://faucet.skale.network/)</button>
 
 </SplitSectionColumn>
 </SplitSectionLayout>

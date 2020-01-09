@@ -4,7 +4,7 @@
 
 The Interchain Messaging Agent can be used for managing ERC721 tokens between Ethereum and SKALE.  
 
-<Button>[Live Demo](https://codesandbox.io/s/erc721-skale-interchain-messaging-agent-74bjo)</Button>
+<button>[Live Demo](https://codesandbox.io/s/erc721-skale-interchain-messaging-agent-74bjo)</button>
 
 <StepsController>
     <StepNav stepId='one' label='Deposit\nERC721 on Ethereum'><ByzantineFaultTolerant/></StepNav>
@@ -514,6 +514,6 @@ web3ForSchain.eth.getTransactionCount(account).then(nonce => {
 
 If your ERC721 contract contains custom functions outside of the standard required functions for ERC721 contracts, please refer to the following code example:  
 
-<Button>[Live Demo](https://codesandbox.io/s/raw-erc721-skale-interchain-messaging-agent-6l4m5)</Button>
+<button>[Live Demo](https://codesandbox.io/s/raw-erc721-skale-interchain-messaging-agent-6l4m5)</button>
 
 </StepsLayout>
