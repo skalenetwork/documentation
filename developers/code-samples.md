@@ -151,6 +151,4 @@ For more information on using remix, please see [Remix Documentation](https://re
 
 To connect SKALE in MetaMask, create a new Custom RPC with your SKALE chain endpoint.  
 
-<Box maxWidth='50vw'>
-![](https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif)
-</Box>
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif" style="max-Width: 50vw" />
