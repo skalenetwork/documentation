@@ -4,7 +4,7 @@
 
 The Interchain Messaging Agent can be used for managing ETH tokens between Ethereum and SKALE.  
 
-[Live Demo](https://codesandbox.io/s/skale-interchain-messaging-agent-eth-zm6hz)
+<Button>[Live Demo](https://codesandbox.io/s/skale-interchain-messaging-agent-eth-zm6hz)</Button>
 
 <StepsController>
     <StepNav stepId='one' label='Deposit\nETH on Ethereum'><ByzantineFaultTolerant/></StepNav>
@@ -21,17 +21,17 @@ This method is called from Ethereum to "freeze" funds and move ETH into a safe D
 
 The  **DepositBox**  Smart Contract is currently deployed to the Rinkeby testnet. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
 
-```
+```javascript
 function deposit(string memory schainID, address to) public payable {
         bytes memory empty;
         deposit(schainID, to, empty);
-    }
+  }
 
 ```
 
 Alternatively, you can choose to send a message with the ETH to the SKALE Chain by using the deposit function below.  
 
-```
+```javascript
 function deposit(
   string memory schainID, 
   address to, 
@@ -61,7 +61,7 @@ function deposit(
 
 ##### Example Code
 
-```
+```javascript
 const Web3 = require('web3');
 const Tx = require('ethereumjs-tx');
 
@@ -131,7 +131,7 @@ This method is called from the SKALE Chain to send funds and move the token back
 
 The  **TokenManager**  Smart Contract is deployed to your SKALE Chain. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
 
-```
+```javascript
 function exitToMain(address to, uint amount) public {
     bytes memory empty;
     exitToMain(to, amount, empty);
@@ -141,7 +141,7 @@ function exitToMain(address to, uint amount) public {
 
 Alternatively, you can choose to send a message with the ETH back to Ethereum by using the exitToMain function below.  
 
-```
+```javascript
 function exitToMain(address to, uint amount, bytes memory data) public receivedEth(amount) {
     bytes memory newData;
     newData = abi.encodePacked(bytes1(uint8(1)), data);
@@ -159,7 +159,7 @@ function exitToMain(address to, uint amount, bytes memory data) public receivedE
 
 ##### Example Code
 
-```
+```javascript
 const Web3 = require('web3');
 const Tx = require('ethereumjs-tx');
 
@@ -217,7 +217,6 @@ web3.eth.getTransactionCount(account).then(nonce => {
     catch(console.error);
 });
 
-
 ```
 
 </Step>
@@ -232,7 +231,7 @@ This method is called from Ethereum to release tokens back to the end user.
 
 The  **LockAndDataForMainnet**  Smart Contract is deployed to your SKALE Chain. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
 
-```
+```javascript
 function getMyEth() public {
     require(
       address(this).balance >= approveTransfers[msg.sender], 
@@ -251,7 +250,7 @@ function getMyEth() public {
 
 ##### Example Code
 
-```
+```javascript
 const Web3 = require('web3');
 const Tx = require('ethereumjs-tx');
 

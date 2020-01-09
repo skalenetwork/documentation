@@ -16,7 +16,7 @@ Follow the steps below to start using SKALE. If you have your SKALE Chains alrea
 
 If you do not have a SKALE Chain yet, request one by using the link below.  
 
-<button>[Request a SKALE Chain](https://skale.network/innovators-signup)</button>
+<Button>[Request a SKALE Chain](https://skale.network/innovators-signup)</Button>
 
 </Step>
 <Step id='two'>
@@ -27,7 +27,7 @@ SKALE Chains on the devnet will already be configured for you, and will not requ
 
 In order to use your SKALE Chain, you will need to fund your wallet account with the SKALE devnet ETH tokens. This can be accomplished by using the SKALE Faucet to receive 0.5 test ETH.  
 
-<button>[Get Test ETH](http://faucet.skale.network/)</button>
+<Button>[Get Test ETH](http://faucet.skale.network/)</Button>
 
 </Step>
 <Step id='three'>
@@ -74,8 +74,9 @@ module.exports = {
 
 You can point your deployment scripts for your existing smart contracts to your SKALE Chain’s address and deploy using existing tooling (e.g.: Truffle). An example truffle deployment command is:  
 
-```
+```bash
 truffle deploy --reset --network skale --compile-all
+
 ```
 
 See  [Code Samples](https://developers.skale.network/code-samples)  for more deployment script examples.  
@@ -91,6 +92,7 @@ Once your smart contracts have been moved over to your SKALE Chain, you can test
 import Web3 from 'web3'
 
 const web3 = new Web3("[YOUR_SKALE_CHAIN_ENDPOINT]");
+
 ```
 
 </Step>

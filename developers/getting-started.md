@@ -2,16 +2,15 @@
 
 Follow the steps below to start using SKALE. If you have your SKALE Chains already set up and you are looking for examples, please see  [Code Samples](/documentation/developers/code-samples).  
 
-
 <SplitSectionLayout>
 <SplitSectionColumn>
 
-<button>[Total Newbie](/documentation/developers/getting-started/beginner)</button>
+<Button>[Total Newbie](/documentation/developers/getting-started/beginner)</Button>
 
 </SplitSectionColumn>
 <SplitSectionColumn>
 
-<button boxPosition="BOTTOM_LEFT">[Expert Fast-track](/documentation/developers/getting-started/expert)</button>
+<Button boxPosition="BOTTOM_LEFT">[Expert Fast-track](/documentation/developers/getting-started/expert)</Button>
 
 </SplitSectionColumn>
 </SplitSectionLayout>

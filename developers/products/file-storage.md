@@ -1,4 +1,3 @@
-
 ## File Storage
 
 Storing files on the blockchain is possible within the SKALE Network. You can use SKALE to host your text, image, HTML, and other file formats through the  [file-storage npm package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
@@ -17,8 +16,9 @@ You have full control over maintaining your files on the SKALE Network, and you 
 </TCColumnOne>
 <TCColumnTwo>
 
-```
+```bash
 npm i @skalenetwork/filestorage.js
+
 ```
 
 </TCColumnTwo>
@@ -37,6 +37,7 @@ To instantiate the client you only need to pass the SKALE endpoint into the cons
 const Filestorage = require('@skalenetwork/filestorage.js/src/index');
 
 let filestorage = new Filestorage("[YOUR_SKALE_CHAIN_ENDPOINT]");
+
 ```
 
 </TCColumnTwo>
@@ -90,6 +91,7 @@ async function upload(event){
   };
   reader.readAsArrayBuffer(file);
 }
+
 ```
 
 </TCColumnTwo>
@@ -122,6 +124,7 @@ async function getFiles(){
     web3.utils.stripHexPrefix(account)
   );
 }
+
 ```
 
 </TCColumnTwo>
@@ -163,6 +166,7 @@ async function downloadFileToVariable(link) {
   let file = await filestorage.downloadToBuffer(link);
   file = 'data:image/png;base64,' + file.toString('base64');
 }
+
 ```
 
 </TCColumnTwo>
@@ -194,6 +198,7 @@ async function deleteFile(fileName) {
   let account = "[YOUR_ACCOUNT_ADDRESS]";
 
   await filestorage.deleteFile(account, fileName, privateKey);
+
 ```
 
 </TCColumnTwo>

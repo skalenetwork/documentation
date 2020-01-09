@@ -1,4 +1,3 @@
-
 ## Welcome
 
 Thank you for your interest in SKALE! We are in process of developing out our developer and validator documentation, and we are open to feedback.  

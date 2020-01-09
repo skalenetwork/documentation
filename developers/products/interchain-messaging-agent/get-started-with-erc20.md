@@ -17,12 +17,12 @@ The Interchain Messaging Agent can be used for managing ERC20 tokens between Eth
 #### 1. Deposit ERC20 on Ethereum
 
 To send ERC20 tokens from a user's wallet to the Deposit Box on Ethereum, you will need to use the  [deposit](https://github.com/skalenetwork/MTA/blob/develop/proxy/contracts/DepositBox.sol#L120)  function within the  **DepositBox**  Smart Contract on Ethereum.  
-  
+
 This method is called from Ethereum to "freeze" funds and move ERC20 tokens into a safe Deposit Box.  
 
 The  **DepositBox**  Smart Contract is currently deployed to the Rinkeby testnet. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
 
-```
+```javascript
 function depositERC20(
     string memory schainID,
     address contractHere,
@@ -69,7 +69,7 @@ function depositERC20(
 
 ##### Example Code
 
-```
+```javascript
 const Web3 = require('web3');
 const Tx = require('ethereumjs-tx');
 
@@ -176,12 +176,12 @@ web3ForMainnet.eth.getTransactionCount(account).then(nonce => {
 #### 2. Get Cloned ERC20
 
 When you make the first deposit from an ERC20 contract on Ethereum, the  **ERC20ModuleForSchain** contract creates a clone of the ERC20 contract onto your SKALE Chain. In order to interact with this contract, you will need to retrieve the ABIs.  
-  
+
 This can be accomplished by filtering the past events and finding the ERC20TokenCreated event created by the  **ERC20ModuleForSchain** on your SKALE Chain.  
 
 ##### Example Code
 
-```
+```javascript
 const Web3 = require('web3');
 
 let rinkebyABIs = require("[YOUR_SKALE_ABIs_ON_RINKEBY]");
@@ -254,12 +254,12 @@ erc20ModuleRinkeby
 #### 3. Pay for Gas (Add ETH)
 
 Before sending ERC20 tokens back to Ethereum, you will need add ETH to cover the gas cost on Ethereum. Either the dApp developer or the end user can cover the cost of gas.  
-  
+
 This method is called from the SKALE Chain to add ETH to cover the gas cost.  
 
 The  **TokenManager**  Smart Contract is deployed to your SKALE Chain. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
 
-```
+```javascript
 function addEthCost(uint amount) public receivedEth(amount) {
     ILockAndDataTM(lockAndDataAddress).addGasCosts(msg.sender, amount);
 }
@@ -268,7 +268,7 @@ function addEthCost(uint amount) public receivedEth(amount) {
 
 ##### Example Code
 
-```
+```javascript
 const Web3 = require('web3');
 const Tx = require('ethereumjs-tx');
 
@@ -338,12 +338,12 @@ web3ForSchain.eth.getTransactionCount(account).then(nonce => {
 #### 4. Exit from SKALE Chain
 
 To send ERC20 tokens back to Ethereum, you will need to use the exitToMain function within the  **TokenManager**  Smart Contract on the SKALE Chain.  
-  
+
 This method is called from the SKALE Chain to send funds and move the token back to Ethereum.  
 
 The  **TokenManager**  Smart Contract is deployed to your SKALE Chain. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
 
-```
+```javascript
 function exitToMainERC20(
     address contractHere, 
     address to, 
@@ -394,7 +394,7 @@ function exitToMainERC20(
 
 ##### Example Code
 
-```
+```javascript
 const Web3 = require('web3');
 const Tx = require('ethereumjs-tx');
 

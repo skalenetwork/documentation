@@ -1,4 +1,3 @@
-
 ## Interchain Messaging API
 
 Available Functions within the Interchain Messaging smart contracts.  
@@ -17,8 +16,7 @@ deposit(string memory schainID, address to, bytes memory data)
 2.  Address  - Wallet address to deposit ETH and create clone for on SKALE Chain.
 3.  Bytes  - (optional) Message to send with ETH.
 
-```
-
+```javascript
 let deposit = contract.methods
   .deposit(
     [YOUR_SKALE_CHAIN_ID],
@@ -40,8 +38,7 @@ function depositERC20(string memory schainID, address contractHere, address to, 
 3.  Address  - Wallet address to deposit ERC20 and create clone for on SKALE Chain.
 4.  Uint  - Amount of ERC20 tokens to deposit.
 
-```
-
+```javascript
 let contractERC20 = new web3.eth.Contract(
   [MAINNET_ERC20_ABI], 
   [MAINNET_ERC20_ADDRESS]
@@ -61,7 +58,6 @@ let deposit = depositBox.methods
     [AMOUNT_ERC20_TO_SEND])
   );
 
-
 ```
 
 #### rawDepositERC20
@@ -78,8 +74,7 @@ function rawDepositERC20(string memory schainID, address contractHere, address c
 4.  Address  - Wallet address to deposit ERC20 and create clone for on SKALE Chain.
 5.  Uint  - Amount of ERC20 tokens to deposit.
 
-```
-
+```javascript
 let contractERC20 = new web3.eth.Contract(
   [MAINNET_ERC20_ABI], 
   [MAINNET_ERC20_ADDRESS]
@@ -100,7 +95,6 @@ let deposit = depositBox.methods
     [AMOUNT_ERC20_TO_SEND])
   );
 
-
 ```
 
 #### depositERC721
@@ -116,8 +110,7 @@ function depositERC721(string memory schainID, address contractHere, address to,
 3.  Address  - Wallet address to deposit ERC721 and create clone for on SKALE Chain.
 4.  Uint  - Unique token id of ERC721 token to deposit.
 
-```
-
+```javascript
 let contractERC721 = new web3.eth.Contract(
   [MAINNET_ERC721_ABI], 
   [MAINNET_ERC721_ADDRESS]
@@ -138,7 +131,6 @@ let deposit = depositBox.methods
     [UNIQUE_ERC721_TOKEN_ID])
   );
 
-
 ```
 
 #### rawDepositERC721
@@ -155,8 +147,7 @@ function rawDepositERC721(string memory schainID, address contractHere, address 
 4.  Address  - Wallet address to deposit ERC721 and create clone for on SKALE Chain.
 5.  Uint  - Unique token id of ERC721 token to deposit.
 
-```
-
+```javascript
 let contractERC721 = new web3.eth.Contract(
   [MAINNET_ERC721_ABI], 
   [MAINNET_ERC721_ADDRESS]
@@ -178,7 +169,6 @@ let deposit = depositBox.methods
     [UNIQUE_ERC721_TOKEN_ID])
   );
 
-
 ```
 
 ### Lock And Data For Mainnet
@@ -189,8 +179,7 @@ This method is used by the end user to release funds back to their wallet.
 
 function getMyEth()  
 
-```
-
+```javascript
 let getMyEth = LockAndDataForMainnet.methods.getMyEth();
 
 ```
@@ -215,7 +204,7 @@ function postOutgoingMessage(string memory dstChainID, address dstContract, uint
 
 The destination contract must implement the following method to receive the message:  
 
-```
+```javascript
 function postMessage(
     address sender, 
     string memory fromSchainID, 
@@ -230,8 +219,7 @@ function postMessage(
 
 ```
 
-```
-
+```javascript
 let postOutgoingMessage = messageProxy.methods
   .postOutgoingMessage(
     "Mainnet",
@@ -255,8 +243,7 @@ function addEthCost(uint amount)
 
 1.  Unit  - Amount of ETH to send.
 
-```
-
+```javascript
 let addEthCost = tokenManager.methods
   .addEthCost(
     [AMOUNT_ETH_TO_SEND])
@@ -276,8 +263,7 @@ function exitToMain(address to, uint amount, bytes memory data)
 2.  Unit  - Amount of ETH to send.
 3.  Bytes  - (optional) Message to send with ETH.
 
-```
-
+```javascript
 let exitToMain = tokenManager.methods
   .exitToMain(
     [WALLET_TO_SEND_ETH],
@@ -298,8 +284,7 @@ function exitToMainERC20(address contractHere, address to, uint amount)
 2.  Address  - Wallet address to send ERC20 and burn clone for on SKALE Chain.
 3.  Unit  - Amount of ERC20 to send.
 
-```
-
+```javascript
 let contractERC20 = new web3.eth.Contract(
   [MAINNET_ERC20_ABI], 
   [MAINNET_ERC20_ADDRESS]
@@ -318,7 +303,6 @@ let exit = tokenManager.methods
     [AMOUNT_ERC20_TO_SEND])
   );
 
-
 ```
 
 #### rawExitToMainERC20
@@ -334,8 +318,7 @@ function rawExitToMainERC20(address contractHere, address contractThere, address
 3.  Address  - Wallet address to send ERC20 and burn clone for on SKALE Chain.
 4.  Unit  - Amount of ERC20 to send.
 
-```
-
+```javascript
 let contractERC20 = new web3.eth.Contract(
   [MAINNET_ERC20_ABI], 
   [MAINNET_ERC20_ADDRESS]
@@ -355,7 +338,6 @@ let exit = tokenManager.methods
     [AMOUNT_ERC20_TO_SEND])
   );
 
-
 ```
 
 #### exitToMainERC721
@@ -370,8 +352,7 @@ function exitToMainERC721(address contractHere, address to, uint tokenId)
 2.  Address  - Wallet address to send ERC721 and create clone for on SKALE Chain.
 3.  Uint  - Unique token id of ERC721 token to deposit.
 
-```
-
+```javascript
 let contractERC721 = new web3.eth.Contract(
   [MAINNET_ERC721_ABI], 
   [MAINNET_ERC721_ADDRESS]
@@ -391,7 +372,6 @@ let exit = tokenManager.methods
     [UNIQUE_ERC721_TOKEN_ID])
   );
 
-
 ```
 
 #### rawExitToMainERC721
@@ -407,8 +387,7 @@ function rawExitToMainERC721(address contractHere, address contractThere, addres
 3.  Address  - Wallet address to send ERC721 and create clone for on SKALE Chain.
 4.  Uint  - Unique token id of ERC721 token to deposit.
 
-```
-
+```javascript
 let contractERC721 = new web3.eth.Contract(
   [MAINNET_ERC721_ABI], 
   [MAINNET_ERC721_ADDRESS]

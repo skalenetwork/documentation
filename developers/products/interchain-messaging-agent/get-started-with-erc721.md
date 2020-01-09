@@ -4,7 +4,7 @@
 
 The Interchain Messaging Agent can be used for managing ERC721 tokens between Ethereum and SKALE.  
 
-[Live Demo](https://codesandbox.io/s/erc721-skale-interchain-messaging-agent-74bjo)
+<Button>[Live Demo](https://codesandbox.io/s/erc721-skale-interchain-messaging-agent-74bjo)</Button>
 
 <StepsController>
     <StepNav stepId='one' label='Deposit\nERC721 on Ethereum'><ByzantineFaultTolerant/></StepNav>
@@ -17,12 +17,12 @@ The Interchain Messaging Agent can be used for managing ERC721 tokens between Et
 #### 1. Deposit ERC721 on Ethereum
 
 To send ERC721 tokens from a user's wallet to the Deposit Box on Ethereum, you will need to use the depo function within the  **DepositBox**  Smart Contract on Ethereum.  
-  
+
 This method is called from Ethereum to "freeze" funds and move ERC721 tokens into a safe Deposit Box.  
 
 The  **DepositBox**  Smart Contract is currently deployed to the Rinkeby testnet. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
 
-```
+```javascript
 function depositERC721(
     string memory schainID, 
     address contractHere, 
@@ -70,7 +70,7 @@ function depositERC721(
 
 ##### Example Code
 
-```
+```javascript
 const Web3 = require('web3');
 const Tx = require('ethereumjs-tx');
 
@@ -173,12 +173,12 @@ web3ForMainnet.eth
 #### 2. Get Cloned ERC721
 
 When you make the first deposit from an ERC721 contract on Ethereum, the  **ERC721ModuleForSchain** contract creates a clone of the ERC721 contract onto your SKALE Chain. In order to interact with this contract, you will need to retrieve the ABIs.  
-  
+
 This can be accomplished by filtering the past events and finding the ERC721TokenCreated event created by the  **ERC721ModuleForSchain** on your SKALE Chain.  
 
 ##### Example Code
 
-```
+```javascript
 const Web3 = require('web3');
 
 let rinkebyABIs = require("[YOUR_SKALE_ABIs_ON_RINKEBY]");
@@ -251,12 +251,12 @@ erc721ModuleRinkeby
 #### 3. Pay for Gas (Add ETH)
 
 Before sending ERC721 tokens back to Ethereum, you will need add ETH to cover the gas cost on Ethereum. Either the dApp developer or the end user can cover the cost of gas.  
-  
+
 This method is called from the SKALE Chain to add ETH to cover the gas cost.  
 
 The  **TokenManager**  Smart Contract is deployed to your SKALE Chain. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
 
-```
+```javascript
 function addEthCost(uint amount) public receivedEth(amount) {
     ILockAndDataTM(lockAndDataAddress).addGasCosts(msg.sender, amount);
 }
@@ -265,7 +265,7 @@ function addEthCost(uint amount) public receivedEth(amount) {
 
 ##### Example Code
 
-```
+```javascript
 const Web3 = require('web3');
 const Tx = require('ethereumjs-tx');
 
@@ -335,12 +335,12 @@ web3ForSchain.eth.getTransactionCount(account).then(nonce => {
 #### 4. Exit from SKALE Chain
 
 To send ERC721 tokens back to Ethereum, you will need to use the exitToMain function within the  **TokenManager**  Smart Contract on the SKALE Chain.  
-  
+
 This method is called from the SKALE Chain to send funds and move the token back to Ethereum.  
 
 The  **TokenManager**  Smart Contract is deployed to your SKALE Chain. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
 
-```
+```javascript
 function exitToMainERC721(
     address contractHere, 
     address to, 
@@ -396,7 +396,7 @@ function exitToMainERC721(
 
 ##### Example Code
 
-```
+```javascript
 const Web3 = require('web3');
 const Tx = require('ethereumjs-tx');
 
@@ -514,6 +514,6 @@ web3ForSchain.eth.getTransactionCount(account).then(nonce => {
 
 If your ERC721 contract contains custom functions outside of the standard required functions for ERC721 contracts, please refer to the following code example:  
 
-[Live Demo](https://codesandbox.io/s/raw-erc721-skale-interchain-messaging-agent-6l4m5)
+<Button>[Live Demo](https://codesandbox.io/s/raw-erc721-skale-interchain-messaging-agent-6l4m5)</Button>
 
 </StepsLayout>
