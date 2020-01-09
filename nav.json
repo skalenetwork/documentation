@@ -89,6 +89,9 @@
       "name":"technology",
       "links":[
         {
+          "link": "/documentation/technology/overivew"
+        },
+        {
           "link": "/documentation/technology/skale-consensus"
         },
         {
