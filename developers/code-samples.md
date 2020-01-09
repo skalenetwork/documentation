@@ -2,9 +2,9 @@
 
 Deploying to SKALE is similar to deploying to the Ethereum blockchain. There are a few changes you will need to make within your deployment scripts. When using these code samples, please be sure to modify the code appropriately before running anything in production!  
 
-You can share your own code sample by reaching out to us on discord[.](mailto:dev@skalelabs.com?subject=SKALE%3A%20Code%20Sample%20Suggestion)  
+You can share your own code sample by reaching out to us on discord.
 
-[Access Discord](http://skale.chat/)
+<button>[Access Discord](http://skale.chat/)</button>
 
 ## All Samples
 
@@ -66,8 +66,6 @@ Smart contracts can be deployed with just the use of web3.js as well. Below you 
 NOTE: Web3 and solc versions matter for compatibility. Web3 1.0.0-beta.35 and solc version 0.5.4 work well together, but other version combinations can cause unexpected errors.  
 
 For more information on using web3.js, please see  [Web3.js Getting Started Documentation](https://web3js.readthedocs.io/en/1.0/getting-started.html).  
-
-See the full code sample on [Github](https://github.com/skalenetwork/documentation/tree/master/deployment/web3-js).  
 
 ```javascript
 /*
@@ -151,4 +149,4 @@ For more information on using remix, please see [Remix Documentation](https://re
 
 To connect SKALE in MetaMask, create a new Custom RPC with your SKALE chain endpoint.  
 
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif" style="max-Width: 50vw" />
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif" style="max-Width: 25vw" />

@@ -17,7 +17,7 @@
 
 Need help solving an issue? Check to see if this has already been answered below. If you can't find an answer to your issue, reach out to us on discord.  
 
-[Ask a question](http://skale.chat/)
+<button>[Ask a question](http://skale.chat/)</button>
 
 ### File Storage
 
@@ -64,4 +64,4 @@ web3 = new Web3(web3.currentProvider);
 
 SKALE Labs has many resources designed to help you get your questions answered. You can reach out to our community on  [discord](http://skale.chat/), or submit a support request below.  
 
-[Contact Support](https://skalelabs.typeform.com/to/pSu895)
+<button>[Contact Support](https://skalelabs.typeform.com/to/pSu895)</button>

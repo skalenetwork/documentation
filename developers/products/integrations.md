@@ -2,7 +2,7 @@
 
 Elastic SKALE Chains are designed to work with all Ethereum compatible tools. If you are having difficulty integrating a tool with your SKALE Chain, please reach out to our community on  [discord](http://skale.chat/), or submit a support request for help below.  
 
-[Contact Support](https://skalelabs.typeform.com/to/pSu895)
+<button>[Contact Support](https://skalelabs.typeform.com/to/pSu895)</button>
 
 ### API Based Wallets
 

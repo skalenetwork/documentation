@@ -4,7 +4,7 @@
 
 The Interchain Messaging Agent can be used for managing ERC20 tokens between Ethereum and SKALE.  
 
-[Live Demo](https://codesandbox.io/s/erc20-skale-interchain-messaging-agent-hp37q)
+<button>[Live Demo](https://codesandbox.io/s/erc20-skale-interchain-messaging-agent-hp37q)</button>
 
 <StepsController>
     <StepNav stepId='one' label='Deposit\nERC20 on Ethereum'><ByzantineFaultTolerant/></StepNav>
@@ -512,6 +512,6 @@ web3ForSchain.eth.getTransactionCount(account).then(nonce => {
 
 If your ERC20 contract contains custom functions outside of the standard required functions for ERC20 contracts, please refer to the following code example:  
 
-[Live Demo](https://codesandbox.io/s/raw-erc20-skale-interchain-messaging-agent-u4tdt)
+<button>[Live Demo](https://codesandbox.io/s/raw-erc20-skale-interchain-messaging-agent-u4tdt)</button>
 
 </StepsLayout>
