@@ -79,7 +79,16 @@
               "link": "/validators/requirements"
             },
             {
+              "link": "/validators/economics"
+            },
+            {
               "link": "/validators/skale-node"
+            },
+            {
+              "link": "/validators/validator-cli"
+            },
+            {
+              "link": "/validators/faq"
             }
           ]
         }

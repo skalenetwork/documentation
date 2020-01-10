@@ -1,6 +1,6 @@
-# **SKALE NODE**
+# SKALE Node
 
-SKALE NODEs are the servers run by validators.  
+SKALE Nodes are the servers run by validators.  
 
 Every node has its own Orchestration, Auditing (Each node monitors at least 24 other nodes in the SKALE Network), and Administration (SKALE Admin).  
 
