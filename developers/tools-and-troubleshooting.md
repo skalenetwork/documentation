@@ -35,7 +35,7 @@ MetaMask - RPC Error: Internal JSON-RPC error. {code: -32603, message: "Internal
 
 **To Fix this Issue:**  
 
-Use the folowing web3.js and MetaMask versions.  
+Use the following web3.js and MetaMask versions.  
 
 **Web3.js:**  web3@1.0.0-beta.35  
 **MetaMask:**  [MetaMask version 6.1](https://github.com/MetaMask/metamask-extension/releases/tag/v6.1.0)  
@@ -44,7 +44,7 @@ Use the folowing web3.js and MetaMask versions.
 
 #### Web3 CurrentProvider SendAsync
 
-If you are receiving the error below, this most likely has to do with a compatibility complaint between web3 1.0 and Truffle or MetaMask. Web3.currentProvider.sendAsync is depricated in Web3 v1.0 and it is replaced with web3.currentProvider.send.  
+If you are receiving the error below, this most likely has to do with a compatibility complaint between web3 1.0 and Truffle or MetaMask. Web3.currentProvider.sendAsync is deprecated in Web3 v1.0 and it is replaced with web3.currentProvider.send.  
 
 Uncaught TypeError: web3.currentProvider.sendAsync is not a function
 

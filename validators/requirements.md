@@ -1,6 +1,6 @@
 ## Requirements
 
-To be added as a node to the SKALE Network, a prospective node must run the SKALE Admin, which manages all operations in the node and is installed with the  [skale-node-cli](https://developers.skale.network/validators/alpine/skale-validator-cli). SKALE Admin evaluates the prospective node to ensure that it is upholding network hardware requirements. If the prospective node passes this verification step, the SKALE Admin permits the node to submit a request to SKALE Manager in order to join the network. This request contains both the required network deposit as well as node metadata collected by the SKALE Daemon (e.g., IP address, port, public key, etc.).  
+To be added as a node to the SKALE Network, a prospective node must run the SKALE Admin, which manages all operations in the node and is installed with the [skale-node-cli](/validators/validator-cli). SKALE Admin evaluates the prospective node to ensure that it is upholding network hardware requirements. If the prospective node passes this verification step, the SKALE Admin permits the node to submit a request to SKALE Manager in order to join the network. This request contains both the required network deposit as well as node metadata collected by the SKALE Daemon (e.g., IP address, port, public key, etc.).  
 
 Once the request has been submitted to SKALE Manager on Ethereum, SKALE Manager randomly defines the prospective node as a 'full node' or a 'fractional node' by assigning different sizes of SKALE Chains to the prospective node. Full nodes have all of their resources utilized for a single Elastic Sidechain, while fractional nodes participate in multiple Elastic Sidechains (multi-tenancy).  
 
@@ -55,4 +55,4 @@ Advantages of SGX Wallet:
 SKALE will have two types of SGX operations:
 
 -   **Local (Secure)**: Wallet running on the same server as sub-node  
--   **Network**: Sub-node talks to SGX wallet over the SKALE Network. The validator id responsible for securing the connection.
+-   **Network**: Sub-node talks to SGX wallet over the SKALE Network. The validator is responsible for securing the connection.

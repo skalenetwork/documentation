@@ -346,7 +346,7 @@ Block header is a JSON object that includes the following:
 
 5.  $TRANSACTION\ COUNT$ - count of transactions in the current block
 
-6.  $TRANSACTION\ SIZES$ - an array of ftransaction sizes in the current
+6.  $TRANSACTION\ SIZES$ - an array of transaction sizes in the current
     block
 
 7.  $CURRENT\ BLOCK\ PROPOSER\ SIG$ - ECDSA signature of the proposer of
@@ -789,7 +789,7 @@ percent to EVM and 33 to the rest of the system, such as consensus
 state.
 
 If blockchain storage is exhausted, the old blocks will be deleted to
-free storage in inrements of 1024 blocks.
+free storage in increments of 1024 blocks.
 
 If EVM/Solidity storage is exhausted, EVM will start throwing
 \\"OutOfStorage\\" errors until storage is freed.
@@ -852,7 +852,7 @@ overloaded.
 The goal is to provide compatible JSON client API for client software
 such as Web3js, Web3py, Metamask and Truffle.
 
-### FUTURE: Multi-node reqeuests
+### FUTURE: Multi-node requests
 
 Existing clients such Web3js connect to a single node, which creates
 security problem for Solidity read requests that read variables.
@@ -860,7 +860,7 @@ security problem for Solidity read requests that read variables.
 Transactions involve a consensus of the entire blockchain, but Solidity
 read requests interact with a single node. Therefore, an malicious node,
 such as Infura, can prove a user incorrect information on, e.g. the
-amount of funds the user has in posession.
+amount of funds the user has in possession.
 
 Therefore, in the future we will need to add multi-node requests where
 the first node that receives the request passes it to all others and

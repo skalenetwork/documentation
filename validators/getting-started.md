@@ -12,4 +12,4 @@ When an Elastic Sidechain has reached the end of its lifetime, the resources (co
 
 **Interested in helping the SKALE Network grow? Apply to become a SKALE Validator:**  
 
-<button>[Become a Validator](https://skalelabs.com/validators-signup)</button>
+<button>[Become a Validator](https://skale.network/validators-signup)</button>

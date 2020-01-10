@@ -45,7 +45,7 @@ sudo chmod +x /usr/local/bin/skale
 
 ### Step 2: Setup SKALE Node
 
-#### Step 2.1: Initialize SKALE node deamon and install dependencies
+#### Step 2.1: Initialize SKALE node daemon and install dependencies
 
 Required options for the `skale node init` command:
 

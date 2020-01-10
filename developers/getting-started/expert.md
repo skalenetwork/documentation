@@ -2,7 +2,7 @@
 
 ## Expert Fast-track
 
-Follow the steps below to start using SKALE. If you have your SKALE Chains already set up and you are looking for examples, please see  [Code Samples](https://developers.skale.network/code-samples).  
+Follow the steps below to start using SKALE. If you have your SKALE Chains already set up and you are looking for examples, please see  [Code Samples](/developers/code-samples).  
 
 <StepsController>
     <StepNav stepId='one' label='Request\na SKALE Chain'><ByzantineFaultTolerant/></StepNav>
@@ -23,9 +23,9 @@ If you do not have a SKALE Chain yet, request one by using the link below.
 
 ### 2. Prepare your SKALE Chain
 
-SKALE Chains on the devnet will already be configured for you, and will not require any updates to get started with deploying your Smart Contracts onto SKALE.  
+SKALE Chains on the DevNet will already be configured for you, and will not require any updates to get started with deploying your Smart Contracts onto SKALE.  
 
-In order to use your SKALE Chain, you will need to fund your wallet account with the SKALE devnet ETH tokens. This can be accomplished by using the SKALE Faucet to receive 0.5 test ETH.  
+In order to use your SKALE Chain, you will need to fund your wallet account with the SKALE DevNet ETH tokens. This can be accomplished by using the SKALE Faucet to receive 0.5 test ETH.  
 
 <button>[Get Test ETH](http://faucet.skale.network/)</button>
 
@@ -34,7 +34,7 @@ In order to use your SKALE Chain, you will need to fund your wallet account with
 
 ### 3. Migrate Smart Contracts
 
-SKALE is able to process smart contracts written in Solidity. This makes migrating your smart contracts from Ethereum fast and easy. Some smart contract updates or changes may be needed to enable certain features in SKALE such as transferring money and saving state. Please reference the respective sections within  [Code Samples](https://developers.skale.network/code-samples).  
+SKALE is able to process smart contracts written in Solidity. This makes migrating your smart contracts from Ethereum fast and easy. Some smart contract updates or changes may be needed to enable certain features in SKALE such as transferring money and saving state. Please reference the respective sections within  [Code Samples](/developers/code-samples).  
 
 <note>NOTE: In order to deploy your smart contracts onto SKALE, the transaction needs to be signed. This code below shows how to use the truffle-hdwallet-provider package to sign the transaction with the private key of your wallet:</note>  
 
@@ -48,7 +48,7 @@ SKALE is able to process smart contracts written in Solidity. This makes migrati
 
 let HDWalletProvider = require("truffle-hdwallet-provider");
 
-//https://developers.skalelabs.com for SKALE documentation
+//https://skale.network/developers/ for SKALE documentation
 //Provide your wallet private key
 let privateKey = "[YOUR_PRIVATE_KEY]";
 
@@ -79,7 +79,7 @@ truffle deploy --reset --network skale --compile-all
 
 ```
 
-See  [Code Samples](https://developers.skale.network/code-samples)  for more deployment script examples.  
+See  [Code Samples](/developers/code-samples)  for more deployment script examples.  
 
 </Step>
 <Step id='four'>

@@ -4,65 +4,65 @@
       "name": "developers",
       "links": [
         {
-          "link": "/documentation/developers/overview"
+          "link": "/developers/overview"
         },
         {
-          "link" : "/documentation/developers/code-samples"
+          "link" : "/developers/code-samples"
         },
         {
-          "link": "/documentation/developers/getting-started",
+          "link": "/developers/getting-started",
           "links": [
             {
-              "link": "/documentation/developers/getting-started/beginner",
+              "link": "/developers/getting-started/beginner",
               "depth": 0
             },
             {
-              "link": "/documentation/developers/getting-started/expert",
+              "link": "/developers/getting-started/expert",
               "depth": 0
             }
           ]
         },
         {
           "title": "Products",
-          "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth",
+          "link": "/developers/products/interchain-messaging-agent/get-started-with-eth",
           "links": [
             {
               "title": "Interchain Messaging Agent",
-              "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth",
+              "link": "/developers/products/interchain-messaging-agent/get-started-with-eth",
               "links": [
                 { 
-                  "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth"
+                  "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
                 },
                 {
-                  "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-erc20"
+                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc20"
                 },
                 {
-                  "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-erc721"
+                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
                 },
                 {
-                  "link": "/documentation/developers/products/interchain-messaging-agent/api"
+                  "link": "/developers/products/interchain-messaging-agent/api"
                 }
               ]
             },
             {
-              "link": "/documentation/developers/products/file-storage",
+              "link": "/developers/products/file-storage",
               "depth": 0
             },
             {
-              "link": "/documentation/developers/products/skale-ml",
+              "link": "/developers/products/skale-ml",
               "depth": 0
             },
             {
-              "link": "/documentation/developers/products/integrations",
+              "link": "/developers/products/integrations",
               "depth": 0
             }
           ]
         },
         {
-          "link": "/documentation/developers/example-dapps"
+          "link": "/developers/example-dapps"
         },
         {
-          "link": "/documentation/developers/tools-and-troubleshooting"
+          "link": "/developers/tools-and-troubleshooting"
         }
       ]
     },
@@ -70,16 +70,16 @@
       "name":"validators",
       "links":[
         {
-          "link": "/documentation/validators/getting-started",
+          "link": "/validators/getting-started",
           "links": [
             {
-              "link": "/documentation/validators/expectations"
+              "link": "/validators/expectations"
             },
             {
-              "link": "/documentation/validators/requirements"
+              "link": "/validators/requirements"
             },
             {
-              "link": "/documentation/validators/skale-node"
+              "link": "/validators/skale-node"
             }
           ]
         }
@@ -89,13 +89,13 @@
       "name":"technology",
       "links":[
         {
-          "link": "/documentation/technology/overivew"
+          "link": "/technology/overview"
         },
         {
-          "link": "/documentation/technology/skale-consensus"
+          "link": "/technology/skale-consensus"
         },
         {
-          "link": "/documentation/technology/skale-dkg"
+          "link": "/technology/skale-dkg"
         }
       ]
     }

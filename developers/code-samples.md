@@ -28,7 +28,7 @@ NOTE: In order to deploy your smart contracts onto SKALE, the transaction needs 
 
 let HDWalletProvider = require("truffle-hdwallet-provider");
 
-//https://developers.skalelabs.com for SKALE documentation
+//https://skale.network/developers/ for SKALE documentation
 //Provide your wallet private key
 let privateKey = "[YOUR_PRIVATE_KEY]";
 
@@ -141,7 +141,7 @@ web3.eth.accounts.signTransaction(tx, privateKey).then(signed => {
 
 ### Remix
 
-Smart contracts can be deployed using Remix and MetaMask. Follow the steps below to deploy your smart coontracts.  
+Smart contracts can be deployed using Remix and MetaMask. Follow the steps below to deploy your smart contracts.  
 
 For more information on using remix, please see [Remix Documentation](https://remix.readthedocs.io/en/latest/).  
 
