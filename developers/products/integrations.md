@@ -96,3 +96,36 @@ await torus.login();
 let web3 = new Web3(torus.provider);
 
 ```
+
+### Monitoring and Analytics Tools
+
+#### **Terminal.co**
+
+Terminal is a monitoring, troubleshooting and analytics solution that surfaces dApp logs from all your web3 integrations, RPC endpoints, wallet providers, smart contracts, and different network sources in one place combined with visualizing the performance & usage of your dApp.  
+  
+Terminal allows dApp developers real-time monitoring & debugging to make it easy to understand how your users are engaging with your dApp, gives you a better visibility of what’s working and what’s not. They make it easy to see your transactions across blockchains (Rinkeby, SKALE, Ethereum), as well as showing where the transactions are coming from (MetaMask, Portis, Bitski).  
+  
+For more information on Terminal, please see  [Terminal Developer Documentation](https://docs.terminal.co/).  
+
+To connect the Terminal monitoring feature to SKALE, you will need to provide the Terminal apiKey, Terminal ProjectID and SKALE endpoint:  
+‍  
+
+```javascript
+import {TerminalHttpProvider, Web3Versions} from '@terminal-packages/sdk';
+
+const endpoint = "[YOUR-SKALE-ENDPOINT]";
+const provider = [Your provider: Metamask, Portis, Bitski or Torus];
+
+const web3 = new Web3(
+      new TerminalHttpProvider({
+        apiKey: "[YOUR-TERMINAL-API-KEY]",
+        projectId: "[YOUR-PROJECT-ID]",
+        customHttpProvider: provider,
+        source: "[Your source : "Metamask", "Portis", "Bitski" or "Torus"]",
+        networkSource : "SKALE"
+        host: endpoint,
+        //replace with Web3Versions.two if you are using version 2
+        web3Version: Web3Versions.one
+      })
+);
+```
