@@ -105,7 +105,7 @@ Terminal is a monitoring, troubleshooting and analytics solution that surfaces d
   
 Terminal allows dApp developers real-time monitoring & debugging to make it easy to understand how your users are engaging with your dApp, gives you a better visibility of what’s working and what’s not. They make it easy to see your transactions across blockchains (Rinkeby, SKALE, Ethereum), as well as showing where the transactions are coming from (MetaMask, Portis, Bitski).  
   
-For more information on Terminal, please see  [Terminal Developer Documentation](https://docs.terminal.co/).  
+For more information on Terminal, please see  [Terminal Developer Documentation](https://docs.terminal.co/)  
 
 To connect the Terminal monitoring feature to SKALE, you will need to provide the Terminal apiKey, Terminal ProjectID and SKALE endpoint:  
 ‍  
