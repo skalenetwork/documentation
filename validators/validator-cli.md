@@ -1,4 +1,4 @@
-## SKALE Validator CLI Workshop
+## SKALE Validator CLI
 
 Note: This is **an insecure pre-release** software specifically for Alpine team members. 
 
