@@ -1,4 +1,4 @@
-## SKALE Validator CLI
+## SKALE Validator CLI Workshop
 
 Note: This is **an insecure pre-release** software specifically for Alpine team members. 
 
@@ -25,7 +25,7 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Replace version number with 0.8.0-beta.1.
+Replace version number with `0.8.0-beta.1`
 
 **Terminal Command:**
 
