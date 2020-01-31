@@ -1,33 +1,18 @@
-# Tools and Troubleshooting
-
-<SplitSectionLayout>
-<SplitSectionColumn>
-
-<button>[Block Explorer](http://explorer.skale.network/)</button>
-
-</SplitSectionColumn>
-<SplitSectionColumn>
-
-<button boxPosition="BOTTOM_LEFT">[SKALE Faucet](http://faucet.skale.network/)</button>
-
-</SplitSectionColumn>
-</SplitSectionLayout>
-
-## Troubleshooting
+### Troubleshooting
 
 Need help solving an issue? Check to see if this has already been answered below. If you can't find an answer to your issue, reach out to us on discord.  
 
 <button>[Ask a question](http://skale.chat/)</button>
 
-### File Storage
+#### File Storage
 
 If you are receiving the error below, this most likely has to do with uploading a file with the same name as a previously uploaded file. File names must be unique.  
 
 Error: Transaction has been reverted by the EVM:
 
-### MetaMask
+#### MetaMask
 
-#### RPC Error: Code 32603
+##### RPC Error: Code 32603
 
 If you are receiving the error below, this most likely has to do with a compatibility complaint between web3 1.0 and MetaMask. We have found the following web3js/MetaMask combinations work well together:  
 
@@ -40,9 +25,9 @@ Use the following web3.js and MetaMask versions.
 **Web3.js:**  web3@1.0.0-beta.35  
 **MetaMask:**  [MetaMask version 6.1](https://github.com/MetaMask/metamask-extension/releases/tag/v6.1.0)  
 
-### Web3
+#### Web3
 
-#### Web3 CurrentProvider SendAsync
+##### Web3 CurrentProvider SendAsync
 
 If you are receiving the error below, this most likely has to do with a compatibility complaint between web3 1.0 and Truffle or MetaMask. Web3.currentProvider.sendAsync is deprecated in Web3 v1.0 and it is replaced with web3.currentProvider.send.  
 

@@ -25,12 +25,12 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Replace version number with TBD.
+Replace version number with `0.8.0-beta.1`
 
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=[Version Number] && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/stable/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
+VERSION_NUM=[Version Number] && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/beta/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
 
 ```
 
@@ -49,17 +49,50 @@ sudo chmod +x /usr/local/bin/skale
 
 Required options for the `skale node init` command:
 
--   `--github-token` - token for accessing `skale-node` repo
--   `--docker-username` - username for DockerHub
--   `--docker-password` - password for DockerHub
--   `--db-password` - MySQL password for local node database
 -   `--disk-mountpoint` - Mount point of the disk to be used for storing sChains data
--   `--stream` - stream of `skale-node` to use
--   `--ima-endpoint` - IMA endpoint to connect
--   `--endpoint` - RPC endpoint of the node in the network where SKALE manager is deployed
--   `--manager-url` - URL to SKALE Manager contracts ABI and addresses
--   `--ima-url` - URL to IMA contracts ABI and addresses
--   `--dkg-url` - URL to DKG contracts ABI and addresses
+-   `--sgx-url` - URL to SGX server in the network, can be used for current node if the current node supports SGX-enabled Intel processor
+-  `--env-file` - path to env file where required parameters listed above are defined
+
+Required options for the `skale node init` command in environment file:
+
+-   `SGX_SERVER_URL` - URL to SGX server in the network, can be used for current node if the current node supports intel technology SGX. SGX node can be set up through SGXwallet repository
+-   `DISK_MOUNTPOINT` - Mount point of the disk to be used for storing sChains data
+-   `IMA_CONTRACTS_INFO_URL` - URL to IMA contracts ABI and addresses
+-   `MANAGER_CONTRACTS_INFO_URL` - URL to SKALE Manager contracts ABI and addresses
+-   `FILEBEAT_HOST` - URL to the Filebeat log server
+-   `GITHUB_TOKEN` - token for accessing `skale-node` repo
+-   `GIT_BRANCH` - git branch used for initialization
+-   `DOCKER_PASSWORD` - password for DockerHub
+-   `DOCKER_USERNAME` - username for DockerHub
+-   `DB_PORT` - Port for of node internal database (default is 3306)
+Node Register
+-   `DB_ROOT_PASSWORD` - root password
+-   `DB_PASSWORD` - Password for root user of node internal database (equal to user password by default)
+-   `DB_USER` - MySQL user for local node database
+-   `IMA_ENDPOINT` - IMA endpoint to connect
+-   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed
+
+Create a `config.env` file and specify following parameters:
+
+**Terminal Command:**
+
+```bash
+    SGX_SERVER_URL=[SGX_SERVER_URL]
+    DISK_MOUNTPOINT=[DISK_MOUNTPOINT]
+    IMA_CONTRACTS_INFO_URL=[IMA_CONTRACTS_INFO_URL]
+    MANAGER_CONTRACTS_INFO_URL=[MANAGER_CONTRACTS_INFO_URL]
+    FILEBEAT_HOST=[FILEBEAT_HOST]
+    GITHUB_TOKEN=[GITHUB_TOKEN]
+    GIT_BRANCH=[GIT_BRANCH]
+    DOCKER_PASSWORD=[DOCKER_PASSWORD]
+    DOCKER_USERNAME=[DOCKER_USERNAME]
+    DB_PORT=[DB_PORT]
+    DB_ROOT_PASSWORD=[DB_ROOT_PASSWORD]
+    DB_PASSWORD=[DB_PASSWORD]
+    DB_USER=[DB_USER]
+    IMA_ENDPOINT=[IMA_ENDPOINT]
+    ENDPOINT=[ENDPOINT]
+```
 
 ✋These access tokens are needed to access private repos and docker containers.  **Please do not distribute!!!**
 
@@ -72,17 +105,11 @@ Please feel free to set your own  **DB_PASSWORD**.
 **Terminal Command:**
 
 ```bash
+
 skale node init \
---ima-endpoint [IMA_ENDPOINT] \
---endpoint [ENDPOINT] \
---stream [STREAM] --github-token [TOKEN] \
---docker-username [DOCKER_USERNAME] \
---docker-password [DOCKER_PASSWORD] \
---db-password [DB_PASSWORD] \
---disk-mountpoint [DISK_MOUNTPOINT] 
---manager-url [MANAGER_URL] \
---ima-url [IMA_URL] \
---dkg-url [DKG_URL] \
+--disk-mountpoint [DISK_MOUNTPOINT]  \
+--sgx-url [SGX_SERVER_URL] \
+--env-file config.env \
 --install-deps
 
 ```
@@ -140,6 +167,18 @@ skale user register -u [USER] -p [PASSWORD] -t [USER_REGISTRATION_TOKEN]
 
 ```
 
+USER_REGISTRATION_TOKEN can be find in this file: 
+
+**Terminal Command:**
+
+```bash
+cat /root/.skale/node_data/tokens.json
+```
+
+Note: In this pre-release software, your wallet address and private key for  **_test tokens are stored in plaintext json_**  file at the following location: /skale_node_data/local_wallet.json.  
+‍  
+We recommend that you backup this file in case you may need to rebuild the machine and re-register with the network using the same IP address.  
+
 **Output:**
 
 > User created: $USER> Success, cookies saved.
@@ -161,10 +200,6 @@ ETH balance: 0 ETH
 SKALE balance: 0 SKALE
 
 ```
-
-Note: In this pre-release software, your wallet address and private key for  **_test tokens are stored in plaintext json_**  file at the following location: /skale_node_data/local_wallet.json.  
-‍  
-We recommend that you backup this file in case you may need to rebuild the machine and re-register with the network using the same IP address.  
 
 ### Step 3:  **Get Test Tokens**
 

@@ -6,7 +6,7 @@ Here is a collection of resources to get you ramped up to using the SKALE Networ
 
 -   [Code Samples](/developers/code-samples)
 -   [Example dApps](/developers/example-dapps)
--   [Tools & Troubleshooting](/developers/tools-and-troubleshooting)
+-   [Tools & Support](/developers/troubleshooting)
 -   [SKALE GitHub](https://github.com/skalenetwork)
 -   [SKALE Whitepaper](https://skale.network/whitepaper)
 -   [SKALE Consensus](/technology/skale-consensus)

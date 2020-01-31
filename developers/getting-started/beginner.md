@@ -1,6 +1,6 @@
 <StepsLayout id='Beginner'>
 
-## Total Newbie
+## Beginner
 
 Follow the steps below to start using SKALE. If you have your SKALE Chains already set up and you are looking for examples, please see  [Code Samples](/developers/code-samples).
 

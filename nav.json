@@ -2,45 +2,59 @@
   "nav": [
     {
       "name": "developers",
-      "links": [
+      "links":[
         {
-          "link": "/developers/overview"
-        },
-        {
-          "link" : "/developers/code-samples"
-        },
-        {
-          "link": "/developers/getting-started",
+          "title": "Overview",
+          "link": "/developers/overview",
           "links": [
             {
-              "link": "/developers/getting-started/beginner",
-              "depth": 0
+              "link": "/developers/getting-started",
+              "depth": 1,
+              "links": [
+                {
+                  "link": "/developers/getting-started/beginner",
+                  "depth": 0
+                },
+                {
+                  "link": "/developers/getting-started/expert",
+                  "depth": 0
+                }
+              ]
             },
             {
-              "link": "/developers/getting-started/expert",
-              "depth": 0
+              "link": "/developers/code-samples"
+            },
+            {
+              "link": "/developers/integrations"
+            },
+            {
+              "link": "/developers/example-dapps"
             }
           ]
         },
         {
           "title": "Products",
-          "link": "/developers/products/interchain-messaging-agent/get-started-with-eth",
+          "link": "/developers/products/overview",
           "links": [
             {
-              "title": "Interchain Messaging Agent",
-              "link": "/developers/products/interchain-messaging-agent/get-started-with-eth",
+              "title": "Interchain Messaging",
+              "link": "/developers/products/interchain-messaging/overview",
               "links": [
                 { 
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
+                  "title": "Managing ETH",
+                  "link": "/developers/products/interchain-messaging/get-started-with-eth"
                 },
                 {
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc20"
+                  "title": "Managing ERC20",
+                  "link": "/developers/products/interchain-messaging/get-started-with-erc20"
                 },
                 {
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
+                  "title": "Managing ERC721",
+                  "link": "/developers/products/interchain-messaging/get-started-with-erc721"
                 },
                 {
-                  "link": "/developers/products/interchain-messaging-agent/api"
+                  "title": "API",
+                  "link": "/developers/products/interchain-messaging/api"
                 }
               ]
             },
@@ -51,18 +65,28 @@
             {
               "link": "/developers/products/skale-ml",
               "depth": 0
-            },
-            {
-              "link": "/developers/products/integrations",
-              "depth": 0
             }
           ]
         },
         {
-          "link": "/developers/example-dapps"
-        },
-        {
-          "link": "/developers/tools-and-troubleshooting"
+          "title": "Tools & Support",
+          "link": "/developers/troubleshooting",
+          "links": [
+            {
+              "title": "Block Exploer",
+              "link": "/developers/block-explorer",
+              "depth": 0
+            },
+            {
+              "title": "SKALE Faucet",
+              "link": "/developers/faucet",
+              "depth": 0
+            },
+            {
+              "title": "Troubleshooting",
+              "link": "/developers/troubleshooting"
+            }
+          ]
         }
       ]
     },
@@ -86,6 +110,9 @@
             },
             {
               "link": "/validators/validator-cli"
+            },
+            {
+              "link": "/validators/validator-cli-workshop"
             },
             {
               "link": "/validators/faq"
