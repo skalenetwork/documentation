@@ -88,6 +88,9 @@
               "link": "/validators/validator-cli"
             },
             {
+              "link": "/validators/validator-cli-distopia"
+            },
+            {
               "link": "/validators/faq"
             }
           ]

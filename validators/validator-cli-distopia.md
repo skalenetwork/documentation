@@ -25,7 +25,7 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Replace version number with TBD.
+Replace version number with 0.8.0-beta.1.
 
 **Terminal Command:**
 
@@ -77,21 +77,21 @@ Create a `config.env` file and specify following parameters:
 **Terminal Command:**
 
 ```bash
-    SGX_SERVER_URL=[SGX_SERVER_URL]
-    DISK_MOUNTPOINT=[DISK_MOUNTPOINT]
-    IMA_CONTRACTS_INFO_URL=[IMA_CONTRACTS_INFO_URL]
-    MANAGER_CONTRACTS_INFO_URL=[MANAGER_CONTRACTS_INFO_URL]
-    FILEBEAT_HOST=[FILEBEAT_HOST]
-    GITHUB_TOKEN=[GITHUB_TOKEN]
-    GIT_BRANCH=[GIT_BRANCH]
-    DOCKER_PASSWORD=[DOCKER_PASSWORD]
-    DOCKER_USERNAME=[DOCKER_USERNAME]
-    DB_PORT=[DB_PORT]
-    DB_ROOT_PASSWORD=[DB_ROOT_PASSWORD]
-    DB_PASSWORD=[DB_PASSWORD]
-    DB_USER=[DB_USER]
-    IMA_ENDPOINT=[IMA_ENDPOINT]
-    ENDPOINT=[ENDPOINT]
+    SGX_SERVER_URL=https://45.76.37.95:1026
+    DISK_MOUNTPOINT=/dev/sda
+    IMA_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/workshop/beta0801-ima.json
+    MANAGER_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/workshop/beta0801-manager.json
+    FILEBEAT_HOST=127.0.0.1:3007
+    GITHUB_TOKEN=475156ec5367ee57ce3edcb3c70040dbebc7a835
+    GIT_BRANCH=workshop-beta
+    DOCKER_PASSWORD=375f13fe-17ae-44c5-a510-ab3963fb6611
+    DOCKER_USERNAME=skalelabs
+    DB_PORT=3307
+    DB_ROOT_PASSWORD=test
+    DB_PASSWORD=test
+    DB_USER=test
+    IMA_ENDPOINT=http://134.209.56.46:1919
+    ENDPOINT=ws://geth0.skalenodes.com:1920
 ```
 
 ✋These access tokens are needed to access private repos and docker containers.  **Please do not distribute!!!**
@@ -167,16 +167,15 @@ skale user register -u [USER] -p [PASSWORD] -t [USER_REGISTRATION_TOKEN]
 
 ```
 
-USER_REGISTRATION_TOKEN can be find in this file: 
-
+Note: In this pre-release software, your wallet address and private key for  **_test tokens are stored in plaintext json_**(USER_REGISTRATION_TOKEN)  file at the following location: /.skale_node_data/local_wallet.json.  
+‍  
 **Terminal Command:**
 
 ```bash
 cat /root/.skale/node_data/tokens.json
 ```
 
-Note: In this pre-release software, your wallet address and private key for  **_test tokens are stored in plaintext json_**  file at the following location: /skale_node_data/local_wallet.json.  
-‍  
+
 We recommend that you backup this file in case you may need to rebuild the machine and re-register with the network using the same IP address.  
 
 **Output:**
