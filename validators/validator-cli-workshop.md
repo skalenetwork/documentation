@@ -88,7 +88,7 @@ Create a `config.env` file and specify following parameters:
 **Terminal Command:**
 
 ```bash
-SGX_SERVER_URL=https://45.76.37.95:1026
+SGX_SERVER_URL=https://45.76.37.95:1026/
 DISK_MOUNTPOINT=/dev/sda
 IMA_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/workshop/beta0801-ima.json
 MANAGER_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/workshop/beta0801-manager.json
@@ -119,7 +119,7 @@ Please feel free to set your own  **DB_PASSWORD**.
 
 skale node init \
 --disk-mountpoint /dev/sda  \
---sgx-url https://45.76.37.95:1026 \
+--sgx-url https://45.76.37.95:1026/ \
 --env-file config.env \
 --install-deps
 
