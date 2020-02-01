@@ -88,21 +88,21 @@ Create a `config.env` file and specify following parameters:
 **Terminal Command:**
 
 ```bash
-SGX_SERVER_URL=https://45.76.36.246:1026/
+SGX_SERVER_URL=https://45.76.37.95:1026
 DISK_MOUNTPOINT=/dev/sda
-IMA_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/ivan-test/ima.json
-MANAGER_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/ivan-test/pc.json
+IMA_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/workshop/beta0801-ima.json
+MANAGER_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/workshop/beta0801-manager.json
 FILEBEAT_HOST=127.0.0.1:3007
 GITHUB_TOKEN=475156ec5367ee57ce3edcb3c70040dbebc7a835
-GIT_BRANCH=urgent-beta
+GIT_BRANCH=workshop-beta
 DOCKER_PASSWORD=375f13fe-17ae-44c5-a510-ab3963fb6611
 DOCKER_USERNAME=skalelabs
 DB_PORT=3307
 DB_ROOT_PASSWORD=test
 DB_PASSWORD=test
-DB_USER=skale_user
+DB_USER=test
 IMA_ENDPOINT=http://134.209.56.46:1919
-ENDPOINT=http://geth0.skalenodes.com:1919
+ENDPOINT=ws://geth0.skalenodes.com:1920
 ```
 
 ✋These access tokens are needed to access private repos and docker containers.  **Please do not distribute!!!**
