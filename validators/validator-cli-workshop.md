@@ -30,7 +30,7 @@ Replace version number with `0.8.0-beta.1`
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=[Version Number] && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/stable/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
+VERSION_NUM=0.8.0-beta.1 && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/beta/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
 
 ```
 
@@ -72,26 +72,37 @@ Node Register
 -   `IMA_ENDPOINT` - IMA endpoint to connect
 -   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed
 
+---
+To find your attach storage path [DISK_MOUNT_POINT] execute this command
+
+
+**Terminal Command:**
+
+```bash
+fdisk -l
+```
+---
+
 Create a `config.env` file and specify following parameters:
 
 **Terminal Command:**
 
 ```bash
-    SGX_SERVER_URL=https://45.76.37.95:1026
-    DISK_MOUNTPOINT=/dev/sda
-    IMA_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/workshop/beta0801-ima.json
-    MANAGER_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/workshop/beta0801-manager.json
-    FILEBEAT_HOST=127.0.0.1:3007
-    GITHUB_TOKEN=475156ec5367ee57ce3edcb3c70040dbebc7a835
-    GIT_BRANCH=workshop-beta
-    DOCKER_PASSWORD=375f13fe-17ae-44c5-a510-ab3963fb6611
-    DOCKER_USERNAME=skalelabs
-    DB_PORT=3307
-    DB_ROOT_PASSWORD=test
-    DB_PASSWORD=test
-    DB_USER=test
-    IMA_ENDPOINT=http://134.209.56.46:1919
-    ENDPOINT=ws://geth0.skalenodes.com:1920
+SGX_SERVER_URL=https://45.76.36.246:1026/
+DISK_MOUNTPOINT=/dev/sda
+IMA_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/ivan-test/ima.json
+MANAGER_CONTRACTS_INFO_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/ivan-test/pc.json
+FILEBEAT_HOST=127.0.0.1:3007
+GITHUB_TOKEN=475156ec5367ee57ce3edcb3c70040dbebc7a835
+GIT_BRANCH=urgent-beta
+DOCKER_PASSWORD=375f13fe-17ae-44c5-a510-ab3963fb6611
+DOCKER_USERNAME=skalelabs
+DB_PORT=3307
+DB_ROOT_PASSWORD=test
+DB_PASSWORD=test
+DB_USER=skale_user
+IMA_ENDPOINT=http://134.209.56.46:1919
+ENDPOINT=http://geth0.skalenodes.com:1919
 ```
 
 ✋These access tokens are needed to access private repos and docker containers.  **Please do not distribute!!!**
@@ -107,8 +118,8 @@ Please feel free to set your own  **DB_PASSWORD**.
 ```bash
 
 skale node init \
---disk-mountpoint [DISK_MOUNTPOINT]  \
---sgx-url [SGX_SERVER_URL] \
+--disk-mountpoint /dev/sda  \
+--sgx-url https://45.76.37.95:1026 \
 --env-file config.env \
 --install-deps
 
@@ -120,26 +131,24 @@ skale node init \
 # Executing docker install script, commit: 2f4ae48...
 (lines-omitted-for-brevity)...
 Login Succeeded
-Creating directories...
-Creating copying config folder...
-Creating copying tools folder...
-Pulling base          ... done
-Pulling admin         ... done
-Pulling mysql         ... done
-Pulling sla           ... done
-Pulling bounty        ... done
-Pulling events        ... done
-Pulling advisor       ... done
-Pulling node-exporter ... done
-Run mode: prod
-Creating skale_sla         ... done
-Creating skale_mysql       ... done
-Creating skale_admin       ... done
-Creating config_base_1     ... done
-Creating skale_bounty      ... done
-Creating ash_cadvisor      ... done
-Creating skale_events      ... done
-Creating ash_node_exporter ... done
+Creating network "config_default" with the default driver
+Pulling base (kubernetes/pause:)...
+latest: Pulling from kubernetes/pause
+latest: Pulling from kubernetes/pause
+4f4fb700ef54: Pull complete
+b9c8ec465f6b: Pull complete
+.
+.
+.
+Creating skale_transaction-manager ... done
+Creating config_base_1             ... done
+Creating skale_mysql               ... done
+Creating monitor_filebeat          ... done
+Creating monitor_cadvisor          ... done
+Creating monitor_node_exporter     ... done
+Creating skale_bounty              ... done
+Creating skale_sla                 ... done
+Creating skale_admin               ... done
 
 ```
 
@@ -156,17 +165,6 @@ skale user token
 
 > User registration token: [USER_REGISTRATION_TOKEN]
 
-#### Step 2.3: Create and register user with user registration token
-
-Note: select a user and password, and use the user registration token from the previous step.
-
-**Terminal Command:**
-
-```bash
-skale user register -u [USER] -p [PASSWORD] -t [USER_REGISTRATION_TOKEN]
-
-```
-
 Note: In this pre-release software, your wallet address and private key for  **_test tokens are stored in plaintext json_**(USER_REGISTRATION_TOKEN)  file at the following location: /.skale_node_data/local_wallet.json.  
 ‍  
 **Terminal Command:**
@@ -177,6 +175,18 @@ cat /root/.skale/node_data/tokens.json
 
 
 We recommend that you backup this file in case you may need to rebuild the machine and re-register with the network using the same IP address.  
+
+
+#### Step 2.3: Create and register user with user registration token
+
+Note: select a user and password, and use the user registration token from the previous step.
+
+**Terminal Command:**
+
+```bash
+skale user register -u [USER] -p [PASSWORD] -t [USER_REGISTRATION_TOKEN]
+
+```
 
 **Output:**
 
