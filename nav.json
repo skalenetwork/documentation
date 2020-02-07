@@ -5,86 +5,86 @@
       "links":[
         {
           "title": "Overview",
-          "link": "/developers/overview",
+          "link": "/docs/developers/overview",
           "links": [
             {
-              "link": "/developers/getting-started",
+              "link": "/docs/developers/getting-started",
               "depth": 1,
               "links": [
                 {
-                  "link": "/developers/getting-started/beginner",
+                  "link": "/docs/developers/getting-started/beginner",
                   "depth": 0
                 },
                 {
-                  "link": "/developers/getting-started/expert",
+                  "link": "/docs/developers/getting-started/expert",
                   "depth": 0
                 }
               ]
             },
             {
-              "link": "/developers/code-samples"
+              "link": "/docs/developers/code-samples"
             },
             {
-              "link": "/developers/integrations"
+              "link": "/docs/developers/integrations"
             },
             {
-              "link": "/developers/example-dapps"
+              "link": "/docs/developers/example-dapps"
             }
           ]
         },
         {
           "title": "Products",
-          "link": "/developers/products/overview",
+          "link": "/docs/developers/products/overview",
           "links": [
             {
               "title": "Interchain Messaging",
-              "link": "/developers/products/interchain-messaging/overview",
+              "link": "/docs/developers/products/interchain-messaging/overview",
               "links": [
                 { 
                   "title": "Managing ETH",
-                  "link": "/developers/products/interchain-messaging/get-started-with-eth"
+                  "link": "/docs/developers/products/interchain-messaging/get-started-with-eth"
                 },
                 {
                   "title": "Managing ERC20",
-                  "link": "/developers/products/interchain-messaging/get-started-with-erc20"
+                  "link": "/docs/developers/products/interchain-messaging/get-started-with-erc20"
                 },
                 {
                   "title": "Managing ERC721",
-                  "link": "/developers/products/interchain-messaging/get-started-with-erc721"
+                  "link": "/docs/developers/products/interchain-messaging/get-started-with-erc721"
                 },
                 {
                   "title": "API",
-                  "link": "/developers/products/interchain-messaging/api"
+                  "link": "/docs/developers/products/interchain-messaging/api"
                 }
               ]
             },
             {
-              "link": "/developers/products/file-storage",
+              "link": "/docs/developers/products/file-storage",
               "depth": 0
             },
             {
-              "link": "/developers/products/skale-ml",
+              "link": "/docs/developers/products/skale-ml",
               "depth": 0
             }
           ]
         },
         {
           "title": "Tools & Support",
-          "link": "/developers/troubleshooting",
+          "link": "/docs/developers/troubleshooting",
           "links": [
             {
-              "title": "Block Exploer",
-              "link": "/developers/block-explorer",
+              "title": "Block Explorer",
+              "link": "/docs/developers/block-explorer",
               "depth": 0
             },
             {
               "title": "SKALE Faucet",
-              "link": "/developers/faucet",
+              "link": "/docs/developers/faucet",
               "depth": 0
             },
             {
               "title": "Troubleshooting",
-              "link": "/developers/troubleshooting"
+              "link": "/docs/developers/troubleshooting"
             }
           ]
         }
@@ -94,25 +94,28 @@
       "name":"validators",
       "links":[
         {
-          "link": "/validators/getting-started",
+          "link": "/docs/validators/getting-started",
           "links": [
             {
-              "link": "/validators/expectations"
+              "link": "/docs/validators/expectations"
             },
             {
-              "link": "/validators/requirements"
+              "link": "/docs/validators/requirements"
             },
             {
-              "link": "/validators/economics"
+              "link": "/docs/validators/economics"
             },
             {
-              "link": "/validators/skale-node"
+              "link": "/docs/validators/skale-node"
             },
             {
-              "link": "/validators/validator-cli"
+              "link": "/docs/validators/validator-cli"
             },
             {
-              "link": "/validators/faq"
+              "link": "/docs/validators/validator-cli-workshop"
+            },
+            {
+              "link": "/docs/validators/faq"
             }
           ]
         }
@@ -122,13 +125,13 @@
       "name":"technology",
       "links":[
         {
-          "link": "/technology/overview"
+          "link": "/docs/technology/overview"
         },
         {
-          "link": "/technology/skale-consensus"
+          "link": "/docs/technology/skale-consensus"
         },
         {
-          "link": "/technology/skale-dkg"
+          "link": "/docs/technology/skale-dkg"
         }
       ]
     }

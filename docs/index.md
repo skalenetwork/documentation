@@ -8,8 +8,8 @@ SKALE Network is an open-source, fully decentralized, layer 2 scaling network. N
 
 ### Developers
 
-[Getting Started](/developers/getting-started)
+[Getting Started](/docs/developers/getting-started)
 
 ### Validators
 
-[Getting Started](/validators/getting-started)
+[Getting Started](/docs/validators/getting-started)

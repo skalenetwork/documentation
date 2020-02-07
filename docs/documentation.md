@@ -42,10 +42,10 @@ The side navigation on the portal is generated from the nav.json files. which ha
       "name": "developers",
       "links": [
         {
-          "link": "/documentation/developers/getting-started",
+          "link": "/documentation/docs/developers/getting-started",
           "links": [
             {
-              "link": "/documentation/developers/getting-started/beginner",
+              "link": "/documentation/docs/developers/getting-started/beginner",
               "depth": 0
             },
             ...
@@ -53,14 +53,14 @@ The side navigation on the portal is generated from the nav.json files. which ha
         },
         {
           "title": "Products",
-          "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth",
+          "link": "/documentation/docs/developers/products/interchain-messaging-agent/get-started-with-eth",
           "links": [
             {
               "title": "Interchain Messaging Agent",
-              "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth",
+              "link": "/documentation/docs/developers/products/interchain-messaging-agent/get-started-with-eth",
               "links": [
                 { 
-                  "link": "/documentation/developers/products/interchain-messaging-agent/get-started-with-eth"
+                  "link": "/documentation/docs/developers/products/interchain-messaging-agent/get-started-with-eth"
                 }
               ]
             },

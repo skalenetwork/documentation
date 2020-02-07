@@ -4,65 +4,65 @@
       "name": "developers",
       "links": [
         {
-          "link": "/developers/overview"
+          "link": "/docs/developers/overview"
         },
         {
-          "link" : "/developers/code-samples"
+          "link" : "/docs/developers/code-samples"
         },
         {
-          "link": "/developers/getting-started",
+          "link": "/docs/developers/getting-started",
           "links": [
             {
-              "link": "/developers/getting-started/beginner",
+              "link": "/docs/developers/getting-started/beginner",
               "depth": 0
             },
             {
-              "link": "/developers/getting-started/expert",
+              "link": "/docs/developers/getting-started/expert",
               "depth": 0
             }
           ]
         },
         {
           "title": "Products",
-          "link": "/developers/products/interchain-messaging-agent/get-started-with-eth",
+          "link": "/docs/developers/products/interchain-messaging-agent/get-started-with-eth",
           "links": [
             {
               "title": "Interchain Messaging Agent",
-              "link": "/developers/products/interchain-messaging-agent/get-started-with-eth",
+              "link": "/docs/developers/products/interchain-messaging-agent/get-started-with-eth",
               "links": [
                 { 
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
+                  "link": "/docs/developers/products/interchain-messaging-agent/get-started-with-eth"
                 },
                 {
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc20"
+                  "link": "/docs/developers/products/interchain-messaging-agent/get-started-with-erc20"
                 },
                 {
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
+                  "link": "/docs/developers/products/interchain-messaging-agent/get-started-with-erc721"
                 },
                 {
-                  "link": "/developers/products/interchain-messaging-agent/api"
+                  "link": "/docs/developers/products/interchain-messaging-agent/api"
                 }
               ]
             },
             {
-              "link": "/developers/products/file-storage",
+              "link": "/docs/developers/products/file-storage",
               "depth": 0
             },
             {
-              "link": "/developers/products/skale-ml",
+              "link": "/docs/developers/products/skale-ml",
               "depth": 0
             },
             {
-              "link": "/developers/products/integrations",
+              "link": "/docs/developers/products/integrations",
               "depth": 0
             }
           ]
         },
         {
-          "link": "/developers/example-dapps"
+          "link": "/docs/developers/example-dapps"
         },
         {
-          "link": "/developers/tools-and-troubleshooting"
+          "link": "/docs/developers/tools-and-troubleshooting"
         }
       ]
     },
@@ -70,25 +70,25 @@
       "name":"validators",
       "links":[
         {
-          "link": "/validators/getting-started",
+          "link": "/docs/validators/getting-started",
           "links": [
             {
-              "link": "/validators/expectations"
+              "link": "/docs/validators/expectations"
             },
             {
-              "link": "/validators/requirements"
+              "link": "/docs/validators/requirements"
             },
             {
-              "link": "/validators/economics"
+              "link": "/docs/validators/economics"
             },
             {
-              "link": "/validators/skale-node"
+              "link": "/docs/validators/skale-node"
             },
             {
-              "link": "/validators/validator-cli"
+              "link": "/docs/validators/validator-cli"
             },
             {
-              "link": "/validators/faq"
+              "link": "/docs/validators/faq"
             }
           ]
         }
@@ -98,13 +98,13 @@
       "name":"technology",
       "links":[
         {
-          "link": "/technology/overview"
+          "link": "/docs/technology/overview"
         },
         {
-          "link": "/technology/skale-consensus"
+          "link": "/docs/technology/skale-consensus"
         },
         {
-          "link": "/technology/skale-dkg"
+          "link": "/docs/technology/skale-dkg"
         }
       ]
     }

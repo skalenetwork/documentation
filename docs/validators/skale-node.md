@@ -51,7 +51,7 @@ Creates SKALE Admin containers and SKALE admin checks if the node meets the requ
 
 Registers a validator node to SKALE Manager smart contract which lives in the Mainnet
 
-To register a new node in the SKALE network please follow the steps in the [CLI Documentation](/validators/validator-cli)  
+To register a new node in the SKALE network please follow the steps in the [CLI Documentation](/docs/validators/validator-cli)  
 
 ## SKALE Chain
 
@@ -156,7 +156,7 @@ get attach "[YOUR_SKALE_CHAIN_ENDPOINT]"
 
 ```
 
-Example 3:  Use  Web3 to connect to a SKALE Chain. We have detailed examples available on our [dApp developers Page.](/developers/getting-started)
+Example 3:  Use  Web3 to connect to a SKALE Chain. We have detailed examples available on our [dApp developers Page.](/docs/developers/getting-started)
 
 **Consensus:** Interacts with the other node SKALE Daemons within the assigned SKALE Chain, and orders all received transactions. Then consensus validates transactions and creates a block when 2/3 of the nodes reach consensus.
 
@@ -180,7 +180,7 @@ Storage in aleth, geth or any other Ethereum client is a Merkle Tree, which is t
 <img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9bedec787cd068ca3d2c23_Screen%20Shot%202019-10-07%20at%205.34.43%20PM.png" width="500" /> 
 
 -   Consensus does not accept any new transactions until the block is created. The block will be acceptable and will be valid if 2/3 of nodes agree. (DKG algorithm runs here). After the block creation, it will be sealed with the (BLS) signature.  
-    ‍**SGX is a secure storage for BLS private key shares. It would be used inside consensus to sign new blocks. But SGX is not only used for private key shares; it can also be used for storing any secured data. Such as ECDSA (Elliptic Curve Digital Signature Algorithm). For more information, please check** [**here.**](/validators/requirements)  
+    ‍**SGX is a secure storage for BLS private key shares. It would be used inside consensus to sign new blocks. But SGX is not only used for private key shares; it can also be used for storing any secured data. Such as ECDSA (Elliptic Curve Digital Signature Algorithm). For more information, please check** [**here.**](/docs/validators/requirements)  
 -   Set of transactions which created in block goes to EVM  
 -   If the transaction successfully sent to address from A to B. EVM updates the info in Key-Value storage(Level DB)  
 
