@@ -1,16 +1,16 @@
-## Integrations
+### Integrations
 
 Elastic SKALE Chains are designed to work with all Ethereum compatible tools. If you are having difficulty integrating a tool with your SKALE Chain, please reach out to our community on  [discord](http://skale.chat/), or submit a support request for help below.  
 
 <button>[Contact Support](https://skalelabs.typeform.com/to/pSu895)</button>
 
-### API Based Wallets
+#### API Based Wallets
 
 The best way to manage your user authentication and on-boarding, is to integrate an API based wallet into your dApp. An API based wallet allows you to provide an intuitive user login flow for your users. An API based wallet can help you provide a secure and user friend wallet option. This is especially useful for your new users that are using a blockchain application for the first time. Being able to execute transactions programmatically directly from your dApp, takes the pressure off of your end user to have to manage this on their own.  
 ‍  
 Below, you will find a few options that will help make your user management and on-boarding seamless.  
 
-#### **Bitski**
+##### **Bitski**
 
 Bitski is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Bitski, your end users can signup with their email address to create a wallet. Then, you can execute transactions programmatically directly from your dApp using the wallet that Bitski creates for your end user.  
 ‍  
@@ -39,7 +39,7 @@ bitski.signIn().then(() => {
 
 ```
 
-#### **Portis**
+##### **Portis**
 
 Portis is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Portis, your end users can signup with their email address to create a wallet. Portis allows your end users to  [trust your application](https://docs.portis.io/#/trust-this-app)  for easier transaction processing for transaction that do not exceed $1 over an hour long period.  
 ‍  
@@ -69,7 +69,7 @@ portis.showPortis();
 
 ```
 
-#### **Torus**
+##### **Torus**
 
 Torus is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Torus, your end users can signup via Google or Facebook OAuth logins. This creates frictionless logins for dApps, that is easy for end users, and easy for dApp developers to implement.  
 ‍  
@@ -97,9 +97,9 @@ let web3 = new Web3(torus.provider);
 
 ```
 
-### Monitoring and Analytics Tools
+#### Monitoring and Analytics Tools
 
-#### **Terminal.co**
+##### **Terminal.co**
 
 Terminal is a monitoring, troubleshooting and analytics solution that surfaces dApp logs from all your web3 integrations, RPC endpoints, wallet providers, smart contracts, and different network sources in one place combined with visualizing the performance & usage of your dApp.  
   

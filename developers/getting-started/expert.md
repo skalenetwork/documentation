@@ -1,4 +1,4 @@
-## Expert Fast-track
+### Expert Fast-track
 
 <button>[Request a SKALE Chain](https://skale.network/innovators-signup)</button>
 
