@@ -38,23 +38,23 @@
           "links": [
             {
               "title": "Interchain Messaging",
-              "link": "/developers/products/interchain-messaging/overview",
+              "link": "/developers/products/interchain-messaging-agent/overview",
               "links": [
                 { 
                   "title": "Managing ETH",
-                  "link": "/developers/products/interchain-messaging/get-started-with-eth"
+                  "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
                 },
                 {
                   "title": "Managing ERC20",
-                  "link": "/developers/products/interchain-messaging/get-started-with-erc20"
+                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc20"
                 },
                 {
                   "title": "Managing ERC721",
-                  "link": "/developers/products/interchain-messaging/get-started-with-erc721"
+                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
                 },
                 {
                   "title": "API",
-                  "link": "/developers/products/interchain-messaging/api"
+                  "link": "/developers/products/interchain-messaging-agent/api"
                 }
               ]
             },

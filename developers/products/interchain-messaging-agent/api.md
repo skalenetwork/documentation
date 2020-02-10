@@ -1,10 +1,10 @@
-## Interchain Messaging API
+### Interchain Messaging API
 
 Available Functions within the Interchain Messaging smart contracts.  
 
-### Deposit Box
+#### Deposit Box
 
-#### deposit
+##### deposit
 
 This method is used for depositing ETH into a safe deposit box smart contract on the mainnet.  
 
@@ -25,7 +25,7 @@ let deposit = contract.methods
 
 ```
 
-#### depositERC20
+##### depositERC20
 
 This method is used for depositing ERC20 tokens into a safe deposit box smart contract on the mainnet.  
 
@@ -60,7 +60,7 @@ let deposit = depositBox.methods
 
 ```
 
-#### rawDepositERC20
+##### rawDepositERC20
 
 This method is used for depositing ERC20 tokens into a safe deposit box smart contract on the mainnet. Use this method when you have a custom implementation of the ERC20 contract.  
 
@@ -97,7 +97,7 @@ let deposit = depositBox.methods
 
 ```
 
-#### depositERC721
+##### depositERC721
 
 This method is used for depositing ERC721 tokens into a safe deposit box smart contract on the mainnet.  
 
@@ -133,7 +133,7 @@ let deposit = depositBox.methods
 
 ```
 
-#### rawDepositERC721
+##### rawDepositERC721
 
 This method is used for depositing ERC721 tokens into a safe deposit box smart contract on the mainnet. Use this method when you have a custom implementation of the ERC721 contract.  
 
@@ -171,9 +171,9 @@ let deposit = depositBox.methods
 
 ```
 
-### Lock And Data For Mainnet
+#### Lock And Data For Mainnet
 
-#### getMyEth
+##### getMyEth
 
 This method is used by the end user to release funds back to their wallet.  
 
@@ -184,9 +184,9 @@ let getMyEth = LockAndDataForMainnet.methods.getMyEth();
 
 ```
 
-### Message Proxy
+#### Message Proxy
 
-#### postOutgoingMessage
+##### postOutgoingMessage
 
 This method is used on either the mainnet or the SKALE Chain to send messages between SKALE and the mainnet.  
 
@@ -231,9 +231,9 @@ let postOutgoingMessage = messageProxy.methods
 
 ```
 
-### Token Manager
+#### Token Manager
 
-#### addEthCost
+##### addEthCost
 
 This method is used to pay for the gas of the exit transaction for ERC20 and ERC721 token transfer. ETH can be payed for by the end user, or by the dApp developer.  
 
@@ -251,7 +251,7 @@ let addEthCost = tokenManager.methods
 
 ```
 
-#### exitToMain
+##### exitToMain
 
 This method is used for returning ETH back to a user on the mainnet. The clone of the ETH on the SKALE Chain is burned, and the released back to the user on mainnet.  
 
@@ -272,7 +272,7 @@ let exitToMain = tokenManager.methods
 
 ```
 
-#### exitToMainERC20
+##### exitToMainERC20
 
 This method is used for returning ERC20 back to a user on the mainnet. The clone of the ERC20 on the SKALE Chain is burned, and the released back to the user on mainnet.  
 
@@ -305,7 +305,7 @@ let exit = tokenManager.methods
 
 ```
 
-#### rawExitToMainERC20
+##### rawExitToMainERC20
 
 This method is used for returning ERC20 back to a user on the mainnet. The clone of the ERC20 on the SKALE Chain is burned, and the released back to the user on mainnet. Use this method when you have a custom implementation of the ERC20 contract.  
 
@@ -340,7 +340,7 @@ let exit = tokenManager.methods
 
 ```
 
-#### exitToMainERC721
+##### exitToMainERC721
 
 This method is used for returning ERC721 back to a user on the mainnet. The clone of the ERC721 on the SKALE Chain is burned, and the released back to the user on mainnet.  
 
@@ -374,7 +374,7 @@ let exit = tokenManager.methods
 
 ```
 
-#### rawExitToMainERC721
+##### rawExitToMainERC721
 
 This method is used for returning ERC721 back to a user on the mainnet. The clone of the ERC721 on the SKALE Chain is burned, and the released back to the user on mainnet. Use this method when you have a custom implementation of the ERC721 contract.  
 

@@ -1,4 +1,4 @@
-## File Storage
+### File Storage
 
 Storing files on the blockchain is possible within the SKALE Network. You can use SKALE to host your text, image, HTML, and other file formats through the  [file-storage npm package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
@@ -9,7 +9,7 @@ Please note: the code samples below are for version  [**0.2.5**](https://www.npm
 <TCSectionLayout>
 <TCColumnOne>
 
-### Usage
+#### Usage
 
 You have full control over maintaining your files on the SKALE Network, and you can maintain your files by uploading, downloading, or deleting files within your account. Additional documentation on the methods available within File Storage can be found  [here](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
@@ -26,7 +26,7 @@ npm i @skalenetwork/filestorage.js
 <TCSectionLayout>
 <TCColumnOne>
 
-### Instantiate the Client
+#### Instantiate the Client
 
 To instantiate the client you only need to pass the SKALE endpoint into the constructor.  
 
@@ -45,7 +45,7 @@ let filestorage = new Filestorage("[YOUR_SKALE_CHAIN_ENDPOINT]");
 <TCSectionLayout>
 <TCColumnOne>
 
-### Upload Files
+#### Upload Files
 
 Uploading files can be accomplished by using the  **uploadFile**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
@@ -99,7 +99,7 @@ async function upload(event){
 <TCSectionLayout>
 <TCColumnOne>
 
-### Show Files
+#### Show Files
 
 Displaying files can be accomplished by using the  **listDirectory**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
@@ -132,7 +132,7 @@ async function getFiles(){
 <TCSectionLayout>
 <TCColumnOne>
 
-### Download Files
+#### Download Files
 
 Downloading files can be accomplished by using the FilestorageClient.downloadToFile or the  **downloadToBuffer**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
@@ -174,7 +174,7 @@ async function downloadFileToVariable(link) {
 <TCSectionLayout>
 <TCColumnOne>
 
-### Delete Files
+#### Delete Files
 
 Deleting files can be accomplished by using the  **deleteFile**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 

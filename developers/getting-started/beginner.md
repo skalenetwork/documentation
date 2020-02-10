@@ -1,6 +1,6 @@
 <StepsLayout id='Beginner'>
 
-## Beginner
+### Beginner
 
 Follow the steps below to start using SKALE. If you have your SKALE Chains already set up and you are looking for examples, please see  [Code Samples](/developers/code-samples).
 
@@ -12,7 +12,7 @@ Follow the steps below to start using SKALE. If you have your SKALE Chains alrea
 </StepsController>
 <Step id='one'>
 
-### 1. Request a SKALE Chain
+#### 1. Request a SKALE Chain
 
 If you do not have a SKALE Chain yet, request one by using the link below.  
 
@@ -21,7 +21,7 @@ If you do not have a SKALE Chain yet, request one by using the link below.
 </Step>
 <Step id='two'>
 
-### 2. Prepare your SKALE Chain
+#### 2. Prepare your SKALE Chain
 
 SKALE Chains on the DevNet will already be configured for you, and will not require any updates to get started with deploying your Smart Contracts onto SKALE.  
 
@@ -32,7 +32,7 @@ In order to use your SKALE Chain, you will need to fund your wallet account with
 </Step>
 <Step id='three'>
 
-### 3. Migrate Smart Contracts
+#### 3. Migrate Smart Contracts
 
 SKALE is able to process smart contracts written in Solidity. This makes migrating your smart contracts from Ethereum fast and easy. Some smart contract updates or changes may be needed to enable certain features in SKALE such as transferring money and saving state. Please reference the respective sections within [Code Samples](/developers/code-samples).  
 
@@ -84,7 +84,7 @@ See  [Code Samples](/developers/code-samples)  for more deployment script exampl
 </Step>
 <Step id='four'>
 
-### 4. Send a Transaction
+#### 4. Send a Transaction
 
 Once your smart contracts have been moved over to your SKALE Chain, you can test sending out a new transaction, using Web3.js or Web3.py. Remember to point your Web3 instance to your SKALE Chain.  
 
