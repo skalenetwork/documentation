@@ -5,7 +5,7 @@ Follow the steps below to start using SKALE. If you have your SKALE Chains alrea
 <SplitSectionLayout>
 <SplitSectionColumn>
 
-<button>[Total Newbie](/developers/getting-started/beginner)</button>
+<button>[Beginner](/developers/getting-started/beginner)</button>
 
 </SplitSectionColumn>
 <SplitSectionColumn>
