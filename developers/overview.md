@@ -16,14 +16,4 @@ SKALE Network is designed to work with all Ethereum compatible tools such as API
 
 If you do not have a SKALE Chain yet, request one by using the link below.
 
-<SplitSectionLayout>
-<SplitSectionColumn>
-
-<button>[ETH Denver](https://skale.network/ethdenver)</button>
-</SplitSectionColumn>
-<SplitSectionColumn>
-
-<button>[Innovator Program](https://skale.network/innovators-signup)</button>
-
-</SplitSectionColumn>
-</SplitSectionLayout>
+<button>[Request a SKALE Chain](https://skale.network/innovators-signup)</button>
