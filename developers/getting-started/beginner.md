@@ -16,17 +16,7 @@ Follow the steps below to start using SKALE. If you have your SKALE Chains alrea
 
 If you do not have a SKALE Chain yet, request one by using the link below.  
 
-<SplitSectionLayout>
-<SplitSectionColumn>
-
-<button>[ETH Denver](https://skale.network/ethdenver)</button>
-</SplitSectionColumn>
-<SplitSectionColumn>
-
-<button>[Innovator Program](https://skale.network/innovators-signup)</button>
-
-</SplitSectionColumn>
-</SplitSectionLayout>
+<button>[Request a SKALE Chain](https://skale.network/innovators-signup)</button>
 
 </Step>
 <Step id='two'>
