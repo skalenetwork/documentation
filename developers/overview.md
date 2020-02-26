@@ -10,7 +10,7 @@ EVM-compatibility within Elastic Sidechains allows dApp developers to deploy exi
 
 SKALE Network is designed to work with all Ethereum compatible tools such as API-based wallets, and monitoring and analytics.
 
-<button>[View integrations](/developers/integrations.md)</button>
+<button>[View integrations](/developers/integrations)</button>
 
 #### Get Access
 
