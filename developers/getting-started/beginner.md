@@ -25,7 +25,9 @@ If you do not have a SKALE Chain yet, request one by using the link below.
 
 SKALE Chains on the DevNet will already be configured for you, and will not require any updates to get started with deploying your Smart Contracts onto SKALE.  
 
-In order to use your SKALE Chain, you will need to fund your wallet account with the SKALE DevNet ETH tokens. This can be accomplished by using the SKALE Faucet to receive 0.5 test ETH.  
+In order to use your SKALE Chain, you will need to fund your wallet account with the SKALE DevNet ETH tokens. This can be accomplished by using the SKALE Faucet to receive 0.5 test ETH. 
+
+<note>NOTE: Transactions run on SKALE are gas-less; however, in order for a user to process transactions on your SKALE Chain their wallet will need to contain a very small amount of test ETH. This is to protect your SKALE Chain against DDoS attacks. Think of this step as giving users "permission" to use your dApp.</note> 
 
 <button>[Get Test ETH](http://faucet.skale.network/)</button>
 
