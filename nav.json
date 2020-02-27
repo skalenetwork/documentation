@@ -73,13 +73,13 @@
           "link": "/developers/troubleshooting",
           "links": [
             {
-              "link": "/developers/block-explorer",
+              "link": "/developers/block-explorer"
             },
             {
-              "link": "/developers/faucet",
+              "link": "/developers/faucet"
             },
             {
-              "link": "/developers/troubleshooting",
+              "link": "/developers/troubleshooting"
             }
           ]
         }
