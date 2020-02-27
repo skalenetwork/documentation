@@ -74,13 +74,11 @@
           "links": [
             {
               "title": "Block Exploer",
-              "link": "/developers/block-explorer",
-              "depth": 0
+              "link": "/developers/block-explorer"
             },
             {
               "title": "SKALE Faucet",
-              "link": "/developers/faucet",
-              "depth": 0
+              "link": "/developers/faucet"
             },
             {
               "title": "Troubleshooting",
