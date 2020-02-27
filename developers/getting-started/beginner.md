@@ -25,7 +25,7 @@ If you do not have a SKALE Chain yet, request one by using the link below.
 
 SKALE Chains on the DevNet will already be configured for you, and will not require any updates to get started with deploying your Smart Contracts onto SKALE.  
 
-In order to use your SKALE Chain, you will need to fund your wallet account with the SKALE DevNet ETH tokens. This can be accomplished by using the SKALE Faucet to receive 0.5 test ETH.  
+In order to use your SKALE Chain, you will need to fund your wallet account with the SKALE DevNet ETH tokens. This can be accomplished by using the SKALE Faucet to receive 0.5 test ETH. 
 
 <note>NOTE: Transactions run on SKALE are gas-less; however, in order for a user to process transactions on your SKALE Chain their wallet will need to contain a very small amount of test ETH. This is to protect your SKALE Chain against DDoS attacks. Think of this step as giving users "permission" to use your dApp.</note> 
 
@@ -88,14 +88,15 @@ See  [Code Samples](/developers/code-samples)  for more deployment script exampl
 
 #### 4. Send a Transaction
 
-Once your smart contracts have been moved over to your SKALE Chain, you can test sending out a new transaction, using Web3.js or Web3.py. Remember to point your Web3 instance to your SKALE Chain.  
+Once your smart contracts are deployed to your SKALE Chain, you can test sending out a new transaction using your existing connectors to Ethereum (ether.js, web3.js web3.py. etc.). 
 
-```javascript
-import Web3 from 'web3'
+You will not need to change you ether.js or web3 code setup, but you will need to send the trnasactions directly to SKALE by connecting MetaMask or [API Based Wallet](/developers/integrations) of your choice to your SKALE Chain.
 
-const web3 = new Web3("[YOUR_SKALE_CHAIN_ENDPOINT]");
 
-```
+To connect SKALE in MetaMask, create a new Custom RPC with your SKALE Chain endpoint.  
+
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif" sx={{maxWidth: ['75vw', '50vw', '300px']}} />
+
 
 </Step>
 </StepsLayout>

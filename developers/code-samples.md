@@ -6,11 +6,9 @@ You can share your own code sample by reaching out to us on discord.
 
 <button>[Access Discord](http://skale.chat/)</button>
 
-#### Deployment
-
 Use these deployment script examples to deploy your smart contracts onto your SKALE Chain.  
 
-##### Truffle Script
+#### Truffle Script
 
 Truffle is a popular way to deploy your smart contracts onto Ethereum, and can also be used to deploy your smart contracts onto SKALE. You can update your truffle configuration file (truffle.js) with a configuration to deploy your smart contracts onto SKALE.  
 
@@ -59,7 +57,7 @@ truffle deploy --reset --network skale --compile-all
 
 ```
 
-##### NodeJS Script
+#### NodeJS Script
 
 Smart contracts can be deployed with just the use of web3.js as well. Below you will find a simple script for using NodeJS and web3.  
 
@@ -139,7 +137,7 @@ web3.eth.accounts.signTransaction(tx, privateKey).then(signed => {
 
 ```
 
-##### Remix
+#### Remix
 
 Smart contracts can be deployed using Remix and MetaMask. Follow the steps below to deploy your smart contracts.  
 
@@ -147,6 +145,6 @@ For more information on using remix, please see [Remix Documentation](https://re
 
 **1. Connect to SKALE in MetaMask**  
 
-To connect SKALE in MetaMask, create a new Custom RPC with your SKALE chain endpoint.  
+To connect SKALE in MetaMask, create a new Custom RPC with your SKALE Chain endpoint.  
 
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif" sx={{maxWidth: ['75vw', '50vw', '25vw']}} />
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif" sx={{maxWidth: ['75vw', '50vw', '300px']}} />
