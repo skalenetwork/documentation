@@ -68,7 +68,7 @@ git clone --recurse-submodules https://github.com/skalenetwork/sgxwallet.git --b
 sudo ./sgx_enable
 ```
 
-Note: if you are not using Ubuntu 18.04 (something that we do not recommend), you may need to rebuild the sgx-software-enable utility before use by typing:
+Note: if you are not using Ubuntu 18.04 (not recommended), you may need to rebuild the sgx-software-enable utility before use by typing:
 
 ```bash
 cd sgx-software-enable;
@@ -76,7 +76,7 @@ make
 cd ..
 ```
 
-**Instal SGX Library:** 
+**Install SGX Library:** 
 
 ```bash
 cd scripts 
@@ -106,7 +106,7 @@ Usually Intel SGX is disabled by default.
 ***To enable:***
 
 find the Intel SGX feature in BIOS Menu (it is usually under the "Advanced" or "Security" menu)
-Set SGX in BIOS as enabled (preferrably) or software-controlled.
+Set SGX in BIOS as enabled (preferably) or software-controlled.
 save your BIOS settings and exit BIOS.
 Enable "software-controlled" SGX
 Software-controlled means that SGX needs to be enabled by running a utility.
