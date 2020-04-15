@@ -47,9 +47,7 @@ cpuid | grep SGX:
 ```bash
 SGX: Software Guard Extensions supported = true
 ```
-
 ---
-
 
 ### Set Up SGX Wallet
 
@@ -60,6 +58,7 @@ Clone SGX Wallet Repository to your SGX compatible Server:
 ```bash
 git clone --recurse-submodules https://github.com/skalenetwork/sgxwallet.git --branch develop
 ```
+
 #### STEP 2 - Enable SGX
 
 **SGX Wallet repository includes the sgx_enable utility. To enable SGX run:**
@@ -103,14 +102,13 @@ Enter BIOS by pressing the BIOS key during boot. The BIOS key varies by manufact
 
 Usually Intel SGX is disabled by default.
 
-***To enable:***
+**To enable:**
 
 find the Intel SGX feature in BIOS Menu (it is usually under the "Advanced" or "Security" menu)
 Set SGX in BIOS as enabled (preferably) or software-controlled.
 save your BIOS settings and exit BIOS.
 Enable "software-controlled" SGX
 Software-controlled means that SGX needs to be enabled by running a utility.
-
 
 #### STEP 3 - Start SGX
 
