@@ -104,6 +104,9 @@
               "link": "/validators/skale-node"
             },
             {
+              "link": "/validators/sgx-wallet"
+            },
+            {
               "link": "/validators/validator-cli"
             },
             {
