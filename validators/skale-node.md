@@ -29,7 +29,7 @@ SKALE Node Monitoring Service (NMS)
 
 Bounty collector for getting rewards for validator node
 
-The following containers will be created dynamically. The containers will be created when the registered node is assigned randomly to a SKALE Chain in the network by SKALE Manager.  
+The following containers will be created dynamically. These containers will be created when the registered node is assigned randomly to a SKALE Chain in the network by SKALE Manager.  
 
 **IMA**
 
