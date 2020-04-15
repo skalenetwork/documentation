@@ -102,7 +102,7 @@ Enter BIOS by pressing the BIOS key during boot. The BIOS key varies by manufact
 
 Usually Intel SGX is disabled by default.
 
-**To enable:**
+To enable:
 
 find the Intel SGX feature in BIOS Menu (it is usually under the "Advanced" or "Security" menu)
 Set SGX in BIOS as enabled (preferably) or software-controlled.
