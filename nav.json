@@ -110,6 +110,9 @@
               "link": "/validators/validator-cli"
             },
             {
+              "link": "/validators/node-cli"
+            },
+            {
               "link": "/validators/faq"
             }
           ]
