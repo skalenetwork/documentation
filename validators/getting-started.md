@@ -12,7 +12,7 @@
 
 <Step id='one'>
 
-### 1. Overview
+#### 1. Overview
 
 The SKALE Network is a high-throughput, low-latency, configurable byzantine fault-tolerant sidechain network for the Ethereum blockchain. Or, in short, an Elastic Sidechain Network.  
 
