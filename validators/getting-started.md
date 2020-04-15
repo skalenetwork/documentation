@@ -1,3 +1,5 @@
+<StepsLayout id='Validator'>
+
 ## SKALE Validator
 
 <StepsController>
@@ -80,3 +82,5 @@ SKALE Validator CLI is the validator client interface for registering a new vali
 Please follow this link to learn "How to register a Validator to SKALE Network" [validator-cli](/validators/validator-cli)
 
 </Step>
+
+</StepsLayout>
