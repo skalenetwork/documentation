@@ -12,7 +12,9 @@
 
 <Step id='one'>
 
-### 1. Overview
+### 1. Run a Validator Node
+
+#### 1. Overview
 
 The SKALE Network is a high-throughput, low-latency, configurable byzantine fault-tolerant sidechain network for the Ethereum blockchain. Or, in short, an Elastic Sidechain Network.  
 
@@ -35,7 +37,7 @@ Please follow this link to learn about the hardware requirements. [requirements]
 </Step>
 <Step id='two'>
 
-### 2. Set up SGX Wallet
+#### 2. Set up SGX Wallet
 
 Sgxwallet runs as a network server. Clients connect to the server, authenticate to it using TLS 1.0 protocol with client certificates, and then issue requests to the server to generate crypto keys and perform cryptographic operations. The keys are generated inside the secure SGX enclave and never leave the enclave unencrypted.
 
@@ -52,7 +54,7 @@ Please follow this link to learn how to set up an SGX Wallet Server. [sgx-wallet
 
 <Step id='three'>
 
-### 3. Enable SSL
+#### 3. Enable SSL
 
 SSL/TLS should be enabled for every SKALE and SGX nodes. Here is an example how to configure it through [AWS] (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-2.html)
 
@@ -60,7 +62,7 @@ SSL/TLS should be enabled for every SKALE and SGX nodes. Here is an example how 
 
 <Step id='four'>
 
-### 4. Setup SKALE Node
+#### 4. Setup SKALE Node
 
 After Setting up SGX Wallet and create certifications, validators can download the SKALE Node CLI executables register and maintain your SKALE node. This process downloads docker container images from docker hub and spins up SKALE Node functionalities. Some of the base containers such as SKALE Admin, Bounty, SLA, TransactionManager will be created during installation for each node. 
 
@@ -70,7 +72,7 @@ Please follow this link to learn "How to set up SKALE Node" [node-cli](/validato
 
 <Step id='five'>
 
-### 5. Register Validator
+#### 5. Register Validator
 
 SKALE Validator CLI is the validator client interface for registering a new validator into network or handling additional delegation services where validators can self delegate or token holders can delegate to a validator. These are the type of operations that can be done with the Validator CLI:
 

@@ -10,7 +10,7 @@ This document contains instructions on how to get started with the SKALE Validat
 
 #### Download the SKALE Validator CLI binary
 
-Replace [VERSION NUMBER] with `0.3.0-develop.0`
+Replace `[VERSION NUMBER]` with `0.3.0-develop.0`
 
 **Terminal Command:**
 
@@ -18,7 +18,7 @@ Replace [VERSION NUMBER] with `0.3.0-develop.0`
 VERSION_NUM=[VERSION NUMBER] && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/develop/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
 ```
 
-#### Apply executable permissions to the binary:
+#### Apply executable permissions to the binary
 
 **Terminal Command:**
 
@@ -44,7 +44,7 @@ sk-val init -e wss://rinkeby.infura.io/ws/v3/17af71ac8ba94607bd3374f4509ce17c -c
 
 #### Register as a new SKALE validator
 
-Replace [YOUR PRIVATE KEY] with your wallet private key 
+Replace `[YOUR PRIVATE KEY]` with your wallet private key 
 
 **Terminal Command:**
 
@@ -79,4 +79,3 @@ sk-val register -n SETeam -d "SE Team description" -c 20 --min-delegation 1000 -
 #### add Validator to Whitelist
 
 For testing phase please provide your testing wallet Address to SKALE Core team. Your contract owner wallet will be added to validator whitelist. 
-
