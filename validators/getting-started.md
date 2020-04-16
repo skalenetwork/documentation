@@ -12,7 +12,7 @@
 
 <Step id='one'>
 
-### 1. Run a Validator Node
+### 1. Run a Validator Node in SKALE Network
 
 #### 1. Overview
 
