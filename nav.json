@@ -113,6 +113,9 @@
               "link": "/validators/node-cli"
             },
             {
+              "link": "/validators/register-skalenode"
+            },
+            {
               "link": "/validators/faq"
             }
           ]
