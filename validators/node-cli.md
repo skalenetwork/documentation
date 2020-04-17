@@ -11,7 +11,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   A Linux x86_64 machine
 -   SGX-enabled Intel processor
 -   Ports 22, 8080, 9100, and 10000-11000, and ICMP IPv4 open for all
--   Ubuntu 16.04 or later LTS
+-   Ubuntu 18.04 or later LTS
 -   200GB attached storage (mainnet requirements will be defined soon)
 -   32GB RAM  
 
@@ -25,7 +25,7 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Replace version number with `0.8.0-develop.20`
+Replace version number with `0.8.0-develop.32`
 
 **Terminal Command:**
 
@@ -49,29 +49,23 @@ sudo chmod +x /usr/local/bin/skale
 
 Required options for the `skale node init` command:
 
--   `--disk-mountpoint` - Mount point of the disk to be used for storing sChains data
--   `--sgx-url` - URL to SGX server in the network, can be used for current node if the current node supports SGX-enabled Intel processor
--   `--env-file` - path to env file where required parameters listed above are defined
+-   `--env-file` - path to env file where required parameters listed below are defined
+-   `--install-deps` - install additional dependecies (like docker and docker-compose)
 
 Required options for the `skale node init` command in environment file:
 
 -   `SGX_SERVER_URL` - URL to SGX server in the network, can be used for current node if the current node supports intel technology SGX. SGX node can be set up through SGXwallet repository
 
--   `DISK_MOUNTPOINT` - Mount point of the disk to be used for storing sChains data
+-   `DISK_MOUNTPOINT` - Block device to be used for storing sChains data
 
--   `IMA_CONTRACTS_INFO_URL` - URL to IMA contracts ABI and addresses
+-   `IMA_CONTRACTS_ABI_URL` - URL to IMA contracts ABI and addresses
 
--   `MANAGER_CONTRACTS_INFO_URL` - URL to SKALE Manager contracts ABI and addresses
+-   `MANAGER_CONTRACTS_ABI_URL` - URL to SKALE Manager contracts ABI and addresses
 
 -   `FILEBEAT_HOST` - URL to the Filebeat log server
 
--   `GITHUB_TOKEN` - token for accessing `skale-node` repo
-
--   `GIT_BRANCH` - git branch used for initialization
-
--   `DOCKER_PASSWORD` - password for DockerHub
-
--   `DOCKER_USERNAME` - username for DockerHub
+-   `CONTAINERS_CONFIG_STREAM` - git branch with containers versions config
+-   `DOCKER_LVMPY_STREAM` - git branch of docker lvmpy volume dirver for schains
 
 -   `DB_PORT` - Port for of node internal database (default is 3306)
 
@@ -92,13 +86,11 @@ Create a `config.env` file and specify following parameters:
 ```bash
     SGX_SERVER_URL=[SGX_SERVER_URL]
     DISK_MOUNTPOINT=[DISK_MOUNTPOINT]
-    IMA_CONTRACTS_INFO_URL=[IMA_CONTRACTS_INFO_URL]
-    MANAGER_CONTRACTS_INFO_URL=[MANAGER_CONTRACTS_INFO_URL]
+    IMA_CONTRACTS_ABI_URL=[IMA_CONTRACTS_ABI_URL]
+    MANAGER_CONTRACTS_ABI_URL=[MANAGER_CONTRACTS_ABI_URL]
     FILEBEAT_HOST=[FILEBEAT_HOST]
-    GITHUB_TOKEN=[GITHUB_TOKEN]
-    GIT_BRANCH=[GIT_BRANCH]
-    DOCKER_PASSWORD=[DOCKER_PASSWORD]
-    DOCKER_USERNAME=[DOCKER_USERNAME]
+    CONTAINER_CONFIGS_STREAM=[CONTAINER_CONFIGS_STREAM]
+    DOCKER_LVMPY_STREAM=[DOCKER_LVMPY_STREAM]
     DB_PORT=[DB_PORT]
     DB_ROOT_PASSWORD=[DB_ROOT_PASSWORD]
     DB_PASSWORD=[DB_PASSWORD]
@@ -107,23 +99,13 @@ Create a `config.env` file and specify following parameters:
     ENDPOINT=[ENDPOINT]
 ```
 
-✋These access tokens are needed to access private repos and docker containers.  **Please do not distribute!!!**
-
-Access tokens will be provided with the release of the new CLI.
-
-Note: **TOKEN**, **DOCKER_USERNAME**, and **DOCKER_PASSWORD** are provided for all participants.  
-
-Please feel free to set your own  **DB_PASSWORD**.
+Please feel free to set values own  **DB_PASSWORD**, **DB_ROOT_PASSWORD**, **DB_USER**.
 
 **Terminal Command:**
 
 ```bash
 
-skale node init \
---disk-mountpoint [DISK_MOUNTPOINT]  \
---sgx-url [SGX_SERVER_URL] \
---env-file config.env \
---install-deps
+skale node init --env-file config.env --install-deps
 
 ```
 
@@ -156,47 +138,7 @@ Creating ash_node_exporter ... done
 
 ```
 
-#### Step 2.2 Create user registration token
-
-**Terminal Command:**
-
-```bash
-skale user token
-
-```
-
-**Output:**
-
-> User registration token: `[USER_REGISTRATION_TOKEN]`
-
-#### Step 2.3: Create and register user with user registration token
-
-Note: select a user and password, and use the user registration token from the previous step.
-
-**Terminal Command:**
-
-```bash
-skale user register -u [USER] -p [PASSWORD] -t [USER_REGISTRATION_TOKEN]
-
-```
-
-USER_REGISTRATION_TOKEN can be find in this file: 
-
-**Terminal Command:**
-
-```bash
-cat /root/.skale/node_data/tokens.json
-```
-
-Note: In this pre-release software, your wallet address and private key for  **_test tokens are stored in plaintext json_**  file at the following location: /skale_node_data/local_wallet.json.  
-‍  
-We recommend that you backup this file in case you may need to rebuild the machine and re-register with the network using the same IP address.  
-
-**Output:**
-
-> User created: $USER> Success, cookies saved.
-
-#### Step 2.4: Show your SKALE wallet info
+#### Step 2.2: Show your SKALE wallet info
 
 **Terminal Command:**
 
@@ -214,7 +156,12 @@ SKALE balance: 0 SKALE
 
 ```
 
-### Step 3:  **Get Test Tokens**
+### Step 3:  **Register your account as a validator using validator-cli**
+
+Check https://github.com/skalenetwork/documentation/blob/master/validators/validator-cli.md for more information.
+
+
+### Step 4:  **Get Test Tokens**
 
 Get Tokens from the  [**SKALE Faucet  
 **](http://faucet.skale.network/validators)
@@ -231,22 +178,24 @@ skale wallet info
 
 ```
 
-### Step 4: Register with Network
+### Step 5: Register with Network
 
-Before proceeding, you will need to have at least  **0.2 Test ETH**  and  **100 test SKALE tokens**. Otherwise you will not be able to register with the SKALE Internal Devnet.  
+Note: You should link skale wallet address to your validator account using validators-cli.
+
+Note: Before proceeding, you will need to have at least  **0.2 Test ETH**. Also amount of delegated skale tokens need to be more or equal to minumum staking amount. Otherwise you will not be able to register with the SKALE Internal Devnet.  
 
 Get Tokens from the  [**SKALE Faucet**](http://faucet.skale.network/validators)
 
 To register with the network, you will need to provide the following:  
 
 1.  Node name  
-2.  machine IP  
-3.  Port (10000 recommended)  
+2.  Machine public IP   
+3.  Port - beginning of the port range that will be used for skale schains (10000 recommended)  
 
 **Terminal Command:**
 
 ```bash
-skale node register --name [NODE_NAME] --ip [NODE_IP]
+skale node register --name [NODE_NAME] --ip [NODE_IP] --port [PORT]
 
 ```
 
@@ -254,7 +203,7 @@ skale node register --name [NODE_NAME] --ip [NODE_IP]
 
 > Node registered in SKALE manager. For more info run: skale node info
 
-### Step 5: Check Node Status
+### Step 6: Check Node Status
 
 You can check the status of your node, and ensure that it is properly registered with the SKALE Network.  
 
