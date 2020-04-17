@@ -54,6 +54,7 @@ Required options for the `skale node init` command:
 
 Required options for the `skale node init` command in environment file:
 
+<<<<<<< HEAD
 -   `SGX_SERVER_URL` - URL to SGX server in the network, can be used for current node if the current node supports intel technology SGX. SGX node can be set up through SGXwallet repository
 
 -   `DISK_MOUNTPOINT` - Block device to be used for storing sChains data
@@ -77,6 +78,22 @@ Required options for the `skale node init` command in environment file:
 
 -   `IMA_ENDPOINT` - IMA endpoint to connect
 
+=======
+-   `SGX_SERVER_URL` - URL to SGX server in the network, can be used for current node if the current node supports SGX
+-   `DISK_MOUNTPOINT` - Mount point of the disk to be used for storing sChains data
+-   `IMA_CONTRACTS_INFO_URL` - URL to IMA contracts ABI and addresses
+-   `MANAGER_CONTRACTS_INFO_URL` - URL to SKALE Manager contracts ABI and addresses
+-   `FILEBEAT_HOST` - URL to the Filebeat log server
+-   `GITHUB_TOKEN` - token for accessing `skale-node` repo
+-   `GIT_BRANCH` - git branch used for initialization
+-   `DOCKER_PASSWORD` - password for DockerHub
+-   `DOCKER_USERNAME` - username for DockerHub
+-   `DB_PORT` - Port for of node internal database (default is 3306)
+-   `DB_ROOT_PASSWORD` - root password
+-   `DB_PASSWORD` - Password for root user of node internal database (equal to user password by default)
+-   `DB_USER` - MySQL user for local node database
+-   `IMA_ENDPOINT` - IMA endpoint to connect
+>>>>>>> fd984d63d84b709a2549f21533882e1e26df6e9f
 -   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed
 
 Create a `config.env` file and specify following parameters:
