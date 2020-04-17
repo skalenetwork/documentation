@@ -98,6 +98,9 @@
               "link": "/validators/requirements"
             },
             {
+              "link": "/validators/register-validator-node"
+            },
+            {
               "link": "/validators/economics"
             },
             {
@@ -111,9 +114,6 @@
             },
             {
               "link": "/validators/node-cli"
-            },
-            {
-              "link": "/validators/register-skalenode"
             },
             {
               "link": "/validators/faq"
