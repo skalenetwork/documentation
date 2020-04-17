@@ -162,3 +162,5 @@ sudo docker-compose up -d
 cd sgxwallet/run_sgx
 sudo docker-compose stop
 ```
+
+<button>[Go to Next Step](https://devportal-staging.netlify.app/validators/register-validator-node#2-enable-ssl)</button>
