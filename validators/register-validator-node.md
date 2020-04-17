@@ -6,9 +6,9 @@
 <StepsController>
     <StepNav stepId='one' label='Setup\nSGX Wallet'><ThresholdSignatures/></StepNav>
     <StepNav stepId='two' label='Enable\nSSL'><AsynchronousProtocol/></StepNav>
-    <StepNav stepId='four' label='Setup\nSKALE Node'><LeaderlessConsensus/></StepNav>
-    <StepNav stepId='five' label='Register\nValidator'><SendTransaction/></StepNav>
-    <StepNav stepId='six' label='Register\nNode with Network'><LeaderlessConsensus/></StepNav>
+    <StepNav stepId='three' label='Setup\nSKALE Node'><LeaderlessConsensus/></StepNav>
+    <StepNav stepId='four' label='Register\nValidator'><SendTransaction/></StepNav>
+    <StepNav stepId='five' label='Register\nNode in SKALE Network'><LeaderlessConsensus/></StepNav>
 </StepsController>
 
 <Step id='one'>
@@ -218,7 +218,7 @@ See the SKALE Validator CLI code and documentation on [**GitHub**](https://githu
 
 This document contains instructions on how to get started with the SKALE Validator CLI.  
 
-### Step 5.1: Install SKALE Validator CLI
+### Step 4.1: Install SKALE Validator CLI
 
 #### Download the SKALE Validator CLI binary
 
@@ -254,7 +254,7 @@ Usage example:
 sk-val init -e wss://rinkeby.infura.io/ws/v3/17af71ac8ba94607bd3374f4509ce17c -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-rinkeby-v1.json --wallet-type software
 ```
 
-### Step 5.2: Register as a new SKALE validator
+### Step 4.2: Register as a new SKALE validator
 
 Replace `[YOUR PRIVATE KEY]` with your wallet private key 
 
@@ -290,11 +290,11 @@ sk-val register -n SETeam -d "SE Team description" -c 20 --min-delegation 1000 -
 
 </Step>
 
-<Step id='six'>
+<Step id='five'>
 
-## 6: Register Node with Network
+## 5: Register Node with Network
 
-### Step 6.1: Get Tokens from the  [**SKALE Faucet**](http://faucet.skale.network/validators)
+### Step 5.1: Get Tokens from the  [**SKALE Faucet**](http://faucet.skale.network/validators)
 
 If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).  
 [](http://faucet.skale.network/validators)
@@ -308,7 +308,7 @@ skale wallet info
 
 ```
 
-### Step 6.2: Register Node with Validator CLI
+### Step 5.2: Register Node with Validator CLI
 Note: You should link skale wallet address to your validator account using validators-cli.
 
 Note: Before proceeding, you will need to have at least  **0.2 Test ETH**. Also amount of delegated skale tokens need to be more or equal to minumum staking amount. Otherwise you will not be able to register with the SKALE Internal Devnet.  
@@ -331,7 +331,7 @@ skale node register --name [NODE_NAME] --ip [NODE_IP] --port [PORT]
 > Node registered in SKALE manager. For more info run: skale node info
 
 
-### Step 6.3: Check Node Status
+### Step 5.3: Check Node Status
 
 You can check the status of your node, and ensure that it is properly registered with the SKALE Network.  
 
