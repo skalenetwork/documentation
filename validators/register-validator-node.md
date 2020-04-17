@@ -1,4 +1,3 @@
-
 # Run a Validator Node in the SKALE Network
 
 This page is the step by step guide that shows how to run a validator node in the SKALE Network 
