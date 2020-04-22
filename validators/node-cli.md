@@ -55,26 +55,16 @@ Required options for the `skale node init` command:
 Required options for the `skale node init` command in environment file:
 
 -   `SGX_SERVER_URL` - URL to SGX server in the network, can be used for current node if the current node supports intel technology SGX. SGX node can be set up through SGXwallet repository
-
 -   `DISK_MOUNTPOINT` - Block device to be used for storing sChains data
-
 -   `IMA_CONTRACTS_ABI_URL` - URL to IMA contracts ABI and addresses
-
 -   `MANAGER_CONTRACTS_ABI_URL` - URL to SKALE Manager contracts ABI and addresses
-
 -   `FILEBEAT_HOST` - URL to the Filebeat log server
-
 -   `CONTAINERS_CONFIG_STREAM` - git branch with containers versions config
 -   `DOCKER_LVMPY_STREAM` - git branch of docker lvmpy volume dirver for schains
-
 -   `DB_PORT` - Port for of node internal database (default is 3306)
-
 -   `DB_ROOT_PASSWORD` - root password
-
 -   `DB_PASSWORD` - Password for root user of node internal database (equal to user password by default)
-
 -   `DB_USER` - MySQL user for local node database
-
 -   `IMA_ENDPOINT` - IMA endpoint to connect
 -   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed
 
@@ -157,15 +147,16 @@ SKALE balance: 0 SKALE
 
 ### Step 3:  **Register your account as a validator using validator-cli**
 
-Check [https://github.com/skalenetwork/documentation/blob/master/validators/validator-cli.md](Validator CLI) for more information.
+Check [Validator CLI](https://github.com/skalenetwork/documentation/blob/master/validators/validator-cli.md) for more information
 
 ### Step 4:  **Get Test Tokens**
 
 Get Tokens from the  [**SKALE Faucet  
 **](http://faucet.skale.network/validators)
 
-If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).  
-[](http://faucet.skale.network/validators)
+If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).
+
+[Click here for Faucet](http://faucet.skale.network/validators)
 
 Once tokens have been transferred, please check your wallet in the terminal.  
 

@@ -98,26 +98,16 @@ Required options for the `skale node init` command:
 Required options for the `skale node init` command in environment file:
 
 -   `SGX_SERVER_URL` - URL to SGX server in the network, can be used for current node if the current node supports intel technology SGX. SGX node can be set up through SGXwallet repository
-
 -   `DISK_MOUNTPOINT` - Block device to be used for storing sChains data
-
 -   `IMA_CONTRACTS_ABI_URL` - URL to IMA contracts ABI and addresses
-
 -   `MANAGER_CONTRACTS_ABI_URL` - URL to SKALE Manager contracts ABI and addresses
-
 -   `FILEBEAT_HOST` - URL to the Filebeat log server
-
 -   `CONTAINERS_CONFIG_STREAM` - git branch with containers versions config
 -   `DOCKER_LVMPY_STREAM` - git branch of docker lvmpy volume dirver for schains
-
 -   `DB_PORT` - Port for of node internal database (default is 3306)
-
 -   `DB_ROOT_PASSWORD` - root password
-
 -   `DB_PASSWORD` - Password for root user of node internal database (equal to user password by default)
-
 -   `DB_USER` - MySQL user for local node database
-
 -   `IMA_ENDPOINT` - IMA endpoint to connect. 
 -   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
 
@@ -259,8 +249,6 @@ Replace `[YOUR PRIVATE KEY]` with your wallet private key
 echo [YOUR PRIVATE KEY] > ./pk.txt
 ```
 
-**Terminal Command:**
-
 Required arguments:
 
 -   `--name/-n` - Validator name
@@ -305,7 +293,7 @@ SKALE balance: 200 SKALE
 
 Please copy your Node Address, you will be using it for linking node address to validator address and also for the faucet as well for the next two steps.
 
-### Step 4.4: Link skale wallet address to your validator account using validators-cli.
+### Step 4.5: Link skale wallet address to your validator account using validators-cli
 
 > Make sure you copied Node Address from STEP 4.3
 
