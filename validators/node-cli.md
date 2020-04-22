@@ -25,12 +25,12 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Replace version number with `0.8.0-develop.32`
+Replace version number with `0.8.0-develop.34`
 
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=[Version Number] && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/beta/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
+VERSION_NUM=[Version Number] && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/develop/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
 
 ```
 
@@ -180,7 +180,13 @@ skale wallet info
 
 ### Step 5: Register with Network
 
-Note: You should link skale wallet address to your validator account using validators-cli.
+Link skale wallet address to your validator account using validators-cli.
+
+**Terminal Command:**
+
+```bash
+ sk-val validator link-address [NODE_ADDRESS] --yes --pk-file ./pk.txt 
+```
 
 Note: Before proceeding, you will need to have at least  **0.2 Test ETH**. Also amount of delegated skale tokens need to be more or equal to minumum staking amount. Otherwise you will not be able to register with the SKALE Internal Devnet.  
 

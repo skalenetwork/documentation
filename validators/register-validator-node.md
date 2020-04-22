@@ -69,12 +69,12 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Replace version number with `0.8.0-develop.32`
+Replace version number with `0.8.0-develop.20`
 
 ***Terminal Command:***
 
 ```bash
-VERSION_NUM=[Version Number] && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/beta/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
+VERSION_NUM=[Version Number] && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/manual/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
 
 ```
 
@@ -119,9 +119,9 @@ Required options for the `skale node init` command in environment file:
 
 -   `DB_USER` - MySQL user for local node database
 
--   `IMA_ENDPOINT` - IMA endpoint to connect
+-   `IMA_ENDPOINT` - IMA endpoint to connect. 
 
--   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed
+-   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
 
 Create a `.env` file and specify following parameters:
 
@@ -141,6 +141,8 @@ Create a `.env` file and specify following parameters:
     DB_USER=[DB_USER]
     IMA_ENDPOINT=[IMA_ENDPOINT]
     ENDPOINT=[ENDPOINT]
+    NODE_CLI_SPACE=[NODE_CLI_SPACE]
+    SKALE_NODE_CLI_VERSION=[SKALE_NODE_CLI_VERSION]
 ```
 
 Please feel free to set values own  **DB_PASSWORD**, **DB_ROOT_PASSWORD**, **DB_USER**.
@@ -156,29 +158,23 @@ skale node init --env-file .env --install-deps
 **Output:**
 
 ```bash
-# Executing docker install script, commit: 2f4ae48...
-(lines-omitted-for-brevity)...
-Login Succeeded
-Creating directories...
-Creating copying config folder...
-Creating copying tools folder...
-Pulling base          ... done
-Pulling admin         ... done
-Pulling mysql         ... done
-Pulling sla           ... done
-Pulling bounty        ... done
-Pulling events        ... done
-Pulling advisor       ... done
-Pulling node-exporter ... done
-Run mode: prod
-Creating skale_sla         ... done
-Creating skale_mysql       ... done
-Creating skale_admin       ... done
-Creating config_base_1     ... done
-Creating skale_bounty      ... done
-Creating ash_cadvisor      ... done
-Creating skale_events      ... done
-Creating ash_node_exporter ... done
+48914619bcd3: Pull complete
+db7a07cce60c: Pull complete
+d285532a5ada: Pull complete
+8646278c4014: Pull complete
+3a12d6e582e7: Pull complete
+0a3d98d81a07: Pull complete
+43b3a182ba00: Pull complete
+Creating monitor_cadvisor          ... done
+Creating monitor_node_exporter     ... done
+Creating monitor_filebeat          ... done
+Creating skale_transaction-manager ... done
+Creating config_base_1             ... done
+Creating skale_watchdog            ... done
+Creating skale_mysql               ... done
+Creating skale_sla                 ... done
+Creating skale_admin               ... done
+Creating skale_bounty              ... done
 
 ```
 
@@ -252,7 +248,7 @@ Usage example:
 **Usage example:**
 
 ```bash
-sk-val init -e wss://rinkeby.infura.io/ws/v3/17af71ac8ba94607bd3374f4509ce17c -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-rinkeby-v1.json --wallet-type software
+sk-val init -e [ENDPOINT] -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-rinkeby-v2.json --wallet software
 ```
 
 ### Step 4.2: Register as a new SKALE validator
@@ -266,10 +262,6 @@ echo [YOUR PRIVATE KEY] > ./pk.txt
 ```
 
 **Terminal Command:**
-
-```bash
-sk-val validator register
-```
 
 Required arguments:
 
@@ -286,7 +278,19 @@ Optional arguments:
 **Usage example:**
 
 ```bash
-sk-val register -n SETeam -d "SE Team description" -c 20 --min-delegation 1000 --pk-file ./pk.txt
+sk-val validator register -n SETeam -d "SE Team description" -c 20 --min-delegation 1000 --pk-file ./pk.txt
+```
+
+### Step 4.3: Make sure that the validator is added to the whitelist
+
+Note: This is for testing purposes only. [**Whitelist**](https://alpine.skale.network/whitelist)
+
+### Step 4.4: Link skale wallet address to your validator account using validators-cli.
+
+**Terminal Command:**
+
+```bash
+ sk-val validator link-address [NODE_ADDRESS] --yes --pk-file ./pk.txt 
 ```
 
 </Step>
@@ -298,7 +302,7 @@ sk-val register -n SETeam -d "SE Team description" -c 20 --min-delegation 1000 -
 ### Step 5.1: Get Tokens from the  [**SKALE Faucet**](http://faucet.skale.network/validators)
 
 If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).  
-[](http://faucet.skale.network/validators)
+[faucet](http://faucet.skale.network/validators)
 
 Once tokens have been transferred, please check your wallet in the terminal.  
 
@@ -309,8 +313,7 @@ skale wallet info
 
 ```
 
-### Step 5.2: Register Node with Validator CLI
-Note: You should link skale wallet address to your validator account using validators-cli.
+### Step 5.2: Register Node with Node CLI
 
 Note: Before proceeding, you will need to have at least  **0.2 Test ETH**. Also amount of delegated skale tokens need to be more or equal to minumum staking amount. Otherwise you will not be able to register with the SKALE Internal Devnet.  
 
