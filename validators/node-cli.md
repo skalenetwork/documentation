@@ -76,7 +76,6 @@ Required options for the `skale node init` command in environment file:
 -   `DB_USER` - MySQL user for local node database
 
 -   `IMA_ENDPOINT` - IMA endpoint to connect
-
 -   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed
 
 Create a `config.env` file and specify following parameters:
@@ -158,8 +157,7 @@ SKALE balance: 0 SKALE
 
 ### Step 3:  **Register your account as a validator using validator-cli**
 
-Check https://github.com/skalenetwork/documentation/blob/master/validators/validator-cli.md for more information.
-
+Check [https://github.com/skalenetwork/documentation/blob/master/validators/validator-cli.md](Validator CLI) for more information.
 
 ### Step 4:  **Get Test Tokens**
 

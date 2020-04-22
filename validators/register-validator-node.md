@@ -37,8 +37,7 @@ SSL/TLS should be enabled for every SKALE and SGX nodes. Here is an example how 
 
 </Step>
 
-
-<Step id='four'>
+<Step id='three'>
 
 ## 3. Setup SKALE Node with SKALE Node CLI
 
@@ -71,7 +70,7 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 Make sure th version number is `0.8.0-develop.20`
 
-***Terminal Command:***
+**Terminal Command:**
 
 ```bash
 VERSION_NUM=0.8.0-develop.20 && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/manual/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
@@ -80,7 +79,7 @@ VERSION_NUM=0.8.0-develop.20 && sudo -E bash -c "curl -L https://skale-cli.sfo2.
 
 #### Make the SKALE Node CLI binary executable
 
-***Terminal Command:***
+**Terminal Command:**
 
 ```bash
 sudo chmod +x /usr/local/bin/skale
@@ -120,7 +119,6 @@ Required options for the `skale node init` command in environment file:
 -   `DB_USER` - MySQL user for local node database
 
 -   `IMA_ENDPOINT` - IMA endpoint to connect. 
-
 -   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
 
 Create a `.env` file and specify following parameters:
@@ -285,9 +283,9 @@ sk-val validator register -n SETeam -d "SE Team description" -c 20 --min-delegat
 
 Note: This is for testing purposes only. [**Whitelist**](https://alpine.skale.network/whitelist)
 
+### Step 4.4: Write down your Node Address
 
-### Step 4.3: Write down your Node Address
-After executing following command you will find see Node Address. 
+After executing following command you will find see Node Address
 
 **Terminal Command:**
 
@@ -361,7 +359,6 @@ skale node register --name [NODE_NAME] --ip [NODE_IP] --port [PORT]
 
 > Node registered in SKALE manager. For more info run: skale node info
 
-
 ### Step 5.3: Check Node Status
 
 You can check the status of your node, and ensure that it is properly registered with the SKALE Network.  
@@ -387,31 +384,3 @@ Status: Active
 </Step>
 
 </StepsLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
