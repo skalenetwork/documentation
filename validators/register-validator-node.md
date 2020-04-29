@@ -208,7 +208,7 @@ SGX server status:
 ```
 
 
-### Step 3.2:  **Get Test Tokens to your SGX and Validator wallets**
+### Step 3.3:  **Get Test Tokens to your SGX and Validator wallets**
 
 Get Tokens from the  [**SKALE Faucet**](https://faucet.skale.network/validators)
 
