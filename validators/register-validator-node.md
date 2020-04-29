@@ -68,12 +68,12 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Make sure th version number is `0.8.0-develop.20`
+Make sure th version number is `0.8.0-develop.35`
 
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=0.8.0-develop.20 && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/manual/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
+VERSION_NUM=0.8.0-develop.35 && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/develop/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
 
 ```
 
@@ -166,7 +166,9 @@ Creating skale_bounty              ... done
 
 ```
 
-#### Show your SKALE wallet info
+#### Show your SKALE SGX wallet info
+
+This command prints information related to your sgx wallet. Node operates only from the sgx wallet:
 
 **Terminal Command:**
 
@@ -181,6 +183,44 @@ skale wallet info
 Address: <your-skale-private-net-wallet-address>
 ETH balance: 0 ETH
 SKALE balance: 0 SKALE
+
+```
+
+#### Check if your node is connected to sgx
+
+**Terminal Command:**
+
+```bash
+skale sgx status
+
+```
+
+**Output:**
+
+```bash
+SGX server status:
+┌────────────────┬──────────────────────────┐
+│ SGX server URL │ <sgx-url>
+├────────────────┼──────────────────────────┤
+│ Status         │ CONNECTED                │
+└────────────────┴──────────────────────────┘
+
+```
+
+### Step 3.3: Get Test Tokens to your SGX and Validator wallets**
+
+Get Tokens from the  [**SKALE Faucet**](https://faucet.skale.network/validators)
+
+If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).
+
+[Click here for Faucet](https://faucet.skale.network/validators)
+
+Once tokens have been transferred, please check your wallet in the terminal.  
+
+**Terminal Command:**
+
+```bash
+skale wallet info
 
 ```
 
@@ -201,18 +241,18 @@ Note: This is **an insecure pre-release** software.
 
 See the SKALE Validator CLI code and documentation on [**GitHub**](https://github.com/skalenetwork/validator-cli)*‍  
 
-This document contains instructions on how to get started with the SKALE Validator CLI.  
+This document contains instructions on how to get started with the SKALE Validator CLI.
 
 ### Step 4.1: Install SKALE Validator CLI
 
 #### Download the SKALE Validator CLI binary
 
-Make sure the `[VERSION NUMBER]` is `0.3.0-develop.0`
+Make sure the `[VERSION NUMBER]` is `0.3.0-develop.6`
 
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=0.3.0-develop.0 && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/develop/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
+VERSION_NUM=0.3.0-develop.6 && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/develop/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
 ```
 
 #### Apply executable permissions to the binary
@@ -228,7 +268,10 @@ chmod +x /usr/local/bin/sk-val
 Required arguments:
 
 -   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
+                    Example: wss://rinkeby.infura.io/ws/v3/17af71ac8ba946test374f4509ce17c
+
 -   `--contracts-url/-c` - - URL to SKALE Manager contracts ABI and addresses
+
 -   `-w/--wallet` - Type of the wallet that will be used for signing transactions (software or ledger)
 
 Usage example:
@@ -236,7 +279,7 @@ Usage example:
 **Usage example:**
 
 ```bash
-sk-val init -e [ENDPOINT] -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-rinkeby-v2.json --wallet software
+sk-val init -e [ENDPOINT] -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-incentivized-onboarding-alpine-v1.json --wallet software
 ```
 
 ### Step 4.2: Register as a new SKALE validator
@@ -264,14 +307,14 @@ Optional arguments:
 **Usage example:**
 
 ```bash
-sk-val validator register -n SETeam -d "SE Team description" -c 20 --min-delegation 1000 --pk-file ./pk.txt
+sk-val validator register -n SETeam -d "SE Team description" -c 20 --min-delegation 0 --pk-file ./pk.txt
 ```
 
 ### Step 4.3: Make sure that the validator is added to the whitelist
 
 Note: This is for testing purposes only. [**Whitelist**](https://alpine.skale.network/whitelist)
 
-### Step 4.4: Write down your Node Address
+### Step 4.4: Write down your Node Address (SGX Wallet Address)
 
 After executing following command you will find see Node Address
 
@@ -285,22 +328,47 @@ After executing following command you will find see Node Address
 ```bash
 root@se-test-01:~# skale wallet info
 --------------------------------------------------
-Address: 0x.... -> ThisIsYourNodeAddress
+Address: 0x.... -> ThisIsYour_NodeAddress
 ETH balance: 3.499059343 ETH
 SKALE balance: 200 SKALE
 --------------------------------------------------
 ```
 
-Please copy your Node Address, you will be using it for linking node address to validator address and also for the faucet as well for the next two steps.
+Please copy your SGX Wallet Address, you will be using it for linking node address to validator address.
 
-### Step 4.5: Link skale wallet address to your validator account using validators-cli
+### Step 4.5: Sign validator id using sgx wallet
+
+Execute this command and find your validator ID 
+
+**Terminal Command:**
+```bash
+sk-val validator ls
+```
+
+Get your SKALE node signature. This SIGNATURE will be used in Step 4.6 while linking node addresses to your validator 
+
+**Terminal Command:**
+
+```bash
+skale node signature [VALIDATOR_ID]
+
+```
+
+**Output:**
+
+```bash
+Signature: <your-signature>
+
+```
+
+### Step 4.6: Link skale wallet address to your validator account using validator-cli
 
 > Make sure you copied Node Address from STEP 4.3
 
 **Terminal Command:**
 
 ```bash
- sk-val validator link-address [NODE_ADDRESS] --yes --pk-file ./pk.txt 
+ sk-val validator link-address [NODE_ADDRESS] [SIGNATURE] --yes --pk-file ./pk.txt 
 ```
 
 </Step>
@@ -309,24 +377,7 @@ Please copy your Node Address, you will be using it for linking node address to 
 
 ## 5: Register Node with Network
 
-### Step 5.1: Get Tokens from the  [**SKALE Faucet**](http://faucet.skale.network/validators)
-
-> Make sure you copied Node Address from STEP 4.3 and paste it in the faucet textbox
-
-Click here for [faucet](http://faucet.skale.network/validators)
-
-Once tokens have been transferred, please check your wallet in the terminal.  
-
-**Terminal Command:**
-
-```bash
-skale wallet info
-
-```
-
-If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).
-
-### Step 5.2: Register Node with Node CLI
+### Step 5.1: Register Node with Node CLI
 
 Note: Before proceeding, you will need to have at least  **0.2 Test ETH**. Also amount of delegated skale tokens need to be more or equal to minumum staking amount. Otherwise you will not be able to register with the SKALE Internal Devnet.  
 
@@ -347,7 +398,7 @@ skale node register --name [NODE_NAME] --ip [NODE_IP] --port [PORT]
 
 > Node registered in SKALE manager. For more info run: skale node info
 
-### Step 5.3: Check Node Status
+### Step 5.2: Check Node Status
 
 You can check the status of your node, and ensure that it is properly registered with the SKALE Network.  
 

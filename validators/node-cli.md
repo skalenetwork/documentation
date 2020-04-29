@@ -147,7 +147,9 @@ SGX server status:
 
 ```
 
-#### Step 2.3: Show your SKALE wallet info
+#### Step 2.3: Show your SKALE sgx wallet info
+
+This command prints information related to your sgx wallet. Node operates only from the sgx wallet:
 
 **Terminal Command:**
 
@@ -159,17 +161,34 @@ skale wallet info
 **Output:**
 
 ```bash
-Address: <your-skale-private-net-wallet-address>
+Address: <your-sgx-wallet-address>
 ETH balance: 0 ETH
 SKALE balance: 0 SKALE
 
 ```
 
-### Step 3:  **Register your account as a validator using validator-cli**
+### Step 3:  **Get Test Tokens to your SGX and Validator wallets**
+
+Get Tokens from the  [**SKALE Faucet**](https://faucet.skale.network/validators)
+
+If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).
+
+[Click here for Faucet](https://faucet.skale.network/validators)
+
+Once tokens have been transferred, please check your wallet in the terminal.  
+
+**Terminal Command:**
+
+```bash
+skale wallet info
+
+```
+
+### Step 4:  **Register your account as a validator using validator-cli**
 
 Check [Validator CLI](https://github.com/skalenetwork/documentation/blob/master/validators/validator-cli.md) for more information
 
-### Step 4: **Sign validator id using sgx wallet**
+### Step 5: **Sign validator id using sgx wallet**
 
 **Terminal Command:**
 
@@ -185,24 +204,6 @@ Signature: <your-signature>
 
 ```
 
-### Step 5:  **Get Test Tokens**
-
-Get Tokens from the  [**SKALE Faucet  
-**](http://faucet.skale.network/validators)
-
-If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).
-
-[Click here for Faucet](http://faucet.skale.network/validators)
-
-Once tokens have been transferred, please check your wallet in the terminal.  
-
-**Terminal Command:**
-
-```bash
-skale wallet info
-
-```
-
 ### Step 6: **Register with Network**
 
 Link skale wallet address to your validator account using validator-cli.
@@ -215,7 +216,7 @@ Link skale wallet address to your validator account using validator-cli.
 
 Note: Before proceeding, you will need to have at least  **0.2 Test ETH**. Also amount of delegated skale tokens need to be more or equal to minumum staking amount. Otherwise you will not be able to register with the SKALE Internal Devnet.  
 
-Get Tokens from the  [**SKALE Faucet**](http://faucet.skale.network/validators)
+Get Tokens from the  [**SKALE Faucet**](https://faucet.skale.network/validators)
 
 To register with the network, you will need to provide the following:  
 

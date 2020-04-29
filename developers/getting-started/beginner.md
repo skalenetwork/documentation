@@ -29,7 +29,7 @@ In order to use your SKALE Chain, you will need to fund your wallet account with
 
 <note>NOTE: Transactions run on SKALE are gas-less; however, in order for a user to process transactions on your SKALE Chain their wallet will need to contain a very small amount of test ETH. This is to protect your SKALE Chain against DDoS attacks. Think of this step as giving users "permission" to use your dApp.</note> 
 
-<button>[Get Test ETH](http://faucet.skale.network/)</button>
+<button>[Get Test ETH](https://faucet.skale.network/)</button>
 
 </Step>
 <Step id='three'>
