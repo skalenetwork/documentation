@@ -39,7 +39,7 @@ Usage example:
 **Usage example:**
 
 ```bash
-sk-val init -e wss://rinkeby.infura.io/ws/v3/17af71ac8ba94607bd3374f4509ce17c -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-rinkeby-v1.json --wallet-type software
+sk-val init -e wss://rinkeby.infura.io/ws/v3/17af71ac8ba94607bd3374f4509ce17c -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-incentivized-onboarding-alpine-v1.json --wallet-type software
 ```
 
 ### Step 2: Register as a new SKALE validator

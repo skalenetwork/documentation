@@ -207,8 +207,7 @@ SGX server status:
 
 ```
 
-
-### Step 3.3:  **Get Test Tokens to your SGX and Validator wallets**
+### Step 3.3: Get Test Tokens to your SGX and Validator wallets**
 
 Get Tokens from the  [**SKALE Faucet**](https://faucet.skale.network/validators)
 
@@ -280,7 +279,7 @@ Usage example:
 **Usage example:**
 
 ```bash
-sk-val init -e [ENDPOINT] -c https://skale-contracts.nyc3.digitaloceanspaces.com/beta/manager.json --wallet software
+sk-val init -e [ENDPOINT] -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-incentivized-onboarding-alpine-v1.json --wallet software
 ```
 
 ### Step 4.2: Register as a new SKALE validator
