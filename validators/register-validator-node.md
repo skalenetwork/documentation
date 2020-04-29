@@ -68,12 +68,12 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Make sure th version number is `0.8.0-develop.20`
+Make sure th version number is `0.8.0-develop.35`
 
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=0.8.0-develop.20 && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/manual/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
+VERSION_NUM=0.8.0-develop.35 && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/develop/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
 
 ```
 
@@ -184,6 +184,27 @@ SKALE balance: 0 SKALE
 
 ```
 
+#### Check if your node is connected to sgx
+
+**Terminal Command:**
+
+```bash
+skale sgx status
+
+```
+
+**Output:**
+
+```bash
+SGX server status:
+┌────────────────┬──────────────────────────┐
+│ SGX server URL │ <sgx-url>
+├────────────────┼──────────────────────────┤
+│ Status         │ CONNECTED                │
+└────────────────┴──────────────────────────┘
+
+```
+
 </Step>
 
 <Step id='four'>
@@ -207,12 +228,12 @@ This document contains instructions on how to get started with the SKALE Validat
 
 #### Download the SKALE Validator CLI binary
 
-Make sure the `[VERSION NUMBER]` is `0.3.0-develop.0`
+Make sure the `[VERSION NUMBER]` is `0.3.0-develop.6`
 
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=0.3.0-develop.0 && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/develop/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
+VERSION_NUM=0.3.0-develop.6 && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/develop/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
 ```
 
 #### Apply executable permissions to the binary
@@ -228,6 +249,7 @@ chmod +x /usr/local/bin/sk-val
 Required arguments:
 
 -   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
+                    Example: wss://rinkeby.infura.io/ws/v3/17af71ac8ba946test374f4509ce17c
 -   `--contracts-url/-c` - - URL to SKALE Manager contracts ABI and addresses
 -   `-w/--wallet` - Type of the wallet that will be used for signing transactions (software or ledger)
 
@@ -236,7 +258,7 @@ Usage example:
 **Usage example:**
 
 ```bash
-sk-val init -e [ENDPOINT] -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-rinkeby-v2.json --wallet software
+sk-val init -e [ENDPOINT] -c https://skale-contracts.nyc3.digitaloceanspaces.com/beta/manager.json --wallet software
 ```
 
 ### Step 4.2: Register as a new SKALE validator
@@ -264,7 +286,7 @@ Optional arguments:
 **Usage example:**
 
 ```bash
-sk-val validator register -n SETeam -d "SE Team description" -c 20 --min-delegation 1000 --pk-file ./pk.txt
+sk-val validator register -n SETeam -d "SE Team description" -c 20 --min-delegation 0 --pk-file ./pk.txt
 ```
 
 ### Step 4.3: Make sure that the validator is added to the whitelist
@@ -293,14 +315,40 @@ SKALE balance: 200 SKALE
 
 Please copy your Node Address, you will be using it for linking node address to validator address and also for the faucet as well for the next two steps.
 
-### Step 4.5: Link skale wallet address to your validator account using validators-cli
+
+### Step Step 4.5: **Sign validator id using sgx wallet**
+
+Execute this Command and find your validator ID 
+
+**Terminal Command:**
+```bash
+sk-val validator ls
+```
+
+Get your SKALE node signature. This SIGNATURE will be used in Step 4.6 while linking node addresses to your validator 
+
+**Terminal Command:**
+
+```bash
+skale node signature [VALIDATOR_ID]
+
+```
+
+**Output:**
+
+```bash
+Signature: <your-signature>
+
+```
+
+### Step 4.6: Link skale wallet address to your validator account using validator-cli
 
 > Make sure you copied Node Address from STEP 4.3
 
 **Terminal Command:**
 
 ```bash
- sk-val validator link-address [NODE_ADDRESS] --yes --pk-file ./pk.txt 
+ sk-val validator link-address [NODE_ADDRESS] [SIGNATURE] --yes --pk-file ./pk.txt 
 ```
 
 </Step>
