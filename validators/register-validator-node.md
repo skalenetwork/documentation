@@ -166,7 +166,9 @@ Creating skale_bounty              ... done
 
 ```
 
-#### Show your SKALE wallet info
+#### Show your SKALE SGX wallet info
+
+This command prints information related to your sgx wallet. Node operates only from the sgx wallet:
 
 **Terminal Command:**
 
@@ -295,7 +297,7 @@ sk-val validator register -n SETeam -d "SE Team description" -c 20 --min-delegat
 
 Note: This is for testing purposes only. [**Whitelist**](https://alpine.skale.network/whitelist)
 
-### Step 4.4: Write down your Node Address
+### Step 4.4: Write down your Node Address (Also this is SGX Wallet Address)
 
 After executing following command you will find see Node Address
 
@@ -315,7 +317,7 @@ SKALE balance: 200 SKALE
 --------------------------------------------------
 ```
 
-Please copy your Node Address, you will be using it for linking node address to validator address and also for the faucet as well for the next two steps.
+Please copy your SGX Wallet Address, you will be using it for linking node address to validator address.
 
 ### Step Step 4.5: **Sign validator id using sgx wallet**
 
@@ -342,6 +344,16 @@ Signature: <your-signature>
 
 ```
 
+### Step 4.5: Get Tokens from the  [**SKALE Faucet**](https://faucet.skale.network/validators)
+
+> Make sure you have your validator wallet address for this step
+
+Click here for [faucet](https://faucet.skale.network/validators)
+
+Once tokens have been transferred, please check your funds in your account
+
+If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).
+
 ### Step 4.6: Link skale wallet address to your validator account using validator-cli
 
 > Make sure you copied Node Address from STEP 4.3
@@ -358,24 +370,7 @@ Signature: <your-signature>
 
 ## 5: Register Node with Network
 
-### Step 5.1: Get Tokens from the  [**SKALE Faucet**](http://faucet.skale.network/validators)
-
-> Make sure you copied Node Address from STEP 4.3 and paste it in the faucet textbox
-
-Click here for [faucet](http://faucet.skale.network/validators)
-
-Once tokens have been transferred, please check your wallet in the terminal.  
-
-**Terminal Command:**
-
-```bash
-skale wallet info
-
-```
-
-If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).
-
-### Step 5.2: Register Node with Node CLI
+### Step 5.1: Register Node with Node CLI
 
 Note: Before proceeding, you will need to have at least  **0.2 Test ETH**. Also amount of delegated skale tokens need to be more or equal to minumum staking amount. Otherwise you will not be able to register with the SKALE Internal Devnet.  
 
@@ -396,7 +391,7 @@ skale node register --name [NODE_NAME] --ip [NODE_IP] --port [PORT]
 
 > Node registered in SKALE manager. For more info run: skale node info
 
-### Step 5.3: Check Node Status
+### Step 5.2: Check Node Status
 
 You can check the status of your node, and ensure that it is properly registered with the SKALE Network.  
 
