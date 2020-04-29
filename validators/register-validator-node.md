@@ -250,7 +250,9 @@ Required arguments:
 
 -   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
                     Example: wss://rinkeby.infura.io/ws/v3/17af71ac8ba946test374f4509ce17c
+
 -   `--contracts-url/-c` - - URL to SKALE Manager contracts ABI and addresses
+
 -   `-w/--wallet` - Type of the wallet that will be used for signing transactions (software or ledger)
 
 Usage example:
@@ -315,10 +317,9 @@ SKALE balance: 200 SKALE
 
 Please copy your Node Address, you will be using it for linking node address to validator address and also for the faucet as well for the next two steps.
 
-
 ### Step Step 4.5: **Sign validator id using sgx wallet**
 
-Execute this Command and find your validator ID 
+Execute this command and find your validator ID 
 
 **Terminal Command:**
 ```bash
