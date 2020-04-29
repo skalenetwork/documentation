@@ -25,7 +25,7 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Replace version number with `0.8.0-develop.34`
+Replace version number with `0.8.0-develop.35`
 
 **Terminal Command:**
 
@@ -126,8 +126,28 @@ Creating skale_events      ... done
 Creating ash_node_exporter ... done
 
 ```
+#### Step 2.2: Check if your node is connected to sgx
 
-#### Step 2.2: Show your SKALE wallet info
+**Terminal Command:**
+
+```bash
+skale sgx status
+
+```
+
+**Output:**
+
+```bash
+SGX server status:
+┌────────────────┬──────────────────────────┐
+│ SGX server URL │ <sgx-url>
+├────────────────┼──────────────────────────┤
+│ Status         │ CONNECTED                │
+└────────────────┴──────────────────────────┘
+
+```
+
+#### Step 2.3: Show your SKALE wallet info
 
 **Terminal Command:**
 
@@ -149,7 +169,23 @@ SKALE balance: 0 SKALE
 
 Check [Validator CLI](https://github.com/skalenetwork/documentation/blob/master/validators/validator-cli.md) for more information
 
-### Step 4:  **Get Test Tokens**
+### Step 4: **Sign validator id using sgx wallet**
+
+**Terminal Command:**
+
+```bash
+skale node signature [VALIDATOR_ID]
+
+```
+
+**Output:**
+
+```bash
+Signature: <your-signature>
+
+```
+
+### Step 5:  **Get Test Tokens**
 
 Get Tokens from the  [**SKALE Faucet  
 **](http://faucet.skale.network/validators)
@@ -167,14 +203,14 @@ skale wallet info
 
 ```
 
-### Step 5: Register with Network
+### Step 6: **Register with Network**
 
-Link skale wallet address to your validator account using validators-cli.
+Link skale wallet address to your validator account using validator-cli.
 
 **Terminal Command:**
 
 ```bash
- sk-val validator link-address [NODE_ADDRESS] --yes --pk-file ./pk.txt 
+ sk-val validator link-address [NODE_ADDRESS] [SIGNATURE] --yes --pk-file ./pk.txt 
 ```
 
 Note: Before proceeding, you will need to have at least  **0.2 Test ETH**. Also amount of delegated skale tokens need to be more or equal to minumum staking amount. Otherwise you will not be able to register with the SKALE Internal Devnet.  
@@ -198,7 +234,7 @@ skale node register --name [NODE_NAME] --ip [NODE_IP] --port [PORT]
 
 > Node registered in SKALE manager. For more info run: skale node info
 
-### Step 6: Check Node Status
+### Step 7: **Check Node Status**
 
 You can check the status of your node, and ensure that it is properly registered with the SKALE Network.  
 

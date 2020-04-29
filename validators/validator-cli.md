@@ -10,7 +10,7 @@ This document contains instructions on how to get started with the SKALE Validat
 
 #### Download the SKALE Validator CLI binary
 
-Replace `[VERSION NUMBER]` with `0.3.0-develop.0`
+Replace `[VERSION NUMBER]` with `0.3.0-develop.6`
 
 **Terminal Command:**
 
