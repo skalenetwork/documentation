@@ -207,6 +207,24 @@ SGX server status:
 
 ```
 
+
+### Step 3.2:  **Get Test Tokens to your SGX and Validator wallets**
+
+Get Tokens from the  [**SKALE Faucet**](https://faucet.skale.network/validators)
+
+If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).
+
+[Click here for Faucet](https://faucet.skale.network/validators)
+
+Once tokens have been transferred, please check your wallet in the terminal.  
+
+**Terminal Command:**
+
+```bash
+skale wallet info
+
+```
+
 </Step>
 
 <Step id='four'>
@@ -224,7 +242,7 @@ Note: This is **an insecure pre-release** software.
 
 See the SKALE Validator CLI code and documentation on [**GitHub**](https://github.com/skalenetwork/validator-cli)*‍  
 
-This document contains instructions on how to get started with the SKALE Validator CLI.  
+This document contains instructions on how to get started with the SKALE Validator CLI.
 
 ### Step 4.1: Install SKALE Validator CLI
 
@@ -297,7 +315,7 @@ sk-val validator register -n SETeam -d "SE Team description" -c 20 --min-delegat
 
 Note: This is for testing purposes only. [**Whitelist**](https://alpine.skale.network/whitelist)
 
-### Step 4.4: Write down your Node Address (Also this is SGX Wallet Address)
+### Step 4.4: Write down your Node Address (SGX Wallet Address)
 
 After executing following command you will find see Node Address
 
@@ -311,7 +329,7 @@ After executing following command you will find see Node Address
 ```bash
 root@se-test-01:~# skale wallet info
 --------------------------------------------------
-Address: 0x.... -> ThisIsYourNodeAddress
+Address: 0x.... -> ThisIsYour_NodeAddress
 ETH balance: 3.499059343 ETH
 SKALE balance: 200 SKALE
 --------------------------------------------------
@@ -319,7 +337,7 @@ SKALE balance: 200 SKALE
 
 Please copy your SGX Wallet Address, you will be using it for linking node address to validator address.
 
-### Step Step 4.5: **Sign validator id using sgx wallet**
+### Step 4.5: Sign validator id using sgx wallet
 
 Execute this command and find your validator ID 
 
@@ -343,16 +361,6 @@ skale node signature [VALIDATOR_ID]
 Signature: <your-signature>
 
 ```
-
-### Step 4.5: Get Tokens from the  [**SKALE Faucet**](https://faucet.skale.network/validators)
-
-> Make sure you have your validator wallet address for this step
-
-Click here for [faucet](https://faucet.skale.network/validators)
-
-Once tokens have been transferred, please check your funds in your account
-
-If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).
 
 ### Step 4.6: Link skale wallet address to your validator account using validator-cli
 
