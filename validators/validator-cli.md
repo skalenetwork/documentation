@@ -1,265 +1,81 @@
 ## SKALE Validator CLI
 
-Note: This is **an insecure pre-release** software specifically for Alpine team members. 
+Note: This is **an insecure pre-release** software.
 
-See the SKALE Validator CLI code and documentation on [**GitHub**](https://github.com/skalenetwork/skale-node-cli)*‍  
+See the SKALE Validator CLI code and documentation on [**GitHub**](https://github.com/skalenetwork/validator-cli)*‍  
 
 This document contains instructions on how to get started with the SKALE Validator CLI.  
 
-### **Prerequisites**
+### Step 1: Install SKALE Validator CLI
 
--   A Linux x86_64 machine
--   SGX-enabled Intel processor
--   Ports 22, 8080, 9100, and 10000-11000, and ICMP IPv4 open for all
--   Ubuntu 16.04 or later LTS
--   200GB attached storage (mainnet requirements will be defined soon)
--   32GB RAM  
+#### Download the SKALE Validator CLI binary
 
-This pre-release Validator and Node software is insecure. As such, the only tokens running on this early phase Validator net are  _test tokens only_. SKALE will release a more secure system prior to later Validator Devnet releases.  
-‍  
-If you have any concerns or questions, please do not hesitate to reach out to SKALE Team leads on [discord](http://skale.chat/).  
-
-[![Discord](https://img.shields.io/discord/534485763354787851.svg)](https://discord.gg/vvUtWJB)
-
-### Step 1: Install SKALE Node CLI
-
-#### Download the SKALE Node CLI binary
-
-Replace version number with `0.8.0-beta.1`
+Replace `[VERSION NUMBER]` with `0.3.0-develop.6`
 
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=[Version Number] && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/beta/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
-
+VERSION_NUM=[VERSION NUMBER] && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/develop/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
 ```
 
-#### Make the SKALE Node CLI binary executable
+#### Apply executable permissions to the binary
 
 **Terminal Command:**
 
 ```bash
-sudo chmod +x /usr/local/bin/skale
-
+chmod +x /usr/local/bin/sk-val
 ```
 
-### Step 2: Setup SKALE Node
+#### Get SKALE Manager contracts info and set the endpoint
 
-#### Step 2.1: Initialize SKALE node daemon and install dependencies
+Required arguments:
 
-Required options for the `skale node init` command:
+-   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
+-   `--contracts-url/-c` - - URL to SKALE Manager contracts ABI and addresses
+-   `-w/--wallet` - Type of the wallet that will be used for signing transactions (software or ledger)
 
--   `--disk-mountpoint` - Mount point of the disk to be used for storing sChains data
--   `--sgx-url` - URL to SGX server in the network, can be used for current node if the current node supports SGX-enabled Intel processor
--  `--env-file` - path to env file where required parameters listed above are defined
+Usage example:
 
-Required options for the `skale node init` command in environment file:
+**Usage example:**
 
--   `SGX_SERVER_URL` - URL to SGX server in the network, can be used for current node if the current node supports intel technology SGX. SGX node can be set up through SGXwallet repository
--   `DISK_MOUNTPOINT` - Mount point of the disk to be used for storing sChains data
--   `IMA_CONTRACTS_INFO_URL` - URL to IMA contracts ABI and addresses
--   `MANAGER_CONTRACTS_INFO_URL` - URL to SKALE Manager contracts ABI and addresses
--   `FILEBEAT_HOST` - URL to the Filebeat log server
--   `GITHUB_TOKEN` - token for accessing `skale-node` repo
--   `GIT_BRANCH` - git branch used for initialization
--   `DOCKER_PASSWORD` - password for DockerHub
--   `DOCKER_USERNAME` - username for DockerHub
--   `DB_PORT` - Port for of node internal database (default is 3306)
-Node Register
--   `DB_ROOT_PASSWORD` - root password
--   `DB_PASSWORD` - Password for root user of node internal database (equal to user password by default)
--   `DB_USER` - MySQL user for local node database
--   `IMA_ENDPOINT` - IMA endpoint to connect
--   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed
+```bash
+sk-val init -e wss://rinkeby.infura.io/ws/v3/17af71ac8ba94607bd3374f4509ce17c -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-incentivized-onboarding-alpine-v1.json --wallet-type software
+```
 
-Create a `config.env` file and specify following parameters:
+### Step 2: Register as a new SKALE validator
+
+Replace `[YOUR PRIVATE KEY]` with your wallet private key 
 
 **Terminal Command:**
 
 ```bash
-    SGX_SERVER_URL=[SGX_SERVER_URL]
-    DISK_MOUNTPOINT=[DISK_MOUNTPOINT]
-    IMA_CONTRACTS_INFO_URL=[IMA_CONTRACTS_INFO_URL]
-    MANAGER_CONTRACTS_INFO_URL=[MANAGER_CONTRACTS_INFO_URL]
-    FILEBEAT_HOST=[FILEBEAT_HOST]
-    GITHUB_TOKEN=[GITHUB_TOKEN]
-    GIT_BRANCH=[GIT_BRANCH]
-    DOCKER_PASSWORD=[DOCKER_PASSWORD]
-    DOCKER_USERNAME=[DOCKER_USERNAME]
-    DB_PORT=[DB_PORT]
-    DB_ROOT_PASSWORD=[DB_ROOT_PASSWORD]
-    DB_PASSWORD=[DB_PASSWORD]
-    DB_USER=[DB_USER]
-    IMA_ENDPOINT=[IMA_ENDPOINT]
-    ENDPOINT=[ENDPOINT]
+echo [YOUR PRIVATE KEY] > ./pk.txt
 ```
-
-✋These access tokens are needed to access private repos and docker containers.  **Please do not distribute!!!**
-
-Access tokens will be provided with the release of the new CLI.
-
-Note: **TOKEN**, **DOCKER_USERNAME**, and **DOCKER_PASSWORD** are provided for all participants.  
-
-Please feel free to set your own  **DB_PASSWORD**.
 
 **Terminal Command:**
 
 ```bash
-
-skale node init \
---disk-mountpoint [DISK_MOUNTPOINT]  \
---sgx-url [SGX_SERVER_URL] \
---env-file config.env \
---install-deps
-
+sk-val validator register
 ```
 
-**Output:**
+Required arguments:
+
+-   `--name/-n` - Validator name
+-   `--description/-d` - Validator description
+-   `--commission-rate/-c` - Commission rate (percentage)
+-   `--min-delegation` - Validator minimum delegation amount.For delegation requests that are less than this amount will be automatically rejected
+
+Optional arguments:
+
+-   `--pk-file` - Path to file with private key (only for `software` wallet type)
+-   `--yes` - Confirmation flag
+
+**Usage example:**
 
 ```bash
-# Executing docker install script, commit: 2f4ae48...
-(lines-omitted-for-brevity)...
-Login Succeeded
-Creating directories...
-Creating copying config folder...
-Creating copying tools folder...
-Pulling base          ... done
-Pulling admin         ... done
-Pulling mysql         ... done
-Pulling sla           ... done
-Pulling bounty        ... done
-Pulling events        ... done
-Pulling advisor       ... done
-Pulling node-exporter ... done
-Run mode: prod
-Creating skale_sla         ... done
-Creating skale_mysql       ... done
-Creating skale_admin       ... done
-Creating config_base_1     ... done
-Creating skale_bounty      ... done
-Creating ash_cadvisor      ... done
-Creating skale_events      ... done
-Creating ash_node_exporter ... done
-
+sk-val register -n SETeam -d "SE Team description" -c 20 --min-delegation 1000 --pk-file ./pk.txt
 ```
 
-#### Step 2.2 Create user registration token
+### Step 3: add Validator to Whitelist
 
-**Terminal Command:**
-
-```bash
-skale user token
-
-```
-
-**Output:**
-
-> User registration token: [USER_REGISTRATION_TOKEN]
-
-#### Step 2.3: Create and register user with user registration token
-
-Note: select a user and password, and use the user registration token from the previous step.
-
-**Terminal Command:**
-
-```bash
-skale user register -u [USER] -p [PASSWORD] -t [USER_REGISTRATION_TOKEN]
-
-```
-
-USER_REGISTRATION_TOKEN can be find in this file: 
-
-**Terminal Command:**
-
-```bash
-cat /root/.skale/node_data/tokens.json
-```
-
-Note: In this pre-release software, your wallet address and private key for  **_test tokens are stored in plaintext json_**  file at the following location: /skale_node_data/local_wallet.json.  
-‍  
-We recommend that you backup this file in case you may need to rebuild the machine and re-register with the network using the same IP address.  
-
-**Output:**
-
-> User created: $USER> Success, cookies saved.
-
-#### Step 2.4: Show your SKALE wallet info
-
-**Terminal Command:**
-
-```bash
-skale wallet info
-
-```
-
-**Output:**
-
-```bash
-Address: <your-skale-private-net-wallet-address>
-ETH balance: 0 ETH
-SKALE balance: 0 SKALE
-
-```
-
-### Step 3:  **Get Test Tokens**
-
-Get Tokens from the  [**SKALE Faucet  
-**](http://faucet.skale.network/validators)
-
-If you’re unable to transfer funds please feel free to reach out to the team on  [discord](http://http:skale.chat/).  
-[](http://faucet.skale.network/validators)
-
-Once tokens have been transferred, please check your wallet in the terminal.  
-
-**Terminal Command:**
-
-```bash
-skale wallet info
-
-```
-
-### Step 4: Register with Network
-
-Before proceeding, you will need to have at least  **0.2 Test ETH**  and  **100 test SKALE tokens**. Otherwise you will not be able to register with the SKALE Internal Devnet.  
-
-Get Tokens from the  [**SKALE Faucet**](http://faucet.skale.network/validators)
-
-To register with the network, you will need to provide the following:  
-
-1.  Node name  
-2.  machine IP  
-3.  Port (10000 recommended)  
-
-**Terminal Command:**
-
-```bash
-skale node register --name [NODE_NAME] --ip [NODE_IP]
-
-```
-
-**Output:**
-
-> Node registered in SKALE manager. For more info run: skale node info
-
-### Step 5: Check Node Status
-
-You can check the status of your node, and ensure that it is properly registered with the SKALE Network.  
-
-**Terminal Command:**
-
-```bash
-skale node info
-
-```
-
-**Output:**
-
-```bash
-# Node info
-Name: $NODE_NAME
-IP: $NODE_IP
-Public IP: <Public IP of Machine>
-Port: $NODE_PORT
-Status: Active
-
-```
+For testing phase please provide your testing wallet Address to SKALE Core team. Your contract owner wallet will be added to validator whitelist. 

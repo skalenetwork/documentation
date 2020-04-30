@@ -47,6 +47,11 @@ We do not recommend any configuration changes in the SKALE Network unless it is 
 
 Yes. However, you will need to make sure that your platform is compatible with SKALE. Currently, Docker Convoy does not have an integration with Kubernetes.
 
+#### Where can I find the SKALE Node logs
+```bash
+Docker logs skale-admin
+```
+
 SKALE Network has many resources designed to help you get your questions answered. You can reach out to our community on  [discord](http://skale.chat/), or submit a support request below.  
 
 [Contact Support](https://skalelabs.typeform.com/to/pSu895)
