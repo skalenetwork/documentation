@@ -10,7 +10,7 @@ This document contains instructions on how to get started with the SKALE Validat
 
 #### Download the SKALE Validator CLI binary
 
-Replace `[VERSION NUMBER]` with `0.3.0-develop.6`
+Replace `[VERSION NUMBER]` with `0.4.0-develop.0`
 
 **Terminal Command:**
 
@@ -39,7 +39,7 @@ Usage example:
 **Usage example:**
 
 ```bash
-sk-val init -e wss://rinkeby.infura.io/ws/v3/17af71ac8ba94607bd3374f4509ce17c -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-incentivized-onboarding-alpine-v1.json --wallet-type software
+sk-val init -e wss://rinkeby.infura.io/ws/v3/17af71ac8ba94607bd3374f4509ce17c -c https://skale-contracts.nyc3.digitaloceanspaces.com/beta.5/manager.json --wallet-type software
 ```
 
 ### Step 2: Register as a new SKALE validator

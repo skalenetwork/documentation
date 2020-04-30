@@ -33,7 +33,7 @@ Please follow this link to learn how to set up an SGX Wallet Server. [sgx-wallet
 
 ## 2. Enable SSL
 
-SSL/TLS should be enabled for every SKALE and SGX nodes. Here is an example how to configure it through [AWS] (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-2.html)
+SSL/TLS should be enabled for every SKALE and SGX nodes. If you are already have SSL certificate for some domain name and focus on adding and managing this certificate in the SKALE node. Here is an example how to configure it through [Ubuntu] (https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04)
 
 </Step>
 
@@ -247,12 +247,12 @@ This document contains instructions on how to get started with the SKALE Validat
 
 #### Download the SKALE Validator CLI binary
 
-Make sure the `[VERSION NUMBER]` is `0.3.0-develop.6`
+Make sure the `[VERSION NUMBER]` is `0.4.0-develop.0`
 
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=0.3.0-develop.6 && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/develop/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
+VERSION_NUM=0.4.0-develop.0 && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/develop/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
 ```
 
 #### Apply executable permissions to the binary
@@ -279,7 +279,7 @@ Usage example:
 **Usage example:**
 
 ```bash
-sk-val init -e [ENDPOINT] -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-incentivized-onboarding-alpine-v1.json --wallet software
+sk-val init -e [ENDPOINT] -c https://skale-contracts.nyc3.digitaloceanspaces.com/beta.5/manager.json --wallet software
 ```
 
 ### Step 4.2: Register as a new SKALE validator
