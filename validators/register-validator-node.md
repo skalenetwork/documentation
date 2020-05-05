@@ -6,10 +6,9 @@ This page is the step by step guide that shows how to run a validator node in th
 
 <StepsController>
     <StepNav stepId='one' label='Setup\nSGX Wallet'><ThresholdSignatures/></StepNav>
-    <StepNav stepId='two' label='Enable\nSSL'><AsynchronousProtocol/></StepNav>
-    <StepNav stepId='three' label='Setup\nSKALE Node'><LeaderlessConsensus/></StepNav>
-    <StepNav stepId='four' label='Register\nValidator'><SendTransaction/></StepNav>
-    <StepNav stepId='five' label='Register\nNode in SKALE Network'><LeaderlessConsensus/></StepNav>
+    <StepNav stepId='two' label='Setup\nSKALE Node'><LeaderlessConsensus/></StepNav>
+    <StepNav stepId='three' label='Register\nValidator'><SendTransaction/></StepNav>
+    <StepNav stepId='four' label='Register\nNode in SKALE Network'><LeaderlessConsensus/></StepNav>
 </StepsController>
 
 <Step id='one'>
@@ -31,15 +30,7 @@ Please follow this link to learn how to set up an SGX Wallet Server. [sgx-wallet
 
 <Step id='two'>
 
-## 2. Enable SSL
-
-SSL/TLS should be enabled for every SKALE and SGX nodes. Here is an example how to configure it through [AWS] (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-2.html)
-
-</Step>
-
-<Step id='three'>
-
-## 3. Setup SKALE Node with SKALE Node CLI
+## 2. Setup SKALE Node with SKALE Node CLI
 
 After Setting up SGX Wallet and create certifications, validators can download the SKALE Node CLI executables register and maintain your SKALE node. This process downloads docker container images from docker hub and spins up SKALE Node functionalities. Some of the base containers such as SKALE Admin, Bounty, SLA, TransactionManager will be created during installation for each node. 
 
@@ -60,11 +51,11 @@ This document contains instructions on how to get started with the SKALE Node CL
 
 This pre-release Validator and Node software is insecure. As such, the only tokens running on this early phase Validator net are  _test tokens only_. SKALE will release a more secure system prior to later Validator Devnet releases.  
 ‍  
-If you have any concerns or questions, please do not hesitate to reach out to SKALE Team leads on [discord](http://skale.chat/).  
+If you have any concerns or questions, please do not hesitate to reach out to SKALE Team leads on [discord](http://skale.chat/).
 
 [![Discord](https://img.shields.io/discord/534485763354787851.svg)](https://discord.gg/vvUtWJB)
 
-### Step 3.1: Install SKALE Node CLI
+### Step 2.1: Install SKALE Node CLI
 
 #### Download the SKALE Node CLI binary
 
@@ -86,7 +77,7 @@ sudo chmod +x /usr/local/bin/skale
 
 ```
 
-### Step 3.2: Setup SKALE Node
+### Step 2.2: Setup SKALE Node
 
 #### Initialize SKALE node daemon and install dependencies
 
@@ -207,7 +198,7 @@ SGX server status:
 
 ```
 
-### Step 3.3: Get Test Tokens to your SGX and Validator wallets**
+### Step 2.3: Get Test Tokens to your SGX and Validator wallets**
 
 Get Tokens from the  [**SKALE Faucet**](https://faucet.skale.network/validators)
 
@@ -226,9 +217,9 @@ skale wallet info
 
 </Step>
 
-<Step id='four'>
+<Step id='three'>
 
-## 4. Register Validator with SKALE Validator CLI
+## 3. Register Validator with SKALE Validator CLI
 
 SKALE Validator CLI is the validator client interface for registering a new validator into network or handling additional delegation services where validators can self delegate or token holders can delegate to a validator. These are the type of operations that can be done with the Validator CLI:
 
@@ -243,7 +234,7 @@ See the SKALE Validator CLI code and documentation on [**GitHub**](https://githu
 
 This document contains instructions on how to get started with the SKALE Validator CLI.
 
-### Step 4.1: Install SKALE Validator CLI
+### Step 3.1: Install SKALE Validator CLI
 
 #### Download the SKALE Validator CLI binary
 
@@ -282,7 +273,7 @@ Usage example:
 sk-val init -e [ENDPOINT] -c https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-incentivized-onboarding-alpine-v1.json --wallet software
 ```
 
-### Step 4.2: Register as a new SKALE validator
+### Step 3.2: Register as a new SKALE validator
 
 Replace `[YOUR PRIVATE KEY]` with your wallet private key 
 
@@ -310,11 +301,11 @@ Optional arguments:
 sk-val validator register -n SETeam -d "SE Team description" -c 20 --min-delegation 0 --pk-file ./pk.txt
 ```
 
-### Step 4.3: Make sure that the validator is added to the whitelist
+### Step 3.3: Make sure that the validator is added to the whitelist
 
 Note: This is for testing purposes only. [**Whitelist**](https://alpine.skale.network/whitelist)
 
-### Step 4.4: Write down your Node Address (SGX Wallet Address)
+### Step 3.4: Write down your Node Address (SGX Wallet Address)
 
 After executing following command you will find see Node Address
 
@@ -336,7 +327,7 @@ SKALE balance: 200 SKALE
 
 Please copy your SGX Wallet Address, you will be using it for linking node address to validator address.
 
-### Step 4.5: Sign validator id using sgx wallet
+### Step 3.5: Sign validator id using sgx wallet
 
 Execute this command and find your validator ID 
 
@@ -361,7 +352,7 @@ Signature: <your-signature>
 
 ```
 
-### Step 4.6: Link skale wallet address to your validator account using validator-cli
+### Step 3.6: Link skale wallet address to your validator account using validator-cli
 
 > Make sure you copied Node Address from STEP 4.3
 
@@ -373,11 +364,11 @@ Signature: <your-signature>
 
 </Step>
 
-<Step id='five'>
+<Step id='four'>
 
-## 5: Register Node with Network
+## 4: Register Node with Network
 
-### Step 5.1: Register Node with Node CLI
+### Step 4.1: Register Node with Node CLI
 
 Note: Before proceeding, you will need to have at least  **0.2 Test ETH**. Also amount of delegated skale tokens need to be more or equal to minumum staking amount. Otherwise you will not be able to register with the SKALE Internal Devnet.  
 
@@ -398,7 +389,7 @@ skale node register --name [NODE_NAME] --ip [NODE_IP] --port [PORT]
 
 > Node registered in SKALE manager. For more info run: skale node info
 
-### Step 5.2: Check Node Status
+### Step 4.2: Check Node Status
 
 You can check the status of your node, and ensure that it is properly registered with the SKALE Network.  
 

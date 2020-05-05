@@ -163,4 +163,7 @@ cd sgxwallet/run_sgx
 sudo docker-compose stop
 ```
 
+> If you set up SGX wallet in a separate server than your SKALE Node you should enable SSL/TLS for your SGX node. Make sure you finalize this before you move on to your next step.
+
+
 <button>[Go to Next Step](https://devportal-staging.netlify.app/validators/register-validator-node#2-enable-ssl)</button>
