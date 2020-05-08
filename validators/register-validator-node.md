@@ -9,7 +9,7 @@ This page is the step by step guide that shows how to run a validator node in th
     <StepNav stepId='two' label='Setup\nSKALE Node'><LeaderlessConsensus/></StepNav>
     <StepNav stepId='three' label='Register\nValidator'><SendTransaction/></StepNav>
     <StepNav stepId='four' label='Register\nNode in SKALE Network'><Request/></StepNav>
-    <StepNav stepId='five' label='Upload SSL Sertification'><ByzantineFaultTolerant/></StepNav>
+    <StepNav stepId='five' label='Upload new SSL Certificates'><ByzantineFaultTolerant/></StepNav>
 </StepsController>
 
 <Step id='one'>
@@ -23,7 +23,7 @@ To be able to set up an SGX Wallet, validators are required to have an SGX compa
 SKALE will have two types of SGX operations:
 
 -   **Local (Secure)**: Wallet running on the same server as sub-node.  
--   **Network**: Sub-node talks to SGX wallet over the SKALE Network. The validator is responsible for securing the connection. If validator is planning to have a separate SGX compatible node than the Blockchain node, SGX Wallet node doesn't have to have the same hardware requirements as the sub-node. SGXWallet doesn't require a lot of computational power. After setting up the Network SGX node, enable SSL sertification before adding the url to configuration in SKALE Node Set up.
+-   **Network**: Sub-node talks to SGX wallet over the SKALE Network. The validator is responsible for securing the connection. If validator is planning to have a separate SGX compatible node than the Blockchain node, SGX Wallet node doesn't have to have the same hardware requirements as the sub-node. SGXWallet doesn't require a lot of computational power. After setting up the Network SGX node, enable SSL certification before adding the url to configuration in SKALE Node Set up.
 
 Please follow this link to learn how to set up an SGX Wallet Server. [sgx-wallet](/validators/sgx-wallet)
 
