@@ -8,7 +8,8 @@ This page is the step by step guide that shows how to run a validator node in th
     <StepNav stepId='one' label='Setup\nSGX Wallet'><ThresholdSignatures/></StepNav>
     <StepNav stepId='two' label='Setup\nSKALE Node'><LeaderlessConsensus/></StepNav>
     <StepNav stepId='three' label='Register\nValidator'><SendTransaction/></StepNav>
-    <StepNav stepId='four' label='Register\nNode in SKALE Network'><LeaderlessConsensus/></StepNav>
+    <StepNav stepId='four' label='Register\nNode in SKALE Network'><Request/></StepNav>
+    <StepNav stepId='five' label='Upload SSL Sertification'><ByzantineFaultTolerant/></StepNav>
 </StepsController>
 
 <Step id='one'>
@@ -354,7 +355,7 @@ Signature: <your-signature>
 
 ### Step 3.6: Link skale wallet address to your validator account using validator-cli
 
-> Make sure you copied Node Address from STEP 4.3
+> Make sure you copied Node Address from STEP 3.4
 
 **Terminal Command:**
 
@@ -413,4 +414,37 @@ Status: Active
 ```
 </Step>
 
+<Step id='five'>
+
+## 5: Upload new SSL certificates
+
+> If you already have SSL certificate for your domain name, please add and manage this certificate in the SKALE node
+
+**Terminal Command:**
+
+```bash
+skale ssl upload
+```
+
+### Options
+
+-   `-c/--cert-path` - Path to the certificate file
+-   `-k/--key-path` - Path to the key file
+-   `-f/--force` - Overwrite existing certificates
+
+Admin API URL: \[GET] `/api/ssl/upload`
+
+### SSL Status
+
+Status of the SSL certificates on the node
+
+**Terminal Command:**
+
+```bash
+skale ssl status
+```
+
+Admin API URL: \[GET] `/api/ssl/status`
+
+</Step>
 </StepsLayout>
