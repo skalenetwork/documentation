@@ -276,7 +276,7 @@ sk-val init -e [ENDPOINT] -c https://skale-se.sfo2.digitaloceanspaces.com/skale-
 
 ### Step 3.2: Register as a new SKALE validator
 
-Replace `[YOUR PRIVATE KEY]` with your wallet private key 
+Create a new ethereum wallet and replace `[YOUR PRIVATE KEY]` with your wallet private key 
 
 **Terminal Command:**
 
