@@ -73,7 +73,7 @@ Optional arguments:
 **Usage example:**
 
 ```bash
-sk-val register -n SETeam -d "SE Team description" -c 20 --min-delegation 1000 --pk-file ./pk.txt
+sk-val validator register -n SETeam -d "SE Team description" -c 20 --min-delegation 1000 --pk-file ./pk.txt
 ```
 
 ### Step 3: add Validator to Whitelist
