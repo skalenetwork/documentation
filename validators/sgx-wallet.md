@@ -56,7 +56,9 @@ SGX: Software Guard Extensions supported = true
 Clone SGX Wallet Repository to your SGX compatible Server:
 
 ```bash
-git clone --recurse-submodules https://github.com/skalenetwork/sgxwallet.git --branch develop
+git clone https://github.com/skalenetwork/sgxwallet/
+cd sgxwallet
+git checkout tags/build_base_1_28_20
 ```
 
 #### STEP 2 - Enable SGX
