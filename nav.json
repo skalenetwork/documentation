@@ -117,6 +117,12 @@
             },
             {
               "link": "/validators/faq"
+            },
+            {
+              "link": "/validators/versions"
+            },
+            {
+              "link": "/validators/backup"
             }
           ]
         }

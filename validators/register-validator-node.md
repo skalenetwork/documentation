@@ -50,6 +50,9 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   200GB attached storage (mainnet requirements will be defined soon)
 -   32GB RAM  
 
+-   Install docker.io
+-   run commands with sudo
+
 This pre-release Validator and Node software is insecure. As such, the only tokens running on this early phase Validator net are  _test tokens only_. SKALE will release a more secure system prior to later Validator Devnet releases.  
 ‍  
 If you have any concerns or questions, please do not hesitate to reach out to SKALE Team leads on [discord](http://skale.chat/).
@@ -65,7 +68,7 @@ Make sure th version number is `0.8.0-develop.35`
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=0.8.0-develop.35 && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/develop/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
+VERSION_NUM=0.10.0-develop.2 && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/develop/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
 
 ```
 
@@ -84,7 +87,6 @@ sudo chmod +x /usr/local/bin/skale
 
 Required options for the `skale node init` command:
 
--   `--env-file` - path to env file where required parameters listed below are defined
 -   `--install-deps` - install additional dependecies (like docker and docker-compose)
 
 Required options for the `skale node init` command in environment file:
@@ -127,11 +129,18 @@ Create a `.env` file and specify following parameters:
 
 Please feel free to set values own  **DB_PASSWORD**, **DB_ROOT_PASSWORD**, **DB_USER**.
 
+```
+    TG_API_KEY - Telegram API key
+    TG_CHAT_ID - Telegram chat ID
+    MONITORING_CONTAINERS - True/False will enable monitoring containers (filebeat, cadvisor, prometheus)
+                            Required for TestNets 
+```
+
 **Terminal Command:**
 
 ```bash
 
-skale node init --env-file .env --install-deps
+skale node init .env --install-deps
 
 ```
 
@@ -155,7 +164,7 @@ Creating skale_mysql               ... done
 Creating skale_sla                 ... done
 Creating skale_admin               ... done
 Creating skale_bounty              ... done
-
+Creating skale_api                 ... done
 ```
 
 #### Show your SKALE SGX wallet info
@@ -235,16 +244,18 @@ See the SKALE Validator CLI code and documentation on [**GitHub**](https://githu
 
 This document contains instructions on how to get started with the SKALE Validator CLI.
 
+PS: Validator CLI doesn't have to be installed in the same server as the node-cli! 
+
 ### Step 3.1: Install SKALE Validator CLI
 
 #### Download the SKALE Validator CLI binary
 
-Make sure the `[VERSION NUMBER]` is `0.3.0-develop.6`
+Make sure the `[VERSION NUMBER]` is `0.6.0-develop.2`
 
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=0.3.0-develop.6 && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/develop/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
+VERSION_NUM=0.6.0-develop.2 && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/develop/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
 ```
 
 #### Apply executable permissions to the binary
@@ -260,7 +271,7 @@ chmod +x /usr/local/bin/sk-val
 Required arguments:
 
 -   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
-                    Example: wss://rinkeby.infura.io/ws/v3/17af71ac8ba946test374f4509ce17c
+                    Example: wss://rinkeby.infura.io/ws/v3/...
 
 -   `--contracts-url/-c` - - URL to SKALE Manager contracts ABI and addresses
 
