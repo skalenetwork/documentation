@@ -378,6 +378,40 @@ Signature: <your-signature>
 
 <Step id='four'>
 
+### Step 3.7: Send-Accept Delegation using validator-cli
+
+> Make sure you  already have at least 100 SKL tokens in your validator wallet for TestNet MSR is 100SKL tokens. 
+
+**Terminal Command:**
+
+```bash
+ sk-val holder delegate --validator-id [Validator_ID] --amount 100 --delegation-period 3 --pk-file pk.txt --info "please accept delegation" --yes
+```
+List your delegations
+
+```bash
+    sk-val validator delegations [VALIDATOR_ID] 
+```
+
+You will see your pending delegation please get the delegation number and accept delegation
+
+```bash
+    sk-val validator accept-delegation --delegation-id [DELEGATION-ID] --pk-file pk.txt 
+```
+
+List your delegations make sure your accepted delegations are equal or more than 100SKL tokens
+
+```bash
+    sk-val validator delegations [VALIDATOR_ID] 
+```
+
+### Step 3.8 : Delegations have to be in "DELEGATED" status
+To be able to register a node in the network with the MSR requirement your delegations have to be in the DELEGATED status. 
+After the previous step delegation status will be seen as accepted. 
+"Delegated" status will be automatically updated 1st day of each month when the epoc starts. 
+
+>For Testnet Only, please ask Core team to skip time to update delegation status
+
 ## 4: Register Node with Network
 
 ### Step 4.1: Register Node with Node CLI
