@@ -123,12 +123,6 @@
             },
             {
               "link": "/validators/backup"
-            },
-            {
-              "link": "/documentation/sgxwallet"
-            },
-            {
-              "link": "/validators/sgxwallet"
             }
           ]
         }
