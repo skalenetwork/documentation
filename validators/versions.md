@@ -25,6 +25,7 @@ The rest of the versions were provided for docker containers and correspondent t
 **Skale Bounty version**: 0.9.1-develop.0
 
 #### TestNet Phase 2 Environment Variables
+
 ```bash
 FILEBEAT_HOST=[WILL BE RETIRED FOR TEST-NET ASK CORE TEAM]
 SGX_SERVER_URL=[https://localhost:1026 or your SGX server https://IP:1026]
@@ -68,8 +69,8 @@ TG_CHAT_ID=-TELEGRAM CHAT ID
 
 **Skale-bounty**:0.7.0-stable.0
 
-
 #### TestNet Phase 1 Environment Variables
+
 ```bash
 FILEBEAT_HOST=[TestNet only - ASK CORE TEAM]
 SGX_SERVER_URL=[https://localhost:1026 or your separate SGX wallet server https://IP :1026]

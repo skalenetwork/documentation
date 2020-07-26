@@ -89,7 +89,7 @@ Create an `.env` file and specify following parameters:
 
 Please feel free to set values own  **DB_PASSWORD**, **DB_ROOT_PASSWORD**, **DB_USER**.
 
-```
+```bash
     TG_API_KEY - Telegram API key
     TG_CHAT_ID - Telegram chat ID
     MONITORING_CONTAINERS - True/False will enable monitoring containers (filebeat, cadvisor, prometheus)
