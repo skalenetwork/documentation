@@ -141,12 +141,6 @@
           "link": "/technology/skale-dkg"
         }
       ]
-    },
-    {
-      "name" : "docs/backup-procedure",
-      "remote" : "https://github.com/skalenetwork/sgxwallet",
-      "branch": "develop",
-      "patterns" : "validators/backup-procedure.md"
     }
   ]
 }
