@@ -129,7 +129,7 @@ Create a `.env` file and specify following parameters:
 
 Please feel free to set values own  **DB_PASSWORD**, **DB_ROOT_PASSWORD**, **DB_USER**.
 
-```
+```bash
     TG_API_KEY - Telegram API key
     TG_CHAT_ID - Telegram chat ID
     MONITORING_CONTAINERS - True/False will enable monitoring containers (filebeat, cadvisor, prometheus)
@@ -410,7 +410,7 @@ To be able to register a node in the network with the MSR requirement your deleg
 After the previous step delegation status will be seen as accepted. 
 "Delegated" status will be automatically updated 1st day of each month when the epoc starts. 
 
->For Testnet Only, please ask Core team to skip time to update delegation status
+> For Testnet Only, please ask Core team to skip time to update delegation status
 
 ## 4: Register Node with Network
 

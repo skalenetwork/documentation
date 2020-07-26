@@ -25,7 +25,7 @@ The rest of the versions were provided for docker containers and correspondent t
 **Skale Bounty version**: 0.9.1-develop.0
 
 #### TestNet Phase 2 Environment Variables
-
+```bash
 FILEBEAT_HOST=[WILL BE RETIRED FOR TEST-NET ASK CORE TEAM]
 SGX_SERVER_URL=[https://localhost:1026 or your SGX server https://IP:1026]
 DISK_MOUNTPOINT=/dev/sda or /dev/xvdd
@@ -45,10 +45,10 @@ IMA_ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY
 
 TG_API_KEY=TELEGRAM API KEY
 TG_CHAT_ID=-TELEGRAM CHAT ID
-
+```
 --- 
 
-### TestNet Phase 1 Versions - Hard Upgrade
+### TestNet Phase 1 Versions
 
 **Validator CLI version**: 0.5.0-develop.5
 
@@ -70,7 +70,7 @@ TG_CHAT_ID=-TELEGRAM CHAT ID
 
 
 #### TestNet Phase 1 Environment Variables
-
+```bash
 FILEBEAT_HOST=[TestNet only - ASK CORE TEAM]
 SGX_SERVER_URL=[https://localhost:1026 or your separate SGX wallet server https://IP :1026]
 DISK_MOUNTPOINT=/dev/sda or /dev/xvdd (this is an example for the digital ocean. You just need to use your 200gb block volume mount point)
@@ -88,5 +88,5 @@ IMA_CONTRACTS_ABI_URL=[RINKEBY_ABI ASK CORE TEAM]
 (This will be used for IMA testing. It’s for interchain messaging agent feature for dApp developers)
 ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
 IMA_ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
-
+```
 --- 

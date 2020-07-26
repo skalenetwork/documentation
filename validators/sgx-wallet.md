@@ -161,6 +161,14 @@ To run the server as a daemon:
 sudo docker-compose up -d
 ```
 
+When SGXWallet is initialized, the server will print the backup key. 
+**This key must be securely recorded and stored.**
+Be sure to store this key in a safe place, then go into a docker container and securely remove it with the following command:
+
+```bash
+docker exec -it <SGX_CONTAINER_NAME> bash && apt-get install secure-delete && srm -vz backup_key.txt
+```
+
 ### STOP SGX Wallet Containers
 ```bash
 cd sgxwallet/run_sgx
@@ -170,3 +178,4 @@ sudo docker-compose stop
 > If you set up SGX wallet in a separate server than your SKALE Node, you should enable SSL/TLS for your SGX node. Make sure you finalize this before you move on to your next step.
 
 <button>[Go to Next Step](/validators/register-validator-node#2-setup-skale-node-with-skale-node-cli)</button>
+
