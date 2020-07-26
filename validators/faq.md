@@ -31,7 +31,6 @@ In this file you can see all the SKALE Chain information:
 
 ![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9f9cb5adfc337b00747f66_Screen%20Shot%202019-10-10%20at%201.53.21%20PM.png)
 
-
 #### Can we use Kubernetes?
 
 Yes. However, you will need to make sure that your platform is compatible with SKALE. Currently, Docker Convoy does not have an integration with Kubernetes.

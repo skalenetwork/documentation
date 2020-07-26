@@ -178,4 +178,3 @@ sudo docker-compose stop
 > If you set up SGX wallet in a separate server than your SKALE Node, you should enable SSL/TLS for your SGX node. Make sure you finalize this before you move on to your next step.
 
 <button>[Go to Next Step](/validators/register-validator-node#2-setup-skale-node-with-skale-node-cli)</button>
-
