@@ -10,7 +10,7 @@ Need help solving an issue? Check to see if this has already been answered below
 
 Validators are responsible for backing up everything on the node. SKALE Network is relying on validators to complete the backup procedure for each of the nodes. SKALE Network will be replicating the data for each SKALE Chain on 16 other nodes, to add an additional layer of data availability. If a node goes down for a long time, the other 2/3 of 15 will be responsible for taking the snapshot of the SKALE Chain and shuffling the SKALE Chain in the SKALE Network. If a validator node is down for a long time, it may be reallocated to service new SKALE Chains depending on the length of the downtime.  
 
-Please check [backup](/validators/backup) to learn more about how to back up node and sgx wallet and restore
+Please check [node back up](https://github.com/skalenetwork/skale-node-cli/blob/develop/README.md#node-commands) and [sgx_backup](https://github.com/skalenetwork/sgxwallet/blob/develop/docs/backup-procedure.md) to learn more about how to back up node or sgx wallet, and restore
 
 #### Where are the network communications between containers, shared configuration files and volumes stored?
 
