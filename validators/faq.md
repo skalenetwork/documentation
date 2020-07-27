@@ -10,11 +10,7 @@ Need help solving an issue? Check to see if this has already been answered below
 
 Validators are responsible for backing up everything on the node. SKALE Network is relying on validators to complete the backup procedure for each of the nodes. SKALE Network will be replicating the data for each SKALE Chain on 16 other nodes, to add an additional layer of data availability. If a node goes down for a long time, the other 2/3 of 15 will be responsible for taking the snapshot of the SKALE Chain and shuffling the SKALE Chain in the SKALE Network. If a validator node is down for a long time, it may be reallocated to service new SKALE Chains depending on the length of the downtime.  
 
-#### Where are the private keys stored in the node?
-
-For now, private keys are stored as plain text until the end of November.  
-
-After November, we will switch to using SGX to store the private keys in an encrypted and secure manner.  
+Please check [node back up](https://github.com/skalenetwork/skale-node-cli/blob/develop/README.md#node-commands) and [sgx_backup](https://github.com/skalenetwork/sgxwallet/blob/develop/docs/backup-procedure.md) to learn more about how to back up node or sgx wallet, and restore
 
 #### Where are the network communications between containers, shared configuration files and volumes stored?
 
@@ -35,21 +31,47 @@ In this file you can see all the SKALE Chain information:
 
 ![](https://assets.website-files.com/5be05ae542686c4ebf192462/5d9f9cb5adfc337b00747f66_Screen%20Shot%202019-10-10%20at%201.53.21%20PM.png)
 
-#### How do I monitor and check the status of the deployed validator nodes?
-
-We will be providing a node CLI for SLA and a simple UI very soon. Until then, you can use Prometheus with Grafana.
-
-#### What kind of configurations can a validator change?
-
-We do not recommend any configuration changes in the SKALE Network unless it is a configuration available through the node CLI. SKALE configuration changes will be allowed only for dApp developers configuring their SKALE Chains.
-
 #### Can we use Kubernetes?
 
 Yes. However, you will need to make sure that your platform is compatible with SKALE. Currently, Docker Convoy does not have an integration with Kubernetes.
 
 #### Where can I find the SKALE Node logs
+
+Validators can run these commands to check their logs in their node:
+
+Here are some logs and commands you can use for troubleshooting or provide logs to the core team
+
+the most used and first place to look at
 ```bash
-Docker logs skale-admin
+docker logs skale_api 
+```
+
+or
+
+```bash
+docker logs skale_admin 
+```
+
+transaction manager logs
+```bash
+docker logs skale_transaction_manager
+```
+
+all logs
+```bash
+skale logs dump [PATH]
+```
+Sgx certification in validator node:
+```bash
+ls -l ~/.skale/node_data/sgx_certs/
+```
+sgxwallet logs:
+```bash
+docker logs runsgx_sgxwallet_1
+```
+node-cli debugging logs
+```bash
+~/.skale/.skale-cli-log/debug-node-cli.log
 ```
 
 SKALE Network has many resources designed to help you get your questions answered. You can reach out to our community on  [discord](http://skale.chat/), or submit a support request below.  
