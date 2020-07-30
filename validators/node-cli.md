@@ -25,7 +25,7 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Replace version number with `0.8.0-develop.35`
+Replace version number with `0.10.0-develop.2`
 
 **Terminal Command:**
 
@@ -49,7 +49,6 @@ sudo chmod +x /usr/local/bin/skale
 
 Required options for the `skale node init` command:
 
--   `--env-file` - path to env file where required parameters listed below are defined
 -   `--install-deps` - install additional dependecies (like docker and docker-compose)
 
 Required options for the `skale node init` command in environment file:
@@ -68,7 +67,7 @@ Required options for the `skale node init` command in environment file:
 -   `IMA_ENDPOINT` - IMA endpoint to connect
 -   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed
 
-Create a `config.env` file and specify following parameters:
+Create an `.env` file and specify following parameters:
 
 **Terminal Command:**
 
@@ -90,11 +89,18 @@ Create a `config.env` file and specify following parameters:
 
 Please feel free to set values own  **DB_PASSWORD**, **DB_ROOT_PASSWORD**, **DB_USER**.
 
+```bash
+    TG_API_KEY - Telegram API key
+    TG_CHAT_ID - Telegram chat ID
+    MONITORING_CONTAINERS - True/False will enable monitoring containers (filebeat, cadvisor, prometheus)
+                            Required for TestNets 
+```
+
 **Terminal Command:**
 
 ```bash
 
-skale node init --env-file config.env --install-deps
+skale node init .env --install-deps
 
 ```
 
