@@ -152,7 +152,7 @@ If you are in the Innovator Program, you will receive a SKALE Chain RPC endpoint
 Example 2:  Use  [command line options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options)  available through a validator node. You can find a list of the available terminal commands  [here](https://ethereum.stackexchange.com/questions/28703/full-list-of-geth-terminal-commands). For example, to attach to a SKALE Chain endpoint via the command line, use the following command:
 
 ```bash
-get attach "[YOUR_SKALE_CHAIN_ENDPOINT]" 
+geth attach "[YOUR_SKALE_CHAIN_ENDPOINT]" 
 
 ```
 
