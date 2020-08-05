@@ -8,7 +8,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **Validator CLI version**:  0.6.0-develop.2
 
-**Node CLI version**: 0.10.0-develop.2
+**Node CLI version**: 0.10.1-beta.1
 
 **SGX version: sgxwallet**: 1.53.0-develop.9
 
@@ -16,9 +16,9 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **Skaled version**:  1.46.1-develop.33
 
-**Skale Admin version**: 0.15.0-develop.15
+**Skale Admin version**: 0.15.0-beta.0
 
-**Transaction Manager version**: 0.4.1-develop.1
+**Transaction Manager version**: 0.4.1-beta.0
 
 **Skale Sla version**: 0.9.4-develop.0
 
@@ -30,20 +30,17 @@ The rest of the versions were provided for docker containers and correspondent t
 FILEBEAT_HOST=[WILL BE RETIRED FOR TEST-NET ASK CORE TEAM]
 SGX_SERVER_URL=[https://localhost:1026 or your SGX server https://IP:1026]
 DISK_MOUNTPOINT=/dev/sda or /dev/xvdd
-DOCKER_LVMPY_STREAM=develop
+DOCKER_LVMPY_STREAM=beta
 DB_PORT=3306
 DB_ROOT_PASSWORD=[PASSWORD]
 DB_PASSWORD=[PASSWORD]
 DB_USER=[USER]
 MONITORING_CONTAINERS=True
-CONTAINER_CONFIGS_STREAM=beta
-NODE_CLI_SPACE=develop
-SKALE_NODE_CLI_VERSION=0.10.0-develop.2
+CONTAINER_CONFIGS_STREAM=alpine-hard-upgrade
 IMA_CONTRACTS_ABI_URL=[RINKEBY_ABI ASK CORE TEAM]
 MANAGER_CONTRACTS_ABI_URL=[RINKEBY_ABI ASK CORE TEAM]
 ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
 IMA_ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
-
 TG_API_KEY=TELEGRAM API KEY
 TG_CHAT_ID=-TELEGRAM CHAT ID
 ```
