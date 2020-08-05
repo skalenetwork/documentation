@@ -20,7 +20,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **Transaction Manager version**: 0.4.1-beta.0
 
-**Skale Sla version**: 0.9.6-test
+**Skale Sla version**: 0.9.4-develop.0
 
 **Skale Bounty version**: 0.9.1-develop.0
 
