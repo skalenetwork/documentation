@@ -6,13 +6,13 @@ Once the request has been submitted to SKALE Manager on Ethereum, SKALE Manager 
 
 After the node registration, the node receives an assigned group of random node peers to monitor. Peers regularly audit several metrics at predetermined periods (e.g. five minutes) and submit the batched metrics to the SKALE Manager once for every network epoch. The batched metrics are used to determine the node's bounty reward. Currently, each node will only monitor downtime and latency for the other node peers, and more metrics will be added throughout the Incentivized Devnet testing.  
 
-### Hardware Requirements (Devnet)
+### Hardware Requirements
 
 -   A Linux x86_64 machine
 -   SGX-enabled Intel processor
 -   Ports 22, 3009, 8080, 9100, and 10000-11000, and ICMP IPv4 open for all
 -   Ubuntu 16.04 or later LTS
--   200GB attached storage (main-net requirements will be defined after demand test in November)
+-   2TB attached storage main-net (200gb devnet)
 -   32GB RAM  
 
 #### External Storage
