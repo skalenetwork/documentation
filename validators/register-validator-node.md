@@ -239,8 +239,8 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Make sure th [VERSION_NUM] is the latest version provided here= [versions](/validators/versions)
-For [RELEASE] = for the `develop` CLI versions use `develop` - for the `beta` CLI versions use `beta` - for the `stable` CLI versions use `stable`
+Make sure th `VERSION_NUM` is the latest version provided here= [versions](/validators/versions)
+For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `beta` CLI versions use `beta` , for the `stable` CLI versions use `stable`
 
 **Terminal Command:**
 
@@ -427,9 +427,9 @@ PS: Validator CLI doesn't have to be installed in the same server as the node-cl
 
 #### Download the SKALE Validator CLI binary
 
-Make sure the `[VERSION NUMBER]` is the latest version provided here: [versions](/validators/versions)
-For [RELEASE] = for the `develop` CLI versions use `develop` - for the `beta` CLI versions use `beta` - for the `stable` CLI versions use `stable`
-  
+Make sure th `VERSION_NUM` is the latest version provided here= [versions](/validators/versions)
+For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `beta` CLI versions use `beta` , for the `stable` CLI versions use `stable`
+
 **Terminal Command:**
 
 ```bash
@@ -464,7 +464,8 @@ sk-val init -e [ENDPOINT] -c [ABI] --wallet software
 ```
 
 ### Step 3.2: Register as a new SKALE validator
-- DO NOT REGISTER A NEW VALIDATOR IF YOU ALREADY HAVE ONE! check : `sk-val validator ls`. For new node, please go to Step 3.5.
+
+-  DO NOT REGISTER A NEW VALIDATOR IF YOU ALREADY HAVE ONE! check : `sk-val validator ls`. For new node, please go to Step 3.5.
 
 Replace `[YOUR PRIVATE KEY]` with your wallet private key 
 
