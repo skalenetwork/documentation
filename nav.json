@@ -107,19 +107,48 @@
               "link": "/validators/skale-node"
             },
             {
-              "link": "/validators/sgx-wallet"
-            },
-            {
-              "link": "/validators/validator-cli"
-            },
-            {
-              "link": "/validators/node-cli"
-            },
-            {
               "link": "/validators/faq"
+            }
+          ]
+        },
+        {
+          "title": "Node CLI",
+          "link": "/documentation/skale-node-cli/README"
+        },
+        {
+          "title": "Validator CLI",
+          "link": "/documentation/validator-cli/README"
+        },
+        {
+          "title": "Fuji TestNet",
+          "link": "/validators/versions",
+          "links": [
+            {
+              "link": "/validators/soft-upgrade"
             },
             {
-              "link": "/validators/versions"
+              "link": "/validators/hard-upgrade"
+            }
+          ]
+        },
+        {
+          "title": "SGX Documentation",
+          "link": "/validators/sgx-wallet",
+          "links": [
+            {
+              "link": "/documentation/sgxwallet/docs/prerequisites"
+            },
+            {
+              "link": "/documentation/sgxwallet/docs/enabling-sgx"
+            },
+            {
+              "link": "/documentation/sgxwallet/docs/run-in-hardware-mode"
+            },
+            {
+              "link": "/documentation/sgxwallet/docs/backup-procedure"
+            },
+            {
+              "link": "/documentation/sgxwallet/docs/examples"
             }
           ]
         }
