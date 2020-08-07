@@ -465,7 +465,7 @@ sk-val init -e [ENDPOINT] -c [ABI] --wallet software
 
 ### Step 3.2: Register as a new SKALE validator
 
--  DO NOT REGISTER A NEW VALIDATOR IF YOU ALREADY HAVE ONE! check : `sk-val validator ls`. For new node, please go to Step 3.5.
+> DO NOT REGISTER A NEW VALIDATOR IF YOU ALREADY HAVE ONE! check : `sk-val validator ls`. For additional node set up, please go to Step 3.5.
 
 Replace `[YOUR PRIVATE KEY]` with your wallet private key 
 
