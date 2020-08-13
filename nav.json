@@ -2,7 +2,7 @@
   "nav": [
     {
       "name": "developers",
-      "links":[
+      "links": [
         {
           "title": "Overview",
           "link": "/developers/overview",
@@ -40,7 +40,7 @@
               "title": "Interchain Messaging",
               "link": "/developers/products/interchain-messaging-agent/overview",
               "links": [
-                { 
+                {
                   "title": "Managing ETH",
                   "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
                 },
@@ -86,8 +86,8 @@
       ]
     },
     {
-      "name":"validators",
-      "links":[
+      "name": "validators",
+      "links": [
         {
           "link": "/validators/getting-started",
           "links": [
@@ -155,8 +155,8 @@
       ]
     },
     {
-      "name":"technology",
-      "links":[
+      "name": "technology",
+      "links": [
         {
           "link": "/technology/overview"
         },
@@ -165,6 +165,15 @@
         },
         {
           "link": "/technology/skale-dkg"
+        },
+        {
+          "title": "SKALE Manager",
+          "link": "/technology/skale-manager/Nodes",
+          "links": [
+            {
+              "link": "/technology/skale-manager/Nodes"
+            }
+          ]
         }
       ]
     }
