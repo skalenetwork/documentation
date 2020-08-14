@@ -12,8 +12,8 @@
 [.contract-index]
 .Functions
 --
-* {xref-Decryption-encrypt-uint256-bytes32-}[`++encrypt(secretNumber, key)++`]
-* {xref-Decryption-decrypt-bytes32-bytes32-}[`++decrypt(ciphertext, key)++`]
+* <<xref-Decryption-encrypt-uint256-bytes32-,`++encrypt(secretNumber, key)++`>>
+* <<xref-Decryption-decrypt-bytes32-bytes32-,`++decrypt(ciphertext, key)++`>>
 
 --
 
