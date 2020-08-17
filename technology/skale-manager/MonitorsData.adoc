@@ -1,0 +1,211 @@
+:MonitorsData: pass:normal[xref:#MonitorsData,`++MonitorsData++`]]
+:checkedNodes: pass:normal[xref:#MonitorsData-checkedNodes-mapping-bytes32----bytes32---,`++checkedNodes++`]]
+:verdicts: pass:normal[xref:#MonitorsData-verdicts-mapping-bytes32----uint256-----,`++verdicts++`]]
+:lastVerdictBlocks: pass:normal[xref:#MonitorsData-lastVerdictBlocks-mapping-bytes32----uint256-,`++lastVerdictBlocks++`]]
+:lastBountyBlocks: pass:normal[xref:#MonitorsData-lastBountyBlocks-mapping-bytes32----uint256-,`++lastBountyBlocks++`]]
+:addCheckedNode: pass:normal[xref:#MonitorsData-addCheckedNode-bytes32-bytes32-,`++addCheckedNode++`]]
+:addVerdict: pass:normal[xref:#MonitorsData-addVerdict-bytes32-uint32-uint32-,`++addVerdict++`]]
+:removeCheckedNode: pass:normal[xref:#MonitorsData-removeCheckedNode-bytes32-uint256-,`++removeCheckedNode++`]]
+:removeAllCheckedNodes: pass:normal[xref:#MonitorsData-removeAllCheckedNodes-bytes32-,`++removeAllCheckedNodes++`]]
+:removeAllVerdicts: pass:normal[xref:#MonitorsData-removeAllVerdicts-bytes32-,`++removeAllVerdicts++`]]
+:getLastReceivedVerdictBlock: pass:normal[xref:#MonitorsData-getLastReceivedVerdictBlock-uint256-,`++getLastReceivedVerdictBlock++`]]
+:getLastBountyBlock: pass:normal[xref:#MonitorsData-getLastBountyBlock-uint256-,`++getLastBountyBlock++`]]
+:getCheckedArray: pass:normal[xref:#MonitorsData-getCheckedArray-bytes32-,`++getCheckedArray++`]]
+:getCheckedArrayLength: pass:normal[xref:#MonitorsData-getCheckedArrayLength-bytes32-,`++getCheckedArrayLength++`]]
+:getLengthOfMetrics: pass:normal[xref:#MonitorsData-getLengthOfMetrics-bytes32-,`++getLengthOfMetrics++`]]
+:initialize: pass:normal[xref:#MonitorsData-initialize-address-,`++initialize++`]]
+
+[.contract]
+[[MonitorsData]]
+=== `++MonitorsData++`
+
+
+
+[.contract-index]
+.Modifiers
+--
+
+[.contract-subindex-inherited]
+.GroupsData
+
+[.contract-subindex-inherited]
+.Permissions
+* <<Permissions-allow-string-,`++allow(contractName)++`>>
+* <<Permissions-allowTwo-string-string-,`++allowTwo(contractName1, contractName2)++`>>
+* <<Permissions-allowThree-string-string-string-,`++allowThree(contractName1, contractName2, contractName3)++`>>
+
+[.contract-subindex-inherited]
+.OwnableUpgradeSafe
+* <<OwnableUpgradeSafe-onlyOwner--,`++onlyOwner()++`>>
+
+[.contract-subindex-inherited]
+.ContextUpgradeSafe
+
+[.contract-subindex-inherited]
+.Initializable
+* <<Initializable-initializer--,`++initializer()++`>>
+
+[.contract-subindex-inherited]
+.IGroupsData
+
+--
+
+[.contract-index]
+.Functions
+--
+* <<MonitorsData-addCheckedNode-bytes32-bytes32-,`++addCheckedNode(monitorIndex, data)++`>>
+* <<MonitorsData-addVerdict-bytes32-uint32-uint32-,`++addVerdict(monitorIndex, downtime, latency)++`>>
+* <<MonitorsData-removeCheckedNode-bytes32-uint256-,`++removeCheckedNode(monitorIndex, indexOfCheckedNode)++`>>
+* <<MonitorsData-removeAllCheckedNodes-bytes32-,`++removeAllCheckedNodes(monitorIndex)++`>>
+* <<MonitorsData-removeAllVerdicts-bytes32-,`++removeAllVerdicts(monitorIndex)++`>>
+* <<MonitorsData-getLastReceivedVerdictBlock-uint256-,`++getLastReceivedVerdictBlock(nodeIndex)++`>>
+* <<MonitorsData-getLastBountyBlock-uint256-,`++getLastBountyBlock(nodeIndex)++`>>
+* <<MonitorsData-getCheckedArray-bytes32-,`++getCheckedArray(monitorIndex)++`>>
+* <<MonitorsData-getCheckedArrayLength-bytes32-,`++getCheckedArrayLength(monitorIndex)++`>>
+* <<MonitorsData-getLengthOfMetrics-bytes32-,`++getLengthOfMetrics(monitorIndex)++`>>
+* <<MonitorsData-initialize-address-,`++initialize(newContractsAddress)++`>>
+
+[.contract-subindex-inherited]
+.GroupsData
+* <<GroupsData-addGroup-bytes32-uint256-bytes32-,`++addGroup(groupIndex, amountOfNodes, data)++`>>
+* <<GroupsData-setException-bytes32-uint256-,`++setException(groupIndex, nodeIndex)++`>>
+* <<GroupsData-setPublicKey-bytes32-uint256-uint256-uint256-uint256-,`++setPublicKey(groupIndex, publicKeyx1, publicKeyy1, publicKeyx2, publicKeyy2)++`>>
+* <<GroupsData-setNodeInGroup-bytes32-uint256-,`++setNodeInGroup(groupIndex, nodeIndex)++`>>
+* <<GroupsData-removeNodeFromGroup-uint256-bytes32-,`++removeNodeFromGroup(indexOfNode, groupIndex)++`>>
+* <<GroupsData-removeAllNodesInGroup-bytes32-,`++removeAllNodesInGroup(groupIndex)++`>>
+* <<GroupsData-setNodesInGroup-bytes32-uint256---,`++setNodesInGroup(groupIndex, nodesInGroup)++`>>
+* <<GroupsData-setGroupFailedDKG-bytes32-,`++setGroupFailedDKG(groupIndex)++`>>
+* <<GroupsData-removeGroup-bytes32-,`++removeGroup(groupIndex)++`>>
+* <<GroupsData-removeExceptionNode-bytes32-uint256-,`++removeExceptionNode(groupIndex, nodeIndex)++`>>
+* <<GroupsData-isGroupActive-bytes32-,`++isGroupActive(groupIndex)++`>>
+* <<GroupsData-isExceptionNode-bytes32-uint256-,`++isExceptionNode(groupIndex, nodeIndex)++`>>
+* <<GroupsData-getGroupsPublicKey-bytes32-,`++getGroupsPublicKey(groupIndex)++`>>
+* <<GroupsData-getPreviousGroupsPublicKey-bytes32-,`++getPreviousGroupsPublicKey(groupIndex)++`>>
+* <<GroupsData-isGroupFailedDKG-bytes32-,`++isGroupFailedDKG(groupIndex)++`>>
+* <<GroupsData-getNodesInGroup-bytes32-,`++getNodesInGroup(groupIndex)++`>>
+* <<GroupsData-getGroupData-bytes32-,`++getGroupData(groupIndex)++`>>
+* <<GroupsData-getRecommendedNumberOfNodes-bytes32-,`++getRecommendedNumberOfNodes(groupIndex)++`>>
+* <<GroupsData-getNumberOfNodesInGroup-bytes32-,`++getNumberOfNodesInGroup(groupIndex)++`>>
+* <<GroupsData-initialize-string-address-,`++initialize(newExecutorName, newContractsAddress)++`>>
+* <<GroupsData-_isPublicKeyZero-bytes32-,`++_isPublicKeyZero(groupIndex)++`>>
+
+[.contract-subindex-inherited]
+.Permissions
+* <<Permissions-_isOwner--,`++_isOwner()++`>>
+
+[.contract-subindex-inherited]
+.OwnableUpgradeSafe
+* <<OwnableUpgradeSafe-__Ownable_init--,`++__Ownable_init()++`>>
+* <<OwnableUpgradeSafe-__Ownable_init_unchained--,`++__Ownable_init_unchained()++`>>
+* <<OwnableUpgradeSafe-owner--,`++owner()++`>>
+* <<OwnableUpgradeSafe-renounceOwnership--,`++renounceOwnership()++`>>
+* <<OwnableUpgradeSafe-transferOwnership-address-,`++transferOwnership(newOwner)++`>>
+
+[.contract-subindex-inherited]
+.ContextUpgradeSafe
+* <<ContextUpgradeSafe-__Context_init--,`++__Context_init()++`>>
+* <<ContextUpgradeSafe-__Context_init_unchained--,`++__Context_init_unchained()++`>>
+* <<ContextUpgradeSafe-_msgSender--,`++_msgSender()++`>>
+* <<ContextUpgradeSafe-_msgData--,`++_msgData()++`>>
+
+[.contract-subindex-inherited]
+.Initializable
+
+[.contract-subindex-inherited]
+.IGroupsData
+
+--
+
+[.contract-index]
+.Events
+--
+
+[.contract-subindex-inherited]
+.GroupsData
+
+[.contract-subindex-inherited]
+.Permissions
+
+[.contract-subindex-inherited]
+.OwnableUpgradeSafe
+* <<OwnableUpgradeSafe-OwnershipTransferred-address-address-,`++OwnershipTransferred(previousOwner, newOwner)++`>>
+
+[.contract-subindex-inherited]
+.ContextUpgradeSafe
+
+[.contract-subindex-inherited]
+.Initializable
+
+[.contract-subindex-inherited]
+.IGroupsData
+
+--
+
+
+[.contract-item]
+[[MonitorsData-addCheckedNode-bytes32-bytes32-]]
+==== `++addCheckedNode(++[.var-type]#++bytes32++#++ ++[.var-name]#++monitorIndex++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++data++#++)++` [.item-kind]#external#
+
+
+
+[.contract-item]
+[[MonitorsData-addVerdict-bytes32-uint32-uint32-]]
+==== `++addVerdict(++[.var-type]#++bytes32++#++ ++[.var-name]#++monitorIndex++#++, ++[.var-type]#++uint32++#++ ++[.var-name]#++downtime++#++, ++[.var-type]#++uint32++#++ ++[.var-name]#++latency++#++)++` [.item-kind]#external#
+
+
+
+[.contract-item]
+[[MonitorsData-removeCheckedNode-bytes32-uint256-]]
+==== `++removeCheckedNode(++[.var-type]#++bytes32++#++ ++[.var-name]#++monitorIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++indexOfCheckedNode++#++)++` [.item-kind]#external#
+
+
+
+[.contract-item]
+[[MonitorsData-removeAllCheckedNodes-bytes32-]]
+==== `++removeAllCheckedNodes(++[.var-type]#++bytes32++#++ ++[.var-name]#++monitorIndex++#++)++` [.item-kind]#external#
+
+
+
+[.contract-item]
+[[MonitorsData-removeAllVerdicts-bytes32-]]
+==== `++removeAllVerdicts(++[.var-type]#++bytes32++#++ ++[.var-name]#++monitorIndex++#++)++` [.item-kind]#external#
+
+
+
+[.contract-item]
+[[MonitorsData-getLastReceivedVerdictBlock-uint256-]]
+==== `++getLastReceivedVerdictBlock(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+
+
+
+[.contract-item]
+[[MonitorsData-getLastBountyBlock-uint256-]]
+==== `++getLastBountyBlock(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+
+
+
+[.contract-item]
+[[MonitorsData-getCheckedArray-bytes32-]]
+==== `++getCheckedArray(++[.var-type]#++bytes32++#++ ++[.var-name]#++monitorIndex++#++) → ++[.var-type]#++bytes32[]++#++++` [.item-kind]#external#
+
+
+
+[.contract-item]
+[[MonitorsData-getCheckedArrayLength-bytes32-]]
+==== `++getCheckedArrayLength(++[.var-type]#++bytes32++#++ ++[.var-name]#++monitorIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+
+
+
+[.contract-item]
+[[MonitorsData-getLengthOfMetrics-bytes32-]]
+==== `++getLengthOfMetrics(++[.var-type]#++bytes32++#++ ++[.var-name]#++monitorIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+
+
+
+[.contract-item]
+[[MonitorsData-initialize-address-]]
+==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#public#
+
+
+
+
