@@ -1,14 +1,793 @@
-:ECDH: pass:normal[xref:#ECDH,`++ECDH++`]]
-:publicKey: pass:normal[xref:#ECDH-publicKey-uint256-,`++publicKey++`]]
-:deriveKey: pass:normal[xref:#ECDH-deriveKey-uint256-uint256-uint256-,`++deriveKey++`]]
-:jAdd: pass:normal[xref:#ECDH-jAdd-uint256-uint256-uint256-uint256-,`++jAdd++`]]
-:jSub: pass:normal[xref:#ECDH-jSub-uint256-uint256-uint256-uint256-,`++jSub++`]]
-:jMul: pass:normal[xref:#ECDH-jMul-uint256-uint256-uint256-uint256-,`++jMul++`]]
-:jDiv: pass:normal[xref:#ECDH-jDiv-uint256-uint256-uint256-uint256-,`++jDiv++`]]
-:inverse: pass:normal[xref:#ECDH-inverse-uint256-,`++inverse++`]]
-:ecAdd: pass:normal[xref:#ECDH-ecAdd-uint256-uint256-uint256-uint256-uint256-uint256-,`++ecAdd++`]]
-:ecDouble: pass:normal[xref:#ECDH-ecDouble-uint256-uint256-uint256-,`++ecDouble++`]]
-:ecMul: pass:normal[xref:#ECDH-ecMul-uint256-uint256-uint256-uint256-,`++ecMul++`]]
+[ConstantsHolder]: ConstantsHolder.adoc#ConstantsHolder
+[ConstantsHolder-NODE_DEPOSIT-uint256]: ConstantsHolder.adoc#ConstantsHolder-NODE_DEPOSIT-uint256
+[ConstantsHolder-TINY_DIVISOR-uint8]: ConstantsHolder.adoc#ConstantsHolder-TINY_DIVISOR-uint8
+[ConstantsHolder-SMALL_DIVISOR-uint8]: ConstantsHolder.adoc#ConstantsHolder-SMALL_DIVISOR-uint8
+[ConstantsHolder-MEDIUM_DIVISOR-uint8]: ConstantsHolder.adoc#ConstantsHolder-MEDIUM_DIVISOR-uint8
+[ConstantsHolder-MEDIUM_TEST_DIVISOR-uint8]: ConstantsHolder.adoc#ConstantsHolder-MEDIUM_TEST_DIVISOR-uint8
+[ConstantsHolder-NUMBER_OF_NODES_FOR_SCHAIN-uint256]: ConstantsHolder.adoc#ConstantsHolder-NUMBER_OF_NODES_FOR_SCHAIN-uint256
+[ConstantsHolder-NUMBER_OF_NODES_FOR_TEST_SCHAIN-uint256]: ConstantsHolder.adoc#ConstantsHolder-NUMBER_OF_NODES_FOR_TEST_SCHAIN-uint256
+[ConstantsHolder-NUMBER_OF_NODES_FOR_MEDIUM_TEST_SCHAIN-uint256]: ConstantsHolder.adoc#ConstantsHolder-NUMBER_OF_NODES_FOR_MEDIUM_TEST_SCHAIN-uint256
+[ConstantsHolder-FRACTIONAL_FACTOR-uint256]: ConstantsHolder.adoc#ConstantsHolder-FRACTIONAL_FACTOR-uint256
+[ConstantsHolder-FULL_FACTOR-uint256]: ConstantsHolder.adoc#ConstantsHolder-FULL_FACTOR-uint256
+[ConstantsHolder-SECONDS_TO_DAY-uint32]: ConstantsHolder.adoc#ConstantsHolder-SECONDS_TO_DAY-uint32
+[ConstantsHolder-SECONDS_TO_MONTH-uint32]: ConstantsHolder.adoc#ConstantsHolder-SECONDS_TO_MONTH-uint32
+[ConstantsHolder-SECONDS_TO_YEAR-uint32]: ConstantsHolder.adoc#ConstantsHolder-SECONDS_TO_YEAR-uint32
+[ConstantsHolder-SIX_YEARS-uint32]: ConstantsHolder.adoc#ConstantsHolder-SIX_YEARS-uint32
+[ConstantsHolder-NUMBER_OF_MONITORS-uint256]: ConstantsHolder.adoc#ConstantsHolder-NUMBER_OF_MONITORS-uint256
+[ConstantsHolder-msr-uint256]: ConstantsHolder.adoc#ConstantsHolder-msr-uint256
+[ConstantsHolder-rewardPeriod-uint32]: ConstantsHolder.adoc#ConstantsHolder-rewardPeriod-uint32
+[ConstantsHolder-allowableLatency-uint32]: ConstantsHolder.adoc#ConstantsHolder-allowableLatency-uint32
+[ConstantsHolder-deltaPeriod-uint32]: ConstantsHolder.adoc#ConstantsHolder-deltaPeriod-uint32
+[ConstantsHolder-checkTime-uint8]: ConstantsHolder.adoc#ConstantsHolder-checkTime-uint8
+[ConstantsHolder-lastTimeUnderloaded-uint256]: ConstantsHolder.adoc#ConstantsHolder-lastTimeUnderloaded-uint256
+[ConstantsHolder-lastTimeOverloaded-uint256]: ConstantsHolder.adoc#ConstantsHolder-lastTimeOverloaded-uint256
+[ConstantsHolder-launchTimestamp-uint256]: ConstantsHolder.adoc#ConstantsHolder-launchTimestamp-uint256
+[ConstantsHolder-rotationDelay-uint256]: ConstantsHolder.adoc#ConstantsHolder-rotationDelay-uint256
+[ConstantsHolder-proofOfUseLockUpPeriodDays-uint256]: ConstantsHolder.adoc#ConstantsHolder-proofOfUseLockUpPeriodDays-uint256
+[ConstantsHolder-setPeriods-uint32-uint32-]: ConstantsHolder.adoc#ConstantsHolder-setPeriods-uint32-uint32-
+[ConstantsHolder-setCheckTime-uint8-]: ConstantsHolder.adoc#ConstantsHolder-setCheckTime-uint8-
+[ConstantsHolder-setLastTimeUnderloaded--]: ConstantsHolder.adoc#ConstantsHolder-setLastTimeUnderloaded--
+[ConstantsHolder-setLastTimeOverloaded--]: ConstantsHolder.adoc#ConstantsHolder-setLastTimeOverloaded--
+[ConstantsHolder-setLatency-uint32-]: ConstantsHolder.adoc#ConstantsHolder-setLatency-uint32-
+[ConstantsHolder-setMSR-uint256-]: ConstantsHolder.adoc#ConstantsHolder-setMSR-uint256-
+[ConstantsHolder-setLaunchTimestamp-uint256-]: ConstantsHolder.adoc#ConstantsHolder-setLaunchTimestamp-uint256-
+[ConstantsHolder-setRotationDelay-uint256-]: ConstantsHolder.adoc#ConstantsHolder-setRotationDelay-uint256-
+[ConstantsHolder-setProofOfUseLockUpPeriod-uint256-]: ConstantsHolder.adoc#ConstantsHolder-setProofOfUseLockUpPeriod-uint256-
+[ConstantsHolder-initialize-address-]: ConstantsHolder.adoc#ConstantsHolder-initialize-address-
+[ContractManager]: ContractManager.adoc#ContractManager
+[ContractManager-contracts-mapping-bytes32----address-]: ContractManager.adoc#ContractManager-contracts-mapping-bytes32----address-
+[ContractManager-initialize--]: ContractManager.adoc#ContractManager-initialize--
+[ContractManager-setContractsAddress-string-address-]: ContractManager.adoc#ContractManager-setContractsAddress-string-address-
+[ContractManager-getContract-string-]: ContractManager.adoc#ContractManager-getContract-string-
+[ContractManager-ContractUpgraded-string-address-]: ContractManager.adoc#ContractManager-ContractUpgraded-string-address-
+[Decryption]: Decryption.adoc#Decryption
+[Decryption-encrypt-uint256-bytes32-]: Decryption.adoc#Decryption-encrypt-uint256-bytes32-
+[Decryption-decrypt-bytes32-bytes32-]: Decryption.adoc#Decryption-decrypt-bytes32-bytes32-
+[ECDH]: #ECDH
+[ECDH-publicKey-uint256-]: #ECDH-publicKey-uint256-
+[ECDH-deriveKey-uint256-uint256-uint256-]: #ECDH-deriveKey-uint256-uint256-uint256-
+[ECDH-jAdd-uint256-uint256-uint256-uint256-]: #ECDH-jAdd-uint256-uint256-uint256-uint256-
+[ECDH-jSub-uint256-uint256-uint256-uint256-]: #ECDH-jSub-uint256-uint256-uint256-uint256-
+[ECDH-jMul-uint256-uint256-uint256-uint256-]: #ECDH-jMul-uint256-uint256-uint256-uint256-
+[ECDH-jDiv-uint256-uint256-uint256-uint256-]: #ECDH-jDiv-uint256-uint256-uint256-uint256-
+[ECDH-inverse-uint256-]: #ECDH-inverse-uint256-
+[ECDH-ecAdd-uint256-uint256-uint256-uint256-uint256-uint256-]: #ECDH-ecAdd-uint256-uint256-uint256-uint256-uint256-uint256-
+[ECDH-ecDouble-uint256-uint256-uint256-]: #ECDH-ecDouble-uint256-uint256-uint256-
+[ECDH-ecMul-uint256-uint256-uint256-uint256-]: #ECDH-ecMul-uint256-uint256-uint256-uint256-
+[ISkaleDKG]: GroupsData.adoc#ISkaleDKG
+[ISkaleDKG-openChannel-bytes32-]: GroupsData.adoc#ISkaleDKG-openChannel-bytes32-
+[ISkaleDKG-reopenChannel-bytes32-]: GroupsData.adoc#ISkaleDKG-reopenChannel-bytes32-
+[ISkaleDKG-deleteChannel-bytes32-]: GroupsData.adoc#ISkaleDKG-deleteChannel-bytes32-
+[ISkaleDKG-isChannelOpened-bytes32-]: GroupsData.adoc#ISkaleDKG-isChannelOpened-bytes32-
+[GroupsData]: GroupsData.adoc#GroupsData
+[GroupsData-groups-mapping-bytes32----struct-GroupsData-Group-]: GroupsData.adoc#GroupsData-groups-mapping-bytes32----struct-GroupsData-Group-
+[GroupsData-previousPublicKeys-mapping-bytes32----uint256-4----]: GroupsData.adoc#GroupsData-previousPublicKeys-mapping-bytes32----uint256-4----
+[GroupsData-_executorName-string]: GroupsData.adoc#GroupsData-_executorName-string
+[GroupsData-addGroup-bytes32-uint256-bytes32-]: GroupsData.adoc#GroupsData-addGroup-bytes32-uint256-bytes32-
+[GroupsData-setException-bytes32-uint256-]: GroupsData.adoc#GroupsData-setException-bytes32-uint256-
+[GroupsData-setPublicKey-bytes32-uint256-uint256-uint256-uint256-]: GroupsData.adoc#GroupsData-setPublicKey-bytes32-uint256-uint256-uint256-uint256-
+[GroupsData-setNodeInGroup-bytes32-uint256-]: GroupsData.adoc#GroupsData-setNodeInGroup-bytes32-uint256-
+[GroupsData-removeNodeFromGroup-uint256-bytes32-]: GroupsData.adoc#GroupsData-removeNodeFromGroup-uint256-bytes32-
+[GroupsData-removeAllNodesInGroup-bytes32-]: GroupsData.adoc#GroupsData-removeAllNodesInGroup-bytes32-
+[GroupsData-setNodesInGroup-bytes32-uint256---]: GroupsData.adoc#GroupsData-setNodesInGroup-bytes32-uint256---
+[GroupsData-setGroupFailedDKG-bytes32-]: GroupsData.adoc#GroupsData-setGroupFailedDKG-bytes32-
+[GroupsData-removeGroup-bytes32-]: GroupsData.adoc#GroupsData-removeGroup-bytes32-
+[GroupsData-removeExceptionNode-bytes32-uint256-]: GroupsData.adoc#GroupsData-removeExceptionNode-bytes32-uint256-
+[GroupsData-isGroupActive-bytes32-]: GroupsData.adoc#GroupsData-isGroupActive-bytes32-
+[GroupsData-isExceptionNode-bytes32-uint256-]: GroupsData.adoc#GroupsData-isExceptionNode-bytes32-uint256-
+[GroupsData-getGroupsPublicKey-bytes32-]: GroupsData.adoc#GroupsData-getGroupsPublicKey-bytes32-
+[GroupsData-getPreviousGroupsPublicKey-bytes32-]: GroupsData.adoc#GroupsData-getPreviousGroupsPublicKey-bytes32-
+[GroupsData-isGroupFailedDKG-bytes32-]: GroupsData.adoc#GroupsData-isGroupFailedDKG-bytes32-
+[GroupsData-getNodesInGroup-bytes32-]: GroupsData.adoc#GroupsData-getNodesInGroup-bytes32-
+[GroupsData-getGroupData-bytes32-]: GroupsData.adoc#GroupsData-getGroupData-bytes32-
+[GroupsData-getRecommendedNumberOfNodes-bytes32-]: GroupsData.adoc#GroupsData-getRecommendedNumberOfNodes-bytes32-
+[GroupsData-getNumberOfNodesInGroup-bytes32-]: GroupsData.adoc#GroupsData-getNumberOfNodesInGroup-bytes32-
+[GroupsData-initialize-string-address-]: GroupsData.adoc#GroupsData-initialize-string-address-
+[GroupsData-_isPublicKeyZero-bytes32-]: GroupsData.adoc#GroupsData-_isPublicKeyZero-bytes32-
+[ISkaleVerifier]: GroupsFunctionality.adoc#ISkaleVerifier
+[ISkaleVerifier-verify-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-]: GroupsFunctionality.adoc#ISkaleVerifier-verify-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-
+[GroupsFunctionality]: GroupsFunctionality.adoc#GroupsFunctionality
+[GroupsFunctionality-_executorName-string]: GroupsFunctionality.adoc#GroupsFunctionality-_executorName-string
+[GroupsFunctionality-_dataName-string]: GroupsFunctionality.adoc#GroupsFunctionality-_dataName-string
+[GroupsFunctionality-verifySignature-bytes32-uint256-uint256-uint256-uint256-]: GroupsFunctionality.adoc#GroupsFunctionality-verifySignature-bytes32-uint256-uint256-uint256-uint256-
+[GroupsFunctionality-initialize-string-string-address-]: GroupsFunctionality.adoc#GroupsFunctionality-initialize-string-string-address-
+[GroupsFunctionality-addGroup-bytes32-uint256-bytes32-]: GroupsFunctionality.adoc#GroupsFunctionality-addGroup-bytes32-uint256-bytes32-
+[GroupsFunctionality-deleteGroup-bytes32-]: GroupsFunctionality.adoc#GroupsFunctionality-deleteGroup-bytes32-
+[GroupsFunctionality-upgradeGroup-bytes32-uint256-bytes32-]: GroupsFunctionality.adoc#GroupsFunctionality-upgradeGroup-bytes32-uint256-bytes32-
+[GroupsFunctionality-_findNode-bytes32-uint256-]: GroupsFunctionality.adoc#GroupsFunctionality-_findNode-bytes32-uint256-
+[GroupsFunctionality-_generateGroup-bytes32-]: GroupsFunctionality.adoc#GroupsFunctionality-_generateGroup-bytes32-
+[GroupsFunctionality-_swap-uint256---uint256-uint256-]: GroupsFunctionality.adoc#GroupsFunctionality-_swap-uint256---uint256-uint256-
+[GroupsFunctionality-GroupAdded-bytes32-bytes32-uint32-uint256-]: GroupsFunctionality.adoc#GroupsFunctionality-GroupAdded-bytes32-bytes32-uint32-uint256-
+[GroupsFunctionality-ExceptionSet-bytes32-uint256-uint32-uint256-]: GroupsFunctionality.adoc#GroupsFunctionality-ExceptionSet-bytes32-uint256-uint32-uint256-
+[GroupsFunctionality-GroupDeleted-bytes32-uint32-uint256-]: GroupsFunctionality.adoc#GroupsFunctionality-GroupDeleted-bytes32-uint32-uint256-
+[GroupsFunctionality-GroupUpgraded-bytes32-bytes32-uint32-uint256-]: GroupsFunctionality.adoc#GroupsFunctionality-GroupUpgraded-bytes32-bytes32-uint32-uint256-
+[GroupsFunctionality-GroupGenerated-bytes32-uint256---uint32-uint256-]: GroupsFunctionality.adoc#GroupsFunctionality-GroupGenerated-bytes32-uint256---uint32-uint256-
+[Migrations]: Migrations.adoc#Migrations
+[Migrations-restricted--]: Migrations.adoc#Migrations-restricted--
+[Migrations-owner-address]: Migrations.adoc#Migrations-owner-address
+[Migrations-last_completed_migration-uint256]: Migrations.adoc#Migrations-last_completed_migration-uint256
+[Migrations-setCompleted-uint256-]: Migrations.adoc#Migrations-setCompleted-uint256-
+[Migrations-upgrade-address-]: Migrations.adoc#Migrations-upgrade-address-
+[MonitorsData]: MonitorsData.adoc#MonitorsData
+[MonitorsData-checkedNodes-mapping-bytes32----bytes32---]: MonitorsData.adoc#MonitorsData-checkedNodes-mapping-bytes32----bytes32---
+[MonitorsData-verdicts-mapping-bytes32----uint256-----]: MonitorsData.adoc#MonitorsData-verdicts-mapping-bytes32----uint256-----
+[MonitorsData-lastVerdictBlocks-mapping-bytes32----uint256-]: MonitorsData.adoc#MonitorsData-lastVerdictBlocks-mapping-bytes32----uint256-
+[MonitorsData-lastBountyBlocks-mapping-bytes32----uint256-]: MonitorsData.adoc#MonitorsData-lastBountyBlocks-mapping-bytes32----uint256-
+[MonitorsData-addCheckedNode-bytes32-bytes32-]: MonitorsData.adoc#MonitorsData-addCheckedNode-bytes32-bytes32-
+[MonitorsData-addVerdict-bytes32-uint32-uint32-]: MonitorsData.adoc#MonitorsData-addVerdict-bytes32-uint32-uint32-
+[MonitorsData-removeCheckedNode-bytes32-uint256-]: MonitorsData.adoc#MonitorsData-removeCheckedNode-bytes32-uint256-
+[MonitorsData-removeAllCheckedNodes-bytes32-]: MonitorsData.adoc#MonitorsData-removeAllCheckedNodes-bytes32-
+[MonitorsData-removeAllVerdicts-bytes32-]: MonitorsData.adoc#MonitorsData-removeAllVerdicts-bytes32-
+[MonitorsData-getLastReceivedVerdictBlock-uint256-]: MonitorsData.adoc#MonitorsData-getLastReceivedVerdictBlock-uint256-
+[MonitorsData-getLastBountyBlock-uint256-]: MonitorsData.adoc#MonitorsData-getLastBountyBlock-uint256-
+[MonitorsData-getCheckedArray-bytes32-]: MonitorsData.adoc#MonitorsData-getCheckedArray-bytes32-
+[MonitorsData-getCheckedArrayLength-bytes32-]: MonitorsData.adoc#MonitorsData-getCheckedArrayLength-bytes32-
+[MonitorsData-getLengthOfMetrics-bytes32-]: MonitorsData.adoc#MonitorsData-getLengthOfMetrics-bytes32-
+[MonitorsData-initialize-address-]: MonitorsData.adoc#MonitorsData-initialize-address-
+[MonitorsFunctionality]: MonitorsFunctionality.adoc#MonitorsFunctionality
+[MonitorsFunctionality-addMonitor-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-addMonitor-uint256-
+[MonitorsFunctionality-upgradeMonitor-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-upgradeMonitor-uint256-
+[MonitorsFunctionality-deleteMonitor-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-deleteMonitor-uint256-
+[MonitorsFunctionality-sendVerdict-uint256-struct-MonitorsData-Verdict-]: MonitorsFunctionality.adoc#MonitorsFunctionality-sendVerdict-uint256-struct-MonitorsData-Verdict-
+[MonitorsFunctionality-calculateMetrics-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-calculateMetrics-uint256-
+[MonitorsFunctionality-initialize-address-]: MonitorsFunctionality.adoc#MonitorsFunctionality-initialize-address-
+[MonitorsFunctionality-_generateGroup-bytes32-]: MonitorsFunctionality.adoc#MonitorsFunctionality-_generateGroup-bytes32-
+[MonitorsFunctionality-_median-uint256---]: MonitorsFunctionality.adoc#MonitorsFunctionality-_median-uint256---
+[MonitorsFunctionality-_setMonitors-bytes32-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-_setMonitors-bytes32-uint256-
+[MonitorsFunctionality-_find-bytes32-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-_find-bytes32-uint256-
+[MonitorsFunctionality-_quickSort-uint256---uint256-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-_quickSort-uint256---uint256-uint256-
+[MonitorsFunctionality-_getDataFromBytes-bytes32-]: MonitorsFunctionality.adoc#MonitorsFunctionality-_getDataFromBytes-bytes32-
+[MonitorsFunctionality-_getDataToBytes-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-_getDataToBytes-uint256-
+[MonitorsFunctionality-MonitorCreated-uint256-bytes32-uint256-uint32-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-MonitorCreated-uint256-bytes32-uint256-uint32-uint256-
+[MonitorsFunctionality-MonitorUpgraded-uint256-bytes32-uint256-uint32-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-MonitorUpgraded-uint256-bytes32-uint256-uint32-uint256-
+[MonitorsFunctionality-MonitorsArray-uint256-bytes32-uint256---uint32-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-MonitorsArray-uint256-bytes32-uint256---uint32-uint256-
+[MonitorsFunctionality-VerdictWasSent-uint256-uint256-uint32-uint32-bool-uint256-uint32-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-VerdictWasSent-uint256-uint256-uint32-uint32-bool-uint256-uint32-uint256-
+[MonitorsFunctionality-MetricsWereCalculated-uint256-uint32-uint32-uint32-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-MetricsWereCalculated-uint256-uint32-uint32-uint32-uint256-
+[MonitorsFunctionality-PeriodsWereSet-uint256-uint256-uint32-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-PeriodsWereSet-uint256-uint256-uint32-uint256-
+[MonitorsFunctionality-MonitorRotated-bytes32-uint256-]: MonitorsFunctionality.adoc#MonitorsFunctionality-MonitorRotated-bytes32-uint256-
+[Nodes]: Nodes.adoc#Nodes
+[Nodes-nodes-struct-Nodes-Node--]: Nodes.adoc#Nodes-nodes-struct-Nodes-Node--
+[Nodes-spaceOfNodes-struct-Nodes-SpaceManaging--]: Nodes.adoc#Nodes-spaceOfNodes-struct-Nodes-SpaceManaging--
+[Nodes-nodeIndexes-mapping-address----struct-Nodes-CreatedNodes-]: Nodes.adoc#Nodes-nodeIndexes-mapping-address----struct-Nodes-CreatedNodes-
+[Nodes-nodesIPCheck-mapping-bytes4----bool-]: Nodes.adoc#Nodes-nodesIPCheck-mapping-bytes4----bool-
+[Nodes-nodesNameCheck-mapping-bytes32----bool-]: Nodes.adoc#Nodes-nodesNameCheck-mapping-bytes32----bool-
+[Nodes-nodesNameToIndex-mapping-bytes32----uint256-]: Nodes.adoc#Nodes-nodesNameToIndex-mapping-bytes32----uint256-
+[Nodes-spaceToNodes-mapping-uint8----uint256---]: Nodes.adoc#Nodes-spaceToNodes-mapping-uint8----uint256---
+[Nodes-numberOfActiveNodes-uint256]: Nodes.adoc#Nodes-numberOfActiveNodes-uint256
+[Nodes-numberOfLeavingNodes-uint256]: Nodes.adoc#Nodes-numberOfLeavingNodes-uint256
+[Nodes-numberOfLeftNodes-uint256]: Nodes.adoc#Nodes-numberOfLeftNodes-uint256
+[Nodes-addNode-address-string-bytes4-bytes4-uint16-bytes-uint256-]: Nodes.adoc#Nodes-addNode-address-string-bytes4-bytes4-uint16-bytes-uint256-
+[Nodes-removeSpaceFromNode-uint256-uint8-]: Nodes.adoc#Nodes-removeSpaceFromNode-uint256-uint8-
+[Nodes-addSpaceToNode-uint256-uint8-]: Nodes.adoc#Nodes-addSpaceToNode-uint256-uint8-
+[Nodes-changeNodeLastRewardDate-uint256-]: Nodes.adoc#Nodes-changeNodeLastRewardDate-uint256-
+[Nodes-changeNodeFinishTime-uint256-uint32-]: Nodes.adoc#Nodes-changeNodeFinishTime-uint256-uint32-
+[Nodes-createNode-address-struct-Nodes-NodeCreationParams-]: Nodes.adoc#Nodes-createNode-address-struct-Nodes-NodeCreationParams-
+[Nodes-removeNode-address-uint256-]: Nodes.adoc#Nodes-removeNode-address-uint256-
+[Nodes-removeNodeByRoot-uint256-]: Nodes.adoc#Nodes-removeNodeByRoot-uint256-
+[Nodes-initExit-address-uint256-]: Nodes.adoc#Nodes-initExit-address-uint256-
+[Nodes-completeExit-address-uint256-]: Nodes.adoc#Nodes-completeExit-address-uint256-
+[Nodes-deleteNode-uint256-]: Nodes.adoc#Nodes-deleteNode-uint256-
+[Nodes-setNodeLeft-uint256-]: Nodes.adoc#Nodes-setNodeLeft-uint256-
+[Nodes-setNodeLeaving-uint256-]: Nodes.adoc#Nodes-setNodeLeaving-uint256-
+[Nodes-getNodesWithFreeSpace-uint8-]: Nodes.adoc#Nodes-getNodesWithFreeSpace-uint8-
+[Nodes-countNodesWithFreeSpace-uint8-]: Nodes.adoc#Nodes-countNodesWithFreeSpace-uint8-
+[Nodes-isTimeForReward-uint256-]: Nodes.adoc#Nodes-isTimeForReward-uint256-
+[Nodes-getNodeIP-uint256-]: Nodes.adoc#Nodes-getNodeIP-uint256-
+[Nodes-getNodePort-uint256-]: Nodes.adoc#Nodes-getNodePort-uint256-
+[Nodes-getNodePublicKey-uint256-]: Nodes.adoc#Nodes-getNodePublicKey-uint256-
+[Nodes-getNodeValidatorId-uint256-]: Nodes.adoc#Nodes-getNodeValidatorId-uint256-
+[Nodes-getNodeFinishTime-uint256-]: Nodes.adoc#Nodes-getNodeFinishTime-uint256-
+[Nodes-isNodeLeft-uint256-]: Nodes.adoc#Nodes-isNodeLeft-uint256-
+[Nodes-getNodeLastRewardDate-uint256-]: Nodes.adoc#Nodes-getNodeLastRewardDate-uint256-
+[Nodes-getNodeNextRewardDate-uint256-]: Nodes.adoc#Nodes-getNodeNextRewardDate-uint256-
+[Nodes-getNumberOfNodes--]: Nodes.adoc#Nodes-getNumberOfNodes--
+[Nodes-getNumberOnlineNodes--]: Nodes.adoc#Nodes-getNumberOnlineNodes--
+[Nodes-getActiveNodeIPs--]: Nodes.adoc#Nodes-getActiveNodeIPs--
+[Nodes-getActiveNodesByAddress--]: Nodes.adoc#Nodes-getActiveNodesByAddress--
+[Nodes-getActiveNodeIds--]: Nodes.adoc#Nodes-getActiveNodeIds--
+[Nodes-getValidatorId-uint256-]: Nodes.adoc#Nodes-getValidatorId-uint256-
+[Nodes-getNodeStatus-uint256-]: Nodes.adoc#Nodes-getNodeStatus-uint256-
+[Nodes-initialize-address-]: Nodes.adoc#Nodes-initialize-address-
+[Nodes-isNodeExist-address-uint256-]: Nodes.adoc#Nodes-isNodeExist-address-uint256-
+[Nodes-isNodeActive-uint256-]: Nodes.adoc#Nodes-isNodeActive-uint256-
+[Nodes-isNodeLeaving-uint256-]: Nodes.adoc#Nodes-isNodeLeaving-uint256-
+[Nodes-_moveNodeToNewSpaceMap-uint256-uint8-]: Nodes.adoc#Nodes-_moveNodeToNewSpaceMap-uint256-uint8-
+[Nodes-NodeCreated-uint256-address-string-bytes4-bytes4-uint16-uint16-uint32-uint256-]: Nodes.adoc#Nodes-NodeCreated-uint256-address-string-bytes4-bytes4-uint16-uint16-uint32-uint256-
+[Nodes-ExitCompleted-uint256-address-uint32-uint256-]: Nodes.adoc#Nodes-ExitCompleted-uint256-address-uint32-uint256-
+[Nodes-ExitInited-uint256-address-uint32-uint32-uint256-]: Nodes.adoc#Nodes-ExitInited-uint256-address-uint32-uint32-uint256-
+[Permissions]: Permissions.adoc#Permissions
+[Permissions-allow-string-]: Permissions.adoc#Permissions-allow-string-
+[Permissions-allowTwo-string-string-]: Permissions.adoc#Permissions-allowTwo-string-string-
+[Permissions-allowThree-string-string-string-]: Permissions.adoc#Permissions-allowThree-string-string-string-
+[Permissions-_contractManager-contract-ContractManager]: Permissions.adoc#Permissions-_contractManager-contract-ContractManager
+[Permissions-initialize-address-]: Permissions.adoc#Permissions-initialize-address-
+[Permissions-_isOwner--]: Permissions.adoc#Permissions-_isOwner--
+[Pricing]: Pricing.adoc#Pricing
+[Pricing-OPTIMAL_LOAD_PERCENTAGE-uint256]: Pricing.adoc#Pricing-OPTIMAL_LOAD_PERCENTAGE-uint256
+[Pricing-ADJUSTMENT_SPEED-uint256]: Pricing.adoc#Pricing-ADJUSTMENT_SPEED-uint256
+[Pricing-COOLDOWN_TIME-uint256]: Pricing.adoc#Pricing-COOLDOWN_TIME-uint256
+[Pricing-MIN_PRICE-uint256]: Pricing.adoc#Pricing-MIN_PRICE-uint256
+[Pricing-price-uint256]: Pricing.adoc#Pricing-price-uint256
+[Pricing-totalNodes-uint256]: Pricing.adoc#Pricing-totalNodes-uint256
+[Pricing-initNodes--]: Pricing.adoc#Pricing-initNodes--
+[Pricing-adjustPrice--]: Pricing.adoc#Pricing-adjustPrice--
+[Pricing-initialize-address-]: Pricing.adoc#Pricing-initialize-address-
+[Pricing-checkAllNodes--]: Pricing.adoc#Pricing-checkAllNodes--
+[Pricing-getTotalLoadPercentage--]: Pricing.adoc#Pricing-getTotalLoadPercentage--
+[SchainsData]: SchainsData.adoc#SchainsData
+[SchainsData-schains-mapping-bytes32----struct-SchainsData-Schain-]: SchainsData.adoc#SchainsData-schains-mapping-bytes32----struct-SchainsData-Schain-
+[SchainsData-schainIndexes-mapping-address----bytes32---]: SchainsData.adoc#SchainsData-schainIndexes-mapping-address----bytes32---
+[SchainsData-schainsForNodes-mapping-uint256----bytes32---]: SchainsData.adoc#SchainsData-schainsForNodes-mapping-uint256----bytes32---
+[SchainsData-holesForNodes-mapping-uint256----uint256---]: SchainsData.adoc#SchainsData-holesForNodes-mapping-uint256----uint256---
+[SchainsData-rotations-mapping-bytes32----struct-SchainsData-Rotation-]: SchainsData.adoc#SchainsData-rotations-mapping-bytes32----struct-SchainsData-Rotation-
+[SchainsData-leavingHistory-mapping-uint256----struct-SchainsData-LeavingHistory---]: SchainsData.adoc#SchainsData-leavingHistory-mapping-uint256----struct-SchainsData-LeavingHistory---
+[SchainsData-schainsAtSystem-bytes32--]: SchainsData.adoc#SchainsData-schainsAtSystem-bytes32--
+[SchainsData-numberOfSchains-uint64]: SchainsData.adoc#SchainsData-numberOfSchains-uint64
+[SchainsData-sumOfSchainsResources-uint256]: SchainsData.adoc#SchainsData-sumOfSchainsResources-uint256
+[SchainsData-initializeSchain-string-address-uint256-uint256-]: SchainsData.adoc#SchainsData-initializeSchain-string-address-uint256-uint256-
+[SchainsData-setSchainIndex-bytes32-address-]: SchainsData.adoc#SchainsData-setSchainIndex-bytes32-address-
+[SchainsData-addSchainForNode-uint256-bytes32-]: SchainsData.adoc#SchainsData-addSchainForNode-uint256-bytes32-
+[SchainsData-setSchainPartOfNode-bytes32-uint8-]: SchainsData.adoc#SchainsData-setSchainPartOfNode-bytes32-uint8-
+[SchainsData-changeLifetime-bytes32-uint256-uint256-]: SchainsData.adoc#SchainsData-changeLifetime-bytes32-uint256-uint256-
+[SchainsData-removeSchain-bytes32-address-]: SchainsData.adoc#SchainsData-removeSchain-bytes32-address-
+[SchainsData-removeSchainForNode-uint256-uint256-]: SchainsData.adoc#SchainsData-removeSchainForNode-uint256-uint256-
+[SchainsData-startRotation-bytes32-uint256-]: SchainsData.adoc#SchainsData-startRotation-bytes32-uint256-
+[SchainsData-finishRotation-bytes32-uint256-uint256-]: SchainsData.adoc#SchainsData-finishRotation-bytes32-uint256-uint256-
+[SchainsData-removeRotation-bytes32-]: SchainsData.adoc#SchainsData-removeRotation-bytes32-
+[SchainsData-skipRotationDelay-bytes32-]: SchainsData.adoc#SchainsData-skipRotationDelay-bytes32-
+[SchainsData-getRotation-bytes32-]: SchainsData.adoc#SchainsData-getRotation-bytes32-
+[SchainsData-getLeavingHistory-uint256-]: SchainsData.adoc#SchainsData-getLeavingHistory-uint256-
+[SchainsData-getSchains--]: SchainsData.adoc#SchainsData-getSchains--
+[SchainsData-getSchainsPartOfNode-bytes32-]: SchainsData.adoc#SchainsData-getSchainsPartOfNode-bytes32-
+[SchainsData-getSchainListSize-address-]: SchainsData.adoc#SchainsData-getSchainListSize-address-
+[SchainsData-getSchainIdsByAddress-address-]: SchainsData.adoc#SchainsData-getSchainIdsByAddress-address-
+[SchainsData-getSchainIdsForNode-uint256-]: SchainsData.adoc#SchainsData-getSchainIdsForNode-uint256-
+[SchainsData-getLengthOfSchainsForNode-uint256-]: SchainsData.adoc#SchainsData-getLengthOfSchainsForNode-uint256-
+[SchainsData-getSchainIdFromSchainName-string-]: SchainsData.adoc#SchainsData-getSchainIdFromSchainName-string-
+[SchainsData-getSchainOwner-bytes32-]: SchainsData.adoc#SchainsData-getSchainOwner-bytes32-
+[SchainsData-isSchainNameAvailable-string-]: SchainsData.adoc#SchainsData-isSchainNameAvailable-string-
+[SchainsData-isTimeExpired-bytes32-]: SchainsData.adoc#SchainsData-isTimeExpired-bytes32-
+[SchainsData-isOwnerAddress-address-bytes32-]: SchainsData.adoc#SchainsData-isOwnerAddress-address-bytes32-
+[SchainsData-isSchainExist-bytes32-]: SchainsData.adoc#SchainsData-isSchainExist-bytes32-
+[SchainsData-getSchainName-bytes32-]: SchainsData.adoc#SchainsData-getSchainName-bytes32-
+[SchainsData-getActiveSchain-uint256-]: SchainsData.adoc#SchainsData-getActiveSchain-uint256-
+[SchainsData-getActiveSchains-uint256-]: SchainsData.adoc#SchainsData-getActiveSchains-uint256-
+[SchainsData-initialize-address-]: SchainsData.adoc#SchainsData-initialize-address-
+[SchainsFunctionality]: SchainsFunctionality.adoc#SchainsFunctionality
+[SchainsFunctionality-addSchain-address-uint256-bytes-]: SchainsFunctionality.adoc#SchainsFunctionality-addSchain-address-uint256-bytes-
+[SchainsFunctionality-deleteSchain-address-string-]: SchainsFunctionality.adoc#SchainsFunctionality-deleteSchain-address-string-
+[SchainsFunctionality-deleteSchainByRoot-string-]: SchainsFunctionality.adoc#SchainsFunctionality-deleteSchainByRoot-string-
+[SchainsFunctionality-exitFromSchain-uint256-]: SchainsFunctionality.adoc#SchainsFunctionality-exitFromSchain-uint256-
+[SchainsFunctionality-rotateNode-uint256-bytes32-]: SchainsFunctionality.adoc#SchainsFunctionality-rotateNode-uint256-bytes32-
+[SchainsFunctionality-freezeSchains-uint256-]: SchainsFunctionality.adoc#SchainsFunctionality-freezeSchains-uint256-
+[SchainsFunctionality-restartSchainCreation-string-]: SchainsFunctionality.adoc#SchainsFunctionality-restartSchainCreation-string-
+[SchainsFunctionality-checkRotation-bytes32-]: SchainsFunctionality.adoc#SchainsFunctionality-checkRotation-bytes32-
+[SchainsFunctionality-initialize-address-]: SchainsFunctionality.adoc#SchainsFunctionality-initialize-address-
+[SchainsFunctionality-getSchainPrice-uint256-uint256-]: SchainsFunctionality.adoc#SchainsFunctionality-getSchainPrice-uint256-uint256-
+[SchainsFunctionality-_initializeSchainInSchainsData-string-address-uint256-uint256-]: SchainsFunctionality.adoc#SchainsFunctionality-_initializeSchainInSchainsData-string-address-uint256-uint256-
+[SchainsFunctionality-_fallbackSchainParametersDataConverter-bytes-]: SchainsFunctionality.adoc#SchainsFunctionality-_fallbackSchainParametersDataConverter-bytes-
+[SchainsFunctionality-_addSpace-uint256-uint8-]: SchainsFunctionality.adoc#SchainsFunctionality-_addSpace-uint256-uint8-
+[SchainsFunctionality-SchainCreated-string-address-uint256-uint256-uint256-uint256-uint16-bytes32-uint32-uint256-]: SchainsFunctionality.adoc#SchainsFunctionality-SchainCreated-string-address-uint256-uint256-uint256-uint256-uint16-bytes32-uint32-uint256-
+[SchainsFunctionality-SchainDeleted-address-string-bytes32-]: SchainsFunctionality.adoc#SchainsFunctionality-SchainDeleted-address-string-bytes32-
+[SchainsFunctionality-NodeRotated-bytes32-uint256-uint256-]: SchainsFunctionality.adoc#SchainsFunctionality-NodeRotated-bytes32-uint256-uint256-
+[SchainsFunctionality-NodeAdded-bytes32-uint256-]: SchainsFunctionality.adoc#SchainsFunctionality-NodeAdded-bytes32-uint256-
+[SchainsFunctionalityInternal]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal
+[SchainsFunctionalityInternal-createGroupForSchain-string-bytes32-uint256-uint8-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-createGroupForSchain-string-bytes32-uint256-uint8-
+[SchainsFunctionalityInternal-removeNodeFromSchain-uint256-bytes32-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-removeNodeFromSchain-uint256-bytes32-
+[SchainsFunctionalityInternal-removeNodeFromExceptions-bytes32-uint256-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-removeNodeFromExceptions-bytes32-uint256-
+[SchainsFunctionalityInternal-selectNodeToGroup-bytes32-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-selectNodeToGroup-bytes32-
+[SchainsFunctionalityInternal-getNodesDataFromTypeOfSchain-uint256-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-getNodesDataFromTypeOfSchain-uint256-
+[SchainsFunctionalityInternal-isEnoughNodes-bytes32-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-isEnoughNodes-bytes32-
+[SchainsFunctionalityInternal-isAnyFreeNode-bytes32-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-isAnyFreeNode-bytes32-
+[SchainsFunctionalityInternal-initialize-address-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-initialize-address-
+[SchainsFunctionalityInternal-findSchainAtSchainsForNode-uint256-bytes32-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-findSchainAtSchainsForNode-uint256-bytes32-
+[SchainsFunctionalityInternal-_generateGroup-bytes32-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-_generateGroup-bytes32-
+[SchainsFunctionalityInternal-_removeSpace-uint256-uint8-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-_removeSpace-uint256-uint8-
+[SchainsFunctionalityInternal-_isCorrespond-bytes32-uint256-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-_isCorrespond-bytes32-uint256-
+[SchainsFunctionalityInternal-SchainNodes-string-bytes32-uint256---uint32-uint256-]: SchainsFunctionalityInternal.adoc#SchainsFunctionalityInternal-SchainNodes-string-bytes32-uint256---uint32-uint256-
+[IECDH]: SkaleDKG.adoc#IECDH
+[IECDH-deriveKey-uint256-uint256-uint256-]: SkaleDKG.adoc#IECDH-deriveKey-uint256-uint256-uint256-
+[IDecryption]: SkaleDKG.adoc#IDecryption
+[IDecryption-decrypt-bytes32-bytes32-]: SkaleDKG.adoc#IDecryption-decrypt-bytes32-bytes32-
+[SkaleDKG]: SkaleDKG.adoc#SkaleDKG
+[SkaleDKG-correctGroup-bytes32-]: SkaleDKG.adoc#SkaleDKG-correctGroup-bytes32-
+[SkaleDKG-correctNode-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-correctNode-bytes32-uint256-
+[SkaleDKG-channels-mapping-bytes32----struct-SkaleDKG-Channel-]: SkaleDKG.adoc#SkaleDKG-channels-mapping-bytes32----struct-SkaleDKG-Channel-
+[SkaleDKG-openChannel-bytes32-]: SkaleDKG.adoc#SkaleDKG-openChannel-bytes32-
+[SkaleDKG-deleteChannel-bytes32-]: SkaleDKG.adoc#SkaleDKG-deleteChannel-bytes32-
+[SkaleDKG-reopenChannel-bytes32-]: SkaleDKG.adoc#SkaleDKG-reopenChannel-bytes32-
+[SkaleDKG-broadcast-bytes32-uint256-bytes-bytes-]: SkaleDKG.adoc#SkaleDKG-broadcast-bytes32-uint256-bytes-bytes-
+[SkaleDKG-complaint-bytes32-uint256-uint256-]: SkaleDKG.adoc#SkaleDKG-complaint-bytes32-uint256-uint256-
+[SkaleDKG-response-bytes32-uint256-uint256-bytes-]: SkaleDKG.adoc#SkaleDKG-response-bytes32-uint256-uint256-bytes-
+[SkaleDKG-alright-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-alright-bytes32-uint256-
+[SkaleDKG-isChannelOpened-bytes32-]: SkaleDKG.adoc#SkaleDKG-isChannelOpened-bytes32-
+[SkaleDKG-isBroadcastPossible-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-isBroadcastPossible-bytes32-uint256-
+[SkaleDKG-isComplaintPossible-bytes32-uint256-uint256-]: SkaleDKG.adoc#SkaleDKG-isComplaintPossible-bytes32-uint256-uint256-
+[SkaleDKG-isAlrightPossible-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-isAlrightPossible-bytes32-uint256-
+[SkaleDKG-isResponsePossible-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-isResponsePossible-bytes32-uint256-
+[SkaleDKG-getBroadcastedData-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-getBroadcastedData-bytes32-uint256-
+[SkaleDKG-isAllDataReceived-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-isAllDataReceived-bytes32-uint256-
+[SkaleDKG-getComplaintData-bytes32-]: SkaleDKG.adoc#SkaleDKG-getComplaintData-bytes32-
+[SkaleDKG-initialize-address-]: SkaleDKG.adoc#SkaleDKG-initialize-address-
+[SkaleDKG-_finalizeSlashing-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-_finalizeSlashing-bytes32-uint256-
+[SkaleDKG-_verify-bytes32-uint256-uint256-bytes-]: SkaleDKG.adoc#SkaleDKG-_verify-bytes32-uint256-uint256-bytes-
+[SkaleDKG-_getCommonPublicKey-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-_getCommonPublicKey-bytes32-uint256-
+[SkaleDKG-_decryptMessage-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-_decryptMessage-bytes32-uint256-
+[SkaleDKG-_adding-bytes32-uint256-uint256-uint256-uint256-]: SkaleDKG.adoc#SkaleDKG-_adding-bytes32-uint256-uint256-uint256-uint256-
+[SkaleDKG-_isBroadcast-bytes32-uint256-bytes-bytes-]: SkaleDKG.adoc#SkaleDKG-_isBroadcast-bytes32-uint256-bytes-bytes-
+[SkaleDKG-_isBroadcasted-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-_isBroadcasted-bytes32-uint256-
+[SkaleDKG-_findNode-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-_findNode-bytes32-uint256-
+[SkaleDKG-_isNodeByMessageSender-uint256-address-]: SkaleDKG.adoc#SkaleDKG-_isNodeByMessageSender-uint256-address-
+[SkaleDKG-_addFp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_addFp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_scalarMulFp2-uint256-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_scalarMulFp2-uint256-struct-SkaleDKG-Fp2-
+[SkaleDKG-_minusFp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_minusFp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_mulFp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_mulFp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_squaredFp2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_squaredFp2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_inverseFp2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_inverseFp2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_isG1-uint256-uint256-]: SkaleDKG.adoc#SkaleDKG-_isG1-uint256-uint256-
+[SkaleDKG-_isG2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_isG2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_isG2Zero-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_isG2Zero-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_doubleG2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_doubleG2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_u1-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_u1-struct-SkaleDKG-Fp2-
+[SkaleDKG-_u2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_u2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_s1-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_s1-struct-SkaleDKG-Fp2-
+[SkaleDKG-_s2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_s2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_isEqual-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_isEqual-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_addG2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_addG2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_mulG2-uint256-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-]: SkaleDKG.adoc#SkaleDKG-_mulG2-uint256-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-
+[SkaleDKG-_loop-uint256-bytes-uint256-]: SkaleDKG.adoc#SkaleDKG-_loop-uint256-bytes-uint256-
+[SkaleDKG-_checkDKGVerification-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-bytes-]: SkaleDKG.adoc#SkaleDKG-_checkDKGVerification-struct-SkaleDKG-Fp2-struct-SkaleDKG-Fp2-bytes-
+[SkaleDKG-_checkCorrectMultipliedShare-bytes-uint256-]: SkaleDKG.adoc#SkaleDKG-_checkCorrectMultipliedShare-bytes-uint256-
+[SkaleDKG-_bytesToPublicKey-bytes-]: SkaleDKG.adoc#SkaleDKG-_bytesToPublicKey-bytes-
+[SkaleDKG-_bytesToG2-bytes-]: SkaleDKG.adoc#SkaleDKG-_bytesToG2-bytes-
+[SkaleDKG-ChannelOpened-bytes32-]: SkaleDKG.adoc#SkaleDKG-ChannelOpened-bytes32-
+[SkaleDKG-ChannelClosed-bytes32-]: SkaleDKG.adoc#SkaleDKG-ChannelClosed-bytes32-
+[SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-bytes-bytes-]: SkaleDKG.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-bytes-bytes-
+[SkaleDKG-AllDataReceived-bytes32-uint256-]: SkaleDKG.adoc#SkaleDKG-AllDataReceived-bytes32-uint256-
+[SkaleDKG-SuccessfulDKG-bytes32-]: SkaleDKG.adoc#SkaleDKG-SuccessfulDKG-bytes32-
+[SkaleDKG-BadGuy-uint256-]: SkaleDKG.adoc#SkaleDKG-BadGuy-uint256-
+[SkaleDKG-FailedDKG-bytes32-]: SkaleDKG.adoc#SkaleDKG-FailedDKG-bytes32-
+[SkaleDKG-ComplaintSent-bytes32-uint256-uint256-]: SkaleDKG.adoc#SkaleDKG-ComplaintSent-bytes32-uint256-uint256-
+[SkaleDKG-NewGuy-uint256-]: SkaleDKG.adoc#SkaleDKG-NewGuy-uint256-
+[SkaleManager]: SkaleManager.adoc#SkaleManager
+[SkaleManager-minersCap-uint256]: SkaleManager.adoc#SkaleManager-minersCap-uint256
+[SkaleManager-startTime-uint32]: SkaleManager.adoc#SkaleManager-startTime-uint32
+[SkaleManager-stageTime-uint32]: SkaleManager.adoc#SkaleManager-stageTime-uint32
+[SkaleManager-stageNodes-uint256]: SkaleManager.adoc#SkaleManager-stageNodes-uint256
+[SkaleManager-tokensReceived-address-address-address-uint256-bytes-bytes-]: SkaleManager.adoc#SkaleManager-tokensReceived-address-address-address-uint256-bytes-bytes-
+[SkaleManager-createNode-uint16-uint16-bytes4-bytes4-bytes-string-]: SkaleManager.adoc#SkaleManager-createNode-uint16-uint16-bytes4-bytes4-bytes-string-
+[SkaleManager-nodeExit-uint256-]: SkaleManager.adoc#SkaleManager-nodeExit-uint256-
+[SkaleManager-deleteNode-uint256-]: SkaleManager.adoc#SkaleManager-deleteNode-uint256-
+[SkaleManager-deleteNodeByRoot-uint256-]: SkaleManager.adoc#SkaleManager-deleteNodeByRoot-uint256-
+[SkaleManager-deleteSchain-string-]: SkaleManager.adoc#SkaleManager-deleteSchain-string-
+[SkaleManager-deleteSchainByRoot-string-]: SkaleManager.adoc#SkaleManager-deleteSchainByRoot-string-
+[SkaleManager-sendVerdict-uint256-struct-MonitorsData-Verdict-]: SkaleManager.adoc#SkaleManager-sendVerdict-uint256-struct-MonitorsData-Verdict-
+[SkaleManager-sendVerdicts-uint256-struct-MonitorsData-Verdict---]: SkaleManager.adoc#SkaleManager-sendVerdicts-uint256-struct-MonitorsData-Verdict---
+[SkaleManager-getBounty-uint256-]: SkaleManager.adoc#SkaleManager-getBounty-uint256-
+[SkaleManager-initialize-address-]: SkaleManager.adoc#SkaleManager-initialize-address-
+[SkaleManager-_manageBounty-address-uint256-uint256-uint256-]: SkaleManager.adoc#SkaleManager-_manageBounty-address-uint256-uint256-uint256-
+[SkaleManager-_payBounty-uint256-address-uint256-]: SkaleManager.adoc#SkaleManager-_payBounty-uint256-address-uint256-
+[SkaleManager-BountyGot-uint256-address-uint256-uint256-uint256-uint256-uint32-uint256-]: SkaleManager.adoc#SkaleManager-BountyGot-uint256-address-uint256-uint256-uint256-uint256-uint32-uint256-
+[SkaleToken]: SkaleToken.adoc#SkaleToken
+[SkaleToken-NAME-string]: SkaleToken.adoc#SkaleToken-NAME-string
+[SkaleToken-SYMBOL-string]: SkaleToken.adoc#SkaleToken-SYMBOL-string
+[SkaleToken-DECIMALS-uint256]: SkaleToken.adoc#SkaleToken-DECIMALS-uint256
+[SkaleToken-CAP-uint256]: SkaleToken.adoc#SkaleToken-CAP-uint256
+[SkaleToken-constructor-address-address---]: SkaleToken.adoc#SkaleToken-constructor-address-address---
+[SkaleToken-mint-address-uint256-bytes-bytes-]: SkaleToken.adoc#SkaleToken-mint-address-uint256-bytes-bytes-
+[SkaleToken-getAndUpdateDelegatedAmount-address-]: SkaleToken.adoc#SkaleToken-getAndUpdateDelegatedAmount-address-
+[SkaleToken-getAndUpdateSlashedAmount-address-]: SkaleToken.adoc#SkaleToken-getAndUpdateSlashedAmount-address-
+[SkaleToken-getAndUpdateLockedAmount-address-]: SkaleToken.adoc#SkaleToken-getAndUpdateLockedAmount-address-
+[SkaleToken-_beforeTokenTransfer-address-address-address-uint256-]: SkaleToken.adoc#SkaleToken-_beforeTokenTransfer-address-address-address-uint256-
+[SkaleToken-_callTokensToSend-address-address-address-uint256-bytes-bytes-]: SkaleToken.adoc#SkaleToken-_callTokensToSend-address-address-address-uint256-bytes-bytes-
+[SkaleToken-_callTokensReceived-address-address-address-uint256-bytes-bytes-bool-]: SkaleToken.adoc#SkaleToken-_callTokensReceived-address-address-address-uint256-bytes-bytes-bool-
+[SkaleToken-_msgData--]: SkaleToken.adoc#SkaleToken-_msgData--
+[SkaleToken-_msgSender--]: SkaleToken.adoc#SkaleToken-_msgSender--
+[SkaleVerifier]: SkaleVerifier.adoc#SkaleVerifier
+[SkaleVerifier-verifySchainSignature-uint256-uint256-bytes32-uint256-uint256-uint256-string-]: SkaleVerifier.adoc#SkaleVerifier-verifySchainSignature-uint256-uint256-bytes32-uint256-uint256-uint256-string-
+[SkaleVerifier-initialize-address-]: SkaleVerifier.adoc#SkaleVerifier-initialize-address-
+[SkaleVerifier-verify-uint256-uint256-bytes32-uint256-uint256-uint256-uint256-uint256-uint256-uint256-]: SkaleVerifier.adoc#SkaleVerifier-verify-uint256-uint256-bytes32-uint256-uint256-uint256-uint256-uint256-uint256-uint256-
+[SkaleVerifier-_checkHashToGroupWithHelper-bytes32-uint256-uint256-uint256-]: SkaleVerifier.adoc#SkaleVerifier-_checkHashToGroupWithHelper-bytes32-uint256-uint256-uint256-
+[SkaleVerifier-_addFp2-struct-SkaleVerifier-Fp2-struct-SkaleVerifier-Fp2-]: SkaleVerifier.adoc#SkaleVerifier-_addFp2-struct-SkaleVerifier-Fp2-struct-SkaleVerifier-Fp2-
+[SkaleVerifier-_scalarMulFp2-uint256-struct-SkaleVerifier-Fp2-]: SkaleVerifier.adoc#SkaleVerifier-_scalarMulFp2-uint256-struct-SkaleVerifier-Fp2-
+[SkaleVerifier-_minusFp2-struct-SkaleVerifier-Fp2-struct-SkaleVerifier-Fp2-]: SkaleVerifier.adoc#SkaleVerifier-_minusFp2-struct-SkaleVerifier-Fp2-struct-SkaleVerifier-Fp2-
+[SkaleVerifier-_mulFp2-struct-SkaleVerifier-Fp2-struct-SkaleVerifier-Fp2-]: SkaleVerifier.adoc#SkaleVerifier-_mulFp2-struct-SkaleVerifier-Fp2-struct-SkaleVerifier-Fp2-
+[SkaleVerifier-_squaredFp2-struct-SkaleVerifier-Fp2-]: SkaleVerifier.adoc#SkaleVerifier-_squaredFp2-struct-SkaleVerifier-Fp2-
+[SkaleVerifier-_inverseFp2-struct-SkaleVerifier-Fp2-]: SkaleVerifier.adoc#SkaleVerifier-_inverseFp2-struct-SkaleVerifier-Fp2-
+[SkaleVerifier-_isG1-uint256-uint256-]: SkaleVerifier.adoc#SkaleVerifier-_isG1-uint256-uint256-
+[SkaleVerifier-_isG2-struct-SkaleVerifier-Fp2-struct-SkaleVerifier-Fp2-]: SkaleVerifier.adoc#SkaleVerifier-_isG2-struct-SkaleVerifier-Fp2-struct-SkaleVerifier-Fp2-
+[SkaleVerifier-_isG2Zero-struct-SkaleVerifier-Fp2-struct-SkaleVerifier-Fp2-]: SkaleVerifier.adoc#SkaleVerifier-_isG2Zero-struct-SkaleVerifier-Fp2-struct-SkaleVerifier-Fp2-
+[SlashingTable]: SlashingTable.adoc#SlashingTable
+[SlashingTable-setPenalty-string-uint256-]: SlashingTable.adoc#SlashingTable-setPenalty-string-uint256-
+[SlashingTable-getPenalty-string-]: SlashingTable.adoc#SlashingTable-getPenalty-string-
+[SlashingTable-initialize-address-]: SlashingTable.adoc#SlashingTable-initialize-address-
+[DelegationController]: delegation/DelegationController.adoc#DelegationController
+[DelegationController-checkDelegationExists-uint256-]: delegation/DelegationController.adoc#DelegationController-checkDelegationExists-uint256-
+[DelegationController-delegations-struct-DelegationController-Delegation--]: delegation/DelegationController.adoc#DelegationController-delegations-struct-DelegationController-Delegation--
+[DelegationController-delegationsByValidator-mapping-uint256----uint256---]: delegation/DelegationController.adoc#DelegationController-delegationsByValidator-mapping-uint256----uint256---
+[DelegationController-delegationsByHolder-mapping-address----uint256---]: delegation/DelegationController.adoc#DelegationController-delegationsByHolder-mapping-address----uint256---
+[DelegationController-getAndUpdateDelegatedToValidatorNow-uint256-]: delegation/DelegationController.adoc#DelegationController-getAndUpdateDelegatedToValidatorNow-uint256-
+[DelegationController-getAndUpdateDelegatedAmount-address-]: delegation/DelegationController.adoc#DelegationController-getAndUpdateDelegatedAmount-address-
+[DelegationController-getAndUpdateEffectiveDelegatedByHolderToValidator-address-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-getAndUpdateEffectiveDelegatedByHolderToValidator-address-uint256-uint256-
+[DelegationController-delegate-uint256-uint256-uint256-string-]: delegation/DelegationController.adoc#DelegationController-delegate-uint256-uint256-uint256-string-
+[DelegationController-getAndUpdateLockedAmount-address-]: delegation/DelegationController.adoc#DelegationController-getAndUpdateLockedAmount-address-
+[DelegationController-getAndUpdateForbiddenForDelegationAmount-address-]: delegation/DelegationController.adoc#DelegationController-getAndUpdateForbiddenForDelegationAmount-address-
+[DelegationController-cancelPendingDelegation-uint256-]: delegation/DelegationController.adoc#DelegationController-cancelPendingDelegation-uint256-
+[DelegationController-acceptPendingDelegation-uint256-]: delegation/DelegationController.adoc#DelegationController-acceptPendingDelegation-uint256-
+[DelegationController-requestUndelegation-uint256-]: delegation/DelegationController.adoc#DelegationController-requestUndelegation-uint256-
+[DelegationController-confiscate-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-confiscate-uint256-uint256-
+[DelegationController-getAndUpdateEffectiveDelegatedToValidator-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-getAndUpdateEffectiveDelegatedToValidator-uint256-uint256-
+[DelegationController-getDelegation-uint256-]: delegation/DelegationController.adoc#DelegationController-getDelegation-uint256-
+[DelegationController-getFirstDelegationMonth-address-uint256-]: delegation/DelegationController.adoc#DelegationController-getFirstDelegationMonth-address-uint256-
+[DelegationController-getDelegationsByValidatorLength-uint256-]: delegation/DelegationController.adoc#DelegationController-getDelegationsByValidatorLength-uint256-
+[DelegationController-getDelegationsByHolderLength-address-]: delegation/DelegationController.adoc#DelegationController-getDelegationsByHolderLength-address-
+[DelegationController-initialize-address-]: delegation/DelegationController.adoc#DelegationController-initialize-address-
+[DelegationController-getAndUpdateDelegatedToValidator-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-getAndUpdateDelegatedToValidator-uint256-uint256-
+[DelegationController-processSlashes-address-uint256-]: delegation/DelegationController.adoc#DelegationController-processSlashes-address-uint256-
+[DelegationController-processAllSlashes-address-]: delegation/DelegationController.adoc#DelegationController-processAllSlashes-address-
+[DelegationController-getState-uint256-]: delegation/DelegationController.adoc#DelegationController-getState-uint256-
+[DelegationController-getLockedInPendingDelegations-address-]: delegation/DelegationController.adoc#DelegationController-getLockedInPendingDelegations-address-
+[DelegationController-hasUnprocessedSlashes-address-]: delegation/DelegationController.adoc#DelegationController-hasUnprocessedSlashes-address-
+[DelegationController-_addDelegation-address-uint256-uint256-uint256-string-]: delegation/DelegationController.adoc#DelegationController-_addDelegation-address-uint256-uint256-uint256-string-
+[DelegationController-_isTerminated-enum-DelegationController-State-]: delegation/DelegationController.adoc#DelegationController-_isTerminated-enum-DelegationController-State-
+[DelegationController-_isLocked-enum-DelegationController-State-]: delegation/DelegationController.adoc#DelegationController-_isLocked-enum-DelegationController-State-
+[DelegationController-_isDelegated-enum-DelegationController-State-]: delegation/DelegationController.adoc#DelegationController-_isDelegated-enum-DelegationController-State-
+[DelegationController-_calculateDelegationEndMonth-uint256-]: delegation/DelegationController.adoc#DelegationController-_calculateDelegationEndMonth-uint256-
+[DelegationController-_addToDelegatedToValidator-uint256-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_addToDelegatedToValidator-uint256-uint256-uint256-
+[DelegationController-_addToEffectiveDelegatedToValidator-uint256-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_addToEffectiveDelegatedToValidator-uint256-uint256-uint256-
+[DelegationController-_addToDelegatedByHolder-address-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_addToDelegatedByHolder-address-uint256-uint256-
+[DelegationController-_addToDelegatedByHolderToValidator-address-uint256-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_addToDelegatedByHolderToValidator-address-uint256-uint256-uint256-
+[DelegationController-_removeFromDelegatedByHolder-address-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_removeFromDelegatedByHolder-address-uint256-uint256-
+[DelegationController-_removeFromDelegatedByHolderToValidator-address-uint256-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_removeFromDelegatedByHolderToValidator-address-uint256-uint256-uint256-
+[DelegationController-_addToEffectiveDelegatedByHolderToValidator-address-uint256-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_addToEffectiveDelegatedByHolderToValidator-address-uint256-uint256-uint256-
+[DelegationController-_removeFromEffectiveDelegatedByHolderToValidator-address-uint256-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_removeFromEffectiveDelegatedByHolderToValidator-address-uint256-uint256-uint256-
+[DelegationController-_getAndUpdateDelegatedByHolder-address-]: delegation/DelegationController.adoc#DelegationController-_getAndUpdateDelegatedByHolder-address-
+[DelegationController-_getAndUpdateDelegatedByHolderToValidator-address-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_getAndUpdateDelegatedByHolderToValidator-address-uint256-uint256-
+[DelegationController-_addToLockedInPendingDelegations-address-uint256-]: delegation/DelegationController.adoc#DelegationController-_addToLockedInPendingDelegations-address-uint256-
+[DelegationController-_subtractFromLockedInPendingDelegations-address-uint256-]: delegation/DelegationController.adoc#DelegationController-_subtractFromLockedInPendingDelegations-address-uint256-
+[DelegationController-_getCurrentMonth--]: delegation/DelegationController.adoc#DelegationController-_getCurrentMonth--
+[DelegationController-_getAndUpdateLockedAmount-address-]: delegation/DelegationController.adoc#DelegationController-_getAndUpdateLockedAmount-address-
+[DelegationController-_updateFirstDelegationMonth-address-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_updateFirstDelegationMonth-address-uint256-uint256-
+[DelegationController-_everDelegated-address-]: delegation/DelegationController.adoc#DelegationController-_everDelegated-address-
+[DelegationController-_removeFromDelegatedToValidator-uint256-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_removeFromDelegatedToValidator-uint256-uint256-uint256-
+[DelegationController-_removeFromEffectiveDelegatedToValidator-uint256-uint256-uint256-]: delegation/DelegationController.adoc#DelegationController-_removeFromEffectiveDelegatedToValidator-uint256-uint256-uint256-
+[DelegationController-_calculateDelegationAmountAfterSlashing-uint256-]: delegation/DelegationController.adoc#DelegationController-_calculateDelegationAmountAfterSlashing-uint256-
+[DelegationController-_putToSlashingLog-struct-DelegationController-SlashingLog-struct-FractionUtils-Fraction-uint256-]: delegation/DelegationController.adoc#DelegationController-_putToSlashingLog-struct-DelegationController-SlashingLog-struct-FractionUtils-Fraction-uint256-
+[DelegationController-_processSlashesWithoutSignals-address-uint256-]: delegation/DelegationController.adoc#DelegationController-_processSlashesWithoutSignals-address-uint256-
+[DelegationController-_processAllSlashesWithoutSignals-address-]: delegation/DelegationController.adoc#DelegationController-_processAllSlashesWithoutSignals-address-
+[DelegationController-_sendSlashingSignals-struct-DelegationController-SlashingSignal---]: delegation/DelegationController.adoc#DelegationController-_sendSlashingSignals-struct-DelegationController-SlashingSignal---
+[DelegationController-_addToAllStatistics-uint256-]: delegation/DelegationController.adoc#DelegationController-_addToAllStatistics-uint256-
+[DelegationController-DelegationProposed-uint256-]: delegation/DelegationController.adoc#DelegationController-DelegationProposed-uint256-
+[DelegationController-DelegationAccepted-uint256-]: delegation/DelegationController.adoc#DelegationController-DelegationAccepted-uint256-
+[DelegationController-DelegationRequestCanceledByUser-uint256-]: delegation/DelegationController.adoc#DelegationController-DelegationRequestCanceledByUser-uint256-
+[DelegationController-UndelegationRequested-uint256-]: delegation/DelegationController.adoc#DelegationController-UndelegationRequested-uint256-
+[DelegationPeriodManager]: delegation/DelegationPeriodManager.adoc#DelegationPeriodManager
+[DelegationPeriodManager-stakeMultipliers-mapping-uint256----uint256-]: delegation/DelegationPeriodManager.adoc#DelegationPeriodManager-stakeMultipliers-mapping-uint256----uint256-
+[DelegationPeriodManager-setDelegationPeriod-uint256-uint256-]: delegation/DelegationPeriodManager.adoc#DelegationPeriodManager-setDelegationPeriod-uint256-uint256-
+[DelegationPeriodManager-isDelegationPeriodAllowed-uint256-]: delegation/DelegationPeriodManager.adoc#DelegationPeriodManager-isDelegationPeriodAllowed-uint256-
+[DelegationPeriodManager-initialize-address-]: delegation/DelegationPeriodManager.adoc#DelegationPeriodManager-initialize-address-
+[DelegationPeriodManager-DelegationPeriodWasSet-uint256-uint256-]: delegation/DelegationPeriodManager.adoc#DelegationPeriodManager-DelegationPeriodWasSet-uint256-uint256-
+[Distributor]: delegation/Distributor.adoc#Distributor
+[Distributor-getAndUpdateEarnedBountyAmount-uint256-]: delegation/Distributor.adoc#Distributor-getAndUpdateEarnedBountyAmount-uint256-
+[Distributor-withdrawBounty-uint256-address-]: delegation/Distributor.adoc#Distributor-withdrawBounty-uint256-address-
+[Distributor-withdrawFee-address-]: delegation/Distributor.adoc#Distributor-withdrawFee-address-
+[Distributor-tokensReceived-address-address-address-uint256-bytes-bytes-]: delegation/Distributor.adoc#Distributor-tokensReceived-address-address-address-uint256-bytes-bytes-
+[Distributor-getEarnedFeeAmount--]: delegation/Distributor.adoc#Distributor-getEarnedFeeAmount--
+[Distributor-initialize-address-]: delegation/Distributor.adoc#Distributor-initialize-address-
+[Distributor-getAndUpdateEarnedBountyAmountOf-address-uint256-]: delegation/Distributor.adoc#Distributor-getAndUpdateEarnedBountyAmountOf-address-uint256-
+[Distributor-getEarnedFeeAmountOf-uint256-]: delegation/Distributor.adoc#Distributor-getEarnedFeeAmountOf-uint256-
+[Distributor-_distributeBounty-uint256-uint256-]: delegation/Distributor.adoc#Distributor-_distributeBounty-uint256-uint256-
+[Distributor-WithdrawBounty-address-uint256-address-uint256-]: delegation/Distributor.adoc#Distributor-WithdrawBounty-address-uint256-address-uint256-
+[Distributor-WithdrawFee-uint256-address-uint256-]: delegation/Distributor.adoc#Distributor-WithdrawFee-uint256-address-uint256-
+[Distributor-BountyWasPaid-uint256-uint256-]: delegation/Distributor.adoc#Distributor-BountyWasPaid-uint256-uint256-
+[PartialDifferences]: delegation/PartialDifferences.adoc#PartialDifferences
+[PartialDifferences-addToSequence-struct-PartialDifferences-Sequence-uint256-uint256-]: delegation/PartialDifferences.adoc#PartialDifferences-addToSequence-struct-PartialDifferences-Sequence-uint256-uint256-
+[PartialDifferences-subtractFromSequence-struct-PartialDifferences-Sequence-uint256-uint256-]: delegation/PartialDifferences.adoc#PartialDifferences-subtractFromSequence-struct-PartialDifferences-Sequence-uint256-uint256-
+[PartialDifferences-getAndUpdateValueInSequence-struct-PartialDifferences-Sequence-uint256-]: delegation/PartialDifferences.adoc#PartialDifferences-getAndUpdateValueInSequence-struct-PartialDifferences-Sequence-uint256-
+[PartialDifferences-reduceSequence-struct-PartialDifferences-Sequence-struct-FractionUtils-Fraction-uint256-]: delegation/PartialDifferences.adoc#PartialDifferences-reduceSequence-struct-PartialDifferences-Sequence-struct-FractionUtils-Fraction-uint256-
+[PartialDifferences-addToValue-struct-PartialDifferences-Value-uint256-uint256-]: delegation/PartialDifferences.adoc#PartialDifferences-addToValue-struct-PartialDifferences-Value-uint256-uint256-
+[PartialDifferences-subtractFromValue-struct-PartialDifferences-Value-uint256-uint256-]: delegation/PartialDifferences.adoc#PartialDifferences-subtractFromValue-struct-PartialDifferences-Value-uint256-uint256-
+[PartialDifferences-getAndUpdateValue-struct-PartialDifferences-Value-uint256-]: delegation/PartialDifferences.adoc#PartialDifferences-getAndUpdateValue-struct-PartialDifferences-Value-uint256-
+[PartialDifferences-reduceValue-struct-PartialDifferences-Value-uint256-uint256-]: delegation/PartialDifferences.adoc#PartialDifferences-reduceValue-struct-PartialDifferences-Value-uint256-uint256-
+[PartialDifferences-reduceValueByCoefficient-struct-PartialDifferences-Value-struct-FractionUtils-Fraction-uint256-]: delegation/PartialDifferences.adoc#PartialDifferences-reduceValueByCoefficient-struct-PartialDifferences-Value-struct-FractionUtils-Fraction-uint256-
+[PartialDifferences-reduceValueByCoefficientAndUpdateSum-struct-PartialDifferences-Value-struct-PartialDifferences-Value-struct-FractionUtils-Fraction-uint256-]: delegation/PartialDifferences.adoc#PartialDifferences-reduceValueByCoefficientAndUpdateSum-struct-PartialDifferences-Value-struct-PartialDifferences-Value-struct-FractionUtils-Fraction-uint256-
+[PartialDifferences-reduceValueByCoefficientAndUpdateSumIfNeeded-struct-PartialDifferences-Value-struct-PartialDifferences-Value-struct-FractionUtils-Fraction-uint256-bool-]: delegation/PartialDifferences.adoc#PartialDifferences-reduceValueByCoefficientAndUpdateSumIfNeeded-struct-PartialDifferences-Value-struct-PartialDifferences-Value-struct-FractionUtils-Fraction-uint256-bool-
+[PartialDifferences-clear-struct-PartialDifferences-Value-]: delegation/PartialDifferences.adoc#PartialDifferences-clear-struct-PartialDifferences-Value-
+[Punisher]: delegation/Punisher.adoc#Punisher
+[Punisher-slash-uint256-uint256-]: delegation/Punisher.adoc#Punisher-slash-uint256-uint256-
+[Punisher-forgive-address-uint256-]: delegation/Punisher.adoc#Punisher-forgive-address-uint256-
+[Punisher-getAndUpdateLockedAmount-address-]: delegation/Punisher.adoc#Punisher-getAndUpdateLockedAmount-address-
+[Punisher-getAndUpdateForbiddenForDelegationAmount-address-]: delegation/Punisher.adoc#Punisher-getAndUpdateForbiddenForDelegationAmount-address-
+[Punisher-handleSlash-address-uint256-]: delegation/Punisher.adoc#Punisher-handleSlash-address-uint256-
+[Punisher-initialize-address-]: delegation/Punisher.adoc#Punisher-initialize-address-
+[Punisher-_getAndUpdateLockedAmount-address-]: delegation/Punisher.adoc#Punisher-_getAndUpdateLockedAmount-address-
+[Punisher-Slash-uint256-uint256-]: delegation/Punisher.adoc#Punisher-Slash-uint256-uint256-
+[Punisher-Forgive-address-uint256-]: delegation/Punisher.adoc#Punisher-Forgive-address-uint256-
+[TimeHelpers]: delegation/TimeHelpers.adoc#TimeHelpers
+[TimeHelpers-calculateProofOfUseLockEndTime-uint256-uint256-]: delegation/TimeHelpers.adoc#TimeHelpers-calculateProofOfUseLockEndTime-uint256-uint256-
+[TimeHelpers-addMonths-uint256-uint256-]: delegation/TimeHelpers.adoc#TimeHelpers-addMonths-uint256-uint256-
+[TimeHelpers-getCurrentMonth--]: delegation/TimeHelpers.adoc#TimeHelpers-getCurrentMonth--
+[TimeHelpers-timestampToMonth-uint256-]: delegation/TimeHelpers.adoc#TimeHelpers-timestampToMonth-uint256-
+[TimeHelpers-monthToTimestamp-uint256-]: delegation/TimeHelpers.adoc#TimeHelpers-monthToTimestamp-uint256-
+[TokenLaunchLocker]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker
+[TokenLaunchLocker-lock-address-uint256-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-lock-address-uint256-
+[TokenLaunchLocker-handleDelegationAdd-address-uint256-uint256-uint256-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-handleDelegationAdd-address-uint256-uint256-uint256-
+[TokenLaunchLocker-handleDelegationRemoving-address-uint256-uint256-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-handleDelegationRemoving-address-uint256-uint256-
+[TokenLaunchLocker-getAndUpdateLockedAmount-address-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-getAndUpdateLockedAmount-address-
+[TokenLaunchLocker-getAndUpdateForbiddenForDelegationAmount-address-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-getAndUpdateForbiddenForDelegationAmount-address-
+[TokenLaunchLocker-initialize-address-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-initialize-address-
+[TokenLaunchLocker-_getAndUpdateDelegatedAmount-address-uint256-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-_getAndUpdateDelegatedAmount-address-uint256-
+[TokenLaunchLocker-_addToDelegatedAmount-address-uint256-uint256-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-_addToDelegatedAmount-address-uint256-uint256-
+[TokenLaunchLocker-_removeFromDelegatedAmount-address-uint256-uint256-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-_removeFromDelegatedAmount-address-uint256-uint256-
+[TokenLaunchLocker-_addToTotalDelegatedAmount-address-uint256-uint256-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-_addToTotalDelegatedAmount-address-uint256-uint256-
+[TokenLaunchLocker-_unlock-address-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-_unlock-address-
+[TokenLaunchLocker-_deleteDelegatedAmount-address-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-_deleteDelegatedAmount-address-
+[TokenLaunchLocker-_deleteTotalDelegatedAmount-address-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-_deleteTotalDelegatedAmount-address-
+[TokenLaunchLocker-Unlocked-address-uint256-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-Unlocked-address-uint256-
+[TokenLaunchLocker-Locked-address-uint256-]: delegation/TokenLaunchLocker.adoc#TokenLaunchLocker-Locked-address-uint256-
+[TokenLaunchManager]: delegation/TokenLaunchManager.adoc#TokenLaunchManager
+[TokenLaunchManager-onlySeller--]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-onlySeller--
+[TokenLaunchManager-seller-address]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-seller-address
+[TokenLaunchManager-approved-mapping-address----uint256-]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-approved-mapping-address----uint256-
+[TokenLaunchManager-approveBatchOfTransfers-address---uint256---]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-approveBatchOfTransfers-address---uint256---
+[TokenLaunchManager-changeApprovalAddress-address-address-]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-changeApprovalAddress-address-address-
+[TokenLaunchManager-changeApprovalValue-address-uint256-]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-changeApprovalValue-address-uint256-
+[TokenLaunchManager-retrieve--]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-retrieve--
+[TokenLaunchManager-registerSeller-address-]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-registerSeller-address-
+[TokenLaunchManager-tokensReceived-address-address-address-uint256-bytes-bytes-]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-tokensReceived-address-address-address-uint256-bytes-bytes-
+[TokenLaunchManager-initialize-address-]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-initialize-address-
+[TokenLaunchManager-approveTransfer-address-uint256-]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-approveTransfer-address-uint256-
+[TokenLaunchManager-_getBalance--]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-_getBalance--
+[TokenLaunchManager-_setApprovedAmount-address-uint256-]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-_setApprovedAmount-address-uint256-
+[TokenLaunchManager-Approved-address-uint256-]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-Approved-address-uint256-
+[TokenLaunchManager-TokensRetrieved-address-uint256-]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-TokensRetrieved-address-uint256-
+[TokenLaunchManager-SellerWasRegistered-address-]: delegation/TokenLaunchManager.adoc#TokenLaunchManager-SellerWasRegistered-address-
+[TokenState]: delegation/TokenState.adoc#TokenState
+[TokenState-getAndUpdateLockedAmount-address-]: delegation/TokenState.adoc#TokenState-getAndUpdateLockedAmount-address-
+[TokenState-getAndUpdateForbiddenForDelegationAmount-address-]: delegation/TokenState.adoc#TokenState-getAndUpdateForbiddenForDelegationAmount-address-
+[TokenState-removeLocker-string-]: delegation/TokenState.adoc#TokenState-removeLocker-string-
+[TokenState-initialize-address-]: delegation/TokenState.adoc#TokenState-initialize-address-
+[TokenState-addLocker-string-]: delegation/TokenState.adoc#TokenState-addLocker-string-
+[TokenState-LockerWasAdded-string-]: delegation/TokenState.adoc#TokenState-LockerWasAdded-string-
+[TokenState-LockerWasRemoved-string-]: delegation/TokenState.adoc#TokenState-LockerWasRemoved-string-
+[ValidatorService]: delegation/ValidatorService.adoc#ValidatorService
+[ValidatorService-checkValidatorExists-uint256-]: delegation/ValidatorService.adoc#ValidatorService-checkValidatorExists-uint256-
+[ValidatorService-validators-mapping-uint256----struct-ValidatorService-Validator-]: delegation/ValidatorService.adoc#ValidatorService-validators-mapping-uint256----struct-ValidatorService-Validator-
+[ValidatorService-trustedValidators-mapping-uint256----bool-]: delegation/ValidatorService.adoc#ValidatorService-trustedValidators-mapping-uint256----bool-
+[ValidatorService-numberOfValidators-uint256]: delegation/ValidatorService.adoc#ValidatorService-numberOfValidators-uint256
+[ValidatorService-useWhitelist-bool]: delegation/ValidatorService.adoc#ValidatorService-useWhitelist-bool
+[ValidatorService-registerValidator-string-string-uint256-uint256-]: delegation/ValidatorService.adoc#ValidatorService-registerValidator-string-string-uint256-uint256-
+[ValidatorService-enableValidator-uint256-]: delegation/ValidatorService.adoc#ValidatorService-enableValidator-uint256-
+[ValidatorService-disableValidator-uint256-]: delegation/ValidatorService.adoc#ValidatorService-disableValidator-uint256-
+[ValidatorService-disableWhitelist--]: delegation/ValidatorService.adoc#ValidatorService-disableWhitelist--
+[ValidatorService-requestForNewAddress-address-]: delegation/ValidatorService.adoc#ValidatorService-requestForNewAddress-address-
+[ValidatorService-confirmNewAddress-uint256-]: delegation/ValidatorService.adoc#ValidatorService-confirmNewAddress-uint256-
+[ValidatorService-linkNodeAddress-address-bytes-]: delegation/ValidatorService.adoc#ValidatorService-linkNodeAddress-address-bytes-
+[ValidatorService-unlinkNodeAddress-address-]: delegation/ValidatorService.adoc#ValidatorService-unlinkNodeAddress-address-
+[ValidatorService-pushNode-address-uint256-]: delegation/ValidatorService.adoc#ValidatorService-pushNode-address-uint256-
+[ValidatorService-deleteNode-uint256-uint256-]: delegation/ValidatorService.adoc#ValidatorService-deleteNode-uint256-uint256-
+[ValidatorService-checkPossibilityCreatingNode-address-]: delegation/ValidatorService.adoc#ValidatorService-checkPossibilityCreatingNode-address-
+[ValidatorService-checkPossibilityToMaintainNode-uint256-uint256-]: delegation/ValidatorService.adoc#ValidatorService-checkPossibilityToMaintainNode-uint256-uint256-
+[ValidatorService-setValidatorMDA-uint256-]: delegation/ValidatorService.adoc#ValidatorService-setValidatorMDA-uint256-
+[ValidatorService-getAndUpdateBondAmount-uint256-]: delegation/ValidatorService.adoc#ValidatorService-getAndUpdateBondAmount-uint256-
+[ValidatorService-setValidatorName-string-]: delegation/ValidatorService.adoc#ValidatorService-setValidatorName-string-
+[ValidatorService-setValidatorDescription-string-]: delegation/ValidatorService.adoc#ValidatorService-setValidatorDescription-string-
+[ValidatorService-startAcceptingNewRequests--]: delegation/ValidatorService.adoc#ValidatorService-startAcceptingNewRequests--
+[ValidatorService-stopAcceptingNewRequests--]: delegation/ValidatorService.adoc#ValidatorService-stopAcceptingNewRequests--
+[ValidatorService-getMyNodesAddresses--]: delegation/ValidatorService.adoc#ValidatorService-getMyNodesAddresses--
+[ValidatorService-getTrustedValidators--]: delegation/ValidatorService.adoc#ValidatorService-getTrustedValidators--
+[ValidatorService-checkMinimumDelegation-uint256-uint256-]: delegation/ValidatorService.adoc#ValidatorService-checkMinimumDelegation-uint256-uint256-
+[ValidatorService-checkValidatorAddressToId-address-uint256-]: delegation/ValidatorService.adoc#ValidatorService-checkValidatorAddressToId-address-uint256-
+[ValidatorService-getValidatorNodeIndexes-uint256-]: delegation/ValidatorService.adoc#ValidatorService-getValidatorNodeIndexes-uint256-
+[ValidatorService-initialize-address-]: delegation/ValidatorService.adoc#ValidatorService-initialize-address-
+[ValidatorService-getValidatorIdByNodeAddress-address-]: delegation/ValidatorService.adoc#ValidatorService-getValidatorIdByNodeAddress-address-
+[ValidatorService-getNodeAddresses-uint256-]: delegation/ValidatorService.adoc#ValidatorService-getNodeAddresses-uint256-
+[ValidatorService-validatorExists-uint256-]: delegation/ValidatorService.adoc#ValidatorService-validatorExists-uint256-
+[ValidatorService-validatorAddressExists-address-]: delegation/ValidatorService.adoc#ValidatorService-validatorAddressExists-address-
+[ValidatorService-checkIfValidatorAddressExists-address-]: delegation/ValidatorService.adoc#ValidatorService-checkIfValidatorAddressExists-address-
+[ValidatorService-getValidator-uint256-]: delegation/ValidatorService.adoc#ValidatorService-getValidator-uint256-
+[ValidatorService-getValidatorId-address-]: delegation/ValidatorService.adoc#ValidatorService-getValidatorId-address-
+[ValidatorService-isAcceptingNewRequests-uint256-]: delegation/ValidatorService.adoc#ValidatorService-isAcceptingNewRequests-uint256-
+[ValidatorService-_findNode-uint256---uint256-]: delegation/ValidatorService.adoc#ValidatorService-_findNode-uint256---uint256-
+[ValidatorService-_setValidatorAddress-uint256-address-]: delegation/ValidatorService.adoc#ValidatorService-_setValidatorAddress-uint256-address-
+[ValidatorService-_addNodeAddress-uint256-address-]: delegation/ValidatorService.adoc#ValidatorService-_addNodeAddress-uint256-address-
+[ValidatorService-_removeNodeAddress-uint256-address-]: delegation/ValidatorService.adoc#ValidatorService-_removeNodeAddress-uint256-address-
+[ValidatorService-ValidatorRegistered-uint256-]: delegation/ValidatorService.adoc#ValidatorService-ValidatorRegistered-uint256-
+[ValidatorService-ValidatorAddressChanged-uint256-address-]: delegation/ValidatorService.adoc#ValidatorService-ValidatorAddressChanged-uint256-address-
+[ValidatorService-ValidatorWasEnabled-uint256-]: delegation/ValidatorService.adoc#ValidatorService-ValidatorWasEnabled-uint256-
+[ValidatorService-ValidatorWasDisabled-uint256-]: delegation/ValidatorService.adoc#ValidatorService-ValidatorWasDisabled-uint256-
+[ValidatorService-NodeAddressWasAdded-uint256-address-]: delegation/ValidatorService.adoc#ValidatorService-NodeAddressWasAdded-uint256-address-
+[ValidatorService-NodeAddressWasRemoved-uint256-address-]: delegation/ValidatorService.adoc#ValidatorService-NodeAddressWasRemoved-uint256-address-
+[IGroupsData]: interfaces/IGroupsData.adoc#IGroupsData
+[IGroupsData-addGroup-bytes32-uint256-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-addGroup-bytes32-uint256-bytes32-
+[IGroupsData-removeAllNodesInGroup-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-removeAllNodesInGroup-bytes32-
+[IGroupsData-setNodeInGroup-bytes32-uint256-]: interfaces/IGroupsData.adoc#IGroupsData-setNodeInGroup-bytes32-uint256-
+[IGroupsData-setNodesInGroup-bytes32-uint256---]: interfaces/IGroupsData.adoc#IGroupsData-setNodesInGroup-bytes32-uint256---
+[IGroupsData-removeExceptionNode-bytes32-uint256-]: interfaces/IGroupsData.adoc#IGroupsData-removeExceptionNode-bytes32-uint256-
+[IGroupsData-removeGroup-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-removeGroup-bytes32-
+[IGroupsData-setException-bytes32-uint256-]: interfaces/IGroupsData.adoc#IGroupsData-setException-bytes32-uint256-
+[IGroupsData-removeNodeFromGroup-uint256-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-removeNodeFromGroup-uint256-bytes32-
+[IGroupsData-setPublicKey-bytes32-uint256-uint256-uint256-uint256-]: interfaces/IGroupsData.adoc#IGroupsData-setPublicKey-bytes32-uint256-uint256-uint256-uint256-
+[IGroupsData-setGroupFailedDKG-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-setGroupFailedDKG-bytes32-
+[IGroupsData-isGroupActive-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-isGroupActive-bytes32-
+[IGroupsData-isExceptionNode-bytes32-uint256-]: interfaces/IGroupsData.adoc#IGroupsData-isExceptionNode-bytes32-uint256-
+[IGroupsData-getGroupsPublicKey-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-getGroupsPublicKey-bytes32-
+[IGroupsData-getNodesInGroup-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-getNodesInGroup-bytes32-
+[IGroupsData-getGroupData-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-getGroupData-bytes32-
+[IGroupsData-getRecommendedNumberOfNodes-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-getRecommendedNumberOfNodes-bytes32-
+[IGroupsData-getNumberOfNodesInGroup-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-getNumberOfNodesInGroup-bytes32-
+[IGroupsData-isGroupFailedDKG-bytes32-]: interfaces/IGroupsData.adoc#IGroupsData-isGroupFailedDKG-bytes32-
+[INodesFunctionality]: interfaces/INodesFunctionality.adoc#INodesFunctionality
+[INodesFunctionality-createNode-address-bytes-]: interfaces/INodesFunctionality.adoc#INodesFunctionality-createNode-address-bytes-
+[INodesFunctionality-initExit-address-uint256-]: interfaces/INodesFunctionality.adoc#INodesFunctionality-initExit-address-uint256-
+[INodesFunctionality-completeExit-address-uint256-]: interfaces/INodesFunctionality.adoc#INodesFunctionality-completeExit-address-uint256-
+[INodesFunctionality-removeNode-address-uint256-]: interfaces/INodesFunctionality.adoc#INodesFunctionality-removeNode-address-uint256-
+[INodesFunctionality-removeNodeByRoot-uint256-]: interfaces/INodesFunctionality.adoc#INodesFunctionality-removeNodeByRoot-uint256-
+[ISchainsFunctionality]: interfaces/ISchainsFunctionality.adoc#ISchainsFunctionality
+[ISchainsFunctionality-addSchain-address-uint256-bytes-]: interfaces/ISchainsFunctionality.adoc#ISchainsFunctionality-addSchain-address-uint256-bytes-
+[ISchainsFunctionality-deleteSchain-address-string-]: interfaces/ISchainsFunctionality.adoc#ISchainsFunctionality-deleteSchain-address-string-
+[ISchainsFunctionality-deleteSchainByRoot-string-]: interfaces/ISchainsFunctionality.adoc#ISchainsFunctionality-deleteSchainByRoot-string-
+[ISchainsFunctionality-rotateNode-uint256-bytes32-]: interfaces/ISchainsFunctionality.adoc#ISchainsFunctionality-rotateNode-uint256-bytes32-
+[ISchainsFunctionality-exitFromSchain-uint256-]: interfaces/ISchainsFunctionality.adoc#ISchainsFunctionality-exitFromSchain-uint256-
+[ISchainsFunctionalityInternal]: interfaces/ISchainsFunctionalityInternal.adoc#ISchainsFunctionalityInternal
+[ISchainsFunctionalityInternal-createGroupForSchain-string-bytes32-uint256-uint8-]: interfaces/ISchainsFunctionalityInternal.adoc#ISchainsFunctionalityInternal-createGroupForSchain-string-bytes32-uint256-uint8-
+[ISchainsFunctionalityInternal-deleteGroup-bytes32-]: interfaces/ISchainsFunctionalityInternal.adoc#ISchainsFunctionalityInternal-deleteGroup-bytes32-
+[ISchainsFunctionalityInternal-selectNodeToGroup-bytes32-]: interfaces/ISchainsFunctionalityInternal.adoc#ISchainsFunctionalityInternal-selectNodeToGroup-bytes32-
+[ISchainsFunctionalityInternal-removeNodeFromSchain-uint256-bytes32-]: interfaces/ISchainsFunctionalityInternal.adoc#ISchainsFunctionalityInternal-removeNodeFromSchain-uint256-bytes32-
+[ISchainsFunctionalityInternal-removeNodeFromExceptions-bytes32-uint256-]: interfaces/ISchainsFunctionalityInternal.adoc#ISchainsFunctionalityInternal-removeNodeFromExceptions-bytes32-uint256-
+[ISchainsFunctionalityInternal-excludeNodeFromSchain-uint256-bytes32-]: interfaces/ISchainsFunctionalityInternal.adoc#ISchainsFunctionalityInternal-excludeNodeFromSchain-uint256-bytes32-
+[ISchainsFunctionalityInternal-getNodesDataFromTypeOfSchain-uint256-]: interfaces/ISchainsFunctionalityInternal.adoc#ISchainsFunctionalityInternal-getNodesDataFromTypeOfSchain-uint256-
+[ISchainsFunctionalityInternal-findSchainAtSchainsForNode-uint256-bytes32-]: interfaces/ISchainsFunctionalityInternal.adoc#ISchainsFunctionalityInternal-findSchainAtSchainsForNode-uint256-bytes32-
+[ISchainsFunctionalityInternal-isEnoughNodes-bytes32-]: interfaces/ISchainsFunctionalityInternal.adoc#ISchainsFunctionalityInternal-isEnoughNodes-bytes32-
+[IDelegatableToken]: interfaces/delegation/IDelegatableToken.adoc#IDelegatableToken
+[IDelegatableToken-getAndUpdateLockedAmount-address-]: interfaces/delegation/IDelegatableToken.adoc#IDelegatableToken-getAndUpdateLockedAmount-address-
+[IDelegatableToken-getAndUpdateDelegatedAmount-address-]: interfaces/delegation/IDelegatableToken.adoc#IDelegatableToken-getAndUpdateDelegatedAmount-address-
+[IDelegatableToken-getAndUpdateSlashedAmount-address-]: interfaces/delegation/IDelegatableToken.adoc#IDelegatableToken-getAndUpdateSlashedAmount-address-
+[ILocker]: interfaces/delegation/ILocker.adoc#ILocker
+[ILocker-getAndUpdateLockedAmount-address-]: interfaces/delegation/ILocker.adoc#ILocker-getAndUpdateLockedAmount-address-
+[ILocker-getAndUpdateForbiddenForDelegationAmount-address-]: interfaces/delegation/ILocker.adoc#ILocker-getAndUpdateForbiddenForDelegationAmount-address-
+[MathUtilsTester]: test/MathUtilsTester.adoc#MathUtilsTester
+[MathUtilsTester-boundedSub-uint256-uint256-]: test/MathUtilsTester.adoc#MathUtilsTester-boundedSub-uint256-uint256-
+[MathUtilsTester-boundedSubWithoutEvent-uint256-uint256-]: test/MathUtilsTester.adoc#MathUtilsTester-boundedSubWithoutEvent-uint256-uint256-
+[MathUtilsTester-muchGreater-uint256-uint256-]: test/MathUtilsTester.adoc#MathUtilsTester-muchGreater-uint256-uint256-
+[MathUtilsTester-approximatelyEqual-uint256-uint256-]: test/MathUtilsTester.adoc#MathUtilsTester-approximatelyEqual-uint256-uint256-
+[PartialDifferencesTester]: test/PartialDifferencesTester.adoc#PartialDifferencesTester
+[PartialDifferencesTester-createSequence--]: test/PartialDifferencesTester.adoc#PartialDifferencesTester-createSequence--
+[PartialDifferencesTester-addToSequence-uint256-uint256-uint256-]: test/PartialDifferencesTester.adoc#PartialDifferencesTester-addToSequence-uint256-uint256-uint256-
+[PartialDifferencesTester-subtractFromSequence-uint256-uint256-uint256-]: test/PartialDifferencesTester.adoc#PartialDifferencesTester-subtractFromSequence-uint256-uint256-uint256-
+[PartialDifferencesTester-getAndUpdateSequenceItem-uint256-uint256-]: test/PartialDifferencesTester.adoc#PartialDifferencesTester-getAndUpdateSequenceItem-uint256-uint256-
+[PartialDifferencesTester-reduceSequence-uint256-uint256-uint256-uint256-]: test/PartialDifferencesTester.adoc#PartialDifferencesTester-reduceSequence-uint256-uint256-uint256-uint256-
+[PartialDifferencesTester-latestSequence--]: test/PartialDifferencesTester.adoc#PartialDifferencesTester-latestSequence--
+[ReentrancyTester]: test/ReentrancyTester.adoc#ReentrancyTester
+[ReentrancyTester-constructor-address-]: test/ReentrancyTester.adoc#ReentrancyTester-constructor-address-
+[ReentrancyTester-tokensReceived-address-address-address-uint256-bytes-bytes-]: test/ReentrancyTester.adoc#ReentrancyTester-tokensReceived-address-address-address-uint256-bytes-bytes-
+[ReentrancyTester-tokensToSend-address-address-address-uint256-bytes-bytes-]: test/ReentrancyTester.adoc#ReentrancyTester-tokensToSend-address-address-address-uint256-bytes-bytes-
+[ReentrancyTester-prepareToReentracyCheck--]: test/ReentrancyTester.adoc#ReentrancyTester-prepareToReentracyCheck--
+[ReentrancyTester-prepareToBurningAttack--]: test/ReentrancyTester.adoc#ReentrancyTester-prepareToBurningAttack--
+[ReentrancyTester-burningAttack--]: test/ReentrancyTester.adoc#ReentrancyTester-burningAttack--
+[SkaleManagerMock]: test/SkaleManagerMock.adoc#SkaleManagerMock
+[SkaleManagerMock-constructor-address-]: test/SkaleManagerMock.adoc#SkaleManagerMock-constructor-address-
+[SkaleManagerMock-payBounty-uint256-uint256-]: test/SkaleManagerMock.adoc#SkaleManagerMock-payBounty-uint256-uint256-
+[SkaleManagerMock-tokensReceived-address-address-address-uint256-bytes-bytes-]: test/SkaleManagerMock.adoc#SkaleManagerMock-tokensReceived-address-address-address-uint256-bytes-bytes-
+[SkaleTokenInternalTester]: test/SkaleTokenInternalTester.adoc#SkaleTokenInternalTester
+[SkaleTokenInternalTester-constructor-address-address---]: test/SkaleTokenInternalTester.adoc#SkaleTokenInternalTester-constructor-address-address---
+[SkaleTokenInternalTester-getMsgData--]: test/SkaleTokenInternalTester.adoc#SkaleTokenInternalTester-getMsgData--
+[TimeHelpersWithDebug]: test/TimeHelpersWithDebug.adoc#TimeHelpersWithDebug
+[TimeHelpersWithDebug-skipTime-uint256-]: test/TimeHelpersWithDebug.adoc#TimeHelpersWithDebug-skipTime-uint256-
+[TimeHelpersWithDebug-initialize--]: test/TimeHelpersWithDebug.adoc#TimeHelpersWithDebug-initialize--
+[TimeHelpersWithDebug-timestampToMonth-uint256-]: test/TimeHelpersWithDebug.adoc#TimeHelpersWithDebug-timestampToMonth-uint256-
+[TimeHelpersWithDebug-monthToTimestamp-uint256-]: test/TimeHelpersWithDebug.adoc#TimeHelpersWithDebug-monthToTimestamp-uint256-
+[TimeHelpersWithDebug-_getTimeShift-uint256-]: test/TimeHelpersWithDebug.adoc#TimeHelpersWithDebug-_getTimeShift-uint256-
+[TimeHelpersWithDebug-_findTimeBeforeTimeShift-uint256-]: test/TimeHelpersWithDebug.adoc#TimeHelpersWithDebug-_findTimeBeforeTimeShift-uint256-
+[BokkyPooBahsDateTimeLibrary]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary
+[BokkyPooBahsDateTimeLibrary-SECONDS_PER_DAY-uint256]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-SECONDS_PER_DAY-uint256
+[BokkyPooBahsDateTimeLibrary-SECONDS_PER_HOUR-uint256]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-SECONDS_PER_HOUR-uint256
+[BokkyPooBahsDateTimeLibrary-SECONDS_PER_MINUTE-uint256]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-SECONDS_PER_MINUTE-uint256
+[BokkyPooBahsDateTimeLibrary-OFFSET19700101-int256]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-OFFSET19700101-int256
+[BokkyPooBahsDateTimeLibrary-DOW_MON-uint256]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-DOW_MON-uint256
+[BokkyPooBahsDateTimeLibrary-DOW_TUE-uint256]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-DOW_TUE-uint256
+[BokkyPooBahsDateTimeLibrary-DOW_WED-uint256]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-DOW_WED-uint256
+[BokkyPooBahsDateTimeLibrary-DOW_THU-uint256]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-DOW_THU-uint256
+[BokkyPooBahsDateTimeLibrary-DOW_FRI-uint256]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-DOW_FRI-uint256
+[BokkyPooBahsDateTimeLibrary-DOW_SAT-uint256]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-DOW_SAT-uint256
+[BokkyPooBahsDateTimeLibrary-DOW_SUN-uint256]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-DOW_SUN-uint256
+[BokkyPooBahsDateTimeLibrary-_daysFromDate-uint256-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-_daysFromDate-uint256-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-_daysToDate-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-_daysToDate-uint256-
+[BokkyPooBahsDateTimeLibrary-timestampFromDate-uint256-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-timestampFromDate-uint256-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-timestampFromDateTime-uint256-uint256-uint256-uint256-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-timestampFromDateTime-uint256-uint256-uint256-uint256-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-timestampToDate-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-timestampToDate-uint256-
+[BokkyPooBahsDateTimeLibrary-timestampToDateTime-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-timestampToDateTime-uint256-
+[BokkyPooBahsDateTimeLibrary-isValidDate-uint256-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-isValidDate-uint256-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-isValidDateTime-uint256-uint256-uint256-uint256-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-isValidDateTime-uint256-uint256-uint256-uint256-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-isLeapYear-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-isLeapYear-uint256-
+[BokkyPooBahsDateTimeLibrary-_isLeapYear-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-_isLeapYear-uint256-
+[BokkyPooBahsDateTimeLibrary-isWeekDay-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-isWeekDay-uint256-
+[BokkyPooBahsDateTimeLibrary-isWeekEnd-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-isWeekEnd-uint256-
+[BokkyPooBahsDateTimeLibrary-getDaysInMonth-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-getDaysInMonth-uint256-
+[BokkyPooBahsDateTimeLibrary-_getDaysInMonth-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-_getDaysInMonth-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-getDayOfWeek-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-getDayOfWeek-uint256-
+[BokkyPooBahsDateTimeLibrary-getYear-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-getYear-uint256-
+[BokkyPooBahsDateTimeLibrary-getMonth-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-getMonth-uint256-
+[BokkyPooBahsDateTimeLibrary-getDay-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-getDay-uint256-
+[BokkyPooBahsDateTimeLibrary-getHour-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-getHour-uint256-
+[BokkyPooBahsDateTimeLibrary-getMinute-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-getMinute-uint256-
+[BokkyPooBahsDateTimeLibrary-getSecond-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-getSecond-uint256-
+[BokkyPooBahsDateTimeLibrary-addYears-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-addYears-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-addMonths-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-addMonths-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-addDays-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-addDays-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-addHours-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-addHours-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-addMinutes-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-addMinutes-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-addSeconds-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-addSeconds-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-subYears-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-subYears-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-subMonths-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-subMonths-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-subDays-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-subDays-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-subHours-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-subHours-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-subMinutes-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-subMinutes-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-subSeconds-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-subSeconds-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-diffYears-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-diffYears-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-diffMonths-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-diffMonths-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-diffDays-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-diffDays-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-diffHours-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-diffHours-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-diffMinutes-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-diffMinutes-uint256-uint256-
+[BokkyPooBahsDateTimeLibrary-diffSeconds-uint256-uint256-]: thirdparty/BokkyPooBahsDateTimeLibrary.adoc#BokkyPooBahsDateTimeLibrary-diffSeconds-uint256-uint256-
+[ERC777]: thirdparty/openzeppelin/ERC777.adoc#ERC777
+[ERC777-_ERC1820_REGISTRY-contract-IERC1820Registry]: thirdparty/openzeppelin/ERC777.adoc#ERC777-_ERC1820_REGISTRY-contract-IERC1820Registry
+[ERC777-constructor-string-string-address---]: thirdparty/openzeppelin/ERC777.adoc#ERC777-constructor-string-string-address---
+[ERC777-name--]: thirdparty/openzeppelin/ERC777.adoc#ERC777-name--
+[ERC777-symbol--]: thirdparty/openzeppelin/ERC777.adoc#ERC777-symbol--
+[ERC777-decimals--]: thirdparty/openzeppelin/ERC777.adoc#ERC777-decimals--
+[ERC777-granularity--]: thirdparty/openzeppelin/ERC777.adoc#ERC777-granularity--
+[ERC777-totalSupply--]: thirdparty/openzeppelin/ERC777.adoc#ERC777-totalSupply--
+[ERC777-balanceOf-address-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-balanceOf-address-
+[ERC777-send-address-uint256-bytes-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-send-address-uint256-bytes-
+[ERC777-transfer-address-uint256-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-transfer-address-uint256-
+[ERC777-burn-uint256-bytes-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-burn-uint256-bytes-
+[ERC777-isOperatorFor-address-address-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-isOperatorFor-address-address-
+[ERC777-authorizeOperator-address-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-authorizeOperator-address-
+[ERC777-revokeOperator-address-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-revokeOperator-address-
+[ERC777-defaultOperators--]: thirdparty/openzeppelin/ERC777.adoc#ERC777-defaultOperators--
+[ERC777-operatorSend-address-address-uint256-bytes-bytes-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-operatorSend-address-address-uint256-bytes-bytes-
+[ERC777-operatorBurn-address-uint256-bytes-bytes-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-operatorBurn-address-uint256-bytes-bytes-
+[ERC777-allowance-address-address-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-allowance-address-address-
+[ERC777-approve-address-uint256-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-approve-address-uint256-
+[ERC777-transferFrom-address-address-uint256-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-transferFrom-address-address-uint256-
+[ERC777-_mint-address-uint256-bytes-bytes-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-_mint-address-uint256-bytes-bytes-
+[ERC777-_send-address-address-uint256-bytes-bytes-bool-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-_send-address-address-uint256-bytes-bytes-bool-
+[ERC777-_burn-address-uint256-bytes-bytes-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-_burn-address-uint256-bytes-bytes-
+[ERC777-_approve-address-address-uint256-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-_approve-address-address-uint256-
+[ERC777-_callTokensToSend-address-address-address-uint256-bytes-bytes-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-_callTokensToSend-address-address-address-uint256-bytes-bytes-
+[ERC777-_callTokensReceived-address-address-address-uint256-bytes-bytes-bool-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-_callTokensReceived-address-address-address-uint256-bytes-bytes-bool-
+[ERC777-_beforeTokenTransfer-address-address-address-uint256-]: thirdparty/openzeppelin/ERC777.adoc#ERC777-_beforeTokenTransfer-address-address-address-uint256-
+[FractionUtils]: utils/FractionUtils.adoc#FractionUtils
+[FractionUtils-createFraction-uint256-uint256-]: utils/FractionUtils.adoc#FractionUtils-createFraction-uint256-uint256-
+[FractionUtils-createFraction-uint256-]: utils/FractionUtils.adoc#FractionUtils-createFraction-uint256-
+[FractionUtils-reduceFraction-struct-FractionUtils-Fraction-]: utils/FractionUtils.adoc#FractionUtils-reduceFraction-struct-FractionUtils-Fraction-
+[FractionUtils-multiplyFraction-struct-FractionUtils-Fraction-struct-FractionUtils-Fraction-]: utils/FractionUtils.adoc#FractionUtils-multiplyFraction-struct-FractionUtils-Fraction-struct-FractionUtils-Fraction-
+[FractionUtils-gcd-uint256-uint256-]: utils/FractionUtils.adoc#FractionUtils-gcd-uint256-uint256-
+[FractionUtils-swap-uint256-uint256-]: utils/FractionUtils.adoc#FractionUtils-swap-uint256-uint256-
+[MathUtils]: utils/MathUtils.adoc#MathUtils
+[MathUtils-boundedSub-uint256-uint256-]: utils/MathUtils.adoc#MathUtils-boundedSub-uint256-uint256-
+[MathUtils-boundedSubWithoutEvent-uint256-uint256-]: utils/MathUtils.adoc#MathUtils-boundedSubWithoutEvent-uint256-uint256-
+[MathUtils-muchGreater-uint256-uint256-]: utils/MathUtils.adoc#MathUtils-muchGreater-uint256-uint256-
+[MathUtils-approximatelyEqual-uint256-uint256-]: utils/MathUtils.adoc#MathUtils-approximatelyEqual-uint256-uint256-
+[MathUtils-UnderflowError-uint256-uint256-]: utils/MathUtils.adoc#MathUtils-UnderflowError-uint256-uint256-
+[Precompiled]: utils/Precompiled.adoc#Precompiled
+[Precompiled-bigModExp-uint256-uint256-uint256-]: utils/Precompiled.adoc#Precompiled-bigModExp-uint256-uint256-uint256-
+[Precompiled-bn256Pairing-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-]: utils/Precompiled.adoc#Precompiled-bn256Pairing-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-
+[StringUtils]: utils/StringUtils.adoc#StringUtils
+[StringUtils-strConcat-string-string-]: utils/StringUtils.adoc#StringUtils-strConcat-string-string-
+[StringUtils-uint2str-uint256-]: utils/StringUtils.adoc#StringUtils-uint2str-uint256-
+:ECDH: pass:normal[xref:#ECDH[`++ECDH++`]]
+:publicKey: pass:normal[xref:#ECDH-publicKey-uint256-[`++publicKey++`]]
+:deriveKey: pass:normal[xref:#ECDH-deriveKey-uint256-uint256-uint256-[`++deriveKey++`]]
+:jAdd: pass:normal[xref:#ECDH-jAdd-uint256-uint256-uint256-uint256-[`++jAdd++`]]
+:jSub: pass:normal[xref:#ECDH-jSub-uint256-uint256-uint256-uint256-[`++jSub++`]]
+:jMul: pass:normal[xref:#ECDH-jMul-uint256-uint256-uint256-uint256-[`++jMul++`]]
+:jDiv: pass:normal[xref:#ECDH-jDiv-uint256-uint256-uint256-uint256-[`++jDiv++`]]
+:inverse: pass:normal[xref:#ECDH-inverse-uint256-[`++inverse++`]]
+:ecAdd: pass:normal[xref:#ECDH-ecAdd-uint256-uint256-uint256-uint256-uint256-uint256-[`++ecAdd++`]]
+:ecDouble: pass:normal[xref:#ECDH-ecDouble-uint256-uint256-uint256-[`++ecDouble++`]]
+:ecMul: pass:normal[xref:#ECDH-ecMul-uint256-uint256-uint256-uint256-[`++ecMul++`]]
 
 [.contract]
 [[ECDH]]
@@ -20,16 +799,16 @@
 [.contract-index]
 .Functions
 --
-* <<ECDH-publicKey-uint256-,`++publicKey(privKey)++`>>
-* <<ECDH-deriveKey-uint256-uint256-uint256-,`++deriveKey(privKey, pubX, pubY)++`>>
-* <<ECDH-jAdd-uint256-uint256-uint256-uint256-,`++jAdd(x1, z1, x2, z2)++`>>
-* <<ECDH-jSub-uint256-uint256-uint256-uint256-,`++jSub(x1, z1, x2, z2)++`>>
-* <<ECDH-jMul-uint256-uint256-uint256-uint256-,`++jMul(x1, z1, x2, z2)++`>>
-* <<ECDH-jDiv-uint256-uint256-uint256-uint256-,`++jDiv(x1, z1, x2, z2)++`>>
-* <<ECDH-inverse-uint256-,`++inverse(a)++`>>
-* <<ECDH-ecAdd-uint256-uint256-uint256-uint256-uint256-uint256-,`++ecAdd(x1, y1, z1, x2, y2, z2)++`>>
-* <<ECDH-ecDouble-uint256-uint256-uint256-,`++ecDouble(x1, y1, z1)++`>>
-* <<ECDH-ecMul-uint256-uint256-uint256-uint256-,`++ecMul(d, x1, y1, z1)++`>>
+* {xref-ECDH-publicKey-uint256-}[`++publicKey(privKey)++`]
+* {xref-ECDH-deriveKey-uint256-uint256-uint256-}[`++deriveKey(privKey, pubX, pubY)++`]
+* {xref-ECDH-jAdd-uint256-uint256-uint256-uint256-}[`++jAdd(x1, z1, x2, z2)++`]
+* {xref-ECDH-jSub-uint256-uint256-uint256-uint256-}[`++jSub(x1, z1, x2, z2)++`]
+* {xref-ECDH-jMul-uint256-uint256-uint256-uint256-}[`++jMul(x1, z1, x2, z2)++`]
+* {xref-ECDH-jDiv-uint256-uint256-uint256-uint256-}[`++jDiv(x1, z1, x2, z2)++`]
+* {xref-ECDH-inverse-uint256-}[`++inverse(a)++`]
+* {xref-ECDH-ecAdd-uint256-uint256-uint256-uint256-uint256-uint256-}[`++ecAdd(x1, y1, z1, x2, y2, z2)++`]
+* {xref-ECDH-ecDouble-uint256-uint256-uint256-}[`++ecDouble(x1, y1, z1)++`]
+* {xref-ECDH-ecMul-uint256-uint256-uint256-uint256-}[`++ecMul(d, x1, y1, z1)++`]
 
 --
 
@@ -37,61 +816,107 @@
 
 [.contract-item]
 [[ECDH-publicKey-uint256-]]
-==== `++publicKey(++[.var-type]#++uint256++#++ ++[.var-name]#++privKey++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++qx++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++qy++#++++` [.item-kind]#external#
+==== `++publicKey(++[.var-type]#++uint256++#++ ++[.var-name]#++privKey++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++qx++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++qy++#++++`
+[.item-kind]#external#
 
 
 
 [.contract-item]
 [[ECDH-deriveKey-uint256-uint256-uint256-]]
-==== `++deriveKey(++[.var-type]#++uint256++#++ ++[.var-name]#++privKey++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++pubX++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++pubY++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++qx++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++qy++#++++` [.item-kind]#external#
+==== `++deriveKey(++[.var-type]#++uint256++#++ ++[.var-name]#++privKey++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++pubX++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++pubY++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++qx++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++qy++#++++`
+[.item-kind]#external#
 
 
 
 [.contract-item]
 [[ECDH-jAdd-uint256-uint256-uint256-uint256-]]
-==== `++jAdd(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z2++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++` [.item-kind]#public#
+==== `++jAdd(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z2++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++`
+[.item-kind]#public#
 
 
 
 [.contract-item]
 [[ECDH-jSub-uint256-uint256-uint256-uint256-]]
-==== `++jSub(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z2++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++` [.item-kind]#public#
+==== `++jSub(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z2++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++`
+[.item-kind]#public#
 
 
 
 [.contract-item]
 [[ECDH-jMul-uint256-uint256-uint256-uint256-]]
-==== `++jMul(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z2++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++` [.item-kind]#public#
+==== `++jMul(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z2++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++`
+[.item-kind]#public#
 
 
 
 [.contract-item]
 [[ECDH-jDiv-uint256-uint256-uint256-uint256-]]
-==== `++jDiv(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z2++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++` [.item-kind]#public#
+==== `++jDiv(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z2++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++`
+[.item-kind]#public#
 
 
 
 [.contract-item]
 [[ECDH-inverse-uint256-]]
-==== `++inverse(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++invA++#++++` [.item-kind]#public#
+==== `++inverse(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++invA++#++++`
+[.item-kind]#public#
 
 
 
 [.contract-item]
 [[ECDH-ecAdd-uint256-uint256-uint256-uint256-uint256-uint256-]]
-==== `++ecAdd(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z2++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y3++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++` [.item-kind]#public#
+==== `++ecAdd(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++y1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++y2++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z2++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++y3++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++`
+[.item-kind]#public#
 
 
 
 [.contract-item]
 [[ECDH-ecDouble-uint256-uint256-uint256-]]
-==== `++ecDouble(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y3++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++` [.item-kind]#public#
+==== `++ecDouble(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++y1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++y3++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++`
+[.item-kind]#public#
 
 
 
 [.contract-item]
 [[ECDH-ecMul-uint256-uint256-uint256-uint256-]]
-==== `++ecMul(++[.var-type]#++uint256++#++ ++[.var-name]#++d++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y3++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++` [.item-kind]#public#
+==== `++ecMul(++[.var-type]#++uint256++#++ ++[.var-name]#++d++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++y1++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z1++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++x3++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++y3++#++,
+++[.var-type]#++uint256++#++ ++[.var-name]#++z3++#++++`
+[.item-kind]#public#
 
 
 
