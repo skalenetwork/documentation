@@ -1357,7 +1357,7 @@
 
 [.contract]
 [[DelegationPeriodManager]]
-=== `++DelegationPeriodManager++`
+= `++DelegationPeriodManager++`
 
 This contract handles all delegation offerings. Delegations are held for
 a specified period (months), and different durations can have different
@@ -1366,25 +1366,6 @@ returns or `stakeMultiplier`. Currently, only delegation periods can be added.
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1393,84 +1374,35 @@ returns or `stakeMultiplier`. Currently, only delegation periods can be added.
 * {xref-DelegationPeriodManager-setDelegationPeriod-uint256-uint256-}[`++setDelegationPeriod(monthsCount, stakeMultiplier)++`]
 * {xref-DelegationPeriodManager-isDelegationPeriodAllowed-uint256-}[`++isDelegationPeriodAllowed(monthsCount)++`]
 * {xref-DelegationPeriodManager-initialize-address-}[`++initialize(contractsAddress)++`]
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
 .Events
 --
 * {xref-DelegationPeriodManager-DelegationPeriodWasSet-uint256-uint256-}[`++DelegationPeriodWasSet(length, stakeMultiplier)++`]
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 
 [.contract-item]
-[[DelegationPeriodManager-setDelegationPeriod-uint256-uint256-]]
-==== `++setDelegationPeriod(++[.var-type]#++uint256++#++ ++[.var-name]#++monthsCount++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++stakeMultiplier++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=DelegationPeriodManager-setDelegationPeriod-uint256-uint256->setDelegationPeriod</a>+++ `++setDelegationPeriod(++[.var-type]#++uint256++#++ ++[.var-name]#++monthsCount++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++stakeMultiplier++#++)++` [.item-kind]#external#
 
 Allows the Owner to create a new available delegation period and
 return in the network.
 Emits DelegationPeriodWasSet event.
 
 [.contract-item]
-[[DelegationPeriodManager-isDelegationPeriodAllowed-uint256-]]
-==== `++isDelegationPeriodAllowed(++[.var-type]#++uint256++#++ ++[.var-name]#++monthsCount++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=DelegationPeriodManager-isDelegationPeriodAllowed-uint256->isDelegationPeriodAllowed</a>+++ `++isDelegationPeriodAllowed(++[.var-type]#++uint256++#++ ++[.var-name]#++monthsCount++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether given delegation period is allowed.
 
 [.contract-item]
-[[DelegationPeriodManager-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=DelegationPeriodManager-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
 
 Initial delegation period and multiplier settings.
 
 
 [.contract-item]
-[[DelegationPeriodManager-DelegationPeriodWasSet-uint256-uint256-]]
-==== `++DelegationPeriodWasSet(++[.var-type]#++uint256++#++ ++[.var-name]#++length++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++stakeMultiplier++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=DelegationPeriodManager-DelegationPeriodWasSet-uint256-uint256->DelegationPeriodWasSet</a>+++ `++DelegationPeriodWasSet(++[.var-type]#++uint256++#++ ++[.var-name]#++length++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++stakeMultiplier++#++)++` [.item-kind]#event#
 
 Emitted when a new delegation period is specified.
 

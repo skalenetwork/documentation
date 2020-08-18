@@ -1361,7 +1361,7 @@
 
 [.contract]
 [[SkaleManager]]
-=== `++SkaleManager++`
+= `++SkaleManager++`
 
 Contract contains functions for node registration and exit, bounty
 management, and monitoring verdicts. TODO: confirm
@@ -1369,28 +1369,6 @@ management, and monitoring verdicts. TODO: confirm
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
-[.contract-subindex-inherited]
-.IERC777Recipient
-
 --
 
 [.contract-index]
@@ -1403,112 +1381,53 @@ management, and monitoring verdicts. TODO: confirm
 * {xref-SkaleManager-deleteSchainByRoot-string-}[`++deleteSchainByRoot(name)++`]
 * {xref-SkaleManager-getBounty-uint256-}[`++getBounty(nodeIndex)++`]
 * {xref-SkaleManager-initialize-address-}[`++initialize(newContractsAddress)++`]
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
-[.contract-subindex-inherited]
-.IERC777Recipient
-
 --
 
 [.contract-index]
 .Events
 --
 * {xref-SkaleManager-BountyReceived-uint256-address-uint256-uint256-uint256-uint256-uint256-uint256-}[`++BountyReceived(nodeIndex, owner, averageDowntime, averageLatency, bounty, previousBlockEvent, time, gasSpend)++`]
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
-[.contract-subindex-inherited]
-.IERC777Recipient
-
 --
 
 
 [.contract-item]
-[[SkaleManager-tokensReceived-address-address-address-uint256-bytes-bytes-]]
-==== `++tokensReceived(++[.var-type]#++address++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++value++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleManager-tokensReceived-address-address-address-uint256-bytes-bytes->tokensReceived</a>+++ `++tokensReceived(++[.var-type]#++address++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++value++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleManager-createNode-uint16-uint16-bytes4-bytes4-bytes32-2--string-]]
-==== `++createNode(++[.var-type]#++uint16++#++ ++[.var-name]#++port++#++, ++[.var-type]#++uint16++#++ ++[.var-name]#++nonce++#++, ++[.var-type]#++bytes4++#++ ++[.var-name]#++ip++#++, ++[.var-type]#++bytes4++#++ ++[.var-name]#++publicIp++#++, ++[.var-type]#++bytes32[2]++#++ ++[.var-name]#++publicKey++#++, ++[.var-type]#++string++#++ ++[.var-name]#++name++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleManager-createNode-uint16-uint16-bytes4-bytes4-bytes32-2--string->createNode</a>+++ `++createNode(++[.var-type]#++uint16++#++ ++[.var-name]#++port++#++, ++[.var-type]#++uint16++#++ ++[.var-name]#++nonce++#++, ++[.var-type]#++bytes4++#++ ++[.var-name]#++ip++#++, ++[.var-type]#++bytes4++#++ ++[.var-name]#++publicIp++#++, ++[.var-type]#++bytes32[2]++#++ ++[.var-name]#++publicKey++#++, ++[.var-type]#++string++#++ ++[.var-name]#++name++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleManager-nodeExit-uint256-]]
-==== `++nodeExit(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleManager-nodeExit-uint256->nodeExit</a>+++ `++nodeExit(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleManager-deleteSchain-string-]]
-==== `++deleteSchain(++[.var-type]#++string++#++ ++[.var-name]#++name++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleManager-deleteSchain-string->deleteSchain</a>+++ `++deleteSchain(++[.var-type]#++string++#++ ++[.var-name]#++name++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleManager-deleteSchainByRoot-string-]]
-==== `++deleteSchainByRoot(++[.var-type]#++string++#++ ++[.var-name]#++name++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleManager-deleteSchainByRoot-string->deleteSchainByRoot</a>+++ `++deleteSchainByRoot(++[.var-type]#++string++#++ ++[.var-name]#++name++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleManager-getBounty-uint256-]]
-==== `++getBounty(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleManager-getBounty-uint256->getBounty</a>+++ `++getBounty(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleManager-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleManager-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#public#
 
 
 
 
 [.contract-item]
-[[SkaleManager-BountyReceived-uint256-address-uint256-uint256-uint256-uint256-uint256-uint256-]]
-==== `++BountyReceived(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++address++#++ ++[.var-name]#++owner++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++averageDowntime++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++averageLatency++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++bounty++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++previousBlockEvent++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++time++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++gasSpend++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleManager-BountyReceived-uint256-address-uint256-uint256-uint256-uint256-uint256-uint256->BountyReceived</a>+++ `++BountyReceived(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++address++#++ ++[.var-name]#++owner++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++averageDowntime++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++averageLatency++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++bounty++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++previousBlockEvent++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++time++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++gasSpend++#++)++` [.item-kind]#event#
 
 Emitted when bounty is received.
 

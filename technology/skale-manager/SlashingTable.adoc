@@ -1355,32 +1355,13 @@
 
 [.contract]
 [[SlashingTable]]
-=== `++SlashingTable++`
+= `++SlashingTable++`
 
 This contract manages slashing conditions and penalties.
 
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1389,75 +1370,27 @@ This contract manages slashing conditions and penalties.
 * {xref-SlashingTable-setPenalty-string-uint256-}[`++setPenalty(offense, penalty)++`]
 * {xref-SlashingTable-getPenalty-string-}[`++getPenalty(offense)++`]
 * {xref-SlashingTable-initialize-address-}[`++initialize(contractManagerAddress)++`]
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
 .Events
 --
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 
 [.contract-item]
-[[SlashingTable-setPenalty-string-uint256-]]
-==== `++setPenalty(++[.var-type]#++string++#++ ++[.var-name]#++offense++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++penalty++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SlashingTable-setPenalty-string-uint256->setPenalty</a>+++ `++setPenalty(++[.var-type]#++string++#++ ++[.var-name]#++offense++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++penalty++#++)++` [.item-kind]#external#
 
 Allows the Owner to set a slashing penalty in SKL tokens for a
 given offense.
 
 [.contract-item]
-[[SlashingTable-getPenalty-string-]]
-==== `++getPenalty(++[.var-type]#++string++#++ ++[.var-name]#++offense++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SlashingTable-getPenalty-string->getPenalty</a>+++ `++getPenalty(++[.var-type]#++string++#++ ++[.var-name]#++offense++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns the penalty in SKL tokens for a given offense.
 
 [.contract-item]
-[[SlashingTable-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SlashingTable-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 

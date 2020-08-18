@@ -1357,7 +1357,7 @@
 
 [.contract]
 [[Migrations]]
-=== `++Migrations++`
+= `++Migrations++`
 
 
 
@@ -1365,7 +1365,6 @@
 .Modifiers
 --
 * {xref-Migrations-restricted--}[`++restricted()++`]
-
 --
 
 [.contract-index]
@@ -1373,26 +1372,22 @@
 --
 * {xref-Migrations-setCompleted-uint256-}[`++setCompleted(completed)++`]
 * {xref-Migrations-upgrade-address-}[`++upgrade(new_address)++`]
-
 --
 
 
 [.contract-item]
-[[Migrations-restricted--]]
-==== `++restricted()++` [.item-kind]#modifier#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Migrations-restricted-->restricted</a>+++ `++restricted()++` [.item-kind]#modifier#
 
 
 
 
 [.contract-item]
-[[Migrations-setCompleted-uint256-]]
-==== `++setCompleted(++[.var-type]#++uint256++#++ ++[.var-name]#++completed++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Migrations-setCompleted-uint256->setCompleted</a>+++ `++setCompleted(++[.var-type]#++uint256++#++ ++[.var-name]#++completed++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Migrations-upgrade-address-]]
-==== `++upgrade(++[.var-type]#++address++#++ ++[.var-name]#++new_address++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Migrations-upgrade-address->upgrade</a>+++ `++upgrade(++[.var-type]#++address++#++ ++[.var-name]#++new_address++#++)++` [.item-kind]#external#
 
 
 

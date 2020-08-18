@@ -1392,32 +1392,13 @@
 
 [.contract]
 [[ConstantsHolder]]
-=== `++ConstantsHolder++`
+= `++ConstantsHolder++`
 
 Contract contains constants and common variables for the SKALE Network.
 
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1434,125 +1415,69 @@ Contract contains constants and common variables for the SKALE Network.
 * {xref-ConstantsHolder-setLimitValidatorsPerDelegator-uint256-}[`++setLimitValidatorsPerDelegator(newLimit)++`]
 * {xref-ConstantsHolder-setFirstDelegationsMonth-uint256-}[`++setFirstDelegationsMonth(month)++`]
 * {xref-ConstantsHolder-initialize-address-}[`++initialize(contractsAddress)++`]
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
 .Events
 --
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 
 [.contract-item]
-[[ConstantsHolder-setPeriods-uint32-uint32-]]
-==== `++setPeriods(++[.var-type]#++uint32++#++ ++[.var-name]#++newRewardPeriod++#++, ++[.var-type]#++uint32++#++ ++[.var-name]#++newDeltaPeriod++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setPeriods-uint32-uint32->setPeriods</a>+++ `++setPeriods(++[.var-type]#++uint32++#++ ++[.var-name]#++newRewardPeriod++#++, ++[.var-type]#++uint32++#++ ++[.var-name]#++newDeltaPeriod++#++)++` [.item-kind]#external#
 
 Allows the Owner to set new reward and delta periods
 This function is only for tests.
 
 [.contract-item]
-[[ConstantsHolder-setCheckTime-uint256-]]
-==== `++setCheckTime(++[.var-type]#++uint256++#++ ++[.var-name]#++newCheckTime++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setCheckTime-uint256->setCheckTime</a>+++ `++setCheckTime(++[.var-type]#++uint256++#++ ++[.var-name]#++newCheckTime++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the new check time.
 This function only for tests.
 
 [.contract-item]
-[[ConstantsHolder-setLatency-uint32-]]
-==== `++setLatency(++[.var-type]#++uint32++#++ ++[.var-name]#++newAllowableLatency++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setLatency-uint32->setLatency</a>+++ `++setLatency(++[.var-type]#++uint32++#++ ++[.var-name]#++newAllowableLatency++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the allowable latency in milliseconds.
 This function is only for testing purposes.
 
 [.contract-item]
-[[ConstantsHolder-setMSR-uint256-]]
-==== `++setMSR(++[.var-type]#++uint256++#++ ++[.var-name]#++newMSR++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setMSR-uint256->setMSR</a>+++ `++setMSR(++[.var-type]#++uint256++#++ ++[.var-name]#++newMSR++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the minimum stake requirement.
 
 [.contract-item]
-[[ConstantsHolder-setLaunchTimestamp-uint256-]]
-==== `++setLaunchTimestamp(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setLaunchTimestamp-uint256->setLaunchTimestamp</a>+++ `++setLaunchTimestamp(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the launch timestamp.
 
 [.contract-item]
-[[ConstantsHolder-setRotationDelay-uint256-]]
-==== `++setRotationDelay(++[.var-type]#++uint256++#++ ++[.var-name]#++newDelay++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setRotationDelay-uint256->setRotationDelay</a>+++ `++setRotationDelay(++[.var-type]#++uint256++#++ ++[.var-name]#++newDelay++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the node rotation delay.
 
 [.contract-item]
-[[ConstantsHolder-setProofOfUseLockUpPeriod-uint256-]]
-==== `++setProofOfUseLockUpPeriod(++[.var-type]#++uint256++#++ ++[.var-name]#++periodDays++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setProofOfUseLockUpPeriod-uint256->setProofOfUseLockUpPeriod</a>+++ `++setProofOfUseLockUpPeriod(++[.var-type]#++uint256++#++ ++[.var-name]#++periodDays++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the proof-of-use lockup period.
 
 [.contract-item]
-[[ConstantsHolder-setProofOfUseDelegationPercentage-uint256-]]
-==== `++setProofOfUseDelegationPercentage(++[.var-type]#++uint256++#++ ++[.var-name]#++percentage++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setProofOfUseDelegationPercentage-uint256->setProofOfUseDelegationPercentage</a>+++ `++setProofOfUseDelegationPercentage(++[.var-type]#++uint256++#++ ++[.var-name]#++percentage++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ConstantsHolder-setLimitValidatorsPerDelegator-uint256-]]
-==== `++setLimitValidatorsPerDelegator(++[.var-type]#++uint256++#++ ++[.var-name]#++newLimit++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setLimitValidatorsPerDelegator-uint256->setLimitValidatorsPerDelegator</a>+++ `++setLimitValidatorsPerDelegator(++[.var-type]#++uint256++#++ ++[.var-name]#++newLimit++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ConstantsHolder-setFirstDelegationsMonth-uint256-]]
-==== `++setFirstDelegationsMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setFirstDelegationsMonth-uint256->setFirstDelegationsMonth</a>+++ `++setFirstDelegationsMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ConstantsHolder-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
 
 constructor in Permissions approach
 

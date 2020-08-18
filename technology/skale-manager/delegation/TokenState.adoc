@@ -1359,7 +1359,7 @@
 
 [.contract]
 [[TokenState]]
-=== `++TokenState++`
+= `++TokenState++`
 
 This contract manages lockers to control token transferability.
 See ILocker.
@@ -1367,28 +1367,6 @@ See ILocker.
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.ILocker
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1399,39 +1377,6 @@ See ILocker.
 * {xref-TokenState-removeLocker-string-}[`++removeLocker(locker)++`]
 * {xref-TokenState-initialize-address-}[`++initialize(contractManagerAddress)++`]
 * {xref-TokenState-addLocker-string-}[`++addLocker(locker)++`]
-
-[.contract-subindex-inherited]
-.ILocker
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
@@ -1439,70 +1384,45 @@ See ILocker.
 --
 * {xref-TokenState-LockerWasAdded-string-}[`++LockerWasAdded(locker)++`]
 * {xref-TokenState-LockerWasRemoved-string-}[`++LockerWasRemoved(locker)++`]
-
-[.contract-subindex-inherited]
-.ILocker
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 
 [.contract-item]
-[[TokenState-getAndUpdateLockedAmount-address-]]
-==== `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Return and update the total locked amount of a given `holder`.
 
 [.contract-item]
-[[TokenState-getAndUpdateForbiddenForDelegationAmount-address-]]
-==== `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-getAndUpdateForbiddenForDelegationAmount-address->getAndUpdateForbiddenForDelegationAmount</a>+++ `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++++` [.item-kind]#external#
 
 Return and update the total non-transferrable and un-delegatable
 amount of a given `holder`.
 
 [.contract-item]
-[[TokenState-removeLocker-string-]]
-==== `++removeLocker(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-removeLocker-string->removeLocker</a>+++ `++removeLocker(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#external#
 
 Allows the Owner to remove a contract from the locker.
 Emits LockerWasRemoved event.
 
 [.contract-item]
-[[TokenState-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[TokenState-addLocker-string-]]
-==== `++addLocker(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-addLocker-string->addLocker</a>+++ `++addLocker(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#public#
 
 Allows the Owner to add a contract to the Locker.
 Emits LockerWasAdded event.
 
 
 [.contract-item]
-[[TokenState-LockerWasAdded-string-]]
-==== `++LockerWasAdded(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-LockerWasAdded-string->LockerWasAdded</a>+++ `++LockerWasAdded(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#event#
 
 Emitted when a contract is added to the locker.
 
 [.contract-item]
-[[TokenState-LockerWasRemoved-string-]]
-==== `++LockerWasRemoved(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-LockerWasRemoved-string->LockerWasRemoved</a>+++ `++LockerWasRemoved(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#event#
 
 Emitted when a contract is removed from the locker.
 

@@ -1354,7 +1354,7 @@
 
 [.contract]
 [[ILocker]]
-=== `++ILocker++`
+= `++ILocker++`
 
 Interface of Locker functions of the {TokenState} contract.
 The SKALE Network has three types of locked tokens:
@@ -1373,20 +1373,17 @@ See `Punisher`.
 --
 * {xref-ILocker-getAndUpdateLockedAmount-address-}[`++getAndUpdateLockedAmount(wallet)++`]
 * {xref-ILocker-getAndUpdateForbiddenForDelegationAmount-address-}[`++getAndUpdateForbiddenForDelegationAmount(wallet)++`]
-
 --
 
 
 
 [.contract-item]
-[[ILocker-getAndUpdateLockedAmount-address-]]
-==== `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ILocker-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns the locked amount of untransferable tokens of a given `wallet`
 
 [.contract-item]
-[[ILocker-getAndUpdateForbiddenForDelegationAmount-address-]]
-==== `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ILocker-getAndUpdateForbiddenForDelegationAmount-address->getAndUpdateForbiddenForDelegationAmount</a>+++ `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns the locked amount of untransferable and un-delegatable tokens of a given `wallet`.
 

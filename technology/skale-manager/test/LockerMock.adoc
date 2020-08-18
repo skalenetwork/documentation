@@ -1354,7 +1354,7 @@
 
 [.contract]
 [[LockerMock]]
-=== `++LockerMock++`
+= `++LockerMock++`
 
 
 
@@ -1364,23 +1364,17 @@
 --
 * {xref-LockerMock-getAndUpdateLockedAmount-address-}[`++getAndUpdateLockedAmount(_)++`]
 * {xref-LockerMock-getAndUpdateForbiddenForDelegationAmount-address-}[`++getAndUpdateForbiddenForDelegationAmount(_)++`]
-
-[.contract-subindex-inherited]
-.ILocker
-
 --
 
 
 
 [.contract-item]
-[[LockerMock-getAndUpdateLockedAmount-address-]]
-==== `++getAndUpdateLockedAmount(++[.var-type]#++address++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=LockerMock-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[LockerMock-getAndUpdateForbiddenForDelegationAmount-address-]]
-==== `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=LockerMock-getAndUpdateForbiddenForDelegationAmount-address->getAndUpdateForbiddenForDelegationAmount</a>+++ `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 

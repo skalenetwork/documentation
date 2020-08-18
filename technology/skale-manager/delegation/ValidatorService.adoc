@@ -1391,7 +1391,7 @@
 
 [.contract]
 [[ValidatorService]]
-=== `++ValidatorService++`
+= `++ValidatorService++`
 
 This contract handles all validator operations including registration,
 node management, validator-specific delegation parameters, and more.
@@ -1402,25 +1402,6 @@ register nodes.
 .Modifiers
 --
 * {xref-ValidatorService-checkValidatorExists-uint256-}[`++checkValidatorExists(validatorId)++`]
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1454,36 +1435,6 @@ register nodes.
 * {xref-ValidatorService-getValidator-uint256-}[`++getValidator(validatorId)++`]
 * {xref-ValidatorService-getValidatorId-address-}[`++getValidatorId(validatorAddress)++`]
 * {xref-ValidatorService-isAcceptingNewRequests-uint256-}[`++isAcceptingNewRequests(validatorId)++`]
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
@@ -1495,33 +1446,16 @@ register nodes.
 * {xref-ValidatorService-ValidatorWasDisabled-uint256-}[`++ValidatorWasDisabled(validatorId)++`]
 * {xref-ValidatorService-NodeAddressWasAdded-uint256-address-}[`++NodeAddressWasAdded(validatorId, nodeAddress)++`]
 * {xref-ValidatorService-NodeAddressWasRemoved-uint256-address-}[`++NodeAddressWasRemoved(validatorId, nodeAddress)++`]
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-item]
-[[ValidatorService-checkValidatorExists-uint256-]]
-==== `++checkValidatorExists(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#modifier#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-checkValidatorExists-uint256->checkValidatorExists</a>+++ `++checkValidatorExists(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#modifier#
 
 
 
 
 [.contract-item]
-[[ValidatorService-registerValidator-string-string-uint256-uint256-]]
-==== `++registerValidator(++[.var-type]#++string++#++ ++[.var-name]#++name++#++, ++[.var-type]#++string++#++ ++[.var-name]#++description++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++feeRate++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++minimumDelegationAmount++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-registerValidator-string-string-uint256-uint256->registerValidator</a>+++ `++registerValidator(++[.var-type]#++string++#++ ++[.var-name]#++name++#++, ++[.var-type]#++string++#++ ++[.var-name]#++description++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++feeRate++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++minimumDelegationAmount++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++++` [.item-kind]#external#
 
 Creates a new validator ID that includes a validator name, description,
 commission or fee rate, and a minimum delegation amount accepted by the validator.
@@ -1531,8 +1465,7 @@ Requirements:
 - Fee rate must be between 0 - 1000‰. Note: in per mille.
 
 [.contract-item]
-[[ValidatorService-enableValidator-uint256-]]
-==== `++enableValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-enableValidator-uint256->enableValidator</a>+++ `++enableValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#external#
 
 Allows Admin to enable a validator by adding their ID to the
 trusted list.
@@ -1541,8 +1474,7 @@ Requirements:
 - Validator must not already be enabled.
 
 [.contract-item]
-[[ValidatorService-disableValidator-uint256-]]
-==== `++disableValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-disableValidator-uint256->disableValidator</a>+++ `++disableValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#external#
 
 Allows Admin to disable a validator by removing their ID from
 the trusted list.
@@ -1551,15 +1483,13 @@ Requirements:
 - Validator must not already be disabled.
 
 [.contract-item]
-[[ValidatorService-disableWhitelist--]]
-==== `++disableWhitelist()++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-disableWhitelist-->disableWhitelist</a>+++ `++disableWhitelist()++` [.item-kind]#external#
 
 Owner can disable the trusted validator list. Once turned off, the
 trusted list cannot be re-enabled.
 
 [.contract-item]
-[[ValidatorService-requestForNewAddress-address-]]
-==== `++requestForNewAddress(++[.var-type]#++address++#++ ++[.var-name]#++newValidatorAddress++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-requestForNewAddress-address->requestForNewAddress</a>+++ `++requestForNewAddress(++[.var-type]#++address++#++ ++[.var-name]#++newValidatorAddress++#++)++` [.item-kind]#external#
 
 Allows msg.sender to request a new address.
 Requirements:
@@ -1567,8 +1497,7 @@ Requirements:
 - New address must not be already registered as a validator.
 
 [.contract-item]
-[[ValidatorService-confirmNewAddress-uint256-]]
-==== `++confirmNewAddress(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-confirmNewAddress-uint256->confirmNewAddress</a>+++ `++confirmNewAddress(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#external#
 
 Allows msg.sender to confirm an address change.
 Emits ValidatorAddressChanged event.
@@ -1576,8 +1505,7 @@ Requirements:
 - Must be owner of new address.
 
 [.contract-item]
-[[ValidatorService-linkNodeAddress-address-bytes-]]
-==== `++linkNodeAddress(++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++sig++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-linkNodeAddress-address-bytes->linkNodeAddress</a>+++ `++linkNodeAddress(++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++sig++#++)++` [.item-kind]#external#
 
 Links a validator ID to a node address. Validator must present
 the node signature of the validator ID.
@@ -1586,173 +1514,146 @@ Requirements:
 - Address must not be assigned to a validator.
 
 [.contract-item]
-[[ValidatorService-unlinkNodeAddress-address-]]
-==== `++unlinkNodeAddress(++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-unlinkNodeAddress-address->unlinkNodeAddress</a>+++ `++unlinkNodeAddress(++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++)++` [.item-kind]#external#
 
 Unlinks a node address from a validator.
 Emits NodeAddressWasRemoved event.
 
 [.contract-item]
-[[ValidatorService-setValidatorMDA-uint256-]]
-==== `++setValidatorMDA(++[.var-type]#++uint256++#++ ++[.var-name]#++minimumDelegationAmount++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-setValidatorMDA-uint256->setValidatorMDA</a>+++ `++setValidatorMDA(++[.var-type]#++uint256++#++ ++[.var-name]#++minimumDelegationAmount++#++)++` [.item-kind]#external#
 
 Allows a validator to set a minimum delegation amount.
 
 [.contract-item]
-[[ValidatorService-setValidatorName-string-]]
-==== `++setValidatorName(++[.var-type]#++string++#++ ++[.var-name]#++newName++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-setValidatorName-string->setValidatorName</a>+++ `++setValidatorName(++[.var-type]#++string++#++ ++[.var-name]#++newName++#++)++` [.item-kind]#external#
 
 Allows a validator to set a new validator name.
 
 [.contract-item]
-[[ValidatorService-setValidatorDescription-string-]]
-==== `++setValidatorDescription(++[.var-type]#++string++#++ ++[.var-name]#++newDescription++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-setValidatorDescription-string->setValidatorDescription</a>+++ `++setValidatorDescription(++[.var-type]#++string++#++ ++[.var-name]#++newDescription++#++)++` [.item-kind]#external#
 
 Allows a validator to set a new validator description.
 
 [.contract-item]
-[[ValidatorService-startAcceptingNewRequests--]]
-==== `++startAcceptingNewRequests()++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-startAcceptingNewRequests-->startAcceptingNewRequests</a>+++ `++startAcceptingNewRequests()++` [.item-kind]#external#
 
 Allows a validator to start accepting new delegation requests.
 Requirements:
 - Must not have already enabled accepting new requests.
 
 [.contract-item]
-[[ValidatorService-stopAcceptingNewRequests--]]
-==== `++stopAcceptingNewRequests()++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-stopAcceptingNewRequests-->stopAcceptingNewRequests</a>+++ `++stopAcceptingNewRequests()++` [.item-kind]#external#
 
 Allows a validator to stop accepting new delegation requests.
 Requirements:
 - Must not have already stopped accepting new requests.
 
 [.contract-item]
-[[ValidatorService-getAndUpdateBondAmount-uint256-]]
-==== `++getAndUpdateBondAmount(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-getAndUpdateBondAmount-uint256->getAndUpdateBondAmount</a>+++ `++getAndUpdateBondAmount(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns the amount of validator bond (self-delegation).
 
 [.contract-item]
-[[ValidatorService-getMyNodesAddresses--]]
-==== `++getMyNodesAddresses() → ++[.var-type]#++address[]++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-getMyNodesAddresses-->getMyNodesAddresses</a>+++ `++getMyNodesAddresses() → ++[.var-type]#++address[]++#++++` [.item-kind]#external#
 
 Returns node addresses linked to the msg.sender.
 
 [.contract-item]
-[[ValidatorService-getTrustedValidators--]]
-==== `++getTrustedValidators() → ++[.var-type]#++uint256[]++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-getTrustedValidators-->getTrustedValidators</a>+++ `++getTrustedValidators() → ++[.var-type]#++uint256[]++#++++` [.item-kind]#external#
 
 Returns the list of trusted validators.
 
 [.contract-item]
-[[ValidatorService-checkMinimumDelegation-uint256-uint256-]]
-==== `++checkMinimumDelegation(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-checkMinimumDelegation-uint256-uint256->checkMinimumDelegation</a>+++ `++checkMinimumDelegation(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether the amount meets or exceeds the validator's minimum
 delegation amount.
 
 [.contract-item]
-[[ValidatorService-checkValidatorAddressToId-address-uint256-]]
-==== `++checkValidatorAddressToId(++[.var-type]#++address++#++ ++[.var-name]#++validatorAddress++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-checkValidatorAddressToId-address-uint256->checkValidatorAddressToId</a>+++ `++checkValidatorAddressToId(++[.var-type]#++address++#++ ++[.var-name]#++validatorAddress++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether the validator ID is linked to the validator address.
 
 [.contract-item]
-[[ValidatorService-getValidatorIdByNodeAddress-address-]]
-==== `++getValidatorIdByNodeAddress(++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-getValidatorIdByNodeAddress-address->getValidatorIdByNodeAddress</a>+++ `++getValidatorIdByNodeAddress(++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++++` [.item-kind]#external#
 
 Returns the validator ID linked to a node address.
 Requirements:
 - Node address must be linked to a validator.
 
 [.contract-item]
-[[ValidatorService-isAuthorizedValidator-uint256-]]
-==== `++isAuthorizedValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-isAuthorizedValidator-uint256->isAuthorizedValidator</a>+++ `++isAuthorizedValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ValidatorService-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[ValidatorService-getNodeAddresses-uint256-]]
-==== `++getNodeAddresses(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++address[]++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-getNodeAddresses-uint256->getNodeAddresses</a>+++ `++getNodeAddresses(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++address[]++#++++` [.item-kind]#public#
 
 Returns a validator's node addresses.
 
 [.contract-item]
-[[ValidatorService-validatorExists-uint256-]]
-==== `++validatorExists(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-validatorExists-uint256->validatorExists</a>+++ `++validatorExists(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 Checks whether validator ID exists.
 
 [.contract-item]
-[[ValidatorService-validatorAddressExists-address-]]
-==== `++validatorAddressExists(++[.var-type]#++address++#++ ++[.var-name]#++validatorAddress++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-validatorAddressExists-address->validatorAddressExists</a>+++ `++validatorAddressExists(++[.var-type]#++address++#++ ++[.var-name]#++validatorAddress++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 Checks whether validator address exists.
 
 [.contract-item]
-[[ValidatorService-checkIfValidatorAddressExists-address-]]
-==== `++checkIfValidatorAddressExists(++[.var-type]#++address++#++ ++[.var-name]#++validatorAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-checkIfValidatorAddressExists-address->checkIfValidatorAddressExists</a>+++ `++checkIfValidatorAddressExists(++[.var-type]#++address++#++ ++[.var-name]#++validatorAddress++#++)++` [.item-kind]#public#
 
 Checks whether validator address exists.
 
 [.contract-item]
-[[ValidatorService-getValidator-uint256-]]
-==== `++getValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++struct ValidatorService.Validator++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-getValidator-uint256->getValidator</a>+++ `++getValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++struct ValidatorService.Validator++#++++` [.item-kind]#public#
 
 Returns the Validator struct.
 
 [.contract-item]
-[[ValidatorService-getValidatorId-address-]]
-==== `++getValidatorId(++[.var-type]#++address++#++ ++[.var-name]#++validatorAddress++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-getValidatorId-address->getValidatorId</a>+++ `++getValidatorId(++[.var-type]#++address++#++ ++[.var-name]#++validatorAddress++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 Returns the validator ID for the given validator address.
 
 [.contract-item]
-[[ValidatorService-isAcceptingNewRequests-uint256-]]
-==== `++isAcceptingNewRequests(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-isAcceptingNewRequests-uint256->isAcceptingNewRequests</a>+++ `++isAcceptingNewRequests(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 Checks whether the validator is currently accepting new delegation requests.
 
 
 [.contract-item]
-[[ValidatorService-ValidatorRegistered-uint256-]]
-==== `++ValidatorRegistered(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-ValidatorRegistered-uint256->ValidatorRegistered</a>+++ `++ValidatorRegistered(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#event#
 
 Emitted when a validator registers.
 
 [.contract-item]
-[[ValidatorService-ValidatorAddressChanged-uint256-address-]]
-==== `++ValidatorAddressChanged(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++newAddress++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-ValidatorAddressChanged-uint256-address->ValidatorAddressChanged</a>+++ `++ValidatorAddressChanged(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++newAddress++#++)++` [.item-kind]#event#
 
 Emitted when a validator address changes.
 
 [.contract-item]
-[[ValidatorService-ValidatorWasEnabled-uint256-]]
-==== `++ValidatorWasEnabled(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-ValidatorWasEnabled-uint256->ValidatorWasEnabled</a>+++ `++ValidatorWasEnabled(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#event#
 
 Emitted when a validator is enabled.
 
 [.contract-item]
-[[ValidatorService-ValidatorWasDisabled-uint256-]]
-==== `++ValidatorWasDisabled(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-ValidatorWasDisabled-uint256->ValidatorWasDisabled</a>+++ `++ValidatorWasDisabled(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#event#
 
 Emitted when a validator is disabled.
 
 [.contract-item]
-[[ValidatorService-NodeAddressWasAdded-uint256-address-]]
-==== `++NodeAddressWasAdded(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-NodeAddressWasAdded-uint256-address->NodeAddressWasAdded</a>+++ `++NodeAddressWasAdded(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++)++` [.item-kind]#event#
 
 Emitted when a node address is linked to a validator.
 
 [.contract-item]
-[[ValidatorService-NodeAddressWasRemoved-uint256-address-]]
-==== `++NodeAddressWasRemoved(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ValidatorService-NodeAddressWasRemoved-uint256-address->NodeAddressWasRemoved</a>+++ `++NodeAddressWasRemoved(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++)++` [.item-kind]#event#
 
 Emitted when a node address is unlinked from a validator.
 

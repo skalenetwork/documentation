@@ -1363,32 +1363,13 @@
 
 [.contract]
 [[NodeRotation]]
-=== `++NodeRotation++`
+= `++NodeRotation++`
 
 
 
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1403,110 +1384,56 @@
 * {xref-NodeRotation-initialize-address-}[`++initialize(newContractsAddress)++`]
 * {xref-NodeRotation-rotateNode-uint256-bytes32-bool-}[`++rotateNode(nodeIndex, schainId, shouldDelay)++`]
 * {xref-NodeRotation-selectNodeToGroup-bytes32-}[`++selectNodeToGroup(schainId)++`]
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
 .Events
 --
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 
 [.contract-item]
-[[NodeRotation-exitFromSchain-uint256-]]
-==== `++exitFromSchain(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=NodeRotation-exitFromSchain-uint256->exitFromSchain</a>+++ `++exitFromSchain(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-freezeSchains-uint256-]]
-==== `++freezeSchains(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=NodeRotation-freezeSchains-uint256->freezeSchains</a>+++ `++freezeSchains(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-removeRotation-bytes32-]]
-==== `++removeRotation(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=NodeRotation-removeRotation-bytes32->removeRotation</a>+++ `++removeRotation(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-skipRotationDelay-bytes32-]]
-==== `++skipRotationDelay(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=NodeRotation-skipRotationDelay-bytes32->skipRotationDelay</a>+++ `++skipRotationDelay(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-getRotation-bytes32-]]
-==== `++getRotation(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainIndex++#++) → ++[.var-type]#++struct NodeRotation.Rotation++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=NodeRotation-getRotation-bytes32->getRotation</a>+++ `++getRotation(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainIndex++#++) → ++[.var-type]#++struct NodeRotation.Rotation++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-getLeavingHistory-uint256-]]
-==== `++getLeavingHistory(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct NodeRotation.LeavingHistory[]++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=NodeRotation-getLeavingHistory-uint256->getLeavingHistory</a>+++ `++getLeavingHistory(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct NodeRotation.LeavingHistory[]++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=NodeRotation-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[NodeRotation-rotateNode-uint256-bytes32-bool-]]
-==== `++rotateNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++bool++#++ ++[.var-name]#++shouldDelay++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newNode++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=NodeRotation-rotateNode-uint256-bytes32-bool->rotateNode</a>+++ `++rotateNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++bool++#++ ++[.var-name]#++shouldDelay++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newNode++#++++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[NodeRotation-selectNodeToGroup-bytes32-]]
-==== `++selectNodeToGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=NodeRotation-selectNodeToGroup-bytes32->selectNodeToGroup</a>+++ `++selectNodeToGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 selectNodeToGroup - pseudo-randomly select new Node for Schain
 

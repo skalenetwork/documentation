@@ -1367,32 +1367,13 @@
 
 [.contract]
 [[KeyStorage]]
-=== `++KeyStorage++`
+= `++KeyStorage++`
 
 
 
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1413,146 +1394,86 @@
 * {xref-KeyStorage-getAllPreviousPublicKeys-bytes32-}[`++getAllPreviousPublicKeys(groupIndex)++`]
 * {xref-KeyStorage-getBLSPublicKey-bytes32-uint256-}[`++getBLSPublicKey(groupIndex, nodeIndex)++`]
 * {xref-KeyStorage-initialize-address-}[`++initialize(contractsAddress)++`]
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
 .Events
 --
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 
 [.contract-item]
-[[KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---]]
-==== `++addBroadcastedData(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++indexInSchain++#++, ++[.var-type]#++struct KeyStorage.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point--->addBroadcastedData</a>+++ `++addBroadcastedData(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++indexInSchain++#++, ++[.var-type]#++struct KeyStorage.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-deleteKey-bytes32-]]
-==== `++deleteKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-deleteKey-bytes32->deleteKey</a>+++ `++deleteKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-initPublicKeyInProgress-bytes32-]]
-==== `++initPublicKeyInProgress(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-initPublicKeyInProgress-bytes32->initPublicKeyInProgress</a>+++ `++initPublicKeyInProgress(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-adding-bytes32-struct-G2Operations-G2Point-]]
-==== `++adding(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-adding-bytes32-struct-G2Operations-G2Point->adding</a>+++ `++adding(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-finalizePublicKey-bytes32-]]
-==== `++finalizePublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-finalizePublicKey-bytes32->finalizePublicKey</a>+++ `++finalizePublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point---]]
-==== `++computePublicValues(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point--->computePublicValues</a>+++ `++computePublicValues(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-]]
-==== `++verify(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeToComplaint++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeToComplaint++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++multipliedShare++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point->verify</a>+++ `++verify(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeToComplaint++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeToComplaint++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++multipliedShare++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getBroadcastedData-bytes32-uint256-]]
-==== `++getBroadcastedData(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct KeyStorage.KeyShare[]++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-getBroadcastedData-bytes32-uint256->getBroadcastedData</a>+++ `++getBroadcastedData(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct KeyStorage.KeyShare[]++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getSecretKeyShare-bytes32-uint256-uint256-]]
-==== `++getSecretKeyShare(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++index++#++) → ++[.var-type]#++bytes32++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-getSecretKeyShare-bytes32-uint256-uint256->getSecretKeyShare</a>+++ `++getSecretKeyShare(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++index++#++) → ++[.var-type]#++bytes32++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getVerificationVector-bytes32-uint256-]]
-==== `++getVerificationVector(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point[]++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-getVerificationVector-bytes32-uint256->getVerificationVector</a>+++ `++getVerificationVector(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point[]++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getCommonPublicKey-bytes32-]]
-==== `++getCommonPublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-getCommonPublicKey-bytes32->getCommonPublicKey</a>+++ `++getCommonPublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getPreviousPublicKey-bytes32-]]
-==== `++getPreviousPublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-getPreviousPublicKey-bytes32->getPreviousPublicKey</a>+++ `++getPreviousPublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getAllPreviousPublicKeys-bytes32-]]
-==== `++getAllPreviousPublicKeys(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point[]++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-getAllPreviousPublicKeys-bytes32->getAllPreviousPublicKeys</a>+++ `++getAllPreviousPublicKeys(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point[]++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getBLSPublicKey-bytes32-uint256-]]
-==== `++getBLSPublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-getBLSPublicKey-bytes32-uint256->getBLSPublicKey</a>+++ `++getBLSPublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=KeyStorage-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
 
 
 

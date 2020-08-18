@@ -8,7 +8,7 @@
 
 [.contract]
 [[{{anchor}}]]
-=== `++{{name}}++`
+= `++{{name}}++`
 
 {{natspec.devdoc}}
 
@@ -16,15 +16,8 @@
 [.contract-index]
 .Modifiers
 --
-{{#each inheritedItems}}
-{{#unless @first}}
-[.contract-subindex-inherited]
-.{{contract.name}}
-{{/unless}}
-{{#each modifiers}}
+{{#each ownModifiers}}
 * {xref-{{slug anchor~}} }[`++{{name}}({{args.names}})++`]
-{{/each}}
-
 {{/each}}
 --
 {{/if}}
@@ -33,15 +26,8 @@
 [.contract-index]
 .Functions
 --
-{{#each inheritedItems}}
-{{#unless @first}}
-[.contract-subindex-inherited]
-.{{contract.name}}
-{{/unless}}
-{{#each functions}}
+{{#each ownFunctions}}
 * {xref-{{slug anchor~}} }[`++{{name}}({{args.names}})++`]
-{{/each}}
-
 {{/each}}
 --
 {{/if}}
@@ -50,23 +36,15 @@
 [.contract-index]
 .Events
 --
-{{#each inheritedItems}}
-{{#unless @first}}
-[.contract-subindex-inherited]
-.{{contract.name}}
-{{/unless}}
-{{#each events}}
+{{#each ownEvents}}
 * {xref-{{slug anchor~}} }[`++{{name}}({{args.names}})++`]
-{{/each}}
-
 {{/each}}
 --
 {{/if}}
 
 {{#each ownModifiers}}
 [.contract-item]
-[[{{anchor}}]]
-==== `++{{name}}({{> typed-variable-array args}})++` [.item-kind]#modifier#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name={{anchor}}>{{name}}</a>+++ `++{{name}}({{> typed-variable-array args}})++` [.item-kind]#modifier#
 
 {{natspec.devdoc}}
 
@@ -74,8 +52,7 @@
 
 {{#each ownFunctions}}
 [.contract-item]
-[[{{anchor}}]]
-==== `++{{name}}({{> typed-variable-array args}}){{#if outputs}} → {{> typed-variable-array outputs}}{{/if}}++` [.item-kind]#{{visibility}}#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name={{anchor}}>{{name}}</a>+++ `++{{name}}({{> typed-variable-array args}}){{#if outputs}} → {{> typed-variable-array outputs}}{{/if}}++` [.item-kind]#{{visibility}}#
 
 {{natspec.devdoc}}
 
@@ -83,8 +60,7 @@
 
 {{#each ownEvents}}
 [.contract-item]
-[[{{anchor}}]]
-==== `++{{name}}({{> typed-variable-array args}})++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name={{anchor}}>{{name}}</a>+++ `++{{name}}({{> typed-variable-array args}})++` [.item-kind]#event#
 
 {{natspec.devdoc}}
 

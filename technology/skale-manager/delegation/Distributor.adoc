@@ -1363,7 +1363,7 @@
 
 [.contract]
 [[Distributor]]
-=== `++Distributor++`
+= `++Distributor++`
 
 This contract handles all distribution functions of bounty and fee
 payments.
@@ -1371,28 +1371,6 @@ payments.
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.IERC777Recipient
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1406,39 +1384,6 @@ payments.
 * {xref-Distributor-initialize-address-}[`++initialize(contractsAddress)++`]
 * {xref-Distributor-getAndUpdateEarnedBountyAmountOf-address-uint256-}[`++getAndUpdateEarnedBountyAmountOf(wallet, validatorId)++`]
 * {xref-Distributor-getEarnedFeeAmountOf-uint256-}[`++getEarnedFeeAmountOf(validatorId)++`]
-
-[.contract-subindex-inherited]
-.IERC777Recipient
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
@@ -1447,36 +1392,16 @@ payments.
 * {xref-Distributor-WithdrawBounty-address-uint256-address-uint256-}[`++WithdrawBounty(holder, validatorId, destination, amount)++`]
 * {xref-Distributor-WithdrawFee-uint256-address-uint256-}[`++WithdrawFee(validatorId, destination, amount)++`]
 * {xref-Distributor-BountyWasPaid-uint256-uint256-}[`++BountyWasPaid(validatorId, amount)++`]
-
-[.contract-subindex-inherited]
-.IERC777Recipient
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 
 [.contract-item]
-[[Distributor-getAndUpdateEarnedBountyAmount-uint256-]]
-==== `++getAndUpdateEarnedBountyAmount(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++earned++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++endMonth++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Distributor-getAndUpdateEarnedBountyAmount-uint256->getAndUpdateEarnedBountyAmount</a>+++ `++getAndUpdateEarnedBountyAmount(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++earned++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++endMonth++#++++` [.item-kind]#external#
 
 Return and update the amount of earned bounty from a validator.
 
 [.contract-item]
-[[Distributor-withdrawBounty-uint256-address-]]
-==== `++withdrawBounty(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Distributor-withdrawBounty-uint256-address->withdrawBounty</a>+++ `++withdrawBounty(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++)++` [.item-kind]#external#
 
 Allows msg.sender to withdraw earned bounty. Bounties are locked
 until launchTimestamp has passed.
@@ -1485,8 +1410,7 @@ Requirements:
 - Bounty must be unlocked.
 
 [.contract-item]
-[[Distributor-withdrawFee-address-]]
-==== `++withdrawFee(++[.var-type]#++address++#++ ++[.var-name]#++to++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Distributor-withdrawFee-address->withdrawFee</a>+++ `++withdrawFee(++[.var-type]#++address++#++ ++[.var-name]#++to++#++)++` [.item-kind]#external#
 
 Allows msg.sender to withdraw earned validator fees. Fees are locked
 until launchTimestamp has passed.
@@ -1495,51 +1419,43 @@ Requirements:
 - Fee must be unlocked.
 
 [.contract-item]
-[[Distributor-tokensReceived-address-address-address-uint256-bytes-bytes-]]
-==== `++tokensReceived(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Distributor-tokensReceived-address-address-address-uint256-bytes-bytes->tokensReceived</a>+++ `++tokensReceived(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Distributor-getEarnedFeeAmount--]]
-==== `++getEarnedFeeAmount() → ++[.var-type]#++uint256++#++ ++[.var-name]#++earned++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++endMonth++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Distributor-getEarnedFeeAmount-->getEarnedFeeAmount</a>+++ `++getEarnedFeeAmount() → ++[.var-type]#++uint256++#++ ++[.var-name]#++earned++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++endMonth++#++++` [.item-kind]#external#
 
 Return the amount of earned validator fees.
 
 [.contract-item]
-[[Distributor-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Distributor-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[Distributor-getAndUpdateEarnedBountyAmountOf-address-uint256-]]
-==== `++getAndUpdateEarnedBountyAmountOf(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++earned++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++endMonth++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Distributor-getAndUpdateEarnedBountyAmountOf-address-uint256->getAndUpdateEarnedBountyAmountOf</a>+++ `++getAndUpdateEarnedBountyAmountOf(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++earned++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++endMonth++#++++` [.item-kind]#public#
 
 Return and update the amount of earned bounties.
 
 [.contract-item]
-[[Distributor-getEarnedFeeAmountOf-uint256-]]
-==== `++getEarnedFeeAmountOf(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++earned++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++endMonth++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Distributor-getEarnedFeeAmountOf-uint256->getEarnedFeeAmountOf</a>+++ `++getEarnedFeeAmountOf(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++earned++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++endMonth++#++++` [.item-kind]#public#
 
 Return the amount of earned fees.
 
 
 [.contract-item]
-[[Distributor-WithdrawBounty-address-uint256-address-uint256-]]
-==== `++WithdrawBounty(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++destination++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Distributor-WithdrawBounty-address-uint256-address-uint256->WithdrawBounty</a>+++ `++WithdrawBounty(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++destination++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted when bounty is withdrawn.
 
 [.contract-item]
-[[Distributor-WithdrawFee-uint256-address-uint256-]]
-==== `++WithdrawFee(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++destination++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Distributor-WithdrawFee-uint256-address-uint256->WithdrawFee</a>+++ `++WithdrawFee(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++destination++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted when a validator fee is withdrawn.
 
 [.contract-item]
-[[Distributor-BountyWasPaid-uint256-uint256-]]
-==== `++BountyWasPaid(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Distributor-BountyWasPaid-uint256-uint256->BountyWasPaid</a>+++ `++BountyWasPaid(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted when bounty is distributed.
 

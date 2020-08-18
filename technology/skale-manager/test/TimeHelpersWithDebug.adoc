@@ -1356,28 +1356,13 @@
 
 [.contract]
 [[TimeHelpersWithDebug]]
-=== `++TimeHelpersWithDebug++`
+= `++TimeHelpersWithDebug++`
 
 
 
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.OwnableUpgradeSafe
-* {xref-OwnableUpgradeSafe-onlyOwner--}[`++onlyOwner()++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
-[.contract-subindex-inherited]
-.TimeHelpers
-
 --
 
 [.contract-index]
@@ -1387,78 +1372,31 @@
 * {xref-TimeHelpersWithDebug-initialize--}[`++initialize()++`]
 * {xref-TimeHelpersWithDebug-timestampToMonth-uint256-}[`++timestampToMonth(timestamp)++`]
 * {xref-TimeHelpersWithDebug-monthToTimestamp-uint256-}[`++monthToTimestamp(month)++`]
-
-[.contract-subindex-inherited]
-.OwnableUpgradeSafe
-* {xref-OwnableUpgradeSafe-__Ownable_init--}[`++__Ownable_init()++`]
-* {xref-OwnableUpgradeSafe-__Ownable_init_unchained--}[`++__Ownable_init_unchained()++`]
-* {xref-OwnableUpgradeSafe-owner--}[`++owner()++`]
-* {xref-OwnableUpgradeSafe-renounceOwnership--}[`++renounceOwnership()++`]
-* {xref-OwnableUpgradeSafe-transferOwnership-address-}[`++transferOwnership(newOwner)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
-[.contract-subindex-inherited]
-.TimeHelpers
-* {xref-TimeHelpers-calculateProofOfUseLockEndTime-uint256-uint256-}[`++calculateProofOfUseLockEndTime(month, lockUpPeriodDays)++`]
-* {xref-TimeHelpers-addDays-uint256-uint256-}[`++addDays(fromTimestamp, n)++`]
-* {xref-TimeHelpers-addMonths-uint256-uint256-}[`++addMonths(fromTimestamp, n)++`]
-* {xref-TimeHelpers-addYears-uint256-uint256-}[`++addYears(fromTimestamp, n)++`]
-* {xref-TimeHelpers-getCurrentMonth--}[`++getCurrentMonth()++`]
-* {xref-TimeHelpers-timestampToDay-uint256-}[`++timestampToDay(timestamp)++`]
-* {xref-TimeHelpers-timestampToYear-uint256-}[`++timestampToYear(timestamp)++`]
-
 --
 
 [.contract-index]
 .Events
 --
-
-[.contract-subindex-inherited]
-.OwnableUpgradeSafe
-* {xref-OwnableUpgradeSafe-OwnershipTransferred-address-address-}[`++OwnershipTransferred(previousOwner, newOwner)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
-[.contract-subindex-inherited]
-.TimeHelpers
-
 --
 
 
 [.contract-item]
-[[TimeHelpersWithDebug-skipTime-uint256-]]
-==== `++skipTime(++[.var-type]#++uint256++#++ ++[.var-name]#++sec++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TimeHelpersWithDebug-skipTime-uint256->skipTime</a>+++ `++skipTime(++[.var-type]#++uint256++#++ ++[.var-name]#++sec++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[TimeHelpersWithDebug-initialize--]]
-==== `++initialize()++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TimeHelpersWithDebug-initialize-->initialize</a>+++ `++initialize()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[TimeHelpersWithDebug-timestampToMonth-uint256-]]
-==== `++timestampToMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TimeHelpersWithDebug-timestampToMonth-uint256->timestampToMonth</a>+++ `++timestampToMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[TimeHelpersWithDebug-monthToTimestamp-uint256-]]
-==== `++monthToTimestamp(++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TimeHelpersWithDebug-monthToTimestamp-uint256->monthToTimestamp</a>+++ `++monthToTimestamp(++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 
 

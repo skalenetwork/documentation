@@ -1354,7 +1354,7 @@
 
 [.contract]
 [[Decryption]]
-=== `++Decryption++`
+= `++Decryption++`
 
 This contract performs encryption and decryption functions.
 Decrypt is used by SkaleDKG contract to decrypt secret key contribution to
@@ -1366,20 +1366,17 @@ validate complaints.
 --
 * {xref-Decryption-encrypt-uint256-bytes32-}[`++encrypt(secretNumber, key)++`]
 * {xref-Decryption-decrypt-bytes32-bytes32-}[`++decrypt(ciphertext, key)++`]
-
 --
 
 
 
 [.contract-item]
-[[Decryption-encrypt-uint256-bytes32-]]
-==== `++encrypt(++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++key++#++) → ++[.var-type]#++bytes32++#++ ++[.var-name]#++ciphertext++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Decryption-encrypt-uint256-bytes32->encrypt</a>+++ `++encrypt(++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++key++#++) → ++[.var-type]#++bytes32++#++ ++[.var-name]#++ciphertext++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Decryption-decrypt-bytes32-bytes32-]]
-==== `++decrypt(++[.var-type]#++bytes32++#++ ++[.var-name]#++ciphertext++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++key++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Decryption-decrypt-bytes32-bytes32->decrypt</a>+++ `++decrypt(++[.var-type]#++bytes32++#++ ++[.var-name]#++ciphertext++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++key++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++++` [.item-kind]#external#
 
 
 

@@ -1360,7 +1360,7 @@
 
 [.contract]
 [[TokenLaunchLocker]]
-=== `++TokenLaunchLocker++`
+= `++TokenLaunchLocker++`
 
 This contract manages lockers applied to the launch process.
 See ILocker.
@@ -1368,28 +1368,6 @@ See ILocker.
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.ILocker
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1401,39 +1379,6 @@ See ILocker.
 * {xref-TokenLaunchLocker-getAndUpdateLockedAmount-address-}[`++getAndUpdateLockedAmount(wallet)++`]
 * {xref-TokenLaunchLocker-getAndUpdateForbiddenForDelegationAmount-address-}[`++getAndUpdateForbiddenForDelegationAmount(_)++`]
 * {xref-TokenLaunchLocker-initialize-address-}[`++initialize(contractManagerAddress)++`]
-
-[.contract-subindex-inherited]
-.ILocker
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
@@ -1441,76 +1386,50 @@ See ILocker.
 --
 * {xref-TokenLaunchLocker-Unlocked-address-uint256-}[`++Unlocked(holder, amount)++`]
 * {xref-TokenLaunchLocker-Locked-address-uint256-}[`++Locked(holder, amount)++`]
-
-[.contract-subindex-inherited]
-.ILocker
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 
 [.contract-item]
-[[TokenLaunchLocker-lock-address-uint256-]]
-==== `++lock(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchLocker-lock-address-uint256->lock</a>+++ `++lock(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows TokenLaunchManager contract to lock an amount of tokens.
 Emits Locked event.
 
 [.contract-item]
-[[TokenLaunchLocker-handleDelegationAdd-address-uint256-uint256-uint256-]]
-==== `++handleDelegationAdd(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchLocker-handleDelegationAdd-address-uint256-uint256-uint256->handleDelegationAdd</a>+++ `++handleDelegationAdd(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
 
 Allows DelegationController contract to add locked tokens to
 a delegation. TODO: confirm
 
 [.contract-item]
-[[TokenLaunchLocker-handleDelegationRemoving-address-uint256-uint256-]]
-==== `++handleDelegationRemoving(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchLocker-handleDelegationRemoving-address-uint256-uint256->handleDelegationRemoving</a>+++ `++handleDelegationRemoving(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
 
 Allows DelegationController contract to remove locked tokens from
 a delegation. TODO: confirm
 
 [.contract-item]
-[[TokenLaunchLocker-getAndUpdateLockedAmount-address-]]
-==== `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchLocker-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns and updates the locked amount of tokens.
 
 [.contract-item]
-[[TokenLaunchLocker-getAndUpdateForbiddenForDelegationAmount-address-]]
-==== `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchLocker-getAndUpdateForbiddenForDelegationAmount-address->getAndUpdateForbiddenForDelegationAmount</a>+++ `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 See ILocker.
 
 [.contract-item]
-[[TokenLaunchLocker-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchLocker-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 
 [.contract-item]
-[[TokenLaunchLocker-Unlocked-address-uint256-]]
-==== `++Unlocked(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchLocker-Unlocked-address-uint256->Unlocked</a>+++ `++Unlocked(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted when an `amount` is unlocked.
 
 [.contract-item]
-[[TokenLaunchLocker-Locked-address-uint256-]]
-==== `++Locked(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchLocker-Locked-address-uint256->Locked</a>+++ `++Locked(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted when an `amount` is locked.
 

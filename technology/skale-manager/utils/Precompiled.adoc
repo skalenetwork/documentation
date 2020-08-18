@@ -1355,7 +1355,7 @@
 
 [.contract]
 [[Precompiled]]
-=== `++Precompiled++`
+= `++Precompiled++`
 
 
 
@@ -1366,26 +1366,22 @@
 * {xref-Precompiled-bigModExp-uint256-uint256-uint256-}[`++bigModExp(base, power, modulus)++`]
 * {xref-Precompiled-bn256ScalarMul-uint256-uint256-uint256-}[`++bn256ScalarMul(x, y, k)++`]
 * {xref-Precompiled-bn256Pairing-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-}[`++bn256Pairing(x1, y1, a1, b1, c1, d1, x2, y2, a2, b2, c2, d2)++`]
-
 --
 
 
 
 [.contract-item]
-[[Precompiled-bigModExp-uint256-uint256-uint256-]]
-==== `++bigModExp(++[.var-type]#++uint256++#++ ++[.var-name]#++base++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++power++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++modulus++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Precompiled-bigModExp-uint256-uint256-uint256->bigModExp</a>+++ `++bigModExp(++[.var-type]#++uint256++#++ ++[.var-name]#++base++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++power++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++modulus++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[Precompiled-bn256ScalarMul-uint256-uint256-uint256-]]
-==== `++bn256ScalarMul(++[.var-type]#++uint256++#++ ++[.var-name]#++x++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++k++#++) → ++[.var-type]#++uint256++#++, ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Precompiled-bn256ScalarMul-uint256-uint256-uint256->bn256ScalarMul</a>+++ `++bn256ScalarMul(++[.var-type]#++uint256++#++ ++[.var-name]#++x++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++k++#++) → ++[.var-type]#++uint256++#++, ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[Precompiled-bn256Pairing-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-]]
-==== `++bn256Pairing(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++a1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++c1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++d1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++a2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++c2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++d2++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Precompiled-bn256Pairing-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256->bn256Pairing</a>+++ `++bn256Pairing(++[.var-type]#++uint256++#++ ++[.var-name]#++x1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++a1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++c1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++d1++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++x2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++a2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++c2++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++d2++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 

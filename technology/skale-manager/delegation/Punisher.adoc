@@ -1360,35 +1360,13 @@
 
 [.contract]
 [[Punisher]]
-=== `++Punisher++`
+= `++Punisher++`
 
 This contract handles all slashing and forgiving operations.
 
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.ILocker
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1400,39 +1378,6 @@ This contract handles all slashing and forgiving operations.
 * {xref-Punisher-getAndUpdateForbiddenForDelegationAmount-address-}[`++getAndUpdateForbiddenForDelegationAmount(wallet)++`]
 * {xref-Punisher-handleSlash-address-uint256-}[`++handleSlash(holder, amount)++`]
 * {xref-Punisher-initialize-address-}[`++initialize(contractManagerAddress)++`]
-
-[.contract-subindex-inherited]
-.ILocker
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
@@ -1440,30 +1385,11 @@ This contract handles all slashing and forgiving operations.
 --
 * {xref-Punisher-Slash-uint256-uint256-}[`++Slash(validatorId, amount)++`]
 * {xref-Punisher-Forgive-address-uint256-}[`++Forgive(wallet, amount)++`]
-
-[.contract-subindex-inherited]
-.ILocker
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 
 [.contract-item]
-[[Punisher-slash-uint256-uint256-]]
-==== `++slash(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-slash-uint256-uint256->slash</a>+++ `++slash(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows SkaleDKG contract to execute slashing on a validator and
 validator's delegations by an `amount` of tokens.
@@ -1472,8 +1398,7 @@ Requirements:
 - Validator must exist.
 
 [.contract-item]
-[[Punisher-forgive-address-uint256-]]
-==== `++forgive(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-forgive-address-uint256->forgive</a>+++ `++forgive(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows the Owner to forgive a slashing condition.
 Emits Forgive event.
@@ -1481,40 +1406,34 @@ Requirements:
 - All slashes must have been processed.
 
 [.contract-item]
-[[Punisher-getAndUpdateLockedAmount-address-]]
-==== `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 See ILocker-getAndUpdateLockedAmount
 
 [.contract-item]
-[[Punisher-getAndUpdateForbiddenForDelegationAmount-address-]]
-==== `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-getAndUpdateForbiddenForDelegationAmount-address->getAndUpdateForbiddenForDelegationAmount</a>+++ `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 See ILocker-getAndUpdateForbiddenForDelegationAmount
 
 [.contract-item]
-[[Punisher-handleSlash-address-uint256-]]
-==== `++handleSlash(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-handleSlash-address-uint256->handleSlash</a>+++ `++handleSlash(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows DelegationController contract to execute slashing of
 delegations.
 
 [.contract-item]
-[[Punisher-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 
 [.contract-item]
-[[Punisher-Slash-uint256-uint256-]]
-==== `++Slash(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-Slash-uint256-uint256->Slash</a>+++ `++Slash(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted upon slashing condition.
 
 [.contract-item]
-[[Punisher-Forgive-address-uint256-]]
-==== `++Forgive(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-Forgive-address-uint256->Forgive</a>+++ `++Forgive(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted upon forgive condition.
 

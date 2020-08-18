@@ -1358,38 +1358,13 @@
 
 [.contract]
 [[ReentrancyTester]]
-=== `++ReentrancyTester++`
+= `++ReentrancyTester++`
 
 
 
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.IERC777Sender
-
-[.contract-subindex-inherited]
-.IERC777Recipient
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1401,105 +1376,41 @@
 * {xref-ReentrancyTester-prepareToReentracyCheck--}[`++prepareToReentracyCheck()++`]
 * {xref-ReentrancyTester-prepareToBurningAttack--}[`++prepareToBurningAttack()++`]
 * {xref-ReentrancyTester-burningAttack--}[`++burningAttack()++`]
-
-[.contract-subindex-inherited]
-.IERC777Sender
-
-[.contract-subindex-inherited]
-.IERC777Recipient
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-initialize-address-}[`++initialize(contractManagerAddress)++`]
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
 .Events
 --
-
-[.contract-subindex-inherited]
-.IERC777Sender
-
-[.contract-subindex-inherited]
-.IERC777Recipient
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 
 [.contract-item]
-[[ReentrancyTester-constructor-address-]]
-==== `++constructor(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-constructor-address->constructor</a>+++ `++constructor(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[ReentrancyTester-tokensReceived-address-address-address-uint256-bytes-bytes-]]
-==== `++tokensReceived(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-tokensReceived-address-address-address-uint256-bytes-bytes->tokensReceived</a>+++ `++tokensReceived(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ReentrancyTester-tokensToSend-address-address-address-uint256-bytes-bytes-]]
-==== `++tokensToSend(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++uint256++#++, ++[.var-type]#++bytes++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-tokensToSend-address-address-address-uint256-bytes-bytes->tokensToSend</a>+++ `++tokensToSend(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++uint256++#++, ++[.var-type]#++bytes++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ReentrancyTester-prepareToReentracyCheck--]]
-==== `++prepareToReentracyCheck()++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-prepareToReentracyCheck-->prepareToReentracyCheck</a>+++ `++prepareToReentracyCheck()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ReentrancyTester-prepareToBurningAttack--]]
-==== `++prepareToBurningAttack()++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-prepareToBurningAttack-->prepareToBurningAttack</a>+++ `++prepareToBurningAttack()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ReentrancyTester-burningAttack--]]
-==== `++burningAttack()++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-burningAttack-->burningAttack</a>+++ `++burningAttack()++` [.item-kind]#external#
 
 
 

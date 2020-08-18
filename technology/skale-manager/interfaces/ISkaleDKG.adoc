@@ -1356,7 +1356,7 @@
 
 [.contract]
 [[ISkaleDKG]]
-=== `++ISkaleDKG++`
+= `++ISkaleDKG++`
 
 
 
@@ -1368,32 +1368,27 @@
 * {xref-ISkaleDKG-deleteChannel-bytes32-}[`++deleteChannel(schainId)++`]
 * {xref-ISkaleDKG-isLastDKGSuccesful-bytes32-}[`++isLastDKGSuccesful(groupIndex)++`]
 * {xref-ISkaleDKG-isChannelOpened-bytes32-}[`++isChannelOpened(schainId)++`]
-
 --
 
 
 
 [.contract-item]
-[[ISkaleDKG-openChannel-bytes32-]]
-==== `++openChannel(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ISkaleDKG-openChannel-bytes32->openChannel</a>+++ `++openChannel(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ISkaleDKG-deleteChannel-bytes32-]]
-==== `++deleteChannel(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ISkaleDKG-deleteChannel-bytes32->deleteChannel</a>+++ `++deleteChannel(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ISkaleDKG-isLastDKGSuccesful-bytes32-]]
-==== `++isLastDKGSuccesful(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ISkaleDKG-isLastDKGSuccesful-bytes32->isLastDKGSuccesful</a>+++ `++isLastDKGSuccesful(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ISkaleDKG-isChannelOpened-bytes32-]]
-==== `++isChannelOpened(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ISkaleDKG-isChannelOpened-bytes32->isChannelOpened</a>+++ `++isChannelOpened(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 

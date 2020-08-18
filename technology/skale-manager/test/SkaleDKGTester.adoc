@@ -1353,150 +1353,29 @@
 
 [.contract]
 [[SkaleDKGTester]]
-=== `++SkaleDKGTester++`
+= `++SkaleDKGTester++`
 
 
 
 [.contract-index]
 .Modifiers
 --
-
-[.contract-subindex-inherited]
-.SkaleDKG
-* {xref-SkaleDKG-correctGroup-bytes32-}[`++correctGroup(groupIndex)++`]
-* {xref-SkaleDKG-correctGroupWithoutRevert-bytes32-}[`++correctGroupWithoutRevert(groupIndex)++`]
-* {xref-SkaleDKG-correctNode-bytes32-uint256-}[`++correctNode(groupIndex, nodeIndex)++`]
-
-[.contract-subindex-inherited]
-.ISkaleDKG
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
 .Functions
 --
 * {xref-SkaleDKGTester-setSuccesfulDKGPublic-bytes32-}[`++setSuccesfulDKGPublic(groupIndex)++`]
-
-[.contract-subindex-inherited]
-.SkaleDKG
-* {xref-SkaleDKG-openChannel-bytes32-}[`++openChannel(groupIndex)++`]
-* {xref-SkaleDKG-deleteChannel-bytes32-}[`++deleteChannel(groupIndex)++`]
-* {xref-SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---}[`++broadcast(groupIndex, nodeIndex, verificationVector, secretKeyContribution)++`]
-* {xref-SkaleDKG-complaint-bytes32-uint256-uint256-}[`++complaint(groupIndex, fromNodeIndex, toNodeIndex)++`]
-* {xref-SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-}[`++response(groupIndex, fromNodeIndex, secretNumber, multipliedShare)++`]
-* {xref-SkaleDKG-alright-bytes32-uint256-}[`++alright(groupIndex, fromNodeIndex)++`]
-* {xref-SkaleDKG-getChannelStartedTime-bytes32-}[`++getChannelStartedTime(groupIndex)++`]
-* {xref-SkaleDKG-getNumberOfBroadcasted-bytes32-}[`++getNumberOfBroadcasted(groupIndex)++`]
-* {xref-SkaleDKG-getNumberOfCompleted-bytes32-}[`++getNumberOfCompleted(groupIndex)++`]
-* {xref-SkaleDKG-getTimeOfLastSuccesfulDKG-bytes32-}[`++getTimeOfLastSuccesfulDKG(groupIndex)++`]
-* {xref-SkaleDKG-getComplaintData-bytes32-}[`++getComplaintData(groupIndex)++`]
-* {xref-SkaleDKG-getComplaintStartedTime-bytes32-}[`++getComplaintStartedTime(groupIndex)++`]
-* {xref-SkaleDKG-getAlrightStartedTime-bytes32-}[`++getAlrightStartedTime(groupIndex)++`]
-* {xref-SkaleDKG-isChannelOpened-bytes32-}[`++isChannelOpened(groupIndex)++`]
-* {xref-SkaleDKG-isLastDKGSuccesful-bytes32-}[`++isLastDKGSuccesful(groupIndex)++`]
-* {xref-SkaleDKG-isBroadcastPossible-bytes32-uint256-}[`++isBroadcastPossible(groupIndex, nodeIndex)++`]
-* {xref-SkaleDKG-isComplaintPossible-bytes32-uint256-uint256-}[`++isComplaintPossible(groupIndex, fromNodeIndex, toNodeIndex)++`]
-* {xref-SkaleDKG-isAlrightPossible-bytes32-uint256-}[`++isAlrightPossible(groupIndex, nodeIndex)++`]
-* {xref-SkaleDKG-isResponsePossible-bytes32-uint256-}[`++isResponsePossible(groupIndex, nodeIndex)++`]
-* {xref-SkaleDKG-isNodeBroadcasted-bytes32-uint256-}[`++isNodeBroadcasted(groupIndex, nodeIndex)++`]
-* {xref-SkaleDKG-initialize-address-}[`++initialize(contractsAddress)++`]
-* {xref-SkaleDKG-isEveryoneBroadcasted-bytes32-}[`++isEveryoneBroadcasted(groupIndex)++`]
-* {xref-SkaleDKG-isAllDataReceived-bytes32-uint256-}[`++isAllDataReceived(groupIndex, nodeIndex)++`]
-* {xref-SkaleDKG-getT-uint256-}[`++getT(n)++`]
-* {xref-SkaleDKG-_setSuccesfulDKG-bytes32-}[`++_setSuccesfulDKG(groupIndex)++`]
-
-[.contract-subindex-inherited]
-.ISkaleDKG
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
 .Events
 --
-
-[.contract-subindex-inherited]
-.SkaleDKG
-* {xref-SkaleDKG-ChannelOpened-bytes32-}[`++ChannelOpened(groupIndex)++`]
-* {xref-SkaleDKG-ChannelClosed-bytes32-}[`++ChannelClosed(groupIndex)++`]
-* {xref-SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---}[`++BroadcastAndKeyShare(groupIndex, fromNode, verificationVector, secretKeyContribution)++`]
-* {xref-SkaleDKG-AllDataReceived-bytes32-uint256-}[`++AllDataReceived(groupIndex, nodeIndex)++`]
-* {xref-SkaleDKG-SuccessfulDKG-bytes32-}[`++SuccessfulDKG(groupIndex)++`]
-* {xref-SkaleDKG-BadGuy-uint256-}[`++BadGuy(nodeIndex)++`]
-* {xref-SkaleDKG-FailedDKG-bytes32-}[`++FailedDKG(groupIndex)++`]
-* {xref-SkaleDKG-ComplaintSent-bytes32-uint256-uint256-}[`++ComplaintSent(groupIndex, fromNodeIndex, toNodeIndex)++`]
-* {xref-SkaleDKG-NewGuy-uint256-}[`++NewGuy(nodeIndex)++`]
-* {xref-SkaleDKG-ComplaintError-string-}[`++ComplaintError(error)++`]
-
-[.contract-subindex-inherited]
-.ISkaleDKG
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 
 [.contract-item]
-[[SkaleDKGTester-setSuccesfulDKGPublic-bytes32-]]
-==== `++setSuccesfulDKGPublic(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKGTester-setSuccesfulDKGPublic-bytes32->setSuccesfulDKGPublic</a>+++ `++setSuccesfulDKGPublic(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
 
 
 

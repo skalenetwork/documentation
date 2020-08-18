@@ -1396,7 +1396,7 @@
 
 [.contract]
 [[SkaleDKG]]
-=== `++SkaleDKG++`
+= `++SkaleDKG++`
 
 Contains functions to manage distributed key generation per
 Joint-Feldman protocol.
@@ -1407,28 +1407,6 @@ Joint-Feldman protocol.
 * {xref-SkaleDKG-correctGroup-bytes32-}[`++correctGroup(groupIndex)++`]
 * {xref-SkaleDKG-correctGroupWithoutRevert-bytes32-}[`++correctGroupWithoutRevert(groupIndex)++`]
 * {xref-SkaleDKG-correctNode-bytes32-uint256-}[`++correctNode(groupIndex, nodeIndex)++`]
-
-[.contract-subindex-inherited]
-.ISkaleDKG
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-onlyOwner--}[`++onlyOwner()++`]
-* {xref-Permissions-onlyAdmin--}[`++onlyAdmin()++`]
-* {xref-Permissions-allow-string-}[`++allow(contractName)++`]
-* {xref-Permissions-allowTwo-string-string-}[`++allowTwo(contractName1, contractName2)++`]
-* {xref-Permissions-allowThree-string-string-string-}[`++allowThree(contractName1, contractName2, contractName3)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-* {xref-Initializable-initializer--}[`++initializer()++`]
-
 --
 
 [.contract-index]
@@ -1459,39 +1437,6 @@ Joint-Feldman protocol.
 * {xref-SkaleDKG-isAllDataReceived-bytes32-uint256-}[`++isAllDataReceived(groupIndex, nodeIndex)++`]
 * {xref-SkaleDKG-getT-uint256-}[`++getT(n)++`]
 * {xref-SkaleDKG-_setSuccesfulDKG-bytes32-}[`++_setSuccesfulDKG(groupIndex)++`]
-
-[.contract-subindex-inherited]
-.ISkaleDKG
-
-[.contract-subindex-inherited]
-.Permissions
-* {xref-Permissions-_isOwner--}[`++_isOwner()++`]
-* {xref-Permissions-_isAdmin-address-}[`++_isAdmin(account)++`]
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-__AccessControl_init--}[`++__AccessControl_init()++`]
-* {xref-AccessControlUpgradeSafe-__AccessControl_init_unchained--}[`++__AccessControl_init_unchained()++`]
-* {xref-AccessControlUpgradeSafe-hasRole-bytes32-address-}[`++hasRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMemberCount-bytes32-}[`++getRoleMemberCount(role)++`]
-* {xref-AccessControlUpgradeSafe-getRoleMember-bytes32-uint256-}[`++getRoleMember(role, index)++`]
-* {xref-AccessControlUpgradeSafe-getRoleAdmin-bytes32-}[`++getRoleAdmin(role)++`]
-* {xref-AccessControlUpgradeSafe-grantRole-bytes32-address-}[`++grantRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-revokeRole-bytes32-address-}[`++revokeRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-renounceRole-bytes32-address-}[`++renounceRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setupRole-bytes32-address-}[`++_setupRole(role, account)++`]
-* {xref-AccessControlUpgradeSafe-_setRoleAdmin-bytes32-bytes32-}[`++_setRoleAdmin(role, adminRole)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-* {xref-ContextUpgradeSafe-__Context_init--}[`++__Context_init()++`]
-* {xref-ContextUpgradeSafe-__Context_init_unchained--}[`++__Context_init_unchained()++`]
-* {xref-ContextUpgradeSafe-_msgSender--}[`++_msgSender()++`]
-* {xref-ContextUpgradeSafe-_msgData--}[`++_msgData()++`]
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-index]
@@ -1507,48 +1452,26 @@ Joint-Feldman protocol.
 * {xref-SkaleDKG-ComplaintSent-bytes32-uint256-uint256-}[`++ComplaintSent(groupIndex, fromNodeIndex, toNodeIndex)++`]
 * {xref-SkaleDKG-NewGuy-uint256-}[`++NewGuy(nodeIndex)++`]
 * {xref-SkaleDKG-ComplaintError-string-}[`++ComplaintError(error)++`]
-
-[.contract-subindex-inherited]
-.ISkaleDKG
-
-[.contract-subindex-inherited]
-.Permissions
-
-[.contract-subindex-inherited]
-.AccessControlUpgradeSafe
-* {xref-AccessControlUpgradeSafe-RoleGranted-bytes32-address-address-}[`++RoleGranted(role, account, sender)++`]
-* {xref-AccessControlUpgradeSafe-RoleRevoked-bytes32-address-address-}[`++RoleRevoked(role, account, sender)++`]
-
-[.contract-subindex-inherited]
-.ContextUpgradeSafe
-
-[.contract-subindex-inherited]
-.Initializable
-
 --
 
 [.contract-item]
-[[SkaleDKG-correctGroup-bytes32-]]
-==== `++correctGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#modifier#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-correctGroup-bytes32->correctGroup</a>+++ `++correctGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#modifier#
 
 
 
 [.contract-item]
-[[SkaleDKG-correctGroupWithoutRevert-bytes32-]]
-==== `++correctGroupWithoutRevert(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#modifier#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-correctGroupWithoutRevert-bytes32->correctGroupWithoutRevert</a>+++ `++correctGroupWithoutRevert(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#modifier#
 
 
 
 [.contract-item]
-[[SkaleDKG-correctNode-bytes32-uint256-]]
-==== `++correctNode(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#modifier#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-correctNode-bytes32-uint256->correctNode</a>+++ `++correctNode(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#modifier#
 
 
 
 
 [.contract-item]
-[[SkaleDKG-openChannel-bytes32-]]
-==== `++openChannel(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-openChannel-bytes32->openChannel</a>+++ `++openChannel(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
 
 Allows Schains and NodeRotation contracts to open a channel.
 Emits ChannelOpened event.
@@ -1556,16 +1479,14 @@ Requirements:
 - Channel is not already created.
 
 [.contract-item]
-[[SkaleDKG-deleteChannel-bytes32-]]
-==== `++deleteChannel(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-deleteChannel-bytes32->deleteChannel</a>+++ `++deleteChannel(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
 
 Allows SchainsInternal contract to delete a channel.
 Requirements:
 - Channel must exist.
 
 [.contract-item]
-[[SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---]]
-==== `++broadcast(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++, ++[.var-type]#++struct KeyStorage.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare--->broadcast</a>+++ `++broadcast(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++, ++[.var-type]#++struct KeyStorage.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++)++` [.item-kind]#external#
 
 Broadcasts verification vector and secret key contribution to all
 other nodes in the group.
@@ -1575,8 +1496,7 @@ Requirements:
 - VerificationVector must not be empty.
 
 [.contract-item]
-[[SkaleDKG-complaint-bytes32-uint256-uint256-]]
-==== `++complaint(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toNodeIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-complaint-bytes32-uint256-uint256->complaint</a>+++ `++complaint(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toNodeIndex++#++)++` [.item-kind]#external#
 
 Creates a complaint from a node (accuser) to a given node.
 The accusing node must broadcast additional parameters within 1800 blocks.
@@ -1585,189 +1505,158 @@ Requirements:
 - msg.sender must have an associated node.
 
 [.contract-item]
-[[SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-]]
-==== `++response(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++multipliedShare++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point->response</a>+++ `++response(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++multipliedShare++#++)++` [.item-kind]#external#
 
 TODO: confirm
 
 [.contract-item]
-[[SkaleDKG-alright-bytes32-uint256-]]
-==== `++alright(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-alright-bytes32-uint256->alright</a>+++ `++alright(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++)++` [.item-kind]#external#
 
 TODO: confirm
 
 [.contract-item]
-[[SkaleDKG-getChannelStartedTime-bytes32-]]
-==== `++getChannelStartedTime(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-getChannelStartedTime-bytes32->getChannelStartedTime</a>+++ `++getChannelStartedTime(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleDKG-getNumberOfBroadcasted-bytes32-]]
-==== `++getNumberOfBroadcasted(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-getNumberOfBroadcasted-bytes32->getNumberOfBroadcasted</a>+++ `++getNumberOfBroadcasted(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleDKG-getNumberOfCompleted-bytes32-]]
-==== `++getNumberOfCompleted(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-getNumberOfCompleted-bytes32->getNumberOfCompleted</a>+++ `++getNumberOfCompleted(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleDKG-getTimeOfLastSuccesfulDKG-bytes32-]]
-==== `++getTimeOfLastSuccesfulDKG(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-getTimeOfLastSuccesfulDKG-bytes32->getTimeOfLastSuccesfulDKG</a>+++ `++getTimeOfLastSuccesfulDKG(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleDKG-getComplaintData-bytes32-]]
-==== `++getComplaintData(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++, ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-getComplaintData-bytes32->getComplaintData</a>+++ `++getComplaintData(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++, ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleDKG-getComplaintStartedTime-bytes32-]]
-==== `++getComplaintStartedTime(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-getComplaintStartedTime-bytes32->getComplaintStartedTime</a>+++ `++getComplaintStartedTime(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleDKG-getAlrightStartedTime-bytes32-]]
-==== `++getAlrightStartedTime(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-getAlrightStartedTime-bytes32->getAlrightStartedTime</a>+++ `++getAlrightStartedTime(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleDKG-isChannelOpened-bytes32-]]
-==== `++isChannelOpened(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-isChannelOpened-bytes32->isChannelOpened</a>+++ `++isChannelOpened(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether channel is opened.
 
 [.contract-item]
-[[SkaleDKG-isLastDKGSuccesful-bytes32-]]
-==== `++isLastDKGSuccesful(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-isLastDKGSuccesful-bytes32->isLastDKGSuccesful</a>+++ `++isLastDKGSuccesful(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleDKG-isBroadcastPossible-bytes32-uint256-]]
-==== `++isBroadcastPossible(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-isBroadcastPossible-bytes32-uint256->isBroadcastPossible</a>+++ `++isBroadcastPossible(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleDKG-isComplaintPossible-bytes32-uint256-uint256-]]
-==== `++isComplaintPossible(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toNodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-isComplaintPossible-bytes32-uint256-uint256->isComplaintPossible</a>+++ `++isComplaintPossible(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toNodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether complaint is possible.  TODO: confirm
 
 [.contract-item]
-[[SkaleDKG-isAlrightPossible-bytes32-uint256-]]
-==== `++isAlrightPossible(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-isAlrightPossible-bytes32-uint256->isAlrightPossible</a>+++ `++isAlrightPossible(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether sending Alright response is possible.  TODO: confirm
 
 [.contract-item]
-[[SkaleDKG-isResponsePossible-bytes32-uint256-]]
-==== `++isResponsePossible(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-isResponsePossible-bytes32-uint256->isResponsePossible</a>+++ `++isResponsePossible(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether sending a response is possible.  TODO: confirm
 
 [.contract-item]
-[[SkaleDKG-isNodeBroadcasted-bytes32-uint256-]]
-==== `++isNodeBroadcasted(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-isNodeBroadcasted-bytes32-uint256->isNodeBroadcasted</a>+++ `++isNodeBroadcasted(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleDKG-initialize-address-]]
-==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[SkaleDKG-isEveryoneBroadcasted-bytes32-]]
-==== `++isEveryoneBroadcasted(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-isEveryoneBroadcasted-bytes32->isEveryoneBroadcasted</a>+++ `++isEveryoneBroadcasted(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[SkaleDKG-isAllDataReceived-bytes32-uint256-]]
-==== `++isAllDataReceived(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-isAllDataReceived-bytes32-uint256->isAllDataReceived</a>+++ `++isAllDataReceived(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 Checks whether all data has been received.  TODO: confirm
 
 [.contract-item]
-[[SkaleDKG-getT-uint256-]]
-==== `++getT(++[.var-type]#++uint256++#++ ++[.var-name]#++n++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-getT-uint256->getT</a>+++ `++getT(++[.var-type]#++uint256++#++ ++[.var-name]#++n++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[SkaleDKG-_setSuccesfulDKG-bytes32-]]
-==== `++_setSuccesfulDKG(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#internal#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-_setSuccesfulDKG-bytes32->_setSuccesfulDKG</a>+++ `++_setSuccesfulDKG(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#internal#
 
 
 
 
 [.contract-item]
-[[SkaleDKG-ChannelOpened-bytes32-]]
-==== `++ChannelOpened(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-ChannelOpened-bytes32->ChannelOpened</a>+++ `++ChannelOpened(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#event#
 
 Emitted when a channel is opened.
 
 [.contract-item]
-[[SkaleDKG-ChannelClosed-bytes32-]]
-==== `++ChannelClosed(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-ChannelClosed-bytes32->ChannelClosed</a>+++ `++ChannelClosed(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#event#
 
 Emitted when a channel is closed.
 
 [.contract-item]
-[[SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---]]
-==== `++BroadcastAndKeyShare(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNode++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++, ++[.var-type]#++struct KeyStorage.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare--->BroadcastAndKeyShare</a>+++ `++BroadcastAndKeyShare(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNode++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++, ++[.var-type]#++struct KeyStorage.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++)++` [.item-kind]#event#
 
 Emitted when a node broadcasts keyshare. TODO: confirm
 
 [.contract-item]
-[[SkaleDKG-AllDataReceived-bytes32-uint256-]]
-==== `++AllDataReceived(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-AllDataReceived-bytes32-uint256->AllDataReceived</a>+++ `++AllDataReceived(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#event#
 
 Emitted when all group data is received.
 
 [.contract-item]
-[[SkaleDKG-SuccessfulDKG-bytes32-]]
-==== `++SuccessfulDKG(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-SuccessfulDKG-bytes32->SuccessfulDKG</a>+++ `++SuccessfulDKG(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#event#
 
 Emitted when DKG is successful.
 
 [.contract-item]
-[[SkaleDKG-BadGuy-uint256-]]
-==== `++BadGuy(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-BadGuy-uint256->BadGuy</a>+++ `++BadGuy(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#event#
 
 Emitted when a node is validated to be malicious.
 
 [.contract-item]
-[[SkaleDKG-FailedDKG-bytes32-]]
-==== `++FailedDKG(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-FailedDKG-bytes32->FailedDKG</a>+++ `++FailedDKG(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#event#
 
 Emitted when DKG failed.
 
 [.contract-item]
-[[SkaleDKG-ComplaintSent-bytes32-uint256-uint256-]]
-==== `++ComplaintSent(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toNodeIndex++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-ComplaintSent-bytes32-uint256-uint256->ComplaintSent</a>+++ `++ComplaintSent(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toNodeIndex++#++)++` [.item-kind]#event#
 
 Emitted when a complaint is sent.
 
 [.contract-item]
-[[SkaleDKG-NewGuy-uint256-]]
-==== `++NewGuy(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-NewGuy-uint256->NewGuy</a>+++ `++NewGuy(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#event#
 
 Emitted when a new node is rotated in to restart DKG.
 
 [.contract-item]
-[[SkaleDKG-ComplaintError-string-]]
-==== `++ComplaintError(++[.var-type]#++string++#++ ++[.var-name]#++error++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKG-ComplaintError-string->ComplaintError</a>+++ `++ComplaintError(++[.var-type]#++string++#++ ++[.var-name]#++error++#++)++` [.item-kind]#event#
 
 
 
