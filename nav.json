@@ -168,241 +168,241 @@
         },
         {
           "title": "SKALE Manager",
-          "link": "/technology/skale-manager/Nodes",
+          "link": "/technology/skale-manager/nodes",
           "links": [
             {
               "title": "BokkyPooBahsDateTimeLibrary",
-              "link": "/technology/skale-manager/thirdparty/BokkyPooBahsDateTimeLibrary",
+              "link": "/technology/skale-manager/thirdparty/bokkypoobahsdatetimelibrary",
               "links": []
             },
             {
               "title": "Bounty",
-              "link": "/technology/skale-manager/Bounty",
+              "link": "/technology/skale-manager/bounty",
               "links": []
             },
             {
               "title": "ConstantsHolder",
-              "link": "/technology/skale-manager/ConstantsHolder",
+              "link": "/technology/skale-manager/constantsholder",
               "links": []
             },
             {
               "title": "ContractManager",
-              "link": "/technology/skale-manager/ContractManager",
+              "link": "/technology/skale-manager/contractmanager",
               "links": []
             },
             {
               "title": "Decryption",
-              "link": "/technology/skale-manager/Decryption",
+              "link": "/technology/skale-manager/decryption",
               "links": []
             },
             {
               "title": "DelegationController",
-              "link": "/technology/skale-manager/delegation/DelegationController",
+              "link": "/technology/skale-manager/delegation/delegationcontroller",
               "links": []
             },
             {
               "title": "DelegationPeriodManager",
-              "link": "/technology/skale-manager/delegation/DelegationPeriodManager",
+              "link": "/technology/skale-manager/delegation/delegationperiodmanager",
               "links": []
             },
             {
               "title": "Distributor",
-              "link": "/technology/skale-manager/delegation/Distributor",
+              "link": "/technology/skale-manager/delegation/distributor",
               "links": []
             },
             {
               "title": "ECDH",
-              "link": "/technology/skale-manager/ECDH",
+              "link": "/technology/skale-manager/ecdh",
               "links": []
             },
             {
               "title": "ERC777",
-              "link": "/technology/skale-manager/thirdparty/openzeppelin/ERC777",
+              "link": "/technology/skale-manager/thirdparty/openzeppelin/erc777",
               "links": []
             },
             {
               "title": "FieldOperations",
-              "link": "/technology/skale-manager/utils/FieldOperations",
+              "link": "/technology/skale-manager/utils/fieldoperations",
               "links": []
             },
             {
               "title": "FractionUtils",
-              "link": "/technology/skale-manager/utils/FractionUtils",
+              "link": "/technology/skale-manager/utils/fractionutils",
               "links": []
             },
             {
               "title": "IDelegatableToken",
-              "link": "/technology/skale-manager/interfaces/delegation/IDelegatableToken",
+              "link": "/technology/skale-manager/interfaces/delegation/idelegatabletoken",
               "links": []
             },
             {
               "title": "ILocker",
-              "link": "/technology/skale-manager/interfaces/delegation/ILocker",
+              "link": "/technology/skale-manager/interfaces/delegation/ilocker",
               "links": []
             },
             {
               "title": "ISkaleDKG",
-              "link": "/technology/skale-manager/interfaces/ISkaleDKG",
+              "link": "/technology/skale-manager/interfaces/iskaledkg",
               "links": []
             },
             {
               "title": "KeyStorage",
-              "link": "/technology/skale-manager/KeyStorage",
+              "link": "/technology/skale-manager/keystorage",
               "links": []
             },
             {
               "title": "LockerMock",
-              "link": "/technology/skale-manager/test/LockerMock",
+              "link": "/technology/skale-manager/test/lockermock",
               "links": []
             },
             {
               "title": "MathUtils",
-              "link": "/technology/skale-manager/utils/MathUtils",
+              "link": "/technology/skale-manager/utils/mathutils",
               "links": []
             },
             {
               "title": "MathUtilsTester",
-              "link": "/technology/skale-manager/test/MathUtilsTester",
+              "link": "/technology/skale-manager/test/mathutilstester",
               "links": []
             },
             {
               "title": "Migrations",
-              "link": "/technology/skale-manager/Migrations",
+              "link": "/technology/skale-manager/migrations",
               "links": []
             },
             {
               "title": "Monitors",
-              "link": "/technology/skale-manager/Monitors",
+              "link": "/technology/skale-manager/monitors",
               "links": []
             },
             {
               "title": "NodeRotation",
-              "link": "/technology/skale-manager/NodeRotation",
+              "link": "/technology/skale-manager/noderotation",
               "links": []
             },
             {
               "title": "Nodes",
-              "link": "/technology/skale-manager/Nodes",
+              "link": "/technology/skale-manager/nodes",
               "links": []
             },
             {
               "title": "PartialDifferences",
-              "link": "/technology/skale-manager/delegation/PartialDifferences",
+              "link": "/technology/skale-manager/delegation/partialdifferences",
               "links": []
             },
             {
               "title": "PartialDifferencesTester",
-              "link": "/technology/skale-manager/test/PartialDifferencesTester",
+              "link": "/technology/skale-manager/test/partialdifferencestester",
               "links": []
             },
             {
               "title": "Permissions",
-              "link": "/technology/skale-manager/Permissions",
+              "link": "/technology/skale-manager/permissions",
               "links": []
             },
             {
               "title": "Precompiled",
-              "link": "/technology/skale-manager/utils/Precompiled",
+              "link": "/technology/skale-manager/utils/precompiled",
               "links": []
             },
             {
               "title": "Pricing",
-              "link": "/technology/skale-manager/Pricing",
+              "link": "/technology/skale-manager/pricing",
               "links": []
             },
             {
               "title": "Punisher",
-              "link": "/technology/skale-manager/delegation/Punisher",
+              "link": "/technology/skale-manager/delegation/punisher",
               "links": []
             },
             {
               "title": "ReentrancyTester",
-              "link": "/technology/skale-manager/test/ReentrancyTester",
+              "link": "/technology/skale-manager/test/reentrancytester",
               "links": []
             },
             {
               "title": "Schains",
-              "link": "/technology/skale-manager/Schains",
+              "link": "/technology/skale-manager/schains",
               "links": []
             },
             {
               "title": "SchainsInternal",
-              "link": "/technology/skale-manager/SchainsInternal",
+              "link": "/technology/skale-manager/schainsinternal",
               "links": []
             },
             {
               "title": "SkaleDKG",
-              "link": "/technology/skale-manager/SkaleDKG",
+              "link": "/technology/skale-manager/skaledkg",
               "links": []
             },
             {
               "title": "SkaleDKGTester",
-              "link": "/technology/skale-manager/test/SkaleDKGTester",
+              "link": "/technology/skale-manager/test/skaledkgtester",
               "links": []
             },
             {
               "title": "SkaleManager",
-              "link": "/technology/skale-manager/SkaleManager",
+              "link": "/technology/skale-manager/skalemanager",
               "links": []
             },
             {
               "title": "SkaleManagerMock",
-              "link": "/technology/skale-manager/test/SkaleManagerMock",
+              "link": "/technology/skale-manager/test/skalemanagermock",
               "links": []
             },
             {
               "title": "SkaleToken",
-              "link": "/technology/skale-manager/SkaleToken",
+              "link": "/technology/skale-manager/skaletoken",
               "links": []
             },
             {
               "title": "SkaleTokenInternalTester",
-              "link": "/technology/skale-manager/test/SkaleTokenInternalTester",
+              "link": "/technology/skale-manager/test/skaletokeninternaltester",
               "links": []
             },
             {
               "title": "SkaleVerifier",
-              "link": "/technology/skale-manager/SkaleVerifier",
+              "link": "/technology/skale-manager/skaleverifier",
               "links": []
             },
             {
               "title": "SlashingTable",
-              "link": "/technology/skale-manager/SlashingTable",
+              "link": "/technology/skale-manager/slashingtable",
               "links": []
             },
             {
               "title": "StringUtils",
-              "link": "/technology/skale-manager/utils/StringUtils",
+              "link": "/technology/skale-manager/utils/stringutils",
               "links": []
             },
             {
               "title": "TimeHelpers",
-              "link": "/technology/skale-manager/delegation/TimeHelpers",
+              "link": "/technology/skale-manager/delegation/timehelpers",
               "links": []
             },
             {
               "title": "TimeHelpersWithDebug",
-              "link": "/technology/skale-manager/test/TimeHelpersWithDebug",
+              "link": "/technology/skale-manager/test/timehelperswithdebug",
               "links": []
             },
             {
               "title": "TokenLaunchLocker",
-              "link": "/technology/skale-manager/delegation/TokenLaunchLocker",
+              "link": "/technology/skale-manager/delegation/tokenlaunchlocker",
               "links": []
             },
             {
               "title": "TokenLaunchManager",
-              "link": "/technology/skale-manager/delegation/TokenLaunchManager",
+              "link": "/technology/skale-manager/delegation/tokenlaunchmanager",
               "links": []
             },
             {
               "title": "TokenState",
-              "link": "/technology/skale-manager/delegation/TokenState",
+              "link": "/technology/skale-manager/delegation/tokenstate",
               "links": []
             },
             {
               "title": "ValidatorService",
-              "link": "/technology/skale-manager/delegation/ValidatorService",
+              "link": "/technology/skale-manager/delegation/validatorservice",
               "links": []
             }
           ]
