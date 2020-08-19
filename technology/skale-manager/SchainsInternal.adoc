@@ -1455,189 +1455,225 @@ Contract contains all functionality logic to internally manage Schains.
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-initializeSchain-string-address-uint256-uint256->initializeSchain</a>+++ `++initializeSchain(++[.var-type]#++string++#++ ++[.var-name]#++name++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++lifetime++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++deposit++#++)++` [.item-kind]#external#
+[[SchainsInternal-initializeSchain-string-address-uint256-uint256-]]
+==== `++initializeSchain(++[.var-type]#++string++#++ ++[.var-name]#++name++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++lifetime++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++deposit++#++)++` [.item-kind]#external#
 
 Allows Schain contract to initialize an schain.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-createGroupForSchain-bytes32-uint256-uint8->createGroupForSchain</a>+++ `++createGroupForSchain(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++numberOfNodes++#++, ++[.var-type]#++uint8++#++ ++[.var-name]#++partOfNode++#++) → ++[.var-type]#++uint256[]++#++++` [.item-kind]#external#
+[[SchainsInternal-createGroupForSchain-bytes32-uint256-uint8-]]
+==== `++createGroupForSchain(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++numberOfNodes++#++, ++[.var-type]#++uint8++#++ ++[.var-name]#++partOfNode++#++) → ++[.var-type]#++uint256[]++#++++` [.item-kind]#external#
 
 Allows Schain contract to create a node group for an schain.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-setSchainIndex-bytes32-address->setSchainIndex</a>+++ `++setSchainIndex(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++)++` [.item-kind]#external#
+[[SchainsInternal-setSchainIndex-bytes32-address-]]
+==== `++setSchainIndex(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++)++` [.item-kind]#external#
 
 Allows Schains contract to set schain index.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-changeLifetime-bytes32-uint256-uint256->changeLifetime</a>+++ `++changeLifetime(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++lifetime++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++deposit++#++)++` [.item-kind]#external#
+[[SchainsInternal-changeLifetime-bytes32-uint256-uint256-]]
+==== `++changeLifetime(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++lifetime++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++deposit++#++)++` [.item-kind]#external#
 
 Allows Schains contract to change the Schain lifetime through
 an additional SKL token deposit.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-removeSchain-bytes32-address->removeSchain</a>+++ `++removeSchain(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++)++` [.item-kind]#external#
+[[SchainsInternal-removeSchain-bytes32-address-]]
+==== `++removeSchain(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++)++` [.item-kind]#external#
 
 Allows Schains contract to remove an schain from the network.
 Generally schains are not removed from the system; instead they are
 simply allowed to expire.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-removeNodeFromSchain-uint256-bytes32->removeNodeFromSchain</a>+++ `++removeNodeFromSchain(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++schainHash++#++)++` [.item-kind]#external#
+[[SchainsInternal-removeNodeFromSchain-uint256-bytes32-]]
+==== `++removeNodeFromSchain(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++schainHash++#++)++` [.item-kind]#external#
 
 Allows Schains and SkaleDKG contracts to remove a node from an
 schain for node rotation or DKG failure.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-removeNodeFromExceptions-bytes32-uint256->removeNodeFromExceptions</a>+++ `++removeNodeFromExceptions(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainHash++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
+[[SchainsInternal-removeNodeFromExceptions-bytes32-uint256-]]
+==== `++removeNodeFromExceptions(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainHash++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-deleteGroup-bytes32->deleteGroup</a>+++ `++deleteGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++)++` [.item-kind]#external#
+[[SchainsInternal-deleteGroup-bytes32-]]
+==== `++deleteGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++)++` [.item-kind]#external#
 
 Allows Schains contract to delete a group of schains
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-setException-bytes32-uint256->setException</a>+++ `++setException(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
+[[SchainsInternal-setException-bytes32-uint256-]]
+==== `++setException(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 Allows Schain contract to set a Node like exception for a given
 schain and nodeIndex.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-setNodeInGroup-bytes32-uint256->setNodeInGroup</a>+++ `++setNodeInGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
+[[SchainsInternal-setNodeInGroup-bytes32-uint256-]]
+==== `++setNodeInGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 Allows Schains contract to add node to an schain group.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-removeHolesForSchain-bytes32->removeHolesForSchain</a>+++ `++removeHolesForSchain(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainHash++#++)++` [.item-kind]#external#
+[[SchainsInternal-removeHolesForSchain-bytes32-]]
+==== `++removeHolesForSchain(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainHash++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getSchains-->getSchains</a>+++ `++getSchains() → ++[.var-type]#++bytes32[]++#++++` [.item-kind]#external#
+[[SchainsInternal-getSchains--]]
+==== `++getSchains() → ++[.var-type]#++bytes32[]++#++++` [.item-kind]#external#
 
 Returns all Schains in the network.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getSchainsPartOfNode-bytes32->getSchainsPartOfNode</a>+++ `++getSchainsPartOfNode(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint8++#++++` [.item-kind]#external#
+[[SchainsInternal-getSchainsPartOfNode-bytes32-]]
+==== `++getSchainsPartOfNode(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint8++#++++` [.item-kind]#external#
 
 Returns all occupied resources for an Schain
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getSchainListSize-address->getSchainListSize</a>+++ `++getSchainListSize(++[.var-type]#++address++#++ ++[.var-name]#++from++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+[[SchainsInternal-getSchainListSize-address-]]
+==== `++getSchainListSize(++[.var-type]#++address++#++ ++[.var-name]#++from++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns number of schains by schain owner.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getSchainIdsByAddress-address->getSchainIdsByAddress</a>+++ `++getSchainIdsByAddress(++[.var-type]#++address++#++ ++[.var-name]#++from++#++) → ++[.var-type]#++bytes32[]++#++++` [.item-kind]#external#
+[[SchainsInternal-getSchainIdsByAddress-address-]]
+==== `++getSchainIdsByAddress(++[.var-type]#++address++#++ ++[.var-name]#++from++#++) → ++[.var-type]#++bytes32[]++#++++` [.item-kind]#external#
 
 Returns hashes of schain names by schain owner.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getSchainIdsForNode-uint256->getSchainIdsForNode</a>+++ `++getSchainIdsForNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bytes32[]++#++++` [.item-kind]#external#
+[[SchainsInternal-getSchainIdsForNode-uint256-]]
+==== `++getSchainIdsForNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bytes32[]++#++++` [.item-kind]#external#
 
 Returns hashes of schain names running on a node.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getSchainOwner-bytes32->getSchainOwner</a>+++ `++getSchainOwner(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++address++#++++` [.item-kind]#external#
+[[SchainsInternal-getSchainOwner-bytes32-]]
+==== `++getSchainOwner(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++address++#++++` [.item-kind]#external#
 
 Returns the owner of an schain.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-isSchainNameAvailable-string->isSchainNameAvailable</a>+++ `++isSchainNameAvailable(++[.var-type]#++string++#++ ++[.var-name]#++name++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+[[SchainsInternal-isSchainNameAvailable-string-]]
+==== `++isSchainNameAvailable(++[.var-type]#++string++#++ ++[.var-name]#++name++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether schain name is available.
 TODO Need to delete - copy of web3.utils.soliditySha3
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-isTimeExpired-bytes32->isTimeExpired</a>+++ `++isTimeExpired(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+[[SchainsInternal-isTimeExpired-bytes32-]]
+==== `++isTimeExpired(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether schain lifetime has expired.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-isOwnerAddress-address-bytes32->isOwnerAddress</a>+++ `++isOwnerAddress(++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+[[SchainsInternal-isOwnerAddress-address-bytes32-]]
+==== `++isOwnerAddress(++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether address is owner of schain.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-isSchainExist-bytes32->isSchainExist</a>+++ `++isSchainExist(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+[[SchainsInternal-isSchainExist-bytes32-]]
+==== `++isSchainExist(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether schain exists.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getSchainName-bytes32->getSchainName</a>+++ `++getSchainName(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++string++#++++` [.item-kind]#external#
+[[SchainsInternal-getSchainName-bytes32-]]
+==== `++getSchainName(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++string++#++++` [.item-kind]#external#
 
 Returns schain name.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getActiveSchain-uint256->getActiveSchain</a>+++ `++getActiveSchain(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bytes32++#++++` [.item-kind]#external#
+[[SchainsInternal-getActiveSchain-uint256-]]
+==== `++getActiveSchain(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bytes32++#++++` [.item-kind]#external#
 
 Returns active schains of a node. TODO: confirm
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getActiveSchains-uint256->getActiveSchains</a>+++ `++getActiveSchains(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bytes32[]++#++ ++[.var-name]#++activeSchains++#++++` [.item-kind]#external#
+[[SchainsInternal-getActiveSchains-uint256-]]
+==== `++getActiveSchains(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bytes32[]++#++ ++[.var-name]#++activeSchains++#++++` [.item-kind]#external#
 
 Returns active schains of a node. TODO: confirm
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getNumberOfNodesInGroup-bytes32->getNumberOfNodesInGroup</a>+++ `++getNumberOfNodesInGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+[[SchainsInternal-getNumberOfNodesInGroup-bytes32-]]
+==== `++getNumberOfNodesInGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns number of nodes in an schain group.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getNodesInGroup-bytes32->getNodesInGroup</a>+++ `++getNodesInGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint256[]++#++++` [.item-kind]#external#
+[[SchainsInternal-getNodesInGroup-bytes32-]]
+==== `++getNodesInGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint256[]++#++++` [.item-kind]#external#
 
 Returns nodes in an schain group.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getNodeIndexInGroup-bytes32-uint256->getNodeIndexInGroup</a>+++ `++getNodeIndexInGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+[[SchainsInternal-getNodeIndexInGroup-bytes32-uint256-]]
+==== `++getNodeIndexInGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns node index in schain group.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-isAnyFreeNode-bytes32->isAnyFreeNode</a>+++ `++isAnyFreeNode(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+[[SchainsInternal-isAnyFreeNode-bytes32-]]
+==== `++isAnyFreeNode(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-checkException-bytes32-uint256->checkException</a>+++ `++checkException(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+[[SchainsInternal-checkException-bytes32-uint256-]]
+==== `++checkException(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-checkHoleForSchain-bytes32-uint256->checkHoleForSchain</a>+++ `++checkHoleForSchain(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainHash++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++indexOfNode++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+[[SchainsInternal-checkHoleForSchain-bytes32-uint256-]]
+==== `++checkHoleForSchain(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainHash++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++indexOfNode++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#public#
+[[SchainsInternal-initialize-address-]]
+==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-addSchainForNode-uint256-bytes32->addSchainForNode</a>+++ `++addSchainForNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++)++` [.item-kind]#public#
+[[SchainsInternal-addSchainForNode-uint256-bytes32-]]
+==== `++addSchainForNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++)++` [.item-kind]#public#
 
 Allows Schain contract to add schain to node.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-removeSchainForNode-uint256-uint256->removeSchainForNode</a>+++ `++removeSchainForNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++schainIndex++#++)++` [.item-kind]#public#
+[[SchainsInternal-removeSchainForNode-uint256-uint256-]]
+==== `++removeSchainForNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++schainIndex++#++)++` [.item-kind]#public#
 
 Allows Schains and SkaleDKG contracts to remove an schain from a
 node.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-getLengthOfSchainsForNode-uint256->getLengthOfSchainsForNode</a>+++ `++getLengthOfSchainsForNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
+[[SchainsInternal-getLengthOfSchainsForNode-uint256-]]
+==== `++getLengthOfSchainsForNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 Returns number of Schains on a node.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-findSchainAtSchainsForNode-uint256-bytes32->findSchainAtSchainsForNode</a>+++ `++findSchainAtSchainsForNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
+[[SchainsInternal-findSchainAtSchainsForNode-uint256-bytes32-]]
+==== `++findSchainAtSchainsForNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 Returns index of Schain in schainsForNode array. TODO: confirm
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SchainsInternal-isEnoughNodes-bytes32->isEnoughNodes</a>+++ `++isEnoughNodes(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint256[]++#++ ++[.var-name]#++result++#++++` [.item-kind]#public#
+[[SchainsInternal-isEnoughNodes-bytes32-]]
+==== `++isEnoughNodes(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint256[]++#++ ++[.var-name]#++result++#++++` [.item-kind]#public#
 
 TODO: confirm
 

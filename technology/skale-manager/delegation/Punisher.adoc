@@ -1389,7 +1389,8 @@ This contract handles all slashing and forgiving operations.
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-slash-uint256-uint256->slash</a>+++ `++slash(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
+[[Punisher-slash-uint256-uint256-]]
+==== `++slash(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows SkaleDKG contract to execute slashing on a validator and
 validator's delegations by an `amount` of tokens.
@@ -1398,7 +1399,8 @@ Requirements:
 - Validator must exist.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-forgive-address-uint256->forgive</a>+++ `++forgive(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
+[[Punisher-forgive-address-uint256-]]
+==== `++forgive(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows the Owner to forgive a slashing condition.
 Emits Forgive event.
@@ -1406,34 +1408,40 @@ Requirements:
 - All slashes must have been processed.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+[[Punisher-getAndUpdateLockedAmount-address-]]
+==== `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 See ILocker-getAndUpdateLockedAmount
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-getAndUpdateForbiddenForDelegationAmount-address->getAndUpdateForbiddenForDelegationAmount</a>+++ `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+[[Punisher-getAndUpdateForbiddenForDelegationAmount-address-]]
+==== `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 See ILocker-getAndUpdateForbiddenForDelegationAmount
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-handleSlash-address-uint256->handleSlash</a>+++ `++handleSlash(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
+[[Punisher-handleSlash-address-uint256-]]
+==== `++handleSlash(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows DelegationController contract to execute slashing of
 delegations.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
+[[Punisher-initialize-address-]]
+==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-Slash-uint256-uint256->Slash</a>+++ `++Slash(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
+[[Punisher-Slash-uint256-uint256-]]
+==== `++Slash(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted upon slashing condition.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Punisher-Forgive-address-uint256->Forgive</a>+++ `++Forgive(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
+[[Punisher-Forgive-address-uint256-]]
+==== `++Forgive(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted upon forgive condition.
 

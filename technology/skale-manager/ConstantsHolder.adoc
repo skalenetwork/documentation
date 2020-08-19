@@ -1424,60 +1424,71 @@ Contract contains constants and common variables for the SKALE Network.
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setPeriods-uint32-uint32->setPeriods</a>+++ `++setPeriods(++[.var-type]#++uint32++#++ ++[.var-name]#++newRewardPeriod++#++, ++[.var-type]#++uint32++#++ ++[.var-name]#++newDeltaPeriod++#++)++` [.item-kind]#external#
+[[ConstantsHolder-setPeriods-uint32-uint32-]]
+==== `++setPeriods(++[.var-type]#++uint32++#++ ++[.var-name]#++newRewardPeriod++#++, ++[.var-type]#++uint32++#++ ++[.var-name]#++newDeltaPeriod++#++)++` [.item-kind]#external#
 
 Allows the Owner to set new reward and delta periods
 This function is only for tests.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setCheckTime-uint256->setCheckTime</a>+++ `++setCheckTime(++[.var-type]#++uint256++#++ ++[.var-name]#++newCheckTime++#++)++` [.item-kind]#external#
+[[ConstantsHolder-setCheckTime-uint256-]]
+==== `++setCheckTime(++[.var-type]#++uint256++#++ ++[.var-name]#++newCheckTime++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the new check time.
 This function only for tests.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setLatency-uint32->setLatency</a>+++ `++setLatency(++[.var-type]#++uint32++#++ ++[.var-name]#++newAllowableLatency++#++)++` [.item-kind]#external#
+[[ConstantsHolder-setLatency-uint32-]]
+==== `++setLatency(++[.var-type]#++uint32++#++ ++[.var-name]#++newAllowableLatency++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the allowable latency in milliseconds.
 This function is only for testing purposes.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setMSR-uint256->setMSR</a>+++ `++setMSR(++[.var-type]#++uint256++#++ ++[.var-name]#++newMSR++#++)++` [.item-kind]#external#
+[[ConstantsHolder-setMSR-uint256-]]
+==== `++setMSR(++[.var-type]#++uint256++#++ ++[.var-name]#++newMSR++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the minimum stake requirement.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setLaunchTimestamp-uint256->setLaunchTimestamp</a>+++ `++setLaunchTimestamp(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++)++` [.item-kind]#external#
+[[ConstantsHolder-setLaunchTimestamp-uint256-]]
+==== `++setLaunchTimestamp(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the launch timestamp.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setRotationDelay-uint256->setRotationDelay</a>+++ `++setRotationDelay(++[.var-type]#++uint256++#++ ++[.var-name]#++newDelay++#++)++` [.item-kind]#external#
+[[ConstantsHolder-setRotationDelay-uint256-]]
+==== `++setRotationDelay(++[.var-type]#++uint256++#++ ++[.var-name]#++newDelay++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the node rotation delay.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setProofOfUseLockUpPeriod-uint256->setProofOfUseLockUpPeriod</a>+++ `++setProofOfUseLockUpPeriod(++[.var-type]#++uint256++#++ ++[.var-name]#++periodDays++#++)++` [.item-kind]#external#
+[[ConstantsHolder-setProofOfUseLockUpPeriod-uint256-]]
+==== `++setProofOfUseLockUpPeriod(++[.var-type]#++uint256++#++ ++[.var-name]#++periodDays++#++)++` [.item-kind]#external#
 
 Allows the Owner to set the proof-of-use lockup period.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setProofOfUseDelegationPercentage-uint256->setProofOfUseDelegationPercentage</a>+++ `++setProofOfUseDelegationPercentage(++[.var-type]#++uint256++#++ ++[.var-name]#++percentage++#++)++` [.item-kind]#external#
+[[ConstantsHolder-setProofOfUseDelegationPercentage-uint256-]]
+==== `++setProofOfUseDelegationPercentage(++[.var-type]#++uint256++#++ ++[.var-name]#++percentage++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setLimitValidatorsPerDelegator-uint256->setLimitValidatorsPerDelegator</a>+++ `++setLimitValidatorsPerDelegator(++[.var-type]#++uint256++#++ ++[.var-name]#++newLimit++#++)++` [.item-kind]#external#
+[[ConstantsHolder-setLimitValidatorsPerDelegator-uint256-]]
+==== `++setLimitValidatorsPerDelegator(++[.var-type]#++uint256++#++ ++[.var-name]#++newLimit++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-setFirstDelegationsMonth-uint256->setFirstDelegationsMonth</a>+++ `++setFirstDelegationsMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
+[[ConstantsHolder-setFirstDelegationsMonth-uint256-]]
+==== `++setFirstDelegationsMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ConstantsHolder-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
+[[ConstantsHolder-initialize-address-]]
+==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
 
 constructor in Permissions approach
 

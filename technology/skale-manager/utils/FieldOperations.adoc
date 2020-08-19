@@ -1395,77 +1395,92 @@
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-getTWISTB-->getTWISTB</a>+++ `++getTWISTB() → ++[.var-type]#++struct Fp2Operations.Fp2Point++#++++` [.item-kind]#internal#
+[[G2Operations-getTWISTB--]]
+==== `++getTWISTB() → ++[.var-type]#++struct Fp2Operations.Fp2Point++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-getG2-->getG2</a>+++ `++getG2() → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#internal#
+[[G2Operations-getG2--]]
+==== `++getG2() → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-getG1-->getG1</a>+++ `++getG1() → ++[.var-type]#++struct Fp2Operations.Fp2Point++#++++` [.item-kind]#internal#
+[[G2Operations-getG1--]]
+==== `++getG1() → ++[.var-type]#++struct Fp2Operations.Fp2Point++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-getG2Zero-->getG2Zero</a>+++ `++getG2Zero() → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#internal#
+[[G2Operations-getG2Zero--]]
+==== `++getG2Zero() → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-isG1Point-uint256-uint256->isG1Point</a>+++ `++isG1Point(++[.var-type]#++uint256++#++ ++[.var-name]#++x++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
+[[G2Operations-isG1Point-uint256-uint256-]]
+==== `++isG1Point(++[.var-type]#++uint256++#++ ++[.var-name]#++x++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++y++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-isG1-struct-Fp2Operations-Fp2Point->isG1</a>+++ `++isG1(++[.var-type]#++struct Fp2Operations.Fp2Point++#++ ++[.var-name]#++point++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
+[[G2Operations-isG1-struct-Fp2Operations-Fp2Point-]]
+==== `++isG1(++[.var-type]#++struct Fp2Operations.Fp2Point++#++ ++[.var-name]#++point++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-isG2Point-struct-Fp2Operations-Fp2Point-struct-Fp2Operations-Fp2Point->isG2Point</a>+++ `++isG2Point(++[.var-type]#++struct Fp2Operations.Fp2Point++#++ ++[.var-name]#++x++#++, ++[.var-type]#++struct Fp2Operations.Fp2Point++#++ ++[.var-name]#++y++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
+[[G2Operations-isG2Point-struct-Fp2Operations-Fp2Point-struct-Fp2Operations-Fp2Point-]]
+==== `++isG2Point(++[.var-type]#++struct Fp2Operations.Fp2Point++#++ ++[.var-name]#++x++#++, ++[.var-type]#++struct Fp2Operations.Fp2Point++#++ ++[.var-name]#++y++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-isG2-struct-G2Operations-G2Point->isG2</a>+++ `++isG2(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
+[[G2Operations-isG2-struct-G2Operations-G2Point-]]
+==== `++isG2(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-isG2ZeroPoint-struct-Fp2Operations-Fp2Point-struct-Fp2Operations-Fp2Point->isG2ZeroPoint</a>+++ `++isG2ZeroPoint(++[.var-type]#++struct Fp2Operations.Fp2Point++#++ ++[.var-name]#++x++#++, ++[.var-type]#++struct Fp2Operations.Fp2Point++#++ ++[.var-name]#++y++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
+[[G2Operations-isG2ZeroPoint-struct-Fp2Operations-Fp2Point-struct-Fp2Operations-Fp2Point-]]
+==== `++isG2ZeroPoint(++[.var-type]#++struct Fp2Operations.Fp2Point++#++ ++[.var-name]#++x++#++, ++[.var-type]#++struct Fp2Operations.Fp2Point++#++ ++[.var-name]#++y++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-isG2Zero-struct-G2Operations-G2Point->isG2Zero</a>+++ `++isG2Zero(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
+[[G2Operations-isG2Zero-struct-G2Operations-G2Point-]]
+==== `++isG2Zero(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-addG2-struct-G2Operations-G2Point-struct-G2Operations-G2Point->addG2</a>+++ `++addG2(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value1++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value2++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++sum++#++++` [.item-kind]#internal#
+[[G2Operations-addG2-struct-G2Operations-G2Point-struct-G2Operations-G2Point-]]
+==== `++addG2(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value1++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value2++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++sum++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-toUS-struct-G2Operations-G2Point->toUS</a>+++ `++toUS(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#internal#
+[[G2Operations-toUS-struct-G2Operations-G2Point-]]
+==== `++toUS(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-isEqual-struct-G2Operations-G2Point-struct-G2Operations-G2Point->isEqual</a>+++ `++isEqual(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value1++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value2++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
+[[G2Operations-isEqual-struct-G2Operations-G2Point-struct-G2Operations-G2Point-]]
+==== `++isEqual(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value1++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value2++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-doubleG2-struct-G2Operations-G2Point->doubleG2</a>+++ `++doubleG2(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++result++#++++` [.item-kind]#internal#
+[[G2Operations-doubleG2-struct-G2Operations-G2Point-]]
+==== `++doubleG2(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++result++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=G2Operations-mulG2-struct-G2Operations-G2Point-uint256->mulG2</a>+++ `++mulG2(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++scalar++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++result++#++++` [.item-kind]#internal#
+[[G2Operations-mulG2-struct-G2Operations-G2Point-uint256-]]
+==== `++mulG2(++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++scalar++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++result++#++++` [.item-kind]#internal#
 
 
 

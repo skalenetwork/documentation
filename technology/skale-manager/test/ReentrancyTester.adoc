@@ -1385,32 +1385,38 @@
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-constructor-address->constructor</a>+++ `++constructor(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
+[[ReentrancyTester-constructor-address-]]
+==== `++constructor(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-tokensReceived-address-address-address-uint256-bytes-bytes->tokensReceived</a>+++ `++tokensReceived(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
+[[ReentrancyTester-tokensReceived-address-address-address-uint256-bytes-bytes-]]
+==== `++tokensReceived(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-tokensToSend-address-address-address-uint256-bytes-bytes->tokensToSend</a>+++ `++tokensToSend(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++uint256++#++, ++[.var-type]#++bytes++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
+[[ReentrancyTester-tokensToSend-address-address-address-uint256-bytes-bytes-]]
+==== `++tokensToSend(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++uint256++#++, ++[.var-type]#++bytes++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-prepareToReentracyCheck-->prepareToReentracyCheck</a>+++ `++prepareToReentracyCheck()++` [.item-kind]#external#
+[[ReentrancyTester-prepareToReentracyCheck--]]
+==== `++prepareToReentracyCheck()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-prepareToBurningAttack-->prepareToBurningAttack</a>+++ `++prepareToBurningAttack()++` [.item-kind]#external#
+[[ReentrancyTester-prepareToBurningAttack--]]
+==== `++prepareToBurningAttack()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ReentrancyTester-burningAttack-->burningAttack</a>+++ `++burningAttack()++` [.item-kind]#external#
+[[ReentrancyTester-burningAttack--]]
+==== `++burningAttack()++` [.item-kind]#external#
 
 
 

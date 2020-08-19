@@ -1377,12 +1377,14 @@
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleTokenInternalTester-constructor-address-address--->constructor</a>+++ `++constructor(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++, ++[.var-type]#++address[]++#++ ++[.var-name]#++defOps++#++)++` [.item-kind]#public#
+[[SkaleTokenInternalTester-constructor-address-address---]]
+==== `++constructor(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++, ++[.var-type]#++address[]++#++ ++[.var-name]#++defOps++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleTokenInternalTester-getMsgData-->getMsgData</a>+++ `++getMsgData() → ++[.var-type]#++bytes++#++++` [.item-kind]#external#
+[[SkaleTokenInternalTester-getMsgData--]]
+==== `++getMsgData() → ++[.var-type]#++bytes++#++++` [.item-kind]#external#
 
 
 

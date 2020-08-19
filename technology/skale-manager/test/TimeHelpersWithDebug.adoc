@@ -1381,22 +1381,26 @@
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TimeHelpersWithDebug-skipTime-uint256->skipTime</a>+++ `++skipTime(++[.var-type]#++uint256++#++ ++[.var-name]#++sec++#++)++` [.item-kind]#external#
+[[TimeHelpersWithDebug-skipTime-uint256-]]
+==== `++skipTime(++[.var-type]#++uint256++#++ ++[.var-name]#++sec++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TimeHelpersWithDebug-initialize-->initialize</a>+++ `++initialize()++` [.item-kind]#external#
+[[TimeHelpersWithDebug-initialize--]]
+==== `++initialize()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TimeHelpersWithDebug-timestampToMonth-uint256->timestampToMonth</a>+++ `++timestampToMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
+[[TimeHelpersWithDebug-timestampToMonth-uint256-]]
+==== `++timestampToMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TimeHelpersWithDebug-monthToTimestamp-uint256->monthToTimestamp</a>+++ `++monthToTimestamp(++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
+[[TimeHelpersWithDebug-monthToTimestamp-uint256-]]
+==== `++monthToTimestamp(++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 
 

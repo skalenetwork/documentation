@@ -1392,27 +1392,32 @@
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Bounty-getBounty-uint256-uint256-uint256->getBounty</a>+++ `++getBounty(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++downtime++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++latency++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+[[Bounty-getBounty-uint256-uint256-uint256-]]
+==== `++getBounty(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++downtime++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++latency++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Bounty-enableBountyReduction-->enableBountyReduction</a>+++ `++enableBountyReduction()++` [.item-kind]#external#
+[[Bounty-enableBountyReduction--]]
+==== `++enableBountyReduction()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Bounty-disableBountyReduction-->disableBountyReduction</a>+++ `++disableBountyReduction()++` [.item-kind]#external#
+[[Bounty-disableBountyReduction--]]
+==== `++disableBountyReduction()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Bounty-calculateNormalBounty-uint256->calculateNormalBounty</a>+++ `++calculateNormalBounty(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+[[Bounty-calculateNormalBounty-uint256-]]
+==== `++calculateNormalBounty(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Bounty-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
+[[Bounty-initialize-address-]]
+==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 

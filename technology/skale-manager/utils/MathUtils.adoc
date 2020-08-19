@@ -1379,28 +1379,33 @@
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=MathUtils-boundedSub-uint256-uint256->boundedSub</a>+++ `++boundedSub(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
+[[MathUtils-boundedSub-uint256-uint256-]]
+==== `++boundedSub(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=MathUtils-boundedSubWithoutEvent-uint256-uint256->boundedSubWithoutEvent</a>+++ `++boundedSubWithoutEvent(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
+[[MathUtils-boundedSubWithoutEvent-uint256-uint256-]]
+==== `++boundedSubWithoutEvent(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=MathUtils-muchGreater-uint256-uint256->muchGreater</a>+++ `++muchGreater(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
+[[MathUtils-muchGreater-uint256-uint256-]]
+==== `++muchGreater(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=MathUtils-approximatelyEqual-uint256-uint256->approximatelyEqual</a>+++ `++approximatelyEqual(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
+[[MathUtils-approximatelyEqual-uint256-uint256-]]
+==== `++approximatelyEqual(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=MathUtils-UnderflowError-uint256-uint256->UnderflowError</a>+++ `++UnderflowError(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++)++` [.item-kind]#event#
+[[MathUtils-UnderflowError-uint256-uint256-]]
+==== `++UnderflowError(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++)++` [.item-kind]#event#
 
 
 

@@ -1371,12 +1371,14 @@ validate complaints.
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Decryption-encrypt-uint256-bytes32->encrypt</a>+++ `++encrypt(++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++key++#++) → ++[.var-type]#++bytes32++#++ ++[.var-name]#++ciphertext++#++++` [.item-kind]#external#
+[[Decryption-encrypt-uint256-bytes32-]]
+==== `++encrypt(++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++key++#++) → ++[.var-type]#++bytes32++#++ ++[.var-name]#++ciphertext++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=Decryption-decrypt-bytes32-bytes32->decrypt</a>+++ `++decrypt(++[.var-type]#++bytes32++#++ ++[.var-name]#++ciphertext++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++key++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++++` [.item-kind]#external#
+[[Decryption-decrypt-bytes32-bytes32-]]
+==== `++decrypt(++[.var-type]#++bytes32++#++ ++[.var-name]#++ciphertext++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++key++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++++` [.item-kind]#external#
 
 
 

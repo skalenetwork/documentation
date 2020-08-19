@@ -1388,41 +1388,48 @@ See ILocker.
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+[[TokenState-getAndUpdateLockedAmount-address-]]
+==== `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Return and update the total locked amount of a given `holder`.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-getAndUpdateForbiddenForDelegationAmount-address->getAndUpdateForbiddenForDelegationAmount</a>+++ `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++++` [.item-kind]#external#
+[[TokenState-getAndUpdateForbiddenForDelegationAmount-address-]]
+==== `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++++` [.item-kind]#external#
 
 Return and update the total non-transferrable and un-delegatable
 amount of a given `holder`.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-removeLocker-string->removeLocker</a>+++ `++removeLocker(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#external#
+[[TokenState-removeLocker-string-]]
+==== `++removeLocker(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#external#
 
 Allows the Owner to remove a contract from the locker.
 Emits LockerWasRemoved event.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
+[[TokenState-initialize-address-]]
+==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-addLocker-string->addLocker</a>+++ `++addLocker(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#public#
+[[TokenState-addLocker-string-]]
+==== `++addLocker(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#public#
 
 Allows the Owner to add a contract to the Locker.
 Emits LockerWasAdded event.
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-LockerWasAdded-string->LockerWasAdded</a>+++ `++LockerWasAdded(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#event#
+[[TokenState-LockerWasAdded-string-]]
+==== `++LockerWasAdded(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#event#
 
 Emitted when a contract is added to the locker.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenState-LockerWasRemoved-string->LockerWasRemoved</a>+++ `++LockerWasRemoved(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#event#
+[[TokenState-LockerWasRemoved-string-]]
+==== `++LockerWasRemoved(++[.var-type]#++string++#++ ++[.var-name]#++locker++#++)++` [.item-kind]#event#
 
 Emitted when a contract is removed from the locker.
 

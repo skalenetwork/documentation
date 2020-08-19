@@ -1384,25 +1384,29 @@ returns or `stakeMultiplier`. Currently, only delegation periods can be added.
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=DelegationPeriodManager-setDelegationPeriod-uint256-uint256->setDelegationPeriod</a>+++ `++setDelegationPeriod(++[.var-type]#++uint256++#++ ++[.var-name]#++monthsCount++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++stakeMultiplier++#++)++` [.item-kind]#external#
+[[DelegationPeriodManager-setDelegationPeriod-uint256-uint256-]]
+==== `++setDelegationPeriod(++[.var-type]#++uint256++#++ ++[.var-name]#++monthsCount++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++stakeMultiplier++#++)++` [.item-kind]#external#
 
 Allows the Owner to create a new available delegation period and
 return in the network.
 Emits DelegationPeriodWasSet event.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=DelegationPeriodManager-isDelegationPeriodAllowed-uint256->isDelegationPeriodAllowed</a>+++ `++isDelegationPeriodAllowed(++[.var-type]#++uint256++#++ ++[.var-name]#++monthsCount++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+[[DelegationPeriodManager-isDelegationPeriodAllowed-uint256-]]
+==== `++isDelegationPeriodAllowed(++[.var-type]#++uint256++#++ ++[.var-name]#++monthsCount++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether given delegation period is allowed.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=DelegationPeriodManager-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
+[[DelegationPeriodManager-initialize-address-]]
+==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
 
 Initial delegation period and multiplier settings.
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=DelegationPeriodManager-DelegationPeriodWasSet-uint256-uint256->DelegationPeriodWasSet</a>+++ `++DelegationPeriodWasSet(++[.var-type]#++uint256++#++ ++[.var-name]#++length++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++stakeMultiplier++#++)++` [.item-kind]#event#
+[[DelegationPeriodManager-DelegationPeriodWasSet-uint256-uint256-]]
+==== `++DelegationPeriodWasSet(++[.var-type]#++uint256++#++ ++[.var-name]#++length++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++stakeMultiplier++#++)++` [.item-kind]#event#
 
 Emitted when a new delegation period is specified.
 

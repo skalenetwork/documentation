@@ -1369,12 +1369,14 @@
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=StringUtils-strConcat-string-string->strConcat</a>+++ `++strConcat(++[.var-type]#++string++#++ ++[.var-name]#++a++#++, ++[.var-type]#++string++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++string++#++++` [.item-kind]#internal#
+[[StringUtils-strConcat-string-string-]]
+==== `++strConcat(++[.var-type]#++string++#++ ++[.var-name]#++a++#++, ++[.var-type]#++string++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++string++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=StringUtils-uint2str-uint256->uint2str</a>+++ `++uint2str(++[.var-type]#++uint256++#++ ++[.var-name]#++i++#++) → ++[.var-type]#++string++#++++` [.item-kind]#internal#
+[[StringUtils-uint2str-uint256-]]
+==== `++uint2str(++[.var-type]#++uint256++#++ ++[.var-name]#++i++#++) → ++[.var-type]#++string++#++++` [.item-kind]#internal#
 
 
 

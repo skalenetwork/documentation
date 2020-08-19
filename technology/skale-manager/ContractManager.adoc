@@ -1383,12 +1383,14 @@ Contract contains the actual current mapping from contract IDs
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ContractManager-initialize-->initialize</a>+++ `++initialize()++` [.item-kind]#external#
+[[ContractManager-initialize--]]
+==== `++initialize()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ContractManager-setContractsAddress-string-address->setContractsAddress</a>+++ `++setContractsAddress(++[.var-type]#++string++#++ ++[.var-name]#++contractsName++#++, ++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#external#
+[[ContractManager-setContractsAddress-string-address-]]
+==== `++setContractsAddress(++[.var-type]#++string++#++ ++[.var-name]#++contractsName++#++, ++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#external#
 
 Allows the Owner to add contract to mapping of contract addresses.
 Emits ContractUpgraded event.
@@ -1398,7 +1400,8 @@ Requirements:
 - Contract address contains code.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ContractManager-getContract-string->getContract</a>+++ `++getContract(++[.var-type]#++string++#++ ++[.var-name]#++name++#++) → ++[.var-type]#++address++#++ ++[.var-name]#++contractAddress++#++++` [.item-kind]#external#
+[[ContractManager-getContract-string-]]
+==== `++getContract(++[.var-type]#++string++#++ ++[.var-name]#++name++#++) → ++[.var-type]#++address++#++ ++[.var-name]#++contractAddress++#++++` [.item-kind]#external#
 
 Returns contract address.
 Requirements:
@@ -1406,7 +1409,8 @@ Requirements:
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=ContractManager-ContractUpgraded-string-address->ContractUpgraded</a>+++ `++ContractUpgraded(++[.var-type]#++string++#++ ++[.var-name]#++contractsName++#++, ++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#event#
+[[ContractManager-ContractUpgraded-string-address-]]
+==== `++ContractUpgraded(++[.var-type]#++string++#++ ++[.var-name]#++contractsName++#++, ++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#event#
 
 Emitted when contract is upgraded.
 

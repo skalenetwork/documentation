@@ -1377,32 +1377,38 @@
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=FractionUtils-createFraction-uint256-uint256->createFraction</a>+++ `++createFraction(++[.var-type]#++uint256++#++ ++[.var-name]#++numerator++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++denominator++#++) → ++[.var-type]#++struct FractionUtils.Fraction++#++++` [.item-kind]#internal#
+[[FractionUtils-createFraction-uint256-uint256-]]
+==== `++createFraction(++[.var-type]#++uint256++#++ ++[.var-name]#++numerator++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++denominator++#++) → ++[.var-type]#++struct FractionUtils.Fraction++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=FractionUtils-createFraction-uint256->createFraction</a>+++ `++createFraction(++[.var-type]#++uint256++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++struct FractionUtils.Fraction++#++++` [.item-kind]#internal#
+[[FractionUtils-createFraction-uint256-]]
+==== `++createFraction(++[.var-type]#++uint256++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++struct FractionUtils.Fraction++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=FractionUtils-reduceFraction-struct-FractionUtils-Fraction->reduceFraction</a>+++ `++reduceFraction(++[.var-type]#++struct FractionUtils.Fraction++#++ ++[.var-name]#++fraction++#++)++` [.item-kind]#internal#
+[[FractionUtils-reduceFraction-struct-FractionUtils-Fraction-]]
+==== `++reduceFraction(++[.var-type]#++struct FractionUtils.Fraction++#++ ++[.var-name]#++fraction++#++)++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=FractionUtils-multiplyFraction-struct-FractionUtils-Fraction-struct-FractionUtils-Fraction->multiplyFraction</a>+++ `++multiplyFraction(++[.var-type]#++struct FractionUtils.Fraction++#++ ++[.var-name]#++a++#++, ++[.var-type]#++struct FractionUtils.Fraction++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++struct FractionUtils.Fraction++#++++` [.item-kind]#internal#
+[[FractionUtils-multiplyFraction-struct-FractionUtils-Fraction-struct-FractionUtils-Fraction-]]
+==== `++multiplyFraction(++[.var-type]#++struct FractionUtils.Fraction++#++ ++[.var-name]#++a++#++, ++[.var-type]#++struct FractionUtils.Fraction++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++struct FractionUtils.Fraction++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=FractionUtils-gcd-uint256-uint256->gcd</a>+++ `++gcd(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
+[[FractionUtils-gcd-uint256-uint256-]]
+==== `++gcd(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=FractionUtils-swap-uint256-uint256->swap</a>+++ `++swap(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++, ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
+[[FractionUtils-swap-uint256-uint256-]]
+==== `++swap(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++, ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
 
 
 

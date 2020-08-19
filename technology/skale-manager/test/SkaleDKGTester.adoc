@@ -1375,7 +1375,8 @@
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=SkaleDKGTester-setSuccesfulDKGPublic-bytes32->setSuccesfulDKGPublic</a>+++ `++setSuccesfulDKGPublic(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
+[[SkaleDKGTester-setSuccesfulDKGPublic-bytes32-]]
+==== `++setSuccesfulDKGPublic(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
 
 
 

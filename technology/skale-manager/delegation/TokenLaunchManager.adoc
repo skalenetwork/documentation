@@ -1402,13 +1402,15 @@ The Seller is an entity who distributes tokens through a Launch process.
 --
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-onlySeller-->onlySeller</a>+++ `++onlySeller()++` [.item-kind]#modifier#
+[[TokenLaunchManager-onlySeller--]]
+==== `++onlySeller()++` [.item-kind]#modifier#
 
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-approveTransfer-address-uint256->approveTransfer</a>+++ `++approveTransfer(++[.var-type]#++address++#++ ++[.var-name]#++walletAddress++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++value++#++)++` [.item-kind]#external#
+[[TokenLaunchManager-approveTransfer-address-uint256-]]
+==== `++approveTransfer(++[.var-type]#++address++#++ ++[.var-name]#++walletAddress++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++value++#++)++` [.item-kind]#external#
 
 Allocates values for `walletAddress`
 Requirements:
@@ -1418,7 +1420,8 @@ Emits an Approved event.
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-approveBatchOfTransfers-address---uint256--->approveBatchOfTransfers</a>+++ `++approveBatchOfTransfers(++[.var-type]#++address[]++#++ ++[.var-name]#++walletAddress++#++, ++[.var-type]#++uint256[]++#++ ++[.var-name]#++value++#++)++` [.item-kind]#external#
+[[TokenLaunchManager-approveBatchOfTransfers-address---uint256---]]
+==== `++approveBatchOfTransfers(++[.var-type]#++address[]++#++ ++[.var-name]#++walletAddress++#++, ++[.var-type]#++uint256[]++#++ ++[.var-name]#++value++#++)++` [.item-kind]#external#
 
 Allocates values for `walletAddresses`
 Emits an Approved event.
@@ -1427,7 +1430,8 @@ Emits an Approved event.
 - Total approved must be less than or equal to the Seller balance.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-completeTokenLaunch-->completeTokenLaunch</a>+++ `++completeTokenLaunch()++` [.item-kind]#external#
+[[TokenLaunchManager-completeTokenLaunch--]]
+==== `++completeTokenLaunch()++` [.item-kind]#external#
 
 Allows the Seller to complete the token launch process.
 This then allows participants to retrieve tokens and this disallows
@@ -1437,7 +1441,8 @@ Requirements:
 - Token launch must not already be completed.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-changeApprovalAddress-address-address->changeApprovalAddress</a>+++ `++changeApprovalAddress(++[.var-type]#++address++#++ ++[.var-name]#++oldAddress++#++, ++[.var-type]#++address++#++ ++[.var-name]#++newAddress++#++)++` [.item-kind]#external#
+[[TokenLaunchManager-changeApprovalAddress-address-address-]]
+==== `++changeApprovalAddress(++[.var-type]#++address++#++ ++[.var-name]#++oldAddress++#++, ++[.var-type]#++address++#++ ++[.var-name]#++newAddress++#++)++` [.item-kind]#external#
 
 Allows the Seller to correct a participant's address.
 Emits Approved event.
@@ -1446,14 +1451,16 @@ Requirements:
 - Token launch must not have already completed.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-changeApprovalValue-address-uint256->changeApprovalValue</a>+++ `++changeApprovalValue(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++newValue++#++)++` [.item-kind]#external#
+[[TokenLaunchManager-changeApprovalValue-address-uint256-]]
+==== `++changeApprovalValue(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++newValue++#++)++` [.item-kind]#external#
 
 Allows the Seller to correct a participant's amount.
 Requirements:
 - Token launch must not have already completed.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-retrieve-->retrieve</a>+++ `++retrieve()++` [.item-kind]#external#
+[[TokenLaunchManager-retrieve--]]
+==== `++retrieve()++` [.item-kind]#external#
 
 Allows a token launch participant to retrieve the entire amount to
 the msg.sender's address. Retrieved tokens are locked for Proof-of-Use
@@ -1464,17 +1471,20 @@ Requirements:
 - Token launch must have completed.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-tokensReceived-address-address-address-uint256-bytes-bytes->tokensReceived</a>+++ `++tokensReceived(++[.var-type]#++address++#++ ++[.var-name]#++operator++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++)++` [.item-kind]#external#
+[[TokenLaunchManager-tokensReceived-address-address-address-uint256-bytes-bytes-]]
+==== `++tokensReceived(++[.var-type]#++address++#++ ++[.var-name]#++operator++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++)++` [.item-kind]#external#
 
 A required callback for ERC777.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
+[[TokenLaunchManager-initialize-address-]]
+==== `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-_approveTransfer-address-uint256->_approveTransfer</a>+++ `++_approveTransfer(++[.var-type]#++address++#++ ++[.var-name]#++walletAddress++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++value++#++)++` [.item-kind]#internal#
+[[TokenLaunchManager-_approveTransfer-address-uint256-]]
+==== `++_approveTransfer(++[.var-type]#++address++#++ ++[.var-name]#++walletAddress++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++value++#++)++` [.item-kind]#internal#
 
 Allows the Seller to approve transfer of tokens to a wallet address.
 Emits Approved event.
@@ -1483,17 +1493,20 @@ Requirements:
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-Approved-address-uint256->Approved</a>+++ `++Approved(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
+[[TokenLaunchManager-Approved-address-uint256-]]
+==== `++Approved(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted when a holder is approved for an amount.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-TokensRetrieved-address-uint256->TokensRetrieved</a>+++ `++TokensRetrieved(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
+[[TokenLaunchManager-TokensRetrieved-address-uint256-]]
+==== `++TokensRetrieved(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted when a holder retrieves amount.
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=TokenLaunchManager-TokenLaunchIsCompleted-uint256->TokenLaunchIsCompleted</a>+++ `++TokenLaunchIsCompleted(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++)++` [.item-kind]#event#
+[[TokenLaunchManager-TokenLaunchIsCompleted-uint256-]]
+==== `++TokenLaunchIsCompleted(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++)++` [.item-kind]#event#
 
 Emitted when token launch is completed.
 

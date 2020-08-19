@@ -1371,17 +1371,20 @@ Interface of Delegatable Token operations.
 
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=IDelegatableToken-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+[[IDelegatableToken-getAndUpdateLockedAmount-address-]]
+==== `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Updates and returns the amount of locked tokens of a given account (`wallet`).
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=IDelegatableToken-getAndUpdateDelegatedAmount-address->getAndUpdateDelegatedAmount</a>+++ `++getAndUpdateDelegatedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+[[IDelegatableToken-getAndUpdateDelegatedAmount-address-]]
+==== `++getAndUpdateDelegatedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Updates and returns the amount of delegated tokens of a given account (`wallet`).
 
 [.contract-item]
-==== +++<a class="heading-anchor heading-anchor--h4" area-hidden="true" name=IDelegatableToken-getAndUpdateSlashedAmount-address->getAndUpdateSlashedAmount</a>+++ `++getAndUpdateSlashedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+[[IDelegatableToken-getAndUpdateSlashedAmount-address-]]
+==== `++getAndUpdateSlashedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Updates and returns the amount of slashed tokens of a given account (`wallet`).
 
