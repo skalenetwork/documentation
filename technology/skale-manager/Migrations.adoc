@@ -1357,7 +1357,7 @@
 
 [.contract]
 [[Migrations]]
-= `++Migrations++`
+= `Migrations`
 
 
 

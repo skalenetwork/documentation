@@ -1362,7 +1362,7 @@
 
 [.contract]
 [[ECDH]]
-= `++ECDH++`
+= `ECDH`
 
 This contract performs Elliptic-curve Diffie-Hellman key exchange to
 support the DKG process.

@@ -1356,7 +1356,7 @@
 
 [.contract]
 [[ISkaleDKG]]
-= `++ISkaleDKG++`
+= `ISkaleDKG`
 
 
 

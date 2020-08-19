@@ -1357,7 +1357,7 @@
 
 [.contract]
 [[DelegationPeriodManager]]
-= `++DelegationPeriodManager++`
+= `DelegationPeriodManager`
 
 This contract handles all delegation offerings. Delegations are held for
 a specified period (months), and different durations can have different

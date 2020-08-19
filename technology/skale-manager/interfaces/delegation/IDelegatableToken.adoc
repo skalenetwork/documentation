@@ -1355,7 +1355,7 @@
 
 [.contract]
 [[IDelegatableToken]]
-= `++IDelegatableToken++`
+= `IDelegatableToken`
 
 Interface of Delegatable Token operations.
 

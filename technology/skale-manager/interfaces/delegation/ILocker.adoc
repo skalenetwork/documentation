@@ -1354,7 +1354,7 @@
 
 [.contract]
 [[ILocker]]
-= `++ILocker++`
+= `ILocker`
 
 Interface of Locker functions of the {TokenState} contract.
 The SKALE Network has three types of locked tokens:

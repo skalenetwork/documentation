@@ -1367,7 +1367,7 @@
 
 [.contract]
 [[G2Operations]]
-= `++G2Operations++`
+= `G2Operations`
 
 
 

@@ -1354,7 +1354,7 @@
 
 [.contract]
 [[SkaleVerifier]]
-= `++SkaleVerifier++`
+= `SkaleVerifier`
 
 Contains verify function to perform BLS signature verification.
 

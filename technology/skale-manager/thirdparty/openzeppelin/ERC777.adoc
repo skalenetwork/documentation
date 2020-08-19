@@ -1379,7 +1379,7 @@
 
 [.contract]
 [[ERC777]]
-= `++ERC777++`
+= `ERC777`
 
 Implementation of the {IERC777} interface.
 This implementation is agnostic to the way tokens are created. This means

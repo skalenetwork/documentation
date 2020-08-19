@@ -1355,7 +1355,7 @@
 
 [.contract]
 [[SlashingTable]]
-= `++SlashingTable++`
+= `SlashingTable`
 
 This contract manages slashing conditions and penalties.
 

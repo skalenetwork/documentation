@@ -1359,7 +1359,7 @@
 
 [.contract]
 [[TokenState]]
-= `++TokenState++`
+= `TokenState`
 
 This contract manages lockers to control token transferability.
 See ILocker.

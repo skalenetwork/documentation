@@ -1376,7 +1376,7 @@
 
 [.contract]
 [[Monitors]]
-= `++Monitors++`
+= `Monitors`
 
 This contract contains all logic to manage the Node Monitoring Service
 of the SKALE Network.

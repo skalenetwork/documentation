@@ -1357,7 +1357,7 @@
 
 [.contract]
 [[ContractManager]]
-= `++ContractManager++`
+= `ContractManager`
 
 Contract contains the actual current mapping from contract IDs
 (in the form of human-readable strings) to addresses.

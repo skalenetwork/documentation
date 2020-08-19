@@ -1398,7 +1398,7 @@
 
 [.contract]
 [[SchainsInternal]]
-= `++SchainsInternal++`
+= `SchainsInternal`
 
 Contract contains all functionality logic to internally manage Schains.
 

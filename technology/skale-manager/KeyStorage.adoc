@@ -1367,7 +1367,7 @@
 
 [.contract]
 [[KeyStorage]]
-= `++KeyStorage++`
+= `KeyStorage`
 
 
 

@@ -1402,7 +1402,7 @@
 
 [.contract]
 [[Nodes]]
-= `++Nodes++`
+= `Nodes`
 
 This contract contains all logic to manage SKALE Network nodes states,
 space availability, stake requirement checks, and exit functions.

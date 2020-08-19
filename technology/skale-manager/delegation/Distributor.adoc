@@ -1363,7 +1363,7 @@
 
 [.contract]
 [[Distributor]]
-= `++Distributor++`
+= `Distributor`
 
 This contract handles all distribution functions of bounty and fee
 payments.

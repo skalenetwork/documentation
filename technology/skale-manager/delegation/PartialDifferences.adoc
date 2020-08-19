@@ -1364,7 +1364,7 @@
 
 [.contract]
 [[PartialDifferences]]
-= `++PartialDifferences++`
+= `PartialDifferences`
 
 This library contains functions to manage Partial Differences data
 structure. Partial Differences is an array of value differences over time.

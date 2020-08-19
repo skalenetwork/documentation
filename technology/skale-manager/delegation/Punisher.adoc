@@ -1360,7 +1360,7 @@
 
 [.contract]
 [[Punisher]]
-= `++Punisher++`
+= `Punisher`
 
 This contract handles all slashing and forgiving operations.
 

@@ -1396,7 +1396,7 @@
 
 [.contract]
 [[SkaleDKG]]
-= `++SkaleDKG++`
+= `SkaleDKG`
 
 Contains functions to manage distributed key generation per
 Joint-Feldman protocol.

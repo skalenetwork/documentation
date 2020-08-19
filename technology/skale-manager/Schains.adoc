@@ -1367,7 +1367,7 @@
 
 [.contract]
 [[Schains]]
-= `++Schains++`
+= `Schains`
 
 Contains functions to manage Schains such as Schain creation,
 deletion, and rotation.

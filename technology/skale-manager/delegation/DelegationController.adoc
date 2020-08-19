@@ -1383,7 +1383,7 @@
 
 [.contract]
 [[DelegationController]]
-= `++DelegationController++`
+= `DelegationController`
 
 This contract performs all delegation functions including delegation
 requests, undelegation, slashing, etc.

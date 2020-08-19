@@ -1391,7 +1391,7 @@
 
 [.contract]
 [[ValidatorService]]
-= `++ValidatorService++`
+= `ValidatorService`
 
 This contract handles all validator operations including registration,
 node management, validator-specific delegation parameters, and more.

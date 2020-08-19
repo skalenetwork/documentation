@@ -1354,7 +1354,7 @@
 
 [.contract]
 [[Decryption]]
-= `++Decryption++`
+= `Decryption`
 
 This contract performs encryption and decryption functions.
 Decrypt is used by SkaleDKG contract to decrypt secret key contribution to

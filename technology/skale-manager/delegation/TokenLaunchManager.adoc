@@ -1368,7 +1368,7 @@
 
 [.contract]
 [[TokenLaunchManager]]
-= `++TokenLaunchManager++`
+= `TokenLaunchManager`
 
 This contract manages functions for the Token Launch event.
 The Seller is an entity who distributes tokens through a Launch process.

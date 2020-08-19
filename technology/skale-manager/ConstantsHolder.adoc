@@ -1392,7 +1392,7 @@
 
 [.contract]
 [[ConstantsHolder]]
-= `++ConstantsHolder++`
+= `ConstantsHolder`
 
 Contract contains constants and common variables for the SKALE Network.
 

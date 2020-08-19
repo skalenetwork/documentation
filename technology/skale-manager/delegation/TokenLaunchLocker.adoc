@@ -1360,7 +1360,7 @@
 
 [.contract]
 [[TokenLaunchLocker]]
-= `++TokenLaunchLocker++`
+= `TokenLaunchLocker`
 
 This contract manages lockers applied to the launch process.
 See ILocker.
