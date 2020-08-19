@@ -1348,15 +1348,13 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:MathUtilsTester: pass:normal[xref:#MathUtilsTester[`++MathUtilsTester++`]]
+[.contract]
+[[MathUtilsTester]]
+= MathUtilsTester:MathUtilsTester: pass:normal[xref:#MathUtilsTester[`++MathUtilsTester++`]]
 :boundedSub: pass:normal[xref:#MathUtilsTester-boundedSub-uint256-uint256-[`++boundedSub++`]]
 :boundedSubWithoutEvent: pass:normal[xref:#MathUtilsTester-boundedSubWithoutEvent-uint256-uint256-[`++boundedSubWithoutEvent++`]]
 :muchGreater: pass:normal[xref:#MathUtilsTester-muchGreater-uint256-uint256-[`++muchGreater++`]]
 :approximatelyEqual: pass:normal[xref:#MathUtilsTester-approximatelyEqual-uint256-uint256-[`++approximatelyEqual++`]]
-
-[.contract]
-[[MathUtilsTester]]
-= `MathUtilsTester`
 
 
 

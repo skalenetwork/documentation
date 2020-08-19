@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:G2Operations: pass:normal[xref:#G2Operations[`++G2Operations++`]]
+[.contract]
+[[G2Operations]]
+= G2Operations:G2Operations: pass:normal[xref:#G2Operations[`++G2Operations++`]]
 :getTWISTB: pass:normal[xref:#G2Operations-getTWISTB--[`++getTWISTB++`]]
 :getG2: pass:normal[xref:#G2Operations-getG2--[`++getG2++`]]
 :getG1: pass:normal[xref:#G2Operations-getG1--[`++getG1++`]]
@@ -1364,10 +1366,6 @@
 :isEqual: pass:normal[xref:#G2Operations-isEqual-struct-G2Operations-G2Point-struct-G2Operations-G2Point-[`++isEqual++`]]
 :doubleG2: pass:normal[xref:#G2Operations-doubleG2-struct-G2Operations-G2Point-[`++doubleG2++`]]
 :mulG2: pass:normal[xref:#G2Operations-mulG2-struct-G2Operations-G2Point-uint256-[`++mulG2++`]]
-
-[.contract]
-[[G2Operations]]
-= `G2Operations`
 
 
 

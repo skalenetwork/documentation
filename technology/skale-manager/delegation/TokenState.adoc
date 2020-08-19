@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:TokenState: pass:normal[xref:#TokenState[`++TokenState++`]]
+[.contract]
+[[TokenState]]
+= TokenState:TokenState: pass:normal[xref:#TokenState[`++TokenState++`]]
 :getAndUpdateLockedAmount: pass:normal[xref:#TokenState-getAndUpdateLockedAmount-address-[`++getAndUpdateLockedAmount++`]]
 :getAndUpdateForbiddenForDelegationAmount: pass:normal[xref:#TokenState-getAndUpdateForbiddenForDelegationAmount-address-[`++getAndUpdateForbiddenForDelegationAmount++`]]
 :removeLocker: pass:normal[xref:#TokenState-removeLocker-string-[`++removeLocker++`]]
@@ -1356,10 +1358,6 @@
 :addLocker: pass:normal[xref:#TokenState-addLocker-string-[`++addLocker++`]]
 :LockerWasAdded: pass:normal[xref:#TokenState-LockerWasAdded-string-[`++LockerWasAdded++`]]
 :LockerWasRemoved: pass:normal[xref:#TokenState-LockerWasRemoved-string-[`++LockerWasRemoved++`]]
-
-[.contract]
-[[TokenState]]
-= `TokenState`
 
 This contract manages lockers to control token transferability.
 See ILocker.

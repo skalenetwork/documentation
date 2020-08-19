@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:SkaleDKG: pass:normal[xref:#SkaleDKG[`++SkaleDKG++`]]
+[.contract]
+[[SkaleDKG]]
+= SkaleDKG:SkaleDKG: pass:normal[xref:#SkaleDKG[`++SkaleDKG++`]]
 :correctGroup: pass:normal[xref:#SkaleDKG-correctGroup-bytes32-[`++correctGroup++`]]
 :correctGroupWithoutRevert: pass:normal[xref:#SkaleDKG-correctGroupWithoutRevert-bytes32-[`++correctGroupWithoutRevert++`]]
 :correctNode: pass:normal[xref:#SkaleDKG-correctNode-bytes32-uint256-[`++correctNode++`]]
@@ -1393,10 +1395,6 @@
 :ComplaintSent: pass:normal[xref:#SkaleDKG-ComplaintSent-bytes32-uint256-uint256-[`++ComplaintSent++`]]
 :NewGuy: pass:normal[xref:#SkaleDKG-NewGuy-uint256-[`++NewGuy++`]]
 :ComplaintError: pass:normal[xref:#SkaleDKG-ComplaintError-string-[`++ComplaintError++`]]
-
-[.contract]
-[[SkaleDKG]]
-= `SkaleDKG`
 
 Contains functions to manage distributed key generation per
 Joint-Feldman protocol.

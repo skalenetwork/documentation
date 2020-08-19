@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:SchainsInternal: pass:normal[xref:#SchainsInternal[`++SchainsInternal++`]]
+[.contract]
+[[SchainsInternal]]
+= SchainsInternal:SchainsInternal: pass:normal[xref:#SchainsInternal[`++SchainsInternal++`]]
 :schains: pass:normal[xref:#SchainsInternal-schains-mapping-bytes32----struct-SchainsInternal-Schain-[`++schains++`]]
 :isSchainActive: pass:normal[xref:#SchainsInternal-isSchainActive-mapping-bytes32----bool-[`++isSchainActive++`]]
 :schainsGroups: pass:normal[xref:#SchainsInternal-schainsGroups-mapping-bytes32----uint256---[`++schainsGroups++`]]
@@ -1395,10 +1397,6 @@
 :getLengthOfSchainsForNode: pass:normal[xref:#SchainsInternal-getLengthOfSchainsForNode-uint256-[`++getLengthOfSchainsForNode++`]]
 :findSchainAtSchainsForNode: pass:normal[xref:#SchainsInternal-findSchainAtSchainsForNode-uint256-bytes32-[`++findSchainAtSchainsForNode++`]]
 :isEnoughNodes: pass:normal[xref:#SchainsInternal-isEnoughNodes-bytes32-[`++isEnoughNodes++`]]
-
-[.contract]
-[[SchainsInternal]]
-= `SchainsInternal`
 
 Contract contains all functionality logic to internally manage Schains.
 

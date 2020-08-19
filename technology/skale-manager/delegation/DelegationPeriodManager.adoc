@@ -1348,16 +1348,14 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:DelegationPeriodManager: pass:normal[xref:#DelegationPeriodManager[`++DelegationPeriodManager++`]]
+[.contract]
+[[DelegationPeriodManager]]
+= DelegationPeriodManager:DelegationPeriodManager: pass:normal[xref:#DelegationPeriodManager[`++DelegationPeriodManager++`]]
 :stakeMultipliers: pass:normal[xref:#DelegationPeriodManager-stakeMultipliers-mapping-uint256----uint256-[`++stakeMultipliers++`]]
 :setDelegationPeriod: pass:normal[xref:#DelegationPeriodManager-setDelegationPeriod-uint256-uint256-[`++setDelegationPeriod++`]]
 :isDelegationPeriodAllowed: pass:normal[xref:#DelegationPeriodManager-isDelegationPeriodAllowed-uint256-[`++isDelegationPeriodAllowed++`]]
 :initialize: pass:normal[xref:#DelegationPeriodManager-initialize-address-[`++initialize++`]]
 :DelegationPeriodWasSet: pass:normal[xref:#DelegationPeriodManager-DelegationPeriodWasSet-uint256-uint256-[`++DelegationPeriodWasSet++`]]
-
-[.contract]
-[[DelegationPeriodManager]]
-= `DelegationPeriodManager`
 
 This contract handles all delegation offerings. Delegations are held for
 a specified period (months), and different durations can have different

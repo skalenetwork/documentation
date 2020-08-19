@@ -1,3 +1,7 @@
+[.contract]
+[[{{anchor}}]]
+= {{name}}
+
 {{~#*inline "typed-variable-array"~}}
 {{#each .}}++[.var-type]#++{{typeName}}++#++{{#if name}} ++[.var-name]#++{{name}}++#++{{/if}}{{#unless @last}}, {{/unless}}{{/each}}
 {{~/inline~}}
@@ -5,10 +9,6 @@
 {{#each linkable}}
 :{{name}}: pass:normal[xref:#{{anchor}}[`++{{name}}++`]]
 {{/each}}
-
-[.contract]
-[[{{anchor}}]]
-= `{{name}}`
 
 {{natspec.devdoc}}
 

@@ -1348,17 +1348,15 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:ReentrancyTester: pass:normal[xref:#ReentrancyTester[`++ReentrancyTester++`]]
+[.contract]
+[[ReentrancyTester]]
+= ReentrancyTester:ReentrancyTester: pass:normal[xref:#ReentrancyTester[`++ReentrancyTester++`]]
 :constructor: pass:normal[xref:#ReentrancyTester-constructor-address-[`++constructor++`]]
 :tokensReceived: pass:normal[xref:#ReentrancyTester-tokensReceived-address-address-address-uint256-bytes-bytes-[`++tokensReceived++`]]
 :tokensToSend: pass:normal[xref:#ReentrancyTester-tokensToSend-address-address-address-uint256-bytes-bytes-[`++tokensToSend++`]]
 :prepareToReentracyCheck: pass:normal[xref:#ReentrancyTester-prepareToReentracyCheck--[`++prepareToReentracyCheck++`]]
 :prepareToBurningAttack: pass:normal[xref:#ReentrancyTester-prepareToBurningAttack--[`++prepareToBurningAttack++`]]
 :burningAttack: pass:normal[xref:#ReentrancyTester-burningAttack--[`++burningAttack++`]]
-
-[.contract]
-[[ReentrancyTester]]
-= `ReentrancyTester`
 
 
 

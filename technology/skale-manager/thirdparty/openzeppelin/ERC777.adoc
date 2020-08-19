@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:ERC777: pass:normal[xref:#ERC777[`++ERC777++`]]
+[.contract]
+[[ERC777]]
+= ERC777:ERC777: pass:normal[xref:#ERC777[`++ERC777++`]]
 :_ERC1820_REGISTRY: pass:normal[xref:#ERC777-_ERC1820_REGISTRY-contract-IERC1820Registry[`++_ERC1820_REGISTRY++`]]
 :constructor: pass:normal[xref:#ERC777-constructor-string-string-address---[`++constructor++`]]
 :name: pass:normal[xref:#ERC777-name--[`++name++`]]
@@ -1376,10 +1378,6 @@
 :_callTokensToSend: pass:normal[xref:#ERC777-_callTokensToSend-address-address-address-uint256-bytes-bytes-[`++_callTokensToSend++`]]
 :_callTokensReceived: pass:normal[xref:#ERC777-_callTokensReceived-address-address-address-uint256-bytes-bytes-bool-[`++_callTokensReceived++`]]
 :_beforeTokenTransfer: pass:normal[xref:#ERC777-_beforeTokenTransfer-address-address-address-uint256-[`++_beforeTokenTransfer++`]]
-
-[.contract]
-[[ERC777]]
-= `ERC777`
 
 Implementation of the {IERC777} interface.
 This implementation is agnostic to the way tokens are created. This means

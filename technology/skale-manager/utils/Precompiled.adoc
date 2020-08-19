@@ -1348,14 +1348,12 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:Precompiled: pass:normal[xref:#Precompiled[`++Precompiled++`]]
+[.contract]
+[[Precompiled]]
+= Precompiled:Precompiled: pass:normal[xref:#Precompiled[`++Precompiled++`]]
 :bigModExp: pass:normal[xref:#Precompiled-bigModExp-uint256-uint256-uint256-[`++bigModExp++`]]
 :bn256ScalarMul: pass:normal[xref:#Precompiled-bn256ScalarMul-uint256-uint256-uint256-[`++bn256ScalarMul++`]]
 :bn256Pairing: pass:normal[xref:#Precompiled-bn256Pairing-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-uint256-[`++bn256Pairing++`]]
-
-[.contract]
-[[Precompiled]]
-= `Precompiled`
 
 
 

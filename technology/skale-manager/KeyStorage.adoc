@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:KeyStorage: pass:normal[xref:#KeyStorage[`++KeyStorage++`]]
+[.contract]
+[[KeyStorage]]
+= KeyStorage:KeyStorage: pass:normal[xref:#KeyStorage[`++KeyStorage++`]]
 :addBroadcastedData: pass:normal[xref:#KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---[`++addBroadcastedData++`]]
 :deleteKey: pass:normal[xref:#KeyStorage-deleteKey-bytes32-[`++deleteKey++`]]
 :initPublicKeyInProgress: pass:normal[xref:#KeyStorage-initPublicKeyInProgress-bytes32-[`++initPublicKeyInProgress++`]]
@@ -1364,10 +1366,6 @@
 :getAllPreviousPublicKeys: pass:normal[xref:#KeyStorage-getAllPreviousPublicKeys-bytes32-[`++getAllPreviousPublicKeys++`]]
 :getBLSPublicKey: pass:normal[xref:#KeyStorage-getBLSPublicKey-bytes32-uint256-[`++getBLSPublicKey++`]]
 :initialize: pass:normal[xref:#KeyStorage-initialize-address-[`++initialize++`]]
-
-[.contract]
-[[KeyStorage]]
-= `KeyStorage`
 
 
 

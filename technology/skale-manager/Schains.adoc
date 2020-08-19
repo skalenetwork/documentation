@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:Schains: pass:normal[xref:#Schains[`++Schains++`]]
+[.contract]
+[[Schains]]
+= Schains:Schains: pass:normal[xref:#Schains[`++Schains++`]]
 :SCHAIN_CREATOR_ROLE: pass:normal[xref:#Schains-SCHAIN_CREATOR_ROLE-bytes32[`++SCHAIN_CREATOR_ROLE++`]]
 :addSchain: pass:normal[xref:#Schains-addSchain-address-uint256-bytes-[`++addSchain++`]]
 :addSchainByFoundation: pass:normal[xref:#Schains-addSchainByFoundation-uint256-uint8-uint16-string-[`++addSchainByFoundation++`]]
@@ -1364,10 +1366,6 @@
 :NodeRotated: pass:normal[xref:#Schains-NodeRotated-bytes32-uint256-uint256-[`++NodeRotated++`]]
 :NodeAdded: pass:normal[xref:#Schains-NodeAdded-bytes32-uint256-[`++NodeAdded++`]]
 :SchainNodes: pass:normal[xref:#Schains-SchainNodes-string-bytes32-uint256---uint256-uint256-[`++SchainNodes++`]]
-
-[.contract]
-[[Schains]]
-= `Schains`
 
 Contains functions to manage Schains such as Schain creation,
 deletion, and rotation.

@@ -1348,16 +1348,14 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:ContractManager: pass:normal[xref:#ContractManager[`++ContractManager++`]]
+[.contract]
+[[ContractManager]]
+= ContractManager:ContractManager: pass:normal[xref:#ContractManager[`++ContractManager++`]]
 :contracts: pass:normal[xref:#ContractManager-contracts-mapping-bytes32----address-[`++contracts++`]]
 :initialize: pass:normal[xref:#ContractManager-initialize--[`++initialize++`]]
 :setContractsAddress: pass:normal[xref:#ContractManager-setContractsAddress-string-address-[`++setContractsAddress++`]]
 :getContract: pass:normal[xref:#ContractManager-getContract-string-[`++getContract++`]]
 :ContractUpgraded: pass:normal[xref:#ContractManager-ContractUpgraded-string-address-[`++ContractUpgraded++`]]
-
-[.contract]
-[[ContractManager]]
-= `ContractManager`
 
 Contract contains the actual current mapping from contract IDs
 (in the form of human-readable strings) to addresses.

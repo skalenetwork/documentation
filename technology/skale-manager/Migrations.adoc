@@ -1348,16 +1348,14 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:Migrations: pass:normal[xref:#Migrations[`++Migrations++`]]
+[.contract]
+[[Migrations]]
+= Migrations:Migrations: pass:normal[xref:#Migrations[`++Migrations++`]]
 :restricted: pass:normal[xref:#Migrations-restricted--[`++restricted++`]]
 :owner: pass:normal[xref:#Migrations-owner-address[`++owner++`]]
 :last_completed_migration: pass:normal[xref:#Migrations-last_completed_migration-uint256[`++last_completed_migration++`]]
 :setCompleted: pass:normal[xref:#Migrations-setCompleted-uint256-[`++setCompleted++`]]
 :upgrade: pass:normal[xref:#Migrations-upgrade-address-[`++upgrade++`]]
-
-[.contract]
-[[Migrations]]
-= `Migrations`
 
 
 

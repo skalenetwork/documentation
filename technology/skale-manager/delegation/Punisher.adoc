@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:Punisher: pass:normal[xref:#Punisher[`++Punisher++`]]
+[.contract]
+[[Punisher]]
+= Punisher:Punisher: pass:normal[xref:#Punisher[`++Punisher++`]]
 :slash: pass:normal[xref:#Punisher-slash-uint256-uint256-[`++slash++`]]
 :forgive: pass:normal[xref:#Punisher-forgive-address-uint256-[`++forgive++`]]
 :getAndUpdateLockedAmount: pass:normal[xref:#Punisher-getAndUpdateLockedAmount-address-[`++getAndUpdateLockedAmount++`]]
@@ -1357,10 +1359,6 @@
 :initialize: pass:normal[xref:#Punisher-initialize-address-[`++initialize++`]]
 :Slash: pass:normal[xref:#Punisher-Slash-uint256-uint256-[`++Slash++`]]
 :Forgive: pass:normal[xref:#Punisher-Forgive-address-uint256-[`++Forgive++`]]
-
-[.contract]
-[[Punisher]]
-= `Punisher`
 
 This contract handles all slashing and forgiving operations.
 

@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:ValidatorService: pass:normal[xref:#ValidatorService[`++ValidatorService++`]]
+[.contract]
+[[ValidatorService]]
+= ValidatorService:ValidatorService: pass:normal[xref:#ValidatorService[`++ValidatorService++`]]
 :checkValidatorExists: pass:normal[xref:#ValidatorService-checkValidatorExists-uint256-[`++checkValidatorExists++`]]
 :validators: pass:normal[xref:#ValidatorService-validators-mapping-uint256----struct-ValidatorService-Validator-[`++validators++`]]
 :trustedValidatorsList: pass:normal[xref:#ValidatorService-trustedValidatorsList-uint256--[`++trustedValidatorsList++`]]
@@ -1388,10 +1390,6 @@
 :ValidatorWasDisabled: pass:normal[xref:#ValidatorService-ValidatorWasDisabled-uint256-[`++ValidatorWasDisabled++`]]
 :NodeAddressWasAdded: pass:normal[xref:#ValidatorService-NodeAddressWasAdded-uint256-address-[`++NodeAddressWasAdded++`]]
 :NodeAddressWasRemoved: pass:normal[xref:#ValidatorService-NodeAddressWasRemoved-uint256-address-[`++NodeAddressWasRemoved++`]]
-
-[.contract]
-[[ValidatorService]]
-= `ValidatorService`
 
 This contract handles all validator operations including registration,
 node management, validator-specific delegation parameters, and more.

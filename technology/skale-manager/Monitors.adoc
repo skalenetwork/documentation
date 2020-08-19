@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:Monitors: pass:normal[xref:#Monitors[`++Monitors++`]]
+[.contract]
+[[Monitors]]
+= Monitors:Monitors: pass:normal[xref:#Monitors[`++Monitors++`]]
 :checkedNodes: pass:normal[xref:#Monitors-checkedNodes-mapping-bytes32----struct-Monitors-CheckedNode---[`++checkedNodes++`]]
 :verdicts: pass:normal[xref:#Monitors-verdicts-mapping-bytes32----uint256-----[`++verdicts++`]]
 :groupsForMonitors: pass:normal[xref:#Monitors-groupsForMonitors-mapping-bytes32----uint256---[`++groupsForMonitors++`]]
@@ -1373,10 +1375,6 @@
 :MetricsWereCalculated: pass:normal[xref:#Monitors-MetricsWereCalculated-uint256-uint32-uint32-uint256-uint256-[`++MetricsWereCalculated++`]]
 :PeriodsWereSet: pass:normal[xref:#Monitors-PeriodsWereSet-uint256-uint256-uint256-uint256-[`++PeriodsWereSet++`]]
 :MonitorRotated: pass:normal[xref:#Monitors-MonitorRotated-bytes32-uint256-[`++MonitorRotated++`]]
-
-[.contract]
-[[Monitors]]
-= `Monitors`
 
 This contract contains all logic to manage the Node Monitoring Service
 of the SKALE Network.

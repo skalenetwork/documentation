@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:DelegationController: pass:normal[xref:#DelegationController[`++DelegationController++`]]
+[.contract]
+[[DelegationController]]
+= DelegationController:DelegationController: pass:normal[xref:#DelegationController[`++DelegationController++`]]
 :checkDelegationExists: pass:normal[xref:#DelegationController-checkDelegationExists-uint256-[`++checkDelegationExists++`]]
 :delegations: pass:normal[xref:#DelegationController-delegations-struct-DelegationController-Delegation--[`++delegations++`]]
 :delegationsByValidator: pass:normal[xref:#DelegationController-delegationsByValidator-mapping-uint256----uint256---[`++delegationsByValidator++`]]
@@ -1380,10 +1382,6 @@
 :DelegationAccepted: pass:normal[xref:#DelegationController-DelegationAccepted-uint256-[`++DelegationAccepted++`]]
 :DelegationRequestCanceledByUser: pass:normal[xref:#DelegationController-DelegationRequestCanceledByUser-uint256-[`++DelegationRequestCanceledByUser++`]]
 :UndelegationRequested: pass:normal[xref:#DelegationController-UndelegationRequested-uint256-[`++UndelegationRequested++`]]
-
-[.contract]
-[[DelegationController]]
-= `DelegationController`
 
 This contract performs all delegation functions including delegation
 requests, undelegation, slashing, etc.

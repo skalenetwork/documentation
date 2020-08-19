@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:Distributor: pass:normal[xref:#Distributor[`++Distributor++`]]
+[.contract]
+[[Distributor]]
+= Distributor:Distributor: pass:normal[xref:#Distributor[`++Distributor++`]]
 :getAndUpdateEarnedBountyAmount: pass:normal[xref:#Distributor-getAndUpdateEarnedBountyAmount-uint256-[`++getAndUpdateEarnedBountyAmount++`]]
 :withdrawBounty: pass:normal[xref:#Distributor-withdrawBounty-uint256-address-[`++withdrawBounty++`]]
 :withdrawFee: pass:normal[xref:#Distributor-withdrawFee-address-[`++withdrawFee++`]]
@@ -1360,10 +1362,6 @@
 :WithdrawBounty: pass:normal[xref:#Distributor-WithdrawBounty-address-uint256-address-uint256-[`++WithdrawBounty++`]]
 :WithdrawFee: pass:normal[xref:#Distributor-WithdrawFee-uint256-address-uint256-[`++WithdrawFee++`]]
 :BountyWasPaid: pass:normal[xref:#Distributor-BountyWasPaid-uint256-uint256-[`++BountyWasPaid++`]]
-
-[.contract]
-[[Distributor]]
-= `Distributor`
 
 This contract handles all distribution functions of bounty and fee
 payments.

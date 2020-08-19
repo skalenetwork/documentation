@@ -1348,13 +1348,11 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:SkaleVerifier: pass:normal[xref:#SkaleVerifier[`++SkaleVerifier++`]]
-:verify: pass:normal[xref:#SkaleVerifier-verify-struct-Fp2Operations-Fp2Point-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-[`++verify++`]]
-:initialize: pass:normal[xref:#SkaleVerifier-initialize-address-[`++initialize++`]]
-
 [.contract]
 [[SkaleVerifier]]
-= `SkaleVerifier`
+= SkaleVerifier:SkaleVerifier: pass:normal[xref:#SkaleVerifier[`++SkaleVerifier++`]]
+:verify: pass:normal[xref:#SkaleVerifier-verify-struct-Fp2Operations-Fp2Point-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-[`++verify++`]]
+:initialize: pass:normal[xref:#SkaleVerifier-initialize-address-[`++initialize++`]]
 
 Contains verify function to perform BLS signature verification.
 

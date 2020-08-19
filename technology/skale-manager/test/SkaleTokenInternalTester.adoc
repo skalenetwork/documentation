@@ -1348,13 +1348,11 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:SkaleTokenInternalTester: pass:normal[xref:#SkaleTokenInternalTester[`++SkaleTokenInternalTester++`]]
-:constructor: pass:normal[xref:#SkaleTokenInternalTester-constructor-address-address---[`++constructor++`]]
-:getMsgData: pass:normal[xref:#SkaleTokenInternalTester-getMsgData--[`++getMsgData++`]]
-
 [.contract]
 [[SkaleTokenInternalTester]]
-= `SkaleTokenInternalTester`
+= SkaleTokenInternalTester:SkaleTokenInternalTester: pass:normal[xref:#SkaleTokenInternalTester[`++SkaleTokenInternalTester++`]]
+:constructor: pass:normal[xref:#SkaleTokenInternalTester-constructor-address-address---[`++constructor++`]]
+:getMsgData: pass:normal[xref:#SkaleTokenInternalTester-getMsgData--[`++getMsgData++`]]
 
 
 

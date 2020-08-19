@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:TimeHelpers: pass:normal[xref:#TimeHelpers[`++TimeHelpers++`]]
+[.contract]
+[[TimeHelpers]]
+= TimeHelpers:TimeHelpers: pass:normal[xref:#TimeHelpers[`++TimeHelpers++`]]
 :calculateProofOfUseLockEndTime: pass:normal[xref:#TimeHelpers-calculateProofOfUseLockEndTime-uint256-uint256-[`++calculateProofOfUseLockEndTime++`]]
 :addDays: pass:normal[xref:#TimeHelpers-addDays-uint256-uint256-[`++addDays++`]]
 :addMonths: pass:normal[xref:#TimeHelpers-addMonths-uint256-uint256-[`++addMonths++`]]
@@ -1358,10 +1360,6 @@
 :timestampToYear: pass:normal[xref:#TimeHelpers-timestampToYear-uint256-[`++timestampToYear++`]]
 :timestampToMonth: pass:normal[xref:#TimeHelpers-timestampToMonth-uint256-[`++timestampToMonth++`]]
 :monthToTimestamp: pass:normal[xref:#TimeHelpers-monthToTimestamp-uint256-[`++monthToTimestamp++`]]
-
-[.contract]
-[[TimeHelpers]]
-= `TimeHelpers`
 
 The contract performs time operations.
 These functions are used to calculate monthly and Proof of Use epochs.

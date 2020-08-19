@@ -1348,7 +1348,9 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-:TokenLaunchManager: pass:normal[xref:#TokenLaunchManager[`++TokenLaunchManager++`]]
+[.contract]
+[[TokenLaunchManager]]
+= TokenLaunchManager:TokenLaunchManager: pass:normal[xref:#TokenLaunchManager[`++TokenLaunchManager++`]]
 :onlySeller: pass:normal[xref:#TokenLaunchManager-onlySeller--[`++onlySeller++`]]
 :SELLER_ROLE: pass:normal[xref:#TokenLaunchManager-SELLER_ROLE-bytes32[`++SELLER_ROLE++`]]
 :approved: pass:normal[xref:#TokenLaunchManager-approved-mapping-address----uint256-[`++approved++`]]
@@ -1365,10 +1367,6 @@
 :Approved: pass:normal[xref:#TokenLaunchManager-Approved-address-uint256-[`++Approved++`]]
 :TokensRetrieved: pass:normal[xref:#TokenLaunchManager-TokensRetrieved-address-uint256-[`++TokensRetrieved++`]]
 :TokenLaunchIsCompleted: pass:normal[xref:#TokenLaunchManager-TokenLaunchIsCompleted-uint256-[`++TokenLaunchIsCompleted++`]]
-
-[.contract]
-[[TokenLaunchManager]]
-= `TokenLaunchManager`
 
 This contract manages functions for the Token Launch event.
 The Seller is an entity who distributes tokens through a Launch process.
