@@ -1348,13 +1348,15 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[SkaleManagerMock]]
-= SkaleManagerMock:SkaleManagerMock: pass:normal[xref:#SkaleManagerMock[`++SkaleManagerMock++`]]
+:SkaleManagerMock: pass:normal[xref:#SkaleManagerMock[`++SkaleManagerMock++`]]
 :ADMIN_ROLE: pass:normal[xref:#SkaleManagerMock-ADMIN_ROLE-bytes32[`++ADMIN_ROLE++`]]
 :constructor: pass:normal[xref:#SkaleManagerMock-constructor-address-[`++constructor++`]]
 :payBounty: pass:normal[xref:#SkaleManagerMock-payBounty-uint256-uint256-[`++payBounty++`]]
 :tokensReceived: pass:normal[xref:#SkaleManagerMock-tokensReceived-address-address-address-uint256-bytes-bytes-[`++tokensReceived++`]]
+
+[.contract]
+[[SkaleManagerMock]]
+= SkaleManagerMock
 
 
 

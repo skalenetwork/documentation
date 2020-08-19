@@ -1348,9 +1348,7 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[TokenLaunchLocker]]
-= TokenLaunchLocker:TokenLaunchLocker: pass:normal[xref:#TokenLaunchLocker[`++TokenLaunchLocker++`]]
+:TokenLaunchLocker: pass:normal[xref:#TokenLaunchLocker[`++TokenLaunchLocker++`]]
 :lock: pass:normal[xref:#TokenLaunchLocker-lock-address-uint256-[`++lock++`]]
 :handleDelegationAdd: pass:normal[xref:#TokenLaunchLocker-handleDelegationAdd-address-uint256-uint256-uint256-[`++handleDelegationAdd++`]]
 :handleDelegationRemoving: pass:normal[xref:#TokenLaunchLocker-handleDelegationRemoving-address-uint256-uint256-[`++handleDelegationRemoving++`]]
@@ -1359,6 +1357,10 @@
 :initialize: pass:normal[xref:#TokenLaunchLocker-initialize-address-[`++initialize++`]]
 :Unlocked: pass:normal[xref:#TokenLaunchLocker-Unlocked-address-uint256-[`++Unlocked++`]]
 :Locked: pass:normal[xref:#TokenLaunchLocker-Locked-address-uint256-[`++Locked++`]]
+
+[.contract]
+[[TokenLaunchLocker]]
+= TokenLaunchLocker
 
 This contract manages lockers applied to the launch process.
 See ILocker.

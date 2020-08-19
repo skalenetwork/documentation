@@ -1348,9 +1348,7 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[ECDH]]
-= ECDH:ECDH: pass:normal[xref:#ECDH[`++ECDH++`]]
+:ECDH: pass:normal[xref:#ECDH[`++ECDH++`]]
 :publicKey: pass:normal[xref:#ECDH-publicKey-uint256-[`++publicKey++`]]
 :deriveKey: pass:normal[xref:#ECDH-deriveKey-uint256-uint256-uint256-[`++deriveKey++`]]
 :jAdd: pass:normal[xref:#ECDH-jAdd-uint256-uint256-uint256-uint256-[`++jAdd++`]]
@@ -1361,6 +1359,10 @@
 :ecAdd: pass:normal[xref:#ECDH-ecAdd-uint256-uint256-uint256-uint256-uint256-uint256-[`++ecAdd++`]]
 :ecDouble: pass:normal[xref:#ECDH-ecDouble-uint256-uint256-uint256-[`++ecDouble++`]]
 :ecMul: pass:normal[xref:#ECDH-ecMul-uint256-uint256-uint256-uint256-[`++ecMul++`]]
+
+[.contract]
+[[ECDH]]
+= ECDH
 
 This contract performs Elliptic-curve Diffie-Hellman key exchange to
 support the DKG process.

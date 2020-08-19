@@ -1348,9 +1348,7 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[PartialDifferences]]
-= PartialDifferences:PartialDifferences: pass:normal[xref:#PartialDifferences[`++PartialDifferences++`]]
+:PartialDifferences: pass:normal[xref:#PartialDifferences[`++PartialDifferences++`]]
 :addToSequence: pass:normal[xref:#PartialDifferences-addToSequence-struct-PartialDifferences-Sequence-uint256-uint256-[`++addToSequence++`]]
 :subtractFromSequence: pass:normal[xref:#PartialDifferences-subtractFromSequence-struct-PartialDifferences-Sequence-uint256-uint256-[`++subtractFromSequence++`]]
 :getAndUpdateValueInSequence: pass:normal[xref:#PartialDifferences-getAndUpdateValueInSequence-struct-PartialDifferences-Sequence-uint256-[`++getAndUpdateValueInSequence++`]]
@@ -1363,6 +1361,10 @@
 :reduceValueByCoefficientAndUpdateSum: pass:normal[xref:#PartialDifferences-reduceValueByCoefficientAndUpdateSum-struct-PartialDifferences-Value-struct-PartialDifferences-Value-struct-FractionUtils-Fraction-uint256-[`++reduceValueByCoefficientAndUpdateSum++`]]
 :reduceValueByCoefficientAndUpdateSumIfNeeded: pass:normal[xref:#PartialDifferences-reduceValueByCoefficientAndUpdateSumIfNeeded-struct-PartialDifferences-Value-struct-PartialDifferences-Value-struct-FractionUtils-Fraction-uint256-bool-[`++reduceValueByCoefficientAndUpdateSumIfNeeded++`]]
 :clear: pass:normal[xref:#PartialDifferences-clear-struct-PartialDifferences-Value-[`++clear++`]]
+
+[.contract]
+[[PartialDifferences]]
+= PartialDifferences
 
 This library contains functions to manage Partial Differences data
 structure. Partial Differences is an array of value differences over time.

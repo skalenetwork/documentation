@@ -1348,15 +1348,17 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[FractionUtils]]
-= FractionUtils:FractionUtils: pass:normal[xref:#FractionUtils[`++FractionUtils++`]]
+:FractionUtils: pass:normal[xref:#FractionUtils[`++FractionUtils++`]]
 :createFraction: pass:normal[xref:#FractionUtils-createFraction-uint256-uint256-[`++createFraction++`]]
 :createFraction: pass:normal[xref:#FractionUtils-createFraction-uint256-[`++createFraction++`]]
 :reduceFraction: pass:normal[xref:#FractionUtils-reduceFraction-struct-FractionUtils-Fraction-[`++reduceFraction++`]]
 :multiplyFraction: pass:normal[xref:#FractionUtils-multiplyFraction-struct-FractionUtils-Fraction-struct-FractionUtils-Fraction-[`++multiplyFraction++`]]
 :gcd: pass:normal[xref:#FractionUtils-gcd-uint256-uint256-[`++gcd++`]]
 :swap: pass:normal[xref:#FractionUtils-swap-uint256-uint256-[`++swap++`]]
+
+[.contract]
+[[FractionUtils]]
+= FractionUtils
 
 
 

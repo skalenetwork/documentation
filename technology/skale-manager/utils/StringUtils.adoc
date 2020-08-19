@@ -1348,11 +1348,13 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[StringUtils]]
-= StringUtils:StringUtils: pass:normal[xref:#StringUtils[`++StringUtils++`]]
+:StringUtils: pass:normal[xref:#StringUtils[`++StringUtils++`]]
 :strConcat: pass:normal[xref:#StringUtils-strConcat-string-string-[`++strConcat++`]]
 :uint2str: pass:normal[xref:#StringUtils-uint2str-uint256-[`++uint2str++`]]
+
+[.contract]
+[[StringUtils]]
+= StringUtils
 
 
 

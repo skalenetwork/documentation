@@ -1348,9 +1348,7 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[Bounty]]
-= Bounty:Bounty: pass:normal[xref:#Bounty[`++Bounty++`]]
+:Bounty: pass:normal[xref:#Bounty[`++Bounty++`]]
 :STAGE_LENGTH: pass:normal[xref:#Bounty-STAGE_LENGTH-uint256[`++STAGE_LENGTH++`]]
 :YEAR1_BOUNTY: pass:normal[xref:#Bounty-YEAR1_BOUNTY-uint256[`++YEAR1_BOUNTY++`]]
 :YEAR2_BOUNTY: pass:normal[xref:#Bounty-YEAR2_BOUNTY-uint256[`++YEAR2_BOUNTY++`]]
@@ -1365,6 +1363,10 @@
 :disableBountyReduction: pass:normal[xref:#Bounty-disableBountyReduction--[`++disableBountyReduction++`]]
 :calculateNormalBounty: pass:normal[xref:#Bounty-calculateNormalBounty-uint256-[`++calculateNormalBounty++`]]
 :initialize: pass:normal[xref:#Bounty-initialize-address-[`++initialize++`]]
+
+[.contract]
+[[Bounty]]
+= Bounty
 
 
 

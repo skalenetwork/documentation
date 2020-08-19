@@ -1348,12 +1348,14 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[SlashingTable]]
-= SlashingTable:SlashingTable: pass:normal[xref:#SlashingTable[`++SlashingTable++`]]
+:SlashingTable: pass:normal[xref:#SlashingTable[`++SlashingTable++`]]
 :setPenalty: pass:normal[xref:#SlashingTable-setPenalty-string-uint256-[`++setPenalty++`]]
 :getPenalty: pass:normal[xref:#SlashingTable-getPenalty-string-[`++getPenalty++`]]
 :initialize: pass:normal[xref:#SlashingTable-initialize-address-[`++initialize++`]]
+
+[.contract]
+[[SlashingTable]]
+= SlashingTable
 
 This contract manages slashing conditions and penalties.
 

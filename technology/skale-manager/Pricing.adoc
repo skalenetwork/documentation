@@ -1348,9 +1348,7 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[Pricing]]
-= Pricing:Pricing: pass:normal[xref:#Pricing[`++Pricing++`]]
+:Pricing: pass:normal[xref:#Pricing[`++Pricing++`]]
 :INITIAL_PRICE: pass:normal[xref:#Pricing-INITIAL_PRICE-uint256[`++INITIAL_PRICE++`]]
 :price: pass:normal[xref:#Pricing-price-uint256[`++price++`]]
 :totalNodes: pass:normal[xref:#Pricing-totalNodes-uint256[`++totalNodes++`]]
@@ -1360,6 +1358,10 @@
 :getTotalLoadPercentage: pass:normal[xref:#Pricing-getTotalLoadPercentage--[`++getTotalLoadPercentage++`]]
 :initialize: pass:normal[xref:#Pricing-initialize-address-[`++initialize++`]]
 :checkAllNodes: pass:normal[xref:#Pricing-checkAllNodes--[`++checkAllNodes++`]]
+
+[.contract]
+[[Pricing]]
+= Pricing
 
 Contains pricing operations for SKALE network.
 

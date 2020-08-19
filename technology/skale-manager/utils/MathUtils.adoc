@@ -1348,14 +1348,16 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[MathUtils]]
-= MathUtils:MathUtils: pass:normal[xref:#MathUtils[`++MathUtils++`]]
+:MathUtils: pass:normal[xref:#MathUtils[`++MathUtils++`]]
 :boundedSub: pass:normal[xref:#MathUtils-boundedSub-uint256-uint256-[`++boundedSub++`]]
 :boundedSubWithoutEvent: pass:normal[xref:#MathUtils-boundedSubWithoutEvent-uint256-uint256-[`++boundedSubWithoutEvent++`]]
 :muchGreater: pass:normal[xref:#MathUtils-muchGreater-uint256-uint256-[`++muchGreater++`]]
 :approximatelyEqual: pass:normal[xref:#MathUtils-approximatelyEqual-uint256-uint256-[`++approximatelyEqual++`]]
 :UnderflowError: pass:normal[xref:#MathUtils-UnderflowError-uint256-uint256-[`++UnderflowError++`]]
+
+[.contract]
+[[MathUtils]]
+= MathUtils
 
 
 

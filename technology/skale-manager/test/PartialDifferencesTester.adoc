@@ -1348,15 +1348,17 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[PartialDifferencesTester]]
-= PartialDifferencesTester:PartialDifferencesTester: pass:normal[xref:#PartialDifferencesTester[`++PartialDifferencesTester++`]]
+:PartialDifferencesTester: pass:normal[xref:#PartialDifferencesTester[`++PartialDifferencesTester++`]]
 :createSequence: pass:normal[xref:#PartialDifferencesTester-createSequence--[`++createSequence++`]]
 :addToSequence: pass:normal[xref:#PartialDifferencesTester-addToSequence-uint256-uint256-uint256-[`++addToSequence++`]]
 :subtractFromSequence: pass:normal[xref:#PartialDifferencesTester-subtractFromSequence-uint256-uint256-uint256-[`++subtractFromSequence++`]]
 :getAndUpdateSequenceItem: pass:normal[xref:#PartialDifferencesTester-getAndUpdateSequenceItem-uint256-uint256-[`++getAndUpdateSequenceItem++`]]
 :reduceSequence: pass:normal[xref:#PartialDifferencesTester-reduceSequence-uint256-uint256-uint256-uint256-[`++reduceSequence++`]]
 :latestSequence: pass:normal[xref:#PartialDifferencesTester-latestSequence--[`++latestSequence++`]]
+
+[.contract]
+[[PartialDifferencesTester]]
+= PartialDifferencesTester
 
 
 

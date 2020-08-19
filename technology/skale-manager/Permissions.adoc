@@ -1348,9 +1348,7 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[Permissions]]
-= Permissions:Permissions: pass:normal[xref:#Permissions[`++Permissions++`]]
+:Permissions: pass:normal[xref:#Permissions[`++Permissions++`]]
 :onlyOwner: pass:normal[xref:#Permissions-onlyOwner--[`++onlyOwner++`]]
 :onlyAdmin: pass:normal[xref:#Permissions-onlyAdmin--[`++onlyAdmin++`]]
 :allow: pass:normal[xref:#Permissions-allow-string-[`++allow++`]]
@@ -1360,6 +1358,10 @@
 :initialize: pass:normal[xref:#Permissions-initialize-address-[`++initialize++`]]
 :_isOwner: pass:normal[xref:#Permissions-_isOwner--[`++_isOwner++`]]
 :_isAdmin: pass:normal[xref:#Permissions-_isAdmin-address-[`++_isAdmin++`]]
+
+[.contract]
+[[Permissions]]
+= Permissions
 
 Contract is connected module for Upgradeable approach, knows ContractManager
 

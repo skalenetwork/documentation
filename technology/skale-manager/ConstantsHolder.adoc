@@ -1348,9 +1348,7 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[ConstantsHolder]]
-= ConstantsHolder:ConstantsHolder: pass:normal[xref:#ConstantsHolder[`++ConstantsHolder++`]]
+:ConstantsHolder: pass:normal[xref:#ConstantsHolder[`++ConstantsHolder++`]]
 :NODE_DEPOSIT: pass:normal[xref:#ConstantsHolder-NODE_DEPOSIT-uint256[`++NODE_DEPOSIT++`]]
 :TOTAL_SPACE_ON_NODE: pass:normal[xref:#ConstantsHolder-TOTAL_SPACE_ON_NODE-uint8[`++TOTAL_SPACE_ON_NODE++`]]
 :SMALL_DIVISOR: pass:normal[xref:#ConstantsHolder-SMALL_DIVISOR-uint8[`++SMALL_DIVISOR++`]]
@@ -1391,6 +1389,10 @@
 :setLimitValidatorsPerDelegator: pass:normal[xref:#ConstantsHolder-setLimitValidatorsPerDelegator-uint256-[`++setLimitValidatorsPerDelegator++`]]
 :setFirstDelegationsMonth: pass:normal[xref:#ConstantsHolder-setFirstDelegationsMonth-uint256-[`++setFirstDelegationsMonth++`]]
 :initialize: pass:normal[xref:#ConstantsHolder-initialize-address-[`++initialize++`]]
+
+[.contract]
+[[ConstantsHolder]]
+= ConstantsHolder
 
 Contract contains constants and common variables for the SKALE Network.
 

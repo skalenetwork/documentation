@@ -1348,11 +1348,13 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[Decryption]]
-= Decryption:Decryption: pass:normal[xref:#Decryption[`++Decryption++`]]
+:Decryption: pass:normal[xref:#Decryption[`++Decryption++`]]
 :encrypt: pass:normal[xref:#Decryption-encrypt-uint256-bytes32-[`++encrypt++`]]
 :decrypt: pass:normal[xref:#Decryption-decrypt-bytes32-bytes32-[`++decrypt++`]]
+
+[.contract]
+[[Decryption]]
+= Decryption
 
 This contract performs encryption and decryption functions.
 Decrypt is used by SkaleDKG contract to decrypt secret key contribution to

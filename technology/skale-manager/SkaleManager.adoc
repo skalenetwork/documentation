@@ -1348,9 +1348,7 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[SkaleManager]]
-= SkaleManager:SkaleManager: pass:normal[xref:#SkaleManager[`++SkaleManager++`]]
+:SkaleManager: pass:normal[xref:#SkaleManager[`++SkaleManager++`]]
 :ADMIN_ROLE: pass:normal[xref:#SkaleManager-ADMIN_ROLE-bytes32[`++ADMIN_ROLE++`]]
 :tokensReceived: pass:normal[xref:#SkaleManager-tokensReceived-address-address-address-uint256-bytes-bytes-[`++tokensReceived++`]]
 :createNode: pass:normal[xref:#SkaleManager-createNode-uint16-uint16-bytes4-bytes4-bytes32-2--string-[`++createNode++`]]
@@ -1360,6 +1358,10 @@
 :getBounty: pass:normal[xref:#SkaleManager-getBounty-uint256-[`++getBounty++`]]
 :initialize: pass:normal[xref:#SkaleManager-initialize-address-[`++initialize++`]]
 :BountyReceived: pass:normal[xref:#SkaleManager-BountyReceived-uint256-address-uint256-uint256-uint256-uint256-uint256-uint256-[`++BountyReceived++`]]
+
+[.contract]
+[[SkaleManager]]
+= SkaleManager
 
 Contract contains functions for node registration and exit, bounty
 management, and monitoring verdicts. TODO: confirm

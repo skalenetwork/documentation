@@ -1348,9 +1348,7 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[Nodes]]
-= Nodes:Nodes: pass:normal[xref:#Nodes[`++Nodes++`]]
+:Nodes: pass:normal[xref:#Nodes[`++Nodes++`]]
 :checkNodeExists: pass:normal[xref:#Nodes-checkNodeExists-uint256-[`++checkNodeExists++`]]
 :nodes: pass:normal[xref:#Nodes-nodes-struct-Nodes-Node--[`++nodes++`]]
 :spaceOfNodes: pass:normal[xref:#Nodes-spaceOfNodes-struct-Nodes-SpaceManaging--[`++spaceOfNodes++`]]
@@ -1401,6 +1399,10 @@
 :NodeCreated: pass:normal[xref:#Nodes-NodeCreated-uint256-address-string-bytes4-bytes4-uint16-uint16-uint256-uint256-[`++NodeCreated++`]]
 :ExitCompleted: pass:normal[xref:#Nodes-ExitCompleted-uint256-uint256-uint256-[`++ExitCompleted++`]]
 :ExitInitialized: pass:normal[xref:#Nodes-ExitInitialized-uint256-uint256-uint256-uint256-[`++ExitInitialized++`]]
+
+[.contract]
+[[Nodes]]
+= Nodes
 
 This contract contains all logic to manage SKALE Network nodes states,
 space availability, stake requirement checks, and exit functions.

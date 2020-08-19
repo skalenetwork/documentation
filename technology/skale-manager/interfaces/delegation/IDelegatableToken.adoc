@@ -1348,12 +1348,14 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[IDelegatableToken]]
-= IDelegatableToken:IDelegatableToken: pass:normal[xref:#IDelegatableToken[`++IDelegatableToken++`]]
+:IDelegatableToken: pass:normal[xref:#IDelegatableToken[`++IDelegatableToken++`]]
 :getAndUpdateLockedAmount: pass:normal[xref:#IDelegatableToken-getAndUpdateLockedAmount-address-[`++getAndUpdateLockedAmount++`]]
 :getAndUpdateDelegatedAmount: pass:normal[xref:#IDelegatableToken-getAndUpdateDelegatedAmount-address-[`++getAndUpdateDelegatedAmount++`]]
 :getAndUpdateSlashedAmount: pass:normal[xref:#IDelegatableToken-getAndUpdateSlashedAmount-address-[`++getAndUpdateSlashedAmount++`]]
+
+[.contract]
+[[IDelegatableToken]]
+= IDelegatableToken
 
 Interface of Delegatable Token operations.
 

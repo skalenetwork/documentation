@@ -1348,9 +1348,7 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[BokkyPooBahsDateTimeLibrary]]
-= BokkyPooBahsDateTimeLibrary:BokkyPooBahsDateTimeLibrary: pass:normal[xref:#BokkyPooBahsDateTimeLibrary[`++BokkyPooBahsDateTimeLibrary++`]]
+:BokkyPooBahsDateTimeLibrary: pass:normal[xref:#BokkyPooBahsDateTimeLibrary[`++BokkyPooBahsDateTimeLibrary++`]]
 :SECONDS_PER_DAY: pass:normal[xref:#BokkyPooBahsDateTimeLibrary-SECONDS_PER_DAY-uint256[`++SECONDS_PER_DAY++`]]
 :SECONDS_PER_HOUR: pass:normal[xref:#BokkyPooBahsDateTimeLibrary-SECONDS_PER_HOUR-uint256[`++SECONDS_PER_HOUR++`]]
 :SECONDS_PER_MINUTE: pass:normal[xref:#BokkyPooBahsDateTimeLibrary-SECONDS_PER_MINUTE-uint256[`++SECONDS_PER_MINUTE++`]]
@@ -1401,6 +1399,10 @@
 :diffHours: pass:normal[xref:#BokkyPooBahsDateTimeLibrary-diffHours-uint256-uint256-[`++diffHours++`]]
 :diffMinutes: pass:normal[xref:#BokkyPooBahsDateTimeLibrary-diffMinutes-uint256-uint256-[`++diffMinutes++`]]
 :diffSeconds: pass:normal[xref:#BokkyPooBahsDateTimeLibrary-diffSeconds-uint256-uint256-[`++diffSeconds++`]]
+
+[.contract]
+[[BokkyPooBahsDateTimeLibrary]]
+= BokkyPooBahsDateTimeLibrary
 
 
 

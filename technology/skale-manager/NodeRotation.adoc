@@ -1348,9 +1348,7 @@
 :xref-StringUtils-strConcat-string-string-: xref:utils/StringUtils.adoc#StringUtils-strConcat-string-string-
 :StringUtils-uint2str: pass:normal[xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-[`StringUtils.uint2str`]]
 :xref-StringUtils-uint2str-uint256-: xref:utils/StringUtils.adoc#StringUtils-uint2str-uint256-
-[.contract]
-[[NodeRotation]]
-= NodeRotation:NodeRotation: pass:normal[xref:#NodeRotation[`++NodeRotation++`]]
+:NodeRotation: pass:normal[xref:#NodeRotation[`++NodeRotation++`]]
 :rotations: pass:normal[xref:#NodeRotation-rotations-mapping-bytes32----struct-NodeRotation-Rotation-[`++rotations++`]]
 :leavingHistory: pass:normal[xref:#NodeRotation-leavingHistory-mapping-uint256----struct-NodeRotation-LeavingHistory---[`++leavingHistory++`]]
 :exitFromSchain: pass:normal[xref:#NodeRotation-exitFromSchain-uint256-[`++exitFromSchain++`]]
@@ -1362,6 +1360,10 @@
 :initialize: pass:normal[xref:#NodeRotation-initialize-address-[`++initialize++`]]
 :rotateNode: pass:normal[xref:#NodeRotation-rotateNode-uint256-bytes32-bool-[`++rotateNode++`]]
 :selectNodeToGroup: pass:normal[xref:#NodeRotation-selectNodeToGroup-bytes32-[`++selectNodeToGroup++`]]
+
+[.contract]
+[[NodeRotation]]
+= NodeRotation
 
 
 
