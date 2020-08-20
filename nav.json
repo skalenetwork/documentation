@@ -171,11 +171,6 @@
           "link": "/technology/skale-manager/nodes",
           "links": [
             {
-              "title": "BokkyPooBahsDateTimeLibrary",
-              "link": "/technology/skale-manager/thirdparty/bokkypoobahsdatetimelibrary",
-              "links": []
-            },
-            {
               "title": "Bounty",
               "link": "/technology/skale-manager/bounty",
               "links": []
@@ -216,21 +211,6 @@
               "links": []
             },
             {
-              "title": "ERC777",
-              "link": "/technology/skale-manager/thirdparty/openzeppelin/erc777",
-              "links": []
-            },
-            {
-              "title": "FieldOperations",
-              "link": "/technology/skale-manager/utils/fieldoperations",
-              "links": []
-            },
-            {
-              "title": "FractionUtils",
-              "link": "/technology/skale-manager/utils/fractionutils",
-              "links": []
-            },
-            {
               "title": "IDelegatableToken",
               "link": "/technology/skale-manager/interfaces/delegation/idelegatabletoken",
               "links": []
@@ -248,21 +228,6 @@
             {
               "title": "KeyStorage",
               "link": "/technology/skale-manager/keystorage",
-              "links": []
-            },
-            {
-              "title": "LockerMock",
-              "link": "/technology/skale-manager/test/lockermock",
-              "links": []
-            },
-            {
-              "title": "MathUtils",
-              "link": "/technology/skale-manager/utils/mathutils",
-              "links": []
-            },
-            {
-              "title": "MathUtilsTester",
-              "link": "/technology/skale-manager/test/mathutilstester",
               "links": []
             },
             {
@@ -291,18 +256,8 @@
               "links": []
             },
             {
-              "title": "PartialDifferencesTester",
-              "link": "/technology/skale-manager/test/partialdifferencestester",
-              "links": []
-            },
-            {
               "title": "Permissions",
               "link": "/technology/skale-manager/permissions",
-              "links": []
-            },
-            {
-              "title": "Precompiled",
-              "link": "/technology/skale-manager/utils/precompiled",
               "links": []
             },
             {
@@ -313,11 +268,6 @@
             {
               "title": "Punisher",
               "link": "/technology/skale-manager/delegation/punisher",
-              "links": []
-            },
-            {
-              "title": "ReentrancyTester",
-              "link": "/technology/skale-manager/test/reentrancytester",
               "links": []
             },
             {
@@ -336,28 +286,13 @@
               "links": []
             },
             {
-              "title": "SkaleDKGTester",
-              "link": "/technology/skale-manager/test/skaledkgtester",
-              "links": []
-            },
-            {
               "title": "SkaleManager",
               "link": "/technology/skale-manager/skalemanager",
               "links": []
             },
             {
-              "title": "SkaleManagerMock",
-              "link": "/technology/skale-manager/test/skalemanagermock",
-              "links": []
-            },
-            {
               "title": "SkaleToken",
               "link": "/technology/skale-manager/skaletoken",
-              "links": []
-            },
-            {
-              "title": "SkaleTokenInternalTester",
-              "link": "/technology/skale-manager/test/skaletokeninternaltester",
               "links": []
             },
             {
@@ -371,18 +306,8 @@
               "links": []
             },
             {
-              "title": "StringUtils",
-              "link": "/technology/skale-manager/utils/stringutils",
-              "links": []
-            },
-            {
               "title": "TimeHelpers",
               "link": "/technology/skale-manager/delegation/timehelpers",
-              "links": []
-            },
-            {
-              "title": "TimeHelpersWithDebug",
-              "link": "/technology/skale-manager/test/timehelperswithdebug",
               "links": []
             },
             {
@@ -406,8 +331,39 @@
               "links": []
             }
           ]
+        },
+        {
+          "title": "SKALE Manager Utilities",
+          "link": "/technology/skale-manager/nodes",
+          "links": [
+            {
+              "title": "FieldOperations",
+              "link": "/technology/skale-manager/utils/fieldoperations",
+              "links": []
+            },
+            {
+              "title": "FractionUtils",
+              "link": "/technology/skale-manager/utils/fractionutils",
+              "links": []
+            },
+            {
+              "title": "MathUtils",
+              "link": "/technology/skale-manager/utils/mathutils",
+              "links": []
+            },
+            {
+              "title": "Precompiled",
+              "link": "/technology/skale-manager/utils/precompiled",
+              "links": []
+            },
+            {
+              "title": "StringUtils",
+              "link": "/technology/skale-manager/utils/stringutils",
+              "links": []
+            }
+          ]
         }
-      ]
+  ]
     }
   ]
 }
