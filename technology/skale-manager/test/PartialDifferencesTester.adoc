@@ -1377,37 +1377,31 @@
 
 
 [.contract-item]
-[[PartialDifferencesTester-createSequence--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=PartialDifferencesTester-createSequence-->createSequence</a>+++ `++createSequence()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[PartialDifferencesTester-addToSequence-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=PartialDifferencesTester-addToSequence-uint256-uint256-uint256->addToSequence</a>+++ `++addToSequence(++[.var-type]#++uint256++#++ ++[.var-name]#++sequence++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++diff++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[PartialDifferencesTester-subtractFromSequence-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=PartialDifferencesTester-subtractFromSequence-uint256-uint256-uint256->subtractFromSequence</a>+++ `++subtractFromSequence(++[.var-type]#++uint256++#++ ++[.var-name]#++sequence++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++diff++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[PartialDifferencesTester-getAndUpdateSequenceItem-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=PartialDifferencesTester-getAndUpdateSequenceItem-uint256-uint256->getAndUpdateSequenceItem</a>+++ `++getAndUpdateSequenceItem(++[.var-type]#++uint256++#++ ++[.var-name]#++sequence++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[PartialDifferencesTester-reduceSequence-uint256-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=PartialDifferencesTester-reduceSequence-uint256-uint256-uint256-uint256->reduceSequence</a>+++ `++reduceSequence(++[.var-type]#++uint256++#++ ++[.var-name]#++sequence++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[PartialDifferencesTester-latestSequence--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=PartialDifferencesTester-latestSequence-->latestSequence</a>+++ `++latestSequence() → ++[.var-type]#++uint256++#++ ++[.var-name]#++id++#++++` [.item-kind]#external#
 
 

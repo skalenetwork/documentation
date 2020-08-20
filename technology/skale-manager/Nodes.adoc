@@ -1467,14 +1467,12 @@ Note: Online nodes contain both Active and Leaving states.
 --
 
 [.contract-item]
-[[Nodes-checkNodeExists-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-checkNodeExists-uint256->checkNodeExists</a>+++ `++checkNodeExists(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#modifier#
 
 
 
 
 [.contract-item]
-[[Nodes-removeSpaceFromNode-uint256-uint8-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-removeSpaceFromNode-uint256-uint8->removeSpaceFromNode</a>+++ `++removeSpaceFromNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint8++#++ ++[.var-name]#++space++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Allows Schains and SchainsInternal contracts to occupy available
@@ -1482,26 +1480,22 @@ capacity on a node.
 Returns boolean whether operation is successful.
 
 [.contract-item]
-[[Nodes-addSpaceToNode-uint256-uint8-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-addSpaceToNode-uint256-uint8->addSpaceToNode</a>+++ `++addSpaceToNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint8++#++ ++[.var-name]#++space++#++)++` [.item-kind]#external#
 
 Allows Schains contract to occupy available capacity on a node.
 Returns boolean whether operation is successful.
 
 [.contract-item]
-[[Nodes-changeNodeLastRewardDate-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-changeNodeLastRewardDate-uint256->changeNodeLastRewardDate</a>+++ `++changeNodeLastRewardDate(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 Allows SkaleManager to change a node's last reward date.
 
 [.contract-item]
-[[Nodes-changeNodeFinishTime-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-changeNodeFinishTime-uint256-uint256->changeNodeFinishTime</a>+++ `++changeNodeFinishTime(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++time++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Nodes-createNode-address-struct-Nodes-NodeCreationParams-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-createNode-address-struct-Nodes-NodeCreationParams->createNode</a>+++ `++createNode(++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++struct Nodes.NodeCreationParams++#++ ++[.var-name]#++params++#++)++` [.item-kind]#external#
 
 Allows SkaleManager contract to create new node and adds it to the
@@ -1514,7 +1508,6 @@ Requirements:
 - Node port must be greater than zero
 
 [.contract-item]
-[[Nodes-initExit-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-initExit-uint256->initExit</a>+++ `++initExit(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Allows SkaleManager contract to initiate a node exit procedure.
@@ -1522,7 +1515,6 @@ Returns a boolean whether the operation is successful.
 Emits ExitInitialized event.
 
 [.contract-item]
-[[Nodes-completeExit-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-completeExit-uint256->completeExit</a>+++ `++completeExit(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Allows SkaleManager contract to complete a node exit procedure.
@@ -1532,7 +1524,6 @@ Requirements:
 - Node must have already initialized a node exit procedure.
 
 [.contract-item]
-[[Nodes-deleteNodeForValidator-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-deleteNodeForValidator-uint256-uint256->deleteNodeForValidator</a>+++ `++deleteNodeForValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 Allows SkaleManager contract to delete a validator's node.
@@ -1540,7 +1531,6 @@ Requirements:
 - Validator ID must exist.
 
 [.contract-item]
-[[Nodes-checkPossibilityCreatingNode-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-checkPossibilityCreatingNode-address->checkPossibilityCreatingNode</a>+++ `++checkPossibilityCreatingNode(++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++)++` [.item-kind]#external#
 
 Allows SkaleManager contract to check whether a validator has
@@ -1550,7 +1540,6 @@ Requirements:
 - Validator must have sufficient stake to operate an additional node.
 
 [.contract-item]
-[[Nodes-checkPossibilityToMaintainNode-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-checkPossibilityToMaintainNode-uint256-uint256->checkPossibilityToMaintainNode</a>+++ `++checkPossibilityToMaintainNode(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Allows SkaleManager contract to check whether a validator has
@@ -1560,31 +1549,26 @@ Requirements:
 - Validator ID and nodeIndex must both exist.
 
 [.contract-item]
-[[Nodes-setNodeInMaintenance-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-setNodeInMaintenance-uint256->setNodeInMaintenance</a>+++ `++setNodeInMaintenance(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Nodes-removeNodeFromInMaintenance-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-removeNodeFromInMaintenance-uint256->removeNodeFromInMaintenance</a>+++ `++removeNodeFromInMaintenance(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Nodes-getNodesWithFreeSpace-uint8-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNodesWithFreeSpace-uint8->getNodesWithFreeSpace</a>+++ `++getNodesWithFreeSpace(++[.var-type]#++uint8++#++ ++[.var-name]#++freeSpace++#++) → ++[.var-type]#++uint256[]++#++++` [.item-kind]#external#
 
 Returns nodes with resource availability.
 
 [.contract-item]
-[[Nodes-isTimeForReward-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-isTimeForReward-uint256->isTimeForReward</a>+++ `++isTimeForReward(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether time for a node's reward has come.
 
 [.contract-item]
-[[Nodes-getNodeIP-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNodeIP-uint256->getNodeIP</a>+++ `++getNodeIP(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bytes4++#++++` [.item-kind]#external#
 
 Returns IP address of a given node.
@@ -1592,86 +1576,72 @@ Requirements:
 - Node must exist.
 
 [.contract-item]
-[[Nodes-getNodePort-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNodePort-uint256->getNodePort</a>+++ `++getNodePort(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint16++#++++` [.item-kind]#external#
 
 Returns the port of a given node.
 
 [.contract-item]
-[[Nodes-getNodePublicKey-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNodePublicKey-uint256->getNodePublicKey</a>+++ `++getNodePublicKey(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bytes32[2]++#++++` [.item-kind]#external#
 
 Returns the public key of a given node.
 
 [.contract-item]
-[[Nodes-getNodeFinishTime-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNodeFinishTime-uint256->getNodeFinishTime</a>+++ `++getNodeFinishTime(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Nodes-isNodeLeft-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-isNodeLeft-uint256->isNodeLeft</a>+++ `++isNodeLeft(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Checks whether a node has left the network.
 
 [.contract-item]
-[[Nodes-isNodeInMaintenance-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-isNodeInMaintenance-uint256->isNodeInMaintenance</a>+++ `++isNodeInMaintenance(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Nodes-getNodeLastRewardDate-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNodeLastRewardDate-uint256->getNodeLastRewardDate</a>+++ `++getNodeLastRewardDate(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns a given node's last reward date.
 
 [.contract-item]
-[[Nodes-getNodeNextRewardDate-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNodeNextRewardDate-uint256->getNodeNextRewardDate</a>+++ `++getNodeNextRewardDate(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns a given node's next reward date.
 
 [.contract-item]
-[[Nodes-getNumberOfNodes--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNumberOfNodes-->getNumberOfNodes</a>+++ `++getNumberOfNodes() → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns the total number of registered nodes.
 
 [.contract-item]
-[[Nodes-getNumberOnlineNodes--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNumberOnlineNodes-->getNumberOnlineNodes</a>+++ `++getNumberOnlineNodes() → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns the total number of online nodes.
 Online nodes are equal to the number of active plus leaving nodes.
 
 [.contract-item]
-[[Nodes-getActiveNodeIPs--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getActiveNodeIPs-->getActiveNodeIPs</a>+++ `++getActiveNodeIPs() → ++[.var-type]#++bytes4[]++#++ ++[.var-name]#++activeNodeIPs++#++++` [.item-kind]#external#
 
 Returns IPs of active nodes.
 
 [.contract-item]
-[[Nodes-getActiveNodesByAddress--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getActiveNodesByAddress-->getActiveNodesByAddress</a>+++ `++getActiveNodesByAddress() → ++[.var-type]#++uint256[]++#++ ++[.var-name]#++activeNodesByAddress++#++++` [.item-kind]#external#
 
 Returns active nodes linked to the msg.sender (validator address).
 
 [.contract-item]
-[[Nodes-getActiveNodeIds--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getActiveNodeIds-->getActiveNodeIds</a>+++ `++getActiveNodeIds() → ++[.var-type]#++uint256[]++#++ ++[.var-name]#++activeNodeIds++#++++` [.item-kind]#external#
 
 Return active node IDs.
 
 [.contract-item]
-[[Nodes-getNodeStatus-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNodeStatus-uint256->getNodeStatus</a>+++ `++getNodeStatus(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++enum Nodes.NodeStatus++#++++` [.item-kind]#external#
 
 Return a given node's current status.
 
 [.contract-item]
-[[Nodes-getValidatorNodeIndexes-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getValidatorNodeIndexes-uint256->getValidatorNodeIndexes</a>+++ `++getValidatorNodeIndexes(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256[]++#++++` [.item-kind]#external#
 
 Return a validator's linked nodes.
@@ -1679,57 +1649,48 @@ Requirements:
 - Validator ID must exist.
 
 [.contract-item]
-[[Nodes-initialize-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
 
 constructor in Permissions approach.
 
 [.contract-item]
-[[Nodes-getValidatorId-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getValidatorId-uint256->getValidatorId</a>+++ `++getValidatorId(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[Nodes-isNodeExist-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-isNodeExist-address-uint256->isNodeExist</a>+++ `++isNodeExist(++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 isNodeExist - checks existence of Node at this address
 
 
 [.contract-item]
-[[Nodes-isNodeActive-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-isNodeActive-uint256->isNodeActive</a>+++ `++isNodeActive(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 Checks whether a node's status is Active.
 
 [.contract-item]
-[[Nodes-isNodeLeaving-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-isNodeLeaving-uint256->isNodeLeaving</a>+++ `++isNodeLeaving(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 Checks whether a node's status is Leaving.
 
 [.contract-item]
-[[Nodes-countNodesWithFreeSpace-uint8-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-countNodesWithFreeSpace-uint8->countNodesWithFreeSpace</a>+++ `++countNodesWithFreeSpace(++[.var-type]#++uint8++#++ ++[.var-name]#++freeSpace++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++count++#++++` [.item-kind]#public#
 
 Returns number of nodes with free space.
 
 
 [.contract-item]
-[[Nodes-NodeCreated-uint256-address-string-bytes4-bytes4-uint16-uint16-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-NodeCreated-uint256-address-string-bytes4-bytes4-uint16-uint16-uint256-uint256->NodeCreated</a>+++ `++NodeCreated(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++address++#++ ++[.var-name]#++owner++#++, ++[.var-type]#++string++#++ ++[.var-name]#++name++#++, ++[.var-type]#++bytes4++#++ ++[.var-name]#++ip++#++, ++[.var-type]#++bytes4++#++ ++[.var-name]#++publicIP++#++, ++[.var-type]#++uint16++#++ ++[.var-name]#++port++#++, ++[.var-type]#++uint16++#++ ++[.var-name]#++nonce++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++time++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++gasSpend++#++)++` [.item-kind]#event#
 
 Emitted when a node is created.
 
 [.contract-item]
-[[Nodes-ExitCompleted-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-ExitCompleted-uint256-uint256-uint256->ExitCompleted</a>+++ `++ExitCompleted(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++time++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++gasSpend++#++)++` [.item-kind]#event#
 
 Emitted when a node completes a network exit.
 
 [.contract-item]
-[[Nodes-ExitInitialized-uint256-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-ExitInitialized-uint256-uint256-uint256-uint256->ExitInitialized</a>+++ `++ExitInitialized(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++startLeavingPeriod++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++time++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++gasSpend++#++)++` [.item-kind]#event#
 
 Emitted when a node begins to exit from the network.

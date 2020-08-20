@@ -1376,20 +1376,17 @@
 
 
 [.contract-item]
-[[Migrations-restricted--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Migrations-restricted-->restricted</a>+++ `++restricted()++` [.item-kind]#modifier#
 
 
 
 
 [.contract-item]
-[[Migrations-setCompleted-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Migrations-setCompleted-uint256->setCompleted</a>+++ `++setCompleted(++[.var-type]#++uint256++#++ ++[.var-name]#++completed++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Migrations-upgrade-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Migrations-upgrade-address->upgrade</a>+++ `++upgrade(++[.var-type]#++address++#++ ++[.var-name]#++new_address++#++)++` [.item-kind]#external#
 
 

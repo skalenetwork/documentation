@@ -1448,32 +1448,27 @@ Delegated tokens may be in one of several states:
 --
 
 [.contract-item]
-[[DelegationController-checkDelegationExists-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-checkDelegationExists-uint256->checkDelegationExists</a>+++ `++checkDelegationExists(++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++)++` [.item-kind]#modifier#
 
 Modifier to make a function callable only if delegation exists.
 
 
 [.contract-item]
-[[DelegationController-getAndUpdateDelegatedToValidatorNow-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getAndUpdateDelegatedToValidatorNow-uint256->getAndUpdateDelegatedToValidatorNow</a>+++ `++getAndUpdateDelegatedToValidatorNow(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Return and update validator's delegations.
 
 [.contract-item]
-[[DelegationController-getAndUpdateDelegatedAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getAndUpdateDelegatedAmount-address->getAndUpdateDelegatedAmount</a>+++ `++getAndUpdateDelegatedAmount(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Return and update the amount delegated.
 
 [.contract-item]
-[[DelegationController-getAndUpdateEffectiveDelegatedByHolderToValidator-address-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getAndUpdateEffectiveDelegatedByHolderToValidator-address-uint256-uint256->getAndUpdateEffectiveDelegatedByHolderToValidator</a>+++ `++getAndUpdateEffectiveDelegatedByHolderToValidator(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++effectiveDelegated++#++++` [.item-kind]#external#
 
 Return and update the effective amount delegated (minus slash).
 
 [.contract-item]
-[[DelegationController-delegate-uint256-uint256-uint256-string-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-delegate-uint256-uint256-uint256-string->delegate</a>+++ `++delegate(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++delegationPeriod++#++, ++[.var-type]#++string++#++ ++[.var-name]#++info++#++)++` [.item-kind]#external#
 
 Allows a token holder to create a delegation proposal of an `amount`
@@ -1493,20 +1488,17 @@ Requirements:
 - Validator must be accepting new delegation requests.
 
 [.contract-item]
-[[DelegationController-getAndUpdateLockedAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 See ILocker.
 
 [.contract-item]
-[[DelegationController-getAndUpdateForbiddenForDelegationAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getAndUpdateForbiddenForDelegationAmount-address->getAndUpdateForbiddenForDelegationAmount</a>+++ `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Return and update the total non-transferrable and un-delegatable
 amount of a given `holder`.
 
 [.contract-item]
-[[DelegationController-cancelPendingDelegation-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-cancelPendingDelegation-uint256->cancelPendingDelegation</a>+++ `++cancelPendingDelegation(++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++)++` [.item-kind]#external#
 
 Allows token holder to cancel a delegation proposal.
@@ -1519,7 +1511,6 @@ Requirements:
 - Delegation state must be PROPOSED.
 
 [.contract-item]
-[[DelegationController-acceptPendingDelegation-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-acceptPendingDelegation-uint256->acceptPendingDelegation</a>+++ `++acceptPendingDelegation(++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++)++` [.item-kind]#external#
 
 Allows a validator to accept a proposed delegation.
@@ -1535,7 +1526,6 @@ Requirements:
 - Delegation state must be PROPOSED.
 
 [.contract-item]
-[[DelegationController-requestUndelegation-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-requestUndelegation-uint256->requestUndelegation</a>+++ `++requestUndelegation(++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++)++` [.item-kind]#external#
 
 Allows delegator to undelegate a specific delegation.
@@ -1548,7 +1538,6 @@ Requirements:
 - Delegation state must be DELEGATED.
 
 [.contract-item]
-[[DelegationController-confiscate-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-confiscate-uint256-uint256->confiscate</a>+++ `++confiscate(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows Punisher contract to slash an `amount` of stake from
@@ -1562,106 +1551,89 @@ Emits a {SlashingEvent}.
 See Punisher.
 
 [.contract-item]
-[[DelegationController-getAndUpdateEffectiveDelegatedToValidator-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getAndUpdateEffectiveDelegatedToValidator-uint256-uint256->getAndUpdateEffectiveDelegatedToValidator</a>+++ `++getAndUpdateEffectiveDelegatedToValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Allows Distributor contract to return and update the effective 
 amount delegated (minus slash) to a validator.
 
 [.contract-item]
-[[DelegationController-getAndUpdateDelegatedByHolderToValidatorNow-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getAndUpdateDelegatedByHolderToValidatorNow-address-uint256->getAndUpdateDelegatedByHolderToValidatorNow</a>+++ `++getAndUpdateDelegatedByHolderToValidatorNow(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Return and update the amount delegated to a validator.
 
 [.contract-item]
-[[DelegationController-getDelegation-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getDelegation-uint256->getDelegation</a>+++ `++getDelegation(++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++) → ++[.var-type]#++struct DelegationController.Delegation++#++++` [.item-kind]#external#
 
 Return Delegation struct.
 
 [.contract-item]
-[[DelegationController-getFirstDelegationMonth-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getFirstDelegationMonth-address-uint256->getFirstDelegationMonth</a>+++ `++getFirstDelegationMonth(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns the first delegation month.
 
 [.contract-item]
-[[DelegationController-getDelegationsByValidatorLength-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getDelegationsByValidatorLength-uint256->getDelegationsByValidatorLength</a>+++ `++getDelegationsByValidatorLength(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns a validator's total number of delegations.
 
 [.contract-item]
-[[DelegationController-getDelegationsByHolderLength-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getDelegationsByHolderLength-address->getDelegationsByHolderLength</a>+++ `++getDelegationsByHolderLength(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns a holder's total number of delegations.
 
 [.contract-item]
-[[DelegationController-initialize-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[DelegationController-getAndUpdateDelegatedToValidator-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getAndUpdateDelegatedToValidator-uint256-uint256->getAndUpdateDelegatedToValidator</a>+++ `++getAndUpdateDelegatedToValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 Allows Nodes contract to get and update the amount delegated
 to validator.
 
 [.contract-item]
-[[DelegationController-processSlashes-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-processSlashes-address-uint256->processSlashes</a>+++ `++processSlashes(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++limit++#++)++` [.item-kind]#public#
 
 Process slashes.
 
 [.contract-item]
-[[DelegationController-processAllSlashes-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-processAllSlashes-address->processAllSlashes</a>+++ `++processAllSlashes(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++)++` [.item-kind]#public#
 
 Process all slashes.
 
 [.contract-item]
-[[DelegationController-getState-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getState-uint256->getState</a>+++ `++getState(++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++) → ++[.var-type]#++enum DelegationController.State++#++ ++[.var-name]#++state++#++++` [.item-kind]#public#
 
 Returns the token state of a given delegation.
 
 [.contract-item]
-[[DelegationController-getLockedInPendingDelegations-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-getLockedInPendingDelegations-address->getLockedInPendingDelegations</a>+++ `++getLockedInPendingDelegations(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 Returns the amount of tokens in PENDING delegation state.
 
 [.contract-item]
-[[DelegationController-hasUnprocessedSlashes-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-hasUnprocessedSlashes-address->hasUnprocessedSlashes</a>+++ `++hasUnprocessedSlashes(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 Checks whether there are any unprocessed slashes.
 
 
 [.contract-item]
-[[DelegationController-DelegationProposed-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-DelegationProposed-uint256->DelegationProposed</a>+++ `++DelegationProposed(++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++)++` [.item-kind]#event#
 
 Emitted when a delegation is proposed to a validator.
 
 [.contract-item]
-[[DelegationController-DelegationAccepted-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-DelegationAccepted-uint256->DelegationAccepted</a>+++ `++DelegationAccepted(++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++)++` [.item-kind]#event#
 
 Emitted when a delegation is accepted by a validator.
 
 [.contract-item]
-[[DelegationController-DelegationRequestCanceledByUser-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-DelegationRequestCanceledByUser-uint256->DelegationRequestCanceledByUser</a>+++ `++DelegationRequestCanceledByUser(++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++)++` [.item-kind]#event#
 
 Emitted when a delegation is cancelled by the delegator.
 
 [.contract-item]
-[[DelegationController-UndelegationRequested-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=DelegationController-UndelegationRequested-uint256->UndelegationRequested</a>+++ `++UndelegationRequested(++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++)++` [.item-kind]#event#
 
 Emitted when a delegation is requested to undelegate.

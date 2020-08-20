@@ -1379,32 +1379,27 @@
 
 
 [.contract-item]
-[[MathUtils-boundedSub-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=MathUtils-boundedSub-uint256-uint256->boundedSub</a>+++ `++boundedSub(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[MathUtils-boundedSubWithoutEvent-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=MathUtils-boundedSubWithoutEvent-uint256-uint256->boundedSubWithoutEvent</a>+++ `++boundedSubWithoutEvent(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[MathUtils-muchGreater-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=MathUtils-muchGreater-uint256-uint256->muchGreater</a>+++ `++muchGreater(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[MathUtils-approximatelyEqual-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=MathUtils-approximatelyEqual-uint256-uint256->approximatelyEqual</a>+++ `++approximatelyEqual(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#internal#
 
 
 
 
 [.contract-item]
-[[MathUtils-UnderflowError-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=MathUtils-UnderflowError-uint256-uint256->UnderflowError</a>+++ `++UnderflowError(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++)++` [.item-kind]#event#
 
 

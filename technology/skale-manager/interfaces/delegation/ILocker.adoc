@@ -1378,13 +1378,11 @@ See `Punisher`.
 
 
 [.contract-item]
-[[ILocker-getAndUpdateLockedAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ILocker-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns the locked amount of untransferable tokens of a given `wallet`
 
 [.contract-item]
-[[ILocker-getAndUpdateForbiddenForDelegationAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ILocker-getAndUpdateForbiddenForDelegationAmount-address->getAndUpdateForbiddenForDelegationAmount</a>+++ `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns the locked amount of untransferable and un-delegatable tokens of a given `wallet`.

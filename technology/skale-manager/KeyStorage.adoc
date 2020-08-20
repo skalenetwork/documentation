@@ -1403,91 +1403,76 @@
 
 
 [.contract-item]
-[[KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point--->addBroadcastedData</a>+++ `++addBroadcastedData(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++indexInSchain++#++, ++[.var-type]#++struct KeyStorage.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-deleteKey-bytes32-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-deleteKey-bytes32->deleteKey</a>+++ `++deleteKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-initPublicKeyInProgress-bytes32-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-initPublicKeyInProgress-bytes32->initPublicKeyInProgress</a>+++ `++initPublicKeyInProgress(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-adding-bytes32-struct-G2Operations-G2Point-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-adding-bytes32-struct-G2Operations-G2Point->adding</a>+++ `++adding(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++value++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-finalizePublicKey-bytes32-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-finalizePublicKey-bytes32->finalizePublicKey</a>+++ `++finalizePublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point---]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point--->computePublicValues</a>+++ `++computePublicValues(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point->verify</a>+++ `++verify(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeToComplaint++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeToComplaint++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++multipliedShare++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getBroadcastedData-bytes32-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-getBroadcastedData-bytes32-uint256->getBroadcastedData</a>+++ `++getBroadcastedData(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct KeyStorage.KeyShare[]++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getSecretKeyShare-bytes32-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-getSecretKeyShare-bytes32-uint256-uint256->getSecretKeyShare</a>+++ `++getSecretKeyShare(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++index++#++) → ++[.var-type]#++bytes32++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getVerificationVector-bytes32-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-getVerificationVector-bytes32-uint256->getVerificationVector</a>+++ `++getVerificationVector(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point[]++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getCommonPublicKey-bytes32-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-getCommonPublicKey-bytes32->getCommonPublicKey</a>+++ `++getCommonPublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getPreviousPublicKey-bytes32-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-getPreviousPublicKey-bytes32->getPreviousPublicKey</a>+++ `++getPreviousPublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getAllPreviousPublicKeys-bytes32-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-getAllPreviousPublicKeys-bytes32->getAllPreviousPublicKeys</a>+++ `++getAllPreviousPublicKeys(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point[]++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-getBLSPublicKey-bytes32-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-getBLSPublicKey-bytes32-uint256->getBLSPublicKey</a>+++ `++getBLSPublicKey(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct G2Operations.G2Point++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[KeyStorage-initialize-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=KeyStorage-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#public#
 
 

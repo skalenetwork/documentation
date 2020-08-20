@@ -1377,13 +1377,11 @@
 
 
 [.contract-item]
-[[SkaleTokenInternalTester-constructor-address-address---]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleTokenInternalTester-constructor-address-address--->constructor</a>+++ `++constructor(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++, ++[.var-type]#++address[]++#++ ++[.var-name]#++defOps++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[SkaleTokenInternalTester-getMsgData--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleTokenInternalTester-getMsgData-->getMsgData</a>+++ `++getMsgData() → ++[.var-type]#++bytes++#++++` [.item-kind]#external#
 
 

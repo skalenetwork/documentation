@@ -1380,19 +1380,16 @@
 
 
 [.contract-item]
-[[SkaleManagerMock-constructor-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleManagerMock-constructor-address->constructor</a>+++ `++constructor(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[SkaleManagerMock-payBounty-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleManagerMock-payBounty-uint256-uint256->payBounty</a>+++ `++payBounty(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[SkaleManagerMock-tokensReceived-address-address-address-uint256-bytes-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleManagerMock-tokensReceived-address-address-address-uint256-bytes-bytes->tokensReceived</a>+++ `++tokensReceived(++[.var-type]#++address++#++ ++[.var-name]#++operator++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++)++` [.item-kind]#external#
 
 

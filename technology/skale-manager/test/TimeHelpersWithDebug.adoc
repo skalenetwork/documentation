@@ -1381,25 +1381,21 @@
 
 
 [.contract-item]
-[[TimeHelpersWithDebug-skipTime-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpersWithDebug-skipTime-uint256->skipTime</a>+++ `++skipTime(++[.var-type]#++uint256++#++ ++[.var-name]#++sec++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[TimeHelpersWithDebug-initialize--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpersWithDebug-initialize-->initialize</a>+++ `++initialize()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[TimeHelpersWithDebug-timestampToMonth-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpersWithDebug-timestampToMonth-uint256->timestampToMonth</a>+++ `++timestampToMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[TimeHelpersWithDebug-monthToTimestamp-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpersWithDebug-monthToTimestamp-uint256->monthToTimestamp</a>+++ `++monthToTimestamp(++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 

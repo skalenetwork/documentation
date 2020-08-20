@@ -1384,55 +1384,46 @@ These functions are used to calculate monthly and Proof of Use epochs.
 
 
 [.contract-item]
-[[TimeHelpers-calculateProofOfUseLockEndTime-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpers-calculateProofOfUseLockEndTime-uint256-uint256->calculateProofOfUseLockEndTime</a>+++ `++calculateProofOfUseLockEndTime(++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++lockUpPeriodDays++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[TimeHelpers-addDays-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpers-addDays-uint256-uint256->addDays</a>+++ `++addDays(++[.var-type]#++uint256++#++ ++[.var-name]#++fromTimestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++n++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[TimeHelpers-addMonths-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpers-addMonths-uint256-uint256->addMonths</a>+++ `++addMonths(++[.var-type]#++uint256++#++ ++[.var-name]#++fromTimestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++n++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[TimeHelpers-addYears-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpers-addYears-uint256-uint256->addYears</a>+++ `++addYears(++[.var-type]#++uint256++#++ ++[.var-name]#++fromTimestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++n++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[TimeHelpers-getCurrentMonth--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpers-getCurrentMonth-->getCurrentMonth</a>+++ `++getCurrentMonth() → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[TimeHelpers-timestampToDay-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpers-timestampToDay-uint256->timestampToDay</a>+++ `++timestampToDay(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[TimeHelpers-timestampToYear-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpers-timestampToYear-uint256->timestampToYear</a>+++ `++timestampToYear(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[TimeHelpers-timestampToMonth-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpers-timestampToMonth-uint256->timestampToMonth</a>+++ `++timestampToMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[TimeHelpers-monthToTimestamp-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TimeHelpers-monthToTimestamp-uint256->monthToTimestamp</a>+++ `++monthToTimestamp(++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++++` [.item-kind]#public#
 
 

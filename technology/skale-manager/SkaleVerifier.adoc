@@ -1377,7 +1377,6 @@ Contains verify function to perform BLS signature verification.
 
 
 [.contract-item]
-[[SkaleVerifier-verify-struct-Fp2Operations-Fp2Point-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleVerifier-verify-struct-Fp2Operations-Fp2Point-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point->verify</a>+++ `++verify(++[.var-type]#++struct Fp2Operations.Fp2Point++#++ ++[.var-name]#++signature++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++hash++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++counter++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++hashA++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++hashB++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++publicKey++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Verifies TODO: confirm
@@ -1388,7 +1387,6 @@ Requirements:
 - Public Key in G1.
 
 [.contract-item]
-[[SkaleVerifier-initialize-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleVerifier-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#public#
 
 

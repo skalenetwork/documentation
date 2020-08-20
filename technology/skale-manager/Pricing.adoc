@@ -1387,13 +1387,11 @@ Contains pricing operations for SKALE network.
 
 
 [.contract-item]
-[[Pricing-initNodes--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Pricing-initNodes-->initNodes</a>+++ `++initNodes()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Pricing-adjustPrice--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Pricing-adjustPrice-->adjustPrice</a>+++ `++adjustPrice()++` [.item-kind]#external#
 
 Adjust the schain price based on network capacity and demand.
@@ -1401,19 +1399,16 @@ Requirements:
 - Cooldown time has exceeded. TODO: confirm
 
 [.contract-item]
-[[Pricing-getTotalLoadPercentage--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Pricing-getTotalLoadPercentage-->getTotalLoadPercentage</a>+++ `++getTotalLoadPercentage() → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns the total load percentage.
 
 [.contract-item]
-[[Pricing-initialize-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Pricing-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[Pricing-checkAllNodes--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Pricing-checkAllNodes-->checkAllNodes</a>+++ `++checkAllNodes()++` [.item-kind]#public#
 
 

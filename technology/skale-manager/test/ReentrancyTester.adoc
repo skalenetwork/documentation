@@ -1385,37 +1385,31 @@
 
 
 [.contract-item]
-[[ReentrancyTester-constructor-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ReentrancyTester-constructor-address->constructor</a>+++ `++constructor(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[ReentrancyTester-tokensReceived-address-address-address-uint256-bytes-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ReentrancyTester-tokensReceived-address-address-address-uint256-bytes-bytes->tokensReceived</a>+++ `++tokensReceived(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ReentrancyTester-tokensToSend-address-address-address-uint256-bytes-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ReentrancyTester-tokensToSend-address-address-address-uint256-bytes-bytes->tokensToSend</a>+++ `++tokensToSend(++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++address++#++, ++[.var-type]#++uint256++#++, ++[.var-type]#++bytes++#++, ++[.var-type]#++bytes++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ReentrancyTester-prepareToReentracyCheck--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ReentrancyTester-prepareToReentracyCheck-->prepareToReentracyCheck</a>+++ `++prepareToReentracyCheck()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ReentrancyTester-prepareToBurningAttack--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ReentrancyTester-prepareToBurningAttack-->prepareToBurningAttack</a>+++ `++prepareToBurningAttack()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ReentrancyTester-burningAttack--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ReentrancyTester-burningAttack-->burningAttack</a>+++ `++burningAttack()++` [.item-kind]#external#
 
 

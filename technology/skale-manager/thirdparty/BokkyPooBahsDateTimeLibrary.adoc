@@ -1454,235 +1454,196 @@
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-_daysFromDate-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-_daysFromDate-uint256-uint256-uint256->_daysFromDate</a>+++ `++_daysFromDate(++[.var-type]#++uint256++#++ ++[.var-name]#++year++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++day++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++_days++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-_daysToDate-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-_daysToDate-uint256->_daysToDate</a>+++ `++_daysToDate(++[.var-type]#++uint256++#++ ++[.var-name]#++_days++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++year++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++day++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-timestampFromDate-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-timestampFromDate-uint256-uint256-uint256->timestampFromDate</a>+++ `++timestampFromDate(++[.var-type]#++uint256++#++ ++[.var-name]#++year++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++day++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-timestampFromDateTime-uint256-uint256-uint256-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-timestampFromDateTime-uint256-uint256-uint256-uint256-uint256-uint256->timestampFromDateTime</a>+++ `++timestampFromDateTime(++[.var-type]#++uint256++#++ ++[.var-name]#++year++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++day++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++hour++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++minute++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++second++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-timestampToDate-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-timestampToDate-uint256->timestampToDate</a>+++ `++timestampToDate(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++year++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++day++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-timestampToDateTime-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-timestampToDateTime-uint256->timestampToDateTime</a>+++ `++timestampToDateTime(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++year++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++day++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++hour++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++minute++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++second++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-isValidDate-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-isValidDate-uint256-uint256-uint256->isValidDate</a>+++ `++isValidDate(++[.var-type]#++uint256++#++ ++[.var-name]#++year++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++day++#++) → ++[.var-type]#++bool++#++ ++[.var-name]#++valid++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-isValidDateTime-uint256-uint256-uint256-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-isValidDateTime-uint256-uint256-uint256-uint256-uint256-uint256->isValidDateTime</a>+++ `++isValidDateTime(++[.var-type]#++uint256++#++ ++[.var-name]#++year++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++day++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++hour++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++minute++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++second++#++) → ++[.var-type]#++bool++#++ ++[.var-name]#++valid++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-isLeapYear-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-isLeapYear-uint256->isLeapYear</a>+++ `++isLeapYear(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++bool++#++ ++[.var-name]#++leapYear++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-_isLeapYear-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-_isLeapYear-uint256->_isLeapYear</a>+++ `++_isLeapYear(++[.var-type]#++uint256++#++ ++[.var-name]#++year++#++) → ++[.var-type]#++bool++#++ ++[.var-name]#++leapYear++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-isWeekDay-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-isWeekDay-uint256->isWeekDay</a>+++ `++isWeekDay(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++bool++#++ ++[.var-name]#++weekDay++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-isWeekEnd-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-isWeekEnd-uint256->isWeekEnd</a>+++ `++isWeekEnd(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++bool++#++ ++[.var-name]#++weekEnd++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-getDaysInMonth-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-getDaysInMonth-uint256->getDaysInMonth</a>+++ `++getDaysInMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++daysInMonth++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-_getDaysInMonth-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-_getDaysInMonth-uint256-uint256->_getDaysInMonth</a>+++ `++_getDaysInMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++year++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++daysInMonth++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-getDayOfWeek-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-getDayOfWeek-uint256->getDayOfWeek</a>+++ `++getDayOfWeek(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++dayOfWeek++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-getYear-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-getYear-uint256->getYear</a>+++ `++getYear(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++year++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-getMonth-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-getMonth-uint256->getMonth</a>+++ `++getMonth(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-getDay-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-getDay-uint256->getDay</a>+++ `++getDay(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++day++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-getHour-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-getHour-uint256->getHour</a>+++ `++getHour(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++hour++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-getMinute-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-getMinute-uint256->getMinute</a>+++ `++getMinute(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++minute++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-getSecond-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-getSecond-uint256->getSecond</a>+++ `++getSecond(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++second++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-addYears-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-addYears-uint256-uint256->addYears</a>+++ `++addYears(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_years++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-addMonths-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-addMonths-uint256-uint256->addMonths</a>+++ `++addMonths(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_months++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-addDays-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-addDays-uint256-uint256->addDays</a>+++ `++addDays(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_days++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-addHours-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-addHours-uint256-uint256->addHours</a>+++ `++addHours(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_hours++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-addMinutes-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-addMinutes-uint256-uint256->addMinutes</a>+++ `++addMinutes(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_minutes++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-addSeconds-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-addSeconds-uint256-uint256->addSeconds</a>+++ `++addSeconds(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_seconds++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-subYears-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-subYears-uint256-uint256->subYears</a>+++ `++subYears(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_years++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-subMonths-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-subMonths-uint256-uint256->subMonths</a>+++ `++subMonths(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_months++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-subDays-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-subDays-uint256-uint256->subDays</a>+++ `++subDays(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_days++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-subHours-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-subHours-uint256-uint256->subHours</a>+++ `++subHours(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_hours++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-subMinutes-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-subMinutes-uint256-uint256->subMinutes</a>+++ `++subMinutes(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_minutes++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-subSeconds-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-subSeconds-uint256-uint256->subSeconds</a>+++ `++subSeconds(++[.var-type]#++uint256++#++ ++[.var-name]#++timestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++_seconds++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newTimestamp++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-diffYears-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-diffYears-uint256-uint256->diffYears</a>+++ `++diffYears(++[.var-type]#++uint256++#++ ++[.var-name]#++fromTimestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toTimestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++_years++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-diffMonths-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-diffMonths-uint256-uint256->diffMonths</a>+++ `++diffMonths(++[.var-type]#++uint256++#++ ++[.var-name]#++fromTimestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toTimestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++_months++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-diffDays-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-diffDays-uint256-uint256->diffDays</a>+++ `++diffDays(++[.var-type]#++uint256++#++ ++[.var-name]#++fromTimestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toTimestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++_days++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-diffHours-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-diffHours-uint256-uint256->diffHours</a>+++ `++diffHours(++[.var-type]#++uint256++#++ ++[.var-name]#++fromTimestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toTimestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++_hours++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-diffMinutes-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-diffMinutes-uint256-uint256->diffMinutes</a>+++ `++diffMinutes(++[.var-type]#++uint256++#++ ++[.var-name]#++fromTimestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toTimestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++_minutes++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[BokkyPooBahsDateTimeLibrary-diffSeconds-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=BokkyPooBahsDateTimeLibrary-diffSeconds-uint256-uint256->diffSeconds</a>+++ `++diffSeconds(++[.var-type]#++uint256++#++ ++[.var-name]#++fromTimestamp++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toTimestamp++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++_seconds++#++++` [.item-kind]#internal#
 
 

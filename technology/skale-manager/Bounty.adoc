@@ -1392,31 +1392,26 @@
 
 
 [.contract-item]
-[[Bounty-getBounty-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Bounty-getBounty-uint256-uint256-uint256->getBounty</a>+++ `++getBounty(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++downtime++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++latency++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Bounty-enableBountyReduction--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Bounty-enableBountyReduction-->enableBountyReduction</a>+++ `++enableBountyReduction()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Bounty-disableBountyReduction--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Bounty-disableBountyReduction-->disableBountyReduction</a>+++ `++disableBountyReduction()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Bounty-calculateNormalBounty-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Bounty-calculateNormalBounty-uint256->calculateNormalBounty</a>+++ `++calculateNormalBounty(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[Bounty-initialize-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Bounty-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 

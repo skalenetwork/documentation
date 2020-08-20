@@ -1431,25 +1431,21 @@ destroyed. This makes integration with ERC20 applications seamless.
 
 
 [.contract-item]
-[[ERC777-constructor-string-string-address---]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-constructor-string-string-address--->constructor</a>+++ `++constructor(++[.var-type]#++string++#++ ++[.var-name]#++name++#++, ++[.var-type]#++string++#++ ++[.var-name]#++symbol++#++, ++[.var-type]#++address[]++#++ ++[.var-name]#++defaultOperators++#++)++` [.item-kind]#public#
 
 `defaultOperators` may be an empty array.
 
 [.contract-item]
-[[ERC777-name--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-name-->name</a>+++ `++name() → ++[.var-type]#++string++#++++` [.item-kind]#public#
 
 See {IERC777-name}.
 
 [.contract-item]
-[[ERC777-symbol--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-symbol-->symbol</a>+++ `++symbol() → ++[.var-type]#++string++#++++` [.item-kind]#public#
 
 See {IERC777-symbol}.
 
 [.contract-item]
-[[ERC777-decimals--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-decimals-->decimals</a>+++ `++decimals() → ++[.var-type]#++uint8++#++++` [.item-kind]#public#
 
 See {ERC20-decimals}.
@@ -1457,33 +1453,28 @@ Always returns 18, as per the
 [ERC777 EIP](https://eips.ethereum.org/EIPS/eip-777#backward-compatibility).
 
 [.contract-item]
-[[ERC777-granularity--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-granularity-->granularity</a>+++ `++granularity() → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 See {IERC777-granularity}.
 This implementation always returns `1`.
 
 [.contract-item]
-[[ERC777-totalSupply--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-totalSupply-->totalSupply</a>+++ `++totalSupply() → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 See {IERC777-totalSupply}.
 
 [.contract-item]
-[[ERC777-balanceOf-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-balanceOf-address->balanceOf</a>+++ `++balanceOf(++[.var-type]#++address++#++ ++[.var-name]#++tokenHolder++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 Returns the amount of tokens owned by an account (`tokenHolder`).
 
 [.contract-item]
-[[ERC777-send-address-uint256-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-send-address-uint256-bytes->send</a>+++ `++send(++[.var-type]#++address++#++ ++[.var-name]#++recipient++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++data++#++)++` [.item-kind]#public#
 
 See {IERC777-send}.
 Also emits a {IERC20-Transfer} event for ERC20 compatibility.
 
 [.contract-item]
-[[ERC777-transfer-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-transfer-address-uint256->transfer</a>+++ `++transfer(++[.var-type]#++address++#++ ++[.var-name]#++recipient++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 See {IERC20-transfer}.
@@ -1492,52 +1483,44 @@ interface if it is a contract.
 Also emits a {Sent} event.
 
 [.contract-item]
-[[ERC777-burn-uint256-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-burn-uint256-bytes->burn</a>+++ `++burn(++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++data++#++)++` [.item-kind]#public#
 
 See {IERC777-burn}.
 Also emits a {IERC20-Transfer} event for ERC20 compatibility.
 
 [.contract-item]
-[[ERC777-isOperatorFor-address-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-isOperatorFor-address-address->isOperatorFor</a>+++ `++isOperatorFor(++[.var-type]#++address++#++ ++[.var-name]#++operator++#++, ++[.var-type]#++address++#++ ++[.var-name]#++tokenHolder++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 See {IERC777-isOperatorFor}.
 
 [.contract-item]
-[[ERC777-authorizeOperator-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-authorizeOperator-address->authorizeOperator</a>+++ `++authorizeOperator(++[.var-type]#++address++#++ ++[.var-name]#++operator++#++)++` [.item-kind]#public#
 
 See {IERC777-authorizeOperator}.
 
 [.contract-item]
-[[ERC777-revokeOperator-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-revokeOperator-address->revokeOperator</a>+++ `++revokeOperator(++[.var-type]#++address++#++ ++[.var-name]#++operator++#++)++` [.item-kind]#public#
 
 See {IERC777-revokeOperator}.
 
 [.contract-item]
-[[ERC777-defaultOperators--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-defaultOperators-->defaultOperators</a>+++ `++defaultOperators() → ++[.var-type]#++address[]++#++++` [.item-kind]#public#
 
 See {IERC777-defaultOperators}.
 
 [.contract-item]
-[[ERC777-operatorSend-address-address-uint256-bytes-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-operatorSend-address-address-uint256-bytes-bytes->operatorSend</a>+++ `++operatorSend(++[.var-type]#++address++#++ ++[.var-name]#++sender++#++, ++[.var-type]#++address++#++ ++[.var-name]#++recipient++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++data++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++)++` [.item-kind]#public#
 
 See {IERC777-operatorSend}.
 Emits {Sent} and {IERC20-Transfer} events.
 
 [.contract-item]
-[[ERC777-operatorBurn-address-uint256-bytes-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-operatorBurn-address-uint256-bytes-bytes->operatorBurn</a>+++ `++operatorBurn(++[.var-type]#++address++#++ ++[.var-name]#++account++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++data++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++)++` [.item-kind]#public#
 
 See {IERC777-operatorBurn}.
 Emits {Burned} and {IERC20-Transfer} events.
 
 [.contract-item]
-[[ERC777-allowance-address-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-allowance-address-address->allowance</a>+++ `++allowance(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++address++#++ ++[.var-name]#++spender++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 See {IERC20-allowance}.
@@ -1546,14 +1529,12 @@ not have allowance, and accounts with allowance may not be operators
 themselves.
 
 [.contract-item]
-[[ERC777-approve-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-approve-address-uint256->approve</a>+++ `++approve(++[.var-type]#++address++#++ ++[.var-name]#++spender++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 See {IERC20-approve}.
 Note that accounts cannot have allowance issued by their operators.
 
 [.contract-item]
-[[ERC777-transferFrom-address-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-transferFrom-address-address-uint256->transferFrom</a>+++ `++transferFrom(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++address++#++ ++[.var-name]#++recipient++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
 See {IERC20-transferFrom}.
@@ -1563,7 +1544,6 @@ allowance cannot call `operatorSend` (unless they are operators).
 Emits {Sent}, {IERC20-Transfer} and {IERC20-Approval} events.
 
 [.contract-item]
-[[ERC777-_mint-address-uint256-bytes-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-_mint-address-uint256-bytes-bytes->_mint</a>+++ `++_mint(++[.var-type]#++address++#++ ++[.var-name]#++account++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++)++` [.item-kind]#internal#
 
 Creates `amount` tokens and assigns them to `account`, increasing
@@ -1578,35 +1558,30 @@ Requirements
 interface.
 
 [.contract-item]
-[[ERC777-_send-address-address-uint256-bytes-bytes-bool-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-_send-address-address-uint256-bytes-bytes-bool->_send</a>+++ `++_send(++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++, ++[.var-type]#++bool++#++ ++[.var-name]#++requireReceptionAck++#++)++` [.item-kind]#internal#
 
 Send tokens
 
 
 [.contract-item]
-[[ERC777-_burn-address-uint256-bytes-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-_burn-address-uint256-bytes-bytes->_burn</a>+++ `++_burn(++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++data++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++)++` [.item-kind]#internal#
 
 Burn tokens
 
 
 [.contract-item]
-[[ERC777-_approve-address-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-_approve-address-address-uint256->_approve</a>+++ `++_approve(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++address++#++ ++[.var-name]#++spender++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++value++#++)++` [.item-kind]#internal#
 
 See {ERC20-_approve}.
 Note that accounts cannot have allowance issued by their operators.
 
 [.contract-item]
-[[ERC777-_callTokensToSend-address-address-address-uint256-bytes-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-_callTokensToSend-address-address-address-uint256-bytes-bytes->_callTokensToSend</a>+++ `++_callTokensToSend(++[.var-type]#++address++#++ ++[.var-name]#++operator++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++)++` [.item-kind]#internal#
 
 Call from.tokensToSend() if the interface is registered
 
 
 [.contract-item]
-[[ERC777-_callTokensReceived-address-address-address-uint256-bytes-bytes-bool-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-_callTokensReceived-address-address-address-uint256-bytes-bytes-bool->_callTokensReceived</a>+++ `++_callTokensReceived(++[.var-type]#++address++#++ ++[.var-name]#++operator++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++, ++[.var-type]#++bool++#++ ++[.var-name]#++requireReceptionAck++#++)++` [.item-kind]#internal#
 
 Call to.tokensReceived() if the interface is registered. Reverts if the recipient is a contract but
@@ -1614,7 +1589,6 @@ tokensReceived() was not registered for the recipient
 
 
 [.contract-item]
-[[ERC777-_beforeTokenTransfer-address-address-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ERC777-_beforeTokenTransfer-address-address-address-uint256->_beforeTokenTransfer</a>+++ `++_beforeTokenTransfer(++[.var-type]#++address++#++ ++[.var-name]#++operator++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++tokenId++#++)++` [.item-kind]#internal#
 
 Hook that is called before any token transfer. This includes

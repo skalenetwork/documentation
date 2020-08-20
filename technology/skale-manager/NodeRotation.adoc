@@ -1393,55 +1393,46 @@
 
 
 [.contract-item]
-[[NodeRotation-exitFromSchain-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=NodeRotation-exitFromSchain-uint256->exitFromSchain</a>+++ `++exitFromSchain(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-freezeSchains-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=NodeRotation-freezeSchains-uint256->freezeSchains</a>+++ `++freezeSchains(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-removeRotation-bytes32-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=NodeRotation-removeRotation-bytes32->removeRotation</a>+++ `++removeRotation(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-skipRotationDelay-bytes32-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=NodeRotation-skipRotationDelay-bytes32->skipRotationDelay</a>+++ `++skipRotationDelay(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainIndex++#++)++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-getRotation-bytes32-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=NodeRotation-getRotation-bytes32->getRotation</a>+++ `++getRotation(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainIndex++#++) → ++[.var-type]#++struct NodeRotation.Rotation++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-getLeavingHistory-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=NodeRotation-getLeavingHistory-uint256->getLeavingHistory</a>+++ `++getLeavingHistory(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++struct NodeRotation.LeavingHistory[]++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[NodeRotation-initialize-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=NodeRotation-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[NodeRotation-rotateNode-uint256-bytes32-bool-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=NodeRotation-rotateNode-uint256-bytes32-bool->rotateNode</a>+++ `++rotateNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++, ++[.var-type]#++bool++#++ ++[.var-name]#++shouldDelay++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++newNode++#++++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[NodeRotation-selectNodeToGroup-bytes32-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=NodeRotation-selectNodeToGroup-bytes32->selectNodeToGroup</a>+++ `++selectNodeToGroup(++[.var-type]#++bytes32++#++ ++[.var-name]#++schainId++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 selectNodeToGroup - pseudo-randomly select new Node for Schain

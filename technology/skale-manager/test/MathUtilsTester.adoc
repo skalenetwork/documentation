@@ -1373,25 +1373,21 @@
 
 
 [.contract-item]
-[[MathUtilsTester-boundedSub-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=MathUtilsTester-boundedSub-uint256-uint256->boundedSub</a>+++ `++boundedSub(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[MathUtilsTester-boundedSubWithoutEvent-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=MathUtilsTester-boundedSubWithoutEvent-uint256-uint256->boundedSubWithoutEvent</a>+++ `++boundedSubWithoutEvent(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[MathUtilsTester-muchGreater-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=MathUtilsTester-muchGreater-uint256-uint256->muchGreater</a>+++ `++muchGreater(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[MathUtilsTester-approximatelyEqual-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=MathUtilsTester-approximatelyEqual-uint256-uint256->approximatelyEqual</a>+++ `++approximatelyEqual(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 

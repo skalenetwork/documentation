@@ -1390,53 +1390,45 @@ See ILocker.
 
 
 [.contract-item]
-[[TokenLaunchLocker-lock-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TokenLaunchLocker-lock-address-uint256->lock</a>+++ `++lock(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows TokenLaunchManager contract to lock an amount of tokens.
 Emits Locked event.
 
 [.contract-item]
-[[TokenLaunchLocker-handleDelegationAdd-address-uint256-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TokenLaunchLocker-handleDelegationAdd-address-uint256-uint256-uint256->handleDelegationAdd</a>+++ `++handleDelegationAdd(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
 
 Allows DelegationController contract to add locked tokens to
 a delegation. TODO: confirm
 
 [.contract-item]
-[[TokenLaunchLocker-handleDelegationRemoving-address-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TokenLaunchLocker-handleDelegationRemoving-address-uint256-uint256->handleDelegationRemoving</a>+++ `++handleDelegationRemoving(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++delegationId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++month++#++)++` [.item-kind]#external#
 
 Allows DelegationController contract to remove locked tokens from
 a delegation. TODO: confirm
 
 [.contract-item]
-[[TokenLaunchLocker-getAndUpdateLockedAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TokenLaunchLocker-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns and updates the locked amount of tokens.
 
 [.contract-item]
-[[TokenLaunchLocker-getAndUpdateForbiddenForDelegationAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TokenLaunchLocker-getAndUpdateForbiddenForDelegationAmount-address->getAndUpdateForbiddenForDelegationAmount</a>+++ `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 See ILocker.
 
 [.contract-item]
-[[TokenLaunchLocker-initialize-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TokenLaunchLocker-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 
 [.contract-item]
-[[TokenLaunchLocker-Unlocked-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TokenLaunchLocker-Unlocked-address-uint256->Unlocked</a>+++ `++Unlocked(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted when an `amount` is unlocked.
 
 [.contract-item]
-[[TokenLaunchLocker-Locked-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=TokenLaunchLocker-Locked-address-uint256->Locked</a>+++ `++Locked(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted when an `amount` is locked.

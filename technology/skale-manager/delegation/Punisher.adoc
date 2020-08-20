@@ -1389,7 +1389,6 @@ This contract handles all slashing and forgiving operations.
 
 
 [.contract-item]
-[[Punisher-slash-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Punisher-slash-uint256-uint256->slash</a>+++ `++slash(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows SkaleDKG contract to execute slashing on a validator and
@@ -1399,7 +1398,6 @@ Requirements:
 - Validator must exist.
 
 [.contract-item]
-[[Punisher-forgive-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Punisher-forgive-address-uint256->forgive</a>+++ `++forgive(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows the Owner to forgive a slashing condition.
@@ -1408,39 +1406,33 @@ Requirements:
 - All slashes must have been processed.
 
 [.contract-item]
-[[Punisher-getAndUpdateLockedAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Punisher-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 See ILocker-getAndUpdateLockedAmount
 
 [.contract-item]
-[[Punisher-getAndUpdateForbiddenForDelegationAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Punisher-getAndUpdateForbiddenForDelegationAmount-address->getAndUpdateForbiddenForDelegationAmount</a>+++ `++getAndUpdateForbiddenForDelegationAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 See ILocker-getAndUpdateForbiddenForDelegationAmount
 
 [.contract-item]
-[[Punisher-handleSlash-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Punisher-handleSlash-address-uint256->handleSlash</a>+++ `++handleSlash(++[.var-type]#++address++#++ ++[.var-name]#++holder++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#external#
 
 Allows DelegationController contract to execute slashing of
 delegations.
 
 [.contract-item]
-[[Punisher-initialize-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Punisher-initialize-address->initialize</a>+++ `++initialize(++[.var-type]#++address++#++ ++[.var-name]#++contractManagerAddress++#++)++` [.item-kind]#public#
 
 
 
 
 [.contract-item]
-[[Punisher-Slash-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Punisher-Slash-uint256-uint256->Slash</a>+++ `++Slash(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted upon slashing condition.
 
 [.contract-item]
-[[Punisher-Forgive-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Punisher-Forgive-address-uint256->Forgive</a>+++ `++Forgive(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++)++` [.item-kind]#event#
 
 Emitted upon forgive condition.

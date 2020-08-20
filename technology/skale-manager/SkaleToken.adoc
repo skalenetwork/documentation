@@ -1398,13 +1398,11 @@ implementation.
 
 
 [.contract-item]
-[[SkaleToken-constructor-address-address---]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleToken-constructor-address-address--->constructor</a>+++ `++constructor(++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++, ++[.var-type]#++address[]++#++ ++[.var-name]#++defOps++#++)++` [.item-kind]#public#
 
 
 
 [.contract-item]
-[[SkaleToken-mint-address-uint256-bytes-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleToken-mint-address-uint256-bytes-bytes->mint</a>+++ `++mint(++[.var-type]#++address++#++ ++[.var-name]#++account++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Allows SkaleManager to mint an amount of tokens and transfer minted
@@ -1414,49 +1412,41 @@ Requirements:
 - Mint must not exceed the total supply.
 
 [.contract-item]
-[[SkaleToken-getAndUpdateDelegatedAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleToken-getAndUpdateDelegatedAmount-address->getAndUpdateDelegatedAmount</a>+++ `++getAndUpdateDelegatedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns and updates the delegated amount in SKL tokens for a given wallet.
 
 [.contract-item]
-[[SkaleToken-getAndUpdateSlashedAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleToken-getAndUpdateSlashedAmount-address->getAndUpdateSlashedAmount</a>+++ `++getAndUpdateSlashedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns and updates the slashed amount in SKL tokens for a given wallet.
 
 [.contract-item]
-[[SkaleToken-getAndUpdateLockedAmount-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleToken-getAndUpdateLockedAmount-address->getAndUpdateLockedAmount</a>+++ `++getAndUpdateLockedAmount(++[.var-type]#++address++#++ ++[.var-name]#++wallet++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
 Returns and updates the locked amount in SKL tokens for a given wallet.
 
 [.contract-item]
-[[SkaleToken-_beforeTokenTransfer-address-address-address-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleToken-_beforeTokenTransfer-address-address-address-uint256->_beforeTokenTransfer</a>+++ `++_beforeTokenTransfer(++[.var-type]#++address++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++tokenId++#++)++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[SkaleToken-_callTokensToSend-address-address-address-uint256-bytes-bytes-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleToken-_callTokensToSend-address-address-address-uint256-bytes-bytes->_callTokensToSend</a>+++ `++_callTokensToSend(++[.var-type]#++address++#++ ++[.var-name]#++operator++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++)++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[SkaleToken-_callTokensReceived-address-address-address-uint256-bytes-bytes-bool-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleToken-_callTokensReceived-address-address-address-uint256-bytes-bytes-bool->_callTokensReceived</a>+++ `++_callTokensReceived(++[.var-type]#++address++#++ ++[.var-name]#++operator++#++, ++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++address++#++ ++[.var-name]#++to++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++amount++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++userData++#++, ++[.var-type]#++bytes++#++ ++[.var-name]#++operatorData++#++, ++[.var-type]#++bool++#++ ++[.var-name]#++requireReceptionAck++#++)++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[SkaleToken-_msgData--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleToken-_msgData-->_msgData</a>+++ `++_msgData() → ++[.var-type]#++bytes++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[SkaleToken-_msgSender--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleToken-_msgSender-->_msgSender</a>+++ `++_msgSender() → ++[.var-type]#++address payable++#++++` [.item-kind]#internal#
 
 

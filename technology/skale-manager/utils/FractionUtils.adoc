@@ -1377,37 +1377,31 @@
 
 
 [.contract-item]
-[[FractionUtils-createFraction-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=FractionUtils-createFraction-uint256-uint256->createFraction</a>+++ `++createFraction(++[.var-type]#++uint256++#++ ++[.var-name]#++numerator++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++denominator++#++) → ++[.var-type]#++struct FractionUtils.Fraction++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[FractionUtils-createFraction-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=FractionUtils-createFraction-uint256->createFraction</a>+++ `++createFraction(++[.var-type]#++uint256++#++ ++[.var-name]#++value++#++) → ++[.var-type]#++struct FractionUtils.Fraction++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[FractionUtils-reduceFraction-struct-FractionUtils-Fraction-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=FractionUtils-reduceFraction-struct-FractionUtils-Fraction->reduceFraction</a>+++ `++reduceFraction(++[.var-type]#++struct FractionUtils.Fraction++#++ ++[.var-name]#++fraction++#++)++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[FractionUtils-multiplyFraction-struct-FractionUtils-Fraction-struct-FractionUtils-Fraction-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=FractionUtils-multiplyFraction-struct-FractionUtils-Fraction-struct-FractionUtils-Fraction->multiplyFraction</a>+++ `++multiplyFraction(++[.var-type]#++struct FractionUtils.Fraction++#++ ++[.var-name]#++a++#++, ++[.var-type]#++struct FractionUtils.Fraction++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++struct FractionUtils.Fraction++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[FractionUtils-gcd-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=FractionUtils-gcd-uint256-uint256->gcd</a>+++ `++gcd(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
 
 
 
 [.contract-item]
-[[FractionUtils-swap-uint256-uint256-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=FractionUtils-swap-uint256-uint256->swap</a>+++ `++swap(++[.var-type]#++uint256++#++ ++[.var-name]#++a++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++b++#++) → ++[.var-type]#++uint256++#++, ++[.var-type]#++uint256++#++++` [.item-kind]#internal#
 
 

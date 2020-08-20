@@ -1383,13 +1383,11 @@ Contract contains the actual current mapping from contract IDs
 
 
 [.contract-item]
-[[ContractManager-initialize--]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ContractManager-initialize-->initialize</a>+++ `++initialize()++` [.item-kind]#external#
 
 
 
 [.contract-item]
-[[ContractManager-setContractsAddress-string-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ContractManager-setContractsAddress-string-address->setContractsAddress</a>+++ `++setContractsAddress(++[.var-type]#++string++#++ ++[.var-name]#++contractsName++#++, ++[.var-type]#++address++#++ ++[.var-name]#++newContractsAddress++#++)++` [.item-kind]#external#
 
 Allows the Owner to add contract to mapping of contract addresses.
@@ -1400,7 +1398,6 @@ Requirements:
 - Contract address contains code.
 
 [.contract-item]
-[[ContractManager-getContract-string-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ContractManager-getContract-string->getContract</a>+++ `++getContract(++[.var-type]#++string++#++ ++[.var-name]#++name++#++) → ++[.var-type]#++address++#++ ++[.var-name]#++contractAddress++#++++` [.item-kind]#external#
 
 Returns contract address.
@@ -1409,7 +1406,6 @@ Requirements:
 
 
 [.contract-item]
-[[ContractManager-ContractUpgraded-string-address-]]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ContractManager-ContractUpgraded-string-address->ContractUpgraded</a>+++ `++ContractUpgraded(++[.var-type]#++string++#++ ++[.var-name]#++contractsName++#++, ++[.var-type]#++address++#++ ++[.var-name]#++contractsAddress++#++)++` [.item-kind]#event#
 
 Emitted when contract is upgraded.
