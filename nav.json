@@ -113,11 +113,11 @@
         },
         {
           "title": "Node CLI",
-          "link": "/documentation/skale-node-cli/README"
+          "link": "/documentation/skale-node-cli/readme"
         },
         {
           "title": "Validator CLI",
-          "link": "/documentation/validator-cli/README"
+          "link": "/documentation/validator-cli/readme"
         },
         {
           "title": "Fuji TestNet",
