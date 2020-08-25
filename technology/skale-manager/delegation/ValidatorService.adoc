@@ -88,6 +88,10 @@
 :xref-ConstantsHolder-limitValidatorsPerDelegator-uint256: xref:constantsholder.adoc#ConstantsHolder-limitValidatorsPerDelegator-uint256
 :ConstantsHolder-firstDelegationsMonth: pass:normal[xref:constantsholder.adoc#ConstantsHolder-firstDelegationsMonth-uint256[`ConstantsHolder.firstDelegationsMonth`]]
 :xref-ConstantsHolder-firstDelegationsMonth-uint256: xref:constantsholder.adoc#ConstantsHolder-firstDelegationsMonth-uint256
+:ConstantsHolder-schainCreationTimeStamp: pass:normal[xref:constantsholder.adoc#ConstantsHolder-schainCreationTimeStamp-uint256[`ConstantsHolder.schainCreationTimeStamp`]]
+:xref-ConstantsHolder-schainCreationTimeStamp-uint256: xref:constantsholder.adoc#ConstantsHolder-schainCreationTimeStamp-uint256
+:ConstantsHolder-minimalSchainLifetime: pass:normal[xref:constantsholder.adoc#ConstantsHolder-minimalSchainLifetime-uint256[`ConstantsHolder.minimalSchainLifetime`]]
+:xref-ConstantsHolder-minimalSchainLifetime-uint256: xref:constantsholder.adoc#ConstantsHolder-minimalSchainLifetime-uint256
 :ConstantsHolder-setPeriods: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setPeriods-uint32-uint32-[`ConstantsHolder.setPeriods`]]
 :xref-ConstantsHolder-setPeriods-uint32-uint32-: xref:constantsholder.adoc#ConstantsHolder-setPeriods-uint32-uint32-
 :ConstantsHolder-setCheckTime: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setCheckTime-uint256-[`ConstantsHolder.setCheckTime`]]
@@ -108,6 +112,10 @@
 :xref-ConstantsHolder-setLimitValidatorsPerDelegator-uint256-: xref:constantsholder.adoc#ConstantsHolder-setLimitValidatorsPerDelegator-uint256-
 :ConstantsHolder-setFirstDelegationsMonth: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setFirstDelegationsMonth-uint256-[`ConstantsHolder.setFirstDelegationsMonth`]]
 :xref-ConstantsHolder-setFirstDelegationsMonth-uint256-: xref:constantsholder.adoc#ConstantsHolder-setFirstDelegationsMonth-uint256-
+:ConstantsHolder-setSchainCreationTimeStamp: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setSchainCreationTimeStamp-uint256-[`ConstantsHolder.setSchainCreationTimeStamp`]]
+:xref-ConstantsHolder-setSchainCreationTimeStamp-uint256-: xref:constantsholder.adoc#ConstantsHolder-setSchainCreationTimeStamp-uint256-
+:ConstantsHolder-setMinimalSchainLifetime: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setMinimalSchainLifetime-uint256-[`ConstantsHolder.setMinimalSchainLifetime`]]
+:xref-ConstantsHolder-setMinimalSchainLifetime-uint256-: xref:constantsholder.adoc#ConstantsHolder-setMinimalSchainLifetime-uint256-
 :ConstantsHolder-initialize: pass:normal[xref:constantsholder.adoc#ConstantsHolder-initialize-address-[`ConstantsHolder.initialize`]]
 :xref-ConstantsHolder-initialize-address-: xref:constantsholder.adoc#ConstantsHolder-initialize-address-
 :ContractManager: pass:normal[xref:contractmanager.adoc#ContractManager[`ContractManager`]]
@@ -152,8 +160,6 @@
 :xref-ECDH-ecMul-uint256-uint256-uint256-uint256-: xref:ecdh.adoc#ECDH-ecMul-uint256-uint256-uint256-uint256-
 :KeyStorage: pass:normal[xref:keystorage.adoc#KeyStorage[`KeyStorage`]]
 :xref-KeyStorage: xref:keystorage.adoc#KeyStorage
-:KeyStorage-addBroadcastedData: pass:normal[xref:keystorage.adoc#KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---[`KeyStorage.addBroadcastedData`]]
-:xref-KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---: xref:keystorage.adoc#KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---
 :KeyStorage-deleteKey: pass:normal[xref:keystorage.adoc#KeyStorage-deleteKey-bytes32-[`KeyStorage.deleteKey`]]
 :xref-KeyStorage-deleteKey-bytes32-: xref:keystorage.adoc#KeyStorage-deleteKey-bytes32-
 :KeyStorage-initPublicKeyInProgress: pass:normal[xref:keystorage.adoc#KeyStorage-initPublicKeyInProgress-bytes32-[`KeyStorage.initPublicKeyInProgress`]]
@@ -164,14 +170,6 @@
 :xref-KeyStorage-finalizePublicKey-bytes32-: xref:keystorage.adoc#KeyStorage-finalizePublicKey-bytes32-
 :KeyStorage-computePublicValues: pass:normal[xref:keystorage.adoc#KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point---[`KeyStorage.computePublicValues`]]
 :xref-KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point---: xref:keystorage.adoc#KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point---
-:KeyStorage-verify: pass:normal[xref:keystorage.adoc#KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-[`KeyStorage.verify`]]
-:xref-KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-: xref:keystorage.adoc#KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-
-:KeyStorage-getBroadcastedData: pass:normal[xref:keystorage.adoc#KeyStorage-getBroadcastedData-bytes32-uint256-[`KeyStorage.getBroadcastedData`]]
-:xref-KeyStorage-getBroadcastedData-bytes32-uint256-: xref:keystorage.adoc#KeyStorage-getBroadcastedData-bytes32-uint256-
-:KeyStorage-getSecretKeyShare: pass:normal[xref:keystorage.adoc#KeyStorage-getSecretKeyShare-bytes32-uint256-uint256-[`KeyStorage.getSecretKeyShare`]]
-:xref-KeyStorage-getSecretKeyShare-bytes32-uint256-uint256-: xref:keystorage.adoc#KeyStorage-getSecretKeyShare-bytes32-uint256-uint256-
-:KeyStorage-getVerificationVector: pass:normal[xref:keystorage.adoc#KeyStorage-getVerificationVector-bytes32-uint256-[`KeyStorage.getVerificationVector`]]
-:xref-KeyStorage-getVerificationVector-bytes32-uint256-: xref:keystorage.adoc#KeyStorage-getVerificationVector-bytes32-uint256-
 :KeyStorage-getCommonPublicKey: pass:normal[xref:keystorage.adoc#KeyStorage-getCommonPublicKey-bytes32-[`KeyStorage.getCommonPublicKey`]]
 :xref-KeyStorage-getCommonPublicKey-bytes32-: xref:keystorage.adoc#KeyStorage-getCommonPublicKey-bytes32-
 :KeyStorage-getPreviousPublicKey: pass:normal[xref:keystorage.adoc#KeyStorage-getPreviousPublicKey-bytes32-[`KeyStorage.getPreviousPublicKey`]]
@@ -556,20 +554,24 @@
 :xref-SkaleDKG-complaints-mapping-bytes32----struct-SkaleDKG-ComplaintData-: xref:skaledkg.adoc#SkaleDKG-complaints-mapping-bytes32----struct-SkaleDKG-ComplaintData-
 :SkaleDKG-startAlrightTimestamp: pass:normal[xref:skaledkg.adoc#SkaleDKG-startAlrightTimestamp-mapping-bytes32----uint256-[`SkaleDKG.startAlrightTimestamp`]]
 :xref-SkaleDKG-startAlrightTimestamp-mapping-bytes32----uint256-: xref:skaledkg.adoc#SkaleDKG-startAlrightTimestamp-mapping-bytes32----uint256-
+:SkaleDKG-hashedData: pass:normal[xref:skaledkg.adoc#SkaleDKG-hashedData-mapping-bytes32----mapping-uint256----bytes32--[`SkaleDKG.hashedData`]]
+:xref-SkaleDKG-hashedData-mapping-bytes32----mapping-uint256----bytes32--: xref:skaledkg.adoc#SkaleDKG-hashedData-mapping-bytes32----mapping-uint256----bytes32--
 :SkaleDKG-openChannel: pass:normal[xref:skaledkg.adoc#SkaleDKG-openChannel-bytes32-[`SkaleDKG.openChannel`]]
 :xref-SkaleDKG-openChannel-bytes32-: xref:skaledkg.adoc#SkaleDKG-openChannel-bytes32-
 :SkaleDKG-deleteChannel: pass:normal[xref:skaledkg.adoc#SkaleDKG-deleteChannel-bytes32-[`SkaleDKG.deleteChannel`]]
 :xref-SkaleDKG-deleteChannel-bytes32-: xref:skaledkg.adoc#SkaleDKG-deleteChannel-bytes32-
-:SkaleDKG-broadcast: pass:normal[xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---[`SkaleDKG.broadcast`]]
-:xref-SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---: xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---
+:SkaleDKG-broadcast: pass:normal[xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`SkaleDKG.broadcast`]]
+:xref-SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---: xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---
 :SkaleDKG-complaint: pass:normal[xref:skaledkg.adoc#SkaleDKG-complaint-bytes32-uint256-uint256-[`SkaleDKG.complaint`]]
 :xref-SkaleDKG-complaint-bytes32-uint256-uint256-: xref:skaledkg.adoc#SkaleDKG-complaint-bytes32-uint256-uint256-
-:SkaleDKG-response: pass:normal[xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-[`SkaleDKG.response`]]
-:xref-SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-: xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-
+:SkaleDKG-response: pass:normal[xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`SkaleDKG.response`]]
+:xref-SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---: xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---
 :SkaleDKG-alright: pass:normal[xref:skaledkg.adoc#SkaleDKG-alright-bytes32-uint256-[`SkaleDKG.alright`]]
 :xref-SkaleDKG-alright-bytes32-uint256-: xref:skaledkg.adoc#SkaleDKG-alright-bytes32-uint256-
 :SkaleDKG-getChannelStartedTime: pass:normal[xref:skaledkg.adoc#SkaleDKG-getChannelStartedTime-bytes32-[`SkaleDKG.getChannelStartedTime`]]
 :xref-SkaleDKG-getChannelStartedTime-bytes32-: xref:skaledkg.adoc#SkaleDKG-getChannelStartedTime-bytes32-
+:SkaleDKG-getChannelStartedBlock: pass:normal[xref:skaledkg.adoc#SkaleDKG-getChannelStartedBlock-bytes32-[`SkaleDKG.getChannelStartedBlock`]]
+:xref-SkaleDKG-getChannelStartedBlock-bytes32-: xref:skaledkg.adoc#SkaleDKG-getChannelStartedBlock-bytes32-
 :SkaleDKG-getNumberOfBroadcasted: pass:normal[xref:skaledkg.adoc#SkaleDKG-getNumberOfBroadcasted-bytes32-[`SkaleDKG.getNumberOfBroadcasted`]]
 :xref-SkaleDKG-getNumberOfBroadcasted-bytes32-: xref:skaledkg.adoc#SkaleDKG-getNumberOfBroadcasted-bytes32-
 :SkaleDKG-getNumberOfCompleted: pass:normal[xref:skaledkg.adoc#SkaleDKG-getNumberOfCompleted-bytes32-[`SkaleDKG.getNumberOfCompleted`]]
@@ -584,8 +586,8 @@
 :xref-SkaleDKG-getAlrightStartedTime-bytes32-: xref:skaledkg.adoc#SkaleDKG-getAlrightStartedTime-bytes32-
 :SkaleDKG-isChannelOpened: pass:normal[xref:skaledkg.adoc#SkaleDKG-isChannelOpened-bytes32-[`SkaleDKG.isChannelOpened`]]
 :xref-SkaleDKG-isChannelOpened-bytes32-: xref:skaledkg.adoc#SkaleDKG-isChannelOpened-bytes32-
-:SkaleDKG-isLastDKGSuccesful: pass:normal[xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccesful-bytes32-[`SkaleDKG.isLastDKGSuccesful`]]
-:xref-SkaleDKG-isLastDKGSuccesful-bytes32-: xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccesful-bytes32-
+:SkaleDKG-isLastDKGSuccessful: pass:normal[xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccessful-bytes32-[`SkaleDKG.isLastDKGSuccessful`]]
+:xref-SkaleDKG-isLastDKGSuccessful-bytes32-: xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccessful-bytes32-
 :SkaleDKG-isBroadcastPossible: pass:normal[xref:skaledkg.adoc#SkaleDKG-isBroadcastPossible-bytes32-uint256-[`SkaleDKG.isBroadcastPossible`]]
 :xref-SkaleDKG-isBroadcastPossible-bytes32-uint256-: xref:skaledkg.adoc#SkaleDKG-isBroadcastPossible-bytes32-uint256-
 :SkaleDKG-isComplaintPossible: pass:normal[xref:skaledkg.adoc#SkaleDKG-isComplaintPossible-bytes32-uint256-uint256-[`SkaleDKG.isComplaintPossible`]]
@@ -606,12 +608,14 @@
 :xref-SkaleDKG-getT-uint256-: xref:skaledkg.adoc#SkaleDKG-getT-uint256-
 :SkaleDKG-_setSuccesfulDKG: pass:normal[xref:skaledkg.adoc#SkaleDKG-_setSuccesfulDKG-bytes32-[`SkaleDKG._setSuccesfulDKG`]]
 :xref-SkaleDKG-_setSuccesfulDKG-bytes32-: xref:skaledkg.adoc#SkaleDKG-_setSuccesfulDKG-bytes32-
+:SkaleDKG-_verifyDataAndSlash: pass:normal[xref:skaledkg.adoc#SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32-[`SkaleDKG._verifyDataAndSlash`]]
+:xref-SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32-: xref:skaledkg.adoc#SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32-
 :SkaleDKG-ChannelOpened: pass:normal[xref:skaledkg.adoc#SkaleDKG-ChannelOpened-bytes32-[`SkaleDKG.ChannelOpened`]]
 :xref-SkaleDKG-ChannelOpened-bytes32-: xref:skaledkg.adoc#SkaleDKG-ChannelOpened-bytes32-
 :SkaleDKG-ChannelClosed: pass:normal[xref:skaledkg.adoc#SkaleDKG-ChannelClosed-bytes32-[`SkaleDKG.ChannelClosed`]]
 :xref-SkaleDKG-ChannelClosed-bytes32-: xref:skaledkg.adoc#SkaleDKG-ChannelClosed-bytes32-
-:SkaleDKG-BroadcastAndKeyShare: pass:normal[xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---[`SkaleDKG.BroadcastAndKeyShare`]]
-:xref-SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---: xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---
+:SkaleDKG-BroadcastAndKeyShare: pass:normal[xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`SkaleDKG.BroadcastAndKeyShare`]]
+:xref-SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---: xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---
 :SkaleDKG-AllDataReceived: pass:normal[xref:skaledkg.adoc#SkaleDKG-AllDataReceived-bytes32-uint256-[`SkaleDKG.AllDataReceived`]]
 :xref-SkaleDKG-AllDataReceived-bytes32-uint256-: xref:skaledkg.adoc#SkaleDKG-AllDataReceived-bytes32-uint256-
 :SkaleDKG-SuccessfulDKG: pass:normal[xref:skaledkg.adoc#SkaleDKG-SuccessfulDKG-bytes32-[`SkaleDKG.SuccessfulDKG`]]
@@ -1008,8 +1012,8 @@
 :xref-ISkaleDKG-openChannel-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-openChannel-bytes32-
 :ISkaleDKG-deleteChannel: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-deleteChannel-bytes32-[`ISkaleDKG.deleteChannel`]]
 :xref-ISkaleDKG-deleteChannel-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-deleteChannel-bytes32-
-:ISkaleDKG-isLastDKGSuccesful: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccesful-bytes32-[`ISkaleDKG.isLastDKGSuccesful`]]
-:xref-ISkaleDKG-isLastDKGSuccesful-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccesful-bytes32-
+:ISkaleDKG-isLastDKGSuccessful: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccessful-bytes32-[`ISkaleDKG.isLastDKGSuccessful`]]
+:xref-ISkaleDKG-isLastDKGSuccessful-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccessful-bytes32-
 :ISkaleDKG-isChannelOpened: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-isChannelOpened-bytes32-[`ISkaleDKG.isChannelOpened`]]
 :xref-ISkaleDKG-isChannelOpened-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-isChannelOpened-bytes32-
 :IDelegatableToken: pass:normal[xref:interfaces/delegation/idelegatabletoken.adoc#IDelegatableToken[`IDelegatableToken`]]
@@ -1463,8 +1467,11 @@ register nodes.
 
 Creates a new validator ID that includes a validator name, description,
 commission or fee rate, and a minimum delegation amount accepted by the validator.
-Emits ValidatorRegistered event.
+
+Emits a {ValidatorRegistered} event.
+
 Requirements:
+
 - Sender must not already have registered a validator ID.
 - Fee rate must be between 0 - 1000‰. Note: in per mille.
 
@@ -1473,8 +1480,11 @@ Requirements:
 
 Allows Admin to enable a validator by adding their ID to the
 trusted list.
-Emits ValidatorWasEnabled event.
+
+Emits a {ValidatorWasEnabled} event.
+
 Requirements:
+
 - Validator must not already be enabled.
 
 [.contract-item]
@@ -1482,8 +1492,11 @@ Requirements:
 
 Allows Admin to disable a validator by removing their ID from
 the trusted list.
-Emits ValidatorWasDisabled event.
+
+Emits a {ValidatorWasDisabled} event.
+
 Requirements:
+
 - Validator must not already be disabled.
 
 [.contract-item]
@@ -1495,8 +1508,10 @@ trusted list cannot be re-enabled.
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ValidatorService-requestForNewAddress-address->requestForNewAddress</a>+++ `++requestForNewAddress(++[.var-type]#++address++#++ ++[.var-name]#++newValidatorAddress++#++)++` [.item-kind]#external#
 
-Allows msg.sender to request a new address.
+Allows `msg.sender` to request a new address.
+
 Requirements:
+
 - New address must not be null.
 - New address must not be already registered as a validator.
 
@@ -1504,8 +1519,11 @@ Requirements:
 ==== +++<a class="heading-anchor" area-hidden="true" name=ValidatorService-confirmNewAddress-uint256->confirmNewAddress</a>+++ `++confirmNewAddress(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++)++` [.item-kind]#external#
 
 Allows msg.sender to confirm an address change.
-Emits ValidatorAddressChanged event.
+
+Emits a {ValidatorAddressChanged} event.
+
 Requirements:
+
 - Must be owner of new address.
 
 [.contract-item]
@@ -1513,7 +1531,9 @@ Requirements:
 
 Links a validator ID to a node address. Validator must present
 the node signature of the validator ID.
+
 Requirements:
+
 - Signature must be valid.
 - Address must not be assigned to a validator.
 
@@ -1521,7 +1541,8 @@ Requirements:
 ==== +++<a class="heading-anchor" area-hidden="true" name=ValidatorService-unlinkNodeAddress-address->unlinkNodeAddress</a>+++ `++unlinkNodeAddress(++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++)++` [.item-kind]#external#
 
 Unlinks a node address from a validator.
-Emits NodeAddressWasRemoved event.
+
+Emits a {NodeAddressWasRemoved} event.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ValidatorService-setValidatorMDA-uint256->setValidatorMDA</a>+++ `++setValidatorMDA(++[.var-type]#++uint256++#++ ++[.var-name]#++minimumDelegationAmount++#++)++` [.item-kind]#external#
@@ -1542,14 +1563,18 @@ Allows a validator to set a new validator description.
 ==== +++<a class="heading-anchor" area-hidden="true" name=ValidatorService-startAcceptingNewRequests-->startAcceptingNewRequests</a>+++ `++startAcceptingNewRequests()++` [.item-kind]#external#
 
 Allows a validator to start accepting new delegation requests.
+
 Requirements:
+
 - Must not have already enabled accepting new requests.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=ValidatorService-stopAcceptingNewRequests-->stopAcceptingNewRequests</a>+++ `++stopAcceptingNewRequests()++` [.item-kind]#external#
 
 Allows a validator to stop accepting new delegation requests.
+
 Requirements:
+
 - Must not have already stopped accepting new requests.
 
 [.contract-item]
@@ -1582,7 +1607,9 @@ Checks whether the validator ID is linked to the validator address.
 ==== +++<a class="heading-anchor" area-hidden="true" name=ValidatorService-getValidatorIdByNodeAddress-address->getValidatorIdByNodeAddress</a>+++ `++getValidatorIdByNodeAddress(++[.var-type]#++address++#++ ++[.var-name]#++nodeAddress++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++++` [.item-kind]#external#
 
 Returns the validator ID linked to a node address.
+
 Requirements:
+
 - Node address must be linked to a validator.
 
 [.contract-item]
