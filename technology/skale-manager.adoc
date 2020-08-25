@@ -1,0 +1,15 @@
+= SKALE Manager
+
+SKALE Manager is the smart contract system that orchestrates and operates the SKALE Network.
+
+== Overview
+
+== Learn More
+
+Contracts:
+
+* xref:skale-manager:SkaleManager.adoc[SKALE Manager]
+* xref:skale-manager:SkaleDKG.adoc[SKALE DKG]
+* Blog posts: https://skale.network/blog
+* Whitepaper: https://skale.network/whitepaper
+* Developer Discord: http://skale.chat
