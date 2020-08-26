@@ -168,7 +168,7 @@
         },
         {
           "title": "SKALE Manager",
-          "link": "/technology/skale-manager/nodes",
+          "link": "/technology/skale-manager",
           "links": [
             {
               "title": "Bounty",
@@ -334,7 +334,7 @@
         },
         {
           "title": "SKALE Manager Utilities",
-          "link": "/technology/skale-manager/nodes",
+          "link": "/technology/skale-manager/utils/fieldoperations",
           "links": [
             {
               "title": "FieldOperations",
