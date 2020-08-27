@@ -226,6 +226,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   Ubuntu 18.04 or later LTS
 -   2TB attached storage main-net (200gb devnet)
 -   32GB RAM  
+-   16GB swap enabled
 -   Install docker.io
 -   run commands with sudo
 
