@@ -88,6 +88,10 @@
 :xref-ConstantsHolder-limitValidatorsPerDelegator-uint256: xref:constantsholder.adoc#ConstantsHolder-limitValidatorsPerDelegator-uint256
 :ConstantsHolder-firstDelegationsMonth: pass:normal[xref:constantsholder.adoc#ConstantsHolder-firstDelegationsMonth-uint256[`ConstantsHolder.firstDelegationsMonth`]]
 :xref-ConstantsHolder-firstDelegationsMonth-uint256: xref:constantsholder.adoc#ConstantsHolder-firstDelegationsMonth-uint256
+:ConstantsHolder-schainCreationTimeStamp: pass:normal[xref:constantsholder.adoc#ConstantsHolder-schainCreationTimeStamp-uint256[`ConstantsHolder.schainCreationTimeStamp`]]
+:xref-ConstantsHolder-schainCreationTimeStamp-uint256: xref:constantsholder.adoc#ConstantsHolder-schainCreationTimeStamp-uint256
+:ConstantsHolder-minimalSchainLifetime: pass:normal[xref:constantsholder.adoc#ConstantsHolder-minimalSchainLifetime-uint256[`ConstantsHolder.minimalSchainLifetime`]]
+:xref-ConstantsHolder-minimalSchainLifetime-uint256: xref:constantsholder.adoc#ConstantsHolder-minimalSchainLifetime-uint256
 :ConstantsHolder-setPeriods: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setPeriods-uint32-uint32-[`ConstantsHolder.setPeriods`]]
 :xref-ConstantsHolder-setPeriods-uint32-uint32-: xref:constantsholder.adoc#ConstantsHolder-setPeriods-uint32-uint32-
 :ConstantsHolder-setCheckTime: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setCheckTime-uint256-[`ConstantsHolder.setCheckTime`]]
@@ -108,6 +112,10 @@
 :xref-ConstantsHolder-setLimitValidatorsPerDelegator-uint256-: xref:constantsholder.adoc#ConstantsHolder-setLimitValidatorsPerDelegator-uint256-
 :ConstantsHolder-setFirstDelegationsMonth: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setFirstDelegationsMonth-uint256-[`ConstantsHolder.setFirstDelegationsMonth`]]
 :xref-ConstantsHolder-setFirstDelegationsMonth-uint256-: xref:constantsholder.adoc#ConstantsHolder-setFirstDelegationsMonth-uint256-
+:ConstantsHolder-setSchainCreationTimeStamp: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setSchainCreationTimeStamp-uint256-[`ConstantsHolder.setSchainCreationTimeStamp`]]
+:xref-ConstantsHolder-setSchainCreationTimeStamp-uint256-: xref:constantsholder.adoc#ConstantsHolder-setSchainCreationTimeStamp-uint256-
+:ConstantsHolder-setMinimalSchainLifetime: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setMinimalSchainLifetime-uint256-[`ConstantsHolder.setMinimalSchainLifetime`]]
+:xref-ConstantsHolder-setMinimalSchainLifetime-uint256-: xref:constantsholder.adoc#ConstantsHolder-setMinimalSchainLifetime-uint256-
 :ConstantsHolder-initialize: pass:normal[xref:constantsholder.adoc#ConstantsHolder-initialize-address-[`ConstantsHolder.initialize`]]
 :xref-ConstantsHolder-initialize-address-: xref:constantsholder.adoc#ConstantsHolder-initialize-address-
 :ContractManager: pass:normal[xref:contractmanager.adoc#ContractManager[`ContractManager`]]
@@ -152,8 +160,6 @@
 :xref-ECDH-ecMul-uint256-uint256-uint256-uint256-: xref:ecdh.adoc#ECDH-ecMul-uint256-uint256-uint256-uint256-
 :KeyStorage: pass:normal[xref:keystorage.adoc#KeyStorage[`KeyStorage`]]
 :xref-KeyStorage: xref:keystorage.adoc#KeyStorage
-:KeyStorage-addBroadcastedData: pass:normal[xref:keystorage.adoc#KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---[`KeyStorage.addBroadcastedData`]]
-:xref-KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---: xref:keystorage.adoc#KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---
 :KeyStorage-deleteKey: pass:normal[xref:keystorage.adoc#KeyStorage-deleteKey-bytes32-[`KeyStorage.deleteKey`]]
 :xref-KeyStorage-deleteKey-bytes32-: xref:keystorage.adoc#KeyStorage-deleteKey-bytes32-
 :KeyStorage-initPublicKeyInProgress: pass:normal[xref:keystorage.adoc#KeyStorage-initPublicKeyInProgress-bytes32-[`KeyStorage.initPublicKeyInProgress`]]
@@ -164,14 +170,6 @@
 :xref-KeyStorage-finalizePublicKey-bytes32-: xref:keystorage.adoc#KeyStorage-finalizePublicKey-bytes32-
 :KeyStorage-computePublicValues: pass:normal[xref:keystorage.adoc#KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point---[`KeyStorage.computePublicValues`]]
 :xref-KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point---: xref:keystorage.adoc#KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point---
-:KeyStorage-verify: pass:normal[xref:keystorage.adoc#KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-[`KeyStorage.verify`]]
-:xref-KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-: xref:keystorage.adoc#KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-
-:KeyStorage-getBroadcastedData: pass:normal[xref:keystorage.adoc#KeyStorage-getBroadcastedData-bytes32-uint256-[`KeyStorage.getBroadcastedData`]]
-:xref-KeyStorage-getBroadcastedData-bytes32-uint256-: xref:keystorage.adoc#KeyStorage-getBroadcastedData-bytes32-uint256-
-:KeyStorage-getSecretKeyShare: pass:normal[xref:keystorage.adoc#KeyStorage-getSecretKeyShare-bytes32-uint256-uint256-[`KeyStorage.getSecretKeyShare`]]
-:xref-KeyStorage-getSecretKeyShare-bytes32-uint256-uint256-: xref:keystorage.adoc#KeyStorage-getSecretKeyShare-bytes32-uint256-uint256-
-:KeyStorage-getVerificationVector: pass:normal[xref:keystorage.adoc#KeyStorage-getVerificationVector-bytes32-uint256-[`KeyStorage.getVerificationVector`]]
-:xref-KeyStorage-getVerificationVector-bytes32-uint256-: xref:keystorage.adoc#KeyStorage-getVerificationVector-bytes32-uint256-
 :KeyStorage-getCommonPublicKey: pass:normal[xref:keystorage.adoc#KeyStorage-getCommonPublicKey-bytes32-[`KeyStorage.getCommonPublicKey`]]
 :xref-KeyStorage-getCommonPublicKey-bytes32-: xref:keystorage.adoc#KeyStorage-getCommonPublicKey-bytes32-
 :KeyStorage-getPreviousPublicKey: pass:normal[xref:keystorage.adoc#KeyStorage-getPreviousPublicKey-bytes32-[`KeyStorage.getPreviousPublicKey`]]
@@ -556,20 +554,24 @@
 :xref-SkaleDKG-complaints-mapping-bytes32----struct-SkaleDKG-ComplaintData-: xref:skaledkg.adoc#SkaleDKG-complaints-mapping-bytes32----struct-SkaleDKG-ComplaintData-
 :SkaleDKG-startAlrightTimestamp: pass:normal[xref:skaledkg.adoc#SkaleDKG-startAlrightTimestamp-mapping-bytes32----uint256-[`SkaleDKG.startAlrightTimestamp`]]
 :xref-SkaleDKG-startAlrightTimestamp-mapping-bytes32----uint256-: xref:skaledkg.adoc#SkaleDKG-startAlrightTimestamp-mapping-bytes32----uint256-
+:SkaleDKG-hashedData: pass:normal[xref:skaledkg.adoc#SkaleDKG-hashedData-mapping-bytes32----mapping-uint256----bytes32--[`SkaleDKG.hashedData`]]
+:xref-SkaleDKG-hashedData-mapping-bytes32----mapping-uint256----bytes32--: xref:skaledkg.adoc#SkaleDKG-hashedData-mapping-bytes32----mapping-uint256----bytes32--
 :SkaleDKG-openChannel: pass:normal[xref:skaledkg.adoc#SkaleDKG-openChannel-bytes32-[`SkaleDKG.openChannel`]]
 :xref-SkaleDKG-openChannel-bytes32-: xref:skaledkg.adoc#SkaleDKG-openChannel-bytes32-
 :SkaleDKG-deleteChannel: pass:normal[xref:skaledkg.adoc#SkaleDKG-deleteChannel-bytes32-[`SkaleDKG.deleteChannel`]]
 :xref-SkaleDKG-deleteChannel-bytes32-: xref:skaledkg.adoc#SkaleDKG-deleteChannel-bytes32-
-:SkaleDKG-broadcast: pass:normal[xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---[`SkaleDKG.broadcast`]]
-:xref-SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---: xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---
+:SkaleDKG-broadcast: pass:normal[xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`SkaleDKG.broadcast`]]
+:xref-SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---: xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---
 :SkaleDKG-complaint: pass:normal[xref:skaledkg.adoc#SkaleDKG-complaint-bytes32-uint256-uint256-[`SkaleDKG.complaint`]]
 :xref-SkaleDKG-complaint-bytes32-uint256-uint256-: xref:skaledkg.adoc#SkaleDKG-complaint-bytes32-uint256-uint256-
-:SkaleDKG-response: pass:normal[xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-[`SkaleDKG.response`]]
-:xref-SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-: xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-
+:SkaleDKG-response: pass:normal[xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`SkaleDKG.response`]]
+:xref-SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---: xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---
 :SkaleDKG-alright: pass:normal[xref:skaledkg.adoc#SkaleDKG-alright-bytes32-uint256-[`SkaleDKG.alright`]]
 :xref-SkaleDKG-alright-bytes32-uint256-: xref:skaledkg.adoc#SkaleDKG-alright-bytes32-uint256-
 :SkaleDKG-getChannelStartedTime: pass:normal[xref:skaledkg.adoc#SkaleDKG-getChannelStartedTime-bytes32-[`SkaleDKG.getChannelStartedTime`]]
 :xref-SkaleDKG-getChannelStartedTime-bytes32-: xref:skaledkg.adoc#SkaleDKG-getChannelStartedTime-bytes32-
+:SkaleDKG-getChannelStartedBlock: pass:normal[xref:skaledkg.adoc#SkaleDKG-getChannelStartedBlock-bytes32-[`SkaleDKG.getChannelStartedBlock`]]
+:xref-SkaleDKG-getChannelStartedBlock-bytes32-: xref:skaledkg.adoc#SkaleDKG-getChannelStartedBlock-bytes32-
 :SkaleDKG-getNumberOfBroadcasted: pass:normal[xref:skaledkg.adoc#SkaleDKG-getNumberOfBroadcasted-bytes32-[`SkaleDKG.getNumberOfBroadcasted`]]
 :xref-SkaleDKG-getNumberOfBroadcasted-bytes32-: xref:skaledkg.adoc#SkaleDKG-getNumberOfBroadcasted-bytes32-
 :SkaleDKG-getNumberOfCompleted: pass:normal[xref:skaledkg.adoc#SkaleDKG-getNumberOfCompleted-bytes32-[`SkaleDKG.getNumberOfCompleted`]]
@@ -584,8 +586,8 @@
 :xref-SkaleDKG-getAlrightStartedTime-bytes32-: xref:skaledkg.adoc#SkaleDKG-getAlrightStartedTime-bytes32-
 :SkaleDKG-isChannelOpened: pass:normal[xref:skaledkg.adoc#SkaleDKG-isChannelOpened-bytes32-[`SkaleDKG.isChannelOpened`]]
 :xref-SkaleDKG-isChannelOpened-bytes32-: xref:skaledkg.adoc#SkaleDKG-isChannelOpened-bytes32-
-:SkaleDKG-isLastDKGSuccesful: pass:normal[xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccesful-bytes32-[`SkaleDKG.isLastDKGSuccesful`]]
-:xref-SkaleDKG-isLastDKGSuccesful-bytes32-: xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccesful-bytes32-
+:SkaleDKG-isLastDKGSuccessful: pass:normal[xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccessful-bytes32-[`SkaleDKG.isLastDKGSuccessful`]]
+:xref-SkaleDKG-isLastDKGSuccessful-bytes32-: xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccessful-bytes32-
 :SkaleDKG-isBroadcastPossible: pass:normal[xref:skaledkg.adoc#SkaleDKG-isBroadcastPossible-bytes32-uint256-[`SkaleDKG.isBroadcastPossible`]]
 :xref-SkaleDKG-isBroadcastPossible-bytes32-uint256-: xref:skaledkg.adoc#SkaleDKG-isBroadcastPossible-bytes32-uint256-
 :SkaleDKG-isComplaintPossible: pass:normal[xref:skaledkg.adoc#SkaleDKG-isComplaintPossible-bytes32-uint256-uint256-[`SkaleDKG.isComplaintPossible`]]
@@ -606,12 +608,14 @@
 :xref-SkaleDKG-getT-uint256-: xref:skaledkg.adoc#SkaleDKG-getT-uint256-
 :SkaleDKG-_setSuccesfulDKG: pass:normal[xref:skaledkg.adoc#SkaleDKG-_setSuccesfulDKG-bytes32-[`SkaleDKG._setSuccesfulDKG`]]
 :xref-SkaleDKG-_setSuccesfulDKG-bytes32-: xref:skaledkg.adoc#SkaleDKG-_setSuccesfulDKG-bytes32-
+:SkaleDKG-_verifyDataAndSlash: pass:normal[xref:skaledkg.adoc#SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32-[`SkaleDKG._verifyDataAndSlash`]]
+:xref-SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32-: xref:skaledkg.adoc#SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32-
 :SkaleDKG-ChannelOpened: pass:normal[xref:skaledkg.adoc#SkaleDKG-ChannelOpened-bytes32-[`SkaleDKG.ChannelOpened`]]
 :xref-SkaleDKG-ChannelOpened-bytes32-: xref:skaledkg.adoc#SkaleDKG-ChannelOpened-bytes32-
 :SkaleDKG-ChannelClosed: pass:normal[xref:skaledkg.adoc#SkaleDKG-ChannelClosed-bytes32-[`SkaleDKG.ChannelClosed`]]
 :xref-SkaleDKG-ChannelClosed-bytes32-: xref:skaledkg.adoc#SkaleDKG-ChannelClosed-bytes32-
-:SkaleDKG-BroadcastAndKeyShare: pass:normal[xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---[`SkaleDKG.BroadcastAndKeyShare`]]
-:xref-SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---: xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---
+:SkaleDKG-BroadcastAndKeyShare: pass:normal[xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`SkaleDKG.BroadcastAndKeyShare`]]
+:xref-SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---: xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---
 :SkaleDKG-AllDataReceived: pass:normal[xref:skaledkg.adoc#SkaleDKG-AllDataReceived-bytes32-uint256-[`SkaleDKG.AllDataReceived`]]
 :xref-SkaleDKG-AllDataReceived-bytes32-uint256-: xref:skaledkg.adoc#SkaleDKG-AllDataReceived-bytes32-uint256-
 :SkaleDKG-SuccessfulDKG: pass:normal[xref:skaledkg.adoc#SkaleDKG-SuccessfulDKG-bytes32-[`SkaleDKG.SuccessfulDKG`]]
@@ -1008,8 +1012,8 @@
 :xref-ISkaleDKG-openChannel-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-openChannel-bytes32-
 :ISkaleDKG-deleteChannel: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-deleteChannel-bytes32-[`ISkaleDKG.deleteChannel`]]
 :xref-ISkaleDKG-deleteChannel-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-deleteChannel-bytes32-
-:ISkaleDKG-isLastDKGSuccesful: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccesful-bytes32-[`ISkaleDKG.isLastDKGSuccesful`]]
-:xref-ISkaleDKG-isLastDKGSuccesful-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccesful-bytes32-
+:ISkaleDKG-isLastDKGSuccessful: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccessful-bytes32-[`ISkaleDKG.isLastDKGSuccessful`]]
+:xref-ISkaleDKG-isLastDKGSuccessful-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccessful-bytes32-
 :ISkaleDKG-isChannelOpened: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-isChannelOpened-bytes32-[`ISkaleDKG.isChannelOpened`]]
 :xref-ISkaleDKG-isChannelOpened-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-isChannelOpened-bytes32-
 :IDelegatableToken: pass:normal[xref:interfaces/delegation/idelegatabletoken.adoc#IDelegatableToken[`IDelegatableToken`]]
@@ -1406,10 +1410,14 @@
 
 This contract contains all logic to manage SKALE Network nodes states,
 space availability, stake requirement checks, and exit functions.
+
 Nodes may be in one of several states:
-- Active:    Node is registered and is in network operation.
-- Leaving:   Node has begun exiting from the network.
-- Left:      Node has left the network.
+
+- Active:            Node is registered and is in network operation.
+- Leaving:           Node has begun exiting from the network.
+- Left:              Node has left the network.
+- In_Maintenance:    Node is temporarily offline.
+
 Note: Online nodes contain both Active and Leaving states.
 
 [.contract-index]
@@ -1476,14 +1484,16 @@ Note: Online nodes contain both Active and Leaving states.
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-removeSpaceFromNode-uint256-uint8->removeSpaceFromNode</a>+++ `++removeSpaceFromNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint8++#++ ++[.var-name]#++space++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Allows Schains and SchainsInternal contracts to occupy available
-capacity on a node.
-Returns boolean whether operation is successful.
+space on a node.
+
+Returns whether operation is successful.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-addSpaceToNode-uint256-uint8->addSpaceToNode</a>+++ `++addSpaceToNode(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint8++#++ ++[.var-name]#++space++#++)++` [.item-kind]#external#
 
 Allows Schains contract to occupy available capacity on a node.
-Returns boolean whether operation is successful.
+
+Returns whether operation is successful.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-changeNodeLastRewardDate-uint256->changeNodeLastRewardDate</a>+++ `++changeNodeLastRewardDate(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
@@ -1493,41 +1503,52 @@ Allows SkaleManager to change a node's last reward date.
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-changeNodeFinishTime-uint256-uint256->changeNodeFinishTime</a>+++ `++changeNodeFinishTime(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++time++#++)++` [.item-kind]#external#
 
-
+Allows SkaleManager to change a node's finish time.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-createNode-address-struct-Nodes-NodeCreationParams->createNode</a>+++ `++createNode(++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++struct Nodes.NodeCreationParams++#++ ++[.var-name]#++params++#++)++` [.item-kind]#external#
 
-Allows SkaleManager contract to create new node and adds it to the
+Allows SkaleManager contract to create new node and add it to the
 Nodes contract.
-Emits NodeCreated event.
+
+Emits a {NodeCreated} event.
+
 Requirements:
-- Node must be non-zero
-- Node IP must be available
-- Node name must not already be registered
-- Node port must be greater than zero
+
+- Node IP must be non-zero.
+- Node IP must be available.
+- Node name must not already be registered.
+- Node port must be greater than zero.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-initExit-uint256->initExit</a>+++ `++initExit(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Allows SkaleManager contract to initiate a node exit procedure.
-Returns a boolean whether the operation is successful.
-Emits ExitInitialized event.
+
+Returns whether the operation is successful.
+
+Emits an {ExitInitialized} event.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-completeExit-uint256->completeExit</a>+++ `++completeExit(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 Allows SkaleManager contract to complete a node exit procedure.
-Returns a boolean whether the operation is successful.
-Emits ExitCompleted event.
+
+Returns whether the operation is successful.
+
+Emits an {ExitCompleted} event.
+
 Requirements:
+
 - Node must have already initialized a node exit procedure.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-deleteNodeForValidator-uint256-uint256->deleteNodeForValidator</a>+++ `++deleteNodeForValidator(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
 Allows SkaleManager contract to delete a validator's node.
+
 Requirements:
+
 - Validator ID must exist.
 
 [.contract-item]
@@ -1535,7 +1556,9 @@ Requirements:
 
 Allows SkaleManager contract to check whether a validator has
 sufficient stake to create another node.
+
 Requirements:
+
 - Validator must be included on trusted list if trusted list is enabled.
 - Validator must have sufficient stake to operate an additional node.
 
@@ -1544,35 +1567,50 @@ Requirements:
 
 Allows SkaleManager contract to check whether a validator has
 sufficient stake to maintain a node.
+
 Returns whether validator can maintain node with current stake.
+
 Requirements:
+
 - Validator ID and nodeIndex must both exist.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-setNodeInMaintenance-uint256->setNodeInMaintenance</a>+++ `++setNodeInMaintenance(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
+Allows Node to set In_Maintenance status.
 
+Requirements:
+
+- Node must already be Active.
+- `msg.sender` must be owner of Node.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-removeNodeFromInMaintenance-uint256->removeNodeFromInMaintenance</a>+++ `++removeNodeFromInMaintenance(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#external#
 
+Allows Node to remove In_Maintenance status.
 
+Requirements:
+
+- Node must already be In Maintenance.
+- `msg.sender` must be owner of Node.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNodesWithFreeSpace-uint8->getNodesWithFreeSpace</a>+++ `++getNodesWithFreeSpace(++[.var-type]#++uint8++#++ ++[.var-name]#++freeSpace++#++) → ++[.var-type]#++uint256[]++#++++` [.item-kind]#external#
 
-Returns nodes with resource availability.
+Returns nodes with space availability.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-isTimeForReward-uint256->isTimeForReward</a>+++ `++isTimeForReward(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
-Checks whether time for a node's reward has come.
+Checks whether it is time for a node's reward.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNodeIP-uint256->getNodeIP</a>+++ `++getNodeIP(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bytes4++#++++` [.item-kind]#external#
 
 Returns IP address of a given node.
+
 Requirements:
+
 - Node must exist.
 
 [.contract-item]
@@ -1619,7 +1657,8 @@ Returns the total number of registered nodes.
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getNumberOnlineNodes-->getNumberOnlineNodes</a>+++ `++getNumberOnlineNodes() → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 Returns the total number of online nodes.
-Online nodes are equal to the number of active plus leaving nodes.
+
+Note: Online nodes are equal to the number of active plus leaving nodes.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getActiveNodeIPs-->getActiveNodeIPs</a>+++ `++getActiveNodeIPs() → ++[.var-type]#++bytes4[]++#++ ++[.var-name]#++activeNodeIPs++#++++` [.item-kind]#external#
@@ -1629,7 +1668,7 @@ Returns IPs of active nodes.
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getActiveNodesByAddress-->getActiveNodesByAddress</a>+++ `++getActiveNodesByAddress() → ++[.var-type]#++uint256[]++#++ ++[.var-name]#++activeNodesByAddress++#++++` [.item-kind]#external#
 
-Returns active nodes linked to the msg.sender (validator address).
+Returns active nodes linked to the `msg.sender` (validator address).
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getActiveNodeIds-->getActiveNodeIds</a>+++ `++getActiveNodeIds() → ++[.var-type]#++uint256[]++#++ ++[.var-name]#++activeNodeIds++#++++` [.item-kind]#external#
@@ -1645,7 +1684,9 @@ Return a given node's current status.
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getValidatorNodeIndexes-uint256->getValidatorNodeIndexes</a>+++ `++getValidatorNodeIndexes(++[.var-type]#++uint256++#++ ++[.var-name]#++validatorId++#++) → ++[.var-type]#++uint256[]++#++++` [.item-kind]#external#
 
 Return a validator's linked nodes.
+
 Requirements:
+
 - Validator ID must exist.
 
 [.contract-item]
@@ -1656,13 +1697,12 @@ constructor in Permissions approach.
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-getValidatorId-uint256->getValidatorId</a>+++ `++getValidatorId(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
 
-
+Returns the Validator ID for a given node.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-isNodeExist-address-uint256->isNodeExist</a>+++ `++isNodeExist(++[.var-type]#++address++#++ ++[.var-name]#++from++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
-isNodeExist - checks existence of Node at this address
-
+Checks whether a node exists for a given address.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-isNodeActive-uint256->isNodeActive</a>+++ `++isNodeActive(++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
@@ -1677,7 +1717,7 @@ Checks whether a node's status is Leaving.
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=Nodes-countNodesWithFreeSpace-uint8->countNodesWithFreeSpace</a>+++ `++countNodesWithFreeSpace(++[.var-type]#++uint8++#++ ++[.var-name]#++freeSpace++#++) → ++[.var-type]#++uint256++#++ ++[.var-name]#++count++#++++` [.item-kind]#public#
 
-Returns number of nodes with free space.
+Returns number of nodes with available space.
 
 
 [.contract-item]

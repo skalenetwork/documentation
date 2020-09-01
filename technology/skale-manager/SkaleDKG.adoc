@@ -88,6 +88,10 @@
 :xref-ConstantsHolder-limitValidatorsPerDelegator-uint256: xref:constantsholder.adoc#ConstantsHolder-limitValidatorsPerDelegator-uint256
 :ConstantsHolder-firstDelegationsMonth: pass:normal[xref:constantsholder.adoc#ConstantsHolder-firstDelegationsMonth-uint256[`ConstantsHolder.firstDelegationsMonth`]]
 :xref-ConstantsHolder-firstDelegationsMonth-uint256: xref:constantsholder.adoc#ConstantsHolder-firstDelegationsMonth-uint256
+:ConstantsHolder-schainCreationTimeStamp: pass:normal[xref:constantsholder.adoc#ConstantsHolder-schainCreationTimeStamp-uint256[`ConstantsHolder.schainCreationTimeStamp`]]
+:xref-ConstantsHolder-schainCreationTimeStamp-uint256: xref:constantsholder.adoc#ConstantsHolder-schainCreationTimeStamp-uint256
+:ConstantsHolder-minimalSchainLifetime: pass:normal[xref:constantsholder.adoc#ConstantsHolder-minimalSchainLifetime-uint256[`ConstantsHolder.minimalSchainLifetime`]]
+:xref-ConstantsHolder-minimalSchainLifetime-uint256: xref:constantsholder.adoc#ConstantsHolder-minimalSchainLifetime-uint256
 :ConstantsHolder-setPeriods: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setPeriods-uint32-uint32-[`ConstantsHolder.setPeriods`]]
 :xref-ConstantsHolder-setPeriods-uint32-uint32-: xref:constantsholder.adoc#ConstantsHolder-setPeriods-uint32-uint32-
 :ConstantsHolder-setCheckTime: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setCheckTime-uint256-[`ConstantsHolder.setCheckTime`]]
@@ -108,6 +112,10 @@
 :xref-ConstantsHolder-setLimitValidatorsPerDelegator-uint256-: xref:constantsholder.adoc#ConstantsHolder-setLimitValidatorsPerDelegator-uint256-
 :ConstantsHolder-setFirstDelegationsMonth: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setFirstDelegationsMonth-uint256-[`ConstantsHolder.setFirstDelegationsMonth`]]
 :xref-ConstantsHolder-setFirstDelegationsMonth-uint256-: xref:constantsholder.adoc#ConstantsHolder-setFirstDelegationsMonth-uint256-
+:ConstantsHolder-setSchainCreationTimeStamp: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setSchainCreationTimeStamp-uint256-[`ConstantsHolder.setSchainCreationTimeStamp`]]
+:xref-ConstantsHolder-setSchainCreationTimeStamp-uint256-: xref:constantsholder.adoc#ConstantsHolder-setSchainCreationTimeStamp-uint256-
+:ConstantsHolder-setMinimalSchainLifetime: pass:normal[xref:constantsholder.adoc#ConstantsHolder-setMinimalSchainLifetime-uint256-[`ConstantsHolder.setMinimalSchainLifetime`]]
+:xref-ConstantsHolder-setMinimalSchainLifetime-uint256-: xref:constantsholder.adoc#ConstantsHolder-setMinimalSchainLifetime-uint256-
 :ConstantsHolder-initialize: pass:normal[xref:constantsholder.adoc#ConstantsHolder-initialize-address-[`ConstantsHolder.initialize`]]
 :xref-ConstantsHolder-initialize-address-: xref:constantsholder.adoc#ConstantsHolder-initialize-address-
 :ContractManager: pass:normal[xref:contractmanager.adoc#ContractManager[`ContractManager`]]
@@ -152,8 +160,6 @@
 :xref-ECDH-ecMul-uint256-uint256-uint256-uint256-: xref:ecdh.adoc#ECDH-ecMul-uint256-uint256-uint256-uint256-
 :KeyStorage: pass:normal[xref:keystorage.adoc#KeyStorage[`KeyStorage`]]
 :xref-KeyStorage: xref:keystorage.adoc#KeyStorage
-:KeyStorage-addBroadcastedData: pass:normal[xref:keystorage.adoc#KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---[`KeyStorage.addBroadcastedData`]]
-:xref-KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---: xref:keystorage.adoc#KeyStorage-addBroadcastedData-bytes32-uint256-struct-KeyStorage-KeyShare---struct-G2Operations-G2Point---
 :KeyStorage-deleteKey: pass:normal[xref:keystorage.adoc#KeyStorage-deleteKey-bytes32-[`KeyStorage.deleteKey`]]
 :xref-KeyStorage-deleteKey-bytes32-: xref:keystorage.adoc#KeyStorage-deleteKey-bytes32-
 :KeyStorage-initPublicKeyInProgress: pass:normal[xref:keystorage.adoc#KeyStorage-initPublicKeyInProgress-bytes32-[`KeyStorage.initPublicKeyInProgress`]]
@@ -164,14 +170,6 @@
 :xref-KeyStorage-finalizePublicKey-bytes32-: xref:keystorage.adoc#KeyStorage-finalizePublicKey-bytes32-
 :KeyStorage-computePublicValues: pass:normal[xref:keystorage.adoc#KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point---[`KeyStorage.computePublicValues`]]
 :xref-KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point---: xref:keystorage.adoc#KeyStorage-computePublicValues-bytes32-struct-G2Operations-G2Point---
-:KeyStorage-verify: pass:normal[xref:keystorage.adoc#KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-[`KeyStorage.verify`]]
-:xref-KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-: xref:keystorage.adoc#KeyStorage-verify-bytes32-uint256-uint256-uint256-struct-G2Operations-G2Point-
-:KeyStorage-getBroadcastedData: pass:normal[xref:keystorage.adoc#KeyStorage-getBroadcastedData-bytes32-uint256-[`KeyStorage.getBroadcastedData`]]
-:xref-KeyStorage-getBroadcastedData-bytes32-uint256-: xref:keystorage.adoc#KeyStorage-getBroadcastedData-bytes32-uint256-
-:KeyStorage-getSecretKeyShare: pass:normal[xref:keystorage.adoc#KeyStorage-getSecretKeyShare-bytes32-uint256-uint256-[`KeyStorage.getSecretKeyShare`]]
-:xref-KeyStorage-getSecretKeyShare-bytes32-uint256-uint256-: xref:keystorage.adoc#KeyStorage-getSecretKeyShare-bytes32-uint256-uint256-
-:KeyStorage-getVerificationVector: pass:normal[xref:keystorage.adoc#KeyStorage-getVerificationVector-bytes32-uint256-[`KeyStorage.getVerificationVector`]]
-:xref-KeyStorage-getVerificationVector-bytes32-uint256-: xref:keystorage.adoc#KeyStorage-getVerificationVector-bytes32-uint256-
 :KeyStorage-getCommonPublicKey: pass:normal[xref:keystorage.adoc#KeyStorage-getCommonPublicKey-bytes32-[`KeyStorage.getCommonPublicKey`]]
 :xref-KeyStorage-getCommonPublicKey-bytes32-: xref:keystorage.adoc#KeyStorage-getCommonPublicKey-bytes32-
 :KeyStorage-getPreviousPublicKey: pass:normal[xref:keystorage.adoc#KeyStorage-getPreviousPublicKey-bytes32-[`KeyStorage.getPreviousPublicKey`]]
@@ -556,20 +554,24 @@
 :xref-SkaleDKG-complaints-mapping-bytes32----struct-SkaleDKG-ComplaintData-: xref:skaledkg.adoc#SkaleDKG-complaints-mapping-bytes32----struct-SkaleDKG-ComplaintData-
 :SkaleDKG-startAlrightTimestamp: pass:normal[xref:skaledkg.adoc#SkaleDKG-startAlrightTimestamp-mapping-bytes32----uint256-[`SkaleDKG.startAlrightTimestamp`]]
 :xref-SkaleDKG-startAlrightTimestamp-mapping-bytes32----uint256-: xref:skaledkg.adoc#SkaleDKG-startAlrightTimestamp-mapping-bytes32----uint256-
+:SkaleDKG-hashedData: pass:normal[xref:skaledkg.adoc#SkaleDKG-hashedData-mapping-bytes32----mapping-uint256----bytes32--[`SkaleDKG.hashedData`]]
+:xref-SkaleDKG-hashedData-mapping-bytes32----mapping-uint256----bytes32--: xref:skaledkg.adoc#SkaleDKG-hashedData-mapping-bytes32----mapping-uint256----bytes32--
 :SkaleDKG-openChannel: pass:normal[xref:skaledkg.adoc#SkaleDKG-openChannel-bytes32-[`SkaleDKG.openChannel`]]
 :xref-SkaleDKG-openChannel-bytes32-: xref:skaledkg.adoc#SkaleDKG-openChannel-bytes32-
 :SkaleDKG-deleteChannel: pass:normal[xref:skaledkg.adoc#SkaleDKG-deleteChannel-bytes32-[`SkaleDKG.deleteChannel`]]
 :xref-SkaleDKG-deleteChannel-bytes32-: xref:skaledkg.adoc#SkaleDKG-deleteChannel-bytes32-
-:SkaleDKG-broadcast: pass:normal[xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---[`SkaleDKG.broadcast`]]
-:xref-SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---: xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---
+:SkaleDKG-broadcast: pass:normal[xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`SkaleDKG.broadcast`]]
+:xref-SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---: xref:skaledkg.adoc#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---
 :SkaleDKG-complaint: pass:normal[xref:skaledkg.adoc#SkaleDKG-complaint-bytes32-uint256-uint256-[`SkaleDKG.complaint`]]
 :xref-SkaleDKG-complaint-bytes32-uint256-uint256-: xref:skaledkg.adoc#SkaleDKG-complaint-bytes32-uint256-uint256-
-:SkaleDKG-response: pass:normal[xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-[`SkaleDKG.response`]]
-:xref-SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-: xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-
+:SkaleDKG-response: pass:normal[xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`SkaleDKG.response`]]
+:xref-SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---: xref:skaledkg.adoc#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---
 :SkaleDKG-alright: pass:normal[xref:skaledkg.adoc#SkaleDKG-alright-bytes32-uint256-[`SkaleDKG.alright`]]
 :xref-SkaleDKG-alright-bytes32-uint256-: xref:skaledkg.adoc#SkaleDKG-alright-bytes32-uint256-
 :SkaleDKG-getChannelStartedTime: pass:normal[xref:skaledkg.adoc#SkaleDKG-getChannelStartedTime-bytes32-[`SkaleDKG.getChannelStartedTime`]]
 :xref-SkaleDKG-getChannelStartedTime-bytes32-: xref:skaledkg.adoc#SkaleDKG-getChannelStartedTime-bytes32-
+:SkaleDKG-getChannelStartedBlock: pass:normal[xref:skaledkg.adoc#SkaleDKG-getChannelStartedBlock-bytes32-[`SkaleDKG.getChannelStartedBlock`]]
+:xref-SkaleDKG-getChannelStartedBlock-bytes32-: xref:skaledkg.adoc#SkaleDKG-getChannelStartedBlock-bytes32-
 :SkaleDKG-getNumberOfBroadcasted: pass:normal[xref:skaledkg.adoc#SkaleDKG-getNumberOfBroadcasted-bytes32-[`SkaleDKG.getNumberOfBroadcasted`]]
 :xref-SkaleDKG-getNumberOfBroadcasted-bytes32-: xref:skaledkg.adoc#SkaleDKG-getNumberOfBroadcasted-bytes32-
 :SkaleDKG-getNumberOfCompleted: pass:normal[xref:skaledkg.adoc#SkaleDKG-getNumberOfCompleted-bytes32-[`SkaleDKG.getNumberOfCompleted`]]
@@ -584,8 +586,8 @@
 :xref-SkaleDKG-getAlrightStartedTime-bytes32-: xref:skaledkg.adoc#SkaleDKG-getAlrightStartedTime-bytes32-
 :SkaleDKG-isChannelOpened: pass:normal[xref:skaledkg.adoc#SkaleDKG-isChannelOpened-bytes32-[`SkaleDKG.isChannelOpened`]]
 :xref-SkaleDKG-isChannelOpened-bytes32-: xref:skaledkg.adoc#SkaleDKG-isChannelOpened-bytes32-
-:SkaleDKG-isLastDKGSuccesful: pass:normal[xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccesful-bytes32-[`SkaleDKG.isLastDKGSuccesful`]]
-:xref-SkaleDKG-isLastDKGSuccesful-bytes32-: xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccesful-bytes32-
+:SkaleDKG-isLastDKGSuccessful: pass:normal[xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccessful-bytes32-[`SkaleDKG.isLastDKGSuccessful`]]
+:xref-SkaleDKG-isLastDKGSuccessful-bytes32-: xref:skaledkg.adoc#SkaleDKG-isLastDKGSuccessful-bytes32-
 :SkaleDKG-isBroadcastPossible: pass:normal[xref:skaledkg.adoc#SkaleDKG-isBroadcastPossible-bytes32-uint256-[`SkaleDKG.isBroadcastPossible`]]
 :xref-SkaleDKG-isBroadcastPossible-bytes32-uint256-: xref:skaledkg.adoc#SkaleDKG-isBroadcastPossible-bytes32-uint256-
 :SkaleDKG-isComplaintPossible: pass:normal[xref:skaledkg.adoc#SkaleDKG-isComplaintPossible-bytes32-uint256-uint256-[`SkaleDKG.isComplaintPossible`]]
@@ -606,12 +608,14 @@
 :xref-SkaleDKG-getT-uint256-: xref:skaledkg.adoc#SkaleDKG-getT-uint256-
 :SkaleDKG-_setSuccesfulDKG: pass:normal[xref:skaledkg.adoc#SkaleDKG-_setSuccesfulDKG-bytes32-[`SkaleDKG._setSuccesfulDKG`]]
 :xref-SkaleDKG-_setSuccesfulDKG-bytes32-: xref:skaledkg.adoc#SkaleDKG-_setSuccesfulDKG-bytes32-
+:SkaleDKG-_verifyDataAndSlash: pass:normal[xref:skaledkg.adoc#SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32-[`SkaleDKG._verifyDataAndSlash`]]
+:xref-SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32-: xref:skaledkg.adoc#SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32-
 :SkaleDKG-ChannelOpened: pass:normal[xref:skaledkg.adoc#SkaleDKG-ChannelOpened-bytes32-[`SkaleDKG.ChannelOpened`]]
 :xref-SkaleDKG-ChannelOpened-bytes32-: xref:skaledkg.adoc#SkaleDKG-ChannelOpened-bytes32-
 :SkaleDKG-ChannelClosed: pass:normal[xref:skaledkg.adoc#SkaleDKG-ChannelClosed-bytes32-[`SkaleDKG.ChannelClosed`]]
 :xref-SkaleDKG-ChannelClosed-bytes32-: xref:skaledkg.adoc#SkaleDKG-ChannelClosed-bytes32-
-:SkaleDKG-BroadcastAndKeyShare: pass:normal[xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---[`SkaleDKG.BroadcastAndKeyShare`]]
-:xref-SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---: xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---
+:SkaleDKG-BroadcastAndKeyShare: pass:normal[xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`SkaleDKG.BroadcastAndKeyShare`]]
+:xref-SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---: xref:skaledkg.adoc#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---
 :SkaleDKG-AllDataReceived: pass:normal[xref:skaledkg.adoc#SkaleDKG-AllDataReceived-bytes32-uint256-[`SkaleDKG.AllDataReceived`]]
 :xref-SkaleDKG-AllDataReceived-bytes32-uint256-: xref:skaledkg.adoc#SkaleDKG-AllDataReceived-bytes32-uint256-
 :SkaleDKG-SuccessfulDKG: pass:normal[xref:skaledkg.adoc#SkaleDKG-SuccessfulDKG-bytes32-[`SkaleDKG.SuccessfulDKG`]]
@@ -1008,8 +1012,8 @@
 :xref-ISkaleDKG-openChannel-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-openChannel-bytes32-
 :ISkaleDKG-deleteChannel: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-deleteChannel-bytes32-[`ISkaleDKG.deleteChannel`]]
 :xref-ISkaleDKG-deleteChannel-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-deleteChannel-bytes32-
-:ISkaleDKG-isLastDKGSuccesful: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccesful-bytes32-[`ISkaleDKG.isLastDKGSuccesful`]]
-:xref-ISkaleDKG-isLastDKGSuccesful-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccesful-bytes32-
+:ISkaleDKG-isLastDKGSuccessful: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccessful-bytes32-[`ISkaleDKG.isLastDKGSuccessful`]]
+:xref-ISkaleDKG-isLastDKGSuccessful-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-isLastDKGSuccessful-bytes32-
 :ISkaleDKG-isChannelOpened: pass:normal[xref:interfaces/iskaledkg.adoc#ISkaleDKG-isChannelOpened-bytes32-[`ISkaleDKG.isChannelOpened`]]
 :xref-ISkaleDKG-isChannelOpened-bytes32-: xref:interfaces/iskaledkg.adoc#ISkaleDKG-isChannelOpened-bytes32-
 :IDelegatableToken: pass:normal[xref:interfaces/delegation/idelegatabletoken.adoc#IDelegatableToken[`IDelegatableToken`]]
@@ -1358,13 +1362,15 @@
 :dkgProcess: pass:normal[xref:#SkaleDKG-dkgProcess-mapping-bytes32----struct-SkaleDKG-ProcessDKG-[`++dkgProcess++`]]
 :complaints: pass:normal[xref:#SkaleDKG-complaints-mapping-bytes32----struct-SkaleDKG-ComplaintData-[`++complaints++`]]
 :startAlrightTimestamp: pass:normal[xref:#SkaleDKG-startAlrightTimestamp-mapping-bytes32----uint256-[`++startAlrightTimestamp++`]]
+:hashedData: pass:normal[xref:#SkaleDKG-hashedData-mapping-bytes32----mapping-uint256----bytes32--[`++hashedData++`]]
 :openChannel: pass:normal[xref:#SkaleDKG-openChannel-bytes32-[`++openChannel++`]]
 :deleteChannel: pass:normal[xref:#SkaleDKG-deleteChannel-bytes32-[`++deleteChannel++`]]
-:broadcast: pass:normal[xref:#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---[`++broadcast++`]]
+:broadcast: pass:normal[xref:#SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`++broadcast++`]]
 :complaint: pass:normal[xref:#SkaleDKG-complaint-bytes32-uint256-uint256-[`++complaint++`]]
-:response: pass:normal[xref:#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-[`++response++`]]
+:response: pass:normal[xref:#SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`++response++`]]
 :alright: pass:normal[xref:#SkaleDKG-alright-bytes32-uint256-[`++alright++`]]
 :getChannelStartedTime: pass:normal[xref:#SkaleDKG-getChannelStartedTime-bytes32-[`++getChannelStartedTime++`]]
+:getChannelStartedBlock: pass:normal[xref:#SkaleDKG-getChannelStartedBlock-bytes32-[`++getChannelStartedBlock++`]]
 :getNumberOfBroadcasted: pass:normal[xref:#SkaleDKG-getNumberOfBroadcasted-bytes32-[`++getNumberOfBroadcasted++`]]
 :getNumberOfCompleted: pass:normal[xref:#SkaleDKG-getNumberOfCompleted-bytes32-[`++getNumberOfCompleted++`]]
 :getTimeOfLastSuccesfulDKG: pass:normal[xref:#SkaleDKG-getTimeOfLastSuccesfulDKG-bytes32-[`++getTimeOfLastSuccesfulDKG++`]]
@@ -1372,7 +1378,7 @@
 :getComplaintStartedTime: pass:normal[xref:#SkaleDKG-getComplaintStartedTime-bytes32-[`++getComplaintStartedTime++`]]
 :getAlrightStartedTime: pass:normal[xref:#SkaleDKG-getAlrightStartedTime-bytes32-[`++getAlrightStartedTime++`]]
 :isChannelOpened: pass:normal[xref:#SkaleDKG-isChannelOpened-bytes32-[`++isChannelOpened++`]]
-:isLastDKGSuccesful: pass:normal[xref:#SkaleDKG-isLastDKGSuccesful-bytes32-[`++isLastDKGSuccesful++`]]
+:isLastDKGSuccessful: pass:normal[xref:#SkaleDKG-isLastDKGSuccessful-bytes32-[`++isLastDKGSuccessful++`]]
 :isBroadcastPossible: pass:normal[xref:#SkaleDKG-isBroadcastPossible-bytes32-uint256-[`++isBroadcastPossible++`]]
 :isComplaintPossible: pass:normal[xref:#SkaleDKG-isComplaintPossible-bytes32-uint256-uint256-[`++isComplaintPossible++`]]
 :isAlrightPossible: pass:normal[xref:#SkaleDKG-isAlrightPossible-bytes32-uint256-[`++isAlrightPossible++`]]
@@ -1383,9 +1389,10 @@
 :isAllDataReceived: pass:normal[xref:#SkaleDKG-isAllDataReceived-bytes32-uint256-[`++isAllDataReceived++`]]
 :getT: pass:normal[xref:#SkaleDKG-getT-uint256-[`++getT++`]]
 :_setSuccesfulDKG: pass:normal[xref:#SkaleDKG-_setSuccesfulDKG-bytes32-[`++_setSuccesfulDKG++`]]
+:_verifyDataAndSlash: pass:normal[xref:#SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32-[`++_verifyDataAndSlash++`]]
 :ChannelOpened: pass:normal[xref:#SkaleDKG-ChannelOpened-bytes32-[`++ChannelOpened++`]]
 :ChannelClosed: pass:normal[xref:#SkaleDKG-ChannelClosed-bytes32-[`++ChannelClosed++`]]
-:BroadcastAndKeyShare: pass:normal[xref:#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---[`++BroadcastAndKeyShare++`]]
+:BroadcastAndKeyShare: pass:normal[xref:#SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---[`++BroadcastAndKeyShare++`]]
 :AllDataReceived: pass:normal[xref:#SkaleDKG-AllDataReceived-bytes32-uint256-[`++AllDataReceived++`]]
 :SuccessfulDKG: pass:normal[xref:#SkaleDKG-SuccessfulDKG-bytes32-[`++SuccessfulDKG++`]]
 :BadGuy: pass:normal[xref:#SkaleDKG-BadGuy-uint256-[`++BadGuy++`]]
@@ -1414,11 +1421,12 @@ Joint-Feldman protocol.
 --
 * {xref-SkaleDKG-openChannel-bytes32-}[`++openChannel(groupIndex)++`]
 * {xref-SkaleDKG-deleteChannel-bytes32-}[`++deleteChannel(groupIndex)++`]
-* {xref-SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---}[`++broadcast(groupIndex, nodeIndex, verificationVector, secretKeyContribution)++`]
+* {xref-SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---}[`++broadcast(groupIndex, nodeIndex, verificationVector, secretKeyContribution)++`]
 * {xref-SkaleDKG-complaint-bytes32-uint256-uint256-}[`++complaint(groupIndex, fromNodeIndex, toNodeIndex)++`]
-* {xref-SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-}[`++response(groupIndex, fromNodeIndex, secretNumber, multipliedShare)++`]
+* {xref-SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---}[`++response(groupIndex, fromNodeIndex, secretNumber, multipliedShare, verificationVector, secretKeyContribution)++`]
 * {xref-SkaleDKG-alright-bytes32-uint256-}[`++alright(groupIndex, fromNodeIndex)++`]
 * {xref-SkaleDKG-getChannelStartedTime-bytes32-}[`++getChannelStartedTime(groupIndex)++`]
+* {xref-SkaleDKG-getChannelStartedBlock-bytes32-}[`++getChannelStartedBlock(groupIndex)++`]
 * {xref-SkaleDKG-getNumberOfBroadcasted-bytes32-}[`++getNumberOfBroadcasted(groupIndex)++`]
 * {xref-SkaleDKG-getNumberOfCompleted-bytes32-}[`++getNumberOfCompleted(groupIndex)++`]
 * {xref-SkaleDKG-getTimeOfLastSuccesfulDKG-bytes32-}[`++getTimeOfLastSuccesfulDKG(groupIndex)++`]
@@ -1426,7 +1434,7 @@ Joint-Feldman protocol.
 * {xref-SkaleDKG-getComplaintStartedTime-bytes32-}[`++getComplaintStartedTime(groupIndex)++`]
 * {xref-SkaleDKG-getAlrightStartedTime-bytes32-}[`++getAlrightStartedTime(groupIndex)++`]
 * {xref-SkaleDKG-isChannelOpened-bytes32-}[`++isChannelOpened(groupIndex)++`]
-* {xref-SkaleDKG-isLastDKGSuccesful-bytes32-}[`++isLastDKGSuccesful(groupIndex)++`]
+* {xref-SkaleDKG-isLastDKGSuccessful-bytes32-}[`++isLastDKGSuccessful(groupIndex)++`]
 * {xref-SkaleDKG-isBroadcastPossible-bytes32-uint256-}[`++isBroadcastPossible(groupIndex, nodeIndex)++`]
 * {xref-SkaleDKG-isComplaintPossible-bytes32-uint256-uint256-}[`++isComplaintPossible(groupIndex, fromNodeIndex, toNodeIndex)++`]
 * {xref-SkaleDKG-isAlrightPossible-bytes32-uint256-}[`++isAlrightPossible(groupIndex, nodeIndex)++`]
@@ -1437,6 +1445,7 @@ Joint-Feldman protocol.
 * {xref-SkaleDKG-isAllDataReceived-bytes32-uint256-}[`++isAllDataReceived(groupIndex, nodeIndex)++`]
 * {xref-SkaleDKG-getT-uint256-}[`++getT(n)++`]
 * {xref-SkaleDKG-_setSuccesfulDKG-bytes32-}[`++_setSuccesfulDKG(groupIndex)++`]
+* {xref-SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32-}[`++_verifyDataAndSlash(groupIndex, indexOnSchain, secretNumber, multipliedShare, verificationVector, share)++`]
 --
 
 [.contract-index]
@@ -1444,7 +1453,7 @@ Joint-Feldman protocol.
 --
 * {xref-SkaleDKG-ChannelOpened-bytes32-}[`++ChannelOpened(groupIndex)++`]
 * {xref-SkaleDKG-ChannelClosed-bytes32-}[`++ChannelClosed(groupIndex)++`]
-* {xref-SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare---}[`++BroadcastAndKeyShare(groupIndex, fromNode, verificationVector, secretKeyContribution)++`]
+* {xref-SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare---}[`++BroadcastAndKeyShare(groupIndex, fromNode, verificationVector, secretKeyContribution)++`]
 * {xref-SkaleDKG-AllDataReceived-bytes32-uint256-}[`++AllDataReceived(groupIndex, nodeIndex)++`]
 * {xref-SkaleDKG-SuccessfulDKG-bytes32-}[`++SuccessfulDKG(groupIndex)++`]
 * {xref-SkaleDKG-BadGuy-uint256-}[`++BadGuy(nodeIndex)++`]
@@ -1474,8 +1483,11 @@ Joint-Feldman protocol.
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-openChannel-bytes32->openChannel</a>+++ `++openChannel(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#external#
 
 Allows Schains and NodeRotation contracts to open a channel.
-Emits ChannelOpened event.
+
+Emits a {ChannelOpened} event.
+
 Requirements:
+
 - Channel is not already created.
 
 [.contract-item]
@@ -1486,7 +1498,7 @@ Requirements:
 - Channel must exist.
 
 [.contract-item]
-==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare--->broadcast</a>+++ `++broadcast(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++, ++[.var-type]#++struct KeyStorage.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-broadcast-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare--->broadcast</a>+++ `++broadcast(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++, ++[.var-type]#++struct SkaleDKG.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++)++` [.item-kind]#external#
 
 Broadcasts verification vector and secret key contribution to all
 other nodes in the group.
@@ -1505,17 +1517,22 @@ Requirements:
 - msg.sender must have an associated node.
 
 [.contract-item]
-==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point->response</a>+++ `++response(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++multipliedShare++#++)++` [.item-kind]#external#
+==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-response-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare--->response</a>+++ `++response(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++multipliedShare++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++, ++[.var-type]#++struct SkaleDKG.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++)++` [.item-kind]#external#
 
-TODO: confirm
+
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-alright-bytes32-uint256->alright</a>+++ `++alright(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++)++` [.item-kind]#external#
 
-TODO: confirm
+
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-getChannelStartedTime-bytes32->getChannelStartedTime</a>+++ `++getChannelStartedTime(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
+
+
+
+[.contract-item]
+==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-getChannelStartedBlock-bytes32->getChannelStartedBlock</a>+++ `++getChannelStartedBlock(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#external#
 
 
 
@@ -1555,7 +1572,7 @@ TODO: confirm
 Checks whether channel is opened.
 
 [.contract-item]
-==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-isLastDKGSuccesful-bytes32->isLastDKGSuccesful</a>+++ `++isLastDKGSuccesful(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
+==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-isLastDKGSuccessful-bytes32->isLastDKGSuccessful</a>+++ `++isLastDKGSuccessful(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
 
 
@@ -1567,17 +1584,17 @@ Checks whether channel is opened.
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-isComplaintPossible-bytes32-uint256-uint256->isComplaintPossible</a>+++ `++isComplaintPossible(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNodeIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++toNodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
-Checks whether complaint is possible.  TODO: confirm
+Checks whether complaint is possible.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-isAlrightPossible-bytes32-uint256->isAlrightPossible</a>+++ `++isAlrightPossible(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
-Checks whether sending Alright response is possible.  TODO: confirm
+Checks whether sending Alright response is possible.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-isResponsePossible-bytes32-uint256->isResponsePossible</a>+++ `++isResponsePossible(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
 
-Checks whether sending a response is possible.  TODO: confirm
+Checks whether sending a response is possible.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-isNodeBroadcasted-bytes32-uint256->isNodeBroadcasted</a>+++ `++isNodeBroadcasted(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#external#
@@ -1597,7 +1614,7 @@ Checks whether sending a response is possible.  TODO: confirm
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-isAllDataReceived-bytes32-uint256->isAllDataReceived</a>+++ `++isAllDataReceived(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++) → ++[.var-type]#++bool++#++++` [.item-kind]#public#
 
-Checks whether all data has been received.  TODO: confirm
+Checks whether all data has been received.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-getT-uint256->getT</a>+++ `++getT(++[.var-type]#++uint256++#++ ++[.var-name]#++n++#++) → ++[.var-type]#++uint256++#++++` [.item-kind]#public#
@@ -1606,6 +1623,11 @@ Checks whether all data has been received.  TODO: confirm
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-_setSuccesfulDKG-bytes32->_setSuccesfulDKG</a>+++ `++_setSuccesfulDKG(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++)++` [.item-kind]#internal#
+
+
+
+[.contract-item]
+==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-_verifyDataAndSlash-bytes32-uint256-uint256-struct-G2Operations-G2Point-struct-G2Operations-G2Point---bytes32->_verifyDataAndSlash</a>+++ `++_verifyDataAndSlash(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++indexOnSchain++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++secretNumber++#++, ++[.var-type]#++struct G2Operations.G2Point++#++ ++[.var-name]#++multipliedShare++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++, ++[.var-type]#++bytes32++#++ ++[.var-name]#++share++#++)++` [.item-kind]#internal#
 
 
 
@@ -1621,9 +1643,9 @@ Emitted when a channel is opened.
 Emitted when a channel is closed.
 
 [.contract-item]
-==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-KeyStorage-KeyShare--->BroadcastAndKeyShare</a>+++ `++BroadcastAndKeyShare(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNode++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++, ++[.var-type]#++struct KeyStorage.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++)++` [.item-kind]#event#
+==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-BroadcastAndKeyShare-bytes32-uint256-struct-G2Operations-G2Point---struct-SkaleDKG-KeyShare--->BroadcastAndKeyShare</a>+++ `++BroadcastAndKeyShare(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++fromNode++#++, ++[.var-type]#++struct G2Operations.G2Point[]++#++ ++[.var-name]#++verificationVector++#++, ++[.var-type]#++struct SkaleDKG.KeyShare[]++#++ ++[.var-name]#++secretKeyContribution++#++)++` [.item-kind]#event#
 
-Emitted when a node broadcasts keyshare. TODO: confirm
+Emitted when a node broadcasts keyshare.
 
 [.contract-item]
 ==== +++<a class="heading-anchor" area-hidden="true" name=SkaleDKG-AllDataReceived-bytes32-uint256->AllDataReceived</a>+++ `++AllDataReceived(++[.var-type]#++bytes32++#++ ++[.var-name]#++groupIndex++#++, ++[.var-type]#++uint256++#++ ++[.var-name]#++nodeIndex++#++)++` [.item-kind]#event#
