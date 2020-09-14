@@ -16,7 +16,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **Skaled version**:  1.46-develop.63
 
-**Skale Admin version**: 0.17.0-beta.0
+**Skale Admin version**: 0.17.0-beta.1
 
 **Transaction Manager version**: 0.5.0-beta.1
 
