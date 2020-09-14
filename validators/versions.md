@@ -1,8 +1,52 @@
 ## SKALE TestNet Versions
 
-You can find the compatible versions in this page. Set up requires only Validator-Cli, Node-Cli and SGX versions. 
+You can find the compatible versions in this page. Set up requires only Validator-Cli, Node-Cli and SGX versions.
 
-The rest of the versions were provided for docker containers and correspondent tags in their individual code repositories.  
+The rest of the versions were provided for docker containers and correspondent tags in their individual code repositories.
+
+### TestNet Phase 2.1 Versions - Hard Upgrade for SGX
+
+**Validator CLI version**: 0.6.2-beta.0
+
+**Node CLI version**: 0.11.0-develop.15
+
+**SGX version: sgxwallet**: 1.58.2-develop.0
+
+**SKALE Manager version**: 1.5.2-develop.2
+
+**Skaled version**:  1.46-develop.63
+
+**Skale Admin version**: 0.17.0-beta.0
+
+**Transaction Manager version**: 0.5.0-beta.1
+
+**Skale Sla version**: 1.0.0-develop.0
+
+**Skale Bounty version**: 0.9.3-develop.0
+
+#### TestNet Phase 2.1 Environment Variables
+
+```bash
+FILEBEAT_HOST=[WILL BE RETIRED FOR TEST-NET ASK CORE TEAM]
+SGX_SERVER_URL=[https://localhost:1026 or your SGX server https://IP:1026]
+DISK_MOUNTPOINT=/dev/sda or /dev/xvdd
+DOCKER_LVMPY_STREAM=beta
+DB_PORT=3306
+DB_ROOT_PASSWORD=[PASSWORD]
+DB_PASSWORD=[PASSWORD]
+DB_USER=[USER]
+MONITORING_CONTAINERS=True
+CONTAINER_CONFIGS_STREAM=alpine-hard-upgrade
+IMA_CONTRACTS_ABI_URL=[RINKEBY_ABI ASK CORE TEAM]
+MANAGER_CONTRACTS_ABI_URL=[RINKEBY_ABI ASK CORE TEAM]
+ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
+IMA_ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
+TG_API_KEY=TELEGRAM API KEY
+TG_CHAT_ID=-TELEGRAM CHAT ID
+```
+--- 
+
+-------------
 
 ### TestNet Phase 2 Versions - Hard Upgrade
 
@@ -24,27 +68,6 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **Skale Bounty version**: 0.9.1-develop.0
 
-#### TestNet Phase 2 Environment Variables
-
-```bash
-FILEBEAT_HOST=[WILL BE RETIRED FOR TEST-NET ASK CORE TEAM]
-SGX_SERVER_URL=[https://localhost:1026 or your SGX server https://IP:1026]
-DISK_MOUNTPOINT=/dev/sda or /dev/xvdd
-DOCKER_LVMPY_STREAM=beta
-DB_PORT=3306
-DB_ROOT_PASSWORD=[PASSWORD]
-DB_PASSWORD=[PASSWORD]
-DB_USER=[USER]
-MONITORING_CONTAINERS=True
-CONTAINER_CONFIGS_STREAM=alpine-hard-upgrade
-IMA_CONTRACTS_ABI_URL=[RINKEBY_ABI ASK CORE TEAM]
-MANAGER_CONTRACTS_ABI_URL=[RINKEBY_ABI ASK CORE TEAM]
-ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
-IMA_ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
-TG_API_KEY=TELEGRAM API KEY
-TG_CHAT_ID=-TELEGRAM CHAT ID
-```
---- 
 
 ### TestNet Phase 1 Versions
 
