@@ -24,6 +24,12 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **Skale Bounty version**: 0.9.3-develop.0
 
+> WARNING:  New SGX version will require database re-setup and node registration (un-register and then register again).
+
+Previous SGX version still can be used, but the backup functionality will not work as expected.
+
+> WARNING:  if previous version of SGX is used, it will require new custom skaled build. skaled version: WIP
+
 #### TestNet Phase 2.1 Environment Variables
 
 ```bash
