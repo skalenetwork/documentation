@@ -23,13 +23,13 @@ MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-n
 IMA_CONTRACTS_ABI_URL=[Will be available after Sept16]
 CONTAINER_CONFIGS_STREAM=[Will be available after Sept16]
 FILEBEAT_HOST=127.0.0.1:3031
-SGX_SERVER_URL=By validator
-DISK_MOUNTPOINT=By validator
+SGX_SERVER_URL=[By validator, setup SGX wallet first]
+DISK_MOUNTPOINT=[By validator, your attached storage /dev/sda or /dev/xvdd (this is an example. You just need to use your 2TB block volume mount point)]
 DB_PORT=[By validator]
 DB_ROOT_PASSWORD=[By validator]
 DB_PASSWORD=[By validator]
 DB_USER=[by validator]
-IMA_ENDPOINT=[by validator]
-ENDPOINT=[by validator]
+IMA_ENDPOINT=[by validator, GETH NODE ENDPOINT ]
+ENDPOINT=[by validator, GETH NODE ENDPOINT]
 ```
 ---
