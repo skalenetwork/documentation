@@ -120,8 +120,12 @@
           "link": "/documentation/validator-cli/readme"
         },
         {
+          "title": "MainNet TestNet",
+          "link": "/validators/versions"
+        },
+        {
           "title": "Fuji TestNet",
-          "link": "/validators/versions",
+          "link": "/validators/fuji-versions",
           "links": [
             {
               "link": "/validators/soft-upgrade"
