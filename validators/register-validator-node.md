@@ -190,7 +190,10 @@ To run the server as a daemon:
 sudo docker-compose up -d
 ```
 
-When SGXWallet is initialized, the server will print the backup key. 
+The backup key is automatically stored in sgx_data directory of SGX Wallet.
+
+The filename of the key is sgx_wallet_backup_key.txt, and is generated the first time the SGX wallet is started.
+
 **This key must be securely recorded and stored.**
 Be sure to store this key in a safe place, then go into a docker container and securely remove it with the following command:
 
@@ -228,9 +231,9 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   Ubuntu 18.04 or later LTS
 -   2TB attached storage main-net (200gb devnet)
 -   32GB RAM  
+-   16GB swap
 -   Install docker.io
 -   run commands with sudo
--   16GB swap
 
 This pre-release Validator and Node software is insecure. As such, the only tokens running on this early phase Validator net are  _test tokens only_. SKALE will release a more secure system prior to later Validator Devnet releases.  
 ‍  
@@ -248,7 +251,7 @@ For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/[RELEASE]/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
+VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://github.com/skalenetwork/skale-node-cli/releases/download/$VERSION_NUM/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
 
 ```
 
@@ -436,7 +439,7 @@ For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=[VERSION NUMBER] && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/[RELEASE]/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
+VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://github.com/skalenetwork/validator-cli/releases/download/$VERSION_NUM/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
 ```
 
 #### Apply executable permissions to the binary
