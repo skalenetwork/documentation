@@ -230,6 +230,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   32GB RAM  
 -   Install docker.io
 -   run commands with sudo
+-   16GB swap
 
 This pre-release Validator and Node software is insecure. As such, the only tokens running on this early phase Validator net are  _test tokens only_. SKALE will release a more secure system prior to later Validator Devnet releases.  
 ‍  
