@@ -42,6 +42,8 @@ The server provides an initial registration service to issue client certificates
 ### **Prerequisites**
 -   Ubuntu 18.04
 -   SGX-enabled Intel processor
+-   At least 8GB RAM
+-   Swap size equals to half of RAM size
 -   Ports 1026-1028
 
 **Terminal Commands:**
@@ -226,6 +228,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   Ubuntu 18.04 or later LTS
 -   2TB attached storage main-net (200gb devnet)
 -   32GB RAM  
+-   16GB swap
 -   Install docker.io
 -   run commands with sudo
 
