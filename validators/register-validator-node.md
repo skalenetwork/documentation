@@ -87,7 +87,7 @@ Clone SGX Wallet Repository to your SGX compatible Server:
 ```bash
 git clone https://github.com/skalenetwork/sgxwallet/
 cd sgxwallet
-git checkout tags/1.53.0-develop.9
+git checkout tags/1.58.5-stable.1
 ```
 
 #### STEP 2 - Enable SGX
@@ -155,13 +155,13 @@ On some machines, the SGX device is not **/dev/mei0** but a different device, su
 vi docker-compose.yml
 ```
 
-make sure `image` is skalenetwork/sgxwallet:1.53.0-develop.9 in docker-compose and it will look like:
+make sure `image` is skalenetwork/sgxwallet:1.58.5-stable.1 in docker-compose and it will look like:
 
 ```bash
 version: '3'
 services:
   sgxwallet:
-    image: skalenetwork/sgxwallet:1.53.0-develop.9
+    image: skalenetwork/sgxwallet:1.58.5-stable.1
     ports:
       - "1026:1026"
       - "1027:1027"
