@@ -7,8 +7,11 @@ The rest of the versions were provided for docker containers and correspondent t
 ### Mainnet Versions for Set up
 
 **Node CLI version:** [1.0.0](https://github.com/skalenetwork/skale-node-cli/releases/download/1.0.0/skale-1.0.0-Linux-x86_64) 
+
 **Validator CLI version:**  [1.0.0](https://github.com/skalenetwork/validator-cli/releases/download/1.0.0/sk-val-1.0.0-Linux-x86_64)
+
 **SGX Wallet:** 1.58.5-stable.1
+
 **SKALE Manager version:** 1.5.2
 
 #### Mainnet Environment Variables

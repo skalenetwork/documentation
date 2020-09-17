@@ -375,7 +375,7 @@ SKALE balance: 0 SKALE
 **Terminal Command:**
 
 ```bash
-skale sgx status
+skale sgx info
 
 ```
 
