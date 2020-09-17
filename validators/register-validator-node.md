@@ -44,7 +44,7 @@ The server provides an initial registration service to issue client certificates
 -   SGX-enabled Intel processor
 -   At least 8GB RAM
 -   Swap size equals to half of RAM size
--   Ports 1026-1028
+-   Ports 1026-1029
 
 **Terminal Commands:**
 
@@ -87,7 +87,7 @@ Clone SGX Wallet Repository to your SGX compatible Server:
 ```bash
 git clone https://github.com/skalenetwork/sgxwallet/
 cd sgxwallet
-git checkout tags/1.53.0-develop.9
+git checkout tags/1.58.5-stable.1
 ```
 
 #### STEP 2 - Enable SGX
@@ -155,13 +155,13 @@ On some machines, the SGX device is not **/dev/mei0** but a different device, su
 vi docker-compose.yml
 ```
 
-make sure `image` is skalenetwork/sgxwallet:1.53.0-develop.9 in docker-compose and it will look like:
+make sure `image` is skalenetwork/sgxwallet:1.58.5-stable.1 in docker-compose and it will look like:
 
 ```bash
 version: '3'
 services:
   sgxwallet:
-    image: skalenetwork/sgxwallet:1.53.0-develop.9
+    image: skalenetwork/sgxwallet:1.58.5-stable.1
     ports:
       - "1026:1026"
       - "1027:1027"
@@ -190,7 +190,10 @@ To run the server as a daemon:
 sudo docker-compose up -d
 ```
 
-When SGXWallet is initialized, the server will print the backup key. 
+The backup key is automatically stored in sgx_data directory of SGX Wallet.
+
+The filename of the key is sgx_wallet_backup_key.txt, and is generated the first time the SGX wallet is started.
+
 **This key must be securely recorded and stored.**
 Be sure to store this key in a safe place, then go into a docker container and securely remove it with the following command:
 
@@ -248,7 +251,7 @@ For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/[RELEASE]/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
+VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://github.com/skalenetwork/skale-node-cli/releases/download/$VERSION_NUM/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
 
 ```
 
@@ -436,7 +439,7 @@ For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `
 **Terminal Command:**
 
 ```bash
-VERSION_NUM=[VERSION NUMBER] && sudo -E bash -c "curl -L https://validator-cli.sfo2.digitaloceanspaces.com/[RELEASE]/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
+VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://github.com/skalenetwork/validator-cli/releases/download/$VERSION_NUM/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
 ```
 
 #### Apply executable permissions to the binary

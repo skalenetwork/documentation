@@ -14,6 +14,7 @@ After the node registration, the node receives an assigned group of random node 
 -   Ubuntu 16.04 or later LTS
 -   2TB attached storage main-net (200gb devnet)
 -   32GB RAM  
+-   8 core
 
 #### External Storage
 
