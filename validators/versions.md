@@ -15,7 +15,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 ```bash
 MONITORING_CONTAINERS=True
-DOCKER_LVMPY_STREAM=0.1.0-stable.0
+DOCKER_LVMPY_STREAM=1.0.0
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.5.2/skale-manager-1.5.2-mainnet-abi.json
 IMA_CONTRACTS_ABI_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/mainnet-ima/ima.json
 CONTAINER_CONFIGS_STREAM=1.1.0
