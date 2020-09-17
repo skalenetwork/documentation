@@ -48,9 +48,7 @@ IMA_ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY
 TG_API_KEY=TELEGRAM API KEY
 TG_CHAT_ID=-TELEGRAM CHAT ID
 ```
---- 
-
--------------
+---
 
 ### TestNet Phase 2 Versions - Hard Upgrade
 
