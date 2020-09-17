@@ -6,10 +6,29 @@ The rest of the versions were provided for docker containers and correspondent t
 
 ### Mainnet Versions for Set up
 
-**Node CLI version:** [1.0.0](https://github.com/skalenetwork/skale-node-cli/releases/download/1.0.0/skale-1.0.0-Linux-x86_64) 
-**Validator CLI version:**  [1.0.0](https://github.com/skalenetwork/validator-cli/releases/download/1.0.0/sk-val-1.0.0-Linux-x86_64)
-**SGX Wallet:** 1.58.5-stable.1
-**SKALE Manager version:** 1.5.2
+**Node CLI version**: [1.0.0](https://github.com/skalenetwork/skale-node-cli/releases/download/1.0.0/skale-1.0.0-Linux-x86_64) 
+
+**Validator CLI version**:  [1.0.0](https://github.com/skalenetwork/validator-cli/releases/tag/1.0.0)
+
+**SGX Wallet**: [1.58.5-stable.1](https://github.com/skalenetwork/sgxwallet/releases/tag/1.58.5-stable.1)
+
+### Mainnet Versions for Review
+
+**SKALE Manager version**: [1.5.2](https://github.com/skalenetwork/skale-network/tree/master/releases/mainnet/skale-manager/1.5.2)
+
+**Skaled version**: [1.46-stable.0](https://github.com/skalenetwork/skaled/releases/tag/1.46-stable.0)
+
+**Skale Admin version**: [1.0.0-stable.0](https://github.com/skalenetwork/skale-admin/releases/tag/1.0.0-stable.0)
+
+**Transaction Manager version**: [1.0.0-stable.0](https://github.com/skalenetwork/transaction-manager/releases/tag/1.0.0-stable.0)
+
+**Skale Sla version**: [1.0.2-stable.0](https://github.com/skalenetwork/sla-agent/releases/tag/1.0.2-stable.0)
+
+**Skale Bounty version**: [1.0.0-stable.0](https://github.com/skalenetwork/bounty-agent/releases/tag/1.0.0-stable.0)
+
+**docker lvmpy**: [1.0.0](https://github.com/skalenetwork/docker-lvmpy/releases/tag/1.0.0)
+
+**watchdog**: [1.0.0-stable.0](https://github.com/skalenetwork/skale-watchdog/releases/tag/1.0.0-stable.0)
 
 #### Mainnet Environment Variables
 
