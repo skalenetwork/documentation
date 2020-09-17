@@ -6,14 +6,15 @@ The rest of the versions were provided for docker containers and correspondent t
 
 ### Mainnet Versions for Set up
 
-| Component      | Version    | Tag           |
-| :------------- | :--------- | :------------- | 
-|`Node CLI version`|[`1.0.0`](https://github.com/skalenetwork/skale-node-cli/releases/download/1.0.0/skale-1.0.0-Linux-x86_64)|[`1.0.0`](https://github.com/skalenetwork/skale-node-cli/releases/tag/1.0.0)| 
-|`Validator CLI version`|[`1.0.0`](https://github.com/skalenetwork/validator-cli/releases/download/1.0.0/sk-val-1.0.0-Linux-x86_64)|[`1.0.0`](https://github.com/skalenetwork/validator-cli/releases/tag/1.0.0)|
-|`SGX Wallet`| `1.58.5`|`1.58.5-stable.1`| 
-|`SKALE Manager version`|`1.5.2`|`1.5.2-stable.0`| 
-|`SKALE Node`|`1.1.0`|`1.5.2-stable.0`| 
-|`docker-lvmpy`|`0.1.0`|`1.5.2-stable.0`| 
+
+| Component   | Version | Tag |
+|----------|-------------|------|
+| Node CLI version | [1.0.0](https://github.com/skalenetwork/skale-node-cli/releases/download/1.0.0/skale-1.0.0-Linux-x86_64) | [`1.0.0`](https://github.com/skalenetwork/skale-node-cli/releases/download/1.0.0/skale-1.0.0-Linux-x86_64)|[`1.0.0`](https://github.com/skalenetwork/skale-node-cli/releases/tag/1.0.0) |
+| Validator CLI version | [1.0.0](https://github.com/skalenetwork/validator-cli/releases/download/1.0.0/sk-val-1.0.0-Linux-x86_64) | [`1.0.0`](https://github.com/skalenetwork/validator-cli/releases/tag/1.0.0) |
+| SKALE Manager version | 1.58.5 | 1.58.5-stable.1 |
+| SKALE Node | 1.1.0  | 1.5.2-stable.0 |
+| docker-lvmpy | 0.1.0  | 1.5.2-stable.0 |
+
 
 #### Mainnet Environment Variables
 
