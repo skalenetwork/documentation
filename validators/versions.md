@@ -8,7 +8,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **Node CLI version**: [1.0.0](https://github.com/skalenetwork/skale-node-cli/releases/download/1.0.0/skale-1.0.0-Linux-x86_64) 
 
-**Validator CLI version**:  [1.0.0](https://github.com/skalenetwork/validator-cli/releases/tag/1.0.0)
+**Validator CLI version**:  [1.1.0](https://github.com/skalenetwork/validator-cli/releases/tag/1.1.0)
 
 **SGX Wallet**: [1.58.5-stable.1](https://github.com/skalenetwork/sgxwallet/releases/tag/1.58.5-stable.1)
 
