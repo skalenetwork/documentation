@@ -457,7 +457,7 @@ Required arguments:
 -   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
                     Example: wss://rinkeby.infura.io/ws/v3/...
 
--   `--contracts-url/-c` - - URL to SKALE Manager contracts ABI and addresses
+-   `--contracts-url/-c` - URL to SKALE Manager contracts ABI and addresses
 
 -   `-w/--wallet` - Type of the wallet that will be used for signing transactions (software or ledger)
 
@@ -469,7 +469,25 @@ Usage example:
 sk-val init -e [ENDPOINT] -c [ABI] --wallet software
 ```
 
-### Step 3.2: Register as a new SKALE validator
+### Step 3.2: Setup ledger wallet
+
+> You need this only if you set --wallet ledger during sk-val init. Otherwise you can jump to step 3.3 
+
+Required arguments:
+
+-   `--address-index` - Index of the address to use (starting from `0`)
+-   `--keys-type` - Type of the Ledger keys (live or legacy)
+
+Usage example:
+
+**Usage example:**
+
+```bash
+sk-val wallet setup-ledger --address-index 1 --keys-type live
+```
+
+
+### Step 3.3: Register as a new SKALE validator
 
 > DO NOT REGISTER A NEW VALIDATOR IF YOU ALREADY HAVE ONE! check : `sk-val validator ls`. For additional node set up, please go to Step 3.5.
 
@@ -499,11 +517,11 @@ Optional arguments:
 sk-val validator register -n SETeam -d "SE Team description" -c 20 --min-delegation 0 --pk-file ./pk.txt
 ```
 
-### Step 3.3: Make sure that the validator is added to the whitelist
+### Step 3.4: Make sure that the validator is added to the whitelist
 
 Note: This is for testing purposes only. [**Whitelist**](https://alpine.skale.network/whitelist)
 
-### Step 3.4: Write down your Node Address (SGX Wallet Address)
+### Step 3.5: Write down your Node Address (SGX Wallet Address)
 
 After executing following command you will find see Node Address
 
@@ -525,7 +543,7 @@ SKALE balance: 200 SKALE
 
 Please copy your SGX Wallet Address, you will be using it for linking node address to validator address.
 
-### Step 3.5: Sign validator id using sgx wallet
+### Step 3.6: Sign validator id using sgx wallet
 
 Execute this command and find your validator ID 
 
@@ -550,7 +568,7 @@ Signature: <your-signature>
 
 ```
 
-### Step 3.6: Link skale wallet address to your validator account using validator-cli
+### Step 3.7: Link skale wallet address to your validator account using validator-cli
 
 > Make sure you copied Node Address from STEP 3.4
 
@@ -564,7 +582,7 @@ Signature: <your-signature>
 
 <Step id='four'>
 
-### Step 3.7: Send-Accept Delegation using validator-cli
+### Step 3.8: Send-Accept Delegation using validator-cli
 
 > Make sure you  already have at least 100 SKL tokens in your validator wallet for TestNet MSR is 100SKL tokens. 
 
@@ -591,7 +609,7 @@ List your delegations make sure your accepted delegations are equal or more than
     sk-val validator delegations [VALIDATOR_ID] 
 ```
 
-### Step 3.8 : Delegations have to be in "DELEGATED" status
+### Step 3.9 : Delegations have to be in "DELEGATED" status
 To be able to register a node in the network with the MSR requirement your delegations have to be in the DELEGATED status. 
 After the previous step delegation status will be seen as accepted. 
 "Delegated" status will be automatically updated 1st day of each month when the epoc starts. 
