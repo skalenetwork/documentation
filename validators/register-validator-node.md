@@ -497,7 +497,6 @@ Required arguments:
 
 > Make sure you enabled contracts data sending on ETH application. Otherwise transactions will not work
 
-
 ### Step 3.3: Register as a new SKALE validator
 
 > DO NOT REGISTER A NEW VALIDATOR IF YOU ALREADY HAVE ONE! check : `sk-val validator ls`. For additional node set up, please go to Step 3.5.
@@ -513,7 +512,9 @@ Required arguments:
 -   `--name/-n` - Validator name
 -   `--description/-d` - Validator description (preferably organization
 info)
+
 -   `--commission-rate/-c` - Commission rate (percent %)
+
 -   `--min-delegation` - Validator minimum delegation amount
 
 
@@ -521,7 +522,6 @@ Optional arguments:
 
 -   `--pk-file` - Path to file with private key (only for `software` wallet type)
 -   `--yes` - Confirmation flag
-
 
 ### Step 3.4: Make sure that the validator is added to the whitelist
 
@@ -606,14 +606,20 @@ Optional arguments:
 Required arguments:
 
 -   `--validator-id` - Validator id
+
 -   `--amount` - Delegation amount
 info)
--   `--delegation-perion` - Delegation period (only 2 month allowed for now)
+
+-   `--delegation-perion` - Delegation period (only 2 month allowed for
+now)
+
 -   `--info` - Delegation info
 
 Optional arguments:
 
--   `--pk-file` - Path to file with private key (only for software wallet type)
+-   `--pk-file` - Path to file with private key (only for software wallet
+type)
+
 -   `--yes` - Confirmation flag
 
 List your delegations
