@@ -521,6 +521,7 @@ info)
 Optional arguments:
 
 -   `--pk-file` - Path to file with private key (only for `software` wallet type)
+-   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
 -   `--yes` - Confirmation flag
 
 ### Step 3.4: Make sure that the validator is added to the whitelist
@@ -587,6 +588,7 @@ Signature: <your-signature>
 Optional arguments:
 
 -   `--pk-file` - Path to file with private key (only for `software` wallet type)
+-   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
 -   `--yes` - Confirmation flag
 
 
@@ -618,6 +620,7 @@ now)
 Optional arguments:
 
 -   `--pk-file` - Path to file with private key (only for software wallet
+-   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
 type)
 
 -   `--yes` - Confirmation flag
@@ -645,6 +648,7 @@ Required arguments:
 Optional arguments:
 
 -   `--pk-file` - Path to file with private key (only for software wallet type)
+-   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
 -   `--yes` - Confirmation flag
 
 List your delegations make sure your accepted delegations are equal or more than 100SKL tokens
