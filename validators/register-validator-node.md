@@ -268,6 +268,8 @@ sudo chmod +x /usr/local/bin/skale
 
 #### Initialize SKALE node daemon and install dependencies
 
+:warning: **Please avoid re-initialization**: First run `skale node info` to confirm current state of intialization..
+
 Required options for the `skale node init` command:
 
 -   `--install-deps` - install additional dependecies (like docker and docker-compose)
