@@ -121,15 +121,18 @@
         },
         {
           "title": "MainNet",
-          "link": "/validators/versions"
+          "links": [
+            {
+              "link": "/validators/versions",
+              "link": "/validators/soft-upgrade"
+            }
+          ],
+
         },
         {
           "title": "Fuji TestNet",
           "link": "/validators/fuji-versions",
           "links": [
-            {
-              "link": "/validators/soft-upgrade"
-            },
             {
               "link": "/validators/hard-upgrade"
             }
