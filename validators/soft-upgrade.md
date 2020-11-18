@@ -7,7 +7,7 @@
 **Update `CONTAINER_CONFIGS_STREAM` in .env file**
 
 ```bash
-vi .env
+cd  ~ && vi .env
 ```
 
 Make sure the `CONTAINER_CONFIGS_STREAM` in .env file is `1.1.1`
