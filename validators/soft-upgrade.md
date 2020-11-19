@@ -1,26 +1,24 @@
-## FUJI Soft Upgrade
+## Mainnet Soft Upgrade 
 
-> upgrading Node-CLI or changing environment variables
+> Upgrading bounty Container by changing environment variables to have the same schedule every month:
 
-**Download new version node CLI**
-Make sure th `VERSION_NUM` is the latest version provided here= [versions](/validators/versions)
-For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `beta` CLI versions use `beta` , for the `stable` CLI versions use `stable`
+> Early bounty schedule implementation depended on a constant variable called `rewards period` and `the node registration date`. With this update every node in the network will call get bounty at the end of each epoch. Validators are required to update Bounty Container version by Monday, 23rd November to be on the same schedule ever other node in the network. This will be a one time update and doesn't contain any risk and the smart contract change has been audited. 
 
-```bash
-VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://skale-cli.sfo2.cdn.digitaloceanspaces.com/[RELEASE]/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale" 
-```
+**Update `CONTAINER_CONFIGS_STREAM` in .env file**
 
-**Binary executable**
-```bash
-chmod +x /usr/local/bin/skale
-```
-
-**Check your main environment variables and update with the new stream =**[versions](/validators/versions)
 ```bash
 cd  ~ && vi .env
 ```
 
+Make sure the `CONTAINER_CONFIGS_STREAM` in .env file is `1.1.1`
+
+```bash
+CONTAINER_CONFIGS_STREAM=1.1.1 
+```
+
 **Perform update**
+
+Run skale node update:
 ```bash
 skale node update .env
 ```
