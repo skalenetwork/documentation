@@ -16,7 +16,7 @@ Make sure the `CONTAINER_CONFIGS_STREAM` in .env file is `1.1.1`
 CONTAINER_CONFIGS_STREAM=1.1.1 
 ```
 
-**Update Node Bounty container version**
+**Perform update**
 
 Run skale node update:
 ```bash

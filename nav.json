@@ -123,10 +123,12 @@
           "title": "MainNet",
           "links": [
             {
-              "link": "/validators/versions",
+              "link": "/validators/versions"
+            },
+            {
               "link": "/validators/soft-upgrade"
             }
-          ],
+          ]
 
         },
         {
