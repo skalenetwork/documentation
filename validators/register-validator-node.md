@@ -5,16 +5,161 @@ This page is the step by step guide that shows how to run a validator node in th
 <StepsLayout id='Validator'>
 
 <StepsController>
-    <StepNav stepId='one' label='Setup\nSGX Wallet'><ThresholdSignatures/></StepNav>
-    <StepNav stepId='two' label='Setup\nSKALE Node'><LeaderlessConsensus/></StepNav>
-    <StepNav stepId='three' label='Register\nValidator'><SendTransaction/></StepNav>
+    <StepNav stepId='one' label='Register\nValidator'><SendTransaction/></StepNav>
+    <StepNav stepId='two' label='Setup\nSGX Wallet'><ThresholdSignatures/></StepNav>
+    <StepNav stepId='three' label='Setup\nSKALE Node'><LeaderlessConsensus/></StepNav>
     <StepNav stepId='four' label='Register\nNode in SKALE Network'><Request/></StepNav>
     <StepNav stepId='five' label='Upload new SSL Certificates'><ByzantineFaultTolerant/></StepNav>
 </StepsController>
 
 <Step id='one'>
 
-## 1. Set up SGX Wallet
+## 1. Register Validator with SKALE Validator CLI
+
+SKALE Validator CLI is the validator client interface for registering a new validator into network or handling additional delegation services where validators can self delegate or token holders can delegate to a validator. These are the type of operations that can be done with the Validator CLI:
+
+-   Register Validator (Set Commission Rate or Minimum delegation amount)
+-   Accept pending delegations
+-   Link all validator node addresses to a validator wallet address
+-   Request or cancel a delegation
+
+Note: This is **an insecure pre-release** software.
+
+See the SKALE Validator CLI code and documentation on [**GitHub**](https://github.com/skalenetwork/validator-cli)*‍
+
+This document contains instructions on how to get started with the SKALE Validator CLI.
+
+PS: Validator CLI doesn't have to be installed in the same server as the node-cli!
+
+### Step 1.1: Install SKALE Validator CLI
+
+#### Download the SKALE Validator CLI binary
+
+Make sure th `VERSION_NUM` is the latest version provided here= [versions](/validators/versions)
+For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `beta` CLI versions use `beta` , for the `stable` CLI versions use `stable`
+
+**Terminal Command:**
+
+```bash
+VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://github.com/skalenetwork/validator-cli/releases/download/$VERSION_NUM/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
+```
+
+#### Apply executable permissions to the binary
+
+**Terminal Command:**
+
+```bash
+chmod +x /usr/local/bin/sk-val
+```
+
+#### Get SKALE Manager contracts info and set the endpoint
+
+**Terminal Commmand:**
+
+```bash
+sk-val init -e [ENDPOINT] -c [ABI] --wallet [software/ledger]
+```
+
+Required arguments:
+
+-   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
+                    Example: wss://rinkeby.infura.io/ws/v3/...
+
+-   `--contracts-url/-c` - URL to SKALE Manager contracts ABI and addresses
+
+-   `-w/--wallet` - Type of the wallet that will be used for signing transactions (software or ledger)
+
+### Step 1.2: Setup wallet
+
+#### Software wallet
+
+If you want to use software wallet you need to save private key into a file.
+
+Replace `[YOUR PRIVATE KEY]` with your wallet private key
+
+**Terminal Command:**
+
+```bash
+echo [YOUR PRIVATE KEY] > ./pk.txt
+```
+
+#### Ledger  wallet
+
+If you want to use ledger you should install ETH ledger application and  initilize device with `setup-ledger` command.
+
+**Terminal Command:**
+
+```bash
+sk-val wallet setup-ledger --address-index [ADDRESS_INDEX] --keys-type [KEYS_TYPE]
+```
+Required arguments:
+
+-   `--address-index` - Index of the address to use (starting from `0`)
+-   `--keys-type` - Type of the Ledger keys (live or legacy)
+
+> Make sure you enabled contracts data sending on ETH application. Otherwise transactions will not work
+
+### Step 1.3: Register as a new SKALE validator
+
+> DO NOT REGISTER A NEW VALIDATOR IF YOU ALREADY HAVE ONE! check : `sk-val validator ls`. For additional node set up, please go to Step 3.5.
+
+**Terminal Command:**
+
+```bash
+sk-val validator register -n [NAME] -d [DESCRIPTION] -c [COMMISSION_RATE] --min-delegation [MIN_DELEGATION] --pk-file ./pk.txt
+```
+
+Required arguments:
+
+-   `--name/-n` - Validator name
+-   `--description/-d` - Validator description (preferably organization
+info)
+
+-   `--commission-rate/-c` - Commission rate (percent %)
+
+-   `--min-delegation` - Validator minimum delegation amount
+
+
+Optional arguments:
+
+-   `--pk-file` - Path to file with private key (only for `software` wallet type)
+
+-   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
+
+-   `--yes` - Confirmation flag
+
+### Step 1.4: Make sure that the validator is added to the whitelist
+
+Note: This is for testing purposes only. [**Whitelist**](https://alpine.skale.network/whitelist)
+
+### Step 1.5: Write down your Node Address (SGX Wallet Address)
+
+After executing following command you will find see Node Address
+
+**Terminal Command:**
+
+```bash
+ skale wallet info
+```
+**Output:**
+
+```bash
+root@se-test-01:~# skale wallet info
+--------------------------------------------------
+Address: 0x.... -> ThisIsYour_NodeAddress
+ETH balance: 3.499059343 ETH
+SKALE balance: 200 SKALE
+--------------------------------------------------
+```
+
+Please copy your SGX Wallet Address, you will be using it for linking node address to validator address.
+
+</Step>
+
+
+<Step id='two'>
+
+## 2. Set up SGX Wallet
 
 Sgxwallet runs as a network server. Clients connect to the server, authenticate to it using TLS 1.0 protocol with client certificates, and then issue requests to the server to generate crypto keys and perform cryptographic operations. The keys are generated inside the secure SGX enclave and never leave the enclave unencrypted.
 
@@ -201,7 +346,7 @@ Be sure to store this key in a safe place, then go into a docker container and s
 docker exec -it <SGX_CONTAINER_NAME> bash && apt-get install secure-delete && srm -vz backup_key.txt
 ```
 
-### STOP SGX Wallet Containers
+### STOP SGX Wallet Containers (for back up purposes)
 ```bash
 cd sgxwallet/run_sgx
 sudo docker-compose stop
@@ -211,9 +356,9 @@ sudo docker-compose stop
 
 </Step>
 
-<Step id='two'>
+<Step id='three'>
 
-## 2. Setup SKALE Node with SKALE Node CLI
+## 3. Setup SKALE Node with SKALE Node CLI
 
 After Setting up SGX Wallet and create certifications, validators can download the SKALE Node CLI executables register and maintain your SKALE node. This process downloads docker container images from docker hub and spins up SKALE Node functionalities. Some of the base containers such as SKALE Admin, Bounty, SLA, TransactionManager will be created during installation for each node.
 
@@ -233,6 +378,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   32GB RAM
 -   16GB swap
 -   Install docker.io
+-   Install docker-compose 
 -   run commands with sudo
 
 This pre-release Validator and Node software is insecure. As such, the only tokens running on this early phase Validator net are  _test tokens only_. SKALE will release a more secure system prior to later Validator Devnet releases.
@@ -241,7 +387,7 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 [![Discord](https://img.shields.io/discord/534485763354787851.svg)](https://discord.gg/vvUtWJB)
 
-### Step 2.1: Install SKALE Node CLI
+### Step 3.1: Install SKALE Node CLI
 
 #### Download the SKALE Node CLI binary
 
@@ -264,7 +410,7 @@ sudo chmod +x /usr/local/bin/skale
 
 ```
 
-### Step 2.2: Setup SKALE Node
+### Step 3.2: Setup SKALE Node
 
 #### Initialize SKALE node daemon and install dependencies
 
@@ -393,7 +539,7 @@ SGX server status:
 
 ```
 
-### Step 2.3: Get Test Tokens to your SGX and Validator wallets**
+### Step 3.3: Get Test Tokens to your SGX and Validator wallets**
 
 Get Tokens from the  [**SKALE Faucet**](https://faucet.skale.network/validators)
 
@@ -410,151 +556,7 @@ skale wallet info
 
 ```
 
-</Step>
-
-<Step id='three'>
-
-## 3. Register Validator with SKALE Validator CLI
-
-SKALE Validator CLI is the validator client interface for registering a new validator into network or handling additional delegation services where validators can self delegate or token holders can delegate to a validator. These are the type of operations that can be done with the Validator CLI:
-
--   Register Validator (Set Commission Rate or Minimum delegation amount)
--   Accept pending delegations
--   Link all validator node addresses to a validator wallet address
--   Request or cancel a delegation
-
-Note: This is **an insecure pre-release** software.
-
-See the SKALE Validator CLI code and documentation on [**GitHub**](https://github.com/skalenetwork/validator-cli)*‍
-
-This document contains instructions on how to get started with the SKALE Validator CLI.
-
-PS: Validator CLI doesn't have to be installed in the same server as the node-cli!
-
-### Step 3.1: Install SKALE Validator CLI
-
-#### Download the SKALE Validator CLI binary
-
-Make sure th `VERSION_NUM` is the latest version provided here= [versions](/validators/versions)
-For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `beta` CLI versions use `beta` , for the `stable` CLI versions use `stable`
-
-**Terminal Command:**
-
-```bash
-VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://github.com/skalenetwork/validator-cli/releases/download/$VERSION_NUM/sk-val-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/sk-val"
-```
-
-#### Apply executable permissions to the binary
-
-**Terminal Command:**
-
-```bash
-chmod +x /usr/local/bin/sk-val
-```
-
-#### Get SKALE Manager contracts info and set the endpoint
-
-**Terminal Commmand:**
-
-```bash
-sk-val init -e [ENDPOINT] -c [ABI] --wallet [software/ledger]
-```
-
-Required arguments:
-
--   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
-                    Example: wss://rinkeby.infura.io/ws/v3/...
-
--   `--contracts-url/-c` - URL to SKALE Manager contracts ABI and addresses
-
--   `-w/--wallet` - Type of the wallet that will be used for signing transactions (software or ledger)
-
-### Step 3.2: Setup wallet
-
-#### Software wallet
-
-If you want to use software wallet you need to save private key into a file.
-
-Replace `[YOUR PRIVATE KEY]` with your wallet private key
-
-**Terminal Command:**
-
-```bash
-echo [YOUR PRIVATE KEY] > ./pk.txt
-```
-
-#### Ledger  wallet
-
-If you want to use ledger you should install ETH ledger application and  initilize device with `setup-ledger` command.
-
-**Terminal Command:**
-
-```bash
-sk-val wallet setup-ledger --address-index [ADDRESS_INDEX] --keys-type [KEYS_TYPE]
-```
-Required arguments:
-
--   `--address-index` - Index of the address to use (starting from `0`)
--   `--keys-type` - Type of the Ledger keys (live or legacy)
-
-> Make sure you enabled contracts data sending on ETH application. Otherwise transactions will not work
-
-### Step 3.3: Register as a new SKALE validator
-
-> DO NOT REGISTER A NEW VALIDATOR IF YOU ALREADY HAVE ONE! check : `sk-val validator ls`. For additional node set up, please go to Step 3.5.
-
-**Terminal Command:**
-
-```bash
-sk-val validator register -n [NAME] -d [DESCRIPTION] -c [COMMISSION_RATE] --min-delegation [MIN_DELEGATION] --pk-file ./pk.txt
-```
-
-Required arguments:
-
--   `--name/-n` - Validator name
--   `--description/-d` - Validator description (preferably organization
-info)
-
--   `--commission-rate/-c` - Commission rate (percent %)
-
--   `--min-delegation` - Validator minimum delegation amount
-
-
-Optional arguments:
-
--   `--pk-file` - Path to file with private key (only for `software` wallet type)
-
--   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
-
--   `--yes` - Confirmation flag
-
-### Step 3.4: Make sure that the validator is added to the whitelist
-
-Note: This is for testing purposes only. [**Whitelist**](https://alpine.skale.network/whitelist)
-
-### Step 3.5: Write down your Node Address (SGX Wallet Address)
-
-After executing following command you will find see Node Address
-
-**Terminal Command:**
-
-```bash
- skale wallet info
-```
-**Output:**
-
-```bash
-root@se-test-01:~# skale wallet info
---------------------------------------------------
-Address: 0x.... -> ThisIsYour_NodeAddress
-ETH balance: 3.499059343 ETH
-SKALE balance: 200 SKALE
---------------------------------------------------
-```
-
-Please copy your SGX Wallet Address, you will be using it for linking node address to validator address.
-
-### Step 3.6: Sign validator id using sgx wallet
+### Step 3.4: Sign validator id using sgx wallet
 
 Execute this command and find your validator ID
 
@@ -579,7 +581,7 @@ Signature: <your-signature>
 
 ```
 
-### Step 3.7: Link skale wallet address to your validator account using validator-cli
+### Step 3.5: Link skale wallet address to your validator account using validator-cli
 
 > Make sure you copied Node Address from STEP 3.5
 
@@ -598,11 +600,9 @@ Optional arguments:
 -   `--yes` - Confirmation flag
 
 
-</Step>
+### Step 3.6: Send-Accept Delegation using validator-cli
 
-<Step id='four'>
-
-### Step 3.8: Send-Accept Delegation using validator-cli
+This step 3.6 and 3.7 is for testing delegation flow. If MSR is not set in the testnet please move to Step4.
 
 > Make sure you  already have at least 100 SKL tokens in your validator wallet for TestNet MSR is 100SKL tokens.
 
@@ -666,12 +666,16 @@ List your delegations make sure your accepted delegations are equal or more than
     sk-val validator delegations [VALIDATOR_ID]
 ```
 
-### Step 3.9 : Delegations have to be in "DELEGATED" status
+### Step 3.7 : Delegations have to be in "DELEGATED" status
 To be able to register a node in the network with the MSR requirement your delegations have to be in the DELEGATED status.
 After the previous step delegation status will be seen as accepted.
 "Delegated" status will be automatically updated 1st day of each month when the epoc starts.
 
 > For Testnet Only, please ask Core team to skip time to update delegation status
+
+</Step>
+
+<Step id='four'>
 
 ## 4: Register Node with Network
 

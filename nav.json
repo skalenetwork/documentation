@@ -136,7 +136,7 @@
           "link": "/validators/fuji-versions",
           "links": [
             {
-              "link": "/validators/hard-upgrade"
+              "link": "/validators/schain-upgrade"
             }
           ]
         },
