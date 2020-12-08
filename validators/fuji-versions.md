@@ -4,55 +4,37 @@ You can find the compatible versions in this page. Set up requires only Validato
 The rest of the versions were provided for docker containers and correspondent tags in their individual code repositories.
 
 ### TestNet Phase 3.1 Versions - SKALE chain creation
+Schains launch, IMA beta version
 
 **Validator CLI version**: 1.2.0-beta.1
 
-**Node CLI version**: 1.1.0-beta.3
+**Node CLI version**: 1.1.0-beta.4
 
-**SGX version: sgxwallet**: 1.58.7-develop.1
+**SGX version: sgxwallet**: 1.59.1-stable.6
 
-**SKALE Manager version**: 1.6.0-develop.7
+**SKALE Manager version**: 1.6.2-develop.0
 
-**Skaled version**:  2.0.0-beta.0
+**Skaled version**: 2.0.4-develop.3
 
 **Skale Admin version**: 1.1.0-develop.17
 
 **Transaction Manager version**: 1.0.0-develop.8
 
-**Skale Sla version**: 1.0.2-beta.1
+**Skale Sla version**: 1.0.0-develop.0
 
 **Skale Bounty version**: 1.1.0-stable.0
 
+**docker-lvmpy**: 1.0.1
 
-### TestNet Phase 3.0 Versions - Mainnet version
+**skale-admin**: 1.1.0-develop.21
 
-**Node CLI version**: [1.0.0](https://github.com/skalenetwork/skale-node-cli/releases/download/1.0.0/skale-1.0.0-Linux-x86_64) 
+**sla-agent**: 1.0.2-beta.1
 
-**Validator CLI version**:  [1.1.1](https://github.com/skalenetwork/validator-cli/releases/tag/1.1.1)
+**skale-node**: 1.2.2 Testnet
 
-**SGX Wallet**: [1.58.5-stable.1](https://github.com/skalenetwork/sgxwallet/releases/tag/1.58.5-stable.1)
-
-### Versions for Review
-
-**SKALE Manager version**: [1.5.2](https://github.com/skalenetwork/skale-network/tree/master/releases/mainnet/skale-manager/1.5.2)
-
-**Skaled version**: [1.46-stable.0](https://github.com/skalenetwork/skaled/releases/tag/1.46-stable.0)
-
-**Skale Admin version**: [1.0.0-stable.0](https://github.com/skalenetwork/skale-admin/releases/tag/1.0.0-stable.0)
-
-**Transaction Manager version**: [1.0.0-stable.0](https://github.com/skalenetwork/transaction-manager/releases/tag/1.0.0-stable.0)
-
-**Skale Sla version**: [1.0.2-stable.0](https://github.com/skalenetwork/sla-agent/releases/tag/1.0.2-stable.0)
-
-**Skale Bounty version**: [1.0.0-stable.0](https://github.com/skalenetwork/bounty-agent/releases/tag/1.0.0-stable.0)
-
-**docker lvmpy**: [1.0.0](https://github.com/skalenetwork/docker-lvmpy/releases/tag/1.0.0)
-
-**watchdog**: [1.0.0-stable.0](https://github.com/skalenetwork/skale-watchdog/releases/tag/1.0.0-stable.0)
-
+**watchdog**: 1.0.0-stable.0 
 
 ----------------
-
 ## Old Versions
 
 ### TestNet Phase 2.1 Versions - Hard Upgrade for SGX

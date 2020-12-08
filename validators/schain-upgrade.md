@@ -1,33 +1,30 @@
 ## FUJI Upgrade for SKALE Chain Creation
 
-### Step 1 - TestNet Phase 3.0 - Versions for setting up current Mainnet environment  
-This is an important step to upgrade the node from the same as mainnet version to the new upgrade.
+### Step 1 - TestNet Phase 3.0 - Versions for setting up with the current Mainnet environment  
 
-### Mainnet Versions for Set up
+### TestNet Phase 3.0 Versions - Mainnet version
 
-**Node CLI version**: [1.0.0](https://github.com/skalenetwork/skale-node-cli/releases/download/1.0.0/skale-1.0.0-Linux-x86_64) 
+**Node CLI version**: 1.0.0
+**Validator CLI version**:  1.1.1
+**SGX Wallet**: 1.58.5-stable.1
 
-**Validator CLI version**:  [1.1.1](https://github.com/skalenetwork/validator-cli/releases/tag/1.1.1)
+### Versions for Review
 
-**SGX Wallet**: [1.58.5-stable.1](https://github.com/skalenetwork/sgxwallet/releases/tag/1.58.5-stable.1)
+**SKALE Manager version**: 1.5.2
 
-### Mainnet Versions for Review
+**Skaled version**: 1.46-stable.0
 
-**SKALE Manager version**: [1.5.2](https://github.com/skalenetwork/skale-network/tree/master/releases/mainnet/skale-manager/1.5.2)
+**Skale Admin version**: 1.0.0-stable.0
 
-**Skaled version**: [1.46-stable.0](https://github.com/skalenetwork/skaled/releases/tag/1.46-stable.0)
+**Transaction Manager version**: 1.0.0-stable.0
 
-**Skale Admin version**: [1.0.0-stable.0](https://github.com/skalenetwork/skale-admin/releases/tag/1.0.0-stable.0)
+**Skale Sla version**: 1.0.2-stable.0
 
-**Transaction Manager version**: [1.0.0-stable.0](https://github.com/skalenetwork/transaction-manager/releases/tag/1.0.0-stable.0)
+**Skale Bounty version**: 1.1.0-stable.0
 
-**Skale Sla version**: [1.0.2-stable.0](https://github.com/skalenetwork/sla-agent/releases/tag/1.0.2-stable.0)
+**docker lvmpy**: 1.0.0
 
-**Skale Bounty version**: [1.0.0-stable.0](https://github.com/skalenetwork/bounty-agent/releases/tag/1.0.0-stable.0)
-
-**docker lvmpy**: [1.0.0](https://github.com/skalenetwork/docker-lvmpy/releases/tag/1.0.0)
-
-**watchdog**: [1.0.0-stable.0](https://github.com/skalenetwork/skale-watchdog/releases/tag/1.0.0-stable.0)
+**watchdog**: 1.0.0-stable.0
 
 #### Mainnet Environment Variables
 
@@ -69,10 +66,10 @@ Consensus: the build introduces BLAKE3 hash and consensus DB changes (for better
 1. Validators need to update docker-compose version on their machines to 1.27.4, because we started using new docker-compose syntax (cpu_shares functionality in particular).
 2. Validators need to remove .skale/node_data/skale.db before skale node update , because we updated db schema and until we have the migration ready we need to fast through this step by removing the folder.
 3. Resource allocation file should be re-created on all nodes - this should be done automatically during node update :
-    Why resource allocation should be updated?
-        i. In this update, we’re adding CPU and memory limits for the IMA container (this will also affect sChain container allocation)
-        ii. We’re changing the approach to estimating available memory on the machine
-        iii. The resource allocation file generation procedure and structure were revised
+    - Why resource allocation should be updated?
+      - In this update, we’re adding CPU and memory limits for the IMA container (this will also affect sChain container allocation)
+      - We’re changing the approach to estimating available memory on the machine
+      - The resource allocation file generation procedure and structure were revised
 
 **Note:** If DISK_MOUNTPOINT was changed in .env it’s required to do skale resources-allocation generate before update.
 
@@ -83,21 +80,31 @@ Consensus: the build introduces BLAKE3 hash and consensus DB changes (for better
 
 **Validator CLI version**: 1.2.0-beta.1
 
-**Node CLI version**: 1.1.0-beta.3
+**Node CLI version**: 1.1.0-beta.4
 
-**SGX version: sgxwallet**: 1.58.7-develop.1
+**SGX version: sgxwallet**: 1.59.1-stable.6
 
-**SKALE Manager version**: 1.6.0-develop.7
+**SKALE Manager version**: 1.6.2-develop.0
 
-**Skaled version**:  1.46-develop.63
+**Skaled version**: 2.0.4-develop.3
 
-**Skale Admin version**: 0.17.0-beta.1
+**Skale Admin version**: 1.1.0-develop.17
 
-**Transaction Manager version**: 0.5.0-beta.1
+**Transaction Manager version**: 1.0.0-develop.8
 
 **Skale Sla version**: 1.0.0-develop.0
 
-**Skale Bounty version**: 0.9.3-develop.0
+**Skale Bounty version**: 1.1.0-stable.0
+
+**docker-lvmpy**: 1.0.1
+
+**skale-admin**: 1.1.0-develop.21
+
+**sla-agent**: 1.0.2-beta.1
+
+**skale-node**: 1.2.2 Testnet
+
+**watchdog**: 1.0.0-stable.0 
 
 #### Step 2.1 Update SGX
 
@@ -113,7 +120,6 @@ Consensus: the build introduces BLAKE3 hash and consensus DB changes (for better
 #### Download the SKALE Node CLI binary
 
 Make sure th `VERSION_NUM` is the 1.1.0-beta.3
-For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `beta` CLI versions use `beta` , for the `stable` CLI versions use `stable`
 
 **Terminal Command:**
 
@@ -138,7 +144,7 @@ MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.1
 MANAGER_CONTRACTS_ABI_URL=https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-upgrade-skale-chains.json
 IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-develop.38/abi.json
-CONTAINER_CONFIGS_STREAM=1.2.0-testnet
+CONTAINER_CONFIGS_STREAM=1.2.2 Testnet
 FILEBEAT_HOST=3.17.12.121:5000
 SGX_SERVER_URL=[By validator, setup SGX wallet first]
 DISK_MOUNTPOINT=[By validator, your attached storage /dev/sda or /dev/xvdd (this is an example. You just need to use your 2TB block volume mount point)]
