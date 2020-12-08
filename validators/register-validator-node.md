@@ -23,8 +23,6 @@ SKALE Validator CLI is the validator client interface for registering a new vali
 -   Link all validator node addresses to a validator wallet address
 -   Request or cancel a delegation
 
-Note: This is **an insecure pre-release** software.
-
 See the SKALE Validator CLI code and documentation on [**GitHub**](https://github.com/skalenetwork/validator-cli)*‍
 
 This document contains instructions on how to get started with the SKALE Validator CLI.
@@ -366,8 +364,6 @@ sudo docker-compose stop
 
 After Setting up SGX Wallet and create certifications, validators can download the SKALE Node CLI executables register and maintain your SKALE node. This process downloads docker container images from docker hub and spins up SKALE Node functionalities. Some of the base containers such as SKALE Admin, Bounty, SLA, TransactionManager will be created during installation for each node.
 
-Note: This is **an insecure pre-release** software specifically for Alpine team members.
-
 See the SKALE Node CLI code and documentation on [**GitHub**](https://github.com/skalenetwork/skale-node-cli)*‍
 
 This document contains instructions on how to get started with the SKALE Node CLI.
@@ -393,7 +389,6 @@ is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](http
 2. If you have any issues you can save the logs using `skale logs dump` command.  
 It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
 
-3. This pre-release Validator and Node software is insecure. As such, the only tokens running on this early phase Validator net are  _test tokens only_. SKALE will release a more secure system prior to later Validator Devnet releases.
 ‍
 
 If you have any concerns or questions, please do not hesitate to reach out to SKALE Team leads on [discord](http://skale.chat/).
