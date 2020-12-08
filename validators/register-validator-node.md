@@ -35,8 +35,7 @@ PS: Validator CLI doesn't have to be installed in the same server as the node-cl
 
 #### Download the SKALE Validator CLI binary
 
-Make sure th `VERSION_NUM` is the latest version provided here= [versions](/validators/versions)
-For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `beta` CLI versions use `beta` , for the `stable` CLI versions use `stable`
+VERSION_NUM is a version identifier e.g. `1.1.0-beta.0`
 
 **Terminal Command:**
 
@@ -54,7 +53,7 @@ chmod +x /usr/local/bin/sk-val
 
 #### Get SKALE Manager contracts info and set the endpoint
 
-**Terminal Commmand:**
+**Terminal Command:**
 
 ```bash
 sk-val init -e [ENDPOINT] -c [ABI] --wallet [software/ledger]
@@ -62,8 +61,8 @@ sk-val init -e [ENDPOINT] -c [ABI] --wallet [software/ledger]
 
 Required arguments:
 
--   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
-                    Example: wss://rinkeby.infura.io/ws/v3/...
+-   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`http` or `https`)
+                    Example: https://rinkeby.infura.io/v3/...
 
 -   `--contracts-url/-c` - URL to SKALE Manager contracts ABI and addresses
 
@@ -221,6 +220,11 @@ cpuid | grep SGX:
 ```bash
 SGX: Software Guard Extensions supported = true
 ```
+
+**Important note:**  
+For the docker installation you need to make sure that `live-restore` option 
+is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
+
 ---
 
 ### Set Up SGX Wallet
@@ -379,10 +383,19 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   16GB swap
 -   Install docker.io
 -   Install docker-compose 
+-   Make sure lvm2 package is installed (`dpkg -l | grep lvm2`)
 -   run commands with sudo
 
-This pre-release Validator and Node software is insecure. As such, the only tokens running on this early phase Validator net are  _test tokens only_. SKALE will release a more secure system prior to later Validator Devnet releases.
+
+**Important notes:**  
+1. For the docker installation you need to make sure that the `live-restore` option 
+is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
+2. If you have any issues you can save the logs using `skale logs dump` command.  
+It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
+
+2. This pre-release Validator and Node software is insecure. As such, the only tokens running on this early phase Validator net are  _test tokens only_. SKALE will release a more secure system prior to later Validator Devnet releases.
 ‍
+
 If you have any concerns or questions, please do not hesitate to reach out to SKALE Team leads on [discord](http://skale.chat/).
 
 [![Discord](https://img.shields.io/discord/534485763354787851.svg)](https://discord.gg/vvUtWJB)
@@ -391,8 +404,7 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-Make sure th `VERSION_NUM` is the latest version provided here= [versions](/validators/versions)
-For `RELEASE` parameter use the `develop` CLI versions use `develop` , for the `beta` CLI versions use `beta` , for the `stable` CLI versions use `stable`
+VERSION_NUM is a version identifier e.g. `1.1.0-beta.0`
 
 **Terminal Command:**
 
@@ -418,7 +430,7 @@ sudo chmod +x /usr/local/bin/skale
 
 Required options for the `skale node init` command:
 
--   `--install-deps` - install additional dependecies (like docker and docker-compose)
+-   `--install-deps` - install additional dependencies 
 
 Required options for the `skale node init` command in environment file:
 
@@ -434,7 +446,7 @@ Required options for the `skale node init` command in environment file:
 -   `DB_PASSWORD` - Password for root user of node internal database (equal to user password by default)
 -   `DB_USER` - MySQL user for local node database
 -   `IMA_ENDPOINT` - IMA endpoint to connect.
--   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed (`ws` or `wss`)
+-   `ENDPOINT` - RPC endpoint of the node in the network where SKALE manager is deployed (`http` or `https`)
 
 Create a `.env` file and specify following parameters:
 
@@ -578,12 +590,30 @@ skale node signature [VALIDATOR_ID]
 
 ```bash
 Signature: <your-signature>
+```
+
+Get your node address.
+
+**Terminal Command:** 
 
 ```
+skale wallet info
+```
+
+
+**Output:** 
+``` bash
+--------------------------------------------------
+Address: 0x... <- your address
+ETH balance: 0.1 ETH
+SKALE balance: 0 SKALE
+--------------------------------------------------
+```
+
 
 ### Step 3.5: Link skale wallet address to your validator account using validator-cli
 
-> Make sure you copied Node Address from STEP 3.5
+> You can find node address by executing `skale wallet info` command
 
 **Terminal Command:**
 
@@ -602,7 +632,7 @@ Optional arguments:
 
 ### Step 3.6: Send-Accept Delegation using validator-cli
 
-This step 3.6 and 3.7 is for testing delegation flow. If MSR is not set in the testnet please move to Step4.
+This step 3.6 and 3.7 is for testing delegation flow. If MSR is not set in the testnet please move to Step 4.
 
 > Make sure you  already have at least 100 SKL tokens in your validator wallet for TestNet MSR is 100SKL tokens.
 

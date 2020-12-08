@@ -70,6 +70,10 @@ Consensus: the build introduces BLAKE3 hash and consensus DB changes (for better
       - In this update, we’re adding CPU and memory limits for the IMA container (this will also affect sChain container allocation)
       - We’re changing the approach to estimating available memory on the machine
       - The resource allocation file generation procedure and structure were revised
+4. Ensure that the `live-restore` option is enabled in `/etc/docker/daemon.json`. 
+See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/)
+5. Ensure that lvm2 package is installed on your system (`dpkg -l | grep lvm2`)
+6. If there is any docker daemon failures please take a look to the service logs using `journalctl -u docker.service`. Also it's better to save them to share with the team to troubleshoot an issue. See more info in the [docker docs]('https://docs.docker.com/config/daemon/')
 
 **Note:** If DISK_MOUNTPOINT was changed in .env it’s required to do skale resources-allocation generate before update.
 
