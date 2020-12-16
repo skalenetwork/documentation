@@ -11,8 +11,8 @@ SKALE node REST API is available locally on the node and could be accessed on ht
 
 - [Node REST API v1](#node-rest-api-v1)
   * [Table of contents](#table-of-contents)
-  * [API structure](#api-structure)
-  * [Public/private APIs](#public-private-apis)
+  * [Endpoint structure](#endpoint-structure)
+  * [Allowed APIs](#allowed-apis)
   * [REST JSON API](#rest-json-api)
     + [Logs](#logs)
       - [Methods](#methods)
