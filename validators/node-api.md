@@ -39,15 +39,13 @@ SKALE node REST API is available locally on the node and could be accessed on ht
 /api/{API_VERSION}/{GROUP_NAME}/{METHOD_NAME}
 ```
 
-## Public/private APIs
+## Allowed APIs
 
 Methods that are marked as `ALLOWED` could be safely used by validators directly or by their custom tools.  
-Usage examples are available for public APIs.
-
-Direct use:
+Usage examples are available for `ALLOWED` APIs only.
 
 - `ALLOWED` - API is safe to use directly by custom tools
-- `NOT ALLOWED` - API shouldn't be used directly
+- `NOT RECOMMENDED` - This API changes the state of the node and should be used only if you're really confident of what you're doing
 
 ## REST JSON API
 
@@ -67,15 +65,15 @@ N/A
 
 #### Methods
 
-| URL                                 | Type   | Direct use    | Description                                                                                  | Required params                                                                                                                                          | Optional params                          |
-|-------------------------------------|--------|---------------|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
-| `/api/v1/node/info`                 | `GET`  | `ALLOWED`     | Get node info                                                                                | N/A                                                                                                                                                      | N/A                                      |
-| `/api/v1/node/register`             | `POST` | `NOT ALLOWED` | Register SKALE node on contracts                                                             | `ip` - internal IP address of the node, `public_ip` - public IP for RPC connections & consensus, `port` - base port for node sChains, `name` - node name | `gas_price`, `gas_limit`, `skip_dry_run` |
-| `/api/v1/node/maintenance-on`       | `POST` | `NOT ALLOWED` | Turn on maintenance mode                                                                     | N/A                                                                                                                                                      | N/A                                      |
-| `/api/v1/node/maintenance-off`      | `POST` | `NOT ALLOWED` | Turn off maintenance mode                                                                    | N/A                                                                                                                                                      | N/A                                      |
-| `/api/v1/node/send-tg-notification` | `POST` | `ALLOWED`     | Send Telegram notification to the node owner. Telegaram bot could be disabled by node owner. | `message` - Message string                                                                                                                               | N/A                                      |
-| `/api/v1/node/exit/start`           | `POST` | `NOT ALLOWED` | Start node exit process (async call)                                                         | N/A                                                                                                                                                      | N/A                                      |
-| `/api/v1/node/exit/status`          | `GET`  | `ALLOWED`     | Check node exit status                                                                       | N/A                                                                                                                                                      | N/A                                      |                                                                                                            | N/A             |
+| URL                                 | Type   | Direct use        | Description                                                                                  | Required params                                                                        | Optional params                          |
+|-------------------------------------|--------|-------------------|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------|
+| `/api/v1/node/info`                 | `GET`  | `ALLOWED`         | Get node info                                                                                | N/A                                                                                    | N/A                                      |
+| `/api/v1/node/register`             | `POST` | `NOT RECOMMENDED` | Register SKALE node on contracts                                                             | `ip` - IP address of the node, `port` - base port for node sChains, `name` - node name | `gas_price`, `gas_limit`, `skip_dry_run` |
+| `/api/v1/node/maintenance-on`       | `POST` | `NOT RECOMMENDED` | Turn on maintenance mode                                                                     | N/A                                                                                    | N/A                                      |
+| `/api/v1/node/maintenance-off`      | `POST` | `NOT RECOMMENDED` | Turn off maintenance mode                                                                    | N/A                                                                                    | N/A                                      |
+| `/api/v1/node/send-tg-notification` | `POST` | `ALLOWED`         | Send Telegram notification to the node owner. Telegaram bot could be disabled by node owner. | `message` - Message string                                                             | N/A                                      |
+| `/api/v1/node/exit/start`           | `POST` | `NOT RECOMMENDED` | Start node exit process (async call)                                                         | N/A                                                                                    | N/A                                      |
+| `/api/v1/node/exit/status`          | `GET`  | `ALLOWED`         | Check node exit status                                                                       | N/A                                                                                    | N/A                                      |                                                                                                     | N/A             |
 
 ### Usage
 
@@ -117,14 +115,14 @@ $ curl http://0.0.0.0:3007/api/v1/health/sgx
 
 #### Methods
 
-| URL                              | Type   | Direct use    | Description                                  | Required params                        | Optional params                           |
-|----------------------------------|--------|---------------|----------------------------------------------|----------------------------------------|-------------------------------------------|
-| `/api/v1/schains/config`         | `GET`  | `ALLOWED`     | Get sChain config                            | `schain_name` - the name of the sChain | N/A                                       |
-| `/api/v1/schains/list`           | `GET`  | `ALLOWED`     | List of sChains on the node                  | N/A                                    | N/A                                       |
-| `/api/v1/schains/dkg-statuses`   | `GET`  | `ALLOWED`     | Get DKG statuses for the sChains on the node | N/A                                    | `all` - show all sChains, not only active |
-| `/api/v1/schains/firewall-rules` | `GET`  | `ALLOWED`     | Firewall status for an sChain                | `schain_name` - the name of the sChain | N/A                                       |
-| `/api/v1/schains/repair`         | `POST` | `NOT ALLOWED` | Repair an sChain by removing volume          | `schain_name` - the name of the sChain | N/A                                       |
-| `/api/v1/schains/get`            | `GET`  | `ALLOWED`     | Get sChain info by name                      | `schain_name` - the name of the sChain | N/A                                       |                                |
+| URL                              | Type   | Direct use        | Description                                  | Required params                        | Optional params                           |
+|----------------------------------|--------|-------------------|----------------------------------------------|----------------------------------------|-------------------------------------------|
+| `/api/v1/schains/config`         | `GET`  | `ALLOWED`         | Get sChain config                            | `schain_name` - the name of the sChain | N/A                                       |
+| `/api/v1/schains/list`           | `GET`  | `ALLOWED`         | List of sChains on the node                  | N/A                                    | N/A                                       |
+| `/api/v1/schains/dkg-statuses`   | `GET`  | `ALLOWED`         | Get DKG statuses for the sChains on the node | N/A                                    | `all` - show all sChains, not only active |
+| `/api/v1/schains/firewall-rules` | `GET`  | `ALLOWED`         | Firewall status for an sChain                | `schain_name` - the name of the sChain | N/A                                       |
+| `/api/v1/schains/repair`         | `POST` | `NOT RECOMMENDED` | Repair an sChain by removing volume          | `schain_name` - the name of the sChain | N/A                                       |
+| `/api/v1/schains/get`            | `GET`  | `ALLOWED`         | Get sChain info by name                      | `schain_name` - the name of the sChain | N/A                                       |                                |
 
 #### Usage
 
@@ -149,10 +147,10 @@ $ curl http://0.0.0.0:3007/api/v1/schains/get?schain_name=rapping-chara
 
 #### Methods
 
-| URL                  | Type   | Direct use    | Description                             | Required params                 | Optional params                                |
-|----------------------|--------|---------------|-----------------------------------------|---------------------------------|------------------------------------------------|
-| `/api/v1/ssl/status` | `GET`  | `ALLOWED`     | Get status of the SSL certs on the node | N/A                             | N/A                                            |
-| `/api/v1/ssl/upload` | `POST` | `NOT ALLOWED` | Upload SSL certificates                 | `ssl_key` file, `ssl_cert` file | `force` - update is certs are already uploaded |
+| URL                  | Type   | Direct use        | Description                             | Required params                 | Optional params                                |
+|----------------------|--------|-------------------|-----------------------------------------|---------------------------------|------------------------------------------------|
+| `/api/v1/ssl/status` | `GET`  | `ALLOWED`         | Get status of the SSL certs on the node | N/A                             | N/A                                            |
+| `/api/v1/ssl/upload` | `POST` | `NOT RECOMMENDED` | Upload SSL certificates                 | `ssl_key` file, `ssl_cert` file | `force` - update is certs are already uploaded |
 
 #### Usage
 
@@ -165,10 +163,10 @@ $ curl http://0.0.0.0:3007/api/v1/ssl/status
 
 #### Methods
 
-| URL                       | Type   | Direct use    | Description                  | Required params                                                                                               | Optional params |
-|---------------------------|--------|---------------|------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------|
-| `/api/v1/wallet/info`     | `GET`  | `ALLOWED`     | Info about SKALE node wallet | N/A                                                                                                           | N/A             |
-| `/api/v1/wallet/send-eth` | `POST` | `NOT ALLOWED` | Send ETH                     | `address` - receiver address, `amount` - ETH amount to send, `gas_limit` - gas limit, `gas_price` - gas price | N/A             |
+| URL                       | Type   | Direct use        | Description                  | Required params                                                                                               | Optional params |
+|---------------------------|--------|-------------------|------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------|
+| `/api/v1/wallet/info`     | `GET`  | `ALLOWED`         | Info about SKALE node wallet | N/A                                                                                                           | N/A             |
+| `/api/v1/wallet/send-eth` | `POST` | `NOT RECOMMENDED` | Send ETH                     | `address` - receiver address, `amount` - ETH amount to send, `gas_limit` - gas limit, `gas_price` - gas price | N/A             |
 
 #### Usage
 
