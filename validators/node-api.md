@@ -33,10 +33,10 @@ SKALE node REST API is available locally on the node and could be accessed on ht
       - [Methods](#methods-5)
       - [Usage](#usage-5)
 
-## API structure
+## Endpoint structure
 
 ```bash
-/api/{API_VERSION}/{BLUEPRINT_NAME}/{METHOD_NAME}
+/api/{API_VERSION}/{GROUP_NAME}/{METHOD_NAME}
 ```
 
 ## Public/private APIs
