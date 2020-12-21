@@ -84,7 +84,7 @@ $ curl http://0.0.0.0:3007/api/v1/node/info
 $ curl -X POST -H "Content-Type: application/json" --data '{"message":"xyz"}' http://0.0.0.0:3007/api/v1/node/send-tg-notification
 {"status": "ok", "payload": "Message was sent successfully"}
 
-$ curl http://0.0.0.0:3007/api/node/exit/status
+$ curl http://0.0.0.0:3007/api/v1/node/exit/status
 {"status": "ok", "payload": {"status": "ACTIVE", "data": [{"name": "wailing-alniyat", "status": "ACTIVE"}, {"name": "handsome-fornacis", "status": "ACTIVE"}], "exit_time": 0}}
 ```
 
