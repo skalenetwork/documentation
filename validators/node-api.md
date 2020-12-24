@@ -71,7 +71,7 @@ N/A
 | `/api/v1/node/register`             | `POST` | `NOT RECOMMENDED` | Register SKALE node on contracts                                                             | `ip` - IP address of the node, `port` - base port for node sChains, `name` - node name | `gas_price`, `gas_limit`, `skip_dry_run` |
 | `/api/v1/node/maintenance-on`       | `POST` | `NOT RECOMMENDED` | Turn on maintenance mode                                                                     | N/A                                                                                    | N/A                                      |
 | `/api/v1/node/maintenance-off`      | `POST` | `NOT RECOMMENDED` | Turn off maintenance mode                                                                    | N/A                                                                                    | N/A                                      |
-| `/api/v1/node/send-tg-notification` | `POST` | `ALLOWED`         | Send Telegram notification to the node owner. Telegaram bot could be disabled by node owner. | `message` - Message string                                                             | N/A                                      |
+| `/api/v1/node/send-tg-notification` | `POST` | `ALLOWED`         | Send Telegram notification to the node owner. Telegaram bot could be disabled by node owner. | `message` - Array of message strings                                                             | N/A                                      |
 | `/api/v1/node/exit/start`           | `POST` | `NOT RECOMMENDED` | Start node exit process (async call)                                                         | N/A                                                                                    | N/A                                      |
 | `/api/v1/node/exit/status`          | `GET`  | `ALLOWED`         | Check node exit status                                                                       | N/A                                                                                    | N/A                                      |  | N/A |
 
@@ -81,7 +81,7 @@ N/A
 $ curl http://0.0.0.0:3007/api/v1/node/info
 {"status": "ok", "payload": {"node_info": {"name": "node0", "ip": "18.194.30.195", "publicIP": "18.194.30.195", "port": 10000, "start_block": 7484303, "last_reward_date": 1604422772, "finish_time": 0, "status": 0, "validator_id": 13, "publicKey": "0xfbdbe73613dd3113ca0e614d98e7af43199a4be970d76b013fe8b8b70c1d250fb1ba33d8b18f580d8ab51cf17344ff2dc9d0755612ce34a6a73cd5dc9e76bb77", "id": 3, "owner": "0x491499770619f5d5AA3F2Bb4B69f7E03778Dac5E"}}}
 
-$ curl -X POST -H "Content-Type: application/json" --data '{"message":"xyz"}' http://0.0.0.0:3007/api/v1/node/send-tg-notification
+$ curl -X POST -H "Content-Type: application/json" --data '{"message":["abc", "xyz"]}' http://0.0.0.0:3007/api/v1/node/send-tg-notification
 {"status": "ok", "payload": "Message was sent successfully"}
 
 $ curl http://0.0.0.0:3007/api/v1/node/exit/status
