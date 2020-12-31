@@ -28,7 +28,7 @@ Schains launch, IMA beta version
 
 **skale-admin**: 1.1.0-beta.6
 
-**skale-node**: 1.3.0-testnet
+**skale-node**: 1.3.1-testnet
 
 **watchdog**: 1.1.2-beta.0 
 
