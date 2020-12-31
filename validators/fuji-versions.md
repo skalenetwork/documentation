@@ -6,33 +6,31 @@ The rest of the versions were provided for docker containers and correspondent t
 ### TestNet Phase 3.1 Versions - SKALE chain creation
 Schains launch, IMA beta version
 
-**Validator CLI version**: 1.2.0-beta.1
+**Validator CLI version**: 1.2.0-beta.2
 
-**Node CLI version**: 1.1.0-beta.4
+**Node CLI version**: 1.1.0-beta.5
 
-**SGX version: sgxwallet**: 1.59.1-stable.6
+**SGX version: sgxwallet**: 1.64.2-develop.5
 
-**SKALE Manager version**: 1.6.2-develop.0
+**SKALE Manager version**: 1.7.0-beta.0
 
-**Skaled version**: 2.0.4-develop.3
+**Skaled version**: 3.2.2-develop.0
 
-**Skale Admin version**: 1.1.0-develop.17
+**Skale Admin version**: 1.1.0-beta.6
 
-**Transaction Manager version**: 1.0.0-develop.8
+**Transaction Manager version**: 1.1.0-beta.1
 
-**Skale Sla version**: 1.0.0-develop.0
+**Skale Sla version**: 1.0.2-beta.1
 
-**Skale Bounty version**: 1.1.0-stable.0
+**Skale Bounty version**: 1.1.1-beta.0
 
 **docker-lvmpy**: 1.0.1
 
-**skale-admin**: 1.1.0-develop.21
+**skale-admin**: 1.1.0-beta.6
 
-**sla-agent**: 1.0.2-beta.1
+**skale-node**: 1.3.0-testnet
 
-**skale-node**: 1.2.2 Testnet
-
-**watchdog**: 1.0.0-stable.0 
+**watchdog**: 1.1.2-beta.0 
 
 ----------------
 ## Old Versions

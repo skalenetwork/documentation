@@ -131,7 +131,7 @@ Note: This is for testing purposes only. [**Whitelist**](https://alpine.skale.ne
 
 ### Step 1.5: Write down your Node Address (SGX Wallet Address)
 
-After executing following command you will find see Node Address
+After executing following command you will find Node Address (Sgx Wallet Address)
 
 **Terminal Command:**
 
@@ -220,7 +220,7 @@ SGX: Software Guard Extensions supported = true
 ```
 
 **Important note:**  
-For the docker installation you need to make sure that `live-restore` option 
+After installing docker make sure that `live-restore` option
 is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
 
 ---
@@ -384,7 +384,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 
 
 **Important notes:**  
-1. For the docker installation you need to make sure that the `live-restore` option 
+1. After docker installation make sure that the `live-restore` option
 is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
 2. If you have any issues you can save the logs using `skale logs dump` command.  
 It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
