@@ -721,6 +721,11 @@ skale node register --name [NODE_NAME] --ip [NODE_IP] --port [PORT]
 
 ```
 
+Optional arguments:
+
+-   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
+
+
 **Output:**
 
 > Node registered in SKALE manager. For more info run: skale node info
