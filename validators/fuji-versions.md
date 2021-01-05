@@ -26,9 +26,7 @@ Schains launch, IMA beta version
 
 **docker-lvmpy**: 1.0.1
 
-**skale-admin**: 1.1.0-beta.6
-
-**skale-node**: 1.3.1-testnet
+**skale-node**: 1.3.2-testnet
 
 **watchdog**: 1.1.2-beta.0 
 
