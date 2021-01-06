@@ -16,6 +16,8 @@ Schains launch, IMA beta version
 
 **Skaled version**: 3.2.2-develop.0
 
+**IMA version**: 1.0.0-develop.103
+
 **Skale Admin version**: 1.1.0-beta.7
 
 **Transaction Manager version**: 1.1.0-beta.1
