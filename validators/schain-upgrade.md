@@ -63,22 +63,22 @@ Consensus: the build introduces BLAKE3 hash and consensus DB changes (for better
 
 #### Important
 
-1. Validators need to update docker-compose version on their machines to 1.27.4, because we started using new docker-compose syntax (cpu_shares functionality in particular).
-2. Validators need to remove .skale/node_data/skale.db before skale node update , because we updated db schema and until we have the migration ready we need to fast through this step by removing the folder.
-3. Resource allocation file should be re-created on all nodes - this should be done automatically during node update :
-    - Why resource allocation should be updated?
-      - In this update, we’re adding CPU and memory limits for the IMA container (this will also affect sChain container allocation)
-      - We’re changing the approach to estimating available memory on the machine
-      - The resource allocation file generation procedure and structure were revised
-4. Ensure that the `live-restore` option is enabled in `/etc/docker/daemon.json`. 
+1.  Validators need to update docker-compose version on their machines to 1.27.4, because we started using new docker-compose syntax (cpu_shares functionality in particular).
+2.  Validators need to remove .skale/node_data/skale.db before skale node update , because we updated db schema and until we have the migration ready we need to fast through this step by removing the folder.
+3.  Resource allocation file should be re-created on all nodes - this should be done automatically during node update :
+    -   Why resource allocation should be updated?
+      -   In this update, we’re adding CPU and memory limits for the IMA container (this will also affect sChain container allocation)
+      -   We’re changing the approach to estimating available memory on the machine
+      -   The resource allocation file generation procedure and structure were revised
+4.  Ensure that the `live-restore` option is enabled in `/etc/docker/daemon.json`. 
 See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/)
-5. Ensure that lvm2 package is installed on your system (`dpkg -l | grep lvm2`)
-6. If there is any docker daemon failures please take a look to the service logs using `journalctl -u docker.service`. Also it's better to save them to share with the team to troubleshoot an issue. See more info in the [docker docs]('https://docs.docker.com/config/daemon/')
+5.  Ensure that lvm2 package is installed on your system (`dpkg -l | grep lvm2`)
+6.  If there is any docker daemon failures please take a look to the service logs using `journalctl -u docker.service`. Also it's better to save them to share with the team to troubleshoot an issue. See more info in the [docker docs]('https://docs.docker.com/config/daemon/')
 
 **Note:** If DISK_MOUNTPOINT was changed in .env it’s required to do skale resources-allocation generate before update.
 
-4. Validators' Ledger devices: make sure the contract_data is ALLOWED (this can be set to Not Allowed after Ledger software update)
-5. Due to Secure Enclave changes introduced for the SGX Wallet release candidate, validators will need a backup key for the update
+4.  Validators' Ledger devices: make sure the contract_data is ALLOWED (this can be set to Not Allowed after Ledger software update)
+5.  Due to Secure Enclave changes introduced for the SGX Wallet release candidate, validators will need a backup key for the update
 
 #### Use these Versions for set up
 
@@ -112,12 +112,12 @@ See more info in the [docker docs](https://docs.docker.com/config/containers/liv
 
 #### Step 2.1 Update SGX
 
- 1. Find your SGX back up key from the previous set up
- 2. From sgx folder do : docker-compose down 
- 3. Perform `git pull`
- 4. Check-out to sgx version tag: `git checkout tags/1.58.7-develop.1`
- 5. Make sure `image` is skalenetwork/sgxwallet:1.58.7-develop.1 in docker-compose:
- 6. [Recover from back up] (https://skale.network/docs/documentation/sgxwallet/docs/backup-procedure)
+1.  Find your SGX back up key from the previous set up
+2.  From sgx folder do : docker-compose down 
+3.  Perform `git pull`
+4.  Check-out to sgx version tag: `git checkout tags/1.58.7-develop.1`
+5.  Make sure `image` is skalenetwork/sgxwallet:1.58.7-develop.1 in docker-compose:
+6.  [Recover from back up](https://skale.network/docs/documentation/sgxwallet/docs/backup-procedure)
  
 #### Step 2.2 Install SKALE Node CLI
 

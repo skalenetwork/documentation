@@ -141,7 +141,7 @@ There are two types of calls that a dApp can make via RPC:
 
 Examples:
 
-Example 1:  Use RPC to connect to a SKALE Chain (follow the detailed instructions within  [GETH](https://github.com/ethereum/wiki/wiki/JSON-RPC) documentation) and replace the [ENDPOINT] with a SKALE Chain RPC endpoint.
+Example 1:  Use RPC to connect to a SKALE Chain (follow the detailed instructions within  [GETH](https://github.com/ethereum/wiki/wiki/JSON-RPC) documentation) and replace the `ENDPOINT` with a SKALE Chain RPC endpoint.
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":67}' "[ENDPOINT]" -k 
@@ -236,7 +236,7 @@ SLA Agent has its Container. SKALE spins up one SLA Agent per validator Node (SE
 
 Every 30 days, validator gets bounties and collects data 1 hour before the epoch time:  
 
-At the time [T30 - 1] the SLA agent receives the aggregated data(metrics) from MySQL Database in MySQL Container  
+At the time `T30 - 1` the SLA agent receives the aggregated data(metrics) from MySQL Database in MySQL Container  
 At the time, T30 SLA sends the metrics to SKALE Manager.  
 
 To do that, we ignore the highest and lowest values from the equation. (Median)

@@ -153,7 +153,6 @@ Please copy your SGX Wallet Address, you will be using it for linking node addre
 
 </Step>
 
-
 <Step id='two'>
 
 ## 2. Set up SGX Wallet
@@ -382,14 +381,13 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   Make sure lvm2 package is installed (`dpkg -l | grep lvm2`)
 -   run commands with sudo
 
-
 **Important notes:**  
-1. After docker installation make sure that the `live-restore` option
-is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
-2. If you have any issues you can save the logs using `skale logs dump` command.  
-It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
 
-‍
+1.  After docker installation make sure that the `live-restore` option
+is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
+
+2.  If you have any issues you can save the logs using `skale logs dump` command.  
+It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
 
 If you have any concerns or questions, please do not hesitate to reach out to SKALE Team leads on [discord](http://skale.chat/).
 
@@ -595,7 +593,6 @@ Get your node address.
 skale wallet info
 ```
 
-
 **Output:** 
 ``` bash
 --------------------------------------------------
@@ -604,7 +601,6 @@ ETH balance: 0.1 ETH
 SKALE balance: 0 SKALE
 --------------------------------------------------
 ```
-
 
 ### Step 3.5: Link skale wallet address to your validator account using validator-cli
 
@@ -623,7 +619,6 @@ Optional arguments:
 -   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
 
 -   `--yes` - Confirmation flag
-
 
 ### Step 3.6: Send-Accept Delegation using validator-cli
 
