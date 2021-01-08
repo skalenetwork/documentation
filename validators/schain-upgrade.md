@@ -87,33 +87,31 @@ See more info in the [docker docs](https://docs.docker.com/config/containers/liv
 
 #### Use these Versions for set up
 
-**Validator CLI version**: 1.2.0-beta.1
+**Validator CLI version**: 1.2.0-beta.2
 
-**Node CLI version**: 1.1.0-beta.4
+**Node CLI version**: 1.1.0-beta.5
 
-**SGX version: sgxwallet**: 1.59.1-stable.6
+**SGX version: sgxwallet**: 1.64.2-develop.5
 
-**SKALE Manager version**: 1.6.2-develop.0
+**SKALE Manager version**: 1.7.0-beta.0
 
-**Skaled version**: 2.0.4-develop.3
+**Skaled version**: 3.2.2-develop.0
 
-**Skale Admin version**: 1.1.0-develop.17
+**IMA version**: 1.0.0-develop.103
 
-**Transaction Manager version**: 1.0.0-develop.8
+**Skale Admin version**: 1.1.0-beta.7
 
-**Skale Sla version**: 1.0.0-develop.0
+**Transaction Manager version**: 1.1.0-beta.1
 
-**Skale Bounty version**: 1.1.0-stable.0
+**Skale Sla version**: 1.0.2-beta.1
+
+**Skale Bounty version**: 1.1.1-beta.0
 
 **docker-lvmpy**: 1.0.1
 
-**skale-admin**: 1.1.0-develop.21
+**skale-node**: 1.3.2-testnet
 
-**sla-agent**: 1.0.2-beta.1
-
-**skale-node**: 1.2.2 Testnet
-
-**watchdog**: 1.0.0-stable.0 
+**watchdog**: 1.1.2-beta.0 
 
 #### Step 2.1 Update SGX
 
@@ -176,4 +174,4 @@ skale node update .env
 ### Step 3 - Download and reinitialize Validator CLI
 
 With this current version there have been some bug fixes and new features added to SKALE validator CLI. 
-Please follow your regular validator cli set up guidelines to upgrade validator-cli with version `1.2.0-beta.1`
+Please follow your regular validator cli set up guidelines to upgrade validator-cli with version `1.2.0-beta.2`
