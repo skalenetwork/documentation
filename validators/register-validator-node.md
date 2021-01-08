@@ -109,20 +109,14 @@ sk-val validator register -n [NAME] -d [DESCRIPTION] -c [COMMISSION_RATE] --min-
 Required arguments:
 
 -   `--name/-n` - Validator name
--   `--description/-d` - Validator description (preferably organization
-info)
-
+-   `--description/-d` - Validator description (preferably organization info)
 -   `--commission-rate/-c` - Commission rate (percent %)
-
 -   `--min-delegation` - Validator minimum delegation amount
-
 
 Optional arguments:
 
 -   `--pk-file` - Path to file with private key (only for `software` wallet type)
-
 -   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
-
 -   `--yes` - Confirmation flag
 
 ### Step 1.4: Make sure that the validator is added to the whitelist
@@ -615,9 +609,7 @@ SKALE balance: 0 SKALE
 Optional arguments:
 
 -   `--pk-file` - Path to file with private key (only for `software` wallet type)
-
 -   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
-
 -   `--yes` - Confirmation flag
 
 ### Step 3.6: Send-Accept Delegation using validator-cli
@@ -634,22 +626,14 @@ This step 3.6 and 3.7 is for testing delegation flow. If MSR is not set in the t
 Required arguments:
 
 -   `--validator-id` - Validator id
-
--   `--amount` - Delegation amount
-info)
-
--   `--delegation-period` - Delegation period (only 2 month allowed for
-now)
-
+-   `--amount` - Delegation amount info)
+-   `--delegation-period` - Delegation period (only 2 month allowed for now)
 -   `--info` - Delegation info
 
 Optional arguments:
 
 -   `--pk-file` - Path to file with private key (only for software wallet
-
--   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
-type)
-
+-   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used) type)
 -   `--yes` - Confirmation flag
 
 List your delegations
@@ -675,9 +659,7 @@ Required arguments:
 Optional arguments:
 
 -   `--pk-file` - Path to file with private key (only for software wallet type)
-
 -   `--gas-price` - Gas price value in Gwei for transaction (if not specified doubled average network value will be used)
-
 -   `--yes` - Confirmation flag
 
 List your delegations make sure your accepted delegations are equal or more than 100SKL tokens

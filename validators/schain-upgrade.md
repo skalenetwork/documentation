@@ -118,15 +118,15 @@ See more info in the [docker docs](https://docs.docker.com/config/containers/liv
 1.  Find your SGX back up key from the previous set up
 2.  From sgx folder do : docker-compose down 
 3.  Perform `git pull`
-4.  Check-out to sgx version tag: `git checkout tags/1.58.7-develop.1`
-5.  Make sure `image` is skalenetwork/sgxwallet:1.58.7-develop.1 in docker-compose:
+4.  Check-out to sgx version tag: `git checkout tags/1.64.2-develop.5`
+5.  Make sure `image` is skalenetwork/sgxwallet:1.64.2-develop.5 in docker-compose:
 6.  [Recover from back up](https://skale.network/docs/documentation/sgxwallet/docs/backup-procedure)
  
 #### Step 2.2 Install SKALE Node CLI
 
 #### Download the SKALE Node CLI binary
 
-Make sure th `VERSION_NUM` is the 1.1.0-beta.3
+Make sure th `VERSION_NUM` is the 1.1.0-beta.5
 
 **Terminal Command:**
 
