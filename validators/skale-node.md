@@ -58,11 +58,8 @@ To register a new node in the SKALE network please follow the steps in the [CLI 
 SKALE Chain is a container running the SKALE Daemon service including the SKALE consensus. SKALE Chains are created and managed through the SKALE Manager located on the Ethereum blockchain. SKALE Manager is a series of smart contracts responsible for:  
 
 -   The orchestration and creation of SKALE Chains  
-      
 -   The registration of validators with the SKALE Network  
-      
 -   The performance measuring of nodes in the network  
-      
 
 We will have more documentation regarding SKALE Manager responsibilities and architecture available in the upcoming Alpine Team Phases.  
 
@@ -141,7 +138,7 @@ There are two types of calls that a dApp can make via RPC:
 
 Examples:
 
-Example 1:  Use RPC to connect to a SKALE Chain (follow the detailed instructions within  [GETH](https://github.com/ethereum/wiki/wiki/JSON-RPC) documentation) and replace the [ENDPOINT] with a SKALE Chain RPC endpoint.
+Example 1:  Use RPC to connect to a SKALE Chain (follow the detailed instructions within  [GETH](https://github.com/ethereum/wiki/wiki/JSON-RPC) documentation) and replace the `ENDPOINT` with a SKALE Chain RPC endpoint.
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":67}' "[ENDPOINT]" -k 
@@ -180,7 +177,9 @@ Storage in aleth, geth or any other Ethereum client is a Merkle Tree, which is t
 <img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9bedec787cd068ca3d2c23_Screen%20Shot%202019-10-07%20at%205.34.43%20PM.png" width="500" /> 
 
 -   Consensus does not accept any new transactions until the block is created. The block will be acceptable and will be valid if 2/3 of nodes agree. (DKG algorithm runs here). After the block creation, it will be sealed with the (BLS) signature.  
-    ‍**SGX is a secure storage for BLS private key shares. It would be used inside consensus to sign new blocks. But SGX is not only used for private key shares; it can also be used for storing any secured data. Such as ECDSA (Elliptic Curve Digital Signature Algorithm). For more information, please check** [**here.**](/validators/requirements)  
+ 
+**SGX is a secure storage for BLS private key shares. It would be used inside consensus to sign new blocks. But SGX is not only used for private key shares; it can also be used for storing any secured data. Such as ECDSA (Elliptic Curve Digital Signature Algorithm). For more information, please check** [**here.**](/validators/requirements)  
+
 -   Set of transactions which created in block goes to EVM  
 -   If the transaction successfully sent to address from A to B. EVM updates the info in Key-Value storage(Level DB)  
 
@@ -236,7 +235,7 @@ SLA Agent has its Container. SKALE spins up one SLA Agent per validator Node (SE
 
 Every 30 days, validator gets bounties and collects data 1 hour before the epoch time:  
 
-At the time [T30 - 1] the SLA agent receives the aggregated data(metrics) from MySQL Database in MySQL Container  
+At the time `T30 - 1` the SLA agent receives the aggregated data(metrics) from MySQL Database in MySQL Container  
 At the time, T30 SLA sends the metrics to SKALE Manager.  
 
 To do that, we ignore the highest and lowest values from the equation. (Median)
