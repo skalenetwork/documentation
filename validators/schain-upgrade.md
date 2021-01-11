@@ -1,14 +1,14 @@
-## FUJI Upgrade for SKALE Chain Creation
+## FUJI Upgrade Node for SKALE Chain Launch 
 
-### Step 1 - TestNet Phase 3.0 - Versions for setting up with the current Mainnet environment  
-
-### TestNet Phase 3.0 Versions - Mainnet version
+### Step 1 - Set up node with v1.0.0
 
 **Node CLI version**: 1.0.0
+
 **Validator CLI version**:  1.1.1
+
 **SGX Wallet**: 1.58.5-stable.1
 
-### Versions for Review
+### These versions are provided only for reviewing:
 
 **SKALE Manager version**: 1.5.2
 
@@ -26,7 +26,7 @@
 
 **watchdog**: 1.0.0-stable.0
 
-#### Mainnet Environment Variables
+#### Environment Variables
 
 ```bash
 MONITORING_CONTAINERS=True
@@ -46,12 +46,12 @@ ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby]
 ```
 ---
 
-#### Back up SGX after node set up 
+#### Back up SGX after node set up :
  [How to back up SGX](https://skale.network/docs/documentation/sgxwallet/docs/backup-procedure)
 
-### Step 2 - TestNet Phase 3.1 Versions for SKALE Chain creation
+### Step 2 - Upgrade TestNet to v1.1.0-beta.5 Version for SKALE Chain creation
 
-#### Important Notes - Before Update
+#### Prerequisites
 
 This update includes changes to docker-compose option:
 
@@ -61,7 +61,7 @@ Installing docker-compose during SKALE node init is now disabled.
 
 Consensus: the build introduces BLAKE3 hash and consensus DB changes (for better performance). Should not impact update process
 
-#### Important
+#### Important notes:
 
 1.  Validators need to update docker-compose version on their machines to 1.27.4, because we started using new docker-compose syntax (cpu_shares functionality in particular).
 
@@ -151,7 +151,7 @@ MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.1
 MANAGER_CONTRACTS_ABI_URL=https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-upgrade-skale-chains.json
 IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-develop.38/abi.json
-CONTAINER_CONFIGS_STREAM=1.2.2 Testnet
+CONTAINER_CONFIGS_STREAM=1.3.2-testnet
 FILEBEAT_HOST=3.17.12.121:5000
 SGX_SERVER_URL=[By validator, setup SGX wallet first]
 DISK_MOUNTPOINT=[By validator, your attached storage /dev/sda or /dev/xvdd (this is an example. You just need to use your 2TB block volume mount point)]
