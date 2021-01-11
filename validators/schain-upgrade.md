@@ -1,5 +1,7 @@
 ## FUJI Upgrade Node for SKALE Chain Launch 
 
+PLEASE DON'T USE Mainnet SGX or SKALE Node for Testnet! 
+
 ### Step 1 - Set up node with v1.0.0
 
 **Node CLI version**: 1.0.0
