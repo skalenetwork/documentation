@@ -372,7 +372,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   16GB swap
 -   Install docker.io
 -   Install docker-compose 
--   Install iptables-persistent
+-   Install iptables-persistent - (for reinitializing base firewall rules after node machine was rebooted)
 -   Make sure lvm2 package is installed (`dpkg -l | grep lvm2`)
 
 **Important notes:**  
