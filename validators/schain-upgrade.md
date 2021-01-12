@@ -80,7 +80,7 @@ See more info in the [docker docs](https://docs.docker.com/config/containers/liv
 
 5.  Ensure that lvm2 package is installed on your system (`dpkg -l | grep lvm2`)
 
-6.  Ensure that iptables-persistent is installed on your system (`dpkg -l | grep iptables-persistant`)
+6.  Ensure that iptables-persistent is installed on your system (`dpkg -l | grep iptables-persistent`)
 
 7.  If there is any docker daemon failures please take a look to the service logs using `journalctl -u docker.service`. Also it's better to save them to share with the team to troubleshoot an issue. See more info in the [docker docs]('https://docs.docker.com/config/daemon/')
 
