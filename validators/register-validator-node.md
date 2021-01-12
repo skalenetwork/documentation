@@ -390,7 +390,7 @@ echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo deb
 sudo apt install iptables-persistent -y
 ```
 
-4. You should run skale commands using sudo
+4.  You should run skale commands using sudo
 
 
 If you have any concerns or questions, please do not hesitate to reach out to SKALE Team leads on [discord](http://skale.chat/).
