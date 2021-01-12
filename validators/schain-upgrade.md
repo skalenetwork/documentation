@@ -80,12 +80,14 @@ See more info in the [docker docs](https://docs.docker.com/config/containers/liv
 
 5.  Ensure that lvm2 package is installed on your system (`dpkg -l | grep lvm2`)
 
-6.  If there is any docker daemon failures please take a look to the service logs using `journalctl -u docker.service`. Also it's better to save them to share with the team to troubleshoot an issue. See more info in the [docker docs]('https://docs.docker.com/config/daemon/')
+6.  Ensure that iptables-persistent is installed on your system (`dpkg -l | grep iptables-persistant`)
+
+7.  If there is any docker daemon failures please take a look to the service logs using `journalctl -u docker.service`. Also it's better to save them to share with the team to troubleshoot an issue. See more info in the [docker docs]('https://docs.docker.com/config/daemon/')
 
 **Note:** If DISK_MOUNTPOINT was changed in .env it’s required to do skale resources-allocation generate before update.
 
-4.  Validators' Ledger devices: make sure the contract_data is ALLOWED (this can be set to Not Allowed after Ledger software update)
-5.  Due to Secure Enclave changes introduced for the SGX Wallet release candidate, validators will need a backup key for the update
+8.  Validators' Ledger devices: make sure the contract_data is ALLOWED (this can be set to Not Allowed after Ledger software update)
+9.  Due to Secure Enclave changes introduced for the SGX Wallet release candidate, validators will need a backup key for the update
 
 #### Use these Versions for set up
 
