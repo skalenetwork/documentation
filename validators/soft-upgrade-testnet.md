@@ -56,6 +56,11 @@ dpkg -l | grep iptables-persistent
 
 #### Cleanup database
 
+**WARNING** Do it only if your node has no schains. You can check it using:
+``` bash
+skale containers schains
+```
+
 Remove database file
 ``` bash
 rm .skale/node_data/skale.db
