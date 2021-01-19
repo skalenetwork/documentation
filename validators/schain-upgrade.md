@@ -51,14 +51,14 @@ ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby]
 #### Back up SGX after node set up :
  [How to back up SGX](https://skale.network/docs/documentation/sgxwallet/docs/backup-procedure)
 
-### Step 2 - Upgrade TestNet to v1.1.0-beta.5 Version for SKALE Chain creation
+### Step 2 - Upgrade TestNet node to 1.4.1-testnet version for SKALE Chain creation
 
 #### Prerequisites
 
 This update includes changes to docker-compose option:
 
-with the update, validators would need to support docker-compose themselves: setup and update it if necessary. 
 
+With the update, validators would need to support docker-compose themselves: setup and update it if necessary. 
 Installing docker-compose during SKALE node init is now disabled.
 
 Consensus: the build introduces BLAKE3 hash and consensus DB changes (for better performance). Should not impact update process
@@ -67,13 +67,15 @@ Consensus: the build introduces BLAKE3 hash and consensus DB changes (for better
 
 1.  Validators need to update docker-compose version on their machines to 1.27.4, because we started using new docker-compose syntax (cpu_shares functionality in particular).
 
-2.  Validators need to remove .skale/node_data/skale.db before skale node update , because we updated db schema and until we have the migration ready we need to fast through this step by removing the folder.
+2.  Validators need to remove .skale/node_data/skale.db before skale node update , because we updated db schema and until we have the migration ready we need to fast through this step by removing the folder. 
+    You can use `rm .skale/node_data/skale.db` command to do it.
 
 3.  Resource allocation file should be re-created on all nodes - this should be done automatically during node update :
     -   Why resource allocation should be updated?
       -   In this update, we’re adding CPU and memory limits for the IMA container (this will also affect sChain container allocation)
       -   We’re changing the approach to estimating available memory on the machine
       -   The resource allocation file generation procedure and structure were revised
+      -   **Note:** If DISK_MOUNTPOINT was changed in .env it’s required to do skale resources-allocation generate before update.
 
 4.  Ensure that the `live-restore` option is enabled in `/etc/docker/daemon.json`. 
 See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/)
@@ -84,8 +86,6 @@ See more info in the [docker docs](https://docs.docker.com/config/containers/liv
 
 7.  If there is any docker daemon failures please take a look to the service logs using `journalctl -u docker.service`. Also it's better to save them to share with the team to troubleshoot an issue. See more info in the [docker docs]('https://docs.docker.com/config/daemon/')
 
-**Note:** If DISK_MOUNTPOINT was changed in .env it’s required to do skale resources-allocation generate before update.
-
 8.  Validators' Ledger devices: make sure the contract_data is ALLOWED (this can be set to Not Allowed after Ledger software update)
 9.  Due to Secure Enclave changes introduced for the SGX Wallet release candidate, validators will need a backup key for the update
 
@@ -93,17 +93,15 @@ See more info in the [docker docs](https://docs.docker.com/config/containers/liv
 
 **Validator CLI version**: 1.2.0-beta.2
 
-**Node CLI version**: 1.1.0-beta.5
+**Node CLI version**: 1.1.0-beta.6
 
-**SGX version: sgxwallet**: 1.64.2-develop.5
+**SGX version: sgxwallet**: 1.66.1-beta.0
 
-**SKALE Manager version**: 1.7.0-beta.0
+**Skaled version**: 3.4.1-beta.0
 
-**Skaled version**: 3.2.2-develop.0
+**IMA version**: 1.0.0-beta.0
 
-**IMA version**: 1.0.0-develop.103
-
-**Skale Admin version**: 1.1.0-beta.7
+**Skale Admin version**: 1.1.0-beta.10
 
 **Transaction Manager version**: 1.1.0-beta.1
 
@@ -113,24 +111,25 @@ See more info in the [docker docs](https://docs.docker.com/config/containers/liv
 
 **docker-lvmpy**: 1.0.1
 
-**skale-node**: 1.3.2-testnet
+**skale-node**: 1.4.1-testnet
 
-**watchdog**: 1.1.2-beta.0 
+**watchdog**: 1.1.3-beta.0 
+
 
 #### Step 2.1 Update SGX
 
 1.  Find your SGX back up key from the previous set up
 2.  From sgx folder do : docker-compose down 
 3.  Perform `git pull`
-4.  Check-out to sgx version tag: `git checkout tags/1.64.2-develop.5`
-5.  Make sure `image` is skalenetwork/sgxwallet:1.64.2-develop.5 in docker-compose:
-6.  [Recover from back up](https://skale.network/docs/documentation/sgxwallet/docs/backup-procedure)
+4.  Check-out to sgx version tag: `git checkout tags/1.66.1-beta.0`
+5.  Make sure `image` is skalenetwork/sgxwallet:1.66.1-beta.0 in docker-compose:
+.  [Recover from back up](https://skale.network/docs/documentation/sgxwallet/docs/backup-procedure)
  
 #### Step 2.2 Install SKALE Node CLI
 
 #### Download the SKALE Node CLI binary
 
-Make sure th `VERSION_NUM` is the 1.1.0-beta.5
+Make sure th `VERSION_NUM` is the 1.1.0-beta.6
 
 **Terminal Command:**
 
@@ -153,9 +152,9 @@ Required options for the `skale node update` command in environment file:
 ```bash
 MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.1
-MANAGER_CONTRACTS_ABI_URL=https://skale-se.sfo2.digitaloceanspaces.com/skale-manager-upgrade-skale-chains.json
-IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-develop.38/abi.json
-CONTAINER_CONFIGS_STREAM=1.3.2-testnet
+MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.7.0/skale-manager-1.7.0-rinkeby-abi.json
+IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.0/abi.json
+CONTAINER_CONFIGS_STREAM=1.4.1-testnet
 FILEBEAT_HOST=3.17.12.121:5000
 SGX_SERVER_URL=[By validator, setup SGX wallet first]
 DISK_MOUNTPOINT=[By validator, your attached storage /dev/sda or /dev/xvdd (this is an example. You just need to use your 2TB block volume mount point)]
@@ -170,9 +169,8 @@ ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby]
 **Terminal Command:**
 
 ```bash
-
+rm .skale/node_data/skale.db
 skale node update .env
-
 ```
 
 ### Step 3 - Download and reinitialize Validator CLI

@@ -8,17 +8,17 @@ Schains launch, IMA beta version
 
 **Validator CLI version**: 1.2.0-beta.2
 
-**Node CLI version**: 1.1.0-beta.5
+**Node CLI version**: 1.1.0-beta.6
 
-**SGX version: sgxwallet**: 1.64.2-develop.5
+**SGX version: sgxwallet**: 1.66.1-beta.0
 
 **SKALE Manager version**: 1.7.0-beta.0
 
-**Skaled version**: 3.2.2-develop.0
+**Skaled version**: 3.4.1-beta.0
 
-**IMA version**: 1.0.0-develop.103
+**IMA version**: 1.0.0-beta.0
 
-**Skale Admin version**: 1.1.0-beta.7
+**Skale Admin version**: 1.1.0-beta.10
 
 **Transaction Manager version**: 1.1.0-beta.1
 
@@ -28,9 +28,9 @@ Schains launch, IMA beta version
 
 **docker-lvmpy**: 1.0.1
 
-**skale-node**: 1.3.2-testnet
+**skale-node**: 1.4.1-testnet
 
-**watchdog**: 1.1.2-beta.0 
+**watchdog**: 1.1.3-beta.0 
 
 ----------------
 ## Old Versions
@@ -58,6 +58,7 @@ Schains launch, IMA beta version
 > WARNING:  New SGX version will require database re-setup and node registration (un-register and then register again).
 
 Previous SGX version still can be used, but the backup functionality will not work as expected.
+
 
 #### TestNet Phase 2.1 Environment Variables
 
