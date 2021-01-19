@@ -57,7 +57,6 @@ ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby]
 
 This update includes changes to docker-compose option:
 
-
 With the update, validators would need to support docker-compose themselves: setup and update it if necessary. 
 Installing docker-compose during SKALE node init is now disabled.
 
@@ -87,6 +86,7 @@ See more info in the [docker docs](https://docs.docker.com/config/containers/liv
 7.  If there is any docker daemon failures please take a look to the service logs using `journalctl -u docker.service`. Also it's better to save them to share with the team to troubleshoot an issue. See more info in the [docker docs]('https://docs.docker.com/config/daemon/')
 
 8.  Validators' Ledger devices: make sure the contract_data is ALLOWED (this can be set to Not Allowed after Ledger software update)
+
 9.  Due to Secure Enclave changes introduced for the SGX Wallet release candidate, validators will need a backup key for the update
 
 #### Use these Versions for set up
@@ -119,9 +119,13 @@ See more info in the [docker docs](https://docs.docker.com/config/containers/liv
 #### Step 2.1 Update SGX
 
 1.  Find your SGX back up key from the previous set up
+
 2.  From sgx folder do : docker-compose down 
+
 3.  Perform `git pull`
+
 4.  Check-out to sgx version tag: `git checkout tags/1.66.1-beta.0`
+
 5.  Make sure `image` is skalenetwork/sgxwallet:1.66.1-beta.0 in docker-compose:
 .  [Recover from back up](https://skale.network/docs/documentation/sgxwallet/docs/backup-procedure)
  

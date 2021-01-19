@@ -4,14 +4,13 @@
 
 > Added new healthchecks for nodes. Fixed some issues in skaled, sgx and ima containers. 
 
-
 ### Update SGX 
 
 1.  From sgx folder do : `docker-compose down` 
 2.  Perform `git pull`
 3.  Check-out to sgx version tag: `git checkout tags/1.66.1-beta.0`
 4.  Make sure `image` is skalenetwork/sgxwallet:1.66.1-beta.0 in docker-compose.yml
-5. Perform `docker compose up -d`
+5.  Perform `docker compose up -d`
 
 ### Install SKALE Node CLI
 
@@ -36,15 +35,18 @@ sudo chmod +x /usr/local/bin/skale
 
 ### Update node using skale node update
 
+#### Change directory
 ```bash
 cd  ~ && vi .env
 ```
 
-Make sure the `CONTAINER_CONFIGS_STREAM` in .env file is `1.4.1-testnet`
+#### Update CONTAINER_CONFIGS_STREAM option
+Make sure `CONTAINER_CONFIGS_STREAM` in .env file is `1.4.1-testnet`
 
 ```bash
 CONTAINER_CONFIGS_STREAM=1.4.1-testnet
 ```
+#### Ensure iptables-persistent package 
 
 Make sure the iptables-persistent package is installed on your machine
 
@@ -52,14 +54,14 @@ Make sure the iptables-persistent package is installed on your machine
 dpkg -l | grep iptables-persistent
 ```
 
-**Cleanup database**
+#### Cleanup database
 
 Remove database file
 ``` bash
 rm .skale/node_data/skale.db
 ```
 
-**Perform update**
+#### Perform update
 
 Run skale node update:
 ```bash
