@@ -4,7 +4,6 @@
 
 > Added new healthchecks for nodes. Fixed some issues in skaled, sgx and ima containers. 
 
-**Update `CONTAINER_CONFIGS_STREAM` in .env file**
 
 ### Update SGX 
 
