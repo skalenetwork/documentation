@@ -6,11 +6,16 @@
 
 ### Update SGX 
 
-1.  From sgx folder do : `docker-compose down` 
-2.  Perform `git pull`
-3.  Check-out to sgx version tag: `git checkout tags/1.66.1-beta.0`
-4.  Make sure `image` is skalenetwork/sgxwallet:1.66.1-beta.0 in docker-compose.yml
-5.  Perform `docker compose up -d`
+1.  Find your SGX back up key 
+
+2.  From sgx folder do : `docker-compose down` 
+
+3.  Perform `git pull`
+
+4.  Check-out to sgx version tag: `git checkout tags/1.66.1-beta.0`
+
+5.  Make sure `image` is skalenetwork/sgxwallet:1.66.1-beta.0 in docker-compose:
+.  [Recover from back up](https://skale.network/docs/documentation/sgxwallet/docs/backup-procedure)
 
 ### Install SKALE Node CLI
 
