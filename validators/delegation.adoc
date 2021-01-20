@@ -20,27 +20,56 @@ A wallet that has delegated SKL tokens will incur higher gas fees for SKL token 
 
 === How to delegate
 
-There are several ways to delegate SKALE tokens. You may use https://activate.codefi.network/skale-network-launch-partner[ConsenSys Activate]'s platform with Metamask to view validators, make delegation proposals, and view earned bounties. You may also use the https://github.com/skalenetwork/validator-cli#holder-commands[Validator-CLI] python-based CLI tool to delegate tokens from a hardware wallet. To use the CLI, you will need the SKALE Network validator ID that corresponds to the validator.
+There are several ways to delegate SKALE tokens. 
 
-Validators must accept each delegation and are used to stake the validator's nodes in the network. A validator's nodes must collectively meet the Minimum Stake Requirement (MSR) set by the network. Currently, the MSR is 20 million SKL tokens. Therefore, if a validator is operating ten nodes, the validator must have 10×MSR under stake. Validators who don't meet or exceed MSR may have to remove or add nodes to optimize earned bounties.
+==== ConsenSys Activate
+
+You may use https://activate.codefi.network/skale-network-launch-partner[ConsenSys Activate]'s platform with Metamask to view validators, make delegation proposals, and view received bounties. 
+
+==== Validator CLI
+
+You may also use the https://github.com/skalenetwork/validator-cli#holder-commands[Validator-CLI] python-based CLI tool to delegate tokens from a hardware wallet. To use the CLI, you will need the SKALE Network validator ID that corresponds to the validator.
+
+==== Etherscan
+
+You can use Etherscan and Metamask to delegate through the DelegationController.sol contract on Ethereum. 
+
+1. Head over to the DelegationController contract at https://etherscan.io/address/0x06dD71dAb27C1A3e0B172d53735f00Bf1a66Eb79#writeProxyContract[https://etherscan.io/address/0x06dD71dAb27C1A3e0B172d53735f00Bf1a66Eb79#writeProxyContract] 
+
+2. Click "Connect to Web3" button at the top.
+
+3. Complete the fields by entering in the following information:
+
+* **Validator ID:** Enter the Network Validator ID of the validator to delegate to.
+* **Amount:** Enter the amount of SKL in Wei units (To convert an amount into Wei units, use this tool: https://eth-converter.com[https://eth-converter.com/]. For example, if you want to delegate 10 SKL, then enter 10000000000000000000
+* **Delegation Period:** Select the delegation period. Currently only 2 months is allowed, so enter 2.
+* **Info:** Etherscan
+
+image::../images/delegate-etherscan.png[]
+
+=== Delegation Process
+
+Validators must accept each delegation and are used to stake the validator's nodes in the network. A validator's nodes must collectively meet the Minimum Stake Requirement (MSR) set by the network. Currently, the MSR is 20 million SKL tokens. Therefore, if a validator is operating ten nodes, the validator must have 10×MSR under stake. Validators who don't meet or exceed MSR may have to remove or add nodes to optimize received bounties.
 
 Validators must optimize the number of operating nodes every month based on their total stake. Delegators must submit undelegation requests 72 hrs before the end of the month to allow validators enough time to change the number of nodes. Undelegation requests can't be made within 72 hrs of the end of the month. Therefore delegators who wish to undelegate are urged to do so at the earliest possible time.
 
 === Delegation Periods
 
+SKALE Network supports different delegation periods with stake multipliers. For example, 2 month delegations have a stake multiplier of 1.00. The network can set new delegation periods and stake multipliers to incentivize longer staking periods. For instance, delegating for a period with a stake multiplier of 2.00 doubles your amount of stake in the network, and you would receive more bounty rewards.
+
 === Monthly bounty rewards
 
 Delegators receive bounties every month. These bounties are from a mix of network inflation and staked SKALE chains. This total network bounty for any month also includes any remaining bounties from the previous month due to bounty reduction or node exits.
 
-Bounties are calculated on a per-node basis. The formula below describes the calculation. 
+The network calculates bounties on a per-node basis. The formula below describes the calculation. 
 
 image::https://lh5.googleusercontent.com/KnH5URR2jV0XthU188NK6Ikx9yQ37oZyNx9itsDAmFsZYugjKcmZlhb5x4paCHYe77pyIyQVfYidFSkXmc1b2m7ZrD_YI-nFqAIfLCpMrKyqBPP46dMrAtClg1ugtPR2e6qFr93m[]
 
 * The first component B is the total payable network monthly bounty.
 * The second component refers to the ratio of total validator stake to the total network stake.
-* The third component is 1 / the total node number that a validator can register in the network. This part is to make sure that a validator receives rewards for the staked nodes only. If a validator has 5 active nodes in the network from previous month but can only have 4×MSR they will get bounty for only 4 nodes.
+* The third component is 1 / the total node number that a validator can register in the network. This part is to make sure that a validator receives rewards for the staked nodes only. If a validator has 5 active nodes in the network from the previous month but can only have 4×MSR they will get bounty for only 4 nodes.
 
-Bounty rewards for a particular month are delivered depending on when the node registers with the network. For example, a node that registers within 72 hours after June 1 00:00 UTC will deliver bounty rewards on July 1 00:00 UTC. A node that registers outside of the 72 hour beginning of June (June 15) will deliver bounty rewards for June on August 1 00:00 UTC.
+Bounty rewards for a particular month are delivered depending on when the node registers with the network. For example, a node that registers within 72 hours after June 1 00:00 UTC will deliver bounty rewards on July 1 00:00 UTC. A node that registers outside of the 72 hour beginning of June (June 15) will fulfill bounty rewards for June on August 1 00:00 UTC.
 
 Delegations, bounties, and MSR requirements follow a schedule each month. The SKALE Network's time follows the Gregorian calendar system orientated at Universal Time Code (UTC).
 
@@ -65,11 +94,11 @@ IMPORTANT: Delegators can no longer submit undelegation requests during this per
 
 * August 15: Alice proposes to stake 10,000 SKL tokens for 2 months to Validator ACME. Alice's delegation is now in a PROPOSED state. This proposal can be canceled by Alice anytime before the validator accepts it. If canceled, the tokens may be proposed again.
 
-* August 17 ACME accepts Alice's delegation. The delegation is now in an ACCEPTED state. Alice can no longer cancel the delegation now that the delegator has accepted it.
+* August 17: ACME accepts Alice's delegation. The delegation is now in an ACCEPTED state. Alice can no longer cancel the delegation now that the delegator has accepted it.
 
-* September 1 00:00 UTC: Alice's delegation moves to a DELEGATED state and is automatically set to re-delegate on Nov 1. This delegation may now earn monthly bounty awards. 
+* September 1 00:00 UTC: Alice's delegation moves to a DELEGATED state and will automatically re-delegate on November 1. This delegation may now receive monthly bounty awards. 
 
-* September 5: Alice knows she has until Oct 29 00:00 UTC to make an un-delegation request, but she decides to make an un-delegation request today. Her delegation moves to UNDELEGATION_REQUESTED state.
+* September 5: Alice knows she has until October 29 00:00 UTC to make an un-delegation request, but she decides to make an un-delegation request today. Her delegation moves to UNDELEGATION_REQUESTED state.
 
 * October 1 00:00 UTC: Monthly bounty rewards are released. Alice requests to withdraw bounty to a different wallet than the one used to delegate. She does this to save on SKL token gas transfer fees.
 
