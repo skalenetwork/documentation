@@ -134,6 +134,9 @@
           "links": [
             {
               "link": "/validators/schain-upgrade"
+            },
+            {
+              "link": "/validators/soft-upgrade-testnet"
             }
           ]
         },
