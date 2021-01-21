@@ -54,10 +54,13 @@ If the whitelist is enabled, the SKALE chain owner must authorize each token for
 
 You can use `addERC20TokenByOwner` and `addERC721TokenByOwner` functions available in LockAndData contracts on both Mainnet and each Schain.
 
-The recommended process is:
+The recommended process is
 
 1. Deploy the ERC20 or ERC721 token contract on the SKALE chain.
 2. Add the token to LockAndData on the Schain.
+3. Add the token to LockAndData on Mainnet.
+
+=== Adding tokens to LockAndData on Schain
 
 NOTE: `addERC20TokenByOwner` on the LockAndDataForSchain takes 3 arguments. When enabling transfers to mainnet, `schainName` is set to "Mainnet". When enabling transfers to another schain, `schainName` is set to the other schain name.
 
@@ -80,7 +83,7 @@ signed_txn = self.web3_schain.eth.account.signTransaction(dict(
 self.web3_schain.eth.sendRawTransaction(signed_txn.rawTransaction)
 ```
 
-3. Add the token to LockAndData on Mainnet.
+=== Adding tokens to LockAndData on Mainnet
 
 NOTE: `addERC20TokenByOwner` on the LockAndDataForMainnet takes 2 arguments: schainName and erc20Mainnet address.
 
