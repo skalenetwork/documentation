@@ -1,6 +1,21 @@
-== Delegation
+= Delegation
 
-=== Introduction
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+endif::[]
+
+toc::[]
+
+== Introduction
 
 The SKALE Token (SKL) is the first ERC token with delegation/staking functions. SKL is a modified ERC-777 with backward compatibility to ERC-20. Therefore, you may use any ERC-20 compatible wallet to hold and stake your tokens into the SKALE Network.
 
@@ -11,6 +26,8 @@ Each delegation proposal must include:
 * Number of SKALE tokens to delegate,
 * Validator to delegate to, and
 * Delegation period.
+
+All delegations in the SKALE Network are aligned over calendar months. See the <<time-schedule, Time Schedule>>.
 
 Once the tokens delegate, the tokens are locked and can't transfer to another wallet until undelegated.
 
@@ -71,8 +88,9 @@ image::https://lh5.googleusercontent.com/KnH5URR2jV0XthU188NK6Ikx9yQ37oZyNx9itsD
 
 Bounty rewards for a particular month are delivered depending on when the node registers with the network. For example, a node that registers within 72 hours after June 1 00:00 UTC will deliver bounty rewards on July 1 00:00 UTC. A node that registers outside of the 72 hour beginning of June (June 15) will fulfill bounty rewards for June on August 1 00:00 UTC.
 
-Delegations, bounties, and MSR requirements follow a schedule each month. The SKALE Network's time follows the Gregorian calendar system orientated at Universal Time Code (UTC).
+Delegations, bounties, and MSR requirements follow a monthly schedule. The SKALE Network's time follows the Gregorian calendar system orientated at Universal Time Code (UTC).
 
+[[time-schedule]]
 === Time Schedule
 
 .Day 1 - End of Month (for example, January 1 - January 31)
