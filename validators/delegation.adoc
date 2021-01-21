@@ -1,5 +1,4 @@
 = Delegation
-
 :icons: font
 :toc: macro
 
