@@ -2,8 +2,7 @@
 :doctype: article
 :!showtitle:
 :icons: font
-:toc: preamble
-:imagesdir: assets/images
+:toc: macro
 
 ifdef::env-github[]
 
@@ -22,6 +21,8 @@ The SKALE Chain owner has special permissions to setup specific IMA parameters, 
 * Enable/disable whitelist (default: enabled)
 * AddERC20TokenByOwner
 * AddERC721TokenByOwner
+
+toc::[]
 
 === Enable/Disable the Whitelist
 
@@ -64,7 +65,7 @@ signed_txn = self.web3_mainnet.eth.account.signTransaction(dict(
         gas=200000,
         to=lock_and_data_for_mainnet_erc20.address,
         value=0,
-        data = disable
+        data = addERC20
     ),
     from_key)
 
@@ -75,7 +76,7 @@ self.web3_mainnet.eth.sendRawTransaction(signed_txn.rawTransaction)
 
 ```python
 lock_and_data_for_mainnet_erc721 = self._get_contract_on_mainnet('lock_and_data_for_mainnet_erc721')
-addERC20 = lock_and_data_for_mainnet_erc721.encodeABI(fn_name="addERC721TokenByOwner", args=[schainName, erc721Address])
+addERC721 = lock_and_data_for_mainnet_erc721.encodeABI(fn_name="addERC721TokenByOwner", args=[schainName, erc721Address])
 
 signed_txn = self.web3_mainnet.eth.account.signTransaction(dict(
         nonce=self.web3_mainnet.eth.getTransactionCount(sender_address),
@@ -83,7 +84,7 @@ signed_txn = self.web3_mainnet.eth.account.signTransaction(dict(
         gas=200000,
         to=lock_and_data_for_mainnet_erc721.address,
         value=0,
-        data = disable
+        data = addERC721
     ),
     from_key)
 
