@@ -1,6 +1,5 @@
 = IMA Token Access Control
 :doctype: article
-:!showtitle:
 :icons: font
 :toc: macro
 
