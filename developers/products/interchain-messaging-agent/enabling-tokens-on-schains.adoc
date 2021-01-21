@@ -61,47 +61,47 @@ The recommended process is:
 
 NOTE: `addERC20TokenByOwner` on the LockAndDataForSchain takes 3 arguments. When enabling transfers to mainnet, `schainName` is set to "Mainnet". When enabling transfers to another schain, `schainName` is set to the other schain name.
 
-    An example for ERC20:
+An example for ERC20:
 
-    ```python
-    lock_and_data_for_schain_erc20 = self._get_contract_on_schain('lock_and_data_for_schain_erc20')
-    addERC20Schain = lock_and_data_for_schain_erc20.encodeABI(fn_name="addERC20TokenByOwner", args=[schainName, erc20MainnetAddress, erc20SchainAddress])
+```python
+lock_and_data_for_schain_erc20 = self._get_contract_on_schain('lock_and_data_for_schain_erc20')
+addERC20Schain = lock_and_data_for_schain_erc20.encodeABI(fn_name="addERC20TokenByOwner", args=[schainName, erc20MainnetAddress, erc20SchainAddress])
 
-    signed_txn = self.web3_schain.eth.account.signTransaction(dict(
-            nonce=self.web3_schain.eth.getTransactionCount(sender_address),
-            gasPrice=self.web3_schain.eth.gasPrice,
-            gas=200000,
-            to=lock_and_data_for_schain_erc20.address,
-            value=0,
-            data = addERC20Schain
-        ),
-        from_key)
+signed_txn = self.web3_schain.eth.account.signTransaction(dict(
+        nonce=self.web3_schain.eth.getTransactionCount(sender_address),
+        gasPrice=self.web3_schain.eth.gasPrice,
+        gas=200000,
+        to=lock_and_data_for_schain_erc20.address,
+        value=0,
+        data = addERC20Schain
+    ),
+    from_key)
 
-    self.web3_schain.eth.sendRawTransaction(signed_txn.rawTransaction)
-    ```
+self.web3_schain.eth.sendRawTransaction(signed_txn.rawTransaction)
+```
 
 3. Add the token to LockAndData on Mainnet.
 
-    NOTE: `addERC20TokenByOwner` on the LockAndDataForMainnet takes 2 arguments: schainName and erc20Mainnet address.
+NOTE: `addERC20TokenByOwner` on the LockAndDataForMainnet takes 2 arguments: schainName and erc20Mainnet address.
 
-    An example for ERC20:
+An example for ERC20:
 
-    ```python
-    lock_and_data_for_mainnet_erc20 = self._get_contract_on_mainnet('lock_and_data_for_mainnet_erc20')
-    addERC20Mainnet = lock_and_data_for_mainnet_erc20.encodeABI(fn_name="addERC20TokenByOwner", args=[schainName, erc20MainnetAddress])
+```python
+lock_and_data_for_mainnet_erc20 = self._get_contract_on_mainnet('lock_and_data_for_mainnet_erc20')
+addERC20Mainnet = lock_and_data_for_mainnet_erc20.encodeABI(fn_name="addERC20TokenByOwner", args=[schainName, erc20MainnetAddress])
 
-    signed_txn = self.web3_mainnet.eth.account.signTransaction(dict(
-            nonce=self.web3_mainnet.eth.getTransactionCount(sender_address),
-            gasPrice=self.web3_mainnet.eth.gasPrice,
-            gas=200000,
-            to=lock_and_data_for_mainnet_erc20.address,
-            value=0,
-            data = addERC20Mainnet
-        ),
-        from_key)
+signed_txn = self.web3_mainnet.eth.account.signTransaction(dict(
+        nonce=self.web3_mainnet.eth.getTransactionCount(sender_address),
+        gasPrice=self.web3_mainnet.eth.gasPrice,
+        gas=200000,
+        to=lock_and_data_for_mainnet_erc20.address,
+        value=0,
+        data = addERC20Mainnet
+    ),
+    from_key)
 
-    self.web3_mainnet.eth.sendRawTransaction(signed_txn.rawTransaction)
-    ```
+self.web3_mainnet.eth.sendRawTransaction(signed_txn.rawTransaction)
+```
 
 == Automatic deployment
 
