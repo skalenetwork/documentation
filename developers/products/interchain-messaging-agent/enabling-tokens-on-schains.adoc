@@ -58,13 +58,14 @@ The recommended process is
 
 1. Deploy the ERC20 or ERC721 token contract on the SKALE chain.
 2. Add the token to LockAndData on the Schain.
-3. Add the token to LockAndData on Mainnet.
+3. Grant the token's minter role to LockAndData on the Schain.
+4. Add the token to LockAndData on Mainnet.
 
 === Adding tokens to LockAndData on Schain
 
 NOTE: `addERC20TokenByOwner` on the LockAndDataForSchain takes 3 arguments. When enabling transfers to mainnet, `schainName` is set to "Mainnet". When enabling transfers to another schain, `schainName` is set to the other schain name.
 
-An example for ERC20:
+An example for ERC20 (same procedure applies to ERC721):
 
 ```python
 lock_and_data_for_schain_erc20 = self._get_contract_on_schain('lock_and_data_for_schain_erc20')
@@ -83,11 +84,21 @@ signed_txn = self.web3_schain.eth.account.signTransaction(dict(
 self.web3_schain.eth.sendRawTransaction(signed_txn.rawTransaction)
 ```
 
-=== Adding tokens to LockAndData on Mainnet
+=== Assign Schain LockAndData as Minter and Burner role
+
+You need to assign LockAndData as the minter and burner for the deployed token on the schain. For AccessControl supported ERC20/ERC721, you can use apply the following pseudocode:
+
+```
+newERC20 = deployERC20(deployer)
+minterRoleERC20 = newERC20.MINTER_ROLE()
+newERC20.grantRole(minterRoleERC20, lockAndDataERC20.address);
+```
+
+=== Adding tokens to Mainnet LockAndData
 
 NOTE: `addERC20TokenByOwner` on the LockAndDataForMainnet takes 2 arguments: schainName and erc20Mainnet address.
 
-An example for ERC20:
+An example for ERC20 (same procedure applies to ERC721):
 
 ```python
 lock_and_data_for_mainnet_erc20 = self._get_contract_on_mainnet('lock_and_data_for_mainnet_erc20')
