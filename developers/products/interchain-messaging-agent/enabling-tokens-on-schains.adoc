@@ -59,7 +59,7 @@ The recommended process is:
 1. Deploy the ERC20 or ERC721 token contract on the SKALE chain.
 2. Add the token to LockAndData on the Schain.
 
-    NOTE: `addERC20TokenByOwner` on the LockAndDataForSchain takes 3 arguments. When enabling transfers to mainnet, `schainName` is set to "Mainnet". When enabling transfers to another schain, `schainName` is set to the other schain name.
+NOTE: `addERC20TokenByOwner` on the LockAndDataForSchain takes 3 arguments. When enabling transfers to mainnet, `schainName` is set to "Mainnet". When enabling transfers to another schain, `schainName` is set to the other schain name.
 
     An example for ERC20:
 
