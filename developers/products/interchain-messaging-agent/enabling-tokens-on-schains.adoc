@@ -1,4 +1,4 @@
-== IMA Token Access Control
+= IMA Token Access Control
 :doctype: article
 :!showtitle:
 :icons: font
@@ -14,7 +14,9 @@ ifdef::env-github[]
 
 endif::[]
 
-=== Introduction
+toc::[]
+
+== Introduction
 
 The SKALE Chain owner has special permissions to setup specific IMA parameters, such as IMA access control. These permissions include:
 
@@ -22,9 +24,7 @@ The SKALE Chain owner has special permissions to setup specific IMA parameters, 
 * AddERC20TokenByOwner
 * AddERC721TokenByOwner
 
-toc::[]
-
-=== Enable/Disable the Whitelist
+== Enable/Disable the Whitelist
 
 The Token whitelist allows the Schain owner to control or allow token exchange through IMA and the SKALE chain. For example, a decentralized exchange may prefer to disable the whitelist. A dApp using only one token may enable the whitelist to allow only a single token exchange. 
 
@@ -49,7 +49,7 @@ self.web3_mainnet.eth.sendRawTransaction(signed_txn.rawTransaction)
 
 To re-enable the whitelist, the owner executes `enableWhitelist` as demonstrated above.
 
-=== Adding ERC20 tokens
+== Adding ERC20 tokens
 
 `addERC20TokenByOwner` takes the SKALE Chain owner private key, schainName, and ERC20 Address
 
@@ -72,7 +72,7 @@ signed_txn = self.web3_mainnet.eth.account.signTransaction(dict(
 self.web3_mainnet.eth.sendRawTransaction(signed_txn.rawTransaction)
 ```
 
-=== Adding ERC721 tokens
+== Adding ERC721 tokens
 
 ```python
 lock_and_data_for_mainnet_erc721 = self._get_contract_on_mainnet('lock_and_data_for_mainnet_erc721')
