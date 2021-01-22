@@ -61,7 +61,7 @@ You can use Etherscan and Metamask to delegate through the DelegationController.
 * **Delegation Period:** Select the delegation period. Currently only 2 months is allowed, so enter 2.
 * **Info:** Etherscan
 
-image::../images/delegate-etherscan.png[]
+image::https://user-images.githubusercontent.com/12778980/105521534-0d2a3e00-5caa-11eb-97f8-28606e2067a6.png[]
 
 === Delegation Process
 
