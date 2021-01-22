@@ -90,7 +90,7 @@
       "links": [
         {
           "title": "Delegation",
-          "link": "validators/delegation"
+          "link": "/validators/delegation"
         },
         {
           "link": "/validators/getting-started",
