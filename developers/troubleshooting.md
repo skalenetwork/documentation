@@ -1,6 +1,6 @@
 ### Troubleshooting
 
-Need help solving an issue? Check to see if this has already been answered below. If you can't find an answer to your issue, reach out to us on discord.  
+Need help solving an issue? Check to see if this has already been answered below. If you can't find an answer to your issue, reach out to the SKALE developer community on discord.  
 
 <button>[Ask a question](http://skale.chat/)</button>
 
@@ -14,7 +14,7 @@ Error: Transaction has been reverted by the EVM:
 
 ##### RPC Error: Code 32603
 
-If you are receiving the error below, this most likely has to do with a compatibility complaint between web3 1.0 and MetaMask. We have found the following web3js/MetaMask combinations work well together:  
+If you are receiving the error below, this most likely has to do with a compatibility complaint between web3 1.0 and MetaMask.
 
 MetaMask - RPC Error: Internal JSON-RPC error. {code: -32603, message: "Internal JSON-RPC error."}
 
@@ -29,9 +29,9 @@ Use the following web3.js and MetaMask versions.
 
 ##### Web3 CurrentProvider SendAsync
 
-If you are receiving the error below, this most likely has to do with a compatibility complaint between web3 1.0 and Truffle or MetaMask. Web3.currentProvider.sendAsync is deprecated in Web3 v1.0 and it is replaced with web3.currentProvider.send.  
+If you are receiving the error below, this most likely has to do with a compatibility complaint between web3 1.0 and Truffle or MetaMask. Web3.currentProvider.sendAsync is deprecated in Web3 v1.0 and it's replaced with web3.currentProvider.send.  
 
-Uncaught TypeError: web3.currentProvider.sendAsync is not a function
+Uncaught TypeError: web3.currentProvider.sendAsync isn't a function
 
 **To Fix this Issue:**  
 
@@ -47,6 +47,6 @@ web3 = new Web3(web3.currentProvider);
 
 ```
 
-SKALE Labs has many resources designed to help you get your questions answered. You can reach out to our community on  [discord](http://skale.chat/), or submit a support request below.  
+SKALE Labs has many resources designed to help you get your questions answered. You can reach out to the SKALE developer community on  [discord](http://skale.chat/), or submit a support request below.  
 
 <button>[Contact Support](https://skalelabs.typeform.com/to/pSu895)</button>

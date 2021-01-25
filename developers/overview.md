@@ -14,6 +14,6 @@ SKALE Network is designed to work with all Ethereum compatible tools such as API
 
 #### Get Access
 
-If you do not have a SKALE Chain yet, request one by using the link below.
+If you don't have a SKALE Chain yet, request one by using the link below.
 
 <button>[Request a SKALE Chain](https://skale.network/innovators-signup)</button>

@@ -196,8 +196,8 @@ function postOutgoingMessage(string memory dstChainID, address dstContract, uint
 
 1.  String  - Destination chain ("Mainnet" or "[YOUR_SKALE_CHAIN_ID]".
 2.  Address  - Smart Contract to receive the message data.
-3.  Uint  - Amount of ETH to send (set to 0 is not sending money).
-4.  Addres  - Address the data is intended for.
+3.  Uint  - Amount of ETH to send (set to 0 when not sending money).
+4.  Address  - Address the data is intended for.
 5.  Bytes  - Data to send across chains.
 
 **Additional Setup**  
@@ -259,7 +259,7 @@ function exitToMain(address to, uint amount, bytes memory data)
 
 **Parameters**  
 
-1.  Address  - Wallet address to send ETH to on mannet.
+1.  Address  - Wallet address to send ETH to on mainnet.
 2.  Unit  - Amount of ETH to send.
 3.  Bytes  - (optional) Message to send with ETH.
 

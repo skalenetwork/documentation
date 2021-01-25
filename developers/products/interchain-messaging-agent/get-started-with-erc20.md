@@ -175,7 +175,7 @@ web3ForMainnet.eth.getTransactionCount(account).then(nonce => {
 
 #### 2. Get Cloned ERC20
 
-When you make the first deposit from an ERC20 contract on Ethereum, the  **ERC20ModuleForSchain** contract creates a clone of the ERC20 contract onto your SKALE Chain. In order to interact with this contract, you will need to retrieve the ABIs.  
+When you make the first deposit from an ERC20 contract on Ethereum, the  **ERC20ModuleForSchain** contract creates a clone of the ERC20 contract onto your SKALE Chain. To interact with this contract, you will need to retrieve the ABIs.  
 
 This can be accomplished by filtering the past events and finding the ERC20TokenCreated event created by the  **ERC20ModuleForSchain** on your SKALE Chain.  
 
