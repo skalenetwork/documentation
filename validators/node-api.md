@@ -65,15 +65,18 @@ N/A
 
 #### Methods
 
-| URL                                 | Type   | Direct use        | Description                                                                                  | Required params                                                                        | Optional params                          |
-| ----------------------------------- | ------ | ----------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------- |
-| `/api/v1/node/info`                 | `GET`  | `ALLOWED`         | Get node info                                                                                | N/A                                                                                    | N/A                                      |
-| `/api/v1/node/register`             | `POST` | `NOT RECOMMENDED` | Register SKALE node on contracts                                                             | `ip` - IP address of the node, `port` - base port for node sChains, `name` - node name | `gas_price`, `gas_limit`, `skip_dry_run` |
-| `/api/v1/node/maintenance-on`       | `POST` | `NOT RECOMMENDED` | Turn on maintenance mode                                                                     | N/A                                                                                    | N/A                                      |
-| `/api/v1/node/maintenance-off`      | `POST` | `NOT RECOMMENDED` | Turn off maintenance mode                                                                    | N/A                                                                                    | N/A                                      |
-| `/api/v1/node/send-tg-notification` | `POST` | `ALLOWED`         | Send Telegram notification to the node owner. Telegaram bot could be disabled by node owner. | `message` - Array of message strings                                                             | N/A                                      |
-| `/api/v1/node/exit/start`           | `POST` | `NOT RECOMMENDED` | Start node exit process (async call)                                                         | N/A                                                                                    | N/A                                      |
-| `/api/v1/node/exit/status`          | `GET`  | `ALLOWED`         | Check node exit status                                                                       | N/A                                                                                    | N/A                                      |  | N/A |
+| URL                                 | Type   | Direct use        | Description                                                                                  | Required params                                                                                       | Optional params                          |
+|-------------------------------------|--------|-------------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|------------------------------------------|
+| `/api/v1/node/info`                 | `GET`  | `ALLOWED`         | Get node info                                                                                | N/A                                                                                                   | N/A                                      |
+| `/api/v1/node/register`             | `POST` | `NOT RECOMMENDED` | Register SKALE node on contracts                                                             | `ip` - IP address of the node, `port` - base port for node sChains, `name` - node name, `domain_name` | `gas_price`, `gas_limit`, `skip_dry_run` |
+| `/api/v1/node/maintenance-on`       | `POST` | `NOT RECOMMENDED` | Turn on maintenance mode                                                                     | N/A                                                                                                   | N/A                                      |
+| `/api/v1/node/maintenance-off`      | `POST` | `NOT RECOMMENDED` | Turn off maintenance mode                                                                    | N/A                                                                                                   | N/A                                      |
+| `/api/v1/node/send-tg-notification` | `POST` | `ALLOWED`         | Send Telegram notification to the node owner. Telegaram bot could be disabled by node owner. | `message` - Array of message strings                                                                  | N/A                                      |
+| `/api/v1/node/exit/start`           | `POST` | `NOT RECOMMENDED` | Start node exit process (async call)                                                         | N/A                                                                                                   | N/A                                      |
+| `/api/v1/node/exit/status`          | `GET`  | `ALLOWED`         | Check node exit status                                                                       | N/A                                                                                                   | N/A                                      |
+| `/api/v1/node/set-domain-name`      | `POST` | `NOT RECOMMENDED` | Set domain name for the node                                                                 | `domain_name`                                                                                         | N/A                                      |
+| `/api/v1/node/hardware`             | `GET`  | `ALLOWED`         | Get hardware info about the node                                                             | N/A                                                                                                   | N/A                                      |
+| `/api/v1/node/endpoint-info`        | `GET`  | `ALLOWED`         | Get ETH endpoint info                                                                        | N/A                                                                                                   | N/A                                      |
 
 ### Usage
 
@@ -86,6 +89,12 @@ $ curl -X POST -H "Content-Type: application/json" --data '{"message":["abc", "x
 
 $ curl http://0.0.0.0:3007/api/v1/node/exit/status
 {"status": "ok", "payload": {"status": "ACTIVE", "data": [{"name": "wailing-alniyat", "status": "ACTIVE"}, {"name": "handsome-fornacis", "status": "ACTIVE"}], "exit_time": 0}}
+
+$ curl http://0.0.0.0:3007/api/v1/node/hardware
+{"status": "ok", "payload": {"cpu_total_cores": 1, "cpu_physical_cores": 1, "memory": 4136673280, "swap": 9300860928, "system_release": "Linux-4.15.0-58-generic", "uname_version": "#64-Ubuntu SMP Tue Aug 6 11:12:41 UTC 2019", "attached_storage_size": 83886080}}
+
+$ curl http://0.0.0.0:3007/api/v1/node/endpoint-info
+{"status": "ok", "payload": {"block_number": 23150455, "syncing": false}}
 ```
 
 ### Health
