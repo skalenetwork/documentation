@@ -89,6 +89,10 @@
       "name": "validators",
       "links": [
         {
+          "title": "Delegation",
+          "link": "/validators/delegation"
+        },
+        {
           "link": "/validators/getting-started",
           "links": [
             {
@@ -121,22 +125,22 @@
         },
         {
           "title": "MainNet",
+          "link": "/validators/versions",
           "links": [
-            {
-              "link": "/validators/versions"
-            },
             {
               "link": "/validators/soft-upgrade"
             }
           ]
-
         },
         {
           "title": "Fuji TestNet",
           "link": "/validators/fuji-versions",
           "links": [
             {
-              "link": "/validators/hard-upgrade"
+              "link": "/validators/schain-upgrade"
+            },
+            {
+              "link": "/validators/soft-upgrade-testnet"
             }
           ]
         },

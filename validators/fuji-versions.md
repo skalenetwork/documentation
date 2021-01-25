@@ -1,8 +1,39 @@
 ## SKALE TestNet Versions
-
 You can find the compatible versions in this page. Set up requires only Validator-Cli, Node-Cli and SGX versions.
 
 The rest of the versions were provided for docker containers and correspondent tags in their individual code repositories.
+
+### TestNet Phase 3.1 Versions - SKALE chain creation
+Schains launch, IMA beta version
+
+**Validator CLI version**: 1.2.0-beta.2
+
+**Node CLI version**: 1.1.0-beta.6
+
+**SGX version: sgxwallet**: 1.66.1-beta.0
+
+**SKALE Manager version**: 1.7.0-beta.0
+
+**Skaled version**: 3.4.1-beta.0
+
+**IMA version**: 1.0.0-beta.0
+
+**Skale Admin version**: 1.1.0-beta.10
+
+**Transaction Manager version**: 1.1.0-beta.1
+
+**Skale Sla version**: 1.0.2-beta.1
+
+**Skale Bounty version**: 1.1.1-beta.0
+
+**docker-lvmpy**: 1.0.1
+
+**skale-node**: 1.4.1-testnet
+
+**watchdog**: 1.1.3-beta.0 
+
+----------------
+## Old Versions
 
 ### TestNet Phase 2.1 Versions - Hard Upgrade for SGX
 
@@ -27,6 +58,7 @@ The rest of the versions were provided for docker containers and correspondent t
 > WARNING:  New SGX version will require database re-setup and node registration (un-register and then register again).
 
 Previous SGX version still can be used, but the backup functionality will not work as expected.
+
 
 #### TestNet Phase 2.1 Environment Variables
 
