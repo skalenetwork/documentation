@@ -11,12 +11,35 @@ After the node registration, the node receives an assigned group of random node 
 -   A Linux x86_64 machine
 -   SGX-enabled Intel processor
 -   Ports 22, 3009, 8080, 9100, and 10000-11000, and ICMP IPv4 open for all
--   Ubuntu 16.04 or later LTS
+-   Ubuntu 18.04 or later LTS
 -   2TB attached storage main-net (200gb devnet)
--   32GB RAM  
--   8 core
+-   32GB RAM
+-   16GB swap
 
-#### External Storage
+#### Additional Requirements
+-   Install docker.io
+-   Install docker-compose `1.27.4`
+-   Make sure lvm2 package is installed (`dpkg -l | grep lvm2`)
+-   run commands with sudo
+
+**Important notes:**  
+
+1.  After docker installation make sure that the `live-restore` option
+is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
+
+2.  If you have any issues you can save the logs using `skale logs dump` command.  
+It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
+
+3.  You can install iptables-persistent using the following commands
+    ```
+    echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
+    echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
+    sudo apt install iptables-persistent -y
+    ```
+
+4.  You should run skale commands using sudo
+
+#### Block Storage
 
 Docker has an easy way of limiting other machine resources such as CPU, memory, and volume. These resources are configurable through [the docker set up](https://docs.docker.com/config/containers/resource_constraints/?source=post_page-----9859682f4147----------------------). Configuring machine resources such as CPU and memory are easy to complete via the docker set up; however, configuring volume requires a few more steps.  
 

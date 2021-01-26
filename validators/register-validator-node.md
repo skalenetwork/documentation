@@ -33,7 +33,7 @@ PS: Validator CLI doesn't have to be installed in the same server as the node-cl
 
 #### Download the SKALE Validator CLI binary
 
-VERSION_NUM is a version identifier e.g. `1.1.0-beta.0`
+VERSION_NUM is a version identifier
 
 **Terminal Command:**
 
@@ -295,13 +295,13 @@ On some machines, the SGX device is not **/dev/mei0** but a different device, su
 vi docker-compose.yml
 ```
 
-make sure `image` is skalenetwork/sgxwallet:1.58.5-stable.1 in docker-compose and it will look like:
+make sure `image` is skalenetwork/sgxwallet:<`SGX_VERSION`> in docker-compose and it will look like:
 
 ```bash
 version: '3'
 services:
   sgxwallet:
-    image: skalenetwork/sgxwallet:1.58.5-stable.1
+    image: skalenetwork/sgxwallet:<SGX_VERSION>
     ports:
       - "1026:1026"
       - "1027:1027"
@@ -401,7 +401,7 @@ If you have any concerns or questions, please do not hesitate to reach out to SK
 
 #### Download the SKALE Node CLI binary
 
-VERSION_NUM is a version identifier e.g. `1.1.0-beta.0`
+VERSION_NUM is a version identifier
 
 **Terminal Command:**
 
