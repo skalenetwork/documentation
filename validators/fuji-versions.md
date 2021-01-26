@@ -5,19 +5,20 @@ You can find the compatible versions in this page. Set up requires only Validato
 The rest of the versions were provided for docker containers and correspondent tags in their individual code repositories.
 
 ### **Prerequisites**
-`
+
 -   A Linux x86_64 machine
 -   SGX-enabled Intel processor
 -   Ports 22, 3009, 8080, 9100, and 10000-11000, and ICMP IPv4 open for all
 -   Ubuntu 18.04 or later LTS
 -   200gb devnet
+-   8 core
 -   32GB RAM
 -   16GB swap
 -   Install docker.io
 -   Install docker-compose -> `1.27.4`
 -   Install iptables-persistent - (for reinitializing base firewall rules after node machine was rebooted)
 -   Make sure lvm2 package is installed (`dpkg -l | grep lvm2`)
-`
+
 **Important notes:**  
 
 1.  After docker installation make sure that the `live-restore` option

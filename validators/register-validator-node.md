@@ -368,6 +368,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   Ports 22, 8080, 9100, and 10000-11000, and ICMP IPv4 open for all
 -   Ubuntu 18.04 or later LTS
 -   2TB attached storage main-net (200gb devnet)
+-   8 core
 -   32GB RAM
 -   16GB swap
 -   Install docker.io
