@@ -124,6 +124,10 @@
           "link": "/documentation/validator-cli/readme"
         },
         {
+          "title": "Node REST API",
+          "link": "/documentation/validators/node-api"
+        },
+        {
           "title": "MainNet",
           "link": "/validators/versions",
           "links": [
