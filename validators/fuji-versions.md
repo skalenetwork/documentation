@@ -1,115 +1,92 @@
-## SKALE TestNet Versions
+## SKALE Fuji TestNet 2
 
 You can find the compatible versions in this page. Set up requires only Validator-Cli, Node-Cli and SGX versions.
 
 The rest of the versions were provided for docker containers and correspondent tags in their individual code repositories.
 
-### TestNet Phase 2.1 Versions - Hard Upgrade for SGX
+### **Prerequisites**
 
-**Validator CLI version**: 0.6.2-beta.0
+-   A Linux x86_64 machine
+-   SGX-enabled Intel processor
+-   Ports 22, 3009, 8080, 9100, and 10000-11000, and ICMP IPv4 open for all
+-   Ubuntu 18.04 or later LTS
+-   200gb devnet
+-   8 core
+-   32GB RAM
+-   16GB swap
+-   Install docker.io
+-   Install docker-compose -> `1.27.4`
+-   Install iptables-persistent - (for reinitializing base firewall rules after node machine was rebooted)
+-   Make sure lvm2 package is installed (`dpkg -l | grep lvm2`)
 
-**Node CLI version**: 0.11.0-develop.15
+**Important notes:**  
 
-**SGX version: sgxwallet**: 1.58.2-develop.0
+1.  After docker installation make sure that the `live-restore` option
+is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
 
-**SKALE Manager version**: 1.5.2-develop.2
+2.  If you have any issues you can save the logs using `skale logs dump` command.  
+It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
 
-**Skaled version**:  1.46-develop.63
+3.  You can install iptables-persistent using the following commands
+    ```
+    echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
+    echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
+    sudo apt install iptables-persistent -y
+    ```
 
-**Skale Admin version**: 0.17.0-beta.1
+4.  You should run skale commands using sudo
 
-**Transaction Manager version**: 0.5.0-beta.1
+----
 
-**Skale Sla version**: 1.0.0-develop.0
+### TestNet Phase 3.1 Versions - SKALE chain creation
+Schains launch, IMA beta version
 
-**Skale Bounty version**: 0.9.3-develop.0
+**Validator CLI version**: 1.2.0-beta.2
 
-> WARNING:  New SGX version will require database re-setup and node registration (un-register and then register again).
+**Node CLI version**: 1.1.0-beta.6
 
-Previous SGX version still can be used, but the backup functionality will not work as expected.
+**SGX version: sgxwallet**: 1.66.1-beta.0
 
-#### TestNet Phase 2.1 Environment Variables
+**SKALE Manager version**: 1.7.0-beta.0
+
+**Skaled version**: 3.4.1-beta.0
+
+**IMA version**: 1.0.0-beta.0
+
+**Skale Admin version**: 1.1.0-beta.10
+
+**Transaction Manager version**: 1.1.0-beta.1
+
+**Skale Sla version**: 1.0.2-beta.1
+
+**Skale Bounty version**: 1.1.1-beta.0
+
+**docker-lvmpy**: 1.0.1
+
+**skale-node**: 1.4.1-testnet
+
+**watchdog**: 1.1.3-beta.0 
+
+TestNet Environment Variables: 
 
 ```bash
-FILEBEAT_HOST=[WILL BE RETIRED FOR TEST-NET ASK CORE TEAM]
-SGX_SERVER_URL=[https://localhost:1026 or your SGX server https://IP:1026]
-DISK_MOUNTPOINT=/dev/sda or /dev/xvdd
-DOCKER_LVMPY_STREAM=beta
-DB_PORT=3306
-DB_ROOT_PASSWORD=[PASSWORD]
-DB_PASSWORD=[PASSWORD]
-DB_USER=[USER]
 MONITORING_CONTAINERS=True
-CONTAINER_CONFIGS_STREAM=alpine-hard-upgrade
-IMA_CONTRACTS_ABI_URL=[RINKEBY_ABI ASK CORE TEAM]
-MANAGER_CONTRACTS_ABI_URL=[RINKEBY_ABI ASK CORE TEAM]
-ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
-IMA_ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
-TG_API_KEY=TELEGRAM API KEY
-TG_CHAT_ID=-TELEGRAM CHAT ID
+DOCKER_LVMPY_STREAM=1.0.1
+MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.7.0/skale-manager-1.7.0-rinkeby-abi.json
+IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.0/abi.json
+CONTAINER_CONFIGS_STREAM=1.4.1-testnet
+FILEBEAT_HOST=3.17.12.121:5000
+SGX_SERVER_URL=[By validator, setup SGX wallet first]
+DISK_MOUNTPOINT=[By validator, your attached storage /dev/sda or /dev/xvdd (this is an example. You just need to use your 2TB block volume mount point)]
+DB_PORT=[By validator]
+DB_ROOT_PASSWORD=[By validator]
+DB_PASSWORD=[By validator]
+DB_USER=[by validator]
+IMA_ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby ]
+ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby]
 ```
----
 
-### TestNet Phase 2 Versions - Hard Upgrade
+For SKALE Validator CLI initialization use SKALE Manager ABI:
 
-**Validator CLI version**:  0.6.0-develop.2
+`https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.7.0/skale-manager-1.7.0-rinkeby-abi.json`
 
-**Node CLI version**: 0.10.1-beta.1
-
-**SGX version: sgxwallet**: 1.53.0-develop.9
-
-**SKALE Manager version**: 1.5.0-develop.9
-
-**Skaled version**:  1.46.1-develop.33
-
-**Skale Admin version**: 0.15.0-beta.0
-
-**Transaction Manager version**: 0.4.1-beta.0
-
-**Skale Sla version**: 0.9.4-develop.0
-
-**Skale Bounty version**: 0.9.1-develop.0
-
-
-### TestNet Phase 1 Versions
-
-**Validator CLI version**: 0.5.0-develop.5
-
-**Node CLI version**: 0.8.0-develop.36
-
-**SGX**: build_base_1_28_20 
-
-**SKALE Manager version**: 1.1.1-beta.5
-
-**Skale admin**: 0.11.0-beta.0
-
-**Transaction manager**: 0.2.0-beta.1 
-
-**Skaled**: 1.46-develop.10
-
-**Skale-SLA**: 0.7.0-stable.0
-
-**Skale-bounty**:0.7.0-stable.0
-
-#### TestNet Phase 1 Environment Variables
-
-```bash
-FILEBEAT_HOST=[TestNet only - ASK CORE TEAM]
-SGX_SERVER_URL=[https://localhost:1026 or your separate SGX wallet server https://IP :1026]
-DISK_MOUNTPOINT=/dev/sda or /dev/xvdd (this is an example for the digital ocean. You just need to use your 200gb block volume mount point)
-DOCKER_LVMPY_STREAM=beta
-DB_PORT=3306
-DB_ROOT_PASSWORD=[PASSWORD]
-DB_PASSWORD=[PASSWORD]
-DB_USER=[USER]
-CONTAINER_CONFIGS_STREAM=alpine
-NODE_CLI_SPACE=develop
-SKALE_NODE_CLI_VERSION=0.8.0-develop.35
-MANAGER_CONTRACTS_ABI_URL=[RINKEBY_ABI ASK CORE TEAM]
-(This manager contracts abi url where the SKALE manager smart contract ABI lives. This can change based on the beta versions or develop versions )
-IMA_CONTRACTS_ABI_URL=[RINKEBY_ABI ASK CORE TEAM] 
-(This will be used for IMA testing. It’s for interchain messaging agent feature for dApp developers)
-ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
-IMA_ENDPOINT=[YOUR GETH NODE ENDPOINT OR https://rinkeby.infura.io/v3/INFURA KEY]
-```
---- 
