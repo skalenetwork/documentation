@@ -89,6 +89,10 @@
       "name": "validators",
       "links": [
         {
+          "title": "Delegation",
+          "link": "/validators/delegation"
+        },
+        {
           "link": "/validators/getting-started",
           "links": [
             {
@@ -118,6 +122,10 @@
         {
           "title": "Validator CLI",
           "link": "/documentation/validator-cli/readme"
+        },
+        {
+          "title": "Node REST API",
+          "link": "/documentation/validators/node-api"
         },
         {
           "title": "MainNet",
