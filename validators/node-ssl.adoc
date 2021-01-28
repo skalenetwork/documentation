@@ -14,24 +14,27 @@ endif::[]
 
 toc::[]
 
-=== General info
-Node SSL certificates are used for secure communication with sChain endpoints. By default, each node of the sChain listens on HTTP and WS ports, but if SSL certs are uploaded to the node HTTPS and WSS ports are also turned on. 
+== General info
+Node SSL certificates support secure communication with sChain endpoints. By default, each node of a SKALE Chain listens on HTTP and WS ports. If SSL certs exist on the node, then HTTPS and WSS ports are also turned on. 
 
-Node SSL certificates aren't required to start a node, register it, or create sChains. But because dApp developers often use toolings that require HTTPS/WSS endpoints, SSL certificates are required. 
+Node SSL certificates aren't required to start a node, register it, or create sChains. However, dApp developers using SKALE Chains need HTTPS/WSS endpoints to work with toolings such as API based wallets and other integrations. Therefore, SSL certificates are required for SKALE Network validator nodes.
 
-=== Validators onboarding
+== Node SSL onboarding
 Here's an example of a step-by-step process of setting up validator node SSL. 
 
-==== Prerequisites 
-To upload SSL certificates to the node, you’ll have to do a few steps on your side which may vary depending on your domain name provider, certificate authority, etc. We’ll provide you a reference example of how this could be achieved using free Let's Encrypt certificates at the end of this post. 
+=== Prerequisites
+To upload SSL certificates to the node, you’ll have to do a few steps on your side which may vary depending on your domain name provider, certificate authority, etc. <<reference-letsencrypt-tutorial, See here for reference example>> of how use free Let's Encrypt certificates. 
 
-The steps include getting domain names for each node, issuing SSL certificates for them, and uploading them to the node.
+The steps include:
+* getting domain names for each node.
+* issuing SSL certificates for them.
+* uploading certificates to the node.
 
 [NOTE]
 This procedure will vary depending on your domain management service (Google Domains, GoDaddy, etc).
 
 Step 1. Domain name and redirects::
-    The first thing you will need is the domain name. You’ll need one per node so it makes sense to set up a subdomain for each one and setup redirects. Let’s say you own `awesome-validator.com` and run 2 nodes with the following IP addresses, names, and redirects:
+    The first thing you will need is the domain name. You’ll need one per node, so it makes sense to set up a subdomain for each one and set up redirects. Let’s say you own `awesome-validator.com` and run two nodes with the following IP addresses, names, and redirects:
 
 [%header,cols=3*]
 |===
@@ -51,21 +54,12 @@ Step 1. Domain name and redirects::
 Step 2. Verify redirects::
 You can verify that redirects work by sending a request to the watchdog API on 3009 port using your domain name.
 
-Step 3. Issue SSL certificates:: Once you have all redirects for your nodes you can move to the SSL certificates. You will need SSL certs issued by one of the trusted CA:
+Step 3. Issue SSL certificates:: Once you have all redirects for your nodes, you can move to the SSL certificates. You will need SSL certs issued by one of the <<trusted-authorities, Trusted CAs>>. Once you've decided on the certificate issuer, you have several options - issue a separate certificate for each subdomain (node-0.awesome-validator.com, node-1.awesome-validator.com) or issue a single Wildcard SSL for all nodes (*.awesome-validator.com). As a result, you should have 2 main files saved and copied to the respective nodes:
 
-(todo: list of trusted CAs)
+* Certificate file (usually called something like fullchain.pem or cert.pem)
+* Private key file (usually called something like privkey.pem, pk.pem)
 
-Once you've decided on the certificate issuer you have several options - issue a separate certificate for each subdomain (node-0.awesome-validator.com, node-1.awesome-validator.com) or issue a single Wildcard SSL for all nodes (*.awesome-validator.com).
-
-As a result, you should have 2 main files:
-
-Certificate file (usually called something like fullchain.pem or cert.pem)
-
-Private key file (usually called something like privkey.pem, pk.pem)
-
-Save them and copy them to the respecting nodes.
-
-Step 4. Upload certificates to the SKALE Node:: We’re almost here, this is the last step. Once you copied the certificate and private key file, all you have to do is to run the following command:
+Step 4. Upload certificates to the SKALE Node:: We’re almost here; this is the last step. Once you copied the certificate and private key file, all you have to do is to run the following command:
 
 ```shell
 skale ssl upload -c $PATH_TO_CERT_FILE -k $PATH_TO_KEY_FILE
@@ -106,12 +100,15 @@ Besides that, usually, you could purchase an SSL certificate from your domain pr
 Most of them usually providing you with a few options like RapidSSL and DigiCert.
 
 [WARNING]
-Certificates provided by Letsencrypt are widely used now and trusted by most operating systems and devises so it’s OK to use them for your node, but don't forget about renewals, since Letsencrypt certs expire in 3 months. You can read more about Letsencrypt security and trust here: https://letsencrypt.org/certificates/ and https://letsencrypt.org/2018/08/06/trusted-by-all-major-root-programs.html
+Certificates provided by Letsencrypt are widely used now and trusted by most operating systems and devices, so it’s OK to use them for your node, but don't forget about renewals since Letsencrypt certs expire in 3 months. You can read more about Letsencrypt security and trust here: https://letsencrypt.org/certificates/ and https://letsencrypt.org/2018/08/06/trusted-by-all-major-root-programs.html
  
 [NOTE]
-Generally, Letsencrypt SSL certs are considered as a safe thing, but there are some opponents to the idea of a 'free SSL certs for everybody': https://medium.com/swlh/why-lets-encrypt-is-a-really-really-really-bad-idea-d69308887801
+Generally, Letsencrypt SSL certs are considered safe, but there are some opponents to the idea of a 'free SSL certs for everybody': https://medium.com/swlh/why-lets-encrypt-is-a-really-really-really-bad-idea-d69308887801
 
-=== Reference tutorial (Wildcard SSL using Letsencrypt)
+=== Reference Letsencrypt tutorial
+
+This brief tutorial shows you how to generate a wildcard SSL using Letsencrypt.
+
 Step 1. Install Certbot::
 https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx
 
@@ -126,25 +123,18 @@ Step 3. Copy .pem files to secure place::
 cp *.pem ~/[SECURE_DIR]
 ```
 
-=== Setting domain name on SKALE Manager contracts
+=== Setting domain name of a registered node
 
-Step 1::
-```shell
-skale node set-domain
-```
-
-Step 2::
-Enter the domain name to set for this node.
+To set the domain name of the registered node with SKALE manager, execute the following node-cli command on each respective node:
 
 ```shell
-> Enter domain name: node-0.awesome-validator.com
+skale node set-domain -d node-0.awesome-validator.com
 ```
 
-Adding domain name for an existing node
-todo
+=== Registering domain name for a new node
 
-Registering a new node with a domain name 
-todo
+In the registration step, be sure to include the domain name:
 
-Retrieving sChain endpoints
-🏗 This section will contain explanations for dApp users/owners about how to get all 64 sChain endpoints (including HTTP, HTTPS, WS and WSS) with the domain name.
+```shell
+skale node register --ip 1.2.3.4 -d node-0.awesome-validator.com --name node-0-AV
+```
