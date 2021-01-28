@@ -399,11 +399,9 @@ This document contains instructions on how to get started with the SKALE Node CL
 
 1.  After docker installation make sure that the `live-restore` option
     is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
-
 2.  If you have any issues you can save the logs using `skale logs dump` command.  
     It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
-
-3.  You can install iptables-persistent using the following commands
+3.  You can install iptables-persistent using the following commands:
 
 ```shell
 echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
@@ -412,8 +410,7 @@ sudo apt install iptables-persistent -y
 ```
 
 4.  You will need SSL certificates for each node. [See the Node SSL instructions](/validators/node-ssl.adoc).
-
-5.  You should run skale commands using sudo
+5.  You should run skale commands using sudo.
 
 If you have any concerns or questions, please don't hesitate to reach out to SKALE Team leads on [discord](http://skale.chat/).
 
