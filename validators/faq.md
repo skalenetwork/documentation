@@ -39,11 +39,11 @@ In this file you can see all the SKALE Chain information:
 | 8080/TCP        | Used by cAdvisor (Prometheus exporter) - to analyze and expose resource usage and performance data from running docker containers | Running cAdvisor container is optional (MONITORING_CONTAINERS=True)                                                                                                                            |
 | 9100/TCP        | Used by Prometheus Node Exporter  - to  measure host resources such as memory, disk and CPU utilization etc                       | Running Node exporter container is optional (MONITORING_CONTAINERS=True)                                                                                                                       |
 | 22              | Used by the node operator to ssh into the machine                                                                                 |                                                                                                                                                                                                |
-| 10000-11500/TCP | These ports SShould be open for communications inside sChains between different nodes.                                            | When there are no sChains these ports are closed by iptables rules. It’s important to not add another firewall, because sChain configuration is created dynamically as well as iptables rules. |
+| 10000–11500/TCP | These ports should be open for communications inside sChains between different nodes.                                            | When there are no sChains these ports are closed by iptables rules. It’s important to not add another firewall, because sChain configuration is created dynamically as well as iptables rules. |
 
 #### Can we use Kubernetes?
 
-Yes. However, you will need to make sure that your platform is compatible with SKALE. Currently, Docker Convoy does not have an integration with Kubernetes.
+Yes. However, you will need to make sure that your platform is compatible with SKALE. In particular, your platform must allow docker-lvmpy to dynamically partition the external drive for each SKALE chain.
 
 #### Where can I find the SKALE Node logs
 
