@@ -11,7 +11,7 @@ After the node registration, the node receives an assigned group of random node 
 -   A Linux x86_64 machine
 -   SGX-enabled Intel processor
 -   Ports 22, 3009, 8080, 9100, and 10000-11000, and ICMP IPv4 open for all
--   Ubuntu 18.04 or later LTS
+-   Ubuntu 18.04
 -   2TB attached storage main-net (200gb devnet)
 -   8 core
 -   32GB RAM
