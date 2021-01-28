@@ -405,14 +405,15 @@ This document contains instructions on how to get started with the SKALE Node CL
 
 3.  You can install iptables-persistent using the following commands
 
+```shell
+echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
+echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
+sudo apt install iptables-persistent -y
+```
 
-    echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
-    echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
-    sudo apt install iptables-persistent -y
+4.  You will need SSL certificates for each node. [See the Node SSL instructions](/validators/node-ssl.adoc).
 
-3.  You will need SSL certificates for each node. [See the Node SSL instructions](/validators/node-ssl.adoc).
-
-4.  You should run skale commands using sudo
+5.  You should run skale commands using sudo
 
 If you have any concerns or questions, please don't hesitate to reach out to SKALE Team leads on [discord](http://skale.chat/).
 
@@ -613,7 +614,9 @@ Get your node address.
 
 **Terminal Command:** 
 
-    skale wallet info
+```shell
+skale wallet info
+```
 
 **Output:** 
 
