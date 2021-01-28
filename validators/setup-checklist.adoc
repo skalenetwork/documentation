@@ -1,0 +1,45 @@
+== Mainnet Setup Checklist
+
+[options="interactive"]
+.Register Validator
+* [ ] Install Validator CLI
+* [ ] Setup Validator Wallet
+* [ ] Register Validator with SKALE Manager
+* [ ] Ensure Validator is added to whitelist
+
+[options="interactive"]
+.Setup SGXWallet Server
+* [ ] Setup SGX machine
+* [ ] Clone SGXWallet repo
+* [ ] Checkout version tag
+* [ ] Enable SGX
+* [ ] Install SGX Library
+* [ ] Start SGXWallet
+
+[options="interactive"]
+.Setup SKALE Node
+* [ ] Setup node machine
+* [ ] Install Node CLI
+* [ ] Setup environment
+* [ ] Setup SSL certificates
+* [ ] Initialize Node
+* [ ] View Node Wallet info
+* [ ] Check SGXWallet server connection
+* [ ] Fund Node Wallet
+
+[options="interactive"]
+.Link Node(s) to Validator
+* [ ] View Validator ID
+* [ ] Get Node signature
+* [ ] View Node Address
+* [ ] Link Node to Validator
+
+[options="interactive"]
+.Accept Delegations
+* [ ] Install Validator CLI
+
+[options="interactive"]
+.Register Node with Network
+* [ ] Verify ETH Balance
+* [ ] Verify Staked Delegations meet MSR
+* [ ] Register Node
