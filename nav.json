@@ -125,7 +125,8 @@
         },
         {
           "title": "Node REST API",
-          "link": "/validators/node-api"
+          "link": "/validators/node-api",
+          "depth": 0
         },
         {
           "title": "MainNet",
