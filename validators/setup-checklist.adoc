@@ -1,4 +1,4 @@
-== Mainnet Setup Checklist
+= Mainnet Setup Checklist
 
 [options="interactive"]
 .Register Validator
@@ -19,6 +19,7 @@
 [options="interactive"]
 .Setup SKALE Node
 * [ ] Setup node machine
+* [ ] Setup Ethereum endpoint
 * [ ] Install Node CLI
 * [ ] Setup environment
 * [ ] Setup SSL certificates
