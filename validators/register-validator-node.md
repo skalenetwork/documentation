@@ -797,10 +797,12 @@ skale node info
 
 ```shell
 # Node info
-Name: $NODE_NAME
-IP: $NODE_IP
+Name: <Node name>
+ID: <Node ID>
+IP: <IP of Machine>
 Public IP: <Public IP of Machine>
-Port: $NODE_PORT
+Port: <Node port>
+Domain name: <Node domain name>
 Status: Active
 ```
 
