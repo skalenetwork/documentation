@@ -29,6 +29,7 @@ The steps include:
 * getting domain names for each node.
 * issuing SSL certificates for them.
 * uploading certificates to the node.
+* setting up domain name for the node in the SKALE Manager smart contracts.
 
 [NOTE]
 This procedure will vary depending on your domain management service (Google Domains, GoDaddy, etc).
@@ -59,7 +60,8 @@ Step 3. Issue SSL certificates:: Once you have all redirects for your nodes, you
 * Certificate file (usually called something like fullchain.pem or cert.pem)
 * Private key file (usually called something like privkey.pem, pk.pem)
 
-Step 4. Upload certificates to the SKALE Node:: We’re almost here; this is the last step. Once you copied the certificate and private key file, all you have to do is to run the following command:
+Step 4. Upload certificates to the SKALE Node:: 
+Once you copied the certificate and private key file, all you have to do is to run the following command:
 
 ```shell
 skale ssl upload -c $PATH_TO_CERT_FILE -k $PATH_TO_KEY_FILE
@@ -74,7 +76,26 @@ Once certificates are uploaded, you can check them by running:
 skale ssl status
 ```
 
-Full reference could be found here: https://github.com/skalenetwork/node-cli[skalenetwork/node-cli]. 
+Step 5. Set domain name for your node in the SKALE Manager smart contracts::
+
+To set the domain name of the registered node with SKALE manager, execute the following node-cli command on each respective node:
+
+```shell
+skale node set-domain -d node-0.awesome-validator.com
+```
+
+See full reference for the `set-domain` command https://github.com/skalenetwork/node-cli#domain-name[here].
+
+[NOTE]
+In the recent version of the SKALE Manager smart contracts domain name is required during the node registration
+
+Be sure get a domain in advance to provide it when adding a new node to the network:
+
+```shell
+skale node register --ip 1.2.3.4 -d node-0.awesome-validator.com --name node-0-AV
+```
+
+See full reference for the `register` command https://github.com/skalenetwork/node-cli#node-registration[here].
 
 === Trusted authorities
 When choosing CA for getting your SSL certificate, consider a source that will be trusted by most major browsers, operating systems, and other devices.
@@ -121,20 +142,4 @@ certbot certonly --standalone -d my.domain.com
 Step 3. Copy .pem files to secure place:: 
 ```shell
 cp *.pem ~/[SECURE_DIR]
-```
-
-=== Setting domain name of a registered node
-
-To set the domain name of the registered node with SKALE manager, execute the following node-cli command on each respective node:
-
-```shell
-skale node set-domain -d node-0.awesome-validator.com
-```
-
-=== Registering domain name for a new node
-
-In the registration step, be sure to include the domain name:
-
-```shell
-skale node register --ip 1.2.3.4 -d node-0.awesome-validator.com --name node-0-AV
 ```
