@@ -1,4 +1,4 @@
-= Node REST API
+= Node REST API {revnumber}
 :doctype: article
 :revnumber: v1.0
 :revdate: 2021-01-29
@@ -23,7 +23,7 @@ Each SKALE node has a `skale_api` container with Flask webserver that provides R
 REST API provides access to private methods such as money transfers, node controls, and more. Make sure that port `3007` is available only to your trusted clients.
 
 [NOTE]
-Node REST API v1 available in `skale_api > 2.0.0-develop.0`
+This a PREVIEW (not available for Testnet or Mainnet). Node REST API {revnumber} available in `skale_api > 2.0.0-develop.0`
 
 == Endpoint structure
 
