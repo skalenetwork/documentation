@@ -16,7 +16,7 @@ The Interchain Messaging Agent can be used for managing ERC721 tokens between Et
 
 #### 1. Deposit ERC721 on Ethereum
 
-To send ERC721 tokens from a user's wallet to the Deposit Box on Ethereum, you will need to use the depo function within the  **DepositBox**  Smart Contract on Ethereum.  
+To send ERC721 tokens from a user's wallet to the Deposit Box on Ethereum, you will need to use the deposit function within the  **DepositBox**  Smart Contract on Ethereum.  
 
 This method is called from Ethereum to "freeze" funds and move ERC721 tokens into a safe Deposit Box.  
 
@@ -172,7 +172,7 @@ web3ForMainnet.eth
 
 #### 2. Get Cloned ERC721
 
-When you make the first deposit from an ERC721 contract on Ethereum, the  **ERC721ModuleForSchain** contract creates a clone of the ERC721 contract onto your SKALE Chain. In order to interact with this contract, you will need to retrieve the ABIs.  
+When you make the first deposit from an ERC721 contract on Ethereum, the  **ERC721ModuleForSchain** contract creates a clone of the ERC721 contract onto your SKALE Chain. To interact with this contract, you will need to retrieve the ABIs.  
 
 This can be accomplished by filtering the past events and finding the ERC721TokenCreated event created by the  **ERC721ModuleForSchain** on your SKALE Chain.  
 

@@ -2,7 +2,7 @@
 
 Deploying to SKALE is similar to deploying to the Ethereum blockchain. There are a few changes you will need to make within your deployment scripts. When using these code samples, please be sure to modify the code appropriately before running anything in production!  
 
-You can share your own code sample by reaching out to us on discord.
+You can share your own code sample by reaching out to the SKALE developer community on discord.
 
 <button>[Access Discord](http://skale.chat/)</button>
 
@@ -14,7 +14,7 @@ Truffle is a popular way to deploy your smart contracts onto Ethereum, and can a
 
 For more information on truffle configuration files, please see  [Truffle's Configuration Documentation](https://truffleframework.com/docs/truffle/reference/configuration).  
 
-NOTE: In order to deploy your smart contracts onto SKALE, the transaction needs to be signed. This code below shows how to use the truffle-hdwallet-provider package to sign the transaction with the private key of your wallet.  
+NOTE: To deploy your smart contracts onto SKALE, the transaction needs to be signed. This code below shows how to use the truffle-hdwallet-provider package to sign the transaction with the private key of your wallet.  
 
 ```javascript
 /*
@@ -52,7 +52,7 @@ module.exports = {
 
 You can point your deployment scripts for your existing smart contracts to your SKALE Chain’s address and deploy using existing tooling (e.g.: Truffle). An example truffle deployment command to deploy your smart contracts using the 'skale' network in the script above is:  
 
-```bash
+```shell
 truffle deploy --reset --network skale --compile-all
 
 ```
