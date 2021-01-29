@@ -23,7 +23,7 @@ SKALE Validator CLI is the validator client interface for registering a new vali
 -   Link all validator node addresses to a validator wallet address
 -   Request or cancel a delegation
 
-See the SKALE Validator CLI code and documentation on [**GitHub**](https://github.com/skalenetwork/validator-cli)\*‍
+See the SKALE Validator CLI code and documentation on [**GitHub**](https://github.com/skalenetwork/validator-cli).
 
 This document contains instructions on how to get started with the SKALE Validator CLI.
 
@@ -386,7 +386,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 -   Ports 22, 8080, 9100, and 10000–11000, and ICMP IPv4 open for all
 -   SSL Certificates
 -   Ubuntu 18.04 or later LTS
--   2TB attached storage main-net (200gb Testnet)
+-   2TB attached and unmounted storage (200GB Testnet)
 -   8 core
 -   32GB RAM
 -   16GB swap
@@ -757,7 +757,7 @@ Admin API URL: \[GET] `/api/ssl/status`
 
 ### Step 5.1: Register Node with Node CLI
 
-Note: Before proceeding, you will need to have at least  **0.2 Test ETH**. Also amount of delegated skale tokens need to be more or equal to minimum staking amount. Otherwise you won't be able to register with the SKALE Testnet.
+Note: Before proceeding, you will need to have at least  **0.2 Test ETH** for Testnet. Also amount of delegated skale tokens need to be more or equal to minimum staking amount. Otherwise you won't be able to register with the SKALE Testnet.
 
 Note: Also, be sure the node has SSL certificates!
 
