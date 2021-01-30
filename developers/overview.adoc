@@ -1,0 +1,54 @@
+=== Overview
+
+==== SKALE Network & What it does
+
+The SKALE Network is an open-source on-demand Web3 cloud platform designed to scale Ethereum dApps. The Network enables dApp developers to access validator-operated nodes' compute power to run fast, containerized, EVM-compatible SKALE Chains. Validators run and maintain SKALE Nodes, providing distributed computing power to the Network. The entire SKALE Network is managed by SKALE Manager, a dApp deployed on Ethereum Mainnet. Network users such as validators, delegators, and dApp Developers SKALE (SKL) tokens to stake and access network services.
+
+The https://skale.network/blog/validator-list-for-skale/[SKALE validator community represents over 45 independent operators] running over 150 nodes, and the SKALE Mainnet has been live for over 120 days. https://countdown.skale.network/[Checkout the current stats.]
+
+With SKALE, dApps run gas-less transactions on a Proof-of-Stake chain distributed across 16 nodes, each running containerized EVM. SKALE chains can exchange transactions or messages with other SKALE Chains and Ethereum networks, allowing dApp developers to use SKALE for powering their dApps while enabling token transfers to and from Ethereum or other chains.
+
+SKALE Network uses a https://skale.network/blog/technical-highlights/[unique combination of several technologies] to achieve scalability, security, interoperability, and progressive decentralization:
+
+[%header,cols=2*]
+|===
+|Technology 
+|Impact
+
+|Pooled Validation Proof-of-Stake
+| https://skale.network/blog/the-skale-network-why-randomness-rotation-and-incentives-are-critical-for-secure-scaling/[Scalable security model across validators and delegators]
+
+| Hybrid container architecture
+| https://skale.network/blog/containerization-the-future-of-decentralized-infrastructure/[Agile allocation of on-demand composable compute resources across the network]
+
+|Threshold Cryptography
+| Supermajority signature signing with ABBA consensus supports Byzantine Fault Tolerance and resolves https://skale.network/blog/the-data-availability-problem/[data-availability] issues  
+
+|Trusted-Execution Environment
+| https://github.com/skalenetwork/SGXWallet[Fast block signing and multiple chain support using threshold cryptography]
+
+|Asynchronous Binary Byzantine Agreement (ABBA) Consensus
+| https://skale.network/blog/skale-consensus/[Mathematically provable, fast-finality, leaderless, and Byzantine fault tolerant]
+
+|Ethereum Network
+|Public, open-source, and decentralized operation of the SKALE Network via SKALE Manager contracts
+
+|===
+
+==== Tools & Compatibility
+
+SKALE Network is designed to work with all Ethereum compatible tools such as API-based wallets and monitoring and analytics. 
+
+link:/developers/integrations[View integrations]
+
+==== Get Access
+
+If you don't have a SKALE Chain yet, you can get started with:
+
+* https://forum.skale.network/t/skale-chain-sdk[Rapid and quick testing SKALE endpoint]
+* https://github.com/skalenetwork/skale-sdk[SKALE SDK]
+* https://github.com/skalenetwork/skale-ima-sdk[SKALE-IMA-SDK]
+* http://skale.chat[Request a Testnet SKALE Chain in Discord] (depending on availability)
+* https://skale.network/innovators-signup[Apply to SIP Program] for a chance to receive a SKALE Mainnet chain grant.
+
+Still not sure how to get started? Then head over to the link:/developers/getting-started/beginner[Beginner's guide] or reach out to the http://skale.chat[SKALE Network developer community on Discord].

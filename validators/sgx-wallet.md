@@ -13,9 +13,11 @@ Sgxwallet runs as a network server. Clients connect to the server, authenticate 
 The server provides an initial registration service to issue client certificates to the clients. The administrator manually approves each registration
 
 ### **Prerequisites**
--   Ubuntu 18.04
--   SGX-enabled Intel processor
--   Ports 1026-1028
+-   Ubuntu 18.04 (Ubuntu > 18.04 not yet supported)
+-   SGX-enabled Intel processor with 8 cores
+-   At least 8GB RAM
+-   Swap size equals to half of RAM size
+-   Ports 1026–1029
 
 SKALE will have two types of SGX operations:
 

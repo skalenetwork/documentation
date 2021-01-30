@@ -175,7 +175,7 @@ Sgxwallet runs as a network server. Clients connect to the server, authenticate 
 The server provides an initial registration service to issue client certificates to the clients. The administrator manually approves each registration
 
 ### **Prerequisites**
--   Ubuntu 18.04
+-   Ubuntu 18.04 (Ubuntu > 18.04 not yet supported)
 -   SGX-enabled Intel processor
 -   At least 8GB RAM
 -   Swap size equals to half of RAM size
@@ -363,10 +363,10 @@ This document contains instructions on how to get started with the SKALE Node CL
 
 ### **Prerequisites**
 
--   A Linux x86_64 machine
--   SGX-enabled Intel processor
+-   A Linux x86_64 machine running Ubuntu
+-   SGX-enabled Intel machine (Ubuntu 18.04) 
 -   Ports 22, 8080, 9100, and 10000-11000, and ICMP IPv4 open for all
--   Ubuntu 18.04 or later LTS
+-   Ubuntu 18.04
 -   2TB attached storage main-net (200gb devnet)
 -   8 core
 -   32GB RAM
