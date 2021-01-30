@@ -44,7 +44,7 @@ SKALE Chains on the SDKs or Testnet will already be configured for you and won't
 
 To use your SKALE Chain in the SDKs, you will need to use the provided account with test ETH. See the README in the SDK for this pre-funded account. For Testnets, you will need your wallet account with the SKALE TestNet ETH tokens. Do this by using the SKALE Faucet to receive 0.5 test ETH. 
 
-<note>NOTE: Transactions run on SKALE are gas-less; however, for a user to process transactions on your SKALE Chain their wallet will need to contain a small amount of test ETH. [Read more about SKALE ETH.](/developers/skale-chain-eth.adoc)</note> 
+NOTE: Transactions run on SKALE are gas-less; however, for a user to process transactions on your SKALE Chain their wallet will need to contain a small amount of test ETH. [Read more about SKALE ETH](/developers/skale-chain-eth).
 
 <button>[Get Testnet ETH](https://faucet.skale.network/)</button>
 
