@@ -23,9 +23,9 @@ You can run a single node containerized SKALE Chain on your local machine (Ubunt
 
 If you want to get started with SKALE and the Interchain Messaging Agent (IMA) you can use the SKALE-IMA-SDK. This setup is more complicated as it involves deploying IMA contracts on a Testnet and a containerized SKALE Chain. You will need:
 
-* Ethereum testnet account
-* Ethereum testnet ETH
-* Ethereum testnet endpoint such as Infura or Geth.
+-   Ethereum testnet account
+-   Ethereum testnet ETH
+-   Ethereum testnet endpoint such as Infura or Geth.
 
 <button>[Get the SKALE IMA SDK](https://github.com/skalenetwork/skale-ima-sdk)</button>
 
@@ -109,11 +109,9 @@ Once your smart contracts deploy to your SKALE Chain, you can test sending out a
 
 You won't need to change your ether.js or web3 code setup, but you will need to send the transactions directly to SKALE by connecting MetaMask or [API Based Wallet](/developers/integrations) of your choice to your SKALE Chain.
 
-
 To connect SKALE in MetaMask, create a new Custom RPC with your SKALE Chain endpoint.  
 
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif" sx={{maxWidth: ['75vw', '50vw', '300px']}} />
-
+&lt;img src="<https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif>" sx={{maxWidth: ['75vw', '50vw', '300px']}} />
 
 </Step>
 </StepsLayout>
