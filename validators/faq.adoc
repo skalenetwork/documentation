@@ -1,12 +1,28 @@
-== Troubleshooting
+= Troubleshooting
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
+
+
 
 Need help solving an issue? Check to see if this has already been answered below. If you can't find an answer to your issue, reach out to the SKALE Network developer community on discord.  
 
 http://skale.chat/[Ask a question]
 
-=== Validator Node
+== Validator Node
 
-==== How do I change my Node's IP address?
+=== How do I change my Node's IP address?
 
 It would be best to avoid having to change your node's IP address. It's recommended to use a permanent IP that can dynamically point to a node's machine IP (for example, elastic IP) so you can update machines if needed without having to change the IP recorded in SKALE Manager during node registration.
 
@@ -26,17 +42,17 @@ To perform a node exit but keep the node instance and its data, follow these ste
 4. Register node with a new IP.
 5. Execute `skale node update .env`.
 
-==== How should validators configure back up and restore?
+=== How should validators configure back up and restore?
 
 Validators are responsible for backing up everything on the node. SKALE Network is relying on validators to complete the backup procedure for each of the nodes. SKALE Network will be replicating the data for each SKALE Chain across 16 nodes, adding an additional layer of data availability. If a node goes down for a long time the other 2/3 of 15 will be responsible for taking the SKALE Chain's snapshot and shuffling the SKALE Chain in the SKALE Network. If a validator node is down for a long time, it may be reallocated to service new SKALE Chains depending on the length of the downtime.  
 
 Please check https://github.com/skalenetwork/skale-node-cli/blob/develop/README.md#node-commands[node back up] and https://github.com/skalenetwork/sgxwallet/blob/develop/docs/backup-procedure.md[sgx_backup] to learn more about how to back up node or SGXWallet, and restore.
 
-==== Where are the network communications between containers, shared configuration files and volumes stored?
+=== Where are the network communications between containers, shared configuration files and volumes stored?
 
 You can find these details in GitHub [skale-node](https://github.com/skalenetwork/skale-node) repository and [docker-compose.yml](https://github.com/skalenetwork/skale-node/blob/f928b95e69c548f12b4b21bd11a16fe2d239b83b/docker-compose.yml)  
 
-==== How do I access the SKALE Chain's IP and ports?
+=== How do I access the SKALE Chain's IP and ports?
 
 Please perform the following in your terminal and pick one of the names shows up under "schains" folder:  
 
@@ -80,11 +96,11 @@ image::https://assets.website-files.com/5be05ae542686c4ebf192462/5d9f9cb5adfc337
 |When there are no sChains these ports are closed by iptables rules. It’s important to not add another firewall, because sChain configuration is created dynamically as well as iptables rules.
 |===
 
-==== Can we use Kubernetes?
+=== Can we use Kubernetes?
 
 Yes. However, you will need to make sure that your platform is compatible with SKALE. In particular, your platform must allow docker-lvmpy to dynamically partition the external drive for each SKALE chain.
 
-==== Where can I find the SKALE Node logs
+=== Where can I find the SKALE Node logs
 
 Validators can run these commands to check their logs in their node:
 
