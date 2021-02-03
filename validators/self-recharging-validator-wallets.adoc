@@ -1,0 +1,114 @@
+= Self-recharging Validator Wallets
+:doctype: article
+:revremark: preview
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
+
+The SKALE Network uses a self-recharging wallet system to make it easier for validators and SKALE Chain Owners to maintain a minimum amount of ETH in each node wallet to fund node-related transactions.
+
+The Wallets contract in SKALE Manager manages this functionality.
+
+== Node Transactions
+
+What node transactions are reimbursed? 
+
+[%header,cols="1,1,3"]
+|===
+|Transaction
+|Reimbursed by
+|Description
+
+|getBounty()
+|Validator
+|Called every month by each node to request bounty.
+
+|nodeExit()
+|Validator
+|To remove a new from the network due to hardware failure or unmet MSR.
+
+|complaint()
+|Validator
+|Performed in DKG failure mode when a node lodges a general DKG complaint against a malicious node who may have failed to send data.
+
+|complaintBadData()
+|Validator
+|Performed in DKG failure mode when a node discovers that malicious data has been sent and requires verification data to validate.
+
+|preResponse()
+|Validator
+|Performed in DKG failure node, when a node sends a verification vector and secret key shares ahead of the final response() result.
+
+|response()
+|Validator
+|Performed in DKG failure mode when a node sends a response to a complaint() to prove it's not malicious based on the data it sends in preResponse().
+
+|broadcast()
+|SKALE Chain Owner
+|Performed during SKALE Chain creation when distributed key generation process begins. Nodes broadcast their secret key contributions to all other nodes.
+
+|alright()
+|SKALE Chain Owner
+|Performed during SKALE Chain creation when distributed key generation is in-process. Nodes send receipts of secret key contributions.
+|===
+
+== Replenishment
+
+Self-recharging validator wallets can be replenished in ETH by anyone with the wallet's contract address and the `ValidatorId` or `sChainId`. This functionality allows anyone to ensure the continued funding and operation of validator nodes and SKALE Chains. 
+
+If the *self-recharging*...
+
+* *validator balance* runs out of ETH, then the nodes' wallets are first spent until transactions revert.
+* *SKALE Chain Owner balance* runs out of ETH, then transactions will revert.
+
+Node wallets connected to the self-recharging validator wallet is replenished automatically at the end of each transaction.
+
+[WARNING]
+If a node's getBounty transaction reverts and can't complete the transaction before the end of the month, the validator-delegators will receive less bounty. Validators must ensure sufficient balance and a working endpoint to connect with Ethereum mainnet.
+
+[NOTE]
+There is no easy way to know the EVM's refund counter's value from inside the EVM. Thus, refunds may offset the final net cost of the transaction, and node balances may slightly increase over time. This process will be reviewed and improved over time.
+
+== Using a self-recharging wallet
+
+When a new validator is registered, a self-recharging wallet is automatically deployed. The validator's private key has withdraw access to this wallet. Validators can use this private key to close the self-recharging wallet should the validator leave the network.
+
+As a validator links nodes to their validator ID, these linked nodes will automatically request reimbursement from the validator's self-recharging wallet for those transactions. If a node is unlinked from the validator, this node will no longer request reimbursement from the validator's self-recharging wallet.
+
+Existing validators will automatically be added to the Wallet contract and will start using them once this feature is deployed to mainnet.
+
+== Interacting with the Wallet
+
+Validators can use the CLI to recharge, withdraw funds from, or check the balance of the self-recharging wallet. Also anyone can recharge or check the balance by interacting with the Wallet contract on Ethereum.
+
+For the CLI::
+
+```
+# recharges the self-recharging wallet from the validator wallet (sk-val wallet info)
+sk-val ... recharge --amount [AMOUNT_IN_ETH]
+
+# withdraw an amount from the self-recharging wallet
+sk-val ... withdraw --amount [AMOUNT_IN_ETH]
+
+# returns self-recharging wallet balance
+sk-val ... balance                              
+```
+
+For Wallets contract::
+
+```
+rechargeValidatorWallet(validatorId)
+withdrawFundsFromValidatorWallet(amount)
+getValidatorBalance(validatorId)
+```
