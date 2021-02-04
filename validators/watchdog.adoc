@@ -17,9 +17,11 @@ endif::[]
 
 == Introduction
 
-SKALE watchdog is microservice running on every SKALE node for providing SLA agents with node performance metrics. It also can be used for external monitoring goals (validators can use it in their own monitoring tools).
+SKALE Watchdog is microservice running on every SKALE node for providing SLA agents with node performance metrics. It also can be used for external monitoring goals (validators can use it in their monitoring tools).
 
-Watchdog is implemented as a Python script running in docker container with Flask webserver that provides simple REST JSON API available on port 3009 (http://YOUR_SKALE_NODE_IP:3009). Currently watchdog can provide data about all SKALE node docker containers, healthchecks of sChains and SGX server, ethereum node endpoint status and hardware information.
+Watchdog is a Python script running in docker container with Flask web server that provides simple REST JSON API available on port 3009 (http://YOUR_SKALE_NODE_IP:3009). Currently, Watchdog can give data on all SKALE node docker containers, health checks of sChains and SGX server, ethereum node endpoint status, and hardware information.
+
+To enable Watchdog to query, you should include `MONITORING_CONTAINERS=True` in the environment variables when setting up the node.
 
 == REST JSON API
 
@@ -27,7 +29,7 @@ Watchdog is implemented as a Python script running in docker container with Flas
 
 ==== Description
 
-Returns data about all SKALE containers running on a given node. These are containers with prefixskale_, including base containers and pairs of sChain and IMA containers, where every pair is corresponding to a certain sChain assigned to this node. 
+Returns data about all SKALE containers running on a given node. These are containers with prefix `skale_`, including base containers and pairs of sChain and IMA containers, where every pair corresponds to a certain sChain assigned to this node. 
 
 Here’s a list of the base containers:
 
@@ -77,7 +79,7 @@ Returns list of health checks for every sChain running on a given node:
 * firewall_rules - checks that firewall rules are set correctly
 * container - checks that skaled container is running
 * ima_container - checks that IMA container is running
-* rpc - checks that local skaled RPC is accessible
+* RPC - checks that local skaled RPC is accessible
 * blocks - checks that local skaled is mining blocks
 
 ==== Usage
