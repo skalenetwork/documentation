@@ -26,13 +26,14 @@ http://skale.chat/[Ask a question]
 
 It would be best to avoid having to change your node's IP address. It's recommended to use a permanent IP that can dynamically point to a node's machine IP (for example, elastic IP) so you can update machines if needed without having to change the IP recorded in SKALE Manager during node registration.
 
-If you must change your node IP in SKALE Manager, you must perform a node exit that could be costly to the node operator if it's currently supporting SKALE Chains.
+If you must change your node IP in SKALE Manager, you must perform a node exit and re-registration in the first 3 days (72 hours) of the month. Also, performing a node exit could be expensive to the node operator if it's currently supporting SKALE Chains.
 
 To perform a node exit, follow these general steps:
 
 1. Execute `skale exit start`.
 2. Verify the exit process by executing `skale exit status`. (You don't need to wait for exit to finalize)
-3. Register a new node with the new IP.
+3. Link the node to the validator ID.
+4. Register a new node with the new IP.
 
 To perform a node exit but keep the node instance and its data, follow these steps:
 
