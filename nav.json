@@ -129,6 +129,10 @@
           "depth": 2
         },
         {
+          "title": "Watchdog",
+          "link": "/validators/watchdog"
+        },
+        {
           "title": "MainNet",
           "link": "/validators/versions",
           "links": [
