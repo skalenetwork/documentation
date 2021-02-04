@@ -1,4 +1,18 @@
 = Message Proxy
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
 
 The MessageProxy contract sends messages to any contract. The IMA system uses MessageProxy to send Eth, ERC20, ERC721 transfer messages to DepositBox and TokenManager contracts, and can be expanded to support other arbitrary messages and contracts.
 
@@ -16,12 +30,48 @@ To receive messages via MessageProxy, your contract(s) need to implement postMes
 
 When the source contract calls PostOutgoingMessage(), the `data` will be delivered to the destination contract via the Agent. The Agent will then call on the postMessage() function on the destination contract to deliver the message.
 
-For example, 
-
 To send messages from SKALE Chain to Mainnet:
-* Your SKALE chain contract(s) must call `PostOutgoingMessage("Mainnet", [RECEIVING_CONTRACT_ADDRESS_ON_MAINNET], 0, [FINAL RECEIVER/CONTRACT ADDRESS], [DATA])`
+
+* Your SKALE Chain contract(s) must call `PostOutgoingMessage("Mainnet", [RECEIVING_CONTRACT_ADDRESS_ON_MAINNET], 0, [FINAL RECEIVER/CONTRACT ADDRESS], [DATA])`
 * The receiving contract address on mainnet must implement `postMessage()` function.
 
 To send messages from Mainnet to SKALE Chain:
+
 * Your Mainnet contract(s) must call `PostOutgoingMessage([SKALE_CHAIN_ID], [RECEIVING_CONTRACT_ADDRESS_ON_SCHAIN], 0, [FINAL RECEIVER/CONTRACT ADDRESS_ON_SCHAIN], [DATA])`
 * The receiving contract address on SKALE Chain must implement `postMessage()` function.
+
+== PostMessage
+
+See below for instructions to implement postMessage in receiving contracts:
+
+1. Add the interface:
+
+```solidity
+interface Proxy {
+    function postOutgoingMessage(
+        string calldata dstChainID, 
+        address dstContract, 
+        uint256 amount, 
+        address to, 
+        bytes calldata data
+    ) 
+        external;
+}
+```
+
+[start=2]
+2. Add the postMessage function to process incoming messages from the Agent.
+
+```solidity
+function postMessage(
+    address sender, 
+    string memory fromSchainID, 
+    address payable to, 
+    uint256 amount, 
+    bytes memory data
+) 
+    public 
+{
+    [add in your processing logic]
+}
+```
