@@ -2,31 +2,41 @@
 
 [options="interactive"]
 .Register Validator
-* [ ] Install Validator CLI
+* [ ] Prepare Ethereum Wallet (Validator)
+* [ ] Decide on a validator name and commission fee
+* [ ] Get SKALE Manager ABIs
+* [ ] Download & Install Validator CLI
 * [ ] Setup Validator Wallet
 * [ ] Register Validator with SKALE Manager
-* [ ] Ensure Validator is added to whitelist
+* [ ] Fund Wallets contract with ETH (min. 1.0 ETH)
+* [ ] Ensure Validator is added to Trusted list.
 
 [options="interactive"]
 .Setup SGXWallet Server
 * [ ] Setup SGX machine
+* [ ] Install docker and dependencies
 * [ ] Clone SGXWallet repo
 * [ ] Checkout version tag
 * [ ] Enable SGX
-* [ ] Install SGX Library
+* [ ] Install SGX Driver
+* [ ] Verify SGX processor support
 * [ ] Start SGXWallet
+* [ ] Securely save the generated backup key!
+* [ ] Implement SGXWallet backup process
 
 [options="interactive"]
 .Setup SKALE Node
 * [ ] Setup node machine
-* [ ] Setup Ethereum endpoint
+* [ ] Setup Ethereum endpoint (Geth)
+* [ ] Setup environment variables
 * [ ] Install Node CLI
-* [ ] Setup environment
 * [ ] Setup SSL certificates
 * [ ] Initialize Node
 * [ ] View Node Wallet info
 * [ ] Check SGXWallet server connection
 * [ ] Fund Node Wallet
+* [ ] Implement Node backup process
+* [ ] Implement Ethereum endpoint backup process
 
 [options="interactive"]
 .Link Node(s) to Validator
@@ -37,10 +47,19 @@
 
 [options="interactive"]
 .Accept Delegations
-* [ ] Install Validator CLI
+* [ ] Accept Delegations
 
 [options="interactive"]
 .Register Node with Network
 * [ ] Verify ETH Balance
-* [ ] Verify Staked Delegations meet MSR
-* [ ] Register Node
+* [ ] Verify SKALE stake meets MSR
+* [ ] Register Node within 72 hrs of month start
+
+[options="interactive"]
+.Post Registration
+* [ ] Check Validator wallet ETH balance regularly
+* [ ] Accept delegations for the next month
+* [ ] Monitor final undelegation requests (72 hrs before end of month)
+* [ ] Plan for next month's number of nodes to meet MSR.
+* [ ] Ensure SGXWallet, Ethereum Endpoint, and Node ports are working.
+* [ ] Monitor containers healthchecks
