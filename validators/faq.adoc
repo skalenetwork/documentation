@@ -28,14 +28,15 @@ It would be best to avoid having to change your node's IP address. It's recommen
 
 If you must change your node IP in SKALE Manager, you must perform a node exit and re-registration in the first 3 days (72 hours) of the month. Also, performing a node exit could be expensive to the node operator if it's currently supporting SKALE Chains.
 
-To perform a node exit, follow these general steps:
+To perform a node exit, and register a new machine and IP:
 
-1. Execute `skale exit start`.
+1. Execute `skale exit start` on the exiting node.
 2. Verify the exit process by executing `skale exit status`. (You don't need to wait for exit to finalize)
-3. Link the node to the validator ID.
-4. Register a new node with the new IP.
+3. Create a new node machine
+4. Link the new node to the validator ID.
+5. Register the node with under the new IP.
 
-To perform a node exit but keep the node instance and its data, follow these steps:
+To perform a node exit, keep the original node machine and its data and update the IP, follow these steps:
 
 1. Perform the general node exit procedure steps 1 and 2 above.
 2. Go to `~/.skale/node_data/node_config.json` and delete all key-value **except `sgx_key_name`**.
