@@ -24,7 +24,9 @@ http://skale.chat/[Ask a question]
 
 === How do I change my Node's IP address?
 
-It would be best to avoid having to change your node's IP address. It's recommended to use a permanent IP that can dynamically point to a node's machine IP (for example, elastic IP) so you can update machines if needed without having to change the IP recorded in SKALE Manager during node registration.
+You cannot change your node IP address, but what is possible is to remove the node with the incorrect/old IP address and register a new node under the correct/new IP while keeping the old SGX key.
+
+It's recommended to use a permanent IP that can dynamically point to a node's machine IP (for example, elastic IP) so you can update machines if needed without having to change the IP recorded in SKALE Manager during node registration.
 
 If you must change your node IP in SKALE Manager, you must perform a node exit and re-registration in the first 3 days (72 hours) of the month. Also, performing a node exit could be expensive to the node operator if it's currently supporting SKALE Chains.
 
@@ -56,13 +58,14 @@ You can find these details in GitHub [skale-node](https://github.com/skalenetwor
 
 === How do I access the SKALE Chain's IP and ports?
 
-Please perform the following in your terminal and pick one of the names shows up under "schains" folder:  
+You can use the node-cli to view firewall info and SKALE Chain info:  
 
 ```shell
-cd /skale_node_data/schains/
-cd [chainname]
-vi [chainname].json
+# Show firewall rules for IP and Ports
+skale schains show-rules
 
+# Show the SKALE Chain Config
+skale schains config [SCHAIN_NAME]
 ```
 
 In this file you can see all the SKALE Chain information:  
@@ -126,13 +129,13 @@ transaction manager logs
 docker logs skale_transaction_manager
 ```
 
-all logs
+all running containers logs
 
 ```shell
 skale logs dump [PATH]
 ```
 
-Sgx certification in validator node:
+SGX certification in validator node:
 
 ```shell
 ls -l ~/.skale/node_data/sgx_certs/
@@ -148,6 +151,12 @@ node-cli debugging logs
 
 ```shell
 ~/.skale/.skale-cli-log/debug-node-cli.log
+```
+
+docker-lvmpy logs
+
+```shell
+cat /var/log/docker-lvmpy/lvmpy.log
 ```
 
 SKALE Network has many resources designed to help you get your questions answered. You can reach out to the SKALE Network developer community on http://skale.chat/[discord], or submit a support request below.  
