@@ -30,7 +30,7 @@ Port 3009 should be opened on every SKALE node for Watchdog to work.
 
 ==== Description
 
-Returns data about all SKALE containers running on a given node. These are containers with prefix `skale_`, including base containers and pairs of sChain and IMA containers, where every pair corresponds to a certain sChain assigned to this node. 
+Returns data on all SKALE containers running on a given node. These are containers with prefix `skale_`, including base containers and pairs of sChain and IMA containers, where every pair corresponds to a certain sChain assigned to this node.
 
 Here’s a list of the base containers:
 
@@ -59,7 +59,7 @@ $ curl http://YOUR_SKALE_NODE_IP:3009/status/core
 
 ==== Description
 
-Returns SGX server info - connected status and SGX wallet version
+Returns SGX server info - connection status and SGX wallet version
 
 ==== Usage
 
@@ -108,7 +108,7 @@ $ curl http://YOUR_SKALE_NODE_IP:3009/status/endpoint
 
 Returns node hardware information:
 
-*cpu_total_cores - return the number of logical CPUs in the system ( the number of physical cores multiplied by the number of threads that can run on each core)
+* cpu_total_cores - return the number of logical CPUs in the system ( the number of physical cores multiplied by the number of threads that can run on each core)
 * cpu_physical_cores - return the number of physical CPUs in the system
 * memory - total physical memory in bytes (exclusive swap)
 * swap - total swap memory in bytes
