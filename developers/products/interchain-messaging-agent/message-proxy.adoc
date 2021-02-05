@@ -14,31 +14,36 @@ toc::[]
 
 endif::[]
 
-The MessageProxy contract sends messages to any contract. The IMA system uses MessageProxy to send Eth, ERC20, ERC721 transfer messages to DepositBox and TokenManager contracts, and can be expanded to support other arbitrary messages and contracts.
+The MessageProxy contract sends messages to any contract. The IMA system uses MessageProxy to send Eth, ERC20, ERC721 transfer messages to DepositBox and TokenManager contracts, and is expandable to support other messages and contracts.
 
 == Architecture
 
 * MessageProxy contracts are deployed on Mainnet and each SKALE Chain.
-* OutgoingMessages are processed by IMA Agent, a containerized nodejs script operating on each SKALE Node. When the Agent receives an OutgoingMessage, it sends the message to another MessageProxy contract on the destination chain to which it's sent.
-* PostOutgoingMessage is a function called by DepositBox and TokenManager, when a transfer is initiated to another chain (Mainnet or SKALE Chain)
+* Messages send via `postOutgoingMessage` are processed by the IMA Agent, a containerized nodejs script operating on each SKALE Node and listening for events on the SKALE Chain and Mainnet. 
+* When the Agent receives an Outgoing Message on either blockchain, it sends the message onward via `postIncomingMessage` to another MessageProxy contract on the destination chain to which it's sent.
+* You can view how `postOutgoingMessage` is used by DepositBox and TokenManager when a transfer is initiated to another chain (Mainnet or SKALE Chain).
 
 == Implementation
 
-To send messages via MessageProxy, your contract(s) on the SKALE Chain or Mainnet need to call postOutgoingMessage() on the MessageProxy to send messages through the Agent. You need to pass in the arguments for destinationChainID, destination contract address, and the data to be sent. If you send messages from Schain to Mainnet, you must call MessageProxyOnSchain's postOutGoingMessage() and include destinationChainID = "Mainnet" and the receiving contract address on Mainnet.
+To send messages via MessageProxy, your sending contract(s) on the SKALE Chain or Mainnet need to call `postOutgoingMessage` on the MessageProxy to send messages through the Agent. You need to pass in the parameters for destinationChainID, destination contract address, and the data to be sent. If you send messages from Schain to Mainnet, you must call MessageProxyOnSchain's `postOutgoingMessage` and include destinationChainID = "Mainnet" and the receiving contract address on Mainnet.
 
-To receive messages via MessageProxy, your contract(s) need to implement postMessage(). The Agent only calls this function.
+To receive messages via MessageProxy, your receiving contract(s) need to implement `postMessage` logic (see PostMessage section below).
 
-When the source contract calls PostOutgoingMessage(), the `data` will be delivered to the destination contract via the Agent. The Agent will then call on the postMessage() function on the destination contract to deliver the message.
+When the IMA Agent receives a message from `postOutgoingMessage`, the agent calls `postIncomingMessage` on the destination chain's MessageProxy contract, and this `postIncomingMessage` executes the `postMessage` function in your contract.
 
-To send messages from SKALE Chain to Mainnet:
+.To send messages from SKALE Chain to Mainnet
 
-* Your SKALE Chain contract(s) must call `PostOutgoingMessage("Mainnet", [RECEIVING_CONTRACT_ADDRESS_ON_MAINNET], 0, [FINAL RECEIVER/CONTRACT ADDRESS], [DATA])`
-* The receiving contract address on mainnet must implement `postMessage()` function.
+* Your SKALE Chain contract(s) must call `postOutgoingMessage("Mainnet", [RECEIVING_CONTRACT_ADDRESS_ON_MAINNET], [AMOUNT], [FINAL RECEIVER/CONTRACT ADDRESS], [DATA])`
+* The receiving contract address on mainnet must implement a `postMessage` function.
 
-To send messages from Mainnet to SKALE Chain:
+.To send messages from Mainnet to SKALE Chain:
 
-* Your Mainnet contract(s) must call `PostOutgoingMessage([SKALE_CHAIN_ID], [RECEIVING_CONTRACT_ADDRESS_ON_SCHAIN], 0, [FINAL RECEIVER/CONTRACT ADDRESS_ON_SCHAIN], [DATA])`
-* The receiving contract address on SKALE Chain must implement `postMessage()` function.
+* Your Mainnet contract(s) must call `postOutgoingMessage([SKALE_CHAIN_ID], [RECEIVING_CONTRACT_ADDRESS_ON_SCHAIN], [AMOUNT], [FINAL RECEIVER/CONTRACT ADDRESS_ON_SCHAIN], [DATA])`
+* The receiving contract address on SKALE Chain must implement a `postMessage` function.
+
+.To send only data
+
+You only need to pass the [SKALE_CHAIN_ID] and [DATA] parameters and implement the postMessage logic to handle the data. The [RECEIVING_CONTRACT_ADDRESS_ON_SCHAIN], [FINAL RECEIVER/CONTRACT ADDRESS_ON_SCHAIN] and [AMOUNT] parameters can be ignored.
 
 == PostMessage
 
@@ -75,3 +80,6 @@ function postMessage(
     [add in your processing logic]
 }
 ```
+
+[start=3]
+3. Add the address of MessageProxyOnMainnet or MessageProxyOnSchain.
