@@ -19,7 +19,7 @@ The MessageProxy contract sends messages to any contract. The IMA system uses Me
 == Architecture
 
 * MessageProxy contracts are deployed on Mainnet and each SKALE Chain.
-* Messages send via `postOutgoingMessage` are processed by the IMA Agent, a containerized nodejs script operating on each SKALE Node and listening for events on the SKALE Chain and Mainnet. 
+* Messages sent via `postOutgoingMessage` are processed by the IMA Agent, a containerized nodejs script operating on each SKALE Node and listening for events on the SKALE Chain and Mainnet. 
 * When the Agent receives an Outgoing Message on either blockchain, it sends the message onward via `postIncomingMessage` to another MessageProxy contract on the destination chain to which it's sent.
 * You can view how `postOutgoingMessage` is used by DepositBox and TokenManager when a transfer is initiated to another chain (Mainnet or SKALE Chain).
 
@@ -33,17 +33,17 @@ When the IMA Agent receives a message from `postOutgoingMessage`, the agent call
 
 .To send messages from SKALE Chain to Mainnet
 
-* Your SKALE Chain contract(s) must call `postOutgoingMessage("Mainnet", [RECEIVING_CONTRACT_ADDRESS_ON_MAINNET], [AMOUNT], [FINAL RECEIVER/CONTRACT ADDRESS], [DATA])`
+* Your SKALE Chain contract(s) must call `postOutgoingMessage("Mainnet", [RECEIVING_CONTRACT_ADDRESS_ON_MAINNET], [ETH_AMOUNT], [FINAL RECEIVER/CONTRACT ADDRESS], [DATA])`
 * The receiving contract address on mainnet must implement a `postMessage` function.
 
 .To send messages from Mainnet to SKALE Chain:
 
-* Your Mainnet contract(s) must call `postOutgoingMessage([SKALE_CHAIN_ID], [RECEIVING_CONTRACT_ADDRESS_ON_SCHAIN], [AMOUNT], [FINAL RECEIVER/CONTRACT ADDRESS_ON_SCHAIN], [DATA])`
+* Your Mainnet contract(s) must call `postOutgoingMessage([SKALE_CHAIN_NAME], [RECEIVING_CONTRACT_ADDRESS_ON_SCHAIN], [ETH_AMOUNT], [FINAL RECEIVER/CONTRACT ADDRESS_ON_SCHAIN], [DATA])`
 * The receiving contract address on SKALE Chain must implement a `postMessage` function.
 
 .To send only data
 
-You only need to pass the [SKALE_CHAIN_ID] and [DATA] parameters and implement the postMessage logic to handle the data. The [RECEIVING_CONTRACT_ADDRESS_ON_SCHAIN], [FINAL RECEIVER/CONTRACT ADDRESS_ON_SCHAIN] and [AMOUNT] parameters can be ignored.
+You only need to pass the [SKALE_CHAIN_NAME], [RECEIVING_CONTRACT_ADDRESS], and [DATA] parameters and implement the postMessage logic in the receiving contract to handle the data. The [FINAL RECEIVER/CONTRACT ADDRESS_ON_SCHAIN] and [AMOUNT] parameters can be ignored.
 
 == PostMessage
 
