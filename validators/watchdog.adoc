@@ -21,8 +21,6 @@ SKALE Watchdog is microservice running on every SKALE node for providing SLA age
 
 Watchdog is a Python script running in docker container with Flask web server that provides simple REST JSON API available on port 3009 (http://YOUR_SKALE_NODE_IP:3009). Currently, Watchdog can give data on all SKALE node docker containers, health checks of sChains and SGX server, ethereum node endpoint status, and hardware information.
 
-To enable Watchdog to query, you should include `MONITORING_CONTAINERS=True` in the environment variables when setting up the node.
-
 [NOTE]
 Port 3009 should be opened on every SKALE node for Watchdog to work.
 
@@ -95,7 +93,7 @@ $ curl http://YOUR_SKALE_NODE_IP:3009/status/schains
 === /status/endpoint
 
 ==== Description
-Returns info about ethereum node endpoint, used by a given SKALE node - current block number and syncing status (web3.eth.syncing result)
+Returns info on ethereum node endpoint, used by a given SKALE node - current block number and syncing status (web3.eth.syncing result)
 
 ==== Usage
 
