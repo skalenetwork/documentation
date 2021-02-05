@@ -21,8 +21,6 @@ SKALE Watchdog is microservice running on every SKALE node for providing SLA age
 
 Watchdog is a Python script running in docker container with Flask web server that provides simple REST JSON API available on port 3009 (http://YOUR_SKALE_NODE_IP:3009). Currently, Watchdog can give data on all SKALE node docker containers, health checks of sChains and SGX server, ethereum node endpoint status, and hardware information.
 
-To enable Watchdog to query, you should include `MONITORING_CONTAINERS=True` in the environment variables when setting up the node.
-
 [NOTE]
 Port 3009 should be opened on every SKALE node for Watchdog to work.
 
@@ -32,7 +30,7 @@ Port 3009 should be opened on every SKALE node for Watchdog to work.
 
 ==== Description
 
-Returns data about all SKALE containers running on a given node. These are containers with prefix `skale_`, including base containers and pairs of sChain and IMA containers, where every pair corresponds to a certain sChain assigned to this node. 
+Returns data on all SKALE containers running on a given node. These are containers with prefix `skale_`, including base containers and pairs of sChain and IMA containers, where every pair corresponds to a certain sChain assigned to this node.
 
 Here’s a list of the base containers:
 
@@ -61,7 +59,7 @@ $ curl http://YOUR_SKALE_NODE_IP:3009/status/core
 
 ==== Description
 
-Returns SGX server info - connected status and SGX wallet version
+Returns SGX server info - connection status and SGX wallet version
 
 ==== Usage
 
@@ -95,7 +93,7 @@ $ curl http://YOUR_SKALE_NODE_IP:3009/status/schains
 === /status/endpoint
 
 ==== Description
-Returns info about ethereum node endpoint, used by a given SKALE node - current block number and syncing status (web3.eth.syncing result)
+Returns info on ethereum node endpoint, used by a given SKALE node - current block number and syncing status (web3.eth.syncing result)
 
 ==== Usage
 
@@ -110,7 +108,7 @@ $ curl http://YOUR_SKALE_NODE_IP:3009/status/endpoint
 
 Returns node hardware information:
 
-*cpu_total_cores - return the number of logical CPUs in the system ( the number of physical cores multiplied by the number of threads that can run on each core)
+* cpu_total_cores - return the number of logical CPUs in the system ( the number of physical cores multiplied by the number of threads that can run on each core)
 * cpu_physical_cores - return the number of physical CPUs in the system
 * memory - total physical memory in bytes (exclusive swap)
 * swap - total swap memory in bytes
