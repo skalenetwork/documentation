@@ -4,7 +4,7 @@ SKALE makes it possible to manage tokens for end-users between Ethereum and your
 
 *IMA is very flexible* - it can not only support transfer tokens, but it can also transfer any arbitrary message between chains. See Managing Message Transfer below for more information.
 
-*IMA is secure* - it uses your SKALE Chain's 16 randomly chosen validator-nodes to sign and verify messages between Mainnet and SKALE Chains using BLS threshold signatures and Trusted-Execution Environments (TEE). If that's not enough, know that each of the 16 nodes your SKALE Chain runs on has 20 million SKL tokens staked.
+*IMA is backed by security mechanisms* - it uses your SKALE Chain's 16 randomly chosen validator-nodes to sign and verify messages between Mainnet and SKALE Chains using BLS threshold signatures and Trusted-Execution Environments (TEE). If that's not enough, know that each of the 16 nodes your SKALE Chain runs on has 20 million SKL tokens staked.
 
 To learn how to integrate this feature into your dApp, please see the guides below.
 
