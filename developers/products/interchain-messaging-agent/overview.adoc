@@ -1,0 +1,17 @@
+=== Interchain Messaging Agent
+
+SKALE makes it possible to manage tokens for end-users between Ethereum and your SKALE Chain. You can use the Interchain Messaging Agent (IMA) to transfer ETH, ERC20, ERC721, or Dai to a deposit box on Ethereum, and SKALE will create clones of the token on your SKALE Chain. You can then send the tokens back to your end-users, and the tokens will be released from the deposit box back to the end-user. 
+
+*IMA is very flexible* - it can not only support transfer tokens, but it can also transfer any arbitrary message between chains. See Managing Message Transfer below for more information.
+
+*IMA is secure* - it uses your SKALE Chain's 16 randomly chosen validator-nodes to sign and verify messages between Mainnet and SKALE Chains using BLS threshold signatures and Trusted-Execution Environments (TEE). If that's not enough, know that each of the 16 nodes your SKALE Chain runs on has 20 million SKL tokens staked.
+
+To learn how to integrate this feature into your dApp, please see the guides below.
+
+link:/developers/products/interchain-messaging-agent/get-started-with-eth.md[Managing ETH Transfers]
+
+link:/developers/products/interchain-messaging-agent/get-started-with-erc20.md[Managing ERC20 Transfers]
+
+link:/developers/products/interchain-messaging-agent/get-started-with-erc721.md[Managing ERC721 Transfers]
+
+link:/developers/products/interchain-messaging-agent/message-proxy.adoc[Managing Message Transfers]
