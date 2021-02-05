@@ -1,4 +1,4 @@
-= IMA Token Access Control
+= IMA Access Control
 :icons: font
 :toc: macro
 
