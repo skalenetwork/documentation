@@ -53,6 +53,10 @@
                   "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
                 },
                 {
+                  "title": "Using Message Proxy",
+                  "link": "/developers/products/interchain-messaging-agent/message-proxy"
+                },
+                {
                   "title": "API",
                   "link": "/developers/products/interchain-messaging-agent/api"
                 }
