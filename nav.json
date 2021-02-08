@@ -106,6 +106,9 @@
               "link": "/validators/requirements"
             },
             {
+              "link": "/validators/node-ssl"
+            },
+            {
               "link": "/validators/register-validator-node"
             },
             {
