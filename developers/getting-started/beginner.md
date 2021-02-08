@@ -111,7 +111,7 @@ You won't need to change your ether.js or web3 code setup, but you will need to 
 
 To connect SKALE in MetaMask, create a new Custom RPC with your SKALE Chain endpoint.  
 
-<img src="<https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif>" sx={{maxWidth: ['75vw', '50vw', '300px']}} />
+<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5ce1657d7e30fb40711d2b31_rpc-metamask.gif" sx={{maxWidth: ['75vw', '50vw', '300px']}} />
 
 </Step>
 </StepsLayout>
