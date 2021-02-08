@@ -178,7 +178,7 @@ The server provides an initial registration service to issue client certificates
 
 ### **Prerequisites**
 
--   Ubuntu 18.04
+-   Ubuntu 18.04 (Ubuntu > 18.04 not yet supported)
 -   SGX-enabled Intel processor
 -   At least 8GB RAM
 -   Swap size equals to half of RAM size

@@ -53,6 +53,10 @@
                   "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
                 },
                 {
+                  "title": "IMA Access Control",
+                  "link": "/developers/products/interchain-messaging-agent/ima-access-control"
+                },
+                {
                   "title": "API",
                   "link": "/developers/products/interchain-messaging-agent/api"
                 }
@@ -125,6 +129,15 @@
         {
           "title": "Validator CLI",
           "link": "/documentation/validator-cli/readme"
+        },
+        {
+          "title": "Node REST API",
+          "link": "/validators/node-api",
+          "depth": 2
+        },
+        {
+          "title": "Watchdog",
+          "link": "/validators/watchdog"
         },
         {
           "title": "MainNet",

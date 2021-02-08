@@ -1,6 +1,6 @@
 ### Integrations
 
-Elastic SKALE Chains are designed to work with all Ethereum compatible tools. If you are having difficulty integrating a tool with your SKALE Chain, please reach out to our community on  [discord](http://skale.chat/), or submit a support request for help below.  
+Elastic SKALE Chains are designed to work with all Ethereum compatible tools. If you are having difficulty integrating a tool with your SKALE Chain, please reach out to the SKALE developer community on  [discord](http://skale.chat/), or submit a support request for help below.  
 
 <button>[Contact Support](https://skalelabs.typeform.com/to/pSu895)</button>
 
@@ -41,7 +41,7 @@ bitski.signIn().then(() => {
 
 ##### **Portis**
 
-Portis is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Portis, your end users can signup with their email address to create a wallet. Portis allows your end users to  [trust your application](https://docs.portis.io/#/trust-this-app)  for easier transaction processing for transaction that do not exceed $1 over an hour long period.  
+Portis is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Portis, your end users can signup with their email address to create a wallet. Portis allows your end users to  [trust your application](https://docs.portis.io/#/trust-this-app)  for easier transaction processing for transaction that don't exceed $1 over an hour long period.  
 ‍  
 For more information on Portis, please see  [Portis Developer Documentation](https://docs.portis.io/).  
 
@@ -71,7 +71,7 @@ portis.showPortis();
 
 ##### **Torus**
 
-Torus is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Torus, your end users can signup via Google or Facebook OAuth logins. This creates frictionless logins for dApps, that is easy for end users, and easy for dApp developers to implement.  
+Torus is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Torus, your end users can signup via Google or Facebook OAuth logins. This creates frictionless logins for dApps, that's easy for end users, and easy for dApp developers to implement.  
 ‍  
 For more information on Torus, please see  [Torus Developer Documentation](https://docs.tor.us/).  
 
