@@ -1,0 +1,130 @@
+= Watchdog
+:doctype: article
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
+
+== Introduction
+
+SKALE Watchdog is microservice running on every SKALE node for providing SLA agents with node performance metrics. It also can be used for external monitoring goals (validators can use it in their monitoring tools).
+
+Watchdog is a Python script running in docker container with Flask web server that provides simple REST JSON API available on port 3009 (http://YOUR_SKALE_NODE_IP:3009). Currently, Watchdog can give data on all SKALE node docker containers, health checks of sChains and SGX server, ethereum node endpoint status, and hardware information.
+
+[NOTE]
+Port 3009 should be opened on every SKALE node for Watchdog to work.
+
+== REST JSON API
+
+=== /status/core
+
+==== Description
+
+Returns data on all SKALE containers running on a given node. These are containers with prefix `skale_`, including base containers and pairs of sChain and IMA containers, where every pair corresponds to a certain sChain assigned to this node.
+
+Here’s a list of the base containers:
+
+* skale_transaction-manager
+* skale_admin
+* skale_api
+* skale_mysql
+* skale_sla
+* skale_bounty
+* skale_watchdog
+* skale_nginx
+
+Docker container name patterns for sChain with name SCHAIN_NAME are the following:
+
+* sChain: skale_schain_SCHAIN_NAME
+* IMA: skale_ima_SCHAIN_NAME
+
+==== Usage
+
+```shell
+$ curl http://YOUR_SKALE_NODE_IP:3009/status/core
+{"data": [{"image": "skalenetwork/ima:1.0.0-develop.103", "name": "skale_ima_clean-rigel-kentaurus", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 32501, "ExitCode": 0, "Error": "", "StartedAt": "2021-01-08T18:03:23.165649145Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "skalenetwork/schain:3.2.2-develop.0", "name": "skale_schain_clean-rigel-kentaurus", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 32315, "ExitCode": 0, "Error": "", "StartedAt": "2021-01-08T18:03:02.980981899Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "skalenetwork/bounty-agent:1.1.1-beta.0", "name": "skale_bounty", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 2834, "ExitCode": 0, "Error": "", "StartedAt": "2021-01-05T18:59:01.745578956Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "skalenetwork/admin:1.1.0-beta.7", "name": "skale_api", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 2810, "ExitCode": 0, "Error": "", "StartedAt": "2021-01-05T18:59:01.724467486Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "skalenetwork/sla-agent:1.0.2-beta.1", "name": "skale_sla", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 2831, "ExitCode": 0, "Error": "", "StartedAt": "2021-01-05T18:59:01.75059756Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "nginx:1.19.6", "name": "skale_nginx", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 2612, "ExitCode": 0, "Error": "", "StartedAt": "2021-01-05T18:59:01.592144127Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "mysql/mysql-server:5.7.30", "name": "skale_mysql", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 2367, "ExitCode": 0, "Error": "", "StartedAt": "2021-01-05T18:59:01.363363602Z", "FinishedAt": "0001-01-01T00:00:00Z", "Health": {"Status": "healthy", "FailingStreak": 0, "Log": [{"Start": "2021-01-11T13:05:26.695580607Z", "End": "2021-01-11T13:05:26.7965889Z", "ExitCode": 0, "Output": "mysqld is alive\n"}, {"Start": "2021-01-11T13:05:56.8026356Z", "End": "2021-01-11T13:05:56.897819023Z", "ExitCode": 0, "Output": "mysqld is alive\n"}, {"Start": "2021-01-11T13:06:26.90380399Z", "End": "2021-01-11T13:06:27.00531651Z", "ExitCode": 0, "Output": "mysqld is alive\n"}, {"Start": "2021-01-11T13:06:57.011844463Z", "End": "2021-01-11T13:06:57.106312668Z", "ExitCode": 0, "Output": "mysqld is alive\n"}, {"Start": "2021-01-11T13:07:27.111509013Z", "End": "2021-01-11T13:07:27.218446754Z", "ExitCode": 0, "Output": "mysqld is alive\n"}]}}}, {"image": "skalenetwork/watchdog:1.1.2-beta.0", "name": "skale_watchdog", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 2171, "ExitCode": 0, "Error": "", "StartedAt": "2021-01-05T18:59:01.231188713Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "skalenetwork/admin:1.1.0-beta.7", "name": "skale_admin", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 15922, "ExitCode": 0, "Error": "", "StartedAt": "2021-01-08T15:30:06.84581235Z", "FinishedAt": "2021-01-08T15:30:06.61032202Z", "Health": {"Status": "healthy", "FailingStreak": 0, "Log": [{"Start": "2021-01-11T13:03:27.83704947Z", "End": "2021-01-11T13:03:27.943393521Z", "ExitCode": 0, "Output": "Modification time diff: 16.017173290252686, limit is 600\n"}, {"Start": "2021-01-11T13:04:27.948600024Z", "End": "2021-01-11T13:04:28.07052713Z", "ExitCode": 0, "Output": "Modification time diff: 30.681769371032715, limit is 600\n"}, {"Start": "2021-01-11T13:05:28.076286609Z", "End": "2021-01-11T13:05:28.18879886Z", "ExitCode": 0, "Output": "Modification time diff: 40.09002113342285, limit is 600\n"}, {"Start": "2021-01-11T13:06:28.194725277Z", "End": "2021-01-11T13:06:28.304819334Z", "ExitCode": 0, "Output": "Modification time diff: 4.169792890548706, limit is 600\n"}, {"Start": "2021-01-11T13:07:28.310191582Z", "End": "2021-01-11T13:07:28.432554349Z", "ExitCode": 0, "Output": "Modification time diff: 18.855625867843628, limit is 600\n"}]}}}, {"image": "skalenetwork/transaction-manager:1.1.0-beta.1", "name": "skale_transaction-manager", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 2065, "ExitCode": 0, "Error": "", "StartedAt": "2021-01-05T18:59:01.201684713Z", "FinishedAt": "0001-01-01T00:00:00Z"}}], "error": null}
+```
+
+=== /status/sgx
+
+==== Description
+
+Returns SGX server info - connection status and SGX wallet version
+
+==== Usage
+
+```shell
+$ curl http://YOUR_SKALE_NODE_IP:3009/status/sgx
+{"data": {"status": 0, "status_name": "CONNECTED", "sgx_wallet_version": "1.64.2"}, "error": null}
+```
+
+=== /status/schains
+
+==== Description
+Returns list of health checks for every sChain running on a given node:
+
+* data_dir - checks that sChain data dir exists
+* dkg - checks that DKG procedure is completed for current sChain
+* config - checks that sChain config file exists
+* volume - checks that sChain volume exists
+* firewall_rules - checks that firewall rules are set correctly
+* container - checks that skaled container is running
+* ima_container - checks that IMA container is running
+* RPC - checks that local skaled RPC is accessible
+* blocks - checks that local skaled is mining blocks
+
+==== Usage
+
+```shell
+$ curl http://YOUR_SKALE_NODE_IP:3009/status/schains
+{"data": [{"name": "clean-rigel-kentaurus", "healthchecks": {"data_dir": true, "dkg": true, "config": true, "volume": true, "firewall_rules": true, "container": true, "exit_code_ok": true, "ima_container": true, "rpc": true, "blocks": true}}], "error": null}
+```
+
+=== /status/endpoint
+
+==== Description
+Returns info on ethereum node endpoint, used by a given SKALE node - current block number and syncing status (web3.eth.syncing result)
+
+==== Usage
+
+```shell
+$ curl http://YOUR_SKALE_NODE_IP:3009/status/endpoint
+{"data": {"block_number": 7917221, "syncing": false}, "error": null}
+```
+
+=== /status/hardware
+
+==== Description
+
+Returns node hardware information:
+
+* cpu_total_cores - return the number of logical CPUs in the system ( the number of physical cores multiplied by the number of threads that can run on each core)
+* cpu_physical_cores - return the number of physical CPUs in the system
+* memory - total physical memory in bytes (exclusive swap)
+* swap - total swap memory in bytes
+* system_release - system/OS name and system’s release
+* uname_version - system’s release version
+* attached_storage_size - attached storage size in bytes
+
+==== Usage
+
+```shell
+$ curl http://YOUR_SKALE_NODE_IP:3009/status/hardware
+{"data": {"cpu_total_cores": 8, "cpu_physical_cores": 8, "memory": 33675845632, "swap": 67
+```
+
+=== Example of Response
+
+```json
+{"data": [{"image": "nginx:1.13.7", "name": "skale_nginx", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 18579, "ExitCode": 0, "Error": "", "StartedAt": "2020-12-15T13:48:28.545487937Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "skalenetwork/admin:1.1.0-beta.1", "name": "skale_api", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 18284, "ExitCode": 0, "Error": "", "StartedAt": "2020-12-15T13:48:27.651007072Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "skalenetwork/sla-agent:1.0.2-beta.1", "name": "skale_sla", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 18365, "ExitCode": 0, "Error": "", "StartedAt": "2020-12-15T13:48:27.730205071Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "skalenetwork/bounty-agent:1.1.1-beta.0", "name": "skale_bounty", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 18340, "ExitCode": 0, "Error": "", "StartedAt": "2020-12-15T13:48:27.694385403Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "skalenetwork/transaction-manager:1.1.0-beta.0", "name": "skale_transaction-manager", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 17872, "ExitCode": 0, "Error": "", "StartedAt": "2020-12-15T13:48:27.25649668Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "skalenetwork/watchdog:1.0.0-stable.0", "name": "skale_watchdog", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 18118, "ExitCode": 0, "Error": "", "StartedAt": "2020-12-15T13:48:27.907066673Z", "FinishedAt": "0001-01-01T00:00:00Z"}}, {"image": "skalenetwork/admin:1.1.0-beta.1", "name": "skale_admin", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 17936, "ExitCode": 0, "Error": "", "StartedAt": "2020-12-15T13:48:27.265352128Z", "FinishedAt": "0001-01-01T00:00:00Z", "Health": {"Status": "healthy", "FailingStreak": 0, "Log": [{"Start": "2020-12-15T14:04:29.314460489Z", "End": "2020-12-15T14:04:29.441963475Z", "ExitCode": 0, "Output": "Modification time diff: 21.14485740661621, limit is 600\n"}, {"Start": "2020-12-15T14:05:29.447580804Z", "End": "2020-12-15T14:05:29.580104983Z", "ExitCode": 0, "Output": "Modification time diff: 33.23975086212158, limit is 600\n"}, {"Start": "2020-12-15T14:06:29.586114183Z", "End": "2020-12-15T14:06:29.719576685Z", "ExitCode": 0, "Output": "Modification time diff: 0.5591189861297607, limit is 600\n"}, {"Start": "2020-12-15T14:07:29.727615313Z", "End": "2020-12-15T14:07:29.860632612Z", "ExitCode": 0, "Output": "Modification time diff: 13.140380859375, limit is 600\n"}, {"Start": "2020-12-15T14:08:29.866030839Z", "End": "2020-12-15T14:08:29.991292415Z", "ExitCode": 0, "Output": "Modification time diff: 25.21944308280945, limit is 600\n"}]}}}, {"image": "mysql/mysql-server:5.7.30", "name": "skale_mysql", "state": {"Status": "running", "Running": true, "Paused": false, "Restarting": false, "OOMKilled": false, "Dead": false, "Pid": 17880, "ExitCode": 0, "Error": "", "StartedAt": "2020-12-15T13:48:27.270664629Z", "FinishedAt": "0001-01-01T00:00:00Z", "Health": {"Status": "healthy", "FailingStreak": 0, "Log": [{"Start": "2020-12-15T14:06:31.513600128Z", "End": "2020-12-15T14:06:31.628416403Z", "ExitCode": 0, "Output": "mysqld is alive\n"}, {"Start": "2020-12-15T14:07:01.635502928Z", "End": "2020-12-15T14:07:01.75593047Z", "ExitCode": 0, "Output": "mysqld is alive\n"}, {"Start": "2020-12-15T14:07:31.766279603Z", "End": "2020-12-15T14:07:31.88026375Z", "ExitCode": 0, "Output": "mysqld is alive\n"}, {"Start": "2020-12-15T14:08:01.885733506Z", "End": "2020-12-15T14:08:01.999542219Z", "ExitCode": 0, "Output": "mysqld is alive\n"}, {"Start": "2020-12-15T14:08:32.005145263Z", "End": "2020-12-15T14:08:32.115797294Z", "ExitCode": 0, "Output": "mysqld is alive\n"}]}}}], "error": null}
+```

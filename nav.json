@@ -57,6 +57,10 @@
                   "link": "/developers/products/interchain-messaging-agent/message-proxy"
                 },
                 {
+                  "title": "IMA Access Control",
+                  "link": "/developers/products/interchain-messaging-agent/ima-access-control"
+                },
+                {
                   "title": "API",
                   "link": "/developers/products/interchain-messaging-agent/api"
                 }
@@ -131,6 +135,10 @@
           "title": "Node REST API",
           "link": "/validators/node-api",
           "depth": 2
+        },
+        {
+          "title": "Watchdog",
+          "link": "/validators/watchdog"
         },
         {
           "title": "MainNet",
