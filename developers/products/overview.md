@@ -1,3 +1,13 @@
 ### Products
 
-SKALE makes it possible to manage tokens for end users between Ethereum and your SKALE Chain. You can use the Interchain Messaging Agent to transfer ETH, ERC20, ERC721, or Dai to a deposit box on Ethereum, and SKALE will create clones of the token on your SKALE Chain. You can then send the tokens back your end users, and the tokens will be released from the deposit box back to the end user. To learn how to integrate this feature into your dApp, please see the guides below.
+SKALE Chains come with several tools to make the development of dApps in Web3 cloud easier.
+
+#### 🪙 Token Bridge with IMA
+
+To transfer tokens from Ethereum to SKALE chains, or between SKALE Chains, [checkout the Interchain Messaging Agent (IMA)](/developers/products/interchain-messaging-agent/overview.md). IMA allows dApp developers to leverage both BLS threshold signatures, secure enclaves, and a decentralized random selection of validators to transfer tokens and messages between chains. Unlike other bridges, IMA provides dApp developers easy control to map assets on the fly to SKALE chains, and set up different access control policies.
+
+IMA currently supports ETH, ERC20, ERC721, and can support any other standard using the modular IMA MessageProxy framework. 
+
+#### 📂 Decentralized Filestorage
+
+To use decentralized storage on your SKALE Chain, [checkout Filestorage](/developers/file-storage.md). Filestorage allows you to upload and access files directly on a SKALE chain. Use it to store images, static HTML, or other files to work with your dApp.
