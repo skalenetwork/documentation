@@ -20,6 +20,22 @@ The SKALE Network uses a self-recharging wallet system to make it easier for val
 
 The Wallets contract in SKALE Manager manages this functionality.
 
+=== Types of wallets
+
+There are several types of wallets in the SKALE Network.
+
+Controlled by the validator, node operator, and SKALE Chain owner (these may be software, or hardware wallets):
+
+* Node wallets
+* Validator wallets
+* SKALE Chain Owner wallets
+
+Self-recharging wallet system:
+
+* Validator self-recharging wallets
+* SKALE Chain Owner self-recharging wallets
+
+
 == Node Transactions
 
 What node transactions are reimbursed? 
@@ -74,11 +90,14 @@ If the *self-recharging*...
 
 Node wallets connected to the self-recharging validator wallet is replenished automatically at the end of each transaction.
 
+[IMPORTANT]
+If the validator self-recharging wallet is out of ETH then node wallets start using their own ETH until the node balance is 0. Suppose the validator self-recharging wallet has 0 balance at the same time that the node wallet balance is 0. In that case, validators are then responsible for recharging both the validator self-recharging wallet and the node wallets with 0 balance.
+
 [WARNING]
 If a node's getBounty transaction reverts and can't complete the transaction before the end of the month, the validator-delegators will receive less bounty. Validators must ensure sufficient balance and a working endpoint to connect with Ethereum mainnet.
 
 [NOTE]
-There is no easy way to know the EVM's refund counter's value from inside the EVM. Thus, refunds may offset the final net cost of the transaction, and node balances may slightly increase over time. This process will be reviewed and improved over time.
+There is no easy way to know the EVM's refund counter's value from inside the EVM. Thus, refunds may offset the transaction's final net cost, and node balances may slightly increase over time. This process will be reviewed and improved over time.
 
 == Using a self-recharging wallet
 
@@ -88,9 +107,9 @@ As a validator links nodes to their validator ID, these linked nodes will automa
 
 Existing validators will automatically be added to the Wallet contract and will start using them once this feature is deployed to mainnet.
 
-== Interacting with the Wallet
+== Interacting with the Self-Recharging Wallet (SRW)
 
-Validators can use the CLI to recharge, withdraw funds from, or check the balance of the self-recharging wallet. Also anyone can recharge or check the balance by interacting with the Wallet contract on Ethereum.
+Validators can use the CLI to recharge, withdraw funds from, or check the self-recharging wallet's balance. Also anyone can recharge or check the balance by interacting with the Wallet contract on Ethereum.
 
 For the CLI::
 
