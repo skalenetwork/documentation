@@ -33,44 +33,34 @@
           ]
         },
         {
-          "title": "Products",
-          "link": "/developers/products/overview",
+          "title": "Ethereum - SKALE",
+          "link": "/developers/products/interchain-messaging-agent/overview",
           "links": [
             {
-              "title": "Interchain Messaging",
-              "link": "/developers/products/interchain-messaging-agent/overview",
-              "links": [
-                {
-                  "title": "Managing ETH",
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
-                },
-                {
-                  "title": "Managing ERC20",
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc20"
-                },
-                {
-                  "title": "Managing ERC721",
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
-                },
-                {
-                  "title": "IMA Access Control",
-                  "link": "/developers/products/interchain-messaging-agent/ima-access-control"
-                },
-                {
-                  "title": "API",
-                  "link": "/developers/products/interchain-messaging-agent/api"
-                }
-              ]
+              "title": "Managing ETH",
+              "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
             },
             {
-              "link": "/developers/products/file-storage",
-              "depth": 0
+              "title": "Managing ERC20",
+              "link": "/developers/products/interchain-messaging-agent/get-started-with-erc20"
             },
             {
-              "link": "/developers/products/skale-ml",
-              "depth": 0
+              "title": "Managing ERC721",
+              "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
+            },
+            {
+              "title": "IMA Access Control",
+              "link": "/developers/products/interchain-messaging-agent/ima-access-control"
+            },
+            {
+              "title": "IMA API",
+              "link": "/developers/products/interchain-messaging-agent/api"
             }
           ]
+        },
+        {
+          "link": "/developers/products/file-storage",
+          "depth": 0
         },
         {
           "title": "Tools & Support",
