@@ -24,10 +24,12 @@ http://skale.chat/[Ask a question]
 
 === How do I change my Node's IP address?
 
-You cannot change your node IP address, but what is possible is to remove the node with the incorrect/old IP address and register a new node under the correct/new IP while keeping the old SGX key.
+You can't change your node IP address, but what's possible is to remove the node with the incorrect/old IP address and register a new node under the correct/new IP while keeping the old SGX key.  Please contact the core team before proceeding for further guidance.
 
+[NOTE]
 It's recommended to use a permanent IP that can dynamically point to a node's machine IP (for example, elastic IP) so you can update machines if needed without having to change the IP recorded in SKALE Manager during node registration.
 
+[IMPORTANT]
 If you must change your node IP in SKALE Manager, you must perform a node exit and re-registration in the first 3 days (72 hours) of the month. Also, performing a node exit could be expensive to the node operator if it's currently supporting SKALE Chains.
 
 To perform a node exit, and register a new machine and IP:
@@ -38,13 +40,15 @@ To perform a node exit, and register a new machine and IP:
 4. Link the new node to the validator ID.
 5. Register the node with under the new IP.
 
-To perform a node exit, keep the original node machine and its data and update the IP, follow these steps:
+To perform a node exit, keep the original node machine and its data and update the IP, follow these steps (NOT RECOMMENDED):
 
 1. Perform the general node exit procedure steps 1 and 2 above.
-2. Go to `~/.skale/node_data/node_config.json` and delete all key-value **except `sgx_key_name`**.
-3. Link the node to the validator ID again.
-4. Register node with a new IP.
-5. Execute `skale node update .env`.
+2. Be sure you have securely saved the sgx_key_name before moving to step 3.
+3. Remove .skale directory, remove all old containers, volumes, etc
+4. Do skale node init again.
+5. Go to `~/.skale/node_data/node_config.json` and replace `sgx_key_name` field with the old one.
+6. Link the node to the validator ID again.
+7. Register node with a new IP.
 
 === How should validators configure back up and restore?
 
