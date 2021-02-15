@@ -16,7 +16,7 @@ toc::[]
 
 endif::[]
 
-The SKALE Network uses a self-recharging wallet system to make it easier for validators and SKALE Chain Owners to maintain a minimum amount of ETH in each node wallet to fund node-related transactions.
+The SKALE Network uses a self-recharging wallet system to make it easier for validators and SKALE Chain Owners to maintain a minimum amount of ETH in each node wallet to fund node-related transactions. The use of self-recharging wallets is a requirement for testnet and mainnet.
 
 The Wallets contract in SKALE Manager manages this functionality.
 
@@ -24,13 +24,13 @@ The Wallets contract in SKALE Manager manages this functionality.
 
 There are several types of wallets in the SKALE Network.
 
-Controlled by the validator, node operator, and SKALE Chain owner (these may be software, or hardware wallets):
+1. Controlled by the validator, node operator, and SKALE Chain owner (these may be software, or hardware wallets):
 
 * Node wallets
 * Validator wallets
 * SKALE Chain Owner wallets
 
-Self-recharging wallet system:
+2. Self-recharging wallet system:
 
 * Validator self-recharging wallets
 * SKALE Chain Owner self-recharging wallets
@@ -88,7 +88,7 @@ If the *self-recharging*...
 * *validator balance* runs out of ETH, then the nodes' wallets are first spent until transactions revert.
 * *SKALE Chain Owner balance* runs out of ETH, then transactions will revert.
 
-Node wallets connected to the self-recharging validator wallet is replenished automatically at the end of each transaction.
+Node wallets connected to the self-recharging validator wallet is replenished automatically at the end of each transaction based on the best estimate of the gas consumed in the transaction.
 
 [IMPORTANT]
 If the validator self-recharging wallet is out of ETH then node wallets start using their own ETH until the node balance is 0. Suppose the validator self-recharging wallet has 0 balance at the same time that the node wallet balance is 0. In that case, validators are then responsible for recharging both the validator self-recharging wallet and the node wallets with 0 balance.
@@ -114,23 +114,29 @@ Validators can use the CLI to recharge, withdraw funds from, or check the self-r
 For the CLI::
 
 ```
-# Recharges the self-recharging wallet from the validator wallet (sk-val wallet info)
+# Validator recharges the self-recharging wallet from their wallet (sk-val wallet info)
 sk-val srw recharge AMOUNT_IN_ETH [--gas-price PRICE_IN_GWEI]
 
-> sk-val srw recharge 0.1 --pk-file ./tests/test-pk.txt
+> sk-val srw recharge 0.1                                  # Withdraw using a hardware wallet
+> sk-val srw recharge 0.1 --pk-file ./tests/test-pk.txt    # Withdraw using a software wallet
 
-# Withdraw an amount from the self-recharging wallet
-sk-val srw withdraw [AMOUNT_IN_ETH] [--pk-file PATH_TO_PK] [--gas-price PRICE_IN_GWEI]
+# Validator withdraws an amount from the self-recharging wallet
+sk-val srw withdraw AMOUNT_IN_ETH [--pk-file PATH_TO_PK] [--gas-price PRICE_IN_GWEI]
 
-> sk-val srw withdraw 0.1 --pk-file ./tests/test-pk.txt
+> sk-val srw withdraw 0.1                                  # Withdraw using a hardware wallet
+> sk-val srw withdraw 0.1 --pk-file ./tests/test-pk.txt    # Withdraw using a software wallet
+
 
 # Returns self-recharging wallet balance
 sk-val srw balance VALIDATOR_ID [--wei]
 
-> sk-val srw balance 1 --wei
+> sk-val srw balance 1          # Show balance in ETH
+> sk-val srw balance 1 --wei    # Show balance in Wei
 ```
 
 For Wallets contract::
+
+See https://github.com/skalenetwork/skale-manager/blob/develop/contracts/Wallets.sol
 
 ```
 rechargeValidatorWallet(validatorId)
