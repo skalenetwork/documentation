@@ -146,9 +146,6 @@
           "link": "/validators/fuji/fuji-versions",
           "links": [
             {
-              "link": "/validators/fuji/schain-upgrade"
-            },
-            {
               "link": "/validators/fuji/soft-upgrade-testnet"
             }
           ]
