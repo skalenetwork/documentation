@@ -118,19 +118,33 @@ sudo chmod +x /usr/local/bin/skale
 cd  ~ && vi .env
 ```
 
-#### Update CONTAINER_CONFIGS_STREAM option
-Make sure `CONTAINER_CONFIGS_STREAM` in .env file is `1.5.0-testnet`
+#### Update .env
+
+Make sure the following options are set
 
 ```bash
+DOCKER_LVMPY_STREAM=1.0.2-beta.0
+MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-rinkeby-abi.json
+IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.2/abi.json
 CONTAINER_CONFIGS_STREAM=1.5.0-testnet
+FILEBEAT_HOST=3.17.12.121:5000
 ```
-#### Ensure iptables-persistent package 
+
+#### Ensure packages
 
 Make sure the iptables-persistent package is installed on your machine
 
 ``` bash
 dpkg -l | grep iptables-persistent
 ```
+
+Make sure docker-compose version is `1.27.4`
+
+``` bash
+docker-compose --version
+```
+
+Also make sure your attached storage specified by `DISK_MOUNTPOINT` is not mounted
 
 #### Perform update
 
