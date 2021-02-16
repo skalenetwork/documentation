@@ -140,13 +140,13 @@
         },
         {
           "title": "Fuji TestNet",
-          "link": "/validators/fuji-versions",
+          "link": "/validators/fuji/fuji-versions",
           "links": [
             {
-              "link": "/validators/schain-upgrade"
+              "link": "/validators/fuji/schain-upgrade"
             },
             {
-              "link": "/validators/soft-upgrade-testnet"
+              "link": "/validators/fuji/soft-upgrade-testnet"
             }
           ]
         },
