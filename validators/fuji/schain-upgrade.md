@@ -98,7 +98,7 @@ See more info in the [docker docs](https://docs.docker.com/config/containers/liv
 
 **IMA version**: 1.0.0-develop.133
 
-**Skale Admin version**: 1.1.0-beta.10
+**Skale Admin version**: 1.1.0-beta.33
 
 **Transaction Manager version**: 1.1.0-beta.6
 
