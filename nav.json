@@ -99,6 +99,9 @@
               "link": "/validators/node-ssl"
             },
             {
+              "link": "/validators/self-recharging-wallets"
+            },
+            {
               "link": "/validators/register-validator-node"
             },
             {

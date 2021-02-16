@@ -1,4 +1,4 @@
-= Self-recharging Validator Wallets
+= Self-recharging Wallets
 :doctype: article
 :revremark: preview
 :icons: font
@@ -113,7 +113,7 @@ Validators can use the CLI to recharge, withdraw funds from, or check the self-r
 
 For the CLI::
 
-```
+```shell
 # Validator recharges the self-recharging wallet from their wallet (sk-val wallet info)
 sk-val srw recharge AMOUNT_IN_ETH [--gas-price PRICE_IN_GWEI]
 
