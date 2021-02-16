@@ -4,7 +4,6 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 `https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-rinkeby-abi.json`
 
-
 ### Recharge validator wallet
 
 #### Downaload new Validator CLI binary
@@ -73,13 +72,11 @@ Required arguments:
 
 > Make sure you enabled contracts data sending on ETH application. Otherwise transactions won't work
 
-
 #### Recharge wallet
 
 For more information visit `Self recharging validator wallet section`
 
 `ETH_AMOUNT` should not be less than `0.1` multiplied by the number of nodes that your validator has
-
 
 Using ledger wallet:
 
@@ -92,7 +89,6 @@ Using software wallet:
 ``` bash
 sk-val srw recharge ETH_AMOUNT --pk-file PATH_TO_PK
 ```
-
 
 ### Install SKALE Node CLI
 

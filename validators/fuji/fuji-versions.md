@@ -21,7 +21,8 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **Important notes:**  
 
-1. Make sure you installed `1.27.4` docker-compose version. 
+1.  Make sure you installed `1.27.4` docker-compose version. 
+
 2.  After docker installation make sure that the `live-restore` option
 is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
 
@@ -35,13 +36,13 @@ It's also useful to check logs from node-cli `skale cli logs` from docker plugin
     sudo apt install iptables-persistent -y
     ```
 
-5. You should run skale commands using sudo
+5.  You should run skale commands using sudo
 
-6. skale_sla container will be removed because it's deprecated for now.
+6.  skale_sla container will be removed because it's deprecated for now.
 
-7. Logs from removed containers are placed inside `.skale/log/.removed_containers` 
+7.  Logs from removed containers are placed inside `.skale/log/.removed_containers` 
 
-8. Before `skale node update` make sure that your attached storage is not mounted.
+8.  Before `skale node update` make sure that your attached storage is not mounted.
 
 ----
 
