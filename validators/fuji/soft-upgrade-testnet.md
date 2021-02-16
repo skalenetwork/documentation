@@ -1,28 +1,15 @@
 ## Testnet Soft Upgrade 
 
-> Upgrading node-cli, api, admin and watchdog base containers as well as new skaled, ima and sgx versions. 
+For SKALE Validator CLI initialization use SKALE Manager ABI:
 
-> Added new healthchecks for nodes. Fixed some issues in skaled, sgx and ima containers. 
-
-### Update SGX 
-
-1.  Find your SGX back up key 
-
-2.  From sgx folder do : `docker-compose down` 
-
-3.  Perform `git pull`
-
-4.  Check-out to sgx version tag: `git checkout tags/1.66.1-beta.0`
-
-5.  Make sure `image` is skalenetwork/sgxwallet:1.66.1-beta.0 in docker-compose:
-.  [Recover from back up](https://skale.network/docs/documentation/sgxwallet/docs/backup-procedure)
+`https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-rinkeby-abi.json`
 
 
 ### Recharge validator wallet
 
 #### Downaload new Validator CLI binary
 
-Make sure the `VERSION_NUM` is the 1.2.0-beta.5
+Make sure the `VERSION_NUM` is the 1.2.0-beta.6
 
 **Terminal Command:**
 
@@ -91,7 +78,7 @@ Required arguments:
 
 For more information visit `Self recharging validator wallet section`
 
-`ETH_AMOUNT` should not be less than `0.5`
+`ETH_AMOUNT` should not be less than `0.1` multiplied by the number of nodes that your validator has
 
 
 Using ledger wallet:
@@ -136,10 +123,10 @@ cd  ~ && vi .env
 ```
 
 #### Update CONTAINER_CONFIGS_STREAM option
-Make sure `CONTAINER_CONFIGS_STREAM` in .env file is `1.4.1-testnet`
+Make sure `CONTAINER_CONFIGS_STREAM` in .env file is `1.5.0-testnet`
 
 ```bash
-CONTAINER_CONFIGS_STREAM=1.4.1-testnet
+CONTAINER_CONFIGS_STREAM=1.5.0-testnet
 ```
 #### Ensure iptables-persistent package 
 

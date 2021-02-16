@@ -48,27 +48,27 @@ It's also useful to check logs from node-cli `skale cli logs` from docker plugin
 ### TestNet Phase 3.1 Versions - SKALE chain creation
 Schains launch, IMA beta version
 
-**Validator CLI version**: 1.2.0-beta.5
+**Validator CLI version**: 1.2.0-beta.6
 
 **Node CLI version**: 1.1.0-beta.15
 
 **SGX version: sgxwallet**: 1.66.1-beta.0
 
-**SKALE Manager version**: 1.7.0-beta.0
+**SKALE Manager version**: 1.8.0-develop.8
 
-**Skaled version**: 3.5.0-develop.0
+**Skaled version**: 3.5.2-develop.0
 
-**IMA version**: 1.0.0-develop.133
+**IMA version**: 1.0.0-beta.2
 
 **Skale Admin version**: 1.1.0-beta.33
 
-**Transaction Manager version**: 1.1.0-beta.6
+**Transaction Manager version**: 1.1.0-beta.7
 
 **Skale Bounty version**: 1.1.1-beta.2
 
 **docker-lvmpy**: 1.0.2-beta.0
 
-**skale-node**: 1.4.1-testnet
+**skale-node**: 1.5.0-testnet
 
 **watchdog**: 1.1.3-beta.1
 
@@ -77,8 +77,8 @@ TestNet Environment Variables:
 ```bash
 MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.2-beta.0
-MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.7.0/skale-manager-1.7.0-rinkeby-abi.json
-IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.0/abi.json
+MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-rinkeby-abi.json
+IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.2/abi.json
 CONTAINER_CONFIGS_STREAM=
 FILEBEAT_HOST=3.17.12.121:5000
 SGX_SERVER_URL=[By validator, setup SGX wallet first]
@@ -91,7 +91,4 @@ IMA_ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby ]
 ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby]
 ```
 
-For SKALE Validator CLI initialization use SKALE Manager ABI:
-
-`https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.7.0/skale-manager-1.7.0-rinkeby-abi.json`
-
+> Soft update steps are described in TestNet Soft Update section
