@@ -66,7 +66,7 @@ Schains launch, IMA beta version
 
 **Transaction Manager version**: 1.1.0-beta.7
 
-**Skale Bounty version**: 1.1.1-beta.2
+**Skale Bounty version**: 1.1.1-beta.3
 
 **docker-lvmpy**: 1.0.2-beta.0
 
