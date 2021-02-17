@@ -115,9 +115,10 @@ For the CLI::
 
 ```shell
 # Validator recharges the self-recharging wallet from their wallet (sk-val wallet info)
-sk-val srw recharge AMOUNT_IN_ETH [--gas-price PRICE_IN_GWEI]
+sk-val srw recharge AMOUNT_IN_ETH [--validator-id VALIDATOR_ID] [--gas-price PRICE_IN_GWEI] [--pk-file PATH_TO_PK]
 
 > sk-val srw recharge 0.1                                  # Recharge using a hardware wallet
+> sk-val srw recharge 0.1 --validator-id 1                 # Recharge validator ID 1 using a hardware wallet
 > sk-val srw recharge 0.1 --pk-file ./tests/test-pk.txt    # Recharge using a software wallet
 
 # Validator withdraws an amount from the self-recharging wallet
