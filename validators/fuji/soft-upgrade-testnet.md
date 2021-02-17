@@ -8,7 +8,7 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 #### Downaload new Validator CLI binary
 
-Make sure the `VERSION_NUM` is the 1.2.0-beta.6
+Make sure the `VERSION_NUM` is the 1.2.0-beta.7
 
 **Terminal Command:**
 

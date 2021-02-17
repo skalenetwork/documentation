@@ -49,7 +49,7 @@ It's also useful to check logs from node-cli `skale cli logs` from docker plugin
 ### TestNet Phase 3.1 Versions - SKALE chain creation
 Schains launch, IMA beta version
 
-**Validator CLI version**: 1.2.0-beta.6
+**Validator CLI version**: 1.2.0-beta.7
 
 **Node CLI version**: 1.1.0-beta.15
 
