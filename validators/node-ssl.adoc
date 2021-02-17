@@ -95,6 +95,9 @@ Be sure get a domain in advance to provide it when adding a new node to the netw
 skale node register --ip 1.2.3.4 -d node-0.awesome-validator.com --name node-0-AV
 ```
 
+[NOTE]
+If you already registered your node, then command will fail. If you are trying to set the domain for an already registered node, simply use `skale node set-domain -d node-0.awesome-validator.com`.
+
 See full reference for the `register` command https://github.com/skalenetwork/node-cli#node-registration[here].
 
 === Trusted authorities
