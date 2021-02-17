@@ -6,9 +6,9 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 ### Recharge validator wallet
 
-#### Downaload new Validator CLI binary
+#### Download new Validator CLI binary
 
-Make sure the `VERSION_NUM` is the 1.2.0-beta.7
+Make sure `VERSION_NUM` is `1.2.0-beta.7`
 
 **Terminal Command:**
 
@@ -45,7 +45,7 @@ Required arguments:
 
 ##### Software wallet
 
-If you want to use software wallet you need to save private key into a file.
+If you want to use software wallet you need to save the private key into a file.
 
 Replace `[YOUR PRIVATE KEY]` with your wallet private key
 
@@ -57,7 +57,7 @@ echo [YOUR PRIVATE KEY] > ./pk.txt
 
 ##### Ledger wallet
 
-If you want to use ledger you should install ETH ledger application and  initilize device with `setup-ledger` command.
+If you want to use Ledger you should install the ETH ledger application and initialize the device with `setup-ledger` command.
 
 **Terminal Command:**
 
@@ -70,23 +70,23 @@ Required arguments:
 -   `--address-index` - Index of the address to use (starting from `0`)
 -   `--keys-type` - Type of the Ledger keys (live or legacy)
 
-> Make sure you enabled contracts data sending on ETH application. Otherwise transactions won't work
+> Make sure that you enabled contracts data sending on ETH application. Otherwise transactions won't work
 
 #### Recharge wallet
 
-For more information visit `Self recharging validator wallet section`
+For more information visit [Self recharging wallet](/validators/self-recharging-wallets)
 
-`ETH_AMOUNT` should not be less than `0.1` multiplied by the number of nodes that your validator has
+`ETH_AMOUNT` shouldn't be less than `0.1` multiplied by the number of nodes that your validator has
 
 Using ledger wallet:
 
-``` bash
+```shell
 sk-val srw recharge ETH_AMOUNT
 ```
 
 Using software wallet:
 
-``` bash
+```shell
 sk-val srw recharge ETH_AMOUNT --pk-file PATH_TO_PK
 ```
 
@@ -94,11 +94,11 @@ sk-val srw recharge ETH_AMOUNT --pk-file PATH_TO_PK
 
 #### Download the SKALE Node CLI binary
 
-Make sure th `VERSION_NUM` is the 1.1.0-beta.15
+Make sure `VERSION_NUM` is `1.1.0-beta.15`
 
 **Terminal Command:**
 
-```bash
+```shell
 VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://github.com/skalenetwork/skale-node-cli/releases/download/$VERSION_NUM/skale-$VERSION_NUM-`uname -s`-`uname -m` >  /usr/local/bin/skale"
 
 ```
@@ -107,14 +107,14 @@ VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://github.com/skalene
 
 **Terminal Command:**
 
-```bash
+```shell
 sudo chmod +x /usr/local/bin/skale
 ```
 
 ### Update node using skale node update
 
 #### Change directory
-```bash
+```shell
 cd  ~ && vi .env
 ```
 
@@ -122,7 +122,7 @@ cd  ~ && vi .env
 
 Make sure the following options are set
 
-```bash
+```shell
 DOCKER_LVMPY_STREAM=1.0.2-beta.0
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-rinkeby-abi.json
 IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.2/abi.json
@@ -134,22 +134,22 @@ FILEBEAT_HOST=3.17.12.121:5000
 
 Make sure the iptables-persistent package is installed on your machine
 
-``` bash
+```shell
 dpkg -l | grep iptables-persistent
 ```
 
 Make sure docker-compose version is `1.27.4`
 
-``` bash
+```shell
 docker-compose --version
 ```
 
-Also make sure your attached storage specified by `DISK_MOUNTPOINT` is not mounted
+Also make sure your attached storage specified by `DISK_MOUNTPOINT` isn't mounted
 
 #### Perform update
 
 Run skale node update:
-```bash
+```shell
 skale node update .env
 ```
 
@@ -157,12 +157,12 @@ skale node update .env
 
 ##### Set domain name
 
-``` bash
+```shell
 skale node set-domain -d DOMAIN_NAME --yes
 ```
 
 ##### Upload SSL
 
-``` bash
+```shell
 skale ssl upload -c PATH_TO_CERT_FILE -k PATH_TO_KEY_FILE
 ```

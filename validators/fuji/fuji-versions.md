@@ -8,15 +8,15 @@ The rest of the versions were provided for docker containers and correspondent t
 
 -   A Linux x86_64 machine
 -   SGX-enabled Intel processor
--   Ports 22, 3009, 8080, 9100, and 10000-11000, and ICMP IPv4 open for all
+-   Ports 22, 3009, 8080, 9100, and 10000–11000, and ICMP IPv4 open for all
 -   Ubuntu 18.04
--   200gb devnet
+-   200GB devnet
 -   8 core
 -   32GB RAM
 -   16GB swap
 -   Install docker.io
 -   Install docker-compose -> `1.27.4`
--   Install iptables-persistent - (for reinitializing base firewall rules after node machine was rebooted)
+-   Install iptables-persistent - (for re-initializing base firewall rules after node machine was rebooted)
 -   Make sure lvm2 package is installed (`dpkg -l | grep lvm2`)
 
 **Important notes:**  
@@ -24,13 +24,13 @@ The rest of the versions were provided for docker containers and correspondent t
 1.  Make sure you installed `1.27.4` docker-compose version. 
 
 2.  After docker installation make sure that the `live-restore` option
-is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
+    is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
 
 3.  If you have any issues you can save the logs using `skale logs dump` command.  
-It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
+    It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
 
 4.  You can install iptables-persistent using the following commands
-    ```
+    ```shell
     echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
     echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
     sudo apt install iptables-persistent -y
@@ -42,11 +42,12 @@ It's also useful to check logs from node-cli `skale cli logs` from docker plugin
 
 7.  Logs from removed containers are placed inside `.skale/log/.removed_containers` 
 
-8.  Before `skale node update` make sure that your attached storage is not mounted.
+8.  Before `skale node update` make sure that your attached storage isn't mounted.
 
-----
+* * *
 
 ### TestNet Phase 3.1 Versions - SKALE chain creation
+
 Schains launch, IMA beta version
 
 **Validator CLI version**: 1.2.0-beta.7
@@ -75,7 +76,7 @@ Schains launch, IMA beta version
 
 TestNet Environment Variables: 
 
-```bash
+```shell
 MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.2-beta.0
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-rinkeby-abi.json
