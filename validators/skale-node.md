@@ -97,7 +97,7 @@ C - (Large Chain) Assign these chains to Node 1, 4, 6, 10 **, Use the entire nod
 
 <img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9be4eb0225153950e41255_Screen%20Shot%202019-10-07%20at%206.22.27%20PM.png" width="35"/>
 
-D - (Medium Chain) Assign these chains to Node 3, 5, 7, 8  **, 1/8 of a node**  
+D - (Medium Chain) Assign these chains to Node 3, 5, 7, 8  **, 1/32 of a node**  
 
 </Flex>
 </Box>
@@ -113,7 +113,7 @@ After the SKALE Chain assignment, Docker container names show up in particular n
 
 SKALE Daemon (SKALE-D) runs inside the SKALE Chain container. SKALE Daemon stores ETH blocks, state, and file storage database. A snapshot will need to be made of the SKALE Daemon.  
 
-_When you take a snapshot of a SKALE Daemon it is “per SKALE Chain container." A global database does not yet exist._  
+_When you take a snapshot of a SKALE Daemon it's “per SKALE Chain container." A global database doesn't yet exist._  
 
 #### SKALE DAEMON Deep Dive
 
@@ -140,7 +140,7 @@ Examples:
 
 Example 1:  Use RPC to connect to a SKALE Chain (follow the detailed instructions within  [GETH](https://github.com/ethereum/wiki/wiki/JSON-RPC) documentation) and replace the `ENDPOINT` with a SKALE Chain RPC endpoint.
 
-```bash
+```shell
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":67}' "[ENDPOINT]" -k 
 ```
 
@@ -148,9 +148,8 @@ If you are in the Innovator Program, you will receive a SKALE Chain RPC endpoint
 
 Example 2:  Use  [command line options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options)  available through a validator node. You can find a list of the available terminal commands  [here](https://ethereum.stackexchange.com/questions/28703/full-list-of-geth-terminal-commands). For example, to attach to a SKALE Chain endpoint via the command line, use the following command:
 
-```bash
+```shell
 geth attach "[YOUR_SKALE_CHAIN_ENDPOINT]" 
-
 ```
 
 Example 3:  Use  Web3 to connect to a SKALE Chain. We have detailed examples available on our [dApp developers Page.](/developers/getting-started)
@@ -213,42 +212,6 @@ node2 S-chain Y ports will be between 10012-10023
 
 > Default Base port: 10000  
 > Max Port: 128 SKALE Chain → 12 port each → 11536 Max port can be assigned for all SKALE Chain in the node
-
-## SLA Agent
-
-To encourage good behavior and ensure high performance within each SKALE Chain, SKALE has incorporated an SLA Manager in its system.  
-
-Nodes in the network are rewarded based upon an algorithmic peer review system. Nodes that fall offline or have poor performance in the network will receive little or no reward for their mining efforts.  
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9cccef4ad854a71d5e51d9_Screen%20Shot%202019-10-08%20at%2010.50.38%20AM.png" width="600" /> 
-
-T0 = A New node is registered  
-T30 -1 = 1 hour before the epoch time. Reset monitoring and Until T30 there is no monitoring  
-T30 = Time when validator gets bounties getbounties() function will be called at this time
-
-When the validator registers a node, SKALE Admin deploys the node information such as public key, owner host in Skale Manager Smart Contract. SKALE uses and gets the list of node information periodically from SKALE Manager. ValidatorArray (List of validators), ValidatedArray (List of validated nodes)
-
-> **Every node is monitored by 24 other nodes**  
-> **Every node monitors 24 other nodes**
-
-Nodes store latency and downtime of each monitored node in SKALE MySQL.  
-SLA Agent has its Container. SKALE spins up one SLA Agent per validator Node (SERVER)  
-
-Every 30 days, validator gets bounties and collects data 1 hour before the epoch time:  
-
-At the time `T30 - 1` the SLA agent receives the aggregated data(metrics) from MySQL Database in MySQL Container  
-At the time, T30 SLA sends the metrics to SKALE Manager.  
-
-To do that, we ignore the highest and lowest values from the equation. (Median)
-
-> At the end of each network epoch, the number of SKALE tokens minted for that period is divided equally amongst all nodes. These nodes participate in the network before the epoch beginning. The number of these issued tokens which each node can claim is based upon the average of the metrics submitted its 24 peers where the top and bottom values are dropped to mitigate any collusion or malicious intent by peer nodes. Any tokens which are not issued to nodes as a result of poor uptime/latency will be issued to the N.O.D.E. Foundation
-
-<img src="https://assets.website-files.com/5be05ae542686c4ebf192462/5d9cd94cccdd26412442bb1d_Screen%20Shot%202019-10-08%20at%2011.44.41%20AM.png" width="600" /> 
-
-This report can be costly if it is sent to the mainnet too often. Every time a SKALE Node sends the monitoring information to SKALE Manager, the SLA Agent uses gas. If a validator is out of ETH, the monitoring may fail. To reduce cost to the validator, the SKALE Node will only send the report to SKALE Manager once a month per node.  
-‍  
-Bounties are calculated based on the performance of each SKALE NODE. This means that although one validator's latency may be higher than other validators within the SKALE Network, the validator will still receive rewards based on their performance. **SKALE will have a simple algorithm on SKALE Manager, and the SLA agent will reduce the bounty value for the node if it has a latency of more than X ms. The validator may receive a reduced bounty if the downtime is more than X/30 of epoch time.** Bounties are not calculated based on the "overall performance" within the network, it is calculated based on the performance of the node and bonding period. SKALE will provide an updated model for SKALE economics during Alpine Team Phase 3.  
-
-> _"SLA Manager Communicates to SKALE Manager and tracks performance of other nodes that are not on the SKALE Chains run by your node(s). The SLA Manager assigns scores between 0 and 1 to its peers which will determine the payout at the end of an epoch."_
 
 ## Node Provisioning (for testing only)
 

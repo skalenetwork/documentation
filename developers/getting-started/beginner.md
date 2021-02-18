@@ -25,7 +25,9 @@ If you want to get started with SKALE and the Interchain Messaging Agent (IMA) y
 
 -   Ethereum testnet account
 -   Ethereum testnet ETH
--   Ethereum testnet endpoint such as Infura or Geth.
+-   Ethereum testnet endpoint such as Geth (Infura is not supported!).
+
+A note on the Geth endpoint: be sure to setup Geth with the following JSON-RPC transports: `geth --http --http.api eth,web3`
 
 <button>[Get the SKALE IMA SDK](https://github.com/skalenetwork/skale-ima-sdk)</button>
 

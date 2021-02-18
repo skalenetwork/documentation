@@ -26,6 +26,8 @@ chmod +x /usr/local/bin/sk-val
 
 #### Get SKALE Manager contracts info and set the endpoint
 
+NOTE: Be sure to setup Geth with the following JSON-RPC transports: `geth --http --http.api eth,web3`
+
 **Terminal Command:**
 
 ```shell
@@ -35,7 +37,7 @@ sk-val init -e [ENDPOINT] -c [ABI] --wallet [software/ledger]
 Required arguments:
 
 -   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`http` or `https`)
-                    Example: <https://rinkeby.infura.io/v3/..>.
+                    Example: <https://my.geth.node/..>.
 
 -   `--contracts-url/-c` - URL to SKALE Manager contracts ABI and addresses
 

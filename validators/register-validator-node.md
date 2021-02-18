@@ -60,7 +60,7 @@ sk-val init -e [ENDPOINT] -c [ABI] --wallet [software/ledger]
 Required arguments:
 
 -   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`http` or `https`)
-                    Example: <https://rinkeby.infura.io/v3/..>.
+                    Example: <https://my.geth.node.ip/..>.
 
 -   `--contracts-url/-c` - URL to SKALE Manager contracts ABI and addresses
 
