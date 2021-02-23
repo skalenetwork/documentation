@@ -41,15 +41,23 @@
               "link": "/developers/products/interchain-messaging-agent/getting-started"
             },
             {
-              "title": "Managing ETH",
+              "title": "Transferring ETH",
               "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
             },
             {
-              "title": "Managing ERC20",
+              "title": "Setting up ERC20",
+              "link": "/developers/products/interchain-messaging-agent/setting-up-erc20"
+            },
+            {
+              "title": "Transferring ERC20",
               "link": "/developers/products/interchain-messaging-agent/get-started-with-erc20"
             },
             {
-              "title": "Managing ERC721",
+              "title": "Setting up ERC721",
+              "link": "/developers/products/interchain-messaging-agent/setting-up-erc721"
+            },
+            {
+              "title": "Transferring ERC721",
               "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
             },
             {
