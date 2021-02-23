@@ -383,7 +383,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 
 -   A Linux x86_64 machine
 -   SGX-enabled Intel processor
--   Ports 22, 8080, 9100, and 10000–11000, and ICMP IPv4 open for all
+-   Ports 22, 8080, 9100, and 10000–11500, and ICMP IPv4 open for all
 -   SSL Certificates
 -   Ubuntu 18.04 or later LTS
 -   2TB attached and unmounted storage (200GB Testnet)
