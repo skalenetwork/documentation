@@ -2,7 +2,7 @@
 
 ### Setup and Map ERC20 Transfers
 
-The following one-time setup for each ERC20 token is required for SKALE Chains with a default access control policy (default seetings are: whitelisting enabled, automatic deployment disbaled). For more information on IMA access control, [see here](/developers/products/interchain-messaging-agent/ima-access-control).
+The following one-time setup for each ERC20 token is required for SKALE Chains with a default access control policy (default settings are: whitelisting enabled, automatic deployment disabled). For more information on IMA access control, [see here](/developers/products/interchain-messaging-agent/ima-access-control).
 
 <StepsController>
     <StepNav stepId='one' label='Review\nand Modify ERC20'><ByzantineFaultTolerant/></StepNav>
@@ -13,7 +13,7 @@ The following one-time setup for each ERC20 token is required for SKALE Chains w
 
 <Step id='one'>
 
-#### 1. Review the token contract.
+#### 1. Review the token contract
 
 First, review the Mainnet ERC20 token implementation and (if needed) modify a SKALE Chain version of the contract to include Mintable and Burnable functions. These functions are required to dynamically mint and burn the token on the SKALE chain in response to deposit and exit on the Mainnet.
 
