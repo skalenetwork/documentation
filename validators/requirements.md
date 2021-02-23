@@ -8,7 +8,7 @@ Once the request has been submitted to SKALE Manager on Ethereum, SKALE Manager 
 
 -   A Linux x86_64 machine
 -   SGX-enabled Intel processor
--   Ports 22, 3009, 8080, 9100, and 10000—11000, and ICMP IPv4 open for all
+-   Ports 22, 3009, 8080, 9100, and 10000—11500, and ICMP IPv4 open for all
 -   Ubuntu 18.04
 -   Attached and unmounted storage (2TB for Mainnet, 200GB for Testnet)
 -   8 core
