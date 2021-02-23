@@ -37,6 +37,10 @@
           "link": "/developers/products/interchain-messaging-agent/overview",
           "links": [
             {
+              "title": "Getting Started",
+              "link": "/developers/products/interchain-messaging-agent/getting-started"
+            },
+            {
               "title": "Managing ETH",
               "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
             },
