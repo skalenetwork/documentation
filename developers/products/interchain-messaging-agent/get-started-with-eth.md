@@ -169,7 +169,7 @@ To release funds to the end user on Ethereum, you will need to use the getMyEth 
   
 This method is called from Ethereum to release tokens back to the end user.  
 
-The **LockAndDataForMainnet** contract is deployed to your SKALE Chain. Check out the [current release page](https://github.com/skalenetwork/skale-network/tree/master/releases/rinkeby/IMA) for ABIs.
+The **LockAndDataForMainnet** contract is deployed to Rinkeby. Check out the [current release page](https://github.com/skalenetwork/skale-network/tree/master/releases/rinkeby/IMA) for ABIs.
 
 ##### Example Code
 

@@ -21,7 +21,7 @@ Deposits and withdraws take only seconds, and are secured using BLS Threshold si
 
 * Token contracts on Ethereum are deployed and registered on SKALE chains. 
 
-* In order for an Ethereum Mainnet token contract to work with IMA on your SKALE Chain, **the token contract copy deployed on SKALE may need to be modified to include mintable and burnable functions**. SKALE Chain IMA contracts need to mint and burn the token on SKALE chains to maintain the 1:1 peg with Ethereum. If the token is already using OpenZeppelin's framework, you can do this by modifying the existing contract to import mintable and burnable functions. You can also do this by modifying the contract by adding mintable and burnable functions.
+* In order for an Ethereum Mainnet token contract to work with IMA on your SKALE Chain, **the token contract copy deployed on SKALE may need to be modified to include mintable and burnable functions**. SKALE Chain IMA contracts need to mint and burn the token on SKALE chains to maintain the 1:1 peg with Ethereum. If the token is already using OpenZeppelin's framework, you can do this by importing ERC20Mintable/ERC721Mintable and ERC20Burnable/ERC721Burnable contracts that extend the functionality to include mintable and burnable functions. You can also do this by manually modifying the contract by adding mintable and burnable functions.
 
 * The SKALE Chain contracts "LockAndData.." must be assigned the minter role for your modified token contract. This enables IMA to mint token clones as the tokens are Locked on mainnet contracts.
 
