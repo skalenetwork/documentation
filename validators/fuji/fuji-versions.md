@@ -17,8 +17,7 @@ The rest of the versions were provided for docker containers and correspondent t
 -   Install docker.io
 -   Install docker-compose -> `1.27.4`
 -   Install iptables-persistent - (for re-initializing base firewall rules after node machine was rebooted)
--   Make sure lvm2 package is installed (`dpkg -l | grep lvm2`)
--   Make sure lsof and psmisc packages are installed
+-   Make sure btrfs-progs, lsof, lvm2, psmisc packages are installed (`dpkg -l | grep <package>`)
 
 **Important notes:**  
 
@@ -36,9 +35,9 @@ The rest of the versions were provided for docker containers and correspondent t
     echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
     sudo apt install iptables-persistent -y
     ```
-5. You can install lsof, psmisc and lvm2 packages using the following commands:
+5. You can install btrfs-progs, lsof, lvm2, psmisc packages using the following commands:
     ```
-    sudo apt install lsof psmisc lvm2
+    sudo apt install btrfs-progs lsof lvm2 psmisc lvm2
     ```
 5.  You should run skale commands as superuser.
 
