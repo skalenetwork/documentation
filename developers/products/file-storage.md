@@ -16,7 +16,7 @@ You have full control over maintaining your files on the SKALE Network, and you 
 </TCColumnOne>
 <TCColumnTwo>
 
-```bash
+```shell
 npm i @skalenetwork/filestorage.js
 
 ```

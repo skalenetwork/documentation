@@ -30,13 +30,13 @@ The rest of the versions were provided for docker containers and correspondent t
     It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
 
 4.  You can install iptables-persistent using the following commands:
-    ``` bash
+    ``` shell
     echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
     echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
     sudo apt install iptables-persistent -y
     ```
 5.  You can install btrfs-progs, lsof, lvm2, psmisc packages using the following commands:
-    ``` bash
+    ```shell
     sudo apt install btrfs-progs lsof lvm2 psmisc
     ```
 6.  You should run skale commands as superuser.

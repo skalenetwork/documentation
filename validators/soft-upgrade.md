@@ -6,19 +6,19 @@
 
 **Update `CONTAINER_CONFIGS_STREAM` in .env file**
 
-```bash
+```shell
 cd  ~ && vi .env
 ```
 
 Make sure the `CONTAINER_CONFIGS_STREAM` in .env file is `1.1.1`
 
-```bash
+```shell
 CONTAINER_CONFIGS_STREAM=1.1.1 
 ```
 
 **Perform update**
 
 Run skale node update:
-```bash
+```shell
 skale node update .env
 ```
