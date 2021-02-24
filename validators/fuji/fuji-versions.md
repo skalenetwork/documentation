@@ -37,7 +37,7 @@ The rest of the versions were provided for docker containers and correspondent t
     ```
 5.  You can install btrfs-progs, lsof, lvm2, psmisc packages using the following commands:
     ``` bash
-    sudo apt install btrfs-progs lsof lvm2 psmisc lvm2
+    sudo apt install btrfs-progs lsof lvm2 psmisc
     ```
 6.  You should run skale commands as superuser.
 
