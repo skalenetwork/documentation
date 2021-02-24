@@ -45,20 +45,32 @@
               "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
             },
             {
-              "title": "Setting up ERC20",
-              "link": "/developers/products/interchain-messaging-agent/setting-up-erc20"
+              "title": "Managing ERC20",
+              "link": "/developers/products/interchain-messaging-agent/managing-erc20",
+              "links": [
+                {
+                  "title": "Setting up ERC20",
+                  "link": "/developers/products/interchain-messaging-agent/setting-up-erc20"
+                },
+                {
+                  "title": "Transferring ERC20",
+                  "link": "/developers/products/interchain-messaging-agent/transferring-erc20"
+                }
+              ]
             },
             {
-              "title": "Transferring ERC20",
-              "link": "/developers/products/interchain-messaging-agent/get-started-with-erc20"
-            },
-            {
-              "title": "Setting up ERC721",
-              "link": "/developers/products/interchain-messaging-agent/setting-up-erc721"
-            },
-            {
-              "title": "Transferring ERC721",
-              "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
+              "title": "Managing ERC721",
+              "link": "/developers/products/interchain-messaging-agent/managing-erc721",
+              "links": [
+                {
+                  "title": "Setting up ERC721",
+                  "link": "/developers/products/interchain-messaging-agent/setting-up-erc721"
+                },
+                {
+                  "title": "Transferring ERC721",
+                  "link": "/developers/products/interchain-messaging-agent/transferring-erc721"
+                }
+              ]
             },
             {
               "title": "IMA Access Control",
