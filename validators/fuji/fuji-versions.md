@@ -30,22 +30,22 @@ The rest of the versions were provided for docker containers and correspondent t
     It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
 
 4.  You can install iptables-persistent using the following commands:
-    ```
+    ``` bash
     echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
     echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
     sudo apt install iptables-persistent -y
     ```
-5. You can install btrfs-progs, lsof, lvm2, psmisc packages using the following commands:
-    ```
+5.  You can install btrfs-progs, lsof, lvm2, psmisc packages using the following commands:
+    ``` bash
     sudo apt install btrfs-progs lsof lvm2 psmisc lvm2
     ```
-5.  You should run skale commands as superuser.
+6.  You should run skale commands as superuser.
 
-6.  skale_sla container will be removed because it's deprecated for now.
+7.  skale_sla container will be removed because it's deprecated for now.
 
-7.  Logs from removed containers are placed inside `.skale/log/.removed_containers` 
+8.  Logs from removed containers are placed inside `.skale/log/.removed_containers` 
 
-8.  Before `skale node update` make sure that your attached storage isn't mounted.
+9.  Before `skale node update` make sure that your attached storage isn't mounted.
 
 * * *
 
