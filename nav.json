@@ -25,7 +25,8 @@
               "link": "/developers/code-samples"
             },
             {
-              "link": "/developers/wallets/wallets"
+              "link": "/developers/wallets/wallets",
+              "depth": 0
             },
             {
               "link": "/developers/example-dapps"
