@@ -25,37 +25,37 @@
               "link": "/developers/code-samples"
             },
             {
-              "link": "/developers/wallets/wallets",
-              "depth": 0,
-              "links": [
-                {
-                  "title": "Metamask",
-                  "link": "/developers/wallets/metamask"
-                },
-                {
-                  "title": "Portis",
-                  "link": "/developers/wallets/portis"
-                },
-                {
-                  "title": "Bitski",
-                  "link": "/developers/wallets/bitski"
-                },
-                {
-                  "title": "Torus",
-                  "link": "/developers/wallets/torus"
-                },
-                {
-                  "title": "Magic Wallet",
-                  "link": "/developers/wallets/magic"
-                },
-                {
-                  "title": "Wallet Connect",
-                  "link": "/developers/wallets/wallet-connect"
-                }
-              ]
+              "link": "/developers/example-dapps"
+            }
+          ]
+        },
+        {
+          "title": "Wallets",
+          "link": "/developers/wallets/getting-started",
+          "links": [
+            {
+              "title": "Metamask",
+              "link": "/developers/wallets/metamask"
             },
             {
-              "link": "/developers/example-dapps"
+              "title": "Portis",
+              "link": "/developers/wallets/portis"
+            },
+            {
+              "title": "Bitski",
+              "link": "/developers/wallets/bitski"
+            },
+            {
+              "title": "Torus",
+              "link": "/developers/wallets/torus"
+            },
+            {
+              "title": "Magic Wallet",
+              "link": "/developers/wallets/magic"
+            },
+            {
+              "title": "Wallet Connect",
+              "link": "/developers/wallets/wallet-connect"
             }
           ]
         },
