@@ -17,7 +17,7 @@ The rest of the versions were provided for docker containers and correspondent t
 -   Install docker.io
 -   Install docker-compose -> `1.27.4`
 -   Install iptables-persistent - (for re-initializing base firewall rules after node machine was rebooted)
--   Make sure lvm2 package is installed (`dpkg -l | grep lvm2`)
+-   Make sure btrfs-progs, lsof, lvm2, psmisc packages are installed (`dpkg -l | grep <package>`)
 
 **Important notes:**  
 
@@ -29,20 +29,23 @@ The rest of the versions were provided for docker containers and correspondent t
 3.  If you have any issues you can save the logs using `skale logs dump` command.  
     It's also useful to check logs from node-cli `skale cli logs` from docker plugin `/var/log/docker-lvmpy/lvmpy.log` if there are any issues.
 
-4.  You can install iptables-persistent using the following commands
-    ```shell
+4.  You can install iptables-persistent using the following commands:
+    ``` shell
     echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections
     echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
     sudo apt install iptables-persistent -y
     ```
+5.  You can install btrfs-progs, lsof, lvm2, psmisc packages using the following commands:
+    ```shell
+    sudo apt install btrfs-progs lsof lvm2 psmisc
+    ```
+6.  You should run skale commands as superuser.
 
-5.  You should run skale commands using sudo
+7.  skale_sla container will be removed because it's deprecated for now.
 
-6.  skale_sla container will be removed because it's deprecated for now.
+8.  Logs from removed containers are placed inside `.skale/log/.removed_containers` 
 
-7.  Logs from removed containers are placed inside `.skale/log/.removed_containers` 
-
-8.  Before `skale node update` make sure that your attached storage isn't mounted.
+9.  Before `skale node update` make sure that your attached storage isn't mounted.
 
 * * *
 

@@ -134,10 +134,15 @@ FILEBEAT_HOST=3.17.12.121:5000
 
 #### Ensure packages
 
-Make sure the iptables-persistent package is installed on your machine
+Make sure the btrfs-progs, iptables-persistent, lsof, lvm2, psmisc package are installed on your machine
 
 ```shell
+dpkg -l | grep btrfs-progs
 dpkg -l | grep iptables-persistent
+dpkg -l | grep lsof
+dpkg -l | grep lvm2
+dpkg -l | grep psmisc
+
 ```
 
 Make sure docker-compose version is `1.27.4`
