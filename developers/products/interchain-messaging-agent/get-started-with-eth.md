@@ -2,9 +2,9 @@
 
 ### Get Started with ETH
 
-The Interchain Messaging Agent can be used for managing ETH tokens between Ethereum and SKALE.  
+The Interchain Messaging Agent can be used for managing ETH between Ethereum and SKALE.  The following three steps guide you through a complete transfer from Ethereum to SKALE and back. Unlike managing ERC20 and ERC721, ETH is natively supported so there is no need for you to setup and map ETH on your SKALE Chain.
 
-<button>[Live Demo](https://codesandbox.io/s/skale-interchain-messaging-agent-eth-zm6hz)</button>
+<button>[Live ETH IMA Demo](https://codesandbox.io/s/skale-interchain-messaging-agent-eth-zm6hz)</button>
 
 <StepsController>
     <StepNav stepId='one' label='Deposit\nETH on Ethereum'><ByzantineFaultTolerant/></StepNav>
@@ -15,49 +15,11 @@ The Interchain Messaging Agent can be used for managing ETH tokens between Ether
 
 #### 1. Deposit ETH on Ethereum
 
-To send ETH from a user's wallet to the Deposit Box on Ethereum, you will need to use the deposit function within the  **DepositBox**  Smart Contract on Ethereum.  
+To send ETH from a user's wallet to the IMA Deposit Box on Ethereum, you will need to use the deposit function within the **DepositBox** IMA Contract on Ethereum.  
   
-This method is called from Ethereum to "freeze" funds and move ETH into a safe Deposit Box.  
+This method is called from Ethereum to lock the funds. 
 
-The  **DepositBox**  Smart Contract is currently deployed to the Rinkeby testnet. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
-
-```javascript
-function deposit(string memory schainID, address to) public payable {
-        bytes memory empty;
-        deposit(schainID, to, empty);
-  }
-
-```
-
-Alternatively, you can choose to send a message with the ETH to the SKALE Chain by using the deposit function below.  
-
-```javascript
-function deposit(
-  string memory schainID, 
-  address to, 
-  bytes memory data
-) 
-  public
-  payable
-  rightTransaction(schainID)
-{
-    bytes32 schainHash = keccak256(abi.encodePacked(schainID));
-    address tokenManagerAddress = LockAndData(lockAndDataAddress)
-      .tokenManagerAddresses(schainHash);
-    bytes memory newData;
-    newData = abi.encodePacked(bytes1(uint8(1)), data);
-    Proxy(proxyAddress).postOutgoingMessage(
-        schainID,
-        tokenManagerAddress,
-        msg.value,
-        to,
-        newData
-    );
-    LockAndData(lockAndDataAddress)
-      .receiveEth.value(msg.value)(msg.sender);
-}
-
-```
+The **DepositBox** contract is on Rinkeby testnet. To get the ABIs to interact with IMA on Rinkeby, check out the [current release page](https://github.com/skalenetwork/skale-network/tree/master/releases/rinkeby/IMA).  
 
 ##### Example Code
 
@@ -83,7 +45,11 @@ let contract = new web3.eth.Contract(depositBoxABI, depositBoxAddress);
  * deposit(string schainID, address to)
  */
 let deposit = contract.methods
-  .deposit(schainID, account)
+  .deposit(
+    schainID,
+    account,
+    web3.utils.fromAscii("[YOUR_MESSAGE]")   // optional message
+    )
   .encodeABI();
 
 //get nonce
@@ -125,37 +91,11 @@ web3.eth.getTransactionCount(account).then(nonce => {
 
 #### 2. Exit from SKALE Chain
 
-To send ETH back to Ethereum, you will need to use the exitToMain function within the  **TokenManager**  Smart Contract on the SKALE Chain.  
+To send ETH back to Ethereum, you will need to use the exitToMain function within the  **TokenManager** contract on the SKALE Chain.  
   
 This method is called from the SKALE Chain to send funds and move the token back to Ethereum.  
 
-The  **TokenManager**  Smart Contract is deployed to your SKALE Chain. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
-
-```javascript
-function exitToMain(address to, uint amount) public {
-    bytes memory empty;
-    exitToMain(to, amount, empty);
-}
-
-```
-
-Alternatively, you can choose to send a message with the ETH back to Ethereum by using the exitToMain function below.  
-
-```javascript
-function exitToMain(address to, uint amount, bytes memory data) public receivedEth(amount) {
-    bytes memory newData;
-    newData = abi.encodePacked(bytes1(uint8(1)), data);
-    ProxyForSchain(proxyForSchainAddress).postOutgoingMessage(
-        "Mainnet",
-        LockAndData(lockAndDataAddress)
-            .tokenManagerAddresses(keccak256(abi.encodePacked("Mainnet"))),
-        amount,
-        to,
-        newData
-    );
-}
-
-```
+The **TokenManager** contract is on your SKALE Chain. Check out the [current release page](https://github.com/skalenetwork/skale-network/tree/master/releases/rinkeby/IMA) for ABIs.
 
 ##### Example Code
 
@@ -184,7 +124,7 @@ let contract = new web3.eth.Contract(
  */
 let exitToMain = contract.methods.exitToMain(
     account, web3.utils.toWei('1', 'ether'), 
-    web3.utils.fromAscii("[YOUR_MESSAGE")
+    web3.utils.fromAscii("[YOUR_MESSAGE]")   // optional message
 ).encodeABI();  
 
 //get nonce
@@ -225,28 +165,11 @@ web3.eth.getTransactionCount(account).then(nonce => {
 
 #### 3. Release ETH to User
 
-To release funds to the end user on Ethereum, you will need to use the getMyEth function within the  **LockAndDataForMainnet**  Smart Contract on Ethereum.  
+To release funds to the end user on Ethereum, you will need to use the getMyEth function within the  **LockAndDataForMainnet** contract on Ethereum.  
   
 This method is called from Ethereum to release tokens back to the end user.  
 
-The  **LockAndDataForMainnet**  Smart Contract is deployed to your SKALE Chain. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
-
-```javascript
-function getMyEth() public {
-    require(
-      address(this).balance >= approveTransfers[msg.sender], 
-      "Not enough money"
-    );
-    require(
-      approveTransfers[msg.sender] > 0, 
-      "User has not money"
-    );
-    uint amount = approveTransfers[msg.sender];
-    approveTransfers[msg.sender] = 0;
-    msg.sender.transfer(amount);
-}
-
-```
+The **LockAndDataForMainnet** contract is deployed to Rinkeby. Check out the [current release page](https://github.com/skalenetwork/skale-network/tree/master/releases/rinkeby/IMA) for ABIs.
 
 ##### Example Code
 

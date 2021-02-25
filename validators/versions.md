@@ -32,7 +32,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 #### Mainnet Environment Variables
 
-```bash
+```shell
 MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.0
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.5.2/skale-manager-1.5.2-mainnet-abi.json

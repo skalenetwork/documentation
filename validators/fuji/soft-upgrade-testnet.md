@@ -26,6 +26,8 @@ chmod +x /usr/local/bin/sk-val
 
 #### Get SKALE Manager contracts info and set the endpoint
 
+NOTE: Be sure to setup Geth with the following JSON-RPC transports: `geth --http --http.api eth,web3`
+
 **Terminal Command:**
 
 ```shell
@@ -35,7 +37,7 @@ sk-val init -e [ENDPOINT] -c [ABI] --wallet [software/ledger]
 Required arguments:
 
 -   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`http` or `https`)
-                    Example: <https://rinkeby.infura.io/v3/..>.
+                    Example: <https://my.geth.node/..>.
 
 -   `--contracts-url/-c` - URL to SKALE Manager contracts ABI and addresses
 
@@ -132,10 +134,15 @@ FILEBEAT_HOST=3.17.12.121:5000
 
 #### Ensure packages
 
-Make sure the iptables-persistent package is installed on your machine
+Make sure the btrfs-progs, iptables-persistent, lsof, lvm2, psmisc package are installed on your machine
 
 ```shell
+dpkg -l | grep btrfs-progs
 dpkg -l | grep iptables-persistent
+dpkg -l | grep lsof
+dpkg -l | grep lvm2
+dpkg -l | grep psmisc
+
 ```
 
 Make sure docker-compose version is `1.27.4`

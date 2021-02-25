@@ -25,7 +25,34 @@
               "link": "/developers/code-samples"
             },
             {
-              "link": "/developers/integrations"
+              "link": "/developers/wallets/wallets",
+              "depth": 0,
+              "links": [
+                {
+                  "title": "Metamask",
+                  "link": "/developers/wallets/metamask"
+                },
+                {
+                  "title": "Portis",
+                  "link": "/developers/wallets/portis"
+                },
+                {
+                  "title": "Bitski",
+                  "link": "/developers/wallets/bitski"
+                },
+                {
+                  "title": "Torus",
+                  "link": "/developers/wallets/torus"
+                },
+                {
+                  "title": "Magic Wallet",
+                  "link": "/developers/wallets/magic"
+                },
+                {
+                  "title": "Wallet Connect",
+                  "link": "/developers/wallets/wallet-connect"
+                }
+              ]
             },
             {
               "link": "/developers/example-dapps"
@@ -37,16 +64,40 @@
           "link": "/developers/products/interchain-messaging-agent/overview",
           "links": [
             {
-              "title": "Managing ETH",
+              "title": "Getting Started",
+              "link": "/developers/products/interchain-messaging-agent/getting-started"
+            },
+            {
+              "title": "Transferring ETH",
               "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
             },
             {
               "title": "Managing ERC20",
-              "link": "/developers/products/interchain-messaging-agent/get-started-with-erc20"
+              "link": "/developers/products/interchain-messaging-agent/managing-erc20",
+              "links": [
+                {
+                  "title": "Setting up ERC20",
+                  "link": "/developers/products/interchain-messaging-agent/setting-up-erc20"
+                },
+                {
+                  "title": "Transferring ERC20",
+                  "link": "/developers/products/interchain-messaging-agent/transferring-erc20"
+                }
+              ]
             },
             {
               "title": "Managing ERC721",
-              "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
+              "link": "/developers/products/interchain-messaging-agent/managing-erc721",
+              "links": [
+                {
+                  "title": "Setting up ERC721",
+                  "link": "/developers/products/interchain-messaging-agent/setting-up-erc721"
+                },
+                {
+                  "title": "Transferring ERC721",
+                  "link": "/developers/products/interchain-messaging-agent/transferring-erc721"
+                }
+              ]
             },
             {
               "title": "IMA Access Control",

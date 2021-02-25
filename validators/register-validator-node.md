@@ -60,7 +60,7 @@ sk-val init -e [ENDPOINT] -c [ABI] --wallet [software/ledger]
 Required arguments:
 
 -   `--endpoint/-e` - RPC endpoint of the node in the network where SKALE manager is deployed (`http` or `https`)
-                    Example: <https://rinkeby.infura.io/v3/..>.
+                    Example: <https://my.geth.node.ip/..>.
 
 -   `--contracts-url/-c` - URL to SKALE Manager contracts ABI and addresses
 
@@ -383,7 +383,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 
 -   A Linux x86_64 machine
 -   SGX-enabled Intel processor
--   Ports 22, 8080, 9100, and 10000–11000, and ICMP IPv4 open for all
+-   Ports 22, 8080, 9100, and 10000–11500, and ICMP IPv4 open for all
 -   SSL Certificates
 -   Ubuntu 18.04 or later LTS
 -   2TB attached and unmounted storage (200GB Testnet)
