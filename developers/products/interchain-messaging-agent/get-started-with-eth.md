@@ -2,7 +2,7 @@
 
 ### Get Started with ETH
 
-You can use the Interchain Messaging Agent to manage ETH tokens between Ethereum and SKALE.  
+The Interchain Messaging Agent can be used for managing ETH between Ethereum and SKALE.  The following three steps guide you through a complete transfer from Ethereum to SKALE and back. Unlike managing ERC20 and ERC721, ETH is natively supported so there is no need for you to setup and map ETH on your SKALE Chain.
 
 <button>[Live ETH IMA Demo](https://codesandbox.io/s/skale-interchain-messaging-agent-eth-zm6hz)</button>
 
