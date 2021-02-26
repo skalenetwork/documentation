@@ -109,7 +109,7 @@ See [Code Samples](/developers/code-samples) for more deployment script examples
 
 Once your smart contracts deploy to your SKALE Chain, you can test sending out a new transaction using your existing connectors to Ethereum (ether.js, web3.js, web3.py, Remix, etc.). 
 
-You won't need to change your ether.js or web3 code setup, but you will need to send the transactions directly to SKALE by connecting MetaMask or [API Based Wallet](/developers/integrations) of your choice to your SKALE Chain.
+You won't need to change your ether.js or web3 code setup, but you will need to send the transactions directly to SKALE by connecting [MetaMask or API Based Wallet](/developers/wallets/getting-started) of your choice to your SKALE Chain.
 
 To connect SKALE in MetaMask, create a new Custom RPC with your SKALE Chain endpoint.  
 
