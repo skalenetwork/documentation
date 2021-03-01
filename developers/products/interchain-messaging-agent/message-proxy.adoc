@@ -19,17 +19,25 @@ The MessageProxy contract sends messages to any contract. The IMA system uses Me
 == Architecture
 
 * MessageProxy contracts are deployed on Mainnet and each SKALE Chain.
+* Contracts are registered to MessageProxy, allowing them to interact with the IMA Agent.
 * Messages sent via `postOutgoingMessage` are processed by the IMA Agent, a containerized nodejs script operating on each SKALE Node and listening for events on the SKALE Chain and Mainnet. 
 * When the Agent receives an Outgoing Message on either blockchain, it sends the message onward via `postIncomingMessage` to another MessageProxy contract on the destination chain to which it's sent.
 * You can view how `postOutgoingMessage` is used by DepositBox and TokenManager when a transfer is initiated to another chain (Mainnet or SKALE Chain).
 
 == Implementation
 
+First, your contracts must be registered to MessageProxy on Mainnet and on your SKALE Chain. This enables the Agent to interact with your specific contracts.
+
 To send messages via MessageProxy, your sending contract(s) on the SKALE Chain or Mainnet need to call `postOutgoingMessage` on the MessageProxy to send messages through the Agent. You need to pass in the parameters for destinationChainID, destination contract address, and the data to be sent. If you send messages from Schain to Mainnet, you must call MessageProxyOnSchain's `postOutgoingMessage` and include destinationChainID = "Mainnet" and the receiving contract address on Mainnet.
 
 To receive messages via MessageProxy, your receiving contract(s) need to implement `postMessage` logic (see PostMessage section below).
 
 When the IMA Agent receives a message from `postOutgoingMessage`, the agent calls `postIncomingMessage` on the destination chain's MessageProxy contract, and this `postIncomingMessage` executes the `postMessage` function in your contract.
+
+.To register contracts with MessageProxy
+
+* Add extra contract
+* Remove extra contract
 
 .To send messages from SKALE Chain to Mainnet
 
