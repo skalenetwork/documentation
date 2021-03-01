@@ -1,0 +1,126 @@
+= SKALE Chains {revnumber}
+:doctype: article
+:revnumber: v1.46
+:revdate: 2021-03-01
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
+
+A SKALE Chain is a Web3 Ethereum compatible elastic blockchain and is designed to make Web3 cloud computing easier for dApp developers. SKALE Chains (schains) provide EVM compute power, decentralized database storage, and other functionality to help not only power your dApps but allow them to scale in a cost-efficient manner. 
+
+== What makes a SKALE Chain
+
+Schains are powered by over 150 nodes run by over 45 SKALE Network validators. Each schain is secured by Proof-of-Stake from the validator and delegator communities.
+
+Every node in the network dynamically supplies containerized Web3 compute resources that work in concert with other nodes. A schain involves 16 randomly chosen nodes, that each run a containerized instance of an EVM client (skaled). All 16 of these skaled containers broadcast network messages, share transactions and blocks, and other cryptographic data with each other. Think of them as powerful instances of an Ethereum network, receiving Web3 transactional messages from clients and end-users, organizing them into blocks using an ultra-fast mathematically proven consensus called Asynchronous Binary Byzantine Agreement.
+
+== How to work with a SKALE Chain
+
+It's easy! Don't worry about https://github.com/skalentwork/SGXWallet[SGX enclaves], https://github.com/skalenetwork/libBLS[BLS threshold signatures], and https://github.com/skalenetwork/skale-consensus[Asynchronous Binary Byzantine Consensus] - all this technology works under the hood to provide dApp developers with scalable and easy to run dApp-specific blockchains. 
+
+You use your SKALE Chain as you work with Ethereum. Schain owners have a set of 16 available endpoints to receive Web3 transactions and data. Plug an endpoint into your Web3 client or Truffle config, and you are using SKALE.
+
+To work with other blockchains like Ethereum Testnets or Mainnet, you can use link:/developers/products/interchain-messaging-agent/overview[a bridge called Interchain Messaging Agent (IMA)]. IMA allows the transfer of ETH, ERC20, ERC721, and other arbitrary messages between Ethereum and your SKALE Chain.
+
+== SKALE Chains differences from Ethereum
+
+SKALE Chains operate like Ethereum, and there are a few key features and differences that make SKALE Chains even more powerful and suitable to run your dApp. 
+
+=== Gas-free transactions
+
+Transactions on SKALE Chain run in a gas-*free* way. This means there is gas on SKALE Chains just like on Ethereum, but it's powered by what's called SKALE ETH (sETH), which has no monetary value. In this way,executing transactions and state changes don't incur costs, but require consuming gas in sETH, which is value-less. SKALE Chain gas provides a way to meter or limit transactions on the SKALE Chain to prevent malicious execution.
+
+=== Empty Block Intervals
+
+Your SKALE Chain will continue to mine blocks in the absence of transactions. Empty blocks are used to signal to the SKALE Network that your SKALE Chain is healthy and operational. The default empty block interval is 5 seconds. When transactions fill blocks, blocks are mined as fast as possible, up to sub-second blocks depending on validator-node performance.
+
+=== JSON-RPC Methods
+
+SKALE Chains have a modified JSON-RPC interface compared to Geth Ethereum clients. In general, this shouldn't raise any incompatibilities unless your dApp requires particular methods. link:/developers/json-rpc-interface[See the JSON-RPC interface Compatibility table for more information].
+
+=== SKALE Chain Rotation
+
+SKALE Chains run across 16 randomly chosen nodes. Your Schain can be configured to randomly swap out nodes for other nodes in the network. This helps reduce any potential collusion over time. To the SKALE Chain owner and end-users, this is a process that runs behind the scenes...  The incoming node will gather all previous blocks, transactions, etc from the SKALE Chain in a catchup procedure, and the updated node set will form a new BLS public key through DKG, and all subsequent blocks will be signed with the new BLS public key.
+
+=== Block Rotation
+
+SKALE Chains don't store a full history of all blocks. Older blocks are eventually discarded to ensure SKALE chains and Nodes don't run out of space. For dApps that need access to older blocks, you can retrieve snapshots from your SKALE Chain and store them in Filestorage or third-party services such as Arweave.
+
+=== Snapshotting
+
+To support rotation, SKALE Chains create regular BTRFS snapshots. link:/developers/snapshots[See the Snapshots document for more information].
+
+=== PoW Mining
+
+Each SKALE Chain comes with a configurable parameter to allow end-users who haven't yet been allocated sETH to conduct SKALE chain transactions, a way to "mine" sETH in their browser by running a small nodejs script. link:/developers/pow-mining[See here for more details...]
+
+=== DDOS Protection
+
+Besides limiting the rate of gas consumption on SKALE Chains, each chain also comes with a configurable DDOS protection system that allows the Chain to detect peak (per second) and long load (per minute) JSON-RPC calls and WS/WSS connections. The protection enables the chain to survive in high load situations by banning caller origins for a preset number of seconds.
+
+An example configuration is: 
+
+```json
+ "unddos": {
+        "origins": [
+            {
+                "origin": [ "192.168.1.1", "127.0.0.*", "::1" ], 
+                "ban_lengthy": 0,
+                "ban_peak": 0,
+                "max_calls_per_minute": 1000000000,
+                "max_calls_per_second": 1000000000,
+                "max_ws_conn": 65535
+            },
+            {
+                "origin": [ "*" ],
+                "ban_lengthy": 120,
+                "ban_peak": 15,
+                "max_calls_per_minute": 5000,
+                "max_calls_per_second": 1500,
+                "max_ws_conn": 20
+            }
+        ]
+    },
+```
+
+The first "origins" block configures allowed unlimited load from specified IP origins. The second origins block configures all call origins allowed, but allow 1500 JSON-RPC calls per second and 5000 calls per minute. If the calls exceed the per second limit, "ban_peak" bans the caller for 15 seconds. If the calls exceed the per minute limit, "ban_lengthy" bans the caller for 120 seconds. And finally, "max_ws_conn" allows for 20 concurrent connections from a single IP.
+
+The configuration set can be expanded to limit specific JSON-RPC calls, like `eth_blockNumber`. For example:
+
+```json
+{
+  "origins": [
+    {
+      "ban_lengthy": 120,
+      "ban_peak": 15,
+      "custom_method_settings": {
+        "eth_blockNumber": {
+          "max_calls_per_minute": 150000,
+          "max_calls_per_second": 5000
+        }
+      },
+      "max_calls_per_minute": 15000,
+      "max_calls_per_second": 500,
+      "max_ws_conn": 50,
+      "origin": [
+        "*"
+      ]
+    }
+  ]
+}
+```
+
+== Roadmap
+
+Don't see a feature you need? https://skale.network/roadmap[Check out our roadmap for upcoming features, and suggest a new idea!]

@@ -1,0 +1,7 @@
+= PoW Mining for SKALE Chains
+
+This feature is enabled by setting the schain_config of `"externalGasDifficulty": "0x01"`, where the value defines the difficulty required by the end-user to mine for sETH gas. The higher the difficulty is set, the longer your end-user must mine for sufficient sETH gas to conduct a transaction.
+
+Set this high if you require users to wait-authenticate longer for sETH, and set this low if you want users to wait-authenticate more easily to conduct transactions on your SKALE Chain.
+
+Once this value is set, it can't be updated. To set a new value, you must migrate to an updated SKALE Chain with the new difficulty value.
