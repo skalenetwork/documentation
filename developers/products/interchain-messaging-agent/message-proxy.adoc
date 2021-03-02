@@ -34,10 +34,15 @@ To receive messages via MessageProxy, your receiving contract(s) need to impleme
 
 When the IMA Agent receives a message from `postOutgoingMessage`, the agent calls `postIncomingMessage` on the destination chain's MessageProxy contract, and this `postIncomingMessage` executes the `postMessage` function in your contract.
 
-.To register contracts with MessageProxy
+.To register contracts with MessageProxy on Mainnet:
 
-* Add extra contract
-* Remove extra contract
+* Add extra mainnet contract by calling `registerExtraContract("Mainnet", [CONTRACT_ADDRESS_ON_MAINNET])`
+* Remove extra mainnet contract by calling `removeExtraContract("Mainnet", [CONTRACT_ADDRESS_ON_MAINNET])`.
+
+.To register contracts with MessageProxy on SKALE Chain:
+
+* Add extra SKALE Chain contract by calling `registerExtraContract([SKALE_CHAIN_NAME], [CONTRACT_ADDRESS_ON_SCHAIN])`.
+* Remove extra SKALE Chain contract by calling `removeExtraContract([SKALE_CHAIN_NAME], [CONTRACT_ADDRESS_ON_SCHAIN])`.
 
 .To send messages from SKALE Chain to Mainnet
 
