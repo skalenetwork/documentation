@@ -27,7 +27,7 @@ Every node in the network dynamically supplies containerized Web3 compute resour
 
 == How to work with a SKALE Chain
 
-It's easy! Don't worry about https://github.com/skalentwork/SGXWallet[SGX enclaves], https://github.com/skalenetwork/libBLS[BLS threshold signatures], and https://github.com/skalenetwork/skale-consensus[Asynchronous Binary Byzantine Consensus] - all this technology works under the hood to provide dApp developers with scalable and easy to run dApp-specific blockchains. 
+It's easy! Don't worry about https://github.com/skalenetwork/SGXWallet[SGX enclaves], https://github.com/skalenetwork/libBLS[BLS threshold signatures], and https://github.com/skalenetwork/skale-consensus[Asynchronous Binary Byzantine Consensus] - all this technology works under the hood to provide dApp developers with scalable and easy to run dApp-specific blockchains. 
 
 You use your SKALE Chain as you work with Ethereum. Schain owners have a set of 16 available endpoints to receive Web3 transactions and data. Plug an endpoint into your Web3 client or Truffle config, and you are using SKALE.
 
@@ -47,7 +47,7 @@ Your SKALE Chain will continue to mine blocks in the absence of transactions. Em
 
 === JSON-RPC Methods
 
-SKALE Chains have a modified JSON-RPC interface compared to Geth Ethereum clients. In general, this shouldn't raise any incompatibilities unless your dApp requires particular methods. link:/developers/json-rpc-interface[See the JSON-RPC interface Compatibility table for more information].
+SKALE Chains have a modified JSON-RPC interface compared to Geth Ethereum clients. In general, this shouldn't raise any incompatibilities unless your dApp requires particular methods. ifdef::env-github[] https://github.com/skalenetwork/skaled/docs/json-rpc-interface.md[See the JSON-RPC interface Compatibility table for more information]. endif::[] ifndef::env-github[] link:/developers/json-rpc-interface[See the JSON-RPC interface Compatibility table for more information]. endef::[]
 
 === SKALE Chain Rotation
 
