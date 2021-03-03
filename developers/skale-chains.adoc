@@ -50,15 +50,11 @@ Your SKALE Chain will continue to mine blocks in the absence of transactions. Em
 SKALE Chains have a modified JSON-RPC interface compared to Geth Ethereum clients. In general, this shouldn't raise any incompatibilities unless your dApp requires particular methods. 
 
 ifdef::env-github[] 
-
 https://github.com/skalenetwork/skaled/docs/json-rpc-interface.md[See the JSON-RPC interface Compatibility table for more information]. 
-
 endif::[] 
 
 ifndef::env-github[] 
-
 link:/developers/json-rpc-interface[See the JSON-RPC interface Compatibility table for more information].
-
 endef::[]
 
 === SKALE Chain Rotation
