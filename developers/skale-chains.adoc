@@ -67,11 +67,27 @@ SKALE Chains don't store a full history of all blocks. Older blocks are eventual
 
 === Snapshotting
 
-To support rotation, SKALE Chains create regular BTRFS snapshots. link:/developers/snapshots[See the Snapshots document for more information].
+To support rotation, SKALE Chains create regular BTRFS snapshots. 
+
+ifdef::env-github[]
+https://github.com/skalenetwork/skaled/docs/snapshots.md[See the Snapshots document for more information].
+endif::[]
+
+ifndef::env-github[]
+link:/developers/snapshots[See the Snapshots document for more information].
+endif::[]
 
 === PoW Mining
 
-Each SKALE Chain comes with a configurable parameter to allow end-users who haven't yet been allocated sETH to conduct SKALE chain transactions, a way to "mine" sETH in their browser by running a small nodejs script. link:/developers/pow-mining[See here for more details...]
+Each SKALE Chain comes with a configurable parameter to allow end-users who haven't yet been allocated sETH to conduct SKALE chain transactions, a way to "mine" sETH in their browser by running a small nodejs script. 
+
+ifdef::env-github[]
+link:/developers/pow-mining.adoc[See here for more details...]
+endif::[]
+
+ifndef::env-github[]
+link:/developers/pow-mining[See here for more details...]
+endif::[]
 
 === DDOS Protection
 
@@ -127,6 +143,14 @@ The configuration set can be expanded to limit specific JSON-RPC calls, like `et
     }
   ]
 }
+```
+
+And DDoS protection can be completely disabled with the following config:
+
+```json
+ "unddos": {
+        "enabled": false,
+ }
 ```
 
 == Roadmap
