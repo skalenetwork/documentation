@@ -52,3 +52,11 @@ If you don't have a SKALE Chain yet, you can get started with:
 * https://skale.network/innovators-signup[Apply to SIP Program] for a chance to receive a SKALE Mainnet chain grant.
 
 Still not sure how to get started? Then head over to the link:/developers/getting-started/beginner[Beginner's guide] or reach out to the http://skale.chat[SKALE Network developer community on Discord].
+
+==== Engage with SKALE Network Community
+
+* Discord - For development and validator-focused discussions, join the https://discord.gg/vvUtWJB[SKALE Network Discord channel].
+* Telegram - For general and non-technical discussions, https://t.me/skaleofficial[join the Telegram group].
+* Twitter - Follow https://twitter.com/SkaleNetwork[@SkaleNetwork] on Twitter.
+* YouTube - For video-tutorials and related content, subscribe to our YouTube channel https://www.youtube.com/skale[here].
+* Blog - Follow and subscribe to the SKALE Network blog and newsletter https://skale.network/blog[here].
