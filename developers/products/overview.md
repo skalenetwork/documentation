@@ -11,3 +11,7 @@ IMA currently supports ETH, ERC20, ERC721, and can support any other standard us
 #### 📂 Decentralized Filestorage
 
 To use decentralized storage on your SKALE Chain, [checkout Filestorage](/developers/file-storage.md). Filestorage allows you to upload and access files directly on a SKALE chain. Use it to store images, static HTML, or other files to work with your dApp.
+
+#### Others
+
+Want another product listed here? [Submit a new idea.](https://skale.network/roadmap)

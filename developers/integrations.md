@@ -9,6 +9,7 @@ SKALE Chains work with all Ethereum compatible tools. If you are having difficul
 -   [Monitoring and Analytics Tools](#MonitoringandAnalyticsTools)
     -   [Terminal.co](#Terminal.co)
 
+Want another integration listed here? [Submit a new idea!](https://skale.network/roadmap)
 #### API Based Wallets
 
 The best way to manage your user authentication and on-boarding is to integrate an API based wallet into your dApp. An API based wallet allows you to provide an intuitive user login flow for your users. An API based wallet can help you provide a secure and user friendly wallet option. This login flow is especially useful for your new users that are using a blockchain application for the first time. Being able to execute transactions programmatically directly from your dApp, takes the pressure off of your end-user to manage this on their own.  
