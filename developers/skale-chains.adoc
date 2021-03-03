@@ -50,7 +50,7 @@ Your SKALE Chain will continue to mine blocks in the absence of transactions. Em
 SKALE Chains have a modified JSON-RPC interface compared to Geth Ethereum clients. In general, this shouldn't raise any incompatibilities unless your dApp requires particular methods. 
 
 ifdef::env-github[] 
-https://github.com/skalenetwork/skaled/docs/json-rpc-interface.md[See the JSON-RPC interface Compatibility table for more information].
+https://github.com/skalenetwork/skaled/tree/develop/docs/json-rpc-interface.md[See the JSON-RPC interface Compatibility table for more information].
 endif::[] 
 
 ifndef::env-github[] 
@@ -70,7 +70,7 @@ SKALE Chains don't store a full history of all blocks. Older blocks are eventual
 To support rotation, SKALE Chains create regular BTRFS snapshots. 
 
 ifdef::env-github[]
-https://github.com/skalenetwork/skaled/docs/snapshots.md[See the Snapshots document for more information].
+https://github.com/skalenetwork/skaled/tree/develop/docs/snapshots.md[See the Snapshots document for more information].
 endif::[]
 
 ifndef::env-github[]
