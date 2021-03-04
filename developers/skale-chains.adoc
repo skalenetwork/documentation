@@ -77,6 +77,8 @@ endif::[]
 
 SKALE Chains run across 16 randomly chosen nodes. Your Schain can be configured to randomly swap out nodes for other nodes in the network. This helps reduce any potential collusion over time. To the SKALE Chain owner and end-users, this is a process that runs behind the scenes...  The incoming node will gather all previous blocks, transactions, etc from the SKALE Chain in a catchup procedure, and the updated node set will form a new BLS public key through DKG, and all subsequent blocks will be signed with the new BLS public key.
 
+Note that Chain rotation will not be available until later 2021.
+
 === Block Rotation
 
 SKALE Chains don't store a full history of all blocks. Older blocks are eventually discarded to ensure SKALE chains and Nodes don't run out of space. For dApps that need access to older blocks, you can retrieve snapshots from your SKALE Chain and store them in Filestorage or third-party services such as Arweave.
