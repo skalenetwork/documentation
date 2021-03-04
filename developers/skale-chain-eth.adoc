@@ -1,8 +1,8 @@
 = SKALE Chain ETH
 
-SKALE Chains enable dApps to run gasless transactions. This provides an effective way to scale your dApp not only for speed but also to scale economically. However, SKALE Chains do require ETH to conduct transactions! Luckily this ETH is SKALE Chain "fake" ETH with no economic value but provides a way for dApps to facilitate permissive access to SKALE Chains and protects against DDoS attacks.
+SKALE Chains enable dApps to run gasless transactions. This provides an effective way to scale your dApp not only for speed but also to scale economically. However, SKALE Chains do require sETH to conduct transactions – this sETH is SKALE Chain "fake" ETH with no economic value but provides a way for dApps to facilitate permissive access to SKALE Chains and protects against DDoS attacks.
 
-There are a few ways to get SKALE ETH, depending on your setup.
+There are a few ways to get SKALE ETH (sETH), depending on your setup.
 
 == ETH on SKALE SDKs
 
@@ -14,4 +14,4 @@ For Testnets, a faucet is available to fund accounts on your specific endpoint. 
 
 == ETH on Mainnet SKALE Chains
 
-For Mainnet, the SKALE Chain owner account is provided ETH for the SKALE Chain. From this account, the owner can fund contracts, accounts, conduct transactions, etc. Also, SKALE Chain users can mine for SKALE ETH by running a simple PoW script. https://github.com/skalenetwork/pow-demo[See the pow-demo for an example.]
+For Mainnet, the SKALE Chain owner account is provided ETH for the SKALE Chain. From this account, the owner can fund contracts, accounts, conduct transactions, etc. Also, SKALE Chain users can mine for SKALE ETH by running a simple PoW script. link:/developers/pow-mining[See PoW Mining for more info.]

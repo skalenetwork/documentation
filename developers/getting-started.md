@@ -2,10 +2,13 @@
 
 Choose a path below to start using SKALE Network. If you have your SKALE Chains already set up and you are looking for examples, please see  [Code Samples](/developers/code-samples).  
 
-Want to know more about the SKALE Network and what it does? [Read an overview](/developers/overview).
+Want to know more about the SKALE Network and what it does? [Read an overview.](/developers/overview)
 
-Looking for delegation information? [Read about delegating on SKALE](/validators/delegation).
-Looking for validator information? [Head over to the validator section](/validators/getting-started).
+Looking for delegation information? [Read about delegating on SKALE.](/validators/delegation)
+
+Looking for validator information? [Head over to the validator section.](/validators/getting-started)
+
+Want to submit an idea or see a roadmap? [Click here.](https://skale.network/roadmap)
 
 <SplitSectionLayout>
 <SplitSectionColumn>
