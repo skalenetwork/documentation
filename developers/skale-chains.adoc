@@ -43,15 +43,15 @@ Creating a SKALE Chain requires SKL tokens and some ETH to fund the necessary tr
 
 == SKALE Chain Features
 
-* **Decentralized and permissionless network** so dApps run on chains supported by a randomly selected group of validator nodes, and nodes are swapped from time to time. And the entire protocol runs on Ethereum to provide a permissionless way to access Web3 cloud resources.
-* **Native cross-chain integration** using Ethereum and SKALE IMA – allows users to move tokens, state, and messages between Ethereum and SKALE Chains, and between SKALE Chains.
+* **Decentralized and permissionless network** where dApps run on chains supported by a randomly selected group of validator nodes, and nodes are swapped from time to time. The entire Network runs from the Ethereum Network to provide a permissionless way to access Web3 cloud resources.
+* **Native cross-chain integration** using Ethereum and SKALE IMA – allows users to move tokens, state, and messages between Ethereum and SKALE Chains, and between SKALE Chains. This bridge is secured by stake, secure enclaves, and BLS Threshold cryptography.
 * **Web3 RPC API** so existing dApps can migrate to SKALE Chains with minimal change and developers can use Ethereum tooling such as Truffle, Metamask, Remix, etc.
-* **Customized for your dApp** so dApps can configure Web3 cloud resources specific to their needs. This includes various SKALE Chain sizes to access different levels of compute and storage resources and custom options for DDoS protection, node rotation, and more.
-* **Decentralized SKALE Chain owners** that can be operated by a single entity, community, or a DAO. This provides a range of decentralization options for funding, operating, and maintaining SKALE Chains.
+* **Customized for your dApp**: configure Web3 cloud resources specific to your dApp and end-users' needs. This includes various SKALE Chain sizes to support different levels of compute and storage resources and custom options for DDoS protection, node rotation, and more.
+* **Decentralized SKALE Chain Administration** that can be operated by a single entity, community, or a DAO. This provides a range of decentralization options for funding, operating, and maintaining SKALE Chains.
 
-== SKALE Chains differences from Ethereum
+== SKALE Chains Differences from Ethereum
 
-SKALE Chains operate like Ethereum, and there are a few key features and differences that make SKALE Chains even more powerful and suitable to run your dApp. 
+SKALE Chains operate like Ethereum, and there are a few other features and differences that make SKALE Chains even more powerful and suitable to run your dApp. 
 
 === Gas-free transactions
 
@@ -171,4 +171,4 @@ And DDoS protection can be completely disabled with the following config:
 
 == Roadmap
 
-Don't see a feature you need? https://skale.network/roadmap[Check out our roadmap for upcoming features, and suggest a new idea!]
+Don't see a feature you need? https://skale.network/roadmap[Check out the roadmap for upcoming features, and suggest a new idea!]
