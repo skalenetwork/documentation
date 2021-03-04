@@ -23,7 +23,7 @@ A SKALE Chain is a Web3 Ethereum compatible elastic blockchain designed to make 
 
 Schains are powered by 16 out of more than 150 nodes run by over 45 SKALE Network validators. Each schain is secured by Proof-of-Stake from the validator and delegator communities.
 
-Every node in the SKALE Network dynamically supplies containerized Web3 compute resources that work in concert with other nodes. A schain involves 16 randomly chosen nodes that each run a containerized instance of an EVM client (skaled). All 16 of these skaled containers broadcast network messages, share transactions and blocks, and other cryptographic data with each other. Think of these containers as powerful instances of an Ethereum network, receiving Web3 transactional messages from clients and end-users, organizing them into blocks using an ultra-fast mathematically proven consensus called Asynchronous Binary Byzantine Agreement.
+Every node in the SKALE Network dynamically supplies containerized Web3 compute resources that work in concert with other nodes. A schain involves 16 randomly chosen nodes that each run a containerized network client with EVM (skaled). All 16 of these skaled containers broadcast network messages, share transactions and blocks, and other cryptographic data with each other. Think of these containers as powerful instances of an Ethereum network, receiving Web3 transactional messages from clients and end-users, organizing them into blocks using an ultra-fast mathematically proven consensus called Asynchronous Binary Byzantine Agreement.
 
 == How to work with a SKALE Chain
 
@@ -97,7 +97,7 @@ endif::[]
 
 === PoW Mining
 
-Each SKALE Chain comes with a configurable parameter to allow end-users who haven't yet been allocated sETH to conduct SKALE chain transactions, a way to "mine" sETH in their browser by running a small nodejs script. 
+Each SKALE Chain comes with a configurable parameter to allow end-users who haven't yet been allocated sETH to conduct SKALE chain transactions, a way to mine gas just before transaction execution. This mining can be done in a browser by running a small nodejs script. 
 
 ifdef::env-github[]
 link:/developers/pow-mining.adoc[See here for more details...]
