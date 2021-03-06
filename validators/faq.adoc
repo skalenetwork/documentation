@@ -163,29 +163,6 @@ docker-lvmpy logs
 cat /var/log/docker-lvmpy/lvmpy.log
 ```
 
-=== Node OS packages update
-
-It better to do updated only if there are critical security fixes.
-For sgx wallet server you should also make sure that your kernel is stable (TODO: add versions).
-Sgx is relatively new low level technology and the kernel update make break the system completely.
-To make sure `apt update` will not update the kernel you should use apt-mark hold command:
-
-```shell
-sudo apt-mark hold linux-generic linux-image-generic linux-headers-generic
-```
-
-Also if you configured unatennded upgrades, you should make sure kernel will not be updated automatically by adding the following lines 
-to `/etc/apt/apt.conf.d/50unattended-upgrades` file:
-
-```shell
-Unattended-Upgrade::Package-Blacklist {
-        "linux-generic";
-        "linux-image-generic";
-        "linux-headers-generic";
-};
-```
-
-
 SKALE Network has many resources designed to help you get your questions answered. You can reach out to the SKALE Network developer community on http://skale.chat/[discord], or submit a support request below.  
 
 https://skalelabs.typeform.com/to/pSu895[Contact Support]
