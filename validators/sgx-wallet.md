@@ -24,9 +24,9 @@ SKALE will have two types of SGX operations:
 -   **Local (Secure)**: Wallet running on the same server as sub-node.  
 -   **Network**: Sub-node talks to SGX wallet over the SKALE Network. The validator is responsible for securing the connection. If validator is planning to have a separate SGX compatible node than the Blockchain node, SGX Wallet node doesn't have to have the same hardware requirements as the sub-node. SGXWallet doesn't require a lot of computational power. After setting up the Network SGX node, enable SSL certification before adding the url to configuration in SKALE Node Set up.
 
-### Node OS packages update
+### OS packages update
 
-It's recommended to only update the SGXWallet server if there are critical security fixes. This is because SGXWallet is based on new low level technology, and kernel updates may break the system.
+It's recommended to only update the SGXWallet server if there are critical security fixes. This is because SGXWallet is based on new low level technology, and kernel updates may break the system. Currently SGX is tested on 4.15-* kernels. It's best to avoid minor version updates too.
 
 To make sure `apt update` won't update the kernel you should use apt-mark hold command:
 

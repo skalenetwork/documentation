@@ -16,7 +16,7 @@ endif::[]
 
 
 
-Need help solving an issue? Check to see if this has already been answered below. If you can't find an answer to your issue, reach out to the SKALE Network developer community on discord.  
+Need help solving an issue? Check to see if this has already been answered below. If you can't find an answer to your issue, reach out to the SKALE Network developer community on Discord.  
 
 http://skale.chat/[Ask a question]
 
@@ -24,7 +24,7 @@ http://skale.chat/[Ask a question]
 
 === How do I change my Node's IP address?
 
-You can't change your node IP address, but what's possible is to remove the node with the incorrect/old IP address and register a new node under the correct/new IP while keeping the old SGX key.  Please contact the core team before proceeding for further guidance.
+You can't change your node IP address, but what's possible is to remove the node with the incorrect/old IP address and register a new node under the correct/new IP while keeping the old SGX key. Please contact the core team before proceeding for further guidance.
 
 [NOTE]
 It's recommended to use a permanent IP that can dynamically point to a node's machine IP (for example, elastic IP) so you can update machines if needed without having to change the IP recorded in SKALE Manager during node registration.
@@ -105,7 +105,7 @@ image::https://assets.website-files.com/5be05ae542686c4ebf192462/5d9f9cb5adfc337
 |When there are no sChains these ports are closed by iptables rules. It’s important to not add another firewall, because sChain configuration is created dynamically as well as iptables rules.
 |===
 
-=== Can we use Kubernetes?
+=== Can I use Kubernetes?
 
 Yes. However, you will need to make sure that your platform is compatible with SKALE. In particular, your platform must allow docker-lvmpy to dynamically partition the external drive for each SKALE chain.
 
@@ -165,15 +165,50 @@ cat /var/log/docker-lvmpy/lvmpy.log
 
 === Why is SGX crashing after machine reboot?
 
-SGXWallet may crash after a reboot if you did not disable automatic updates. This is because SGXWallet is based on new low level technology, and kernel updates may break the system. It's recommended to only update the SGXWallet server if there are critical security fixes. 
+SGXWallet may crash after a reboot if you didn't disable automatic updates. This is because SGXWallet is based on new low level technology, and kernel updates may break the system. It's recommended to only update the SGXWallet server if there are critical security fixes. 
 
-To make sure `apt update` won't update the kernel you should use apt-mark hold command:
+=== Node update procedure
+
+Updating system packages is important part of node maintenance and security. Updates may contain fixes for recent security issues. 
+However, newer updates may be incompatible with SKALE node software. Therefore, updating should be executed carefully. 
+=======
+
+[WARNING]
+Make sure that the infrastructure provider doesn't update packages after system is restarted.
+
+The following list contains packages that require additional attention.
+
+Critical risk (updates should be performed only if there are some messages from core team)::
+- kernel updates on SGXWallet server.
+
+[NOTE]
+Currently SGX is tested on 4.15-* kernels. It's best to avoid minor version updates too.
+
+High risk (updates should be avoided in general)::
+- kernel on SKALE node server
+- docker 
+- docker-compose 
+- btrfs-tools
+
+Medium risk (updates should be performed very carefully)::
+- lvm2
+- iptables 
+- iptables-persistent
+- python
+
+==== General tips
+
+1. Carefully check which packages will be updated when executing apt upgrade. You can use `apt list --upgradable`
+2. Avoid executing `apt dist-upgrade` 
+3. Disabling updates for certain packages can be done using `apt-mark hold` (https://manpages.debian.org/stretch/apt/apt-mark.8.en.html). For example to forbid kernel updates you should run:
 
 ```shell
 sudo apt-mark hold linux-generic linux-image-generic linux-headers-generic
 ```
 
-Also if you configured unattended upgrades, you should make sure kernel won't update automatically. To do this, add the following lines to `/etc/apt/apt.conf.d/50unattended-upgrades` file:
+Another option is to use unattended upgrades (https://wiki.debian.org/UnattendedUpgrades) which allows to automatically keep system current with the latest security updates. 
+There is an option to exclude some packages from update list using `Package-Blacklist` section in the configuration file. 
+For example to disallow linux kernel updates you should place the following lines in  `/etc/apt/apt.conf.d/50unattended-upgrades` file:
 
 ```shell
 Unattended-Upgrade::Package-Blacklist {
@@ -182,7 +217,6 @@ Unattended-Upgrade::Package-Blacklist {
         "linux-headers-generic";
 };
 ```
-
 
 SKALE Network has many resources designed to help you get your questions answered. You can reach out to the SKALE Network developer community on http://skale.chat/[discord], or submit a support request below.  
 
