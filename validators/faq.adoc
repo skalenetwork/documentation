@@ -163,19 +163,40 @@ docker-lvmpy logs
 cat /var/log/docker-lvmpy/lvmpy.log
 ```
 
-=== Node OS packages update
+=== Node update procedure
 
-It better to do updated only if there are critical security fixes.
-For sgx wallet server you should also make sure that your kernel is stable (TODO: add versions).
-Sgx is relatively new low level technology and the kernel update make break the system completely.
-To make sure `apt update` will not update the kernel you should use apt-mark hold command:
+Updating system packages is important part of node maintaining. Updates may contain fixes for recently founded security issues. 
+However newer versions may be incompatible with the node software. So updating procedure should be executed carefully. 
 
+[WARNING]
+ Make sure that infrastructure provider doesn't update packages after system is restarted.
+
+The following list contains packages that require additional attention.
+
+Critical risk (updates should be performed only if there are some messages from core team)::
+- kernel updates on sgx wallet server.
+
+High risk (updates should be avoided in general)::
+- kernel on node server
+- docker 
+- docker-compose 
+- btrfs-tools
+
+Medium risk (updates should be performed very carefully)::
+- lvm2
+- iptables 
+- iptables-persistent
+- python
+
+==== General tips
+1. Carefully check which packages will be updated when executing apt upgrade. You can use `apt list --upgradable`
+2. Avoid executing `apt dist-upgrade` 
+3. Disabling updates for certain packages can be done using `apt-mark hold` (https://manpages.debian.org/stretch/apt/apt-mark.8.en.html). For example to forbid kernel updates you should run:
 ```shell
 sudo apt-mark hold linux-generic linux-image-generic linux-headers-generic
 ```
 
-Also if you configured unatennded upgrades, you should make sure kernel will not be updated automatically by adding the following lines 
-to `/etc/apt/apt.conf.d/50unattended-upgrades` file:
+Another option is to use unattended upgrades (https://wiki.debian.org/UnattendedUpgrades) which allows to automatically keep system current with the latest security updates. There is an option to exclude some packages from update list using `Package-Blacklist` section in the configuration file. For example to disallow linux kernel updates you should place the following lines in  `/etc/apt/apt.conf.d/50unattended-upgrades` file:
 
 ```shell
 Unattended-Upgrade::Package-Blacklist {
