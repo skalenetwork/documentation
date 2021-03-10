@@ -174,12 +174,15 @@ However newer versions may be incompatible with the node software. So updating p
 =======
 
 [WARNING]
- Make sure that infrastructure provider doesn't update packages after system is restarted.
+Make sure that infrastructure provider doesn't update packages after system is restarted.
 
 The following list contains packages that require additional attention.
 
 Critical risk (updates should be performed only if there are some messages from core team)::
 - kernel updates on sgx wallet server.
+
+[NOTE]
+Currently sgx is tested on 4.15-* kernels. But it's better to avoid minor version updates too.
 
 High risk (updates should be avoided in general)::
 - kernel on node server
