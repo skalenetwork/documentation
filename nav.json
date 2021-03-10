@@ -26,6 +26,9 @@
             },
             {
               "link": "/developers/example-dapps"
+            },
+            {
+              "link": "/developers/events-subscriptions"
             }
           ]
         },

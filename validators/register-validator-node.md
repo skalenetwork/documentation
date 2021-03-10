@@ -230,6 +230,26 @@ SGX: Software Guard Extensions supported = true
 After installing docker make sure that `live-restore` option
 is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
 
+**Disable automatic updates**
+
+It's recommended to only update the SGXWallet server if there are critical security fixes. This is because SGXWallet is based on new low level technology, and kernel updates may break the system.
+
+To make sure `apt update` won't update the kernel you should use apt-mark hold command:
+
+```shell
+sudo apt-mark hold linux-generic linux-image-generic linux-headers-generic
+```
+
+Also if you configured unattended upgrades, you should make sure kernel won't update automatically. To do this, add the following lines to `/etc/apt/apt.conf.d/50unattended-upgrades` file:
+
+```shell
+Unattended-Upgrade::Package-Blacklist {
+        "linux-generic";
+        "linux-image-generic";
+        "linux-headers-generic";
+};
+```
+
 * * *
 
 ### Set Up SGX Wallet

@@ -163,10 +163,15 @@ docker-lvmpy logs
 cat /var/log/docker-lvmpy/lvmpy.log
 ```
 
+=== Why is SGX crashing after machine reboot?
+
+SGXWallet may crash after a reboot if you did not disable automatic updates. This is because SGXWallet is based on new low level technology, and kernel updates may break the system. It's recommended to only update the SGXWallet server if there are critical security fixes. 
+
 === Node update procedure
 
 Updating system packages is important part of node maintaining. Updates may contain fixes for recently founded security issues. 
 However newer versions may be incompatible with the node software. So updating procedure should be executed carefully. 
+=======
 
 [WARNING]
  Make sure that infrastructure provider doesn't update packages after system is restarted.
@@ -196,7 +201,11 @@ Medium risk (updates should be performed very carefully)::
 sudo apt-mark hold linux-generic linux-image-generic linux-headers-generic
 ```
 
-Another option is to use unattended upgrades (https://wiki.debian.org/UnattendedUpgrades) which allows to automatically keep system current with the latest security updates. There is an option to exclude some packages from update list using `Package-Blacklist` section in the configuration file. For example to disallow linux kernel updates you should place the following lines in  `/etc/apt/apt.conf.d/50unattended-upgrades` file:
+
+Another option is to use unattended upgrades (https://wiki.debian.org/UnattendedUpgrades) which allows to automatically keep system current with the latest security updates. 
+There is an option to exclude some packages from update list using `Package-Blacklist` section in the configuration file. 
+For example to disallow linux kernel updates you should place the following lines in  `/etc/apt/apt.conf.d/50unattended-upgrades` file:
+
 
 ```shell
 Unattended-Upgrade::Package-Blacklist {
