@@ -17,21 +17,21 @@ toc::[]
 
 endif::[]
 
-A SKALE Chain is a Web3 Ethereum compatible elastic blockchain designed to make Web3 cloud computing easier for dApp developers. SKALE Chains (schains) provide EVM compute power, decentralized database storage, and other functionality to help not only power your dApps but allow them to scale in a cost-efficient manner. 
+A SKALE Chain is a Web3 Ethereum compatible elastic blockchain designed to make Web3 cloud computing easier for dApp developers. SKALE Chains provide EVM compute power, decentralized database storage, and other functionality to help not only power your dApps but allow them to scale in a cost-efficient manner. 
 
 == What makes a SKALE Chain
 
-Schains are powered by 16 out of more than 150 nodes run by over 45 SKALE Network validators. Each schain is secured by Proof-of-Stake from the validator and delegator communities.
+SKALE Chains are powered by 16 out of more than 150 nodes run by over 45 SKALE Network validators. Each SKALE Chain is secured by Proof-of-Stake from the validator and delegator communities.
 
-Every node in the SKALE Network dynamically supplies containerized Web3 compute resources that work in concert with other nodes. A schain involves 16 randomly chosen nodes that each run a containerized network client with EVM (skaled). All 16 of these skaled containers broadcast network messages, share transactions and blocks, and other cryptographic data with each other. Think of these containers as powerful instances of an Ethereum network, receiving Web3 transactional messages from clients and end-users, organizing them into blocks using an ultra-fast mathematically proven consensus called Asynchronous Binary Byzantine Agreement.
+Every node in the SKALE Network dynamically supplies containerized Web3 compute resources that work in concert with other nodes. A SKALE Chain involves 16 randomly chosen nodes that each run a containerized network client with EVM (skaled). All 16 of these skaled containers broadcast network messages, share transactions and blocks, and other cryptographic data with each other. Think of these containers as powerful instances of an Ethereum network, receiving Web3 transactional messages from clients and end-users, organizing them into blocks using an ultra-fast mathematically proven consensus called Asynchronous Binary Byzantine Agreement.
 
 == How to work with a SKALE Chain
 
-Each SKALE Chain powers a single dApp, providing dedicated Web3 compute resources to support dApp EVM execution and transactions from end-users.
+Each SKALE Chain powers dApps and their communities, providing dedicated Web3 compute resources to support dApp EVM execution and transactions from end-users.
 
 Using SKALE is easy! Don't worry about https://github.com/skalenetwork/SGXWallet[SGX enclaves], https://github.com/skalenetwork/libBLS[BLS threshold signatures], and https://github.com/skalenetwork/skale-consensus[Asynchronous Binary Byzantine Consensus] - all this technology works under the hood to provide dApp developers with scalable and easy to run dApp-specific blockchains. 
 
-You use your SKALE Chain as you work with Ethereum. Schain owners have a set of 16 available endpoints to receive Web3 transactions and data. Plug an endpoint into your Web3 client or Truffle config, and you are using SKALE.
+You use your SKALE Chain as you work with Ethereum. SKALE Chain owners have a set of 16 available endpoints to receive Web3 transactions and data. Plug an endpoint into your Web3 client or Truffle config, and you are using SKALE.
 
 To work with other blockchains like Ethereum Testnets or Mainnet, you can use link:/developers/products/interchain-messaging-agent/overview[a bridge called Interchain Messaging Agent (IMA)]. IMA allows the transfer of ETH, ERC20, ERC721, and other arbitrary messages between Ethereum and your SKALE Chain.
 
@@ -75,9 +75,9 @@ endif::[]
 
 === SKALE Chain Rotation
 
-SKALE Chains run across 16 randomly chosen nodes. Your Schain can be configured to randomly swap out nodes for other nodes in the network. This helps reduce any potential collusion over time. To the SKALE Chain owner and end-users, this is a process that runs behind the scenes...  The incoming node will gather all previous blocks, transactions, etc from the SKALE Chain in a catchup procedure, and the updated node set will form a new BLS public key through DKG, and all subsequent blocks will be signed with the new BLS public key.
+SKALE Chains run across 16 randomly chosen nodes. Your SKALE Chain can be configured to randomly swap out nodes for other nodes in the network. This helps reduce any potential collusion over time. To the SKALE Chain owner and end-users, this is a process that runs behind the scenes...  The incoming node will gather all previous blocks, transactions, etc from the SKALE Chain in a catchup procedure, and the updated node set will form a new BLS public key through DKG, and all subsequent blocks will be signed with the new BLS public key.
 
-Note that Chain rotation will not be available until later 2021.
+Note that Chain rotation won't be available until later in 2021.
 
 === Block Rotation
 
