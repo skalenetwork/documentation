@@ -25,56 +25,100 @@
               "link": "/developers/code-samples"
             },
             {
-              "link": "/developers/integrations"
+              "link": "/developers/example-dapps"
             },
             {
-              "link": "/developers/example-dapps"
+              "link": "/developers/events-subscriptions"
             }
           ]
         },
         {
-          "title": "Products",
-          "link": "/developers/products/overview",
+          "title": "Wallets",
+          "link": "/developers/wallets/getting-started",
           "links": [
             {
-              "title": "Interchain Messaging",
-              "link": "/developers/products/interchain-messaging-agent/overview",
+              "title": "Metamask",
+              "link": "/developers/wallets/metamask"
+            },
+            {
+              "title": "Portis",
+              "link": "/developers/wallets/portis"
+            },
+            {
+              "title": "Bitski",
+              "link": "/developers/wallets/bitski"
+            },
+            {
+              "title": "Torus",
+              "link": "/developers/wallets/torus"
+            },
+            {
+              "title": "Magic Wallet",
+              "link": "/developers/wallets/magic"
+            },
+            {
+              "title": "Wallet Connect",
+              "link": "/developers/wallets/wallet-connect"
+            }
+          ]
+        },
+        {
+          "title": "Ethereum - SKALE",
+          "link": "/developers/products/interchain-messaging-agent/overview",
+          "links": [
+            {
+              "title": "Getting Started",
+              "link": "/developers/products/interchain-messaging-agent/getting-started"
+            },
+            {
+              "title": "Transferring ETH",
+              "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
+            },
+            {
+              "title": "Managing ERC20",
+              "link": "/developers/products/interchain-messaging-agent/managing-erc20",
               "links": [
                 {
-                  "title": "Managing ETH",
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-eth"
+                  "title": "Setting up ERC20",
+                  "link": "/developers/products/interchain-messaging-agent/setting-up-erc20"
                 },
                 {
-                  "title": "Managing ERC20",
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc20"
-                },
-                {
-                  "title": "Managing ERC721",
-                  "link": "/developers/products/interchain-messaging-agent/get-started-with-erc721"
-                },
-                {
-                  "title": "Using Message Proxy",
-                  "link": "/developers/products/interchain-messaging-agent/message-proxy"
-                },
-                {
-                  "title": "IMA Access Control",
-                  "link": "/developers/products/interchain-messaging-agent/ima-access-control"
-                },
-                {
-                  "title": "API",
-                  "link": "/developers/products/interchain-messaging-agent/api"
+                  "title": "Transferring ERC20",
+                  "link": "/developers/products/interchain-messaging-agent/transferring-erc20"
                 }
               ]
             },
             {
-              "link": "/developers/products/file-storage",
-              "depth": 0
+              "title": "Managing ERC721",
+              "link": "/developers/products/interchain-messaging-agent/managing-erc721",
+              "links": [
+                {
+                  "title": "Setting up ERC721",
+                  "link": "/developers/products/interchain-messaging-agent/setting-up-erc721"
+                },
+                {
+                  "title": "Transferring ERC721",
+                  "link": "/developers/products/interchain-messaging-agent/transferring-erc721"
+                }
+              ]
             },
             {
-              "link": "/developers/products/skale-ml",
-              "depth": 0
+              "title": "Using Message Proxy",
+              "link": "/developers/products/interchain-messaging-agent/message-proxy"
+            },
+            {
+              "title": "IMA Access Control",
+              "link": "/developers/products/interchain-messaging-agent/ima-access-control"
+            },
+            {
+              "title": "IMA API",
+              "link": "/developers/products/interchain-messaging-agent/api"
             }
           ]
+        },
+        {
+          "link": "/developers/products/file-storage",
+          "depth": 0
         },
         {
           "title": "Tools & Support",
@@ -108,6 +152,12 @@
             },
             {
               "link": "/validators/requirements"
+            },
+            {
+              "link": "/validators/node-ssl"
+            },
+            {
+              "link": "/validators/self-recharging-wallets"
             },
             {
               "link": "/validators/register-validator-node"
@@ -151,13 +201,10 @@
         },
         {
           "title": "Fuji TestNet",
-          "link": "/validators/fuji-versions",
+          "link": "/validators/fuji/fuji-versions",
           "links": [
             {
-              "link": "/validators/schain-upgrade"
-            },
-            {
-              "link": "/validators/soft-upgrade-testnet"
+              "link": "/validators/fuji/soft-upgrade-testnet"
             }
           ]
         },

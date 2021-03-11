@@ -1,0 +1,223 @@
+= Troubleshooting
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
+
+
+
+Need help solving an issue? Check to see if this has already been answered below. If you can't find an answer to your issue, reach out to the SKALE Network developer community on Discord.  
+
+http://skale.chat/[Ask a question]
+
+== Validator Node
+
+=== How do I change my Node's IP address?
+
+You can't change your node IP address, but what's possible is to remove the node with the incorrect/old IP address and register a new node under the correct/new IP while keeping the old SGX key. Please contact the core team before proceeding for further guidance.
+
+[NOTE]
+It's recommended to use a permanent IP that can dynamically point to a node's machine IP (for example, elastic IP) so you can update machines if needed without having to change the IP recorded in SKALE Manager during node registration.
+
+[IMPORTANT]
+If you must change your node IP in SKALE Manager, you must perform a node exit and re-registration in the first 3 days (72 hours) of the month. Also, performing a node exit could be expensive to the node operator if it's currently supporting SKALE Chains.
+
+To perform a node exit, and register a new machine and IP:
+
+1. Execute `skale exit start` on the exiting node.
+2. Verify the exit process by executing `skale exit status`. (You don't need to wait for exit to finalize)
+3. Create a new node machine
+4. Link the new node to the validator ID.
+5. Register the node with under the new IP.
+
+To perform a node exit, keep the original node machine and its data and update the IP, follow these steps (NOT RECOMMENDED):
+
+1. Perform the general node exit procedure steps 1 and 2 above.
+2. Be sure you have securely saved the sgx_key_name before moving to step 3.
+3. Remove .skale directory, remove all old containers, volumes, etc
+4. Do skale node init again.
+5. Go to `~/.skale/node_data/node_config.json` and replace `sgx_key_name` field with the old one.
+6. Link the node to the validator ID again.
+7. Register node with a new IP.
+
+=== How should validators configure back up and restore?
+
+Validators are responsible for backing up everything on the node. SKALE Network is relying on validators to complete the backup procedure for each of the nodes. SKALE Network will be replicating the data for each SKALE Chain across 16 nodes, adding an additional layer of data availability. If a node goes down for a long time the other 2/3 of 15 will be responsible for taking the SKALE Chain's snapshot and shuffling the SKALE Chain in the SKALE Network. If a validator node is down for a long time, it may be reallocated to service new SKALE Chains depending on the length of the downtime.  
+
+Please check https://github.com/skalenetwork/skale-node-cli/blob/develop/README.md#node-commands[node back up] and https://github.com/skalenetwork/sgxwallet/blob/develop/docs/backup-procedure.md[sgx_backup] to learn more about how to back up node or SGXWallet, and restore.
+
+=== Where are the network communications between containers, shared configuration files and volumes stored?
+
+You can find these details in GitHub [skale-node](https://github.com/skalenetwork/skale-node) repository and [docker-compose.yml](https://github.com/skalenetwork/skale-node/blob/f928b95e69c548f12b4b21bd11a16fe2d239b83b/docker-compose.yml)  
+
+=== How do I access the SKALE Chain's IP and ports?
+
+You can use the node-cli to view firewall info and SKALE Chain info:  
+
+```shell
+# Show firewall rules for IP and Ports
+skale schains show-rules
+
+# Show the SKALE Chain Config
+skale schains config [SCHAIN_NAME]
+```
+
+In this file you can see all the SKALE Chain information:  
+
+image::https://assets.website-files.com/5be05ae542686c4ebf192462/5d9f9cb5adfc337b00747f66_Screen%20Shot%202019-10-10%20at%201.53.21%20PM.png[]
+
+=== What are the following Node ports used for?
+
+[%header,cols="1,1,3"]
+|===
+|Port
+|Description
+|Notes
+
+|3009/TCP
+|Watchdog service provides sla-agent and SKALE Monitoring/Metrics site with data about all containers statuses on all SKALE nodes
+|Used by nginx as reverse proxy for Flask based Watchdog
+
+|8080/TCP
+|Used by cAdvisor (Prometheus exporter) - to analyze and expose resource usage and performance data from running docker containers
+|Running cAdvisor container is optional (MONITORING_CONTAINERS=True)
+
+|9100/TCP
+|Used by Prometheus Node Exporter  - to  measure host resources such as memory, disk and CPU utilization etc.
+|Running Node exporter container is optional (MONITORING_CONTAINERS=True)
+
+|22
+|Used by the node operator to ssh into the machine
+|
+
+|10000–11500/TCP
+|These ports should be open for communications inside sChains between different nodes.
+|When there are no sChains these ports are closed by iptables rules. It’s important to not add another firewall, because sChain configuration is created dynamically as well as iptables rules.
+|===
+
+=== Can I use Kubernetes?
+
+Yes. However, you will need to make sure that your platform is compatible with SKALE. In particular, your platform must allow docker-lvmpy to dynamically partition the external drive for each SKALE chain.
+
+=== Where can I find the SKALE Node logs
+
+Validators can run these commands to check their logs in their node:
+
+Here are some logs and commands you can use for troubleshooting or provide logs to the core team
+
+the most used and first place to look at
+
+```shell
+docker logs skale_api 
+```
+
+or
+
+```shell
+docker logs skale_admin 
+```
+
+transaction manager logs
+
+```shell
+docker logs skale_transaction_manager
+```
+
+all running containers logs
+
+```shell
+skale logs dump [PATH]
+```
+
+SGX certification in validator node:
+
+```shell
+ls -l ~/.skale/node_data/sgx_certs/
+```
+
+sgxwallet logs:
+
+```shell
+docker logs runsgx_sgxwallet_1
+```
+
+node-cli debugging logs
+
+```shell
+~/.skale/.skale-cli-log/debug-node-cli.log
+```
+
+docker-lvmpy logs
+
+```shell
+cat /var/log/docker-lvmpy/lvmpy.log
+```
+
+=== Why is SGX crashing after machine reboot?
+
+SGXWallet may crash after a reboot if you didn't disable automatic updates. This is because SGXWallet is based on new low level technology, and kernel updates may break the system. It's recommended to only update the SGXWallet server if there are critical security fixes. 
+
+=== Node update procedure
+
+Updating system packages is important part of node maintenance and security. Updates may contain fixes for recent security issues. 
+However, newer updates may be incompatible with SKALE node software. Therefore, updating should be executed carefully. 
+=======
+
+[WARNING]
+Make sure that the infrastructure provider doesn't update packages after system is restarted.
+
+The following list contains packages that require additional attention.
+
+Critical risk (updates should be performed only if there are some messages from core team)::
+- kernel updates on SGXWallet server.
+
+[NOTE]
+Currently SGX is tested on 4.15-* kernels. It's best to avoid minor version updates too.
+
+High risk (updates should be avoided in general)::
+- kernel on SKALE node server
+- docker 
+- docker-compose 
+- btrfs-tools
+
+Medium risk (updates should be performed very carefully)::
+- lvm2
+- iptables 
+- iptables-persistent
+- python
+
+==== General tips
+
+1. Carefully check which packages will be updated when executing apt upgrade. You can use `apt list --upgradable`
+2. Avoid executing `apt dist-upgrade` 
+3. Disabling updates for certain packages can be done using `apt-mark hold` (https://manpages.debian.org/stretch/apt/apt-mark.8.en.html). For example to forbid kernel updates you should run:
+
+```shell
+sudo apt-mark hold linux-generic linux-image-generic linux-headers-generic
+```
+
+Another option is to use unattended upgrades (https://wiki.debian.org/UnattendedUpgrades) which allows to automatically keep system current with the latest security updates. 
+There is an option to exclude some packages from update list using `Package-Blacklist` section in the configuration file. 
+For example to disallow linux kernel updates you should place the following lines in  `/etc/apt/apt.conf.d/50unattended-upgrades` file:
+
+```shell
+Unattended-Upgrade::Package-Blacklist {
+        "linux-generic";
+        "linux-image-generic";
+        "linux-headers-generic";
+};
+```
+
+SKALE Network has many resources designed to help you get your questions answered. You can reach out to the SKALE Network developer community on http://skale.chat/[discord], or submit a support request below.  
+
+https://skalelabs.typeform.com/to/pSu895[Contact Support]

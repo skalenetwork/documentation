@@ -1,22 +1,29 @@
 ### Integrations
 
-Elastic SKALE Chains are designed to work with all Ethereum compatible tools. If you are having difficulty integrating a tool with your SKALE Chain, please reach out to the SKALE developer community on  [discord](http://skale.chat/), or submit a support request for help below.  
+SKALE Chains work with all Ethereum compatible tools. If you are having difficulty integrating a tool with your SKALE Chain, please reach out to the SKALE developer community on [discord](http://skale.chat/), or [submit an issue in GitHub under the skaled repository](https://github.com/skalenetwork/skaled/issues/new).
 
-<button>[Contact Support](https://skalelabs.typeform.com/to/pSu895)</button>
+-   [API Based Wallets](#APIBasedWallets)
+    -   [Bitsky](#Bitsky)
+    -   [Portis](#Portis)
+    -   [Torus](#Torus)
+-   [Monitoring and Analytics Tools](#MonitoringandAnalyticsTools)
+    -   [Terminal.co](#Terminal.co)
+
+Want another integration listed here? [Submit a new idea!](https://skale.network/roadmap)
 
 #### API Based Wallets
 
-The best way to manage your user authentication and on-boarding, is to integrate an API based wallet into your dApp. An API based wallet allows you to provide an intuitive user login flow for your users. An API based wallet can help you provide a secure and user friend wallet option. This is especially useful for your new users that are using a blockchain application for the first time. Being able to execute transactions programmatically directly from your dApp, takes the pressure off of your end user to have to manage this on their own.  
+The best way to manage your user authentication and on-boarding is to integrate an API based wallet into your dApp. An API based wallet allows you to provide an intuitive user login flow for your users. An API based wallet can help you provide a secure and user friendly wallet option. This login flow is especially useful for your new users that are using a blockchain application for the first time. Being able to execute transactions programmatically directly from your dApp, takes the pressure off of your end-user to manage this on their own.  
 ‍  
 Below, you will find a few options that will help make your user management and on-boarding seamless.  
 
 ##### **Bitski**
 
-Bitski is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Bitski, your end users can signup with their email address to create a wallet. Then, you can execute transactions programmatically directly from your dApp using the wallet that Bitski creates for your end user.  
+Bitski is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Bitski, your end users can signup with their email address to create a wallet. You can then execute transactions programmatically directly from your dApp using the wallet that Bitski creates for your end-user.  
 ‍  
 For more information on Bitski, please see  [Bitski Developer Documentation](https://docs.bitski.com/).  
 
-To connect the Bitski's wallet management feature to SKALE, you will need to provide the Bitski Web3 provider with your SKALE Chain endpoint.  
+To connect Bitski's wallet management feature to SKALE, you will need to provide the Bitski Web3 provider with your SKALE Chain endpoint.   
 
 ```javascript
 const bitski = new Bitski("[YOUR-CLIENT-ID]", "[YOUR-REDIRECT-URL]");
@@ -34,14 +41,14 @@ Once connected, you can use Bitski and Web3 as normal.
 ```javascript
 bitski.signIn().then(() => {
   //signed in!
-  console.log("User has been signed in via Bitski!")
+  console.log("User is signed in via Bitski!")
 });
 
 ```
 
 ##### **Portis**
 
-Portis is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Portis, your end users can signup with their email address to create a wallet. Portis allows your end users to  [trust your application](https://docs.portis.io/#/trust-this-app)  for easier transaction processing for transaction that don't exceed $1 over an hour long period.  
+Portis is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Portis, your end users can signup with their email address to create a wallet. Portis allows your end-users to [trust your application](https://docs.portis.io/#/trust-this-app) for easier transaction processing for transactions that don't exceed $1 over a hour-long period.  
 ‍  
 For more information on Portis, please see  [Portis Developer Documentation](https://docs.portis.io/).  
 
@@ -58,12 +65,12 @@ let web3 = new Web3(portis.provider);
 
 ```
 
-Once connected, you can use Portis and Web3 as normal.  
+Once connected, you can use Portis and Web3 as usual.  
 
 ```javascript
 portis.onLogin((walletAddress, email) => {
   //signed in!
-  console.log("User" + walletAddress + "has been signed in via Portis!")
+  console.log("User" + walletAddress + "is signed in via Portis!")
 });
 portis.showPortis();
 
@@ -71,9 +78,9 @@ portis.showPortis();
 
 ##### **Torus**
 
-Torus is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Torus, your end users can signup via Google or Facebook OAuth logins. This creates frictionless logins for dApps, that's easy for end users, and easy for dApp developers to implement.  
+Torus is an open-sourced solution that manages your user's wallet keys for you through their hosted SDK solution. With Torus, your end users can signup via Google or Facebook OAuth logins. This user flow creates frictionless logins for dApps, that's easy for end users, and easy for dApp developers to implement.  
 ‍  
-For more information on Torus, please see  [Torus Developer Documentation](https://docs.tor.us/).  
+For more information on Torus, please see [Torus Developer Documentation](https://docs.tor.us/).  
 
 To connect the Torus' wallet management feature to SKALE, you will need to instantiate Portis with your SKALE Chain endpoint.  
 
@@ -89,7 +96,7 @@ await torus.init({
 
 ```
 
-Once connected, you can use Portis and Web3 as normal.  
+Once connected, you can use Portis and Web3 as usual.  
 
 ```javascript
 await torus.login();
@@ -101,13 +108,13 @@ let web3 = new Web3(torus.provider);
 
 ##### **Terminal.co**
 
-Terminal is a monitoring, troubleshooting and analytics solution that surfaces dApp logs from all your web3 integrations, RPC endpoints, wallet providers, smart contracts, and different network sources in one place combined with visualizing the performance & usage of your dApp.  
-  
-Terminal allows dApp developers real-time monitoring & debugging to make it easy to understand how your users are engaging with your dApp, gives you a better visibility of what’s working and what’s not. They make it easy to see your transactions across blockchains (Rinkeby, SKALE, Ethereum), as well as showing where the transactions are coming from (MetaMask, Portis, Bitski).  
+Terminal is a monitoring, troubleshooting, and analytics solution that surfaces dApp logs from all your web3 integrations, RPC endpoints, wallet providers, smart contracts, and different network sources in one place, combined with visualizing the performance & usage of your dApp.  
+
+Terminal allows dApp developers real-time monitoring & debugging to make it easy to understand how your users are engaging with your dApp, gives you better visibility of what’s working and what’s not. They make it easy to see your transactions across blockchains (Rinkeby, SKALE, Ethereum), and show where the transactions are coming from (MetaMask, Portis, Bitski). 
   
 For more information on Terminal, please see  [Terminal Developer Documentation](https://docs.terminal.co/)  
 
-To connect the Terminal monitoring feature to SKALE, you will need to provide the Terminal apiKey, Terminal ProjectID and SKALE endpoint:  
+To connect the Terminal monitoring feature to SKALE, you will need to provide the Terminal apiKey, Terminal ProjectID, and SKALE endpoint:  
 ‍  
 
 ```javascript
