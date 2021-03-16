@@ -1,0 +1,79 @@
+= Events Subscriptions
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
+
+You can subscribe to the logs of the events from contracts deployed on your SKALE Chain. The following example usees Ethers.js.
+
+[NOTE]
+Ether.js does not require a websocket connection to subscribe to events/logs. You can use htttp/https or ws/wss.
+
+== Install the NPM Package
+
+```shell
+npm install --save ethers
+```
+
+== Subscribing to Event Logs
+
+Any contract that emits events, can be subscribed. A generic example is provided below:  
+
+```javascript
+import { ethers } from "ethers";
+
+
+let provider = new ethers.providers.JsonRpcProvider(
+  "https://your.skale.chain.endpoint"
+
+const imaAbis = require("./dir/to/contract-abi.json");
+const address = imaAbis.contract_address;
+);
+
+var abi = ["event EventToTrack(bool result)"];
+var iface = new ethers.utils.Interface(abi);
+
+var filter = {
+  address: address,
+  topics: [iface.getEventTopic("EventToTrack")],
+  fromBlock: 0
+};
+
+var callPromise = provider.getLogs(filter);
+
+callPromise
+  .then(function (events) {
+    console.log("Printing array of events:");
+    console.log(events);
+    var parsedEvents = events.map(function (log) {
+      return iface.parseLog(log);
+    });
+    document.getElementById("output").innerHTML = JSON.stringify(
+      parsedEvents,
+      undefined,
+      2
+    );
+    console.log(parsedEvents);
+  })
+  .catch(function (err) {
+    console.log(err);
+  });
+```
+
+== Example Sandbox
+
+https://codesandbox.io/s/ethersjs-events-subscription-skale-dev-docs-kjz4m?file=/src/index.js:725-1180
+
+== Roadmap
+
+Want more event subscription options? [Submit a new idea!](https://skale.network/roadmap)

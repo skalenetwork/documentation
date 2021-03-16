@@ -26,6 +26,23 @@
             },
             {
               "link": "/developers/example-dapps"
+            },
+            {
+              "link": "/developers/events-subscriptions"
+            }
+          ]
+        },
+        {
+          "title": "SKALE Chains",
+          "link": "/developers/skale-chains",
+          "links": [
+            {
+              "title": "JSON-RPC Interface",
+              "link": "/documentation/skaled/docs/json-rpc-interface"
+            },
+            {
+              "title": "Snapshots",
+              "link": "/documentation/skaled/docs/snapshots"
             }
           ]
         },

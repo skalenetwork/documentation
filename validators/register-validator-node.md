@@ -131,7 +131,7 @@ After executing following command you will find Node Address (Sgx Wallet Address
 **Terminal Command:**
 
 ```shell
- skale wallet info
+skale wallet info
 ```
 
 **Output:**
@@ -229,6 +229,26 @@ SGX: Software Guard Extensions supported = true
 **Important note:**  
 After installing docker make sure that `live-restore` option
 is enabled in `/etc/docker/daemon.json`. See more info in the [docker docs](https://docs.docker.com/config/containers/live-restore/).  
+
+**Disable automatic updates**
+
+It's recommended to only update the SGXWallet server if there are critical security fixes. This is because SGXWallet is based on new low level technology, and kernel updates may break the system. Currently SGX is tested on 4.15-\* kernels. It's best to avoid minor version updates too.
+
+To make sure `apt update` won't update the kernel you should use apt-mark hold command:
+
+```shell
+sudo apt-mark hold linux-generic linux-image-generic linux-headers-generic
+```
+
+Also if you configured unattended upgrades, you should make sure kernel won't update automatically. To do this, add the following lines to `/etc/apt/apt.conf.d/50unattended-upgrades` file:
+
+```shell
+Unattended-Upgrade::Package-Blacklist {
+        "linux-generic";
+        "linux-image-generic";
+        "linux-headers-generic";
+};
+```
 
 * * *
 
@@ -382,7 +402,7 @@ This document contains instructions on how to get started with the SKALE Node CL
 ### **Prerequisites**
 
 -   A Linux x86_64 machine
--   SGX-enabled Intel processor
+-   SGXWallet Server (otherwise an SGX-enabled processor)
 -   Ports 22, 8080, 9100, and 10000–11500, and ICMP IPv4 open for all
 -   SSL Certificates
 -   Ubuntu 18.04 or later LTS
@@ -411,6 +431,7 @@ sudo apt install iptables-persistent -y
 
 4.  You will need SSL certificates for each node. [See the Node SSL instructions](/validators/node-ssl.adoc).
 5.  You should run skale commands using sudo.
+6.  You should carefully control any automatic updates. In general avoid updates to the Linux kernel, docker, docker-compose, btrfs-tools. And take care when updating lvm2, iptables, iptables-persistent, and python. Please see the [FAQ - Node update procedure for more information](/validators/faq.adoc#node-update-procedure).
 
 If you have any concerns or questions, please don't hesitate to reach out to SKALE Team leads on [discord](http://skale.chat/).
 

@@ -9,6 +9,8 @@ SKALE Chains can work with a variety of wallet solutions, including any Web3 bas
 -   Magic
 -   Wallet Connect
 
+Want another wallet tool listed here? [Submit a new idea.](https://skale.network/roadmap)
+
 ### Metamask
 
 Metamask is a Chromium and Firefox browser extension providing a non-custodial Web3 wallet solution. It can also connect to hardware based wallets such as Ledger. [How to integrate with SKALE...](metamask)
