@@ -38,11 +38,11 @@
           "links": [
             {
               "title": "JSON-RPC Interface",
-              "link": "/developer/skaled/docs/json-rpc-interface"
+              "link": "/documentation/skaled/docs/json-rpc-interface"
             },
             {
               "title": "Snapshots",
-              "link": "/developer/skaled/docs/snapshots"
+              "link": "/documentation/skaled/docs/snapshots"
             }
           ]
         },
