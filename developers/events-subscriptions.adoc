@@ -14,18 +14,78 @@ toc::[]
 
 endif::[]
 
-You can subscribe to the logs of the events from contracts deployed on your SKALE Chain. The following example usees Ethers.js.
+You can subscribe to the logs of the events from contracts deployed on your SKALE Chain. The following example uses Ethers.js.
+
+== Using Web3.js
+
+For more reference, please see the Web3 Documentation: https://web3js.readthedocs.io/en/v1.3.4/web3-eth-subscribe.html#subscribe
 
 [NOTE]
-Ether.js does not require a websocket connection to subscribe to events/logs. You can use htttp/https or ws/wss.
+Web3.js requires a websocket connection to subscribe to events/logs
 
-== Install the NPM Package
+=== Install the NPM Package
+
+```shell
+npm install --save web3
+```
+
+=== Subscribing to Event logs
+
+```javascript
+import Web3 from "web3";
+
+let web3 = new Web3("wss://your.skale.endpoint")
+
+const imaAbis = require("./dir/to/contract-abi.json");
+const address = imaAbis.contract_address;
+);
+
+var eventName = "EVENT_TO_TRACK";
+var topic = web3.eth.abi.encodeEventSignature(eventName);
+
+var filter = {
+  address: address,
+  topics: [topic],
+  fromBlock: 0
+};
+
+web3.eth
+  .subscribe("logs", filter, function (error, result) {
+    if (!error) console.log(result);
+  })
+  .on("connected", function (subscriptionId) {
+    console.log(subscriptionId);
+  })
+  .on("data", function (log) {
+    console.log("Printing array of events:");
+    console.log(log);
+    document.getElementById("output").innerHTML += JSON.stringify(
+      log,
+      undefined,
+      2
+    );
+  });
+
+```
+
+=== Example Sandbox
+
+https://codesandbox.io/s/web3js-events-subscription-skale-dev-docs-tvemy
+
+== Using Ethers.js
+
+For more reference, please see the Ethers.js documentation: https://docs.ethers.io/v5/api/providers/provider/#Provider-getLogs
+
+[NOTE]
+Ethers.js doesn't require a websocket connection to subscribe to events/logs. You can use http/https or ws/wss.
+
+=== Install the NPM Package
 
 ```shell
 npm install --save ethers
 ```
 
-== Subscribing to Event Logs
+=== Subscribing to Event Logs
 
 Any contract that emits events, can be subscribed. A generic example is provided below:  
 
@@ -70,7 +130,7 @@ callPromise
   });
 ```
 
-== Example Sandbox
+=== Example Sandbox
 
 https://codesandbox.io/s/ethersjs-events-subscription-skale-dev-docs-kjz4m?file=/src/index.js:725-1180
 

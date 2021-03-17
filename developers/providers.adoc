@@ -1,0 +1,85 @@
+= Providers
+:doctype: article
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
+
+To connect to SKALE Chains and Ethereum, there are several connection abstraction libraries you can use to interface with your endpoints. These include Web3.js, Ethers.js, and others. Please see below for how to get started with these libraries.
+
+Want to see another provider supported here? https://skale.network/roadmap[Submit a new idea to the SKALE Netowrk roadmap].
+
+== Web3.js
+
+The Web3.js library provides Javascript tools to interact with Web3 JSON-RPC interfaces including Ethereum and SKALE Chains.
+
+For additional reference, please see the Web3 documentation here: https://web3js.readthedocs.io/en/v1.3.4/web3.html#providers
+
+=== Setup Web3.js with SKALE Chains
+
+To get started with the Web3.js library, install it into your NPM project using the following command:
+
+```shell
+npm install --save web3
+```
+
+After the library is installed into your project, the basic setup is the following:
+
+```javascript
+const Web3 = require('web3');
+
+// Create web3 instance
+const web3 = new Web3('http://your.skale.endpoint');
+```
+
+=== Live Sandbox
+
+Here is a live sandbox using Web3.js to retrieve the ChainId
+
+https://codesandbox.io/s/web3js-providers-skale-dev-docs-t3099
+
+== Ethers.js
+
+The ethers.js library provides Javascript tools that can be used to interact with Web3 JSON-RPC interfaces including Ethereum and SKALE Chains.
+
+For additional reference, please see the Ethers documentation here: https://docs.ethers.io/v5/api/providers/
+
+=== Setup Ethers.js with SKALE Chains
+
+To get started with the ethers.js library, install it into your NPM project using the following command:
+
+```shell
+npm install --save ethers
+```
+
+After the library is installed into your project, the basic setup is the following:
+
+```javascript
+const ethers = require('ethers');
+
+// Define Variables
+const privateKey = '0xPRIVATEKEY';
+
+// Define Provider
+const provider = new ethers.providers.JsonRpcProvider('http://your.skale.endpoint');
+
+// Create Wallet
+let wallet = new ethers.Wallet(privateKey, provider);
+```
+
+=== Live Sandbox
+
+Here is a live sandbox using Ethers.js to retrieve the ChainId:
+
+https://codesandbox.io/s/ethersjs-providers-skale-dev-docs-ss125
+
