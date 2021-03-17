@@ -26,9 +26,6 @@
             },
             {
               "link": "/developers/example-dapps"
-            },
-            {
-              "link": "/developers/events-subscriptions"
             }
           ]
         },
@@ -43,6 +40,9 @@
             {
               "title": "Remix IDE",
               "link": "/developers/remix-ide"
+            },
+            {
+              "link": "/developers/events-subscriptions"
             },
             {
               "title": "JSON-RPC Interface",
