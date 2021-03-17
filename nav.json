@@ -26,9 +26,6 @@
             },
             {
               "link": "/developers/example-dapps"
-            },
-            {
-              "link": "/developers/events-subscriptions"
             }
           ]
         },
@@ -36,6 +33,17 @@
           "title": "SKALE Chains",
           "link": "/developers/skale-chains",
           "links": [
+            {
+              "title": "Providers/Libraries",
+              "link": "/developers/providers"
+            },
+            {
+              "title": "Remix IDE",
+              "link": "/developers/remix-ide"
+            },
+            {
+              "link": "/developers/events-subscriptions"
+            },
             {
               "title": "JSON-RPC Interface",
               "link": "/documentation/skaled/docs/json-rpc-interface"
