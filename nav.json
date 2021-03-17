@@ -37,6 +37,14 @@
           "link": "/developers/skale-chains",
           "links": [
             {
+              "title": "Providers/Libraries",
+              "link": "/developers/providers"
+            },
+            {
+              "title": "Remix IDE",
+              "link": "/developers/remix-ide"
+            },
+            {
               "title": "JSON-RPC Interface",
               "link": "/documentation/skaled/docs/json-rpc-interface"
             },
