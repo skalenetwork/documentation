@@ -187,6 +187,9 @@
               "link": "/validators/skale-node"
             },
             {
+              "link": "/validators/changing-node-ip"
+            },
+            {
               "link": "/validators/faq"
             }
           ]
