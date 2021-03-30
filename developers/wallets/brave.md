@@ -37,7 +37,7 @@ async function getWeb3() {
     try {
       // Request account access if needed
       await window.ethereum.enable();
-      console.log("MetaMask - Web 3 Initialized!");
+      console.log("Brave - Web 3 Initialized!");
 
       //Get user wallet accounts
       window.web3.eth.getAccounts((error, accounts) => {
