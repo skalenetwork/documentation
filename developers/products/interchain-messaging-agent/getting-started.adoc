@@ -1,4 +1,22 @@
-= Getting Started with IMA
+= Getting Started with IMA {revnumber}
+:doctype: article
+:revnumber: v1.0.0-develop.136
+:revdate: 2021-03-03
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
+
 
 The IMA bridge between SKALE and Ethereum allows users to transfer tokens across chains. The SKALE IMA bridge supports ETH, ERC20, and ERC721 out of the box. IMA can be expanded to any arbitrary message or token standard using MessageProxy.
 
