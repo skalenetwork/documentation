@@ -1,0 +1,36 @@
+= SKALE Chain Sizes
+
+SKALE Chain sizing is tuned during development and testnets and is set by the schain_allocation.yml file in SKALE Node.
+
+[NOTE]
+Initial deployment of SKALE Chains will be Medium size only. Other sizes will be available in later releases.
+
+[NOTE]
+Current node storage for each SKALE Chain is allocated to consensus (30%), blockstorage (30%), filestorage (30%), and logs (10%).
+
+[%header,cols="1,1,1,1,1"]
+|===
+| Size
+| Node resource
+| Throughputfootnote:[May vary - depends on node performance and versions.]
+| Blockstoragefootnote:[May vary - depends on node storage and versions.]
+| Filestorage
+
+| Small
+| 1/128
+| 20 tps
+| 4.44 GB
+| 4.44 GB
+
+| Medium
+| 1/32
+| 200 tps
+| 17.8125 GB
+| 17.8125 GB
+
+| Large
+| 1/1
+| 2000 tps
+| 570 GB
+| 570 GB
+|===

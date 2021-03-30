@@ -34,6 +34,12 @@
           "link": "/developers/skale-chains",
           "links": [
             {
+              "link": "/developers/skale-chain-sizes"
+            },
+            {
+              "link": "/developers/block-rotation"
+            },
+            {
               "title": "Providers/Libraries",
               "link": "/developers/providers"
             },
@@ -263,6 +269,9 @@
         },
         {
           "link": "/technology/skale-dkg"
+        },
+        {
+          "link": "/technology/block-rotation"
         },
         {
           "title": "SKALE Manager",
