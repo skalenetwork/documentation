@@ -1,0 +1,39 @@
+= Filestorage upgrades {revnumber}
+:doctype: article
+:revnumber: v1.0.0
+:revdate: 2021-03-30
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
+
+The SKALE Chain owner can upgrade pre-deployed Filestorage contracts. The Filestorage contracts uses OpenZeppelin's Upgrade framework.
+
+== Pre-deployed Addresses
+
+Proxy Admin: `0xD3001000000000000000000000000000000000D3`
+
+Proxy Contract: `0xD4001000000000000000000000000000000000D4`
+
+Filestorage: `0x69362535ec535F0643cBf62D16aDeDCAf32Ee6F7`
+
+== Upgrade procedure
+
+1. Deploy new Filestroage version on your SKALE Chain.
+2. Send upgrade transaction to the pre-deployed Proxy Admin, containing the new address of Filestorage Implementation.
+3. Admin calls the pre-deployed Filestorage Proxy contract and passes the new Filestorage address.
+4. Proxy now points to the new Filestorage contract.
+
+== Further Reference
+
+* <https://github.com/OpenZeppelin/openzeppelin-upgrades>
