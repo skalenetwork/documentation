@@ -63,6 +63,10 @@
               "link": "/developers/wallets/metamask"
             },
             {
+              "title": "Brave",
+              "link": "/developers/wallets/brave"
+            },
+            {
               "title": "Portis",
               "link": "/developers/wallets/portis"
             },
