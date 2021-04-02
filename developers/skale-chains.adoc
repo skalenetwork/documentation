@@ -81,11 +81,11 @@ Note that Chain rotation won't be available until later in 2021.
 
 === Block Rotation
 
-SKALE Chains don't store a full history of all blocks. Older blocks are eventually discarded to ensure SKALE chains and Nodes don't run out of space. For dApps that need access to older blocks, you can retrieve snapshots from your SKALE Chain and store them in Filestorage or third-party services such as Arweave.
+SKALE Chains don't store a full history of all blocks. Each SKALE Chain is allocated an amount of storage on each node, and when this limit is reached, older blocks are discarded to ensure SKALE chains and Nodes don't run out of space. For dApps that need access to older blocks, you can retrieve snapshots from your SKALE Chain and store them in Filestorage or third-party services such as Arweave.
 
 === Snapshotting
 
-To support rotation, SKALE Chains create regular BTRFS snapshots. 
+To support rotation, SKALE Chains create regular Btrfs snapshots. 
 
 ifdef::env-github[]
 https://github.com/skalenetwork/skaled/tree/develop/docs/snapshots.md[See the Snapshots document for more information].

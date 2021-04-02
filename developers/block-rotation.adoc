@@ -1,0 +1,15 @@
+= Block Rotation
+
+SKALE Chain Block rotation is set by the _rotate_after_block_ parameter in static_schain_params.json. The current default value is 1,024,000 blocks and is tuned by performance of consensus, skaled, and node storage.
+
+Each SKALE Chain maintains a minimum to maximum number of blocks, currently 4,096,000 to 5,119,999 blocks.
+
+Rotation is performed across 4 databases. Each database contains:
+
+* blocks
+* transactions and their receipts
+* log blooms
+* "best" (lastBlockHash, best block of the canonical chain)
+* "chainStart" (firstBlockHash, used when full chain isn't available, for example after snapshot import)
+
+For more information on block rotation, see the link:/technology/block-rotation[block rotation section technology section]
