@@ -139,8 +139,11 @@
           ]
         },
         {
-          "link": "/developers/products/file-storage",
+          "link": "/developers/products/file-storage/file-storage",
           "depth": 0
+        },
+        {
+          "link": "/developers/products/file-storage/file-storage-upgrades"
         },
         {
           "title": "Tools & Support",
