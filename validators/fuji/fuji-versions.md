@@ -47,7 +47,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 9.  Logs from removed containers are placed inside `.skale/log/.removed_containers` 
 
-10.  Before `skale node update` make sure that your attached storage isn't mounted.
+10. Before `skale node update` make sure that your attached storage isn't mounted.
 
 * * *
 
