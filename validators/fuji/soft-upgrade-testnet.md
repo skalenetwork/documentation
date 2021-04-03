@@ -4,11 +4,15 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 `https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-rinkeby-abi.json`
 
+### Update geth node
+
+Make sure you updated geth node to 1.10.1 version with Berlin hard-fork support
+
 ### Recharge validator wallet
 
 #### Download new Validator CLI binary
 
-Make sure `VERSION_NUM` is `1.2.0-beta.7`
+Make sure `VERSION_NUM` is `1.2.0-beta.11`
 
 **Terminal Command:**
 
@@ -96,7 +100,7 @@ sk-val srw recharge ETH_AMOUNT --pk-file PATH_TO_PK
 
 #### Download the SKALE Node CLI binary
 
-Make sure `VERSION_NUM` is `1.1.0-beta.15`
+Make sure `VERSION_NUM` is `1.1.0-beta.26`
 
 **Terminal Command:**
 
@@ -125,11 +129,11 @@ cd  ~ && vi .env
 Make sure the following options are set
 
 ```shell
-DOCKER_LVMPY_STREAM=1.0.2-beta.0
+DOCKER_LVMPY_STREAM=1.0.1-beta.1
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-rinkeby-abi.json
 IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.2/abi.json
-CONTAINER_CONFIGS_STREAM=1.5.0-testnet
-FILEBEAT_HOST=3.17.12.121:5000
+CONTAINER_CONFIGS_STREAM=1.6.2-testnet
+FILEBEAT_HOST=filebeat.testnet.skalenodes.com:5001
 ```
 
 #### Ensure packages
