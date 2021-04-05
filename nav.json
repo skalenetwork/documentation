@@ -34,6 +34,12 @@
           "link": "/developers/skale-chains",
           "links": [
             {
+              "link": "/developers/skale-chain-sizes"
+            },
+            {
+              "link": "/developers/block-rotation"
+            },
+            {
               "title": "Providers/Libraries",
               "link": "/developers/providers"
             },
@@ -61,6 +67,10 @@
             {
               "title": "Metamask",
               "link": "/developers/wallets/metamask"
+            },
+            {
+              "title": "Brave",
+              "link": "/developers/wallets/brave"
             },
             {
               "title": "Portis",
@@ -135,8 +145,12 @@
           ]
         },
         {
-          "link": "/developers/products/file-storage",
+          "link": "/developers/products/file-storage/file-storage",
           "depth": 0
+        },
+        {
+          "title": "File Storage Upgrades",
+          "link": "/developers/products/file-storage/file-storage-upgrades"
         },
         {
           "title": "Tools & Support",
@@ -185,6 +199,9 @@
             },
             {
               "link": "/validators/skale-node"
+            },
+            {
+              "link": "/validators/changing-node-ip"
             },
             {
               "link": "/validators/faq"
@@ -260,6 +277,9 @@
         },
         {
           "link": "/technology/skale-dkg"
+        },
+        {
+          "link": "/technology/block-rotation-spec"
         },
         {
           "title": "SKALE Manager",
