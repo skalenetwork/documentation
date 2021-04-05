@@ -164,7 +164,7 @@ High risk (updates should be avoided in general)::
 - kernel on SKALE node server
 - docker 
 - docker-compose 
-- btrfs-tools
+- btrfs-progs
 
 Medium risk (updates should be performed very carefully)::
 - lvm2
