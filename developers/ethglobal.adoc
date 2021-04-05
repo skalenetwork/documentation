@@ -18,8 +18,18 @@ ETH Global SKALE Chains are slightly modified from production in several ways. F
 
 Use any Web3 compatible tooling like Remix, Truffle, etc to deploy and interact with contracts deployed on your SKALE Chain.
 
+==== Develop/Deploy
 * link:/developers/remix-ide[Remix IDE with SKALE Chains]
 * link:/developers/providers[Truffle/Web3 with SKALE Chains]
+
+==== Wallets
+* link:/developers/products/wallets/bitski[Bitski]
+* link:/developers/products/wallets/brave[Brave]
+* link:/developers/products/wallets/magic[Magic (Fortmatic)]
+* link:/developers/products/wallets/metamask[Metamask]
+* link:/developers/products/wallets/portis[Portis]
+* link:/developers/products/wallets/torus[Torus]
+* link:/developers/products/wallets/wallet-connect[Wallet Connect]
 
 === 4-node chains
 
