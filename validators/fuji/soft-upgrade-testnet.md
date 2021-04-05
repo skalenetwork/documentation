@@ -2,7 +2,8 @@
 
 For SKALE Validator CLI initialization use SKALE Manager ABI:
 
-`https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-rinkeby-abi.json`
+`https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-beta.1-rinkeby-abi.json`
+
 
 ### Update geth node
 
