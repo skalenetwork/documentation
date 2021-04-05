@@ -22,8 +22,8 @@ MetaMask - RPC Error: Internal JSON-RPC error. {code: -32603, message: "Internal
 
 Use the following web3.js and MetaMask versions.  
 
-**Web3.js:**  web3@1.0.0-beta.35  
-**MetaMask:**  [MetaMask version 6.1](https://github.com/MetaMask/metamask-extension/releases/tag/v6.1.0)  
+**Web3.js:**  web3@1.3.4  
+**MetaMask:**  [MetaMask version 9.2.1](https://github.com/MetaMask/metamask-extension/releases/tag/v9.2.1)  
 
 #### Web3
 

@@ -1,0 +1,41 @@
+= ETHGlobal Hackathon
+
+This document covers some general tips and guidances for ETH Global teams working with SKALE Chains.
+
+[NOTE]
+If your team experiences any issues or has any questions, please reach out to the link:https://discordapp.com/invite/gM5XBy6[#dapp-developers channel on Discord]. Please be sure to share your team name along with any issue/question.
+
+== SKALE Chains
+
+=== EVM compatible and fast 
+
+Under the hood SKALE Chains use Asynchronous Byzantine Binary Agreement and a containerized client called skaled. From the developer standpoint, it's EVM compatible and runs fast with zero-cost gas.
+
+[IMPORTANT]
+ETH Global SKALE Chains are slightly modified from production in several ways. First, they are 4-nodes instead of 16-nodes. Second,
+
+=== Web3 compatible tooling
+
+Use any Web3 compatible tooling like Remix, Truffle, etc to deploy and interact with contracts deployed on your SKALE Chain.
+
+* link:/developers/remix-ide[Remix IDE with SKALE Chains]
+* link:/developers/providers[Truffle/Web3 with SKALE Chains]
+
+=== 4-node chains
+
+Each chain runs across 4 validator-nodes, therefore each chain has 4 separate endpoints. Each port corresponds to http/https/ws/wss service.
+
+Empty blocks are produced every 10 seconds.
+
+And snapshots are taken daily.
+
+[NOTE]
+If your team experiences any issues or has any questions, please reach out to the link:https://discordapp.com/invite/gM5XBy6[#dapp-developers channel on Discord]. Please be sure to share your team name along with any issue/question.
+
+== Filestorage
+
+Each SKALE Chain comes with pre-deployed Filestorage contracts, enabling dApp developers to also use decentralized storage services on their validator nodes. See link:/developers/products/file-storage/file-storage[Filestorage docs] for more information.
+
+== Ethereum Rinkeby - SKALE Bridge
+
+Build your own bridge! Or use the pre-deployed Rinkeby-SKALE bridge called IMA, allowing you to transfer ETH, ERC20, ERC721 tokens between chains.  
