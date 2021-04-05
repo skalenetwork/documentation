@@ -149,6 +149,7 @@
           "depth": 0
         },
         {
+          "title": "File Storage Upgrades",
           "link": "/developers/products/file-storage/file-storage-upgrades"
         },
         {
@@ -278,7 +279,7 @@
           "link": "/technology/skale-dkg"
         },
         {
-          "link": "/technology/block-rotation"
+          "link": "/technology/block-rotation-spec"
         },
         {
           "title": "SKALE Manager",
