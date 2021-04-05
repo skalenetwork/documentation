@@ -134,6 +134,7 @@ MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-n
 IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.2/abi.json
 CONTAINER_CONFIGS_STREAM=1.6.2-testnet
 FILEBEAT_HOST=filebeat.testnet.skalenodes.com:5001
+DISABLE_IMA=True
 ```
 
 #### Ensure packages

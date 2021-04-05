@@ -49,6 +49,8 @@ The rest of the versions were provided for docker containers and correspondent t
 
 10. Before `skale node update` make sure that your attached storage isn't mounted.
 
+11. IMA agent is disabled for now. Please make sure that DISABLE_IMA=True is set in .env file before `skale node update`
+
 * * *
 
 ### TestNet Phase 3.1 Versions - SKALE chain creation
