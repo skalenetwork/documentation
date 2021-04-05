@@ -63,7 +63,7 @@ Schains launch, IMA beta version
 
 **SGX version: sgxwallet**: 1.70.0-beta.1
 
-**SKALE Manager version**: 1.8.0-develop.8
+**SKALE Manager version**: 1.8.0-beta.1
 
 **Skaled version**: 3.5.12-beta.0
 
@@ -77,7 +77,7 @@ Schains launch, IMA beta version
 
 **docker-lvmpy**: 1.0.1-beta.1
 
-**skale-node**: 1.6.2-testnet
+**skale-node**: 1.6.3-testnet
 
 **watchdog**: 1.1.3-beta.2
 
@@ -85,10 +85,10 @@ TestNet Environment Variables:
 
 ```shell
 MONITORING_CONTAINERS=True
-DOCKER_LVMPY_STREAM=1.0.2-beta.0
+DOCKER_LVMPY_STREAM=1.0.1-beta.1
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-rinkeby-abi.json
 IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.2/abi.json
-CONTAINER_CONFIGS_STREAM=1.5.0-testnet
+CONTAINER_CONFIGS_STREAM=1.6.3-testnet
 FILEBEAT_HOST=filebeat.testnet.skalenodes.com:5001
 SGX_SERVER_URL=[By validator, setup SGX wallet first]
 DISK_MOUNTPOINT=[By validator, your attached storage /dev/sda or /dev/xvdd (this is an example. You just need to use your 2TB block volume mount point)]
