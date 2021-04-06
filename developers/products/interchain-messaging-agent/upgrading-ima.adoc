@@ -1,0 +1,64 @@
+= IMA Upgrades
+:doctype: article
+:revdate: 2021-04-05
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
+
+The IMA system is comprised of several parts:
+
+[start=1]
+. Mainnet IMA Factories - generate new IMA Proxies
+. Mainnet IMA proxies - each deployed for every SKALE Chain
+. SKALE Chain IMA pre-deployed contracts
+. Node IMA Agent - on each of the 16 nodes of a SKALE Chain
+. SKALE Manager - Ethereum contract orchestrating DKG-BLS key creation and SKALE Chain creation
+
+== IMA Factories
+
+IMA Factories are versioned Mainnet contracts that enable SKALE Chain owners to create new IMA Mainnet contracts when 1) SKALE Chains are created, or to upgrade existing Mainnet contracts.
+
+=== Deploy new proxies
+
+IMA Mainnet contracts are deployed from Factories after completion of successful DKG process during SKALE Chain formation.
+
+* Factory contract: IMA-1-0-0-Factory.sol
+* Mastercopy address: `` 
+* Proxy factory address: ``
+
+Proxy creation can be triggered by sending a transaction without data to the factory address. 
+
+=== Update proxies
+
+SKALE Chain owners only have permission to update IMA mainnet proxies.  To initiate a proxy update, it's recommended that SKALE Chain owners first notify their users of a pending upgrade process, before pausing transactions through their dApp. Once paused, SKALE Chain owners can begin the update process using their own Web3 script or using a python based CLI tool.
+
+The update process is as follows:
+[start=1]
+. SKALE Chain rotation is paused during update process.
+. Mainnet contracts are updated
+. SKALE Chain contracts are updated
+. SKALE Admin on each of the 16 nodes will update and restart each of the IMA agents.
+. Update is confirmed by SKALE Chain Owner.
+. IMA begins processing
+. dApp now un-pauses transaction processing.
+
+IMA Agents on SKALE Nodes will be backwards compatible.
+
+== SKALE Chain Owners
+
+Owners must evaluate and decide whether to upgrade to a newer version of IMA.  Also for chian-to-chain transfers, multiple SKALE Chain owners may require upgrade coordination to prevent any incompatibility issues.
+
+== Security and Liability
+
+All contracts, agent, and factories are WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
