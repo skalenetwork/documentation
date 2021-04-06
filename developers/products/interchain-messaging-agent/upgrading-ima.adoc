@@ -41,7 +41,7 @@ Proxy creation can be triggered by sending a transaction without data to the fac
 
 === Update proxies
 
-SKALE Chain owners only have permission to update IMA mainnet proxies.  To initiate a proxy update, it's recommended that SKALE Chain owners first notify their users of a pending upgrade process, before pausing transactions through their dApp. Once paused, SKALE Chain owners can begin the update process using their own Web3 script or using a python based CLI tool.
+SKALE Chain owners only have permission to update IMA mainnet proxies. To initiate a proxy update, it's recommended that SKALE Chain owners first notify their users of a pending upgrade process, before pausing transactions through their dApp. Once paused, SKALE Chain owners can begin the update process using their own Web3 script or using a python based CLI tool.
 
 The update process is as follows:
 [start=1]
@@ -57,7 +57,9 @@ IMA Agents on SKALE Nodes will be backwards compatible.
 
 == SKALE Chain Owners
 
-Owners must evaluate and decide whether to upgrade to a newer version of IMA.  Also for chian-to-chain transfers, multiple SKALE Chain owners may require upgrade coordination to prevent any incompatibility issues.
+Owners must evaluate and decide whether to upgrade to a newer version of IMA. Also for SKALE Chain-to-SKALE Chain transfers, several SKALE Chain owners may require upgrade coordination to prevent any incompatibility issues.
+
+SKALE Chain owners will incur gas costs for upgrading Mainnet proxies, and will require proper funding of the SKALE Chain owner self-recharging wallet.
 
 == Security and Liability
 
