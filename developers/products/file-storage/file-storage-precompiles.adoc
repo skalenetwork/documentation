@@ -1,0 +1,16 @@
+= Filestorage Precompiles
+
+Filestorage precompiles on SKALE Chains provide specific methods used by Filestorage to access node storage allocation.
+
+== Unrestricted Access
+* readChunk
+* getFileSize
+* logTextMessage
+
+== Restricted Access (only SKALE Chain owner)
+* createFile (restricted Access)
+* uploadChunk (restricted Access)
+* deleteFile  (restricted Access)
+* createDirectory  (restricted Access)
+* deleteDirectory  (restricted Access)
+* calculateFileHash  (restricted Access)
