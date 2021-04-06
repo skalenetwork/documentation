@@ -8,7 +8,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 -   A Linux x86_64 machine
 -   SGX-enabled Intel processor
--   Ports 22, 3009, 8080, 9100, and 10000–12100, and ICMP IPv4 open for all
+-   Ports 22, 3009, 8080, 9100, and 10000–18192, and ICMP IPv4 open for all
 -   Ubuntu 18.04
 -   200GB devnet
 -   8 core
