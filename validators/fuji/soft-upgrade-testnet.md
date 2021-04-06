@@ -97,6 +97,10 @@ Using software wallet:
 sk-val srw recharge ETH_AMOUNT --pk-file PATH_TO_PK
 ```
 
+### Update sgx wallet
+
+Update your sgx wallet to 1.70.0-beta.1 using regular update procedure
+
 ### Install SKALE Node CLI
 
 #### Download the SKALE Node CLI binary
@@ -136,6 +140,7 @@ IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-netwo
 CONTAINER_CONFIGS_STREAM=1.6.3-testnet
 FILEBEAT_HOST=filebeat.testnet.skalenodes.com:5001
 DISABLE_IMA=True
+ENV_TYPE=testnet
 ```
 
 #### Ensure packages

@@ -89,6 +89,7 @@ DOCKER_LVMPY_STREAM=1.0.1-beta.1
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-beta.1-rinkeby-abi.json
 IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.2/abi.json
 CONTAINER_CONFIGS_STREAM=1.6.3-testnet
+ENV_TYPE=testnet
 FILEBEAT_HOST=filebeat.testnet.skalenodes.com:5001
 SGX_SERVER_URL=[By validator, setup SGX wallet first]
 DISK_MOUNTPOINT=[By validator, your attached storage /dev/sda or /dev/xvdd (this is an example. You just need to use your 2TB block volume mount point)]
