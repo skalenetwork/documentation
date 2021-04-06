@@ -1,0 +1,97 @@
+= Validator and Node Transactions
+:doctype: article
+:revnumber: v1.8.0
+:revdate: 2021-04-06
+
+All gas numbers are approximate and based on SKALE Manager {revnumber} on Ethereum Berlin Fork.
+
+[%header,cols="1,1,1"]
+|===
+|Transaction
+|Gas Consumption
+|Payer
+
+|Send SKL Token (from delegated account)
+|295,000
+|Sender
+
+|Send SKL Token (from untouched account)
+|110,000
+|Sender
+
+|Delegate
+|720,000
+|Delegator
+
+|Cancel delegation
+|120,000
+|Delegator
+
+|Undelegate
+|345,000
+|Delegator
+
+|Register Validator
+|245,000
+|Validator
+
+|Accept Delegation
+|620,000
+|Validator
+
+|Recharge Validator Self-recharging wallet
+|65,000
+|Recharger
+
+|Withdraw Validator Self-recharging wallet
+|70,000
+|Validator
+
+|Withdraw validator fee
+|180,000
+|Validator
+
+|DKG Complaint Type 1
+|2,350,000
+|Bad Validator Node
+
+|DKG Complaint Type 2
+|2,350,000
+|Bad Validator Node
+
+|DKG Complaint Type 3
+|305,000
+|Bad Validator Node
+
+|DKG Complaint Type 4
+|290,000
+|Bad Validator Node
+
+|Pre-response DKG
+|2,100,000
+|Bad Validator Node
+
+|Response DKG
+|3,750,000
+|Bad Validator Node
+
+|Create Node
+|655,000
+|Node
+
+|Node Exit (with 1 schain)
+|2,000,000
+|Exiting node
+
+|Get Bounty
+|420,000
+|Node
+
+|Broadcast-DKG
+|590,000
+|SKALE Chain Owner
+
+|Alright-DKG
+|195,000
+|SKALE Chain Owner
+|===
