@@ -4,12 +4,12 @@ Storing files on the blockchain is possible within the SKALE Network. You can us
 
 See the file storage demo on [Github](https://github.com/skalenetwork/skale-demo/tree/master/file-storage).  
 
-Please note: the code samples below are for version  [**0.2.5**](https://www.npmjs.com/package/@skalenetwork/filestorage.js)  
+Please note: the code samples below are for version  [**0.2.10**](https://www.npmjs.com/package/@skalenetwork/filestorage.js)  
 
 <TCSectionLayout>
 <TCColumnOne>
 
-#### Usage
+### Usage
 
 You have full control over maintaining your files on the SKALE Network, and you can maintain your files by uploading, downloading, or deleting files within your account. Additional documentation on the methods available within File Storage can be found  [here](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
@@ -18,7 +18,6 @@ You have full control over maintaining your files on the SKALE Network, and you 
 
 ```shell
 npm i @skalenetwork/filestorage.js
-
 ```
 
 </TCColumnTwo>
@@ -26,7 +25,7 @@ npm i @skalenetwork/filestorage.js
 <TCSectionLayout>
 <TCColumnOne>
 
-#### Instantiate the Client
+### Instantiate the Client
 
 To instantiate the client you only need to pass the SKALE endpoint into the constructor.  
 
@@ -34,10 +33,38 @@ To instantiate the client you only need to pass the SKALE endpoint into the cons
 <TCColumnTwo>
 
 ```javascript
-const Filestorage = require('@skalenetwork/filestorage.js/src/index');
+const Filestorage = require('@skalenetwork/filestorage.js');
+let filestorage = new Filestorage('----SKALE ENDPOINT----');
+```
 
-let filestorage = new Filestorage("[YOUR_SKALE_CHAIN_ENDPOINT]");
+Initialize with external **web3 provider**:
 
+```javascript
+const Filestorage = require('@skalenetwork/filestorage.js');
+const Web3 = require('web3');
+
+const web3Provider = new Web3.providers.HttpProvider('----SKALE ENDPOINT----');
+let filestorage = new Filestorage(web3Provider);
+```
+
+#### Using in HTML
+
+To use filestorage.js in HTML you should import `filestorage.min.js` from npm package:
+
+```html
+<script src="PATH_TO_PACKAGE/@skalenetwork/filestorage.js/dist/filestorage.min.js"></script>
+```
+
+**Example**:
+
+```html
+<script src="PATH_TO_PACKAGE/@skalenetwork/filestorage.js/dist/filestorage.min.js"></script>
+<script type="text/javascript">
+    async function downloadFile() {
+        let fs = new filestorage('----SKALE ENDPOINT----', true);
+        await fs.downloadToFile('----STORAGEPATH----');
+    }
+</script>   
 ```
 
 </TCColumnTwo>
@@ -45,7 +72,7 @@ let filestorage = new Filestorage("[YOUR_SKALE_CHAIN_ENDPOINT]");
 <TCSectionLayout>
 <TCColumnOne>
 
-#### Upload Files
+### Upload Files
 
 Uploading files can be accomplished by using the  **uploadFile**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
@@ -99,7 +126,7 @@ async function upload(event){
 <TCSectionLayout>
 <TCColumnOne>
 
-#### Show Files
+### Show Files
 
 Displaying files can be accomplished by using the  **listDirectory**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
@@ -132,7 +159,7 @@ async function getFiles(){
 <TCSectionLayout>
 <TCColumnOne>
 
-#### Download Files
+### Download Files
 
 Downloading files can be accomplished by using the FilestorageClient.downloadToFile or the  **downloadToBuffer**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
@@ -174,7 +201,7 @@ async function downloadFileToVariable(link) {
 <TCSectionLayout>
 <TCColumnOne>
 
-#### Delete Files
+### Delete Files
 
 Deleting files can be accomplished by using the  **deleteFile**  method available within the  [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).  
 
