@@ -4,6 +4,8 @@
 
 The following one-time setup for each ERC20 token is required for SKALE Chains with a default access control policy (default settings are: whitelisting enabled, automatic deployment disabled). For more information on IMA access control, [see here](/developers/products/interchain-messaging-agent/ima-access-control).
 
+To see a complete sandbox version of setup, map, and transfer, see <https://codesandbox.io/s/erc20-transfer-skale-interchain-messaging-agent-u4tdt>
+
 <StepsController>
     <StepNav stepId='one' label='Review\nand Modify ERC20'><ByzantineFaultTolerant/></StepNav>
     <StepNav stepId='two' label='Add\na Minter Role'><AsynchronousProtocol/></StepNav>
@@ -84,6 +86,51 @@ Now you need to add the pre-deployed LockAndDataForSchainERC20 contact on your S
 ##### Example Add Minter Role 
 
 ```javascript
+import Common from "ethereumjs-common";
+const Tx = require("ethereumjs-tx").Transaction;
+const Web3 = require("web3");
+
+export function addMinter() {
+  let schainABIs = require("./contracts/schain_ABIs.json");
+  let schainERC20ABI = require("./contracts/schain_ERC20_ABI.json");
+
+  let contractOwnerPrivateKey = new Buffer(
+    process.env.REACT_APP_INSECURE_CONTRACT_OWNER_PRIVATE_KEY,
+    "hex"
+  );
+  let contractOwnerAccount =
+    process.env.REACT_APP_INSECURE_CONTRACT_OWNER_ACCOUNT;
+
+  let schainEndpoint = process.env.REACT_APP_INSECURE_SKALE_CHAIN;
+  let chainId = process.env.REACT_APP_INSECURE_CHAIN_ID;
+
+  const customCommon = Common.forCustomChain(
+    "mainnet",
+    {
+      name: "skale-network",
+      chainId: chainId
+    },
+    "istanbul"
+  );
+
+  const erc20ABI = schainERC20ABI.erc20_abi;
+  const erc20Address = schainERC20ABI.erc20_address;
+
+  const lockAndDataForSchainERC20Address =
+    schainABIs.lock_and_data_for_schain_erc20_address;
+
+  const web3ForSchain = new Web3(schainEndpoint);
+
+  let schainERC20Contract = new web3ForSchain.eth.Contract(
+    erc20ABI,
+    erc20Address
+  );
+
+  /**
+   * Uses the openzeppelin ERC20Mintable
+   * contract function addMinter
+   * https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20
+   */
 let addMinter = schainERC20Contract.methods
     .addMinter(lockAndDataForSchainERC20Address)
     .encodeABI();
@@ -91,6 +138,7 @@ let addMinter = schainERC20Contract.methods
   web3ForSchain.eth.getTransactionCount(contractOwnerAccount).then((nonce) => {
     //create raw transaction
     const rawTxAddMinter = {
+      chainId: chainId,
       from: contractOwnerAccount,
       nonce: nonce,
       data: addMinter,
@@ -100,7 +148,7 @@ let addMinter = schainERC20Contract.methods
       value: 0
     };
     //sign transaction
-    const txAddMinter = new Tx(rawTxAddMinter);
+    const txAddMinter = new Tx(rawTxAddMinter, { common: customCommon });
     txAddMinter.sign(contractOwnerPrivateKey);
 
     const serializedTxAddMinter = txAddMinter.serialize();
@@ -115,6 +163,8 @@ let addMinter = schainERC20Contract.methods
   });
 ```
 
+For a sandbox of the minter implementation, see <https://codesandbox.io/s/erc20-transfer-skale-interchain-messaging-agent-u4tdt?file=/src/addMinter.js>
+
 </Step>
 
 <Step id='three'>
@@ -124,12 +174,48 @@ let addMinter = schainERC20Contract.methods
 Third, you need to register the Mainnet token contract into IMA on Mainnet using the addERC20TokenByOwner method in the LockAndDataForMainnet contract:
 
 ```javascript
+const Web3 = require("web3");
+const Tx = require("ethereumjs-tx").Transaction;
+
+export function registerOnMainnet() {
+  let rinkebyABIs = require("./contracts/rinkeby_ABIs.json");
+  let rinkebyERC20ABI = require("./contracts/rinkeby_ERC20_ABI.json");
+
+  let privateKey = new Buffer(
+    process.env.REACT_APP_INSECURE_SCHAIN_OWNER_PRIVATE_KEY,
+    "hex"
+  );
+  let erc20OwnerForMainnet =
+    process.env.REACT_APP_INSECURE_SCHAIN_OWNER_ACCOUNT;
+
+  let rinkeby = process.env.REACT_APP_INSECURE_RINKEBY;
+  let schainName = process.env.REACT_APP_INSECURE_CHAIN_NAME;
+  let chainId = process.env.REACT_APP_INSECURE_RINKEBY_CHAIN_ID;
+
+  const lockAndDataAddress =
+    rinkebyABIs.lock_and_data_for_mainnet_erc20_address;
+  const lockAndDataBoxABI = rinkebyABIs.lock_and_data_for_mainnet_erc20_abi;
+
+  const erc20AddressOnMainnet = rinkebyERC20ABI.erc20_address;
+
+  const web3ForMainnet = new Web3(rinkeby);
+
+  let LockAndDataForMainnet = new web3ForMainnet.eth.Contract(
+    lockAndDataBoxABI,
+    lockAndDataAddress
+  );
+
+  /**
+   * Uses the SKALE LockAndDataForMainnetERC20
+   * contract function addERC20TokenByOwner
+   */
 let addERC20TokenByOwner = LockAndDataForMainnet.methods
     .addERC20TokenByOwner(schainName, erc20AddressOnMainnet)
     .encodeABI();
 
   web3ForMainnet.eth.getTransactionCount(erc20OwnerForMainnet).then((nonce) => {
     const rawTxAddERC20TokenByOwner = {
+      chainId: chainId,
       from: erc20OwnerForMainnet,
       nonce: "0x" + nonce.toString(16),
       data: addERC20TokenByOwner,
@@ -142,7 +228,10 @@ let addERC20TokenByOwner = LockAndDataForMainnet.methods
     };
 
     //sign transaction
-    const txAddERC20TokenByOwner = new Tx(rawTxAddERC20TokenByOwner);
+    const txAddERC20TokenByOwner = new Tx(rawTxAddERC20TokenByOwner, {
+      chain: "rinkeby",
+      hardfork: "petersburg"
+    });
 
     txAddERC20TokenByOwner.sign(privateKey);
 
@@ -158,6 +247,8 @@ let addERC20TokenByOwner = LockAndDataForMainnet.methods
   });
 ```
 
+For a sandbox version of registering contracts on Mainnet, see <https://codesandbox.io/s/erc20-transfer-skale-interchain-messaging-agent-u4tdt?file=/src/addERC20TokenByOwner.js>
+
 </Step>
 <Step id='four'>
 
@@ -166,6 +257,50 @@ let addERC20TokenByOwner = LockAndDataForMainnet.methods
 Finally, you need to register the (modified) token contract on the SKALE chain IMA using the addERC20TokenByOwner method in LockAndDataForSchain contract. Note that you need to register the contract on Mainnet first, so that the registration on the SKALE Chain can reference the Mainnet token address.
 
 ```javascript
+import Common from "ethereumjs-common";
+const Web3 = require("web3");
+const Tx = require("ethereumjs-tx").Transaction;
+
+export function registerOnSchain() {
+  let schainABIs = require("./contracts/schain_ABIs.json");
+  let schainERC20ABI = require("./contracts/schain_ERC20_ABI.json");
+  let rinkebyERC20ABI = require("./contracts/rinkeby_ERC20_ABI.json");
+
+  let privateKey = new Buffer(
+    process.env.REACT_APP_INSECURE_SCHAIN_OWNER_PRIVATE_KEY,
+    "hex"
+  );
+  let erc20OwnerForSchain = process.env.REACT_APP_INSECURE_SCHAIN_OWNER_ACCOUNT;
+
+  let schain = process.env.REACT_APP_INSECURE_SKALE_CHAIN;
+  let chainId = process.env.REACT_APP_INSECURE_CHAIN_ID;
+
+  const customCommon = Common.forCustomChain(
+    "mainnet",
+    {
+      name: "skale-network",
+      chainId: chainId
+    },
+    "istanbul"
+  );
+
+  const lockAndDataAddress = schainABIs.lock_and_data_for_schain_erc20_address;
+  const lockAndDataBoxABI = schainABIs.lock_and_data_for_schain_erc20_abi;
+
+  const erc20AddressOnMainnet = rinkebyERC20ABI.erc20_address;
+  const erc20AddressOnSchain = schainERC20ABI.erc20_address;
+
+  const web3ForSchain = new Web3(schain);
+
+  let LockAndDataForSchain = new web3ForSchain.eth.Contract(
+    lockAndDataBoxABI,
+    lockAndDataAddress
+  );
+
+  /**
+   * Uses the SKALE LockAndDataForMainnetERC20
+   * contract function addERC20TokenByOwner
+   */
 let addERC20TokenByOwner = LockAndDataForSchain.methods
     .addERC20TokenByOwner(
       "Mainnet",
@@ -201,6 +336,8 @@ let addERC20TokenByOwner = LockAndDataForSchain.methods
       .catch(console.error);
   });
 ```
+
+For a sandbox version of registering contracts on your SKALE Chain, see <https://codesandbox.io/s/erc20-transfer-skale-interchain-messaging-agent-u4tdt?file=/src/schain_addERC20TokenByOwner.js>
 </Step>
 
 </StepsLayout>

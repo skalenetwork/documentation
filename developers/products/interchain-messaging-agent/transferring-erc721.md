@@ -4,12 +4,11 @@
 
 The Interchain Messaging Agent can be used for managing ERC721 tokens between Ethereum and SKALE.  The following steps guide you through a complete transfer from Ethereum to SKALE and back. Be sure to follow any one-time setup and mapping steps described [here](/developers/products/interchain-messaging-agent/setting-up-erc721) before initiating transfers. 
 
-<button>[Live ERC721 IMA Demo](https://codesandbox.io/s/erc721-skale-interchain-messaging-agent-222wy)</button>
+<button>[Live ERC721 IMA Demo](https://codesandbox.io/s/erc721-transfer-skale-interchain-messaging-agent-222wy)</button>
 
 <StepsController>
     <StepNav stepId='one' label='Deposit\nERC721 on Ethereum'><ByzantineFaultTolerant/></StepNav>
-    <StepNav stepId='two' label='Pay\nfor gas (Add ETH)'><AsynchronousProtocol/></StepNav>
-    <StepNav stepId='three' label='Exit\nfrom SKALE chain'><LeaderlessConsensus/></StepNav>
+    <StepNav stepId='two' label='Exit\nfrom SKALE Chain'><AsynchronousProtocol/></StepNav>
 </StepsController>
 <Step id='one'>
 
@@ -25,10 +24,10 @@ The **DepositBox** IMA contract is currently deployed to the Rinkeby testnet. To
 
 ```javascript
 const Web3 = require('web3');
-const Tx = require('ethereumjs-tx');
+const Tx = require('ethereumjs-tx').Transaction;
 
 let rinkebyABIs = "[YOUR_SKALE_ABIs_ON_RINKEBY]";
-let rinkebyERC721Json = "[YOUR_ERC721_ABI_ON_RINKEBY]";
+let rinkebyERC721ABI = "[YOUR_ERC721_ABI_ON_RINKEBY]";
 
 let privateKey = new Buffer("[YOUR_PRIVATE_KEY]", "hex");
 let accountForMainnet = "[YOUR_ACCOUNT_ADDRESS]";
@@ -36,14 +35,15 @@ let accountForSchain = "[YOUR_ACCOUNT_ADDRESS]";
 
 let rinkeby = "[RINKEBY_ENDPOINT]";
 let schainName = "[YOUR_SKALE_CHAIN_NAME]";
+let chainId = "YOUR_RINKEBY_CHAIN_ID";
 
 let mintId = "[ERC721_MINT_ID]";
 
 const depositBoxAddress = rinkebyABIs.deposit_box_address;
 const depositBoxABI = rinkebyABIs.deposit_box_abi;
 
-const erc721ABI = rinkebyERC721Json.erc721_abi;
-const erc721Address = rinkebyERC721Json.erc721_address;
+const erc721ABI = rinkebyERC721ABI.erc721_abi;
+const erc721Address = rinkebyERC721ABI.erc721_address;
 
 const web3ForMainnet = new Web3(rinkeby);
 
@@ -57,6 +57,11 @@ erc721ABI,
 erc721Address
 );
 
+/**
+   * Uses the openzeppelin ERC721
+   * contract function transferFrom
+   * https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC721
+   */
 let transfer = contractERC721.methods
     .transferFrom(
       accountForMainnet,
@@ -72,6 +77,7 @@ let deposit = depositBox.methods
 web3ForMainnet.eth.getTransactionCount(accountForMainnet).then((nonce) => {
 //create raw transaction
 const rawTxTransfer = {
+  chainId: chainId,
   from: accountForMainnet,
   nonce: "0x" + nonce.toString(16),
   data: transfer,
@@ -80,7 +86,10 @@ const rawTxTransfer = {
   gasPrice: 100000000000
 };
 //sign transaction
-const txTransfer = new Tx(rawTxTransfer);
+const txTransfer = new Tx(rawTxTransfer, {
+      chain: "rinkeby",
+      hardfork: "petersburg"
+    });
 txTransfer.sign(privateKey);
 
 const serializedTxTransfer = txTransfer.serialize();
@@ -94,6 +103,7 @@ web3ForMainnet.eth
       .getTransactionCount(accountForMainnet)
       .then((nonce) => {
         const rawTxDeposit = {
+          chainId: chainId,
           from: accountForMainnet,
           nonce: "0x" + nonce.toString(16),
           data: deposit,
@@ -106,7 +116,10 @@ web3ForMainnet.eth
         };
 
         //sign transaction
-        const txDeposit = new Tx(rawTxDeposit);
+        const txDeposit = new Tx(rawTxDeposit, {
+          chain: "rinkeby",
+          hardfork: "petersburg"
+        });
 
         txDeposit.sign(privateKey);
 
@@ -128,83 +141,7 @@ web3ForMainnet.eth
 </Step>
 <Step id="two">
 
-#### 2. Pay for Gas (Add ETH)
-
-Before sending ERC721 tokens back to Ethereum, you will need add ETH to cover the gas cost on Ethereum. Either the dApp developer or the end user can cover the cost of gas.  
-
-This method is called from the SKALE Chain to add ETH to cover the gas cost.  
-
-The **TokenManager** IMA contract is pre-deployed to your SKALE Chain. Please reach out to your account manager to receive the ABIs specific for your SKALE Chain.  
-
-##### Example Code
-
-```javascript
-const Web3 = require('web3');
-const Tx = require('ethereumjs-tx');
-
-let schainABIs = "[YOUR_SKALE_CHAIN_ABIs]";
-
-let privateKey = new Buffer([YOUR_PRIVATE_KEY], "hex");
-let accountForSchain = "[YOUR_SCHAIN_ACCOUNT_ADDRESS]";
-let schainEndpoint = "[YOUR_SKALE_CHAIN_ENDPOINT]";
-
-const tokenManagerAddress = schainABIs.token_manager_address;
-const tokenManagerABI = schainABIs.token_manager_abi;
-
-const web3ForSchain = new Web3(schainEndpoint);
-
-let tokenManager = new web3ForSchain.eth.Contract(
-  tokenManagerABI,
-  tokenManagerAddress
-);
-
-/* 
- * prepare the smart contract function 
- * addEthCost(uint amount) 
- */
-let addEthCost = tokenManager.methods.addEthCost(
-  web3ForSchain.utils.toHex(
-    web3ForSchain.utils.toWei(
-      "0.5", 
-      "ether"
-    )
-  )
-).encodeABI();
-
-web3ForSchain.eth.getTransactionCount(accountForSchain).then((nonce) => {
-
-  //create raw transaction
-  const rawTxAddEthCost = {
-    from: accountForSchain,
-    nonce: "0x" + nonce.toString(16),
-    data: addEthCost,
-    to: tokenManagerAddress,
-    gasPrice: 100000000000,
-    gas: 8000000,
-    value: 0
-  };
-
-  //sign transaction
-  const txAddEthCost = new Tx(rawTxAddEthCost);
-  txAddEthCost.sign(privateKey);
-
-  //serialize transaction
-  const serializedTxAddEthCost = txAddEthCost.serialize();
-
-  //send signed transaction (add eth cost)
-  web3ForSchain.eth
-    .sendSignedTransaction("0x" + serializedTxAddEthCost.toString("hex"))
-    .on("receipt", receipt => {
-      console.log(receipt);
-    })
-    .catch(console.error);
-});
-```
-
-</Step>
-<Step id="three">
-
-#### 3. Exit from SKALE Chain
+#### 2. Exit from SKALE Chain
 
 To send ERC721 tokens back to Ethereum, you will need to use the exitToMain function within the **TokenManager** IMA  contract on the SKALE Chain.  
 
@@ -216,26 +153,37 @@ The **TokenManager** IMA contract is pre-deployed to your SKALE Chain. Please re
 
 ```javascript
 const Web3 = require('web3');
-const Tx = require('ethereumjs-tx');
+const Common = require('ethereumjs-common');
+const Tx = require('ethereumjs-tx').Transaction;
 
 let schainABIs = "[YOUR_SKALE_CHAIN_ABIs]");
-let rinkebyERC721Json = "[YOUR_RINKEBY_ERC721_ABI]";
-let schainERC721Json = "[YOUR_SKALE_CHAIN_ERC721_ABI]";
+let rinkebyERC721ABI = "[YOUR_RINKEBY_ERC721_ABI]";
+let schainERC721ABI = "[YOUR_SKALE_CHAIN_ERC721_ABI]";
 
 let privateKey = new Buffer('[YOUR_PRIVATE_KEY]', 'hex');
 let accountForMainnet = "[YOUR_MAINNET_ACCOUNT_ADDRESS]";
 let accountForSchain = "[YOUR_SCHAIN_ACCOUNT_ADDRESS]";
 let schainEndpoint = "[YOUR_SKALE_CHAIN_ENDPOINT]";
+let chainId = "[YOUR_SKALE_CHAIN_CHAIN_ID]";
+
+const customCommon = Common.forCustomChain(
+    "mainnet",
+    {
+      name: "skale-network",
+      chainId: chainId
+    },
+    "istanbul"
+  );
 
 let mintId = "[ERC721_MINT_ID]";
 
 const tokenManagerAddress = schainABIs.token_manager_address;
 const tokenManagerABI = schainABIs.token_manager_abi;
 
-const erc721ABI = schainERC721Json.erc721_abi;
+const erc721ABI = schainERC721ABI.erc721_abi;
 
-const erc721Address = schainERC721Json.erc721_address;
-const erc721AddressRinkeby = rinkebyERC721Json.erc721_address;
+const erc721Address = schainERC721ABI.erc721_address;
+const erc721AddressRinkeby = rinkebyERC721ABI.erc721_address;
 
 const web3ForSchain = new Web3(schainEndpoint);
 
@@ -261,7 +209,8 @@ let exit = tokenManager.methods
   .exitToMainERC721(
     erc721AddressRinkeby,
     accountForMainnet,
-    mintId
+    mintId,
+    web3ForSchain.utils.toHex(web3ForSchain.utils.toWei("0.5", "ether"))
   )
   .encodeABI();
 
@@ -279,7 +228,7 @@ web3ForSchain.eth.getTransactionCount(accountForSchain).then((nonce) => {
   };
 
   //sign transaction
-  const txTransfer = new Tx(rawTxTransfer);
+  const txTransfer = new Tx(rawTxTransfer, { common: customCommon });
     txTransfer.sign(privateKey);
 
   const serializedTxTransfer = txTransfer.serialize();
@@ -305,7 +254,7 @@ web3ForSchain.eth.getTransactionCount(accountForSchain).then((nonce) => {
         };
 
         //sign transaction (exit)
-        const txExit = new Tx(rawTxExit);
+        const txExit = new Tx(rawTxExit, { common: customCommon });
         txExit.sign(privateKey);
 
         const serializedTxExit = txExit.serialize();
