@@ -42,8 +42,8 @@ let mintId = "[ERC721_MINT_ID]";
 const depositBoxAddress = rinkebyABIs.deposit_box_address;
 const depositBoxABI = rinkebyABIs.deposit_box_abi;
 
-const erc721ABI = rinkebyERC721Json.erc721_abi;
-const erc721Address = rinkebyERC721Json.erc721_address;
+const erc721ABI = rinkebyERC721ABI.erc721_abi;
+const erc721Address = rinkebyERC721ABI.erc721_address;
 
 const web3ForMainnet = new Web3(rinkeby);
 
