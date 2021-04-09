@@ -65,19 +65,19 @@ Schains launch, IMA beta version
 
 **SKALE Manager version**: 1.8.0-beta.1
 
-**Skaled version**: 3.5.12-beta.0
+**Skaled version**: 3.5.12-beta.2
 
 **IMA version**: 1.0.0-beta.2
 
-**Skale Admin version**: 1.1.0-beta.43
+**Skale Admin version**: 1.1.0-beta.47
 
-**Transaction Manager version**: 1.1.0-beta.10
+**Transaction Manager version**: 1.1.0-beta.11
 
 **Skale Bounty version**: 1.1.1-beta.5
 
 **docker-lvmpy**: 1.0.1-beta.1
 
-**skale-node**: 1.6.3-testnet
+**skale-node**: 1.6.4-testnet
 
 **watchdog**: 1.1.3-beta.2
 
@@ -88,7 +88,7 @@ MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.1-beta.1
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-beta.1-rinkeby-abi.json
 IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.2/abi.json
-CONTAINER_CONFIGS_STREAM=1.6.3-testnet
+CONTAINER_CONFIGS_STREAM=1.6.4-testnet
 ENV_TYPE=testnet
 FILEBEAT_HOST=filebeat.testnet.skalenodes.com:5001
 SGX_SERVER_URL=[By validator, setup SGX wallet first]
