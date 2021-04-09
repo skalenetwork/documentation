@@ -57,9 +57,8 @@ erc721ABI,
 erc721Address
 );
 
-let transfer = contractERC721.methods
-    .transferFrom(
-      accountForMainnet,
+let approve = contractERC721.methods
+    .approve(
       depositBoxAddress,
       mintId
     )
@@ -71,23 +70,23 @@ let deposit = depositBox.methods
 
 web3ForMainnet.eth.getTransactionCount(accountForMainnet).then((nonce) => {
 //create raw transaction
-const rawTxTransfer = {
+const rawTxApprove = {
   from: accountForMainnet,
   nonce: "0x" + nonce.toString(16),
-  data: transfer,
+  data: approve,
   to: erc721Address,
   gas: 6500000,
   gasPrice: 100000000000
 };
 //sign transaction
-const txTransfer = new Tx(rawTxTransfer);
-txTransfer.sign(privateKey);
+const txApprove = new Tx(rawTxApprove);
+txApprove.sign(privateKey);
 
-const serializedTxTransfer = txTransfer.serialize();
+const serializedTxApprove = txApprove.serialize();
 
 //send signed transaction (approve)
 web3ForMainnet.eth
-  .sendSignedTransaction("0x" + serializedTxTransfer.toString("hex"))
+  .sendSignedTransaction("0x" + serializedTxApprove.toString("hex"))
   .on("receipt", (receipt) => {
     console.log(receipt);
     web3ForMainnet.eth
