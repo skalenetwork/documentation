@@ -230,3 +230,67 @@ async function deleteFile(fileName) {
 
 </TCColumnTwo>
 </TCSectionLayout>
+<TCSectionLayout>
+<TCColumnOne>
+
+### Create directory
+
+Creating directory can be accomplished by using the **createDirectory**  method available within the [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js).
+
+</TCColumnOne>
+<TCColumnTwo>
+
+```javascript
+async function createDirectory(directoryPath) {
+    //create web3 connection
+    const web3Provider = new Web3.providers.HttpProvider(
+        "[YOUR_SKALE_CHAIN_ENDPOINT]"
+    );
+    let web3 = new Web3(web3Provider);
+
+    //get filestorage instance
+    let filestorage = new Filestorage(web3, true);
+
+    //provide your account & private key
+    //note this must include the 0x prefix
+    let privateKey = '[YOUR_PRIVATE_KEY]';
+    let account = "[YOUR_ACCOUNT_ADDRESS]";
+
+    await filestorage.createDirectory(account, directoryPath, privateKey);
+}
+```
+
+</TCColumnTwo>
+</TCSectionLayout>
+<TCSectionLayout>
+<TCColumnOne>
+
+### Delete directory
+
+Deleting directory can be accomplished by using the **deleteDirectory**  method available within the [NPM package](https://www.npmjs.com/package/@skalenetwork/filestorage.js). The directory should be empty to delete it.
+
+</TCColumnOne>
+<TCColumnTwo>
+
+```javascript
+async function deleteDirectory(directoryPath) {
+    //create web3 connection
+    const web3Provider = new Web3.providers.HttpProvider(
+        "[YOUR_SKALE_CHAIN_ENDPOINT]"
+    );
+    let web3 = new Web3(web3Provider);
+
+    //get filestorage instance
+    let filestorage = new Filestorage(web3, true);
+
+    //provide your account & private key
+    //note this must include the 0x prefix
+    let privateKey = '[YOUR_PRIVATE_KEY]';
+    let account = "[YOUR_ACCOUNT_ADDRESS]";
+
+    await filestorage.deleteDirectory(account, directoryPath, privateKey);
+}
+```
+
+</TCColumnTwo>
+</TCSectionLayout>
