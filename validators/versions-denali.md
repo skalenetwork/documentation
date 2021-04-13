@@ -22,11 +22,11 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **Validator CLI**:  [1.2.0](https://github.com/skalenetwork/validator-cli/releases/tag/1.2.0)
 
-**SGX Wallet**: [WIP](https://github.com/skalenetwork/sgxwallet/releases/tag/1.58.5-stable.1)
+**SGX Wallet**: [1.70.0-stable.0](https://github.com/skalenetwork/sgxwallet/releases/tag/1.70.0-stable.0)
 
-**Skale node**: [1.2.0(WIP)](https://github.com/skalenetwork/skale-node/releases/tag/1.2.0)
+**Skale node**: [1.2.0](https://github.com/skalenetwork/skale-node/releases/tag/1.2.0)
 
-**Skaled**: [3.5.12-stable.1(WIP)](https://github.com/skalenetwork/skaled/releases/tag/3.5.12-stable.1)
+**Skaled**: [3.5.12-stable.1](https://github.com/skalenetwork/skaled/releases/tag/3.5.12-stable.1)
 
 **Docker lvmpy**: [1.0.1-stable.1](https://github.com/skalenetwork/docker-lvmpy/releases/tag/1.0.1-stable.1)
 
@@ -68,7 +68,7 @@ MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.1-stable.1
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.8.0/skale-manager-1.8.0-mainnet-abi.json
 IMA_CONTRACTS_ABI_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/mainnet-ima/ima.json
-CONTAINER_CONFIGS_STREAM=1.2.0(WIP)
+CONTAINER_CONFIGS_STREAM=1.2.0
 FILEBEAT_HOST=filebeat.mainnet.skalenodes.com:5000
 DISABLE_IMA=True
 ENV_TYPE=mainnet
