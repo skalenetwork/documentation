@@ -25,7 +25,7 @@ let switchToSKALE = {
   rpcUrls: ["https://dev-testnet-v1-0.skalelabs.com"],
   nativeCurrency: {
     name: "SKALE ETH",
-    symbol: "sETH",
+    symbol: "skETH",
     decimals: 18
   },
   blockExplorerUrls: [
