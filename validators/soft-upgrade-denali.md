@@ -116,7 +116,7 @@ Required arguments:
 -   `--address-index` - Index of the address to use (starting from `0`)
 -   `--keys-type` - Type of the Ledger keys (live or legacy)
 
-> Make sure that you enabled contracts data sending on ETH application. Otherwise transactions won't work
+> Make sure that you enabled contracts data sending on ledger ETH application. Otherwise transactions won't work
 
 #### Recharge wallet
 
