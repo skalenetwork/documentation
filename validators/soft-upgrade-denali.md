@@ -226,4 +226,4 @@ skale node set-domain -d DOMAIN_NAME --yes
 skale ssl upload -c PATH_TO_CERT_FILE -k PATH_TO_KEY_FILE
 ```
 
-You can use `-f` option to override exisiting certificates.
+You can use `-f` option to override existing certificates.
