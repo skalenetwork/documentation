@@ -2,7 +2,7 @@
 
 ### Important notes
 
-1.  Make sure you updated your geth node to 1.10.1 version with Berlin hard-fork support.
+1.  Make sure you updated your geth node to `1.10.1` version with Berlin hard-fork support.
 
 2.  Make sure iptables-persistent, btrfs-progs, lsof, lvm2, psmisc packages are installed (`dpkg -l | grep <package>`).
 
@@ -46,7 +46,7 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 ### Update geth node
 
-Make sure you updated geth node to 1.10.1 version with Berlin hard-fork support.
+Make sure you updated geth node to `1.10.1` version with Berlin hard-fork support.
 
 ### Recharge validator wallet
 
