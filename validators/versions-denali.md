@@ -4,9 +4,9 @@ You can find the compatible versions in this page. Set up requires only Validato
 
 The rest of the versions were provided for docker containers and correspondent tags in their individual code repositories.
 
-### ** Prerequisites
+### Prerequisites
 
-#### Skale node
+#### Node machine
 -   A Linux x86_64 machine
 -   SGX-enabled Intel processor
 -   Ports 22, 3009, 8080, 9100, and 10000–18192, and ICMP IPv4 open for all
@@ -16,7 +16,6 @@ The rest of the versions were provided for docker containers and correspondent t
 -   32GB RAM
 -   16GB swap
 
-
 ### Mainnet Versions for Set up
 
 **Node CLI**: [1.1.0](https://github.com/skalenetwork/node-cli/releases/download/1.1.0/skale-1.1.0-Linux-x86_64) 
@@ -25,9 +24,9 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **SGX Wallet**: [WIP](https://github.com/skalenetwork/sgxwallet/releases/tag/1.58.5-stable.1)
 
-**Skale node**: [1.2.0](https://github.com/skalenetwork/skale-node/releases/tag/1.2.0)
+**Skale node**: [1.2.0(WIP)](https://github.com/skalenetwork/skale-node/releases/tag/1.2.0)
 
-**Skaled**: [3.5.12-stable.1](https://github.com/skalenetwork/skaled/releases/tag/3.5.12-stable.1)
+**Skaled**: [3.5.12-stable.1(WIP)](https://github.com/skalenetwork/skaled/releases/tag/3.5.12-stable.1)
 
 **Docker lvmpy**: [1.0.1-stable.1](https://github.com/skalenetwork/docker-lvmpy/releases/tag/1.0.1-stable.1)
 
@@ -44,11 +43,11 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **SKALE Manager version**: [1.7.2](https://github.com/skalenetwork/skale-network/tree/master/releases/mainnet/skale-manager/1.7.2)
 
-**Node CLI**: [1.0.1](https://github.com/skalenetwork/node-cli/releases/download/1.0.1/skale-1.0.1-Linux-x86_64) 
+**Node CLI**: [1.0.0](https://github.com/skalenetwork/node-cli/releases/download/1.0.0/skale-1.0.0-Linux-x86_64) 
 
 **Validator CLI**:  [1.1.2](https://github.com/skalenetwork/validator-cli/releases/tag/1.1.2)
 
-**Skaled version**: [1.58.5-stable.1](https://github.com/skalenetwork/skaled/releases/tag/1.58.5-stable.1)
+**Skaled version**: [1.46-stable.0](https://github.com/skalenetwork/skaled/releases/tag/1.46-stable.0)
 
 **Skale Admin version**: [1.0.0-stable.1](https://github.com/skalenetwork/skale-admin/releases/tag/1.0.0-stable.1)
 
@@ -69,7 +68,7 @@ MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.1-stable.1
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.8.0/skale-manager-1.8.0-mainnet-abi.json
 IMA_CONTRACTS_ABI_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/mainnet-ima/ima.json
-CONTAINER_CONFIGS_STREAM=1.2.0
+CONTAINER_CONFIGS_STREAM=1.2.0(WIP)
 FILEBEAT_HOST=filebeat.mainnet.skalenodes.com:5000
 DISABLE_IMA=True
 ENV_TYPE=mainnet

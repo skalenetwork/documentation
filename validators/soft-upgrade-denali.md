@@ -36,12 +36,12 @@
 
 12. IMA agent is disabled for now. Please make sure that DISABLE_IMA=True is set in .env file before `skale node update`
 
+13. Don't forget to specify ENV_TYPE=mainnet in .env.
+
 ### Manager ABI
 For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 `https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.8.0/skale-manager-1.8.0-mainnet-abi.json`
-
-
 
 ### Update geth node
 
@@ -121,7 +121,7 @@ Required arguments:
 
 For more information visit [Self recharging wallet](/validators/self-recharging-wallets)
 
-`ETH_AMOUNT` shouldn't be less than `0.1` multiplied by the number of nodes that your validator has
+`ETH_AMOUNT` should be 1 ETH
 
 Using ledger wallet:
 
@@ -134,6 +134,8 @@ Using software wallet:
 ```shell
 sk-val srw recharge ETH_AMOUNT --pk-file PATH_TO_PK
 ```
+
+**Note:** Make sure validator account (which you specified as `pk-file` or `ledger`) has at least 1.5 ETH 
 
 ### Update sgx wallet
 
@@ -177,7 +179,7 @@ Make sure the following options are set
 DOCKER_LVMPY_STREAM=1.0.1-stable.1
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.8.0/skale-manager-1.8.0-mainnet-abi.json
 IMA_CONTRACTS_ABI_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/mainnet-ima/ima.json
-CONTAINER_CONFIGS_STREAM=1.2.0
+CONTAINER_CONFIGS_STREAM=1.2.0(WIP)
 FILEBEAT_HOST=filebeat.mainnet.skalenodes.com:5000
 DISABLE_IMA=True
 ENV_TYPE=mainnet
@@ -193,7 +195,6 @@ dpkg -l | grep iptables-persistent
 dpkg -l | grep lsof
 dpkg -l | grep lvm2
 dpkg -l | grep psmisc
-
 ```
 
 Make sure docker-compose version is `1.27.4`
@@ -224,3 +225,5 @@ skale node set-domain -d DOMAIN_NAME --yes
 ```shell
 skale ssl upload -c PATH_TO_CERT_FILE -k PATH_TO_KEY_FILE
 ```
+
+You can use `-f` option to override exisiting certificates.
