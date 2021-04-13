@@ -4,7 +4,7 @@
 
 1.  Make sure you updated your geth node to 1.10.1 version with Berlin hard-fork support
 
-2.   Make sure iptables-persistent, btrfs-progs, lsof, lvm2, psmisc packages are installed (`dpkg -l | grep <package>`)
+2.  Make sure iptables-persistent, btrfs-progs, lsof, lvm2, psmisc packages are installed (`dpkg -l | grep <package>`)
 
 3.  You can install btrfs-progs, lsof, lvm2, psmisc packages using the following commands:
     ```shell
@@ -30,7 +30,7 @@
 
 9.  skale_sla container will be removed because it's deprecated for now.
 
-10.  Logs from removed containers are placed inside `.skale/log/.removed_containers` 
+10. Logs from removed containers are placed inside `.skale/log/.removed_containers` 
 
 11. Before `skale node update` make sure that your attached storage isn't mounted.
 
@@ -39,6 +39,7 @@
 13. Don't forget to specify ENV_TYPE=mainnet in .env.
 
 ### Manager ABI
+
 For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 `https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.8.0/skale-manager-1.8.0-mainnet-abi.json`
