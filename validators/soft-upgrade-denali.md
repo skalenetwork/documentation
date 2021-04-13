@@ -2,9 +2,9 @@
 
 ### Important notes
 
-1.  Make sure you updated your geth node to 1.10.1 version with Berlin hard-fork support
+1.  Make sure you updated your geth node to 1.10.1 version with Berlin hard-fork support.
 
-2.  Make sure iptables-persistent, btrfs-progs, lsof, lvm2, psmisc packages are installed (`dpkg -l | grep <package>`)
+2.  Make sure iptables-persistent, btrfs-progs, lsof, lvm2, psmisc packages are installed (`dpkg -l | grep <package>`).
 
 3.  You can install btrfs-progs, lsof, lvm2, psmisc packages using the following commands:
     ```shell
@@ -30,11 +30,11 @@
 
 9.  skale_sla container will be removed because it's deprecated for now.
 
-10. Logs from removed containers are placed inside `.skale/log/.removed_containers` 
+10. Logs from removed containers are placed inside `.skale/log/.removed_containers`.
 
 11. Before `skale node update` make sure that your attached storage isn't mounted.
 
-12. IMA agent is disabled for now. Please make sure that DISABLE_IMA=True is set in .env file before `skale node update`
+12. IMA agent is disabled for now. Please make sure that DISABLE_IMA=True is set in .env file before `skale node update`.
 
 13. Don't forget to specify ENV_TYPE=mainnet in .env.
 
@@ -46,7 +46,7 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 ### Update geth node
 
-Make sure you updated geth node to 1.10.1 version with Berlin hard-fork support
+Make sure you updated geth node to 1.10.1 version with Berlin hard-fork support.
 
 ### Recharge validator wallet
 
@@ -70,7 +70,7 @@ chmod +x /usr/local/bin/sk-val
 
 #### Get SKALE Manager contracts info and set the endpoint
 
-NOTE: Be sure to setup Geth with the following JSON-RPC transports: `geth --http --http.api eth,web3`
+**Note**: Be sure to setup Geth with the following JSON-RPC transports: `geth --http --http.api eth,web3`.
 
 **Terminal Command:**
 
@@ -120,7 +120,7 @@ Required arguments:
 
 #### Recharge wallet
 
-For more information visit [Self recharging wallet](/validators/self-recharging-wallets)
+For more information visit [Self recharging wallet](/validators/self-recharging-wallets).
 
 `ETH_AMOUNT` should be 1 ETH
 
@@ -136,7 +136,7 @@ Using software wallet:
 sk-val srw recharge ETH_AMOUNT --pk-file PATH_TO_PK
 ```
 
-**Note:** Make sure validator account (which you specified as `pk-file` or `ledger`) has at least 1.5 ETH 
+**Note:** Make sure validator account (which you specified as `pk-file` or `ledger`) has at least 1.5 ETH.
 
 ### Update sgx wallet
 
@@ -174,7 +174,7 @@ cd  ~ && vi .env
 
 #### Update .env
 
-Make sure the following options are set
+Make sure the following options are set:
 
 ```shell
 DOCKER_LVMPY_STREAM=1.0.1-stable.1
@@ -188,7 +188,7 @@ ENV_TYPE=mainnet
 
 #### Ensure packages
 
-Make sure the btrfs-progs, iptables-persistent, lsof, lvm2, psmisc package are installed on your machine
+Make sure the btrfs-progs, iptables-persistent, lsof, lvm2, psmisc package are installed on your machine:
 
 ```shell
 dpkg -l | grep btrfs-progs
@@ -198,13 +198,13 @@ dpkg -l | grep lvm2
 dpkg -l | grep psmisc
 ```
 
-Make sure docker-compose version is `1.27.4`
+Make sure docker-compose version is `1.27.4`:
 
 ```shell
 docker-compose --version
 ```
 
-Also make sure your attached storage specified by `DISK_MOUNTPOINT` isn't mounted
+Also make sure your attached storage block device specified by `DISK_MOUNTPOINT` isn't mounted.
 
 #### Perform update
 
