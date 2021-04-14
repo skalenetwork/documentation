@@ -51,6 +51,8 @@ The rest of the versions were provided for docker containers and correspondent t
 
 11. IMA agent is disabled for now. Please make sure that DISABLE_IMA=True is set in .env file before `skale node update`
 
+12. SGX enclave version is changed. You should use https://github.com/skalenetwork/sgxwallet/blob/develop/docs/backup-procedure.md#upgrade-sgxwallet set of instructions to upgrade it.
+
 * * *
 
 ### TestNet Phase 3.1 Versions - SKALE chain creation
