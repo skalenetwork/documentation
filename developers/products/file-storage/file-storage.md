@@ -34,28 +34,23 @@ To instantiate the client you only need to pass the SKALE endpoint into the cons
 
 ```javascript
 const Filestorage = require('@skalenetwork/filestorage.js');
-let filestorage = new Filestorage('----SKALE ENDPOINT----');
-```
-
-Initialize with external **web3 provider**:
-
-```javascript
-const Filestorage = require('@skalenetwork/filestorage.js');
 const Web3 = require('web3');
 
 const web3Provider = new Web3.providers.HttpProvider('----SKALE ENDPOINT----');
 let filestorage = new Filestorage(web3Provider);
 ```
 
+</TCColumnTwo>
+</TCSectionLayout>
+<TCSectionLayout>
+<TCColumnOne>
+
 #### Using in HTML
 
 To use filestorage.js in HTML you should import `filestorage.min.js` from npm package:
 
-```html
-<script src="PATH_TO_PACKAGE/@skalenetwork/filestorage.js/dist/filestorage.min.js"></script>
-```
-
-**Example**:
+</TCColumnOne>
+<TCColumnTwo>
 
 ```html
 <script src="PATH_TO_PACKAGE/@skalenetwork/filestorage.js/dist/filestorage.min.js"></script>
