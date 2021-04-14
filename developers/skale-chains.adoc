@@ -55,7 +55,7 @@ SKALE Chains operate like Ethereum, and there are a few other features and diffe
 
 === Gas-free transactions
 
-Transactions on SKALE Chain run in a gas-*free* way. This means there is gas on SKALE Chains just like on Ethereum, but it's powered by what's called SKALE ETH (sETH), which has no monetary value. In this way,executing transactions and state changes don't incur costs, but require consuming gas in sETH, which is value-less. SKALE Chain gas provides a way to meter or limit transactions on the SKALE Chain to prevent malicious execution.
+Transactions on SKALE Chain run in a gas-*free* way. This means there is gas on SKALE Chains just like on Ethereum, but it's powered by what's called SKALE ETH (skETH), which has no monetary value. In this way,executing transactions and state changes don't incur costs, but require consuming gas in skETH, which is value-less. SKALE Chain gas provides a way to meter or limit transactions on the SKALE Chain to prevent malicious execution.
 
 === Empty Block Intervals
 
@@ -97,7 +97,7 @@ endif::[]
 
 === PoW Mining
 
-Each SKALE Chain comes with a configurable parameter to allow end-users who haven't yet been allocated sETH to conduct SKALE chain transactions, a way to mine gas just before transaction execution. This mining can be done in a browser by running a small nodejs script. 
+Each SKALE Chain comes with a configurable parameter to allow end-users who haven't yet been allocated skETH to conduct SKALE chain transactions, a way to mine gas just before transaction execution. This mining can be done in a browser by running a small nodejs script. 
 
 ifdef::env-github[]
 link:/developers/pow-mining.adoc[See here for more details...]

@@ -18,6 +18,6 @@ Then 1) select Injected Web3.  With MetaMask, select the network button and choo
 
 image::https://user-images.githubusercontent.com/12778980/111390822-c5aca680-8689-11eb-84a7-c86d35161e38.png[]
 
-If you don't have any ETH to deploy (here it's really SKALE ETH or sETH), then head over to the https://faucet.skale.network/[SKALE Faucet] to receive sETH on your SKALE Chain.
+If you don't have any ETH to deploy (here it's really SKALE ETH or skETH), then head over to the https://faucet.skale.network/[SKALE Faucet] to receive skETH on your SKALE Chain.
 
 Finally click the Deploy button. 

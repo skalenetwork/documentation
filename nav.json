@@ -30,6 +30,10 @@
           ]
         },
         {
+          "title": "EthGlobal Hackathon",
+          "link": "/developers/ethglobal"
+        },
+        {
           "title": "SKALE Chains",
           "link": "/developers/skale-chains",
           "links": [
@@ -145,12 +149,14 @@
           ]
         },
         {
+          "title": "Filestorage",
           "link": "/developers/products/file-storage/file-storage",
-          "depth": 0
-        },
-        {
-          "title": "File Storage Upgrades",
-          "link": "/developers/products/file-storage/file-storage-upgrades"
+          "links": [
+            {
+              "title": "Filestorage Upgrades",
+              "link": "/developers/products/file-storage/file-storage-upgrades"
+            }
+          ]
         },
         {
           "title": "Tools & Support",

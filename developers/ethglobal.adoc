@@ -1,0 +1,66 @@
+= ETHGlobal Hackathon
+
+This document covers some general tips and guidances for ETH Global teams working with SKALE Chains.
+
+[NOTE]
+If your team experiences any issues or has any questions, please reach out to the link:https://discordapp.com/invite/gM5XBy6[#dapp-developers channel on Discord]. Please be sure to share your team name along with your request.
+
+== SKALE Chains
+
+SKALE Chains are dApp-specific, meaning SKALE Chains can be customized to support specific dApps with fast finality, no gas fees, and high transaction throughput.
+
+When you request your endpoint, be sure to save the endpoint data as this contains all the access and information you'll need to connect Web3 and gain access to SKALE Chain transactions. You'll have endpoints for deployments, Web3 transactions. viewing SKALE Chain ETH (skETH) balances, link:/developers/skale-chain-eth[informational endpoints to get real Rinkeby ETH balances], SKALE Chain name and ChainId for network settings, and a coupon code for redeeming swag at the SKALE swag store!
+
+=== EVM compatible and fast 
+
+Under the hood, SKALE Chains use Asynchronous Byzantine Binary Agreement and a containerized client called skaled. From the developer standpoint, it's EVM compatible and runs fast with zero-cost gas.
+
+[NOTE]
+ETH Global SKALE Chains are slightly modified from SKALE Network production chains in several ways. First, they're 4-nodes instead of 16-nodes. Second, the blockstorage and filestorage capacities are less than production chains. Third, node rotation is disabled. Fourth, only one size of SKALE Chain is available for EthGlobal.
+
+=== Web3 compatible tooling
+
+Use any Web3 compatible tooling like Remix, Truffle, etc. to deploy and interact with contracts deployed on your SKALE Chain.
+
+==== Develop/Deploy
+* link:/developers/remix-ide[Remix IDE with SKALE Chains]
+* link:/developers/providers[Truffle/Web3 with SKALE Chains]
+
+==== Wallets
+
+Note: to view SKALE Chain ETH (skETH) in your wallets, you'll need to point the wallet to a separate RPC endpoint.
+
+* link:/developers/wallets/bitski[Bitski]
+* link:/developers/wallets/brave[Brave]
+* link:/developers/wallets/magic[Magic (Fortmatic)]
+* link:/developers/wallets/metamask[Metamask]
+* link:/developers/wallets/portis[Portis]
+* link:/developers/wallets/torus[Torus]
+* link:/developers/wallets/wallet-connect[Wallet Connect]
+
+=== 4-node chains
+
+Each chain runs across 4 validator-nodes, therefore each chain has several endpoints. Choose any one to work with. Each port corresponds to http/https/ws/wss service.
+
+Empty blocks are produced every 10 seconds.
+
+And snapshots are taken daily.
+
+[NOTE]
+If your team experiences any issues or has any questions, please reach out to the link:https://discordapp.com/invite/gM5XBy6[#dapp-developers channel on Discord]. Please be sure to share your team name along with any issue/question so the core team and mentors can quickly resolve any issues or questions.
+
+== Filestorage
+
+Each SKALE Chain comes with pre-deployed Filestorage contracts, enabling dApp developers to also use decentralized storage services on their validator nodes. See link:/developers/products/file-storage/file-storage[Filestorage docs] for more information.
+
+== Ethereum Rinkeby - SKALE Bridge (IMA)
+
+You can build or deploy your own bridge, or you can use the pre-deployed Rinkeby-SKALE bridge called IMA. IMA allows you to transfer ETH, ERC20, ERC721 tokens between chains. 
+
+* link:/developers/products/interchain-messaging-agent/overview[IMA documentation]
+* link:https://github.com/skalenetwork/skale-network/blob/master/releases/eth-global/IMA/1.0.0-develop.148/proxyMainnet.json[IMA Rinkeby ABIs]
+* link:https://github.com/skalenetwork/skale-network/blob/master/releases/eth-global/IMA/1.0.0-develop.148/ima_data.json[SKALE Chain pre-deployed ABIs]
+
+== SKALE Chain ETH (skETH)
+
+Each SKALE Chain has ETH provided to the SKALE Owner Wallet. See more link:/developers/skale-chain-eth[about skETH] here. To view Real ETH (Rinkeby) balances, be sure to use the "informational RPC endpoints" provided when you request a SKALE Chain.
