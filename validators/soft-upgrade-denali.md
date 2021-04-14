@@ -38,6 +38,8 @@
 
 13. Don't forget to specify ENV_TYPE=mainnet in .env.
 
+14. Make sure you uploaded valid certificates. Whole chain should be uploaded using `skale ssl upload`. The order of the chain is important too.
+
 ### Manager ABI
 
 For SKALE Validator CLI initialization use SKALE Manager ABI:
