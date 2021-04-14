@@ -61,7 +61,7 @@ Schains launch, IMA beta version
 
 **Node CLI version**: 1.1.0-beta.26 
 
-**SGX version: sgxwallet**: 1.70.0-beta.1
+**SGX version: sgxwallet**: 1.70.0-stable.0
 
 **SKALE Manager version**: 1.8.0-beta.1
 
