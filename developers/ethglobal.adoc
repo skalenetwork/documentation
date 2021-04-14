@@ -30,13 +30,13 @@ Use any Web3 compatible tooling like Remix, Truffle, etc. to deploy and interact
 
 Note: to view SKALE Chain ETH (skETH) in your wallets, you'll need to point the wallet to a separate RPC endpoint.
 
-* link:/developers/products/wallets/bitski[Bitski]
-* link:/developers/products/wallets/brave[Brave]
-* link:/developers/products/wallets/magic[Magic (Fortmatic)]
-* link:/developers/products/wallets/metamask[Metamask]
-* link:/developers/products/wallets/portis[Portis]
-* link:/developers/products/wallets/torus[Torus]
-* link:/developers/products/wallets/wallet-connect[Wallet Connect]
+* link:/developers/wallets/bitski[Bitski]
+* link:/developers/wallets/brave[Brave]
+* link:/developers/wallets/magic[Magic (Fortmatic)]
+* link:/developers/wallets/metamask[Metamask]
+* link:/developers/wallets/portis[Portis]
+* link:/developers/wallets/torus[Torus]
+* link:/developers/wallets/wallet-connect[Wallet Connect]
 
 === 4-node chains
 
