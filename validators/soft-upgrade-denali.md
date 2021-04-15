@@ -233,3 +233,24 @@ skale ssl upload -c PATH_TO_CERT_FILE -k PATH_TO_KEY_FILE
 ```
 
 You can use `-f` option to override existing certificates.
+
+
+##### Check SSL certificates
+
+To check SSL certificates you can use https://github.com/skalenetwork/helper-scripts/blob/develop/ssl_check.py to run simple web server.
+
+Script can be executed using `python3 ssl_check.py PATH_TO_KEY_FILE PATH_TO_PK`
+
+And then check the SSL connection using openssl:
+
+```
+ openssl s_client -connect  DOMAIN_NAME:443 -verify_return_error
+```
+
+The following line indicates that SSL configuration is ok.
+
+```
+    Verify return code: 0 (ok)
+```
+
+Note that by default script serve on `443`. So it should be opened by cloud provider firewall to be able to connect externally using openssl.
