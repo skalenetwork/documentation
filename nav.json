@@ -232,11 +232,20 @@
           "link": "/validators/watchdog"
         },
         {
-          "title": "MainNet",
-          "link": "/validators/versions",
+          "title": "MainNet - Denali",
+          "link": "/validators/versions-denali",
           "links": [
             {
-              "link": "/validators/soft-upgrade"
+              "link": "/validators/soft-upgrade-denali"
+            }
+          ]
+        },
+        {
+          "title": "MainNet - Kilimanjaro",
+          "link": "/validators/versions-kilimanjaro",
+          "links": [
+            {
+              "link": "/validators/soft-upgrade-kilimanjaro"
             }
           ]
         },
