@@ -99,9 +99,9 @@ sk-val srw recharge ETH_AMOUNT --pk-file PATH_TO_PK
 
 ### Update sgx wallet
 
-Update your sgx wallet to `1.70.0-beta.1` using regular update procedure.
+Update your sgx wallet to `1.70.0-stable.0` using upgrade procedure with different enclave version
 
-For more information visit https://github.com/skalenetwork/sgxwallet/blob/develop/docs/run-in-hardware-mode.md#start-stop-and-upgrade-sgxwallet-containers
+For more information visit https://github.com/skalenetwork/sgxwallet/blob/develop/docs/backup-procedure.md#upgrade-sgxwallet
 
 ### Install SKALE Node CLI
 
