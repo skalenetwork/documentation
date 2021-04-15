@@ -8,7 +8,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 #### Node machine
 -   A Linux x86_64 machine
--   SGX-enabled Intel processor
+-   SGX-enabled Intel processor (for SGXWallet machine)
 -   Ports 22, 3009, 8080, 9100, and 10000–18192, and ICMP IPv4 open for all
 -   Ubuntu 18.04
 -   2TB attached storage
