@@ -38,7 +38,9 @@
 
 13. Don't forget to specify ENV_TYPE=mainnet in .env.
 
-14. Make sure you uploaded valid certificates. Whole chain should be uploaded as `-c` in `skale ssl upload`. The order of the chain is important too. More info can be found here https://www.itsfullofstars.de/2016/02/verify-certificate-chain-with-openssl/
+14. SGX enclave version is changed. You should use [https://github.com/skalenetwork/sgxwallet/blob/develop/docs/backup-procedure.md#upgrade-sgxwallet] set of instructions to upgrade it.
+
+15. Make sure you uploaded valid certificates. Whole chain should be uploaded as `-c` in `skale ssl upload`. The order of the chain is important too. More info can be found here [https://www.itsfullofstars.de/2016/02/verify-certificate-chain-with-openssl/]
 
 ### Manager ABI
 
@@ -142,9 +144,9 @@ sk-val srw recharge ETH_AMOUNT --pk-file PATH_TO_PK
 
 ### Update sgx wallet
 
-Update your sgx wallet to `1.70.0-stable.0` using regular update procedure.
+Update your sgx wallet to `1.70.0-stable.0` using upgrade procedure with different enclave version.
 
-For more information visit https://github.com/skalenetwork/sgxwallet/blob/develop/docs/run-in-hardware-mode.md#start-stop-and-upgrade-sgxwallet-containers
+For more information visit https://github.com/skalenetwork/sgxwallet/blob/develop/docs/backup-procedure.md#upgrade-sgxwallet
 
 ### Install SKALE Node CLI
 
