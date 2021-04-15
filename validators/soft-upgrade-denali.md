@@ -38,9 +38,9 @@
 
 13. Don't forget to specify ENV_TYPE=mainnet in .env.
 
-14. SGX enclave version is changed. You should use [https://github.com/skalenetwork/sgxwallet/blob/develop/docs/backup-procedure.md#upgrade-sgxwallet] set of instructions to upgrade it.
+14. SGX enclave version is changed. You should use https://github.com/skalenetwork/sgxwallet/blob/develop/docs/backup-procedure.md#upgrade-sgxwallet set of instructions to upgrade it.
 
-15. Make sure you uploaded valid certificates. Whole chain should be uploaded as `-c` in `skale ssl upload`. The order of the chain is important too. More info can be found here [https://www.itsfullofstars.de/2016/02/verify-certificate-chain-with-openssl/]
+15. Make sure you uploaded valid certificates. Whole chain should be uploaded as `-c` in `skale ssl upload`. The order of the chain is important too. More info can be found here https://www.itsfullofstars.de/2016/02/verify-certificate-chain-with-openssl/
 
 ### Manager ABI
 
