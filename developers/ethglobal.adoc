@@ -9,9 +9,9 @@ If your team experiences any issues or has any questions, please reach out to th
 
 SKALE Chains are dApp-specific, meaning SKALE Chains can be customized to support specific dApps with fast finality, no gas fees, and high transaction throughput.
 
-When you request your endpoint, be sure to save the endpoint data as this contains all the access and information you'll need to connect Web3 and gain access to SKALE Chain transactions. You'll have endpoints for deployments, Web3 transactions. viewing SKALE Chain ETH (skETH) balances, link:/developers/skale-chain-eth[informational endpoints to get real Rinkeby ETH balances], SKALE Chain name and ChainId for network settings, and a coupon code for redeeming swag at the SKALE swag store!
+When you request your endpoint, be sure to save the endpoint data as this contains all the access and information you'll need to connect Web3 and gain access to SKALE Chain transactions. You'll have endpoints for deployments, Web3 transactions. viewing SKALE Chain ETH (skETH) balances, link:/docs/developers/skale-chain-eth[informational endpoints to get real Rinkeby ETH balances], SKALE Chain name and ChainId for network settings, and a coupon code for redeeming swag at the SKALE swag store!
 
-=== EVM compatible and fast 
+=== EVM compatible and fast
 
 Under the hood, SKALE Chains use Asynchronous Byzantine Binary Agreement and a containerized client called skaled. From the developer standpoint, it's EVM compatible and runs fast with zero-cost gas.
 
@@ -23,20 +23,20 @@ ETH Global SKALE Chains are slightly modified from SKALE Network production chai
 Use any Web3 compatible tooling like Remix, Truffle, etc. to deploy and interact with contracts deployed on your SKALE Chain.
 
 ==== Develop/Deploy
-* link:/developers/remix-ide[Remix IDE with SKALE Chains]
-* link:/developers/providers[Truffle/Web3 with SKALE Chains]
+* link:/docs/developers/remix-ide[Remix IDE with SKALE Chains]
+* link:/docs/developers/providers[Truffle/Web3 with SKALE Chains]
 
 ==== Wallets
 
 Note: to view SKALE Chain ETH (skETH) in your wallets, you'll need to point the wallet to a separate RPC endpoint.
 
-* link:/developers/wallets/bitski[Bitski]
-* link:/developers/wallets/brave[Brave]
-* link:/developers/wallets/magic[Magic (Fortmatic)]
-* link:/developers/wallets/metamask[Metamask]
-* link:/developers/wallets/portis[Portis]
-* link:/developers/wallets/torus[Torus]
-* link:/developers/wallets/wallet-connect[Wallet Connect]
+* link:/docs/developers/wallets/bitski[Bitski]
+* link:/docs/developers/wallets/brave[Brave]
+* link:/docs/developers/wallets/magic[Magic (Fortmatic)]
+* link:/docs/developers/wallets/metamask[Metamask]
+* link:/docs/developers/wallets/portis[Portis]
+* link:/docs/developers/wallets/torus[Torus]
+* link:/docs/developers/wallets/wallet-connect[Wallet Connect]
 
 === 4-node chains
 
@@ -51,16 +51,16 @@ If your team experiences any issues or has any questions, please reach out to th
 
 == Filestorage
 
-Each SKALE Chain comes with pre-deployed Filestorage contracts, enabling dApp developers to also use decentralized storage services on their validator nodes. See link:/developers/products/file-storage/file-storage[Filestorage docs] for more information.
+Each SKALE Chain comes with pre-deployed Filestorage contracts, enabling dApp developers to also use decentralized storage services on their validator nodes. See link:/docs/developers/products/file-storage/file-storage[Filestorage docs] for more information.
 
 == Ethereum Rinkeby - SKALE Bridge (IMA)
 
-You can build or deploy your own bridge, or you can use the pre-deployed Rinkeby-SKALE bridge called IMA. IMA allows you to transfer ETH, ERC20, ERC721 tokens between chains. 
+You can build or deploy your own bridge, or you can use the pre-deployed Rinkeby-SKALE bridge called IMA. IMA allows you to transfer ETH, ERC20, ERC721 tokens between chains.
 
-* link:/developers/products/interchain-messaging-agent/overview[IMA documentation]
+* link:/docs/developers/products/interchain-messaging-agent/overview[IMA documentation]
 * link:https://github.com/skalenetwork/skale-network/blob/master/releases/eth-global/IMA/1.0.0-develop.148/proxyMainnet.json[IMA Rinkeby ABIs]
 * link:https://github.com/skalenetwork/skale-network/blob/master/releases/eth-global/IMA/1.0.0-develop.148/ima_data.json[SKALE Chain pre-deployed ABIs]
 
 == SKALE Chain ETH (skETH)
 
-Each SKALE Chain has ETH provided to the SKALE Owner Wallet. See more link:/developers/skale-chain-eth[about skETH] here. To view Real ETH (Rinkeby) balances, be sure to use the "informational RPC endpoints" provided when you request a SKALE Chain.
+Each SKALE Chain has ETH provided to the SKALE Owner Wallet. See more link:/docs/developers/skale-chain-eth[about skETH] here. To view Real ETH (Rinkeby) balances, be sure to use the "informational RPC endpoints" provided when you request a SKALE Chain.
