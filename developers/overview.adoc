@@ -39,7 +39,7 @@ SKALE Network uses a https://skale.network/blog/technical-highlights/[unique com
 
 SKALE Network is designed to work with all Ethereum compatible tools such as API-based wallets and monitoring and analytics. 
 
-link:/developers/integrations[View integrations]
+link:/docs/developers/integrations[View integrations]
 
 ==== Get Access
 
@@ -51,7 +51,7 @@ If you don't have a SKALE Chain yet, you can get started with:
 * http://skale.chat[Request a Testnet SKALE Chain in Discord] (depending on availability)
 * https://skale.network/innovators-signup[Apply to SIP Program] for a chance to receive a SKALE Mainnet chain grant.
 
-Still not sure how to get started? Then head over to the link:/developers/getting-started/beginner[Beginner's guide] or reach out to the http://skale.chat[SKALE Network developer community on Discord].
+Still not sure how to get started? Then head over to the link:/docs/developers/getting-started/beginner[Beginner's guide] or reach out to the http://skale.chat[SKALE Network developer community on Discord].
 
 ==== Engage with SKALE Network Community
 
