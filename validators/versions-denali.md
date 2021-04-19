@@ -22,7 +22,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **Validator CLI**:  [1.2.0](https://github.com/skalenetwork/validator-cli/releases/tag/1.2.0)
 
-**SGX Wallet**: [1.70.0-stable.0](https://github.com/skalenetwork/sgxwallet/releases/tag/1.70.0-stable.0)
+**SGX Wallet**: [1.70.0-stable.0](https://github.com/skalenetwork/sgxwallet/releases/tag/1.70.0-stable.0) Container: `skalenetwork/sgxwallet_release:1.70.0-stable.0`
 
 **Skale node**: [1.2.0](https://github.com/skalenetwork/skale-node/releases/tag/1.2.0)
 
