@@ -184,7 +184,7 @@ Make sure the following options are set:
 DOCKER_LVMPY_STREAM=1.0.1-stable.1
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.8.0/skale-manager-1.8.0-mainnet-abi.json
 IMA_CONTRACTS_ABI_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/mainnet-ima/ima.json
-CONTAINER_CONFIGS_STREAM=1.2.0
+CONTAINER_CONFIGS_STREAM=1.2.1
 FILEBEAT_HOST=filebeat.mainnet.skalenodes.com:5000
 DISABLE_IMA=True
 ENV_TYPE=mainnet
