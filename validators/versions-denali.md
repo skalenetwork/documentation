@@ -24,7 +24,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **SGX Wallet**: [1.70.0-stable.0](https://github.com/skalenetwork/sgxwallet/releases/tag/1.70.0-stable.0) Container: `skalenetwork/sgxwallet_release:1.70.0-stable.0`
 
-**Skale node**: [1.2.1](https://github.com/skalenetwork/skale-node/releases/tag/1.2.1)
+**Skale node**: [1.2.2](https://github.com/skalenetwork/skale-node/releases/tag/1.2.2)
 
 **Skaled**: [3.5.12-stable.1](https://github.com/skalenetwork/skaled/releases/tag/3.5.12-stable.1)
 
@@ -32,7 +32,7 @@ The rest of the versions were provided for docker containers and correspondent t
 
 **Transaction manager**: [1.1.0-stable.0](https://github.com/skalenetwork/transaction-manager/releases/tag/1.1.0-stable.0)
 
-**Skale admin**: [1.1.0-stable.0](https://github.com/skalenetwork/skale-admin/releases/tag/1.1.0-stable.0)
+**Skale admin**: [1.1.0-stable.1](https://github.com/skalenetwork/skale-admin/releases/tag/1.1.0-stable.1)
 
 **Bounty agent**: [1.1.1-stable.0](https://github.com/skalenetwork/bounty-agent/releases/tag/1.1.1-stable.0)
 
@@ -68,7 +68,7 @@ MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.1-stable.1
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.8.0/skale-manager-1.8.0-mainnet-abi.json
 IMA_CONTRACTS_ABI_URL=https://skale-contracts.nyc3.digitaloceanspaces.com/mainnet-ima/ima.json
-CONTAINER_CONFIGS_STREAM=1.2.1
+CONTAINER_CONFIGS_STREAM=1.2.2
 FILEBEAT_HOST=filebeat.mainnet.skalenodes.com:5000
 DISABLE_IMA=True
 ENV_TYPE=mainnet
