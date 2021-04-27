@@ -144,7 +144,7 @@ sk-val srw recharge ETH_AMOUNT --pk-file PATH_TO_PK
 
 ### Update sgx wallet
 
-Update your sgx wallet to `1.70.0-stable.0` using upgrade procedure with different enclave version.
+Update your sgx wallet container to `skalenetwork/sgxwallet_release:1.70.0-stable.0` using upgrade procedure with different enclave version.
 
 For more information visit https://github.com/skalenetwork/sgxwallet/blob/develop/docs/backup-procedure.md#upgrade-sgxwallet
 
