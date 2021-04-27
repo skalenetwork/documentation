@@ -237,6 +237,9 @@
           "links": [
             {
               "link": "/validators/soft-upgrade-denali"
+            }, 
+            {
+              "link": "/validators/hotfix-denali.md"
             }
           ]
         },
