@@ -2,7 +2,7 @@
 
 ### Important notes
 
-Make sure that `FILEBEAT_HOST` opiton is set to `filebeat.mainnet.skalenodes.com:5000`
+Make sure that `FILEBEAT_HOST` option is set to `filebeat.mainnet.skalenodes.com:5000`
 
 ### Update node using skale node update
 
