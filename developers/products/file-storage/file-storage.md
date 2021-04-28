@@ -195,7 +195,7 @@ async function downloadFileToVariable(storagePath) {
   let web3 = new Web3(web3Provider);
 
   //get filestorage instance
-  let filestorage = new FilestorageClient(web3, true);
+  let filestorage = new Filestorage(web3, true);
 
   let file = await filestorage.downloadToBuffer(storagePath);
   file = 'data:image/png;base64,' + file.toString('base64');
