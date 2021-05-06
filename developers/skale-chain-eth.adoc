@@ -14,7 +14,7 @@ For Testnets, a faucet is available to fund accounts on your specific endpoint. 
 
 == ETH on Mainnet SKALE Chains
 
-For Mainnet, the SKALE Chain owner account is provided ETH for the SKALE Chain. From this account, the owner can fund contracts, accounts, conduct transactions, etc. Also, SKALE Chain users can mine for SKALE ETH by running a simple PoW script. link:/developers/pow-mining[See PoW Mining for more info.]
+For Mainnet, the SKALE Chain owner account is provided ETH for the SKALE Chain. From this account, the owner can fund contracts, accounts, conduct transactions, etc. Also, SKALE Chain users can mine for SKALE ETH by running a simple PoW script. link:/docs/developers/pow-mining[See PoW Mining for more info.]
 
 == Real ETH on SKALE Chains
 
