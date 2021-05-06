@@ -41,6 +41,9 @@
               "link": "/developers/skale-chain-sizes"
             },
             {
+              "link": "/developers/skale-chain-eth"
+            },
+            {
               "link": "/developers/block-rotation"
             },
             {
@@ -239,7 +242,7 @@
               "link": "/validators/soft-upgrade-denali"
             }, 
             {
-              "link": "/validators/hotfix-denali.md"
+              "link": "/validators/hotfix-denali"
             }
           ]
         },
