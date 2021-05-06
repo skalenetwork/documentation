@@ -119,7 +119,7 @@ const customCommon = Common.forCustomChain(
 
 let contractOwnerPrivateKey = new Buffer("[YOUR_PRIVATE_KEY]", 'hex');
 
-let contractOwnerAccount = "[CONTRACT_OWNER_ACCOUNT]";
+let contractOwnerAccount = "[CONTRACT_OWNER_ACCOUNT]"; // SKALE Chain owner or authorized deployer account
 
 let schainEndpoint = "[YOUR_SKALE_CHAIN_ENDPOINT]";
 
