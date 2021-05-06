@@ -85,7 +85,9 @@ contract MyERC721 is ERC721Full, ERC721Mintable, ERC721Burnable {
 }
 ```
 
-If you aren't using OpenZeppelin's framework, then you can simply manually add [Mintable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/c3178ff942f9f487b9fda2c648aa19e633560adb/contracts/token/ERC721/ERC721.sol#L256) and [Burnable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/c3178ff942f9f487b9fda2c648aa19e633560adb/contracts/token/ERC721/ERC721.sol#L278) functions, and finally [add MINTER_ROLE access control](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.1/contracts/access/roles/MinterRole.sol). 
+If you aren't using OpenZeppelin's framework, then you can manually add [Mintable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/c3178ff942f9f487b9fda2c648aa19e633560adb/contracts/token/ERC721/ERC721.sol#L256) and [Burnable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/c3178ff942f9f487b9fda2c648aa19e633560adb/contracts/token/ERC721/ERC721.sol#L278) functions, and finally [add MINTER_ROLE access control](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.1/contracts/access/roles/MinterRole.sol). Be sure that the main mint and burn functions have `public` visibility with the private _mint and _burn functions as `internal` visibility. For a further example, see [IMA ERC721 Custom Token](https://github.com/skalenetwork/IMA/blob/develop/proxy/test-tokens/contracts/ERC721Custom.sol).
+
+For a set of examples for IMA SKALE-Chain side suitable tokens, see the [IMA test-tokens folder](https://github.com/skalenetwork/IMA/tree/develop/proxy/test-tokens).
 
 </Step>
 
