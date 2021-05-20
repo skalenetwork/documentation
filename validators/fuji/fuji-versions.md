@@ -21,7 +21,7 @@ The rest of the versions were provided for docker containers and correspondent t
 -   live-restore enable in docker-config ([docker docs](https://docs.docker.com/config/containers/live-restore/))
 
 **Notes:**
-- SSL certificates can be verified using `skale ssl check` command
+-  SSL certificates can be verified using `skale ssl check` command
 
 * * *
 
