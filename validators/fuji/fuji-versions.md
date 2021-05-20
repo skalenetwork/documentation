@@ -20,9 +20,6 @@ The rest of the versions were provided for docker containers and correspondent t
 -   geth node with `1.10.1` version
 -   live-restore enable in docker-config ([docker docs](https://docs.docker.com/config/containers/live-restore/))
 
-**Notes:**
--  SSL certificates can be verified using `skale ssl check` command
-
 * * *
 
 ### TestNet Phase 3.2 Versions - SKALE chain creation hotfix
