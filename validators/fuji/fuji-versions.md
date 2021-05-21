@@ -20,6 +20,15 @@ The rest of the versions were provided for docker containers and correspondent t
 -   geth node with `1.10.1` version
 -   live-restore enable in docker-config ([docker docs](https://docs.docker.com/config/containers/live-restore/))
 
+**Important notes:**  
+
+1.  Ports `3009`, `8080`, `443`, `9100`, and `10000–18192`, and ICMP IPv4 should not be closed by external firewall.
+If you're using `ufw` or `iptables` for configuring your own rules, please, do not open any of this ports.
+
+2.  Make sure that other network nodes receives packets from your node with source IP address that is equal to IP address that you provided during node registration (it can be found in `skale node info` output).
+
+3.  Please, don't forget to check your SSL certificates using `skale ssl check` command.
+
 * * *
 
 ### TestNet Phase 3.2 Versions - SKALE chain creation hotfix
