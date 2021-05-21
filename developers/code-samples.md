@@ -24,6 +24,8 @@ NOTE: To deploy your smart contracts onto SKALE, you need to write a script usin
  *  @param {String} provider - Provide your SKALE endpoint address.
  */
 import { HardhatUserConfig } from "hardhat/config";
+import "@nomiclabs/hardhat-web3";
+import "@nomiclabs/hardhat-ethers";
 
 //https://skale.network/developers/ for SKALE documentation
 //Provide your wallet private key
@@ -69,7 +71,7 @@ Truffle is a popular way to deploy your smart contracts onto Ethereum, and can a
 
 For more information on truffle configuration files, please see  [Truffle's Configuration Documentation](https://truffleframework.com/docs/truffle/reference/configuration).  
 
-NOTE: To deploy your smart contracts onto SKALE, the transaction needs to be signed. This code below shows how to use the truffle-hdwallet-provider package to sign the transaction with the private key of your wallet.  
+NOTE: To deploy your smart contracts onto SKALE, the transaction needs to be signed. This code below shows how to use the @truffle/hdwallet-provider package to sign the transaction with the private key of your wallet.  
 
 ```javascript
 /*
@@ -80,8 +82,6 @@ NOTE: To deploy your smart contracts onto SKALE, the transaction needs to be sig
  */
 
 let HDWalletProvider = require("@truffle/hdwallet-provider");
-import "@nomiclabs/hardhat-web3";
-import "@nomiclabs/hardhat-ethers";
 
 //https://skale.network/developers/ for SKALE documentation
 //Provide your wallet private key
