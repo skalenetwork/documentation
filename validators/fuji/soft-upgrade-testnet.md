@@ -26,6 +26,12 @@ chmod +x /usr/local/bin/sk-val
 
 ### Install SKALE Node CLI
 
+**Note**
+
+Ports `3009`, `8080`, `443`, `9100`, and `10000–18192`, and ICMP IPv4 should not be closed by external firewall.
+If you're using `ufw` or `iptables` for configuring your own rules, please, do not open any of this ports.
+
+
 #### Download the SKALE Node CLI binary
 
 Make sure `VERSION_NUM` is `1.1.1-beta.1`
