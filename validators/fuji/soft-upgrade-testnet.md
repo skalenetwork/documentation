@@ -58,7 +58,7 @@ Make sure the following options are set
 
 ```shell
 DOCKER_LVMPY_STREAM=1.0.1-beta.2
-CONTAINER_CONFIGS_STREAM=1.7.0-testnet
+CONTAINER_CONFIGS_STREAM=1.7.1-testnet
 FILEBEAT_HOST=filebeat.testnet.skalenodes.com:5001
 DISABLE_IMA=True
 ENV_TYPE=testnet
@@ -72,6 +72,8 @@ skale node update .env
 ```
 
 #### Check your SSL certificate
+
+Certificate file should be in `PEM` format and contain full certificate chain
 
 ##### Run skale ssl check to make sure your ssl certificate is valid
 
