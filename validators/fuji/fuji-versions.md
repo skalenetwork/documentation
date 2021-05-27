@@ -17,7 +17,7 @@ The rest of the versions were provided for docker containers and correspondent t
 -   docker
 -   docker-compose -> `1.27.4`
 -   iptables-persistent, btrfs-progs, lsof, lvm2, psmisc apt packages 
--   geth node with `1.10.1` version
+-   geth node with `1.10.2` version
 -   live-restore enable in docker-config ([docker docs](https://docs.docker.com/config/containers/live-restore/))
 
 **Important notes:**  
