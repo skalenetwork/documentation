@@ -6,15 +6,72 @@ You can share your own code sample by reaching out to the SKALE developer commun
 
 <button>[Access Discord](http://skale.chat/)</button>
 
-Use these deployment script examples to deploy your smart contracts onto your SKALE Chain.  
+Use these deployment script examples to deploy your smart contracts onto your SKALE Chain. 
+
+#### Hardhat Script
+
+Hardhat is a popular way to deploy your smart contracts onto Ethereum, and can also be used to deploy your smart contracts onto SKALE. You can update your hardhat configuration file (hardhat.сonfig.js or hardhat.config.ts) with a configuration to deploy your smart contracts onto SKALE.  
+
+For more information on hardhat configuration files, please see  [Hardhat's Configuration Documentation](https://hardhat.org/config/).  
+
+NOTE: To deploy your smart contracts onto SKALE, you need to write a script using ethers or web3. This code below shows how to setup hardhat with the private key of your wallet and endpoint to SKALE.
+
+```typescript
+/*
+ * This hardhat script will deploy your smart contracts to your SKALE Chain.
+ *
+ *  @param {String} privateKey - Provide your wallet private key.
+ *  @param {String} provider - Provide your SKALE endpoint address.
+ */
+import { HardhatUserConfig } from "hardhat/config";
+import "@nomiclabs/hardhat-web3";
+import "@nomiclabs/hardhat-ethers";
+
+//https://skale.network/developers/ for SKALE documentation
+//Provide your wallet private key
+let privateKey = "[YOUR_PRIVATE_KEY]";
+
+//Provide your SKALE endpoint address
+let skale = "[YOUR_SKALE_CHAIN_ENDPOINT]";
+
+const config: HardhatUserConfig = {
+  defaultNetwork: "skale",
+  solidity: {
+    version: '0.8.0',
+    settings: {
+      optimizer:{
+        enabled: true,
+        runs: 200
+      }
+    }
+  },
+  networks: {
+    skale: {
+        url: skale,
+        accounts: [privateKey],
+        gasPrice: 0
+    }
+  }
+};
+
+export default config;
+
+```
+
+You can point your deployment scripts for your existing smart contracts to your SKALE Chain’s address and deploy using existing tooling (e.g.: hardhat). An example hardhat deployment command to deploy your smart contracts using the 'skale' network in the script above is:  
+
+```shell
+hardhat run upgrageToSkale.ts --network skale
+
+```
 
 #### Truffle Script
 
-Truffle is a popular way to deploy your smart contracts onto Ethereum, and can also be used to deploy your smart contracts onto SKALE. You can update your truffle configuration file (truffle.js) with a configuration to deploy your smart contracts onto SKALE.  
+Truffle is a popular way to deploy your smart contracts onto Ethereum, and can also be used to deploy your smart contracts onto SKALE. You can update your truffle configuration file (truffle-config.js) with a configuration to deploy your smart contracts onto SKALE.  
 
 For more information on truffle configuration files, please see  [Truffle's Configuration Documentation](https://truffleframework.com/docs/truffle/reference/configuration).  
 
-NOTE: To deploy your smart contracts onto SKALE, the transaction needs to be signed. This code below shows how to use the truffle-hdwallet-provider package to sign the transaction with the private key of your wallet.  
+NOTE: To deploy your smart contracts onto SKALE, the transaction needs to be signed. This code below shows how to use the @truffle/hdwallet-provider package to sign the transaction with the private key of your wallet.  
 
 ```javascript
 /*
@@ -24,7 +81,7 @@ NOTE: To deploy your smart contracts onto SKALE, the transaction needs to be sig
  *  @param {String} provider - Provide your SKALE endpoint address.
  */
 
-let HDWalletProvider = require("truffle-hdwallet-provider");
+let HDWalletProvider = require("@truffle/hdwallet-provider");
 
 //https://skale.network/developers/ for SKALE documentation
 //Provide your wallet private key
