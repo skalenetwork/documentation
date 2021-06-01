@@ -41,7 +41,7 @@ If you're using `ufw` or `iptables` for configuring your own rules, please, do n
 
 **SKALE Manager version**: 1.8.0-beta.1
 
-**Skaled version**: 3.5.14-beta.5
+**Skaled version**: 3.5.14-beta.6
 
 **Skale Admin version**: 1.1.0-beta.57
 
@@ -51,7 +51,7 @@ If you're using `ufw` or `iptables` for configuring your own rules, please, do n
 
 **docker-lvmpy**: 1.0.1-beta.2
 
-**skale-node**: 1.7.2-testnet
+**skale-node**: 1.7.3-testnet
 
 **watchdog**: 1.1.3-beta.9
 
@@ -62,7 +62,7 @@ MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.1-beta.2
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.0/skale-manager-1.8.0-beta.1-rinkeby-abi.json
 IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.2/abi.json
-CONTAINER_CONFIGS_STREAM=1.7.1-testnet
+CONTAINER_CONFIGS_STREAM=1.7.3-testnet
 ENV_TYPE=testnet
 FILEBEAT_HOST=filebeat.testnet.skalenodes.com:5001
 SGX_SERVER_URL=[By validator, setup SGX wallet first]
