@@ -65,6 +65,7 @@ IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-netwo
 CONTAINER_CONFIGS_STREAM=1.7.3-testnet
 ENV_TYPE=testnet
 FILEBEAT_HOST=filebeat.testnet.skalenodes.com:5001
+DISABLE_IMA=True
 SGX_SERVER_URL=[By validator, setup SGX wallet first]
 DISK_MOUNTPOINT=[By validator, your attached storage /dev/sda or /dev/xvdd (this is an example. You just need to use your 2TB block volume mount point)]
 DB_PORT=[By validator]
