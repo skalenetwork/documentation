@@ -1,0 +1,15 @@
+# File Storage Web3 Server
+
+SKALE Chain nodes run a special NGINX Webserver that provides read-only access to each file uploaded using SKALE Chain Filestorage.
+
+To access the file, use the following URL convention:
+
+`http(s):/NODE_DOMAIN_NAME/SKALE_CHAIN_ID/FILESTORAGE_FULL_PATH`
+
+
+Example:
+
+```shell
+https://node1.validator.com/fluffy-marsupial/77333Da3492C4BBB9CCF3EA5BB63D6202F86CDA8/directoryA/random_text.txt
+```
+
