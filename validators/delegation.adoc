@@ -16,7 +16,18 @@ toc::[]
 
 == Introduction
 
-The SKALE Token (SKL) is the first ERC token with delegation/staking functions. SKL is a modified ERC-777 with backward compatibility to ERC-20. Therefore, you may use any ERC-20 compatible wallet to hold and stake your tokens into the SKALE Network.
+The SKALE Token (SKL) is the first ERC token with delegation/staking functions. SKL is a modified ERC-777 with backward compatibility to ERC-20. Therefore, you may use any ERC-20 compatible wallet to hold and stake your tokens into the SKALE Network. Transfers and approvals work the same in ERC-777 as in ERC-20 – the only difference is that ERC-777 allows for certain functions/checks before transfers are executed. The SKL token uses this pre-transfer function to conduct certain checks.
+
+The SKALE Token address is: `0x00c83aeCC790e8a4453e5dD3B0B4b3680501a7A7`
+
+GitHub (Contract Code): https://github.com/skalenetwork/skale-manager/blob/1.7.0-stable.0/contracts/SkaleToken.sol
+
+Etherscan (Verified Contract): https://etherscan.io/address/0x00c83aeCC790e8a4453e5dD3B0B4b3680501a7A7#code
+
+SKALE ABIs: https://github.com/skalenetwork/skale-network/tree/master/releases/mainnet/skale-manager/1.7.0
+
+Audits: https://github.com/skalenetwork/skale-manager/blob/develop/.github/SECURITY.md
+
 
 SKL token holders propose delegations to stake tokens to validators. Delegators help secure the network and, in return, receive bounty rewards. Delegators may delegate to multiple validators.
 

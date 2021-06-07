@@ -1,0 +1,23 @@
+= Remix IDE
+
+Developers can also use the https://remix.ethereum.org[Remix IDE] as a developer environment for SKALE Chains. With Remix, you can choose an environment to work from: either compiling your contracts using a sandbox blockchain in your browser (JavaScript VM), or using Injected Web3 that hands off the interface to a provider such as MetaMask, that in turn connects to your SKALE Chain endpoint.
+
+For detailed documentation on Remix, see here: https://remix-ide.readthedocs.io/en/latest/#
+
+To get started with Remix, follow the live sandbox below:
+
+== Live Remix Sandbox
+
+Here is a Live Sandbox using Remix IDE with a simple Hello World program: https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.2+commit.661d1103.js&gist=6002b273ab8d5b0ab23f96903c51484d
+
+To deploy to a SKALE Chain, first compile your contract and navigate to the "Deploy & Run Transactions" Tab on the left shown by the yellow arrow.
+
+image::https://user-images.githubusercontent.com/12778980/111384112-82e5d100-867f-11eb-8689-6538177b4cf1.png[]
+
+Then 1) select Injected Web3.  With MetaMask, select the network button and choose "Custom RPC", and 2) enter your SKALE Chain endpoint and 3) your ChainID. Your 4) account field should populate after Remix connects through MetaMask to your SKALE Chain.  
+
+image::https://user-images.githubusercontent.com/12778980/111390822-c5aca680-8689-11eb-84a7-c86d35161e38.png[]
+
+If you don't have any ETH to deploy (here it's really SKALE ETH or skETH), then head over to the https://faucet.skale.network/[SKALE Faucet] to receive skETH on your SKALE Chain.
+
+Finally click the Deploy button. 

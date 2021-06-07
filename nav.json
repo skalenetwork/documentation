@@ -26,9 +26,44 @@
             },
             {
               "link": "/developers/example-dapps"
+            }
+          ]
+        },
+        {
+          "title": "EthGlobal Hackathon",
+          "link": "/developers/ethglobal"
+        },
+        {
+          "title": "SKALE Chains",
+          "link": "/developers/skale-chains",
+          "links": [
+            {
+              "link": "/developers/skale-chain-sizes"
+            },
+            {
+              "link": "/developers/skale-chain-eth"
+            },
+            {
+              "link": "/developers/block-rotation"
+            },
+            {
+              "title": "Providers/Libraries",
+              "link": "/developers/providers"
+            },
+            {
+              "title": "Remix IDE",
+              "link": "/developers/remix-ide"
             },
             {
               "link": "/developers/events-subscriptions"
+            },
+            {
+              "title": "JSON-RPC Interface",
+              "link": "/documentation/skaled/docs/json-rpc-interface"
+            },
+            {
+              "title": "Snapshots",
+              "link": "/documentation/skaled/docs/snapshots"
             }
           ]
         },
@@ -39,6 +74,10 @@
             {
               "title": "Metamask",
               "link": "/developers/wallets/metamask"
+            },
+            {
+              "title": "Brave",
+              "link": "/developers/wallets/brave"
             },
             {
               "title": "Portis",
@@ -117,8 +156,14 @@
           ]
         },
         {
-          "link": "/developers/products/file-storage",
-          "depth": 0
+          "title": "Filestorage",
+          "link": "/developers/products/file-storage/file-storage",
+          "links": [
+            {
+              "title": "Filestorage Upgrades",
+              "link": "/developers/products/file-storage/file-storage-upgrades"
+            }
+          ]
         },
         {
           "title": "Tools & Support",
@@ -169,6 +214,9 @@
               "link": "/validators/skale-node"
             },
             {
+              "link": "/validators/changing-node-ip"
+            },
+            {
               "link": "/validators/faq"
             }
           ]
@@ -191,11 +239,23 @@
           "link": "/validators/watchdog"
         },
         {
-          "title": "MainNet",
-          "link": "/validators/versions",
+          "title": "MainNet - Denali",
+          "link": "/validators/versions-denali",
           "links": [
             {
-              "link": "/validators/soft-upgrade"
+              "link": "/validators/soft-upgrade-denali"
+            }, 
+            {
+              "link": "/validators/hotfix-denali"
+            }
+          ]
+        },
+        {
+          "title": "MainNet - Kilimanjaro",
+          "link": "/validators/versions-kilimanjaro",
+          "links": [
+            {
+              "link": "/validators/soft-upgrade-kilimanjaro"
             }
           ]
         },
@@ -242,6 +302,9 @@
         },
         {
           "link": "/technology/skale-dkg"
+        },
+        {
+          "link": "/technology/block-rotation-spec"
         },
         {
           "title": "SKALE Manager",

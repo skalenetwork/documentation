@@ -85,7 +85,9 @@ contract MyERC721 is ERC721Full, ERC721Mintable, ERC721Burnable {
 }
 ```
 
-If you aren't using OpenZeppelin's framework, then you can simply manually add [Mintable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/c3178ff942f9f487b9fda2c648aa19e633560adb/contracts/token/ERC721/ERC721.sol#L256) and [Burnable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/c3178ff942f9f487b9fda2c648aa19e633560adb/contracts/token/ERC721/ERC721.sol#L278) functions, and finally [add MINTER_ROLE access control](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.1/contracts/access/roles/MinterRole.sol). 
+If you aren't using OpenZeppelin's framework, then you can manually add [Mintable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/c3178ff942f9f487b9fda2c648aa19e633560adb/contracts/token/ERC721/ERC721.sol#L256) and [Burnable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/c3178ff942f9f487b9fda2c648aa19e633560adb/contracts/token/ERC721/ERC721.sol#L278) functions, and finally [add MINTER_ROLE access control](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.1/contracts/access/roles/MinterRole.sol). Be sure that the main mint and burn functions have `public` visibility with the private _mint and _burn functions as `internal` visibility. For a further example, see [IMA ERC721 Custom Token](https://github.com/skalenetwork/IMA/blob/develop/proxy/test-tokens/contracts/ERC721Custom.sol).
+
+For a set of examples for IMA SKALE-Chain side suitable tokens, see the [IMA test-tokens folder](https://github.com/skalenetwork/IMA/tree/develop/proxy/test-tokens).
 
 </Step>
 
@@ -98,16 +100,26 @@ Now you need to add the pre-deployed LockAndDataForSchainERC721 contact on your 
 ##### Example Add Minter Role 
 
 ```javascript
-import Tx from "ethereumjs-tx";
-
+import Common from "ethereumjs-common";
+const Tx = require("ethereumjs-tx").Transaction;
 const Web3 = require("web3");
 
 let schainABIs = "[YOUR_SKALE_CHAIN_ABIs]";
 let schainERC721ABI = "[YOUR_SCHAIN_ERC721_ABI]";
+let chainId = "[YOUR_SKALE_CHAIN_CHAIN_ID]";
+
+const customCommon = Common.forCustomChain(
+    "mainnet",
+    {
+      name: "skale-network",
+      chainId: chainId
+    },
+    "istanbul"
+  );
 
 let contractOwnerPrivateKey = new Buffer("[YOUR_PRIVATE_KEY]", 'hex');
 
-let contractOwnerAccount = "[CONTRACT_OWNER_ACCOUNT]";
+let contractOwnerAccount = "[CONTRACT_OWNER_ACCOUNT]"; // SKALE Chain owner or authorized deployer account
 
 let schainEndpoint = "[YOUR_SKALE_CHAIN_ENDPOINT]";
 
@@ -140,7 +152,7 @@ let addMinter = schainERC721Contract.methods
       value: 0
     };
     //sign transaction
-    const txAddMinter = new Tx(rawTxAddMinter);
+    const txAddMinter = new Tx(rawTxAddMinter, { common: customCommon });
     txAddMinter.sign(contractOwnerPrivateKey);
 
     const serializedTxAddMinter = txAddMinter.serialize();
@@ -165,7 +177,7 @@ Third, you need to register the Mainnet token contract into IMA on Mainnet using
 
 ```javascript
 const Web3 = require("web3");
-const Tx = require("ethereumjs-tx");
+const Tx = require("ethereumjs-tx").Transaction;
 
 let rinkebyABIs = "[YOUR_RINKEBY_ABIs]";
 let rinkebyERC721ABI = "[YOUR_RINKEBY_ERC721_ABI]";
@@ -176,6 +188,7 @@ let erc721OwnerForMainnet = "[YOUR_ERC721_MAINNET_OWNER]";
 
 let rinkeby = "[YOUR_RINKEBY_ENDPOINT]";
 let schainName = "[YOUR_SKALE_CHAIN_NAME]";
+let chainId = "[YOUR_RINKEBY_CHAIN_ID]";
 
 const lockAndDataAddress =
   rinkebyABIs.lock_and_data_for_mainnet_erc721_address;
@@ -196,6 +209,7 @@ let addERC721TokenByOwner = LockAndDataForMainnet.methods
 
   web3ForMainnet.eth.getTransactionCount(erc721OwnerForMainnet).then((nonce) => {
     const rawTxAddERC20TokenByOwner = {
+      chainId: chainId,
       from: erc721OwnerForMainnet,
       nonce: "0x" + nonce.toString(16),
       data: addERC721TokenByOwner,
@@ -208,7 +222,10 @@ let addERC721TokenByOwner = LockAndDataForMainnet.methods
     };
 
     //sign transaction
-    const txAddERC721TokenByOwner = new Tx(rawTxAddERC721TokenByOwner);
+    const txAddERC721TokenByOwner = new Tx(rawTxAddERC721TokenByOwner, {
+        chain: "rinkeby",
+        hardfork: "petersburg"
+      });
 
     txAddERC721TokenByOwner.sign(privateKey);
 
@@ -232,8 +249,9 @@ let addERC721TokenByOwner = LockAndDataForMainnet.methods
 Finally, you need to register the (modified) token contract on the SKALE chain IMA using the addERC721TokenByOwner method in LockAndDataForSchain contract. Note that you need to register the contract on Mainnet first, so that the registration on the SKALE Chain can reference the Mainnet token address.
 
 ```javascript
+import Common from "ethereumjs-common";
 const Web3 = require("web3");
-const Tx = require("ethereumjs-tx");
+const Tx = require("ethereumjs-tx").Transaction;
 
 let schainABIs = "[YOUR_SKALE_CHAIN_ABIs]";
 let schainERC721ABI = "[YOUR_SCHAIN_ERC721_ABI]";
@@ -244,6 +262,16 @@ let privateKey = new Buffer("[YOUR_PRIVATE_KEY]", 'hex');
 let erc721OwnerForSchain = "[YOUR_SCHAIN_ADDRESS]";
 
 let schainEndpoint = "[YOUR_SKALE_CHAIN_ENDPOINT]";
+let chainId = "[YOUR_SKALE_CHAIN_CHAIN_ID]";
+
+const customCommon = Common.forCustomChain(
+    "mainnet",
+    {
+      name: "skale-network",
+      chainId: chainId
+    },
+    "istanbul"
+  );
 
 const lockAndDataAddress = schainABIs.lock_and_data_for_schain_erc721_address;
 const lockAndDataBoxABI = schainABIs.lock_and_data_for_schain_erc721_abi;
@@ -278,7 +306,9 @@ let addERC721TokenByOwner = LockAndDataForSchain.methods
     };
 
     //sign transaction
-    const txAddERC721TokenByOwner = new Tx(rawTxAddERC721TokenByOwner);
+    const txAddERC721TokenByOwner = new Tx(rawTxAddERC721TokenByOwner, {
+      common: customCommon
+    });
 
     txAddERC721TokenByOwner.sign(privateKey);
 
