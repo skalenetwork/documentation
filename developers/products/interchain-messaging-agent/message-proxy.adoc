@@ -96,3 +96,57 @@ function postMessage(
 
 [start=3]
 3. Add the address of MessageProxyOnMainnet or MessageProxyOnSchain.
+
+== Methods
+
+=== MessageProxyForMainnet
+
+.registerExtraContract
+
+Adds extra contract to skale-chain - means that MessageProxyForMainnet will not revert messages from this contract to given schainName - otherwise revert
+
+Calling from SchainOwner or EXTRA_CONTRACT_REGISTRAR_ROLE
+
+.removeExtraContract
+
+removes extra contract to skale-chain - means that MessageProxyForMainnet will revert messages from this contract to given schainName
+
+Calling from SchainOwner or EXTRA_CONTRACT_REGISTRAR_ROLE
+
+.registerExtraContractForAll
+
+adds extra contract to all skale-chains(already connected or would be connected) - means that MessageProxyForMainnet will not revert messages from this contract to all schains
+
+Calling only from EXTRA_CONTRACT_REGISTRAR_ROLE
+
+.removeExtraContractForAll
+
+Removes extra contract from all skale-chains(already connected or would be connected) - means that MessageProxyForMainnet will revert messages from this contract to all schains
+
+Calling only from EXTRA_CONTRACT_REGISTRAR_ROLE
+
+=== MessageProxyForSchain
+
+.registerExtraContract
+
+Adds extra contract to skale-chain or “Mainnet” - means that MessageProxyForSchain will not revert messages from this contract to given schainName or “Mainnet” - otherwise revert
+
+Calling from SchainOwner or EXTRA_CONTRACT_REGISTRAR_ROLE
+
+.removeExtraContract
+
+Removes extra contract to skale-chain or “Mainnet” - means that MessageProxyForSchain will revert messages from this contract to given schainName or “Mainnet”
+
+Calling from SchainOwner or EXTRA_CONTRACT_REGISTRAR_ROLE
+
+.registerExtraContractForAll
+
+Adds extra contract to all skale-chains and “Mainnet”(already connected or would be connected) - means that MessageProxyForSchain will not revert messages from this contract to all schains and “Mainnet”
+
+Calling only from EXTRA_CONTRACT_REGISTRAR_ROLE
+
+.removeExtraContractForAll
+
+Removes extra contract from all skale-chains and “Mainnet”(already connected or would be connected) - means that MessageProxyForSchain will revert messages from this contract to all schains and “Mainnet”
+
+Calling only from EXTRA_CONTRACT_REGISTRAR_ROLE (edited) 
