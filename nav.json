@@ -243,6 +243,9 @@
             }, 
             {
               "link": "/validators/hotfix-denali"
+            },
+            {
+              "link": "/validators/compliance-requirements"
             }
           ]
         },
