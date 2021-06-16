@@ -59,7 +59,7 @@ Make sure the following options are set
 ```shell
 DOCKER_LVMPY_STREAM=1.0.1-stable.2
 CONTAINER_CONFIGS_STREAM=1.2.3
-FILEBEAT_HOST=filebeat.testnet.skalenodes.com:5001
+FILEBEAT_HOST=filebeat.mainnet.skalenodes.com:5000
 DISABLE_IMA=True
 ENV_TYPE=mainnet
 ```
