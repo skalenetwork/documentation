@@ -4,7 +4,6 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 `https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.8.1/skale-manager-1.8.1-mainnet-abi.json`
 
-
 ### Update validator-cli
 
 #### Download new Validator CLI binary

@@ -7,20 +7,20 @@ The rest of the versions were provided for docker containers and correspondent t
 ### Prerequisites
 
 #### Node machine
--  A Linux x86_64 machine
--  SGX-enabled Intel processor
--  Ports 3009, 8080, 443, 9100, and 10000–18192, and ICMP IPv4 should not be closed by external firewall
--  Ubuntu 18.04
--  100GB root storage
--  2TB attached storage
--  8 core
--  32GB RAM
--  16GB swap
--  docker
--  docker-compose -> `1.27.4`
--  iptables-persistent, btrfs-progs, lsof, lvm2, psmisc apt packages 
--  geth node with `1.10.2` version
--  live-restore enable in docker-config ([docker docs](https://docs.docker.com/config/containers/live-restore/))
+-   A Linux x86_64 machine
+-   SGX-enabled Intel processor
+-   Ports 3009, 8080, 443, 9100, and 10000–18192, and ICMP IPv4 should not be closed by external firewall
+-   Ubuntu 18.04
+-   100GB root storage
+-   2TB attached storage
+-   8 core
+-   32GB RAM
+-   16GB swap
+-   docker
+-   docker-compose -> `1.27.4`
+-   iptables-persistent, btrfs-progs, lsof, lvm2, psmisc apt packages 
+-   geth node with `1.10.2` version
+-   live-restore enable in docker-config ([docker docs](https://docs.docker.com/config/containers/live-restore/))
 
 **Important notes:**  
 
@@ -52,7 +52,6 @@ If you're using `ufw` or `iptables` for configuring your own rules, please, do n
 **Bounty agent**: [1.1.1-stable.1](https://github.com/skalenetwork/bounty-agent/releases/tag/1.1.1-stable.1)
 
 **Skale watchdog**: [1.1.3-stable.1](https://github.com/skalenetwork/skale-watchdog/releases/tag/1.1.3-stable.1)
-
 
 ### Mainnet Versions for Review
 
