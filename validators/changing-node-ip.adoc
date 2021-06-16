@@ -11,9 +11,9 @@ It's recommended to use a **permanent IP that can dynamically point to a node's 
 [IMPORTANT]
 If you must change your node IP in SKALE Manager, you must perform the procedure below between the time after getBounty is called and before 72 hours (3 days) elapses in the next month.
 
-To change node IP address you need the following:
+To change node IP address you need to perform following steps:
 
-1. Make sure that your node doesn't have any schains (`skale schains ls`)
+1. Ask core team whether it's currently possible to change IP address.
 2. Backup SKALE Node and SGX Wallet.
 3. Be sure you have your SGX Backup key.
 4. Create new machine.
