@@ -236,15 +236,12 @@
         },
         {
           "title": "MainNet - Denali",
-          "link": "/validators/versions-denali",
+          "link": "/validators/denali/versions-denali",
           "links": [
             {
-              "link": "/validators/soft-upgrade-denali"
+              "link": "/validators/denali/soft-upgrade-denali"
             }, 
-            {
-              "link": "/validators/hotfix-denali"
-            },
-            {
+                        {
               "link": "/validators/compliance-requirements"
             }
           ]
