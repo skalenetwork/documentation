@@ -1,6 +1,6 @@
 = Changing a Node IP
 
-It's possible to change node IP address. But you it requires SKALE manager transaction that can be performed only by SKALE foundation. So you need to ask core team.
+It's possible to change the node IP address. But it requires a SKALE manager transaction that can be performed only by the SKALE foundation. So you are required to ask the core team.
 
 [IMPORTANT]
 Currently it's not possible to change IP address if your node has any SKALE chains. So in case your node is participating in a chain, the whole process will require more time because foundation need to remove it first.
@@ -8,14 +8,12 @@ Currently it's not possible to change IP address if your node has any SKALE chai
 [NOTE]
 It's recommended to use a **permanent IP that can dynamically point to a node's machine IP (for example, elastic IP)** so you can update machines if needed without having to change the IP recorded in SKALE Manager during node registration.
 
-[IMPORTANT]
-If you must change your node IP in SKALE Manager, you must perform the procedure below between the time after getBounty is called and before 72 hours (3 days) elapses in the next month.
-
 To change node IP address you need to perform following steps:
 
 1. Ask core team whether it's currently possible to change IP address.
 2. Backup SKALE Node and SGX Wallet.
 3. Be sure you have your SGX Backup key.
 4. Create new machine.
-5. Restore SGX if needed.
-6. Restore node from backup (`skale node restore`).
+5. Make sure core team has executed IP chainging transaction.
+6. Restore SGX if needed.
+7. Restore node from backup (`skale node restore`).
