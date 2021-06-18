@@ -1,4 +1,4 @@
-## Testnet Soft Upgrade 
+## Mainnet Soft Upgrade 
 
 For SKALE Validator CLI initialization use SKALE Manager ABI:
 
