@@ -45,7 +45,7 @@ If you're using `ufw` or `iptables` for configuring your own rules, please, do n
 
 **Docker lvmpy**: [1.0.1-stable.2](https://github.com/skalenetwork/docker-lvmpy/releases/tag/1.0.1-stable.2)
 
-**Transaction manager**: [1.1.0-stable.1](https://github.com/skalenetwork/transaction-manager/releases/tag/1.1.0-stable.1)
+**Transaction manager**: [1.1.0](https://github.com/skalenetwork/transaction-manager/releases/tag/1.1.0)
 
 **Skale admin**: [1.1.0-stable.2](https://github.com/skalenetwork/skale-admin/releases/tag/1.1.0-stable.2)
 
