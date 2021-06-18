@@ -63,6 +63,7 @@ FILEBEAT_HOST=filebeat.mainnet.skalenodes.com:5000
 DISABLE_IMA=True
 ENV_TYPE=mainnet
 IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/IMA/1.0.0/abi.json
+MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.8.1/skale-manager-1.8.1-mainnet-abi.json
 ```
 
 #### Perform update
