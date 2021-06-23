@@ -1,6 +1,5 @@
-= Getting Started with IMA {revnumber}
+= Getting Started with IMA
 :doctype: article
-:revnumber: v1.0.0-develop.148
 :revdate: 2021-03-03
 :icons: font
 :toc: macro
