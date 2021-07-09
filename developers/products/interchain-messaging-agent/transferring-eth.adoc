@@ -4,7 +4,7 @@ You can use the Interchain Messaging Agent for managing ETH between Ethereum and
 
 Also, note that the following steps apply to transferring Ethereum ETH to SKALE Chains, rather than describing SKALE Chain ETH (skETH), which has no monetary value and is used exclusively on SKALE Chains.
 
-https://codesandbox.io/s/eth-skale-interchain-messaging-agent-forked-7tzr7[Live ETH IMA Demo]
+https://codesandbox.io/s/eth-skale-interchain-messaging-agent-7tzr7[Live ETH IMA Demo]
 
 :sectnums:
 == Deposit ETH on Ethereum
