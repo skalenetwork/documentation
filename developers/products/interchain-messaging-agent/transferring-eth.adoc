@@ -4,7 +4,7 @@ You can use the Interchain Messaging Agent for managing ETH between Ethereum and
 
 Also, note that the following steps apply to transferring Ethereum ETH to SKALE Chains, rather than describing SKALE Chain ETH (skETH), which has no monetary value and is used exclusively on SKALE Chains.
 
-https://codesandbox.io/s/eth-skale-interchain-messaging-agent-forked-7tzr7[Live ETH IMA Demo]
+https://codesandbox.io/s/eth-skale-interchain-messaging-agent-7tzr7[Live ETH IMA Demo]
 
 :sectnums:
 == Deposit ETH on Ethereum
@@ -167,6 +167,83 @@ web3.eth.getTransactionCount(account).then((nonce) => {
    }).
     catch(console.error);
 });
+
+----
+--
+====
+
+== getMyEth from DepositBox
+
+To retrieve ETH to its final destination, you will need to use getMyEth function within the **DepositBox** contract on Ethereum.
+
+The **DepositBox** contract is on your SKALE Chain. Check out the https://github.com/skalenetwork/skale-network/tree/master/releases/rinkeby/IMA[current release page] for ABIs.
+
+[tabs]
+====
+Javascript::
++
+--
+
+[source,javascript]
+----
+const Web3 = require("web3");
+const Tx = require("ethereumjs-tx").Transaction;
+
+export function getMyEth() {
+  let rinkebyABIs = require("./contracts/rinkeby_ABIs.json");
+  let privateKey = new Buffer(
+    process.env.REACT_APP_INSECURE_PRIVATE_KEY,
+    "hex"
+  );
+  let accountForMainnet = process.env.REACT_APP_INSECURE_ACCOUNT;
+  let accountForSchain = process.env.REACT_APP_INSECURE_ACCOUNT;
+  let rinkeby = process.env.REACT_APP_INSECURE_RINKEBY;
+  let chainId = process.env.REACT_APP_INSECURE_RINKEBY_CHAIN_ID;
+
+  const depositBoxAddress = rinkebyABIs.deposit_box_eth_address;
+
+  const depositBoxABI = rinkebyABIs.deposit_box_eth_abi;
+
+  const web3 = new Web3(rinkeby);
+
+  let DepositBox = new web3.eth.Contract(depositBoxABI, depositBoxAddress);
+
+  let getMyEth = DepositBox.methods.getMyEth().encodeABI();
+
+  //get nonce
+  web3.eth.getTransactionCount(accountForSchain).then((nonce) => {
+    //create raw transaction
+    const rawTxGetMyEth = {
+      chainId: chainId,
+      from: accountForMainnet,
+      nonce: "0x" + nonce.toString(16),
+      data: getMyEth,
+      to: depositBoxAddress,
+      gas: 6500000,
+      gasPrice: 100000000000,
+    };
+
+    //sign transaction
+    const txGetMyEth = new Tx(rawTxGetMyEth, {
+      chain: "rinkeby",
+      hardfork: "petersburg"
+    });
+    txGetMyEth.sign(privateKey);
+
+    //serialize transaction
+    const serializedTxGetMyEth = txGetMyEth.serialize();
+
+    //send signed transaction
+    web3.eth
+      .sendSignedTransaction("0x" + serializedTxGetMyEth.toString("hex"))
+      .on("receipt", (receipt) => {
+        //record receipt to console
+        console.log(receipt);
+      })
+      .catch(console.error);
+  });
+}
+
 
 ----
 --
