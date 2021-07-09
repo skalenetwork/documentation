@@ -2,7 +2,7 @@
 
 ==== SKALE Network & What it does
 
-The SKALE Network is an open-source on-demand Web3 cloud platform designed to scale Ethereum dApps. The Network enables dApp developers to access validator-operated nodes' compute power to run fast, containerized, EVM-compatible SKALE Chains. Validators run and maintain SKALE Nodes, providing distributed computing power to the Network. The entire SKALE Network is managed by SKALE Manager, a dApp deployed on Ethereum Mainnet. Network users such as validators, delegators, and dApp Developers use SKALE (SKL) tokens to stake and access network services.
+The SKALE Network is an open-source on-demand Ethereum-Native Multichain Web3 Cloud designed to scale Ethereum dApps. The Network enables dApp developers to access validator-operated nodes' compute power to run fast, containerized, EVM-compatible SKALE Chains. Validators run and maintain SKALE Nodes, providing distributed computing power to the Network. The entire SKALE Network is managed by SKALE Manager, a dApp deployed on Ethereum Mainnet. Network users such as validators, delegators, and dApp Developers use SKALE (SKL) tokens to stake and access network services.
 
 The https://skale.network/blog/validator-list-for-skale/[SKALE validator community represents over 45 independent operators] running over 150 nodes, and the SKALE Mainnet has been live for over 120 days. https://countdown.skale.network/[Checkout the current stats.]
 
