@@ -4,6 +4,8 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 `https://github.com/skalenetwork/skale-network/blob/master/releases/rinkeby/skale-manager/1.8.1/skale-manager-1.8.1-beta.1-rinkeby-abi.json`
 
+### Update sgx
+
 ### Update validator-cli
 
 #### Download new Validator CLI binary
