@@ -61,7 +61,7 @@ TestNet Environment Variables:
 ```shell
 MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.1-beta.3
-MANAGER_CONTRACTS_ABI_URL=https://github.com/skalenetwork/skale-network/blob/master/releases/rinkeby/skale-manager/1.8.1/skale-manager-1.8.1-beta.1-rinkeby-abi.json
+MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/skale-manager/1.8.1/skale-manager-1.8.1-beta.1-rinkeby-abi.json
 IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.4/abi.json
 CONTAINER_CONFIGS_STREAM=2.0.0-testnet.0
 ENV_TYPE=testnet
