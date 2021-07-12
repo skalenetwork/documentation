@@ -6,6 +6,12 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 ### Update sgx
 
+Upgrade sgx wallet to `skalenetwork/sgxwallet_release:1.77.0-beta.0` 
+
+**Note**: make sure `-b` option is set
+
+[Upgrade guide](https://github.com/skalenetwork/sgxwallet/blob/develop/docs/run-in-hardware-mode.md#start-stop-and-upgrade-sgxwallet-containers)
+
 ### Update validator-cli
 
 #### Download new Validator CLI binary
@@ -28,7 +34,7 @@ chmod +x /usr/local/bin/sk-val
 
 ### Make sure 80 and 443 ports are open
 
-Please make sure traffic to 80 and 443 is allowed by any external software.
+Please make sure traffic to 80 and 443 ports is allowed by external software.
 Do not modify anything if you're using `ufw` or `iptables` to configure firewall.
 
 ### Install SKALE Node CLI
