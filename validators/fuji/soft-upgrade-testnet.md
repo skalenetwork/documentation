@@ -6,7 +6,7 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 ### Update sgx
 
-Upgrade sgx wallet to `skalenetwork/sgxwallet_release:1.77.0-beta.0` 
+Upgrade sgx wallet to `skalenetwork/sgxwallet:1.77.0-beta.0` 
 
 **Note**: make sure `-b` option is set
 

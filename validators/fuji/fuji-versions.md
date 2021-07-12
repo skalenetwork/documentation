@@ -38,7 +38,7 @@ If you're using `ufw` or `iptables` for configuring your own rules, please, do n
 
 **Node CLI version**: 2.0.1-beta.0
 
-**SGX version: sgxwallet**: skalenetwork/sgxwallet_release:1.77.0-beta.0
+**SGX version: sgxwallet**: skalenetwork/sgxwallet:1.77.0-beta.0
 
 **SKALE Manager version**: 1.8.1-beta.1
 
