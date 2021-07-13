@@ -6,9 +6,11 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 ### Update sgx
 
-Upgrade sgx wallet to `skalenetwork/sgxwallet:1.77.0-beta.0` 
+Upgrade sgx wallet to `skalenetwork/sgxwallet:1.77.0-beta.0`.
 
-**Note**: make sure `-b` option is set
+Make sure `1031` port is exposed in docker-compose.yml (`git pull` in `sgxwallet` repo directory) and `-b` option is set. 
+
+**Note:** node machine should be able to access `1031` sgx port.
 
 [Upgrade guide](https://github.com/skalenetwork/sgxwallet/blob/develop/docs/run-in-hardware-mode.md#start-stop-and-upgrade-sgxwallet-containers)
 
