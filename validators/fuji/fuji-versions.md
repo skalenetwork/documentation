@@ -26,7 +26,7 @@ The rest of the versions were provided for docker containers and correspondent t
 1.  Ports `3009`, `80`, `8080`, `443`, `9100`, and `10000–18192`, and ICMP IPv4 should not be closed by external firewall.
 If you're using `ufw` or `iptables` for configuring your own rules, please, do not open any of this ports.
 
-2. Node should be able to access `1031` SGX port.
+2.  Node should be able to access `1031` SGX port.
 
 3.  Make sure that other network nodes receives packets from your node with source IP address that is equal to IP address that you provided during node registration (it can be found in `skale node info` output).
 
