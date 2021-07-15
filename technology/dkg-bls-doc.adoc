@@ -24,11 +24,11 @@ Note that the group’s secret key is created by the sum of all players’ polyn
 
 The following is a visual representation of the entire process made with Manim.
 
-image::images/Poly.gif[Poly]
+image::https://user-images.githubusercontent.com/12778980/125866352-cd29046e-a722-49bd-a7c8-cf9b24c9444c.gif[Poly]
 
-image::images/Verify.gif[Verify]
+image::https://user-images.githubusercontent.com/12778980/125866416-17d4b26e-00bd-4778-b274-abb6247a06a6.gif[Verify]
 
-image::images/Finish.gif[Finish]
+image::https://user-images.githubusercontent.com/12778980/125866425-e0a57ab2-30c0-4d7b-9863-c0a73372948d.gif[Finish]
 
 == BLS Signatures
 
@@ -42,7 +42,7 @@ Note that through this mapping, one can solve the decisional Diffie-Hellman prob
 
 One can take advantage of the pairing’s properties to generate fast, compact, and aggregatable signatures.
 
-image:images/BLS.png[image]
+image::https://user-images.githubusercontent.com/12778980/125866490-e212327a-5e2f-4086-a575-5a4849c00a17.png[image]
 
 Firstly, the verification and signing process is very straightforward. Given a private key x and public key xg, suppose we wish to generate a signature for message m. First, we generate the hash of the message H(m) which is on the curve G, and publish xH(m). Then, verification is of the form e(xH(m), g) = e(H(m), xg), which is true by the bilinearity condition.
 
