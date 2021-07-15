@@ -2,9 +2,9 @@
 
 SKALE Chains come with several tools to make the development of dApps in Web3 cloud easier.
 
-#### 🪙 Token Bridge with IMA
+#### 🪙 Token/Message Bridge with IMA
 
-To transfer tokens from Ethereum to SKALE chains, or between SKALE Chains, [checkout the Interchain Messaging Agent (IMA)](/developers/products/interchain-messaging-agent/overview.md). IMA allows dApp developers to leverage both BLS threshold signatures, secure enclaves, and a decentralized random selection of validators to transfer tokens and messages between chains. Unlike other bridges, IMA provides dApp developers easy control to map assets on the fly to SKALE chains, and set up different access control policies.
+To transfer tokens or messages from Ethereum to SKALE chains, or between SKALE Chains, [checkout the Interchain Messaging Agent (IMA)](/developers/products/interchain-messaging-agent/overview.md). IMA allows dApp developers to leverage both BLS threshold signatures, secure enclaves, and a decentralized random selection of validators to transfer tokens and messages between chains. Unlike other bridges, IMA provides dApp developers easy control to map assets on the fly to SKALE chains, and set up different access control policies.
 
 IMA currently supports ETH, ERC20, ERC721, and can support any other standard using the modular IMA MessageProxy framework. 
 
