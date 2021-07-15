@@ -8,7 +8,7 @@ One of the big ideas of cryptography is that there are certain `one-way' functio
 
 This is where elliptic curves come in. An elliptic curve is an equation of the form y^2 = ax^3 + bx + c.
 
-image:images/ec.png[image]
+image::https://user-images.githubusercontent.com/12778980/125866627-62950ff3-fffa-40f1-b17a-26131df69058.png[image]
 
 Note that the curve is symmetric about the x-axis due to the y^2 term. Given two points P, Q on such a curve, the line crossing through them is guaranteed to hit a third point on the curve. In the edge case that this line is vertical, one can say that there is a point at infinity at which all vertical lines intersect, and in the case that P = Q, one takes the tangent line, which will again only intersect the curve one more time. If you take this third point and reflect it over the x-axis to get R, and define P + Q = R according to this process, then + is a group operation on this elliptic curve.
 
@@ -32,7 +32,7 @@ To get an idea of how this is possible, consider using your secret information t
 
 In the Elliptic Curve Discrete Signature Algorithm (ECDSA)’s case, suppose one wishes to sign a message with secret key x and public key xg. First, generate a random number k and compute R = kg, and let r be the x-coordinate of this point. Then, for a hashed message h, compute s = (h + rx) / k mod p. The signature is (r, s).
 
-image:images/ecdsa.png[image]
+image::https://user-images.githubusercontent.com/12778980/125866583-196cbffc-e2db-45e3-b411-22c93066601b.png[image]
 
 The main idea outlined before is present here; using this secret k, you can created R = kg, which can be computed in two different ways. To see this, for verification, use the published information h, r, s, and xg. Then, compute P = (h/s)g + (r/s)xg = (h + rx)g/s = kg = R. Finally, using R, one can recover the x-coordinate r, and verify it's indeed in (r, s). Although verification is straightforward, to replicate the signature (r, s) is infeasible without knowledge of k and x.
 
