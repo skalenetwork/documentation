@@ -18,7 +18,7 @@ Make sure `1031` port is exposed in docker-compose.yml (`git pull` in `sgxwallet
 
 #### Download new Validator CLI binary
 
-Make sure `VERSION_NUM` is `2.0.0-beta.1`
+Make sure `VERSION_NUM` is `1.3.0-beta.1`
 
 **Terminal Command:**
 

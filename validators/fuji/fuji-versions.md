@@ -37,7 +37,7 @@ If you're using `ufw` or `iptables` for configuring your own rules, please, do n
 
 ### TestNet Phase 3.2 Versions - SKALE chain creation hotfix
 
-**Validator CLI version**: 2.0.0-beta.1
+**Validator CLI version**: 1.3.0-beta.1
 
 **Node CLI version**: 2.0.1-beta.0
 
