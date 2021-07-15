@@ -273,6 +273,15 @@
           "link": "/technology/skale-consensus"
         },
         {
+          "link": "/technology/intro-ecc"
+        },
+        {
+          "link": "/technology/intro-threshold"
+        },
+        {
+          "link": "/technology/dkg-bls-doc"
+        },
+        {
           "link": "/technology/skale-dkg"
         },
         {
