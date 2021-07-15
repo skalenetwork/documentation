@@ -30,10 +30,6 @@
           ]
         },
         {
-          "title": "EthGlobal Hackathon",
-          "link": "/developers/ethglobal"
-        },
-        {
           "title": "SKALE Chains",
           "link": "/developers/skale-chains",
           "links": [
@@ -128,10 +124,6 @@
             {
               "title": "IMA Access Control",
               "link": "/developers/products/interchain-messaging-agent/ima-access-control"
-            },
-            {
-              "title": "IMA API",
-              "link": "/developers/products/interchain-messaging-agent/api"
             }
           ]
         },
