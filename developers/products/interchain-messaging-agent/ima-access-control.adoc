@@ -95,7 +95,7 @@ The recommended process is
 
 === Adding tokens to TokenManagerERC20 or TokenManagerERC721
 
-NOTE: `addERC20TokenByOwner` and `addERC721TokenByOwner` on the TokenManagerERC20 or TokenManagerERC721 takes 3 arguments. When enabling transfers to mainnet, `schainName` is set to "Mainnet". When enabling transfers to another schain, `schainName` is set to the other schain name.
+NOTE: `addERC20TokenByOwner` and `addERC721TokenByOwner` on the TokenManagerERC20 or TokenManagerERC721 takes 3 arguments. When enabling transfers to mainnet, `schainName` is set to "Mainnet." When enabling transfers to another schain, `schainName` is set to the other schain name.
 
 ==== Adding ERC20
 
