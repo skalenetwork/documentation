@@ -30,10 +30,6 @@
           ]
         },
         {
-          "title": "EthGlobal Hackathon",
-          "link": "/developers/ethglobal"
-        },
-        {
           "title": "SKALE Chains",
           "link": "/developers/skale-chains",
           "links": [
