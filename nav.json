@@ -273,7 +273,16 @@
           "link": "/technology/skale-consensus"
         },
         {
-          "link": "/technology/skale-dkg"
+          "link": "/technology/intro-ecc"
+        },
+        {
+          "link": "/technology/intro-threshold"
+        },
+        {
+          "link": "/technology/dkg-bls-doc"
+        },
+        {
+          "link": "/technology/skale-dkg-spec"
         },
         {
           "link": "/technology/block-rotation-spec"

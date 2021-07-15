@@ -1,0 +1,21 @@
+== Intro to Threshold Schemes
+
+(k, n)-threshold schemes are used to divide a secret across some n players such that if k or more players can use their information to recreate the secret, however, less than k players can't recover anything. The fundamental idea behind the following schemes is based on the idea of polynomials; it's necessary to have at least k points to recover a polynomial of degree k - 1. Use cases of such algorithms include being able to generate group signatures for when at least k players agree.
+
+In the following, the basic ideas behind how such an algorithm would work is introduced. Then the main features of DKG are discussed, and show how it's reliable and secure in a practical scenario.
+
+=== Shamir’s Secret Sharing
+
+Shamir’s Secret Sharing (SSS) is one of the first algorithms of its kind, and thus implements many fundamental ideas. In SSS, you assume the use of a central dealer. Then, you randomly generate a k-1-degree polynomial p(x) over some finite field, whose constant coefficient is the group’s secret value (you use a finite field instead of all integers because otherwise, if some attacker recovers some number of points less than k, they can mathematically rule out many potential values for the group’s secret value). Finally, you distribute the value p(i) to player i, for i = 1, …, n. If k players wish to recover the secret, they share their points and run polynomial interpolation, which is detailed in another documentation.
+
+=== Improving SSS to Distributed Key Generation
+
+Although SSS demonstrates the key ideas behind secret distribution, there are several practical issues. Most notably, all players are assumed to be honest, a centralized dealer who knows all information is needed.
+
+To solve these issues, you first look at decentralization. The main idea behind having a polynomial of which players have some inputs of is central, so we wish to keep this idea. However, instead of explicitly generating the centralized polynomial, you instead have each player generate their own polynomial p_i(x), and let the group’s polynomial p(x) be the sum of each player’s polynomial. In this way, no one is able to know the group’s secret value or polynomial without knowing everyone’s polynomial. Then, to distribute the shares p(i) of the group’s polynomial, each player i sends p_i(j) to player j for all j. In this way, player j can recover their share p_1(j) + p_2(j) + … + p_n(j) = p(j).
+
+Now, for resistance against attackers. To solve this problem, we use elliptic curves. So, let g be a generator of an elliptic curve over some field. The main idea that using the ability to `encrypt` polynomials. Consider f_i(x) = a_0 + a_1x + … + a_tx^t. Then, let g_i(x) be a_0g + a_1xg + … + a_tx^tg. Due to ECDLP, f_i(x) is unrecoverable from g_i(x). However, given g_i(x) and f_i(j) from player i, you can verify that player i gave you a valid output by checking that g_i(j) = f_i(j)g. Further, note that the sum of all g_i(x) results in a polynomial g(x), whose constant coefficient is the encrypted version of the p(x)’s constant coefficient, the group’s secret key; in other words, the group’s public key.
+
+Thus, instead of needing to trust that p_i(j) is a correct output, you first require that all players broadcast their encrypted polynomials, or public polynomials. Then, you can verify p_i(j) against g_i(x). Finally, if this verification fails, you issue a complaint, for which you then run a process in which you expose the information to all other players for each to decide who is correct. This provides the ability to ensure that the values we receive are correct without knowing the sender’s polynomial. With this step, this completely outlines Distributed Key Generation (DKG).
+
+In summary, DKG is able to distribute a secret across some players in the presence of attackers in a decentralized network. To see how SKALE specifically implements DKG, or how we can use the generated secret values in signatures without revealing the group’s secret value, see the DKG/BLS documentation.
