@@ -211,6 +211,18 @@
           "link": "/validators/watchdog"
         },
         {
+          "title": "MainNet - Aconcagua",
+          "link": "/validators/aconcagua/aconcagua-versions.md",
+          "links": [
+            {
+              "link": "/validators/aconcagua/acouncagua-upgrade.md"
+            },
+            {
+              "link": "/validators/compliance-requirements"
+            }
+          ]
+        },
+        {
           "title": "MainNet - Denali",
           "link": "/validators/denali/versions-denali",
           "links": [
