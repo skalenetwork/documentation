@@ -8,6 +8,7 @@ For SKALE Validator CLI initialization use SKALE Manager ABI:
 
 Upgrade sgx wallet to `skalenetwork/sgxwallet_release:1.77.0-stable.0`.
 
+Make sure to have `skalenetwork/sgxwallet_release:1.77.0-stable.0` in the docker-compose.yml.
 Make sure `1031` port is exposed in docker-compose.yml (`git pull` in `sgxwallet` repo directory) and `-b` option is set.
 
 **Note:** node machine should be able to access `1031` sgx port.
@@ -34,7 +35,7 @@ VERSION_NUM=[VERSION_NUM] && sudo -E bash -c "curl -L https://github.com/skalene
 chmod +x /usr/local/bin/sk-val
 ```
 
-### Make sure 80 and 443 ports are open
+### Make sure 80 and 443 ports are opened by external software
 
 Please make sure traffic to 80 and 443 ports is allowed by external software.
 Do not modify anything if you're using `ufw` or `iptables` to configure firewall.

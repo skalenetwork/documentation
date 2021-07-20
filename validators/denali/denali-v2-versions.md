@@ -76,8 +76,8 @@ DB_PORT=[By validator]
 DB_ROOT_PASSWORD=[By validator]
 DB_PASSWORD=[By validator]
 DB_USER=[by validator]
-IMA_ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby ]
-ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby]
+IMA_ENDPOINT=[by validator, MAINNET GETH NODE ENDPOINT]
+ENDPOINT=[by validator, MAINNET GETH NODE ENDPOINT]
 ```
 
 > Soft update steps are described in Denali V2 Upgrade Steps section
