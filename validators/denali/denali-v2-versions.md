@@ -63,7 +63,7 @@ Mainnet environment variables:
 MONITORING_CONTAINERS=True
 DOCKER_LVMPY_STREAM=1.0.1-stable.3
 MANAGER_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/skale-manager/1.8.1/skale-manager-1.8.1-mainnet-abi.json
-IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/rinkeby/IMA/1.0.0-beta.4/abi.json
+IMA_CONTRACTS_ABI_URL=https://raw.githubusercontent.com/skalenetwork/skale-network/master/releases/mainnet/IMA/1.0.0/IMA-1.0.0-mainnet-abi.json
 CONTAINER_CONFIGS_STREAM=2.0.0
 ENV_TYPE=mainnet
 FILEBEAT_HOST=filebeat.mainnet.skalenodes.com:5000
