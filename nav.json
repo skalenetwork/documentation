@@ -122,6 +122,10 @@
               "link": "/developers/products/interchain-messaging-agent/managing-erc1155"
             },
             {
+              "title": "Funding Exits",
+              "link": "/developers/products/interchain-messaging-agent/funding-exits"
+            },
+            {
               "title": "IMA Access Control",
               "link": "/developers/products/interchain-messaging-agent/ima-access-control"
             }
