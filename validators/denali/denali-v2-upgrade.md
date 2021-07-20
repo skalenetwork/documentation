@@ -1,4 +1,4 @@
-## Aconcagua Upgrade Steps
+## Denali V2 Upgrade Steps
 
 For SKALE Validator CLI initialization use SKALE Manager ABI:
 

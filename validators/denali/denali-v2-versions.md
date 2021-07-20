@@ -1,4 +1,4 @@
-## SKALE Aconcagua Update
+## SKALE Denali V2 Update
 
 You can find the compatible versions in this page. Set up requires only Validator-Cli, Node-Cli and SGX versions.
 
@@ -79,4 +79,4 @@ IMA_ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby ]
 ENDPOINT=[by validator, GETH NODE ENDPOINT Rinkeby]
 ```
 
-> Soft update steps are described in Aconcagua Upgrade Steps section
+> Soft update steps are described in Denali V2 Upgrade Steps section
