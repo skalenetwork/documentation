@@ -211,23 +211,11 @@
           "link": "/validators/watchdog"
         },
         {
-          "title": "MainNet - Aconcagua",
-          "link": "/validators/aconcagua/aconcagua-versions.md",
+          "title": "MainNet - Denali V2",
+          "link": "/validators/denali/denali-v2-versions.md",
           "links": [
             {
-              "link": "/validators/aconcagua/acouncagua-upgrade.md"
-            },
-            {
-              "link": "/validators/compliance-requirements"
-            }
-          ]
-        },
-        {
-          "title": "MainNet - Denali",
-          "link": "/validators/denali/versions-denali",
-          "links": [
-            {
-              "link": "/validators/denali/soft-upgrade-denali"
+              "link": "/validators/denali/denali-v2-upgrade.md"
             }, 
                         {
               "link": "/validators/compliance-requirements"
