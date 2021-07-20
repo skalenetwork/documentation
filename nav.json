@@ -211,11 +211,11 @@
           "link": "/validators/watchdog"
         },
         {
-          "title": "MainNet - Denali",
-          "link": "/validators/denali/versions-denali",
+          "title": "MainNet - Denali V2",
+          "link": "/validators/denali/denali-v2-versions.md",
           "links": [
             {
-              "link": "/validators/denali/soft-upgrade-denali"
+              "link": "/validators/denali/denali-v2-upgrade.md"
             }, 
                         {
               "link": "/validators/compliance-requirements"
