@@ -31,7 +31,6 @@ If you're using `ufw` or `iptables` for configuring your own rules, please, do n
 
 4.  Please, don't forget to check your SSL certificate using `skale ssl check` command.
 
-
 * * *
 
 ### Mainnet Versions for set up
