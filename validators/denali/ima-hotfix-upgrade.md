@@ -1,5 +1,11 @@
 ## Denali IMA hotfix upgrade steps
 
+Because some part of IMA code was performing worse than expected engineering updated ima agent code as well as schain and skale-admin containers with the hot fix. You will see the following version bumps:
+
+- ima: `1.0.0-stable.0` -> `1.0.0-beta.8`
+- schain: `3.7.3-stable.0` -> `3.7.3-beta.1`
+- admin: `2.0.1` -> `2.0.1-beta.3`
+
 ### Update node using skale node update
 
 #### Change directory
