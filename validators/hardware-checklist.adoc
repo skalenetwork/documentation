@@ -1,0 +1,52 @@
+= Mainnet Hardware Checklist
+:icons: font
+:toc: macro
+
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+toc::[]
+
+endif::[]
+
+[options="interactive"]
+.SKALE Validator
+* [ ] A wallet (recommended: Ledger or SGXWallet; or others)
+
+[options="interactive"]
+.SKALE Node
+* [ ] A Linux x86_64 machine
+* [ ] Ubuntu 18.04
+* [ ] At least 8 cores
+* [ ] At least 2TB attached/block storage (unmounted, SSD recommended. HDD possible for early mainnet phases)
+* [ ] 32GB RAM
+* [ ] Swap size at least 16GB
+* [ ] Ports 22, 3009, 8080, 9100, 10000 – 11000, and ICMP IPv4 open for all
+
+* [ ] A permanent IP dynamically pointing to Node Machine
+
+There are two SGX operations: one is a networked SGXWallet server that supports multiple SKALE Nodes, the other is SGX Local Operation
+
+[options="interactive"]
+.SGX (Network Operation)
+* [ ] SGX-enabled processor
+* [ ] Ubuntu 18.04 (SGXWallet isn't yet compatible with Linux Kernel 5)
+* [ ] At least 8GB RAM
+* [ ] Swap size at least half of RAM
+* [ ] At least 6 cores and 8GB RAM for every 5 SKALE nodes.
+* [ ] SGXWallet and Nodes behind a VPC
+* [ ] Ports 1026–1029 open only to your nodes
+
+[options="interactive"]
+.SGX (Local Operation, Node + SGX)
+* [ ] Everything under SKALE Node above
+* [ ] SGX-enabled processor
+
+[options="interactive"]
+.Ethereum Endpoint
+* [ ] A full Geth node synced with Ethereum mainnet
